@@ -1,0 +1,39 @@
+[ HTML 기초 ]
+
+1. HTML 은 Hyper Text Markup Language를 나타냅니다.
+
+: 하이퍼텍스트(Hyper Text)란?
+- 순서가 없는 정보를 담고 있는 텍스트
+
+: 마크업(Markup) 이란?
+- 정보를 구조화하여 순서대로 웹 페이지에 띄우는것
+
+-> Hyper Text Markup Language란?
+순서가 없는 정보를 담고 있는 텍스트의 정보를
+구조화하여 순서대로 웹 페이지에 표시하기위한 브라우저 언어
+
+[ 구조화란? ]
+- 구조 -> 체계 -> 순서/분류
+-> 체계가 없는 데이터를 체계있게 순서를 정해주는 것!
+
+2. HTML은 XML에서 온 것이다!
+- XML은 정보를 구조화하는 확장가능한 마크업 언어이다!
+- 표기법:
+    1) 최상단에 xml 선언부
+    2) 최상위 태그 하나만 생성
+    3) 하위 구조화 태그 생성
+
+    예)
+    <?xml version="1.0" encoding="UTF-8"?>
+    <note>
+        <to>Tove</to>
+        <from>Jani</from>
+        <heading>Reminder</heading>
+        <body>Don't forget me this weekend!</body>
+    </note> 
+
+
+
+
+
+
