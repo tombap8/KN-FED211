@@ -8,7 +8,13 @@ https://www.w3schools.com/
 5. 강의 동영상 백업 유튜브: 코드제로원
 6. 소스깃허브
 https://github.com/tombap8/KNG-FED211
-
+7. 사이트 벤치마킹 포털
+(1) 디비컷
+https://www.dbcut.com/bbs/index.php
+(2) 굿디자인웹
+https://www.gdweb.co.kr/main/
+(3) 어워즈
+https://www.awwwards.com/
 
 
 
