@@ -5,4 +5,13 @@
 3. 공식교과서: 
 https://www.w3schools.com/
 4. 소스 빌드용 폴더 생성하기
-5. 강의 동영상 백업 유튜브
+5. 강의 동영상 백업 유튜브: 코드제로원
+6. 소스깃허브
+https://github.com/tombap8/KNG-FED211
+
+
+
+
+
+
+
