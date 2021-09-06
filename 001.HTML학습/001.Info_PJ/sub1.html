@@ -35,6 +35,11 @@
     figcaption {
       font-size: 9px;
     }
+
+    /* "백신"글자만 빨간색 */
+    span {
+      color: red;
+    }
   </style>
   <!-- 
     style 요소: css 문법 구역
@@ -72,27 +77,33 @@
     <!-- hr요소: 가로구분선(CSS디자인시 사용안함) -->
     <!-- 3.메인컨텐츠 -->
     <main>
+      <!-- 언론사 정보영역 -->
+      <div>
+        <img src="images/at1-1.png" alt="연합뉴스로고">
+      </div>
       <!-- 1. 기사제목 -->
-      <h2>김총리, 삼성바이오 방문…"백신주권 확보 역할 당부"</h2>
+      <h2>김총리, 삼성바이오 방문…"<span>백신</span>주권 확보 역할 당부"</h2>
 
       <!-- 2. 기사이미지 -->
       <figure>
         <img src="images/at1-2.jpg" alt="정치기사사진">
         <figcaption>
           삼성바이오로직스 둘러보는 김부겸 총리
-          (인천=연합뉴스) 김승두 기자 = 김부겸 국무총리(앞줄 가운데)가 3일 오후 코로나19 백신 위탁생산 현장인 인천시 송도 삼성바이오로직스를 방문해 존림 대표이사(맨 오른쪽) 등과 함께 홍보관을
+          (인천=연합뉴스) 김승두 기자 = 김부겸 국무총리(앞줄 가운데)가 3일 오후 코로나19 <span>백신</span> 위탁생산 현장인 인천시 송도 삼성바이오로직스를 방문해 존림 대표이사(맨 오른쪽)
+          등과 함께 홍보관을
           둘러보고
           있다. 2021.9.3 kimsdoo@yna.co.kr
         </figcaption>
       </figure>
 
       <!-- 3. 기사내용 -->
-      <p>(서울=연합뉴스) 조민정 기자 = 김부겸 국무총리는 3일 오후 인천 연수구 삼성바이오로직스 본사를 찾아 <b>백신·치료제 생산 현장</b>을 둘러봤다.<abbr
+      <p>(서울=연합뉴스) 조민정 기자 = 김부겸 국무총리는 3일 오후 인천 연수구 삼성바이오로직스 본사를 찾아 <b><span>백신</span>·치료제 생산 현장</b>을 둘러봤다.<abbr
           title="아주잘봄">아잘봄</abbr></p>
 
-      <p>삼성바이오로직스<sup>①</sup>는 <strong>한미 정상회담을 계기로</strong> 모더나와 백신 <i>위탁생산 계약</i>을 체결한 바 있다.</p>
+      <p>삼성바이오로직스<sup>①</sup>는 <strong>한미 정상회담을 계기로</strong> 모더나와 <span>백신</span> <i>위탁생산 계약</i>을 체결한 바 있다.</p>
 
-      <p><mark>김 총리</mark>는 이 자리에서 <q>국민의 삶을 보호하기 위해 <em><ins>코로나</ins>백신이 얼마나 중요한지</em> 절감하고 있다. 삼성바이오로직스가 우리나라의 백신 주권
+      <p><mark>김 총리</mark>는 이 자리에서 <q>국민의 삶을 보호하기 위해 <em><ins>코로나</ins><span>백신</span>이 얼마나 중요한지</em> 절감하고 있다. 삼성바이오로직스가
+          우리나라의 <span>백신</span> 주권
           확보를 위해 적극적인 역할을 해주시기를 바란다</q>고 말했다.</p>
 
       <p><mark>김 총리</mark>는 <q>삼성그룹이 바이오산업에서의 높은 성취를 이뤄 젊은 세대의 일자리<sub>job</sub>를 만들겠다는 야심 찬 비전을 보여줬다</q>며 <q>국민들의 삶에 크게
@@ -159,21 +170,120 @@
       <!-- 순서있는 리스트 -->
       <ol>
         <li>
-          <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=001&aid=0012644450&rankingType=RANKING" target="_blank">
-            베트남 총리, 삼성전자 찾아 "한국 정부가 백신 확보 도와 …
+          <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=001&aid=0012644450&rankingType=RANKING"
+            target="_blank">
+            베트남 총리, 삼성전자 찾아 "한국 정부가 <span>백신</span> 확보 도와 …
           </a>
         </li>
         <li>
-          <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=001&aid=0012644381&rankingType=RANKING" target="_blank">
+          <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=001&aid=0012644381&rankingType=RANKING"
+            target="_blank">
             탈레반, 아프간 여대생에 니캅 착용 명령…눈만 노출(종합)
           </a>
         </li>
         <li>
-          <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=001&aid=0012643664&rankingType=RANKING" target="_blank">
+          <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=001&aid=0012643664&rankingType=RANKING"
+            target="_blank">
             코로나 국민지원금 오늘부터 접수…카드사 홈페이지서 신청 가 …
           </a>
         </li>
       </ol>
+
+      <hr>
+
+      <h3>분야별 주요뉴스</h3>
+      <!-- 용어설명리스트 -->
+      <dl>
+        <dt>정치</dt>
+        <dd>
+          <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=100&oid=025&aid=0003132654"
+            target="_blank">
+            국민의힘 '역선택 방지' 안 넣기로…尹 "선관위 결정 존중"
+          </a>
+        </dd>
+        <dd>
+          <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=100&oid=018&aid=0005030309"
+            target="_blank">
+            "檢 역사상 최악의 사건"…與 지도부, '尹 고발 사주' 의혹에 맹폭
+          </a>
+        </dd>
+
+        <dt>경제</dt>
+        <dd>
+          <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=101&oid=277&aid=0004964889"
+            target="_blank">
+            對中 매출·이익·점유율 '삼중추락'
+          </a>
+        </dd>
+        <dd>
+          <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=101&oid=014&aid=0004703797"
+            target="_blank">
+            현대百, 국내 첫 '레이디 디올' 팝업스토어 연다
+          </a>
+        </dd>
+
+        <dt>사회</dt>
+        <dd>
+          <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=102&oid=025&aid=0003132484"
+            target="_blank">
+            모더나 255만회분 하루 늦게 6일 온다…9월 물량은 미정
+          </a>
+        </dd>
+        <dd>
+          <a href="https://news.naver.com/main/read.naver?mode=LSD&mid=shm&sid1=102&oid=422&aid=0000503178"
+            target="_blank">
+            교육부 "학교폭력 엄중 대처…조기감지 시스템 마련"
+          </a>
+        </dd>
+      </dl>
+
+      <hr>
+
+      <h3>언론사별 가장 많이 본 뉴스</h3>
+      <!-- 테이블요소 : 2열 3행 -->
+      <table>
+        <tr>
+          <!-- 1행 -->
+          <td>
+            <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=437&aid=0000275463&rankingType=RANKING"
+              target="_blank">
+              마이크 발로 찬 강윤성, 이번엔 유치장 문 열린 틈타 경찰 …
+            </a>
+          </td>
+          <td>
+            <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=437&aid=0000275463&rankingType=RANKING"
+              target="_blank">
+              <img src="https://mimgnews.pstatic.net/image/origin/437/2021/09/06/275463.jpg?type=nf88_60" alt="기사사진">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <!-- 2행 -->
+          <td>
+            <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=032&aid=0003096456&rankingType=RANKING" target="_blank">
+              오세훈 시장 "'파이시티'관련 경찰 불법수사 발견···청와 …
+            </a>
+          </td>
+          <td>
+            <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=032&aid=0003096456&rankingType=RANKING" target="_blank">
+              <img src="https://mimgnews.pstatic.net/image/origin/032/2021/09/06/3096456.jpg?type=nf88_60" alt="기사이미지">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <!-- 3행 -->
+          <td>
+            <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=020&aid=0003380431&rankingType=RANKING" target="_blank">
+              남편 ‘일본도’에 숨진 아내, 마지막 말은 “우리 애들 어 …
+            </a>
+          </td>
+          <td>
+            <a href="https://news.naver.com/main/ranking/read.naver?mode=LSD&mid=shm&sid1=001&oid=020&aid=0003380431&rankingType=RANKING" target="_blank">
+              <img src="https://mimgnews.pstatic.net/image/origin/020/2021/09/06/3380431.jpg?type=nf88_60" alt="기사사진">
+            </a>
+          </td>
+        </tr>
+      </table>
 
 
 
