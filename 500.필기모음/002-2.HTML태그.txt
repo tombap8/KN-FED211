@@ -48,4 +48,6 @@
 -> 블릿옵션
 https://www.w3schools.com/cssref/playit.asp?filename=playcss_ul_list-style-type&preval=disc
 25. ol : 순서있는 리스트(ordered list)
+-> 순서옵션
+https://www.w3schools.com/cssref/playit.asp?filename=playcss_ol_list-style-type&preval=upper-roman
 26. li : ul과 ol요소의 직계필수 자식요소!
