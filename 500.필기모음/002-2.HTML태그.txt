@@ -51,3 +51,9 @@ https://www.w3schools.com/cssref/playit.asp?filename=playcss_ul_list-style-type&
 -> 순서옵션
 https://www.w3schools.com/cssref/playit.asp?filename=playcss_ol_list-style-type&preval=upper-roman
 26. li : ul과 ol요소의 직계필수 자식요소!
+
+27. dl : 용어설명리스트 (Description Lists) 
+28. dt : 용어 (Description term)
+29. dd : 용어설명 (Description describes)
+-> dl 아래 자식으로 반드시 dt와 dd는 한개이상 와야함!
+-> dt와 dd는 형제요소임!
