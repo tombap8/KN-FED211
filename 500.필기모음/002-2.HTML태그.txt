@@ -69,4 +69,7 @@ https://www.w3schools.com/cssref/playit.asp?filename=playcss_ol_list-style-type&
 32. table : 테이블 전체 부모요소
 33. tr : 테이블 레코드행 (table row)
 34. td : 테이블 데이터요소 (table data)
+
+[ 기능요소 ]
+35. button : 버튼모양의 요소
  
