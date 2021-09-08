@@ -41,6 +41,13 @@ padding: 값 값 값 값; -> 위 오른 아래 왼(시계방향)
 margin-top, margin-left, margin-right, margin-bottom
 padding-top, padding-left, padding-right, padding-bottom
 
+6. outline : 박스의 외곽선을 표시
+    -> 박스크기에 포함되지 않음
+    -> 표시방법은 두께,종류,색상순
+    -> 두께가 커져도 다른요소에 영향없음
+    -> 어디에 씀? 예컨데 입력창 포커스표시 등
+
+
 
 [ 배경속성 ]
 

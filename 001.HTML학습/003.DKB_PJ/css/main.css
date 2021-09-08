@@ -30,6 +30,14 @@ body{
 #cbx{
     width: 1000px;
     height: 300px;
-    outline: 5px dashed lime;
+    margin: 0 auto;
+    /* 마영오! - 가로중앙정렬 */
+    outline: 15px dashed lime;
+}
+/* 개별 캐릭터 박스 공통 */
+.cat{
+    width: 25%;/* 4등분 */
+    height: 100%;
+    outline: 10px dotted blue;
 }
 
