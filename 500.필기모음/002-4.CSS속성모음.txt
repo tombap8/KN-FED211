@@ -1,0 +1,39 @@
+[ 글자관련 ]
+1. color : 글자색
+2. font-family : 글자체
+3. font-weight : 글자두께
+ - normal | bold | bolder | 100 ~ 900 
+ -> 글자체 지원에 따라 다름
+4. font-style : 글자스타일(이탤릭)
+5. letter-spacing:  글자간격 (마이너스가능)
+6. word-spacing: 단어간격 (마이너스가능)
+
+[ 박스모델관련 ]
+1. width: 가로크기
+2. height: 세로크기
+3. padding: 안쪽여백
+4. marging: 바깥여백
+5. border: 경계선
+    -> border: 두께 종류 색상; (두종색)
+    - 두께 : 보더의 두께 사이즈 지정(px,em 등)
+    - 종류 : solid(선형), dotted(점선형), dashed(데쉬형) 등
+    - 색상 : 선색(기본색상표기법)
+
+    -> 방향별 보더:
+    border-top, border-left, border-right,border-bottom
+
+
+※ 마진,패딩 공통 셋팅!
+margin: 값; -> 4방향
+margin: 값 값; -> 위아래 양쪽
+margin: 값 값 값; -> 위 양쪽 아래
+margin: 값 값 값 값; -> 위 오른 아래 왼(시계방향)
+
+padding: 값; -> 4방향
+padding: 값 값; -> 위아래 양쪽
+padding: 값 값 값; -> 위 양쪽 아래
+padding: 값 값 값 값; -> 위 오른 아래 왼(시계방향)
+
+-> 각 뱡향별 속성
+margin-top, margin-left, margin-right, margin-bottom
+padding-top, padding-left, padding-right, padding-bottom

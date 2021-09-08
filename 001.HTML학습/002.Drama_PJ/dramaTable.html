@@ -7,12 +7,59 @@
             #drama{
                 font-family: "궁서체", "굴림";
                 /* 글자체 - 순서대로 있는체를 적용함 */
-                font-size: 14px;
+                font-size: 24px;
                 /* 글자크기 
                 - 기본값은 16px (단위:px,em,rem,%) */
                 color: #222;
                 /* 글자색 */
+
+                /* 테이블 td사이 공백없애기 */
+                border-collapse: collapse;
+                /* 
+                    기본값이 separate이고 사이 간극이 존재함
+                    이것을 없애려면 collapse로 설정함!
+                    (테이블 디자인시 필수셋팅!)
+                */
+
+                /* 테이블 가로중앙 정렬 */
+                margin: 0 auto;
+                /* 
+                    블록요소의 가로 중앙정렬시 마영오!
+                    테이블도 기본속성이 block과 유사함
+                    (옆에 못옴!)
+                    블록요소와 테이블요소의 차이점은
+                    블록은 width를 안주면
+                    width: auto 로써 부모요소 끝까지 차지함
+                    >>> 테이블은 내용만큼만 늘어남
+                    테이블의 특징중 하나는 부모요소의 가로크기가
+                    >>> 자기가 만든 자동크기보다 작아지면 같이 작아짐
+                    여기서는 가로크기를 지정함
+                */
+                width: 1000px;
+
             }
+
+            /* 테이블 제목 */
+            #drama caption{
+                font-size: 35px;
+                font-weight: bold;
+                letter-spacing: 5px;/* 글자간격 */
+                word-spacing: 5px;/* 단어간격 */
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+
+            /* td와 th에 패딩 */
+            #drama td,
+            #drama th {
+                padding: 8px 10px;
+            }
+
+            /* td 밑줄 넣기 - 테이블 본문만 적용 */
+            #drama tbody td {
+                border-bottom: 1px solid #ccc;
+            }
+
 
         </style>
     </head>
@@ -83,26 +130,26 @@
                 <tr>
                     <td>4</td>
                     <td>죽어야 산다</td>
-                    <td>지진희,윤세아</td>
-                    <td>tvN</td>
+                    <td>지창욱,오윤아</td>
+                    <td>JTBC</td>
                     <td>수목</td>
-                    <td>오후10:50</td>
-                    <td>20부작</td>
+                    <td>오후10:00</td>
+                    <td>18부작</td>
                 </tr>
                 <tr>
                     <td>5</td>
                     <td>아름다운 세상</td>
-                    <td>지진희,윤세아</td>
-                    <td>tvN</td>
+                    <td>김동길,오세정</td>
+                    <td>MBC</td>
                     <td>수목</td>
-                    <td>오후10:50</td>
-                    <td>20부작</td>
+                    <td>오후09:50</td>
+                    <td>16부작</td>
                 </tr>
                 <tr>
                     <td>6</td>
                     <td>혹여나 오시나요</td>
-                    <td>지진희,윤세아</td>
-                    <td>tvN</td>
+                    <td>마윤석,이필모</td>
+                    <td>KBS2</td>
                     <td>수목</td>
                     <td>오후10:50</td>
                     <td>20부작</td>
@@ -110,25 +157,25 @@
                 <tr>
                     <td>7</td>
                     <td>당신오면 죽어</td>
-                    <td>지진희,윤세아</td>
+                    <td>성소희,이기로</td>
                     <td>tvN</td>
-                    <td>수목</td>
-                    <td>오후10:50</td>
-                    <td>20부작</td>
+                    <td>토일</td>
+                    <td>오후09:50</td>
+                    <td>15부작</td>
                 </tr>
                 <tr>
                     <td>8</td>
                     <td>칼부림의 세계</td>
-                    <td>지진희,윤세아</td>
-                    <td>tvN</td>
-                    <td>수목</td>
-                    <td>오후10:50</td>
+                    <td>장윤배,오세동</td>
+                    <td>SBS</td>
+                    <td>금토</td>
+                    <td>오후10:00</td>
                     <td>20부작</td>
                 </tr>
                 <tr>
                     <td>9</td>
                     <td>호떡집 사장</td>
-                    <td>지진희,윤세아</td>
+                    <td>송기영,판도라</td>
                     <td>tvN</td>
                     <td>수목</td>
                     <td>오후10:50</td>
@@ -137,11 +184,11 @@
                 <tr>
                     <td>10</td>
                     <td>마이크로 칩</td>
-                    <td>지진희,윤세아</td>
-                    <td>tvN</td>
+                    <td>이라미,박노라</td>
+                    <td>MBC</td>
                     <td>수목</td>
                     <td>오후10:50</td>
-                    <td>20부작</td>
+                    <td>10부작</td>
                 </tr>
                 
             </tbody>
