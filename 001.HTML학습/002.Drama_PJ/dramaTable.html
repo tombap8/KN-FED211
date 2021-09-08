@@ -60,15 +60,21 @@
                 border-bottom: 1px solid #ccc;
             }
 
-            /* th에 윗줄 아랫줄 두껍게 넣기 */
+            /* th에 윗줄 두껍게 넣기 */
             #drama th {
                 border-top: 2px solid #555;
-                border-bottom: 2px solid #555;
             }
 
             /*  중앙부분 마지막 td에 아랫줄 두껍게 */
-            .ltr td {
+            /* :last-child 가상클래스 - 마지막자식요소 선택 */
+            #drama tr:last-child td {
                 border-bottom: 2px solid #555;
+            }
+
+            /*  중앙부분 첫번째 td에 윗줄 두껍게 */
+            /* :first-child 가상클래스 - 첫번째요소 선택 */
+            #drama tr:first-child td {
+                border-top: 2px solid #555;
             }
 
             /* 하단부분 */
@@ -198,7 +204,7 @@
                     <td>오후10:50</td>
                     <td>20부작</td>
                 </tr>
-                <tr class="ltr">
+                <tr>
                     <td>10</td>
                     <td>마이크로 칩</td>
                     <td>이라미,박노라</td>
