@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* 도깨비 메인 CSS - main.css */
+
+/* 초기화 셋팅 */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;/* 보이는 화면 높이값 채우기 */
+}
+
+body{
+    /* 1. 배경색 */
+    background-color: rgb(173, 200, 250);
+    /* 2. 배경이미지 */
+    background-image: url(../images/bg_logo_a_01.png);
+    /* 3. 배경반복여부 
+    - repeat(반복,기본값),no-repeat(반복안함)
+    repeat-x(x축반복), repeat-y(y축반복) */
+    background-repeat: no-repeat;
+
+    /* 4. 배경고정 */
+
+    /* 5. 배경위치 
+    - 가로값 : 수치(px,%), left,center,right
+    - 세로값 : 수치(px,%), top,center,bottom
+    - 별도설정 속성
+        background-position-x
+        background-position-y
+    */
+    background-position: right top;
+
+}
