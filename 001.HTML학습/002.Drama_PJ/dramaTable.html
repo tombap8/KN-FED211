@@ -77,6 +77,18 @@
                 border-top: 2px solid #555;
             }
 
+            /* 중앙부분 몇번째 요소의 글자색 변경하기 */
+            /* nth-child(순번) */
+            #drama tr:nth-child(8) td{
+                color: red;
+            }
+
+            /* 중앙부분 짝수번째 요소 배경색 넣기 */
+            /* even 짝수, odd 홀수 */
+            #drama tr:nth-child(even) td {
+                background: rgb(240, 240, 240);
+            }
+
             /* 하단부분 */
             #drama tfoot td{
                 text-align: center;
