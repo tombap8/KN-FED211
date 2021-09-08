@@ -109,6 +109,22 @@
             margin: 0 auto;
             /* 마영오! 중앙! */
         }
+        /* 구분테이블 */
+        #gubun{
+            font-size: 20px;
+            border: 1px solid #999;
+        }
+        #gubun td{
+            padding: 10px;
+        }
+        /* 구분테이블 첫번째 tr의 첫번째 td에 오른쪽보더 */
+        #gubun tr:first-child td:first-child {
+            border-right: 1px dotted #999;
+        }
+        /* 구분테이블의 tr중 앞에 tr형제가 있는 tr의 td만 윗쪽보더 */
+        #gubun tr+tr td {
+            border-top: 1px dotted #999;
+        }
     </style>
 </head>
 
@@ -245,7 +261,7 @@
 
     <!-- 구분테이블 -->
     <div class="gubun">
-        <table id="gubun" border="1">
+        <table id="gubun" class="tbl">
             <tr>
                 <td rowspan="4">구분</td>
                 <td>월화:월화드라마</td>
