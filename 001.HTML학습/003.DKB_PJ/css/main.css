@@ -15,3 +15,21 @@ body{
     background: url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
 
 }
+
+/* 1. 상단영역 */
+
+/* 로고 */
+.logo img{/* 이미지 마진위치조정 */
+    margin-top: 45px;
+    margin-left: 70px;
+}
+
+/* 2. 메인영역 */
+
+/* 캐릭터 박스 */
+#cbx{
+    width: 1000px;
+    height: 300px;
+    outline: 5px dashed lime;
+}
+
