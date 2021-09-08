@@ -9,24 +9,9 @@ html, body {
 }
 
 body{
-    /* 1. 배경색 */
-    background-color: rgb(173, 200, 250);
-    /* 2. 배경이미지 */
-    background-image: url(../images/bg_logo_a_01.png);
-    /* 3. 배경반복여부 
-    - repeat(반복,기본값),no-repeat(반복안함)
-    repeat-x(x축반복), repeat-y(y축반복) */
-    background-repeat: no-repeat;
-
-    /* 4. 배경고정 */
-
-    /* 5. 배경위치 
-    - 가로값 : 수치(px,%), left,center,right
-    - 세로값 : 수치(px,%), top,center,bottom
-    - 별도설정 속성
-        background-position-x
-        background-position-y
-    */
-    background-position: right top;
+    /* 배경 한번에 셋팅하기! */
+    /* background: 색 이미지 반복 고정 위치/크기;
+    background: 색이반고윙/크; */
+    background: url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
 
 }
