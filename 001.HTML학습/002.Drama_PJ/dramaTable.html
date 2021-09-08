@@ -63,7 +63,18 @@
             /* th에 윗줄 아랫줄 두껍게 넣기 */
             #drama th {
                 border-top: 2px solid #555;
-                border-bottom: 2px dotted #555;
+                border-bottom: 2px solid #555;
+            }
+
+            /*  중앙부분 마지막 td에 아랫줄 두껍게 */
+            .ltr td {
+                border-bottom: 2px solid #555;
+            }
+
+            /* 하단부분 */
+            #drama tfoot td{
+                text-align: center;
+                padding: 45px 0;/* 위아래45px 양쪽0 */
             }
 
 
@@ -187,7 +198,7 @@
                     <td>오후10:50</td>
                     <td>20부작</td>
                 </tr>
-                <tr>
+                <tr class="ltr">
                     <td>10</td>
                     <td>마이크로 칩</td>
                     <td>이라미,박노라</td>

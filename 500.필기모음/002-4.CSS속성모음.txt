@@ -7,6 +7,8 @@
 4. font-style : 글자스타일(이탤릭)
 5. letter-spacing:  글자간격 (마이너스가능)
 6. word-spacing: 단어간격 (마이너스가능)
+7. text-align: 박스에서의 글자(인라인요소) 정렬
+    left(기본값) | right | center | justify(양쪽정렬)
 
 [ 박스모델관련 ]
 1. width: 가로크기
