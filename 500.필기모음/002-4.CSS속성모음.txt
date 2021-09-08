@@ -15,9 +15,10 @@
 4. marging: 바깥여백
 5. border: 경계선
     -> border: 두께 종류 색상; (두종색)
-    - 두께 : 보더의 두께 사이즈 지정(px,em 등)
-    - 종류 : solid(선형), dotted(점선형), dashed(데쉬형) 등
-    - 색상 : 선색(기본색상표기법)
+    - 두께(border-width) : 보더의 두께 사이즈 지정(px,em 등)
+    - 종류(border-style) : solid(선형), dotted(점선형), dashed(데쉬형) 등
+    https://www.w3schools.com/cssref/playit.asp?filename=playcss_border-style&preval=dotted
+    - 색상(border-color) : 선색(기본색상표기법)
 
     -> 방향별 보더:
     border-top, border-left, border-right,border-bottom
