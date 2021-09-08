@@ -69,6 +69,15 @@ https://www.w3schools.com/cssref/playit.asp?filename=playcss_ol_list-style-type&
 32. table : 테이블 전체 부모요소
 33. tr : 테이블 레코드행 (table row)
 34. td : 테이블 데이터요소 (table data)
+35. th : 테이블 머릿부분에 사용될 경우 
+  td대신 th를 사용할 수 있다.
+  (기본디자인-중앙정렬+두꺼운글자)
+________________________________  
+(테이블 구조를 위한 추가요소들)
+36. caption : 테이블 제목
+37. thead : 테이블 머릿부분
+38. tbody : 테이블 중앙 내용부분
+39. tfoot : 테이블 하단부분
 
 [ 기능요소 ]
 35. button : 버튼모양의 요소
