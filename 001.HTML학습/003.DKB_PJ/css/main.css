@@ -64,8 +64,15 @@ body{
     outline: 10px dotted blue;
 }
 /* 캐릭터 이미지 */
-.cat>img{
+.ci>img{/* 직계자식 이미지만! */
     width: 100%;
     /* 이미지의 height는 자동(비율유지) */
 }
+/* 캐릭터 이름 */
+.ci span{
+    display: block;/* 블록변경 */
+    text-align: center;/* 가로중앙 적용! */
+}
+/* 캐릭터 이름 첫번째 이미지 숨기기 */
+
 
