@@ -28,12 +28,23 @@ body{
 
 /* 캐릭터 박스 */
 #cbx{
-    width: 80%;
-    height: 300px;
+    width: 90%;
+    /* height: 300px; 
+        자식요소 float때문에
+        자식요소를 인식하지 못함!
+        높이값을 없을때 높이값이 안나옴!
+    */
     margin: 0 auto;
     /* 마영오! - 가로중앙정렬 */
     outline: 15px dashed lime;
 }
+/* 가상요소로 float해제 */
+.clb::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
 /* 개별 캐릭터 박스 공통 */
 .cat{
     width: 25%;/* 4등분 */
@@ -43,6 +54,13 @@ body{
     /* 블록요소가 옆으로 흐르게함
     left값을 주면 나는 왼쪽 다른요소는
     오른쪽에 올 수 있게 함 */
+
+    /* 안쪽여백 */
+    padding: 5px;
+
+    /* 마진,패딩 포함하기 속성 */
+    box-sizing: border-box;
+
     outline: 10px dotted blue;
 }
 /* 캐릭터 이미지 */
