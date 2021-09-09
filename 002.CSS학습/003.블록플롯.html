@@ -56,6 +56,12 @@
 
             [ 기존에 float셋팅된 요소 없애기 ]
             float:none;
+
+            [ flaot에 의한 진행방향 ]
+            float:left 만 사용 : 왼쪽 -> 오른쪽
+            float:right 만 사용 : 오른쪽 -> 왼쪽
+            (경우5)
+
         
         */
 
@@ -155,6 +161,15 @@
             float: left;
         }
 
+        /* 경우5 */
+        .case5 {
+            overflow: hidden;
+        }
+        .case5 .bx {
+            float: right;
+            /* 오른쪽 기준 : 방향 오른쪽부터 왼쪽으로 */
+        }
+
     </style>
 </head>
 <body>
@@ -187,6 +202,14 @@
 
     <h2>경우4</h2>
     <div class="wrap case4">
+        <div class="bx bx1"></div>
+        <div class="bx bx2"></div>
+        <div class="bx bx3"></div>
+        <div class="bx bx4"></div>
+    </div>
+
+    <h2>경우5</h2>
+    <div class="wrap case5">
         <div class="bx bx1"></div>
         <div class="bx bx2"></div>
         <div class="bx bx3"></div>
