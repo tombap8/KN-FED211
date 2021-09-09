@@ -27,12 +27,35 @@
             3) both -> 이전 요소가 
                         float:left/right 무엇이든
 
+            -> 일반적으로 이전요소의 float을 
+            적용받지 않을 요소에게 clear:both를 준다!
+            (경우1)
+
             [ 부모요소가 자식요소의 float때문에 망가질때 ]
+
             1. 마지막 블록자식요소를 넣고 clear:both를함
             (경우2)
+
             2. 가상요소 ::after로 clear:both설정함
             (경우3)
-            3. 
+
+            3. float된 자식요소의 부모박스에 
+                overflow:hidden 처리를 함
+                -> 자식요소 숨기기를 할 경우
+                float으로 요소가 유동적인 상태를
+                마무리하는 속성 내부적 셋팅됨!
+
+                -> 단점: 만약 자식요소가 부모요소
+                바깥으로 나가야 할 경우 숨겨져서
+                제약이 따르게 됨!!!
+                (이럴경우 위의 1,2번을 쓸것! 특히 2번추천!!!)
+
+            4. 높이값을 강제로 주는 방법도 있음(비추;;;;)
+
+            _______________________________________
+
+            [ 기존에 float셋팅된 요소 없애기 ]
+            float:none;
         
         */
 
@@ -124,6 +147,14 @@
                 같아짐!
         */
 
+        /* 경우4 */
+        .case4 {
+            overflow: hidden;
+        }
+        .case4 .bx {
+            float: left;
+        }
+
     </style>
 </head>
 <body>
@@ -152,6 +183,14 @@
         <div class="bx bx2 flr"></div>
         <div class="bx bx3 clb fll"></div>
         <div class="bx bx4 flr"></div>
+    </div>
+
+    <h2>경우4</h2>
+    <div class="wrap case4">
+        <div class="bx bx1"></div>
+        <div class="bx bx2"></div>
+        <div class="bx bx3"></div>
+        <div class="bx bx4"></div>
     </div>
     
 </body>
