@@ -36,7 +36,7 @@ body{
     */
     margin: 0 auto;
     /* 마영오! - 가로중앙정렬 */
-    outline: 15px dashed lime;
+    /* outline: 15px dashed lime; */
 }
 /* 가상요소로 float해제 */
 .clb::after{
@@ -61,7 +61,7 @@ body{
     /* 마진,패딩 포함하기 속성 */
     box-sizing: border-box;
 
-    outline: 10px dotted blue;
+    /* outline: 10px dotted blue; */
 }
 /* 캐릭터 이미지 */
 .ci>img{/* 직계자식 이미지만! */
@@ -97,6 +97,25 @@ body{
 /* 캐릭터 이름 마지막 이미지 숨기기 */
 .cat:hover .ci span img:last-child {
     display: none;
+}
+
+/* 캐릭터 설명 박스 */
+.cd {
+    background: url(../images/eachBG.jpg) no-repeat center/cover;
+}
+
+/* 캐릭터설명 타이틀 */
+.cd h3{
+    padding: 20px;
+}
+
+/* 캐릭터설명 문단 */
+.cd p{
+    padding: 10px;
+
+    font: 14px/2 '맑은 고딕', '돋움', arial;
+    /* font: 스타일 두께 크기/줄간격 글자체;
+    font: 스 두 크/줄 체; */
 }
 
 
