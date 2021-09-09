@@ -5,6 +5,38 @@
     <title>003.블록요소의 float</title>
     <style>
 
+        /* 
+            [ 블록요소의 float ]
+            - 필요성: 블록요소는 옆에 다른요소가 올 수
+             없음 그래서 옆으로 흐르게 하는 속성셋팅이
+              필요!
+            - float 속성값:
+            1) left -> 설정요소는 왼쪽에 다른요소는
+                        오른쪽으로 흐르게 해줌
+            2) right -> 설정요소는 오른쪽에 다른요소는
+                        왼쪽으로 흐르게 해줌
+            
+            [ float만 설정한 경우 생기는 문제! ]
+            - 하위요소가 float설정된 요소를 인지하지 못해
+            위로 올라오게됨
+            - 이것을 위해 다음 속성셋팅 필수!
+            - 대상: float을 끊어줄 블록요소
+            - cleat 속성값:
+            1) left -> 이전 요소가 float:left일때
+            2) right -> 이전 요소가 float:right일때
+            3) both -> 이전 요소가 
+                        float:left/right 무엇이든
+
+            [ 부모요소가 자식요소의 float때문에 망가질때 ]
+            1. 마지막 블록자식요소를 넣고 clear:both를함
+            (경우2)
+            2. 가상요소 ::after로 clear:both설정함
+            (경우3)
+            3. 
+        
+        */
+
+
         h1{
             text-align: center;
         }
@@ -64,7 +96,9 @@
 
         /* float해제용 가상요소 */
         .flclb::after{
-            content: '';
+            content: "";/* 마치 span태그를 쓴것 같음 */
+            display: block;/* 마치 div태그를 쓴것 같음 */
+            clear: both;/* float해제! */
         }
 
         /* 
