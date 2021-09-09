@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>001.배경넣기 연습</title>
     <style>
-        html,body {
+        html,
+        body {
             margin: 0;
             padding: 0;
             height: 100%;
@@ -17,22 +19,38 @@
             마진top이 부모요소에 포함된다! */
         }
 
-        h1{
+        h1 {
             text-align: center;
             /* 글자중앙 
             - 박스내부의 인라인요소,글자 중앙 */
         }
 
-        body{
+        body {
+            /* 배경이미지 한번에 셋팅
+            background: 색이반고윙/크
+            -> 배경이미지를 한번에 셋팅하면 여러개의
+            이미지를 셋팅할 수 있다.
+            방법: 콤마로 각 셋팅을 구분함 
             
+            -> 배경이미지 크기 지정시 값을 하나만쓰면 
+            가로크기만 지정됨 세로크기는 자동임!
+
+            -> 이미지 위치 순서는 첫번째가 제일위! 순서대로!
+            */
+            background:
+                url(./imgs/dc1.png) no-repeat center/400px,
+                url(./imgs/dc2.png) no-repeat right top/350px,
+                url(./imgs/dc3.png) no-repeat left bottom/300px auto,
+                url(./imgs/dc4.png) no-repeat right bottom/auto 350px,
+                url(./imgs/bg_logo_a_01.png) no-repeat 200px 100px,
+                url(./imgs/bg_mainvisual.jpg) no-repeat center 10%/50%;
         }
-
-
-
     </style>
 </head>
+
 <body>
     <h1>001.배경넣기 연습</h1>
-    
+
 </body>
+
 </html>
