@@ -63,6 +63,9 @@
         }
 
         /* float해제용 가상요소 */
+        .flclb::after{
+            content: '';
+        }
 
         /* 
             가상요소란?
@@ -74,6 +77,8 @@
                     content: "나야나";
                 }
 
+                -> 콜론을 두개쓰는 이유?
+                가상클래스와 구분하기 위해!
 
             1) ::before 맨앞에 넣기
             2) ::after 맨뒤에 넣기
@@ -108,7 +113,7 @@
     </div>
 
     <h2>경우3</h2>
-    <div class="wrap">
+    <div class="wrap flclb">
         <div class="bx bx1 fll"></div>
         <div class="bx bx2 flr"></div>
         <div class="bx bx3 clb fll"></div>
