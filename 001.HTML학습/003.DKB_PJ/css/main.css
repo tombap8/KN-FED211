@@ -74,5 +74,20 @@ body{
     text-align: center;/* 가로중앙 적용! */
 }
 /* 캐릭터 이름 첫번째 이미지 숨기기 */
+/* display:none사용 */
+.ci span img:first-child{
+    display: none;
+}
+/* .cat박스에 마우스 오버시 */
+/* 캐릭터 이름 첫번째 이미지 보이기 */
+/* 원래 이미지는 display:inline */
+.cat:hover .ci span img:first-child {
+    display: inline;
+}
+/* .cat박스에 마우스 오버시 */
+/* 캐릭터 이름 마지막 이미지 숨기기 */
+.cat:hover .ci span img:last-child {
+    display: none;
+}
 
 
