@@ -233,4 +233,17 @@ ul.bm a:hover{
     text-decoration: underline;/* 밑줄 */
 }
 
+/* 주소박스 */
+.info address{
+    width: 720px;
+    max-width: 90%;
+
+    margin: 20px auto;/* 위아래 20px 양쪽auto(중앙) */
+    font: normal 12px/2 "맑은 고딕";
+    text-align: center;/* 글자중앙 */
+
+    border: 5px double #555;
+    padding: 10px 0;/* 위아래 10px 양쪽0 */
+}
+
 
