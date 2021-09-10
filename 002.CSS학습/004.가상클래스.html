@@ -4,7 +4,33 @@
     <meta charset="UTF-8">
     <title>004.가상클래스</title>
     <style>
-        
+        h1,h2{
+            text-align: center;
+        }
+        /* a요소 가상클래스 주기 */
+
+        /* :link 링크최초상태 */
+        h2 a:link{
+            color: red;
+            text-decoration: none;
+        }
+        /* :hover 마우스 오버상태 */
+        h2 a:hover {
+            color: pink;
+            text-decoration: line-through;
+            text-shadow: 2px 2px 2px #777;
+            /* 
+                글자그림자
+                text-shadow: x축 y축 블러 색;
+            */
+        }
+        /* :active 마우스로 눌려진상태(클!) */
+        h2 a:active {
+            color: blue;
+        }
+
+
+
     </style>
 </head>
 <body>
