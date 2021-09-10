@@ -115,7 +115,7 @@ body{
 
 /* 캐릭터 설명 박스 */
 .cd {
-    height: 250px;
+    height: 0px;/* 마우스오버시 250px */
     overflow: auto;/* 넘치면 스크롤바 */
     margin-top: 15px;
     border-radius: 20px 0 0 20px;/* 오른쪽위,오른쪽아래 */
@@ -125,11 +125,21 @@ body{
         (왼쪽위 부터 시계방향설정)
     */
     background: url(../images/eachBG.jpg) no-repeat center/cover;
+
+    /* 
+    트랜지션으로 애니메이션 설정하기
+    transition: 속성명 시간 이징 지연시간;
+    */
+    transition: 1s;
+}
+/* 캐릭터개별박스(.cat)에 마우스 오버시 .cd높이값 변경 */
+.cat:hover .cd{
+    height: 250px;
 }
 
 /* 캐릭터설명 타이틀 */
 .cd h3{
-    padding: 20px;
+    padding: 5px 10px 0px;
 }
 
 /* 캐릭터설명 문단 */
