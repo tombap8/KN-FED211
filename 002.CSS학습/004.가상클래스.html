@@ -139,6 +139,31 @@
 
         /* 4번 이후 모든 li 전부셋팅 */
         /* 틸드(~)를 사용한 다중형제 요소 선택 */
+        ul.part1 li:nth-child(4)~li {
+            font-size: 25px;
+            font-family: "궁서";
+            color: orangered;
+        }
+        /* 오버시 */
+        ul.part1 li:nth-child(4)~li:hover {
+            font-size: 28px;
+            color: blue;
+        }
+
+        /* 마지막 li */
+        /* 
+            틸드(~)를 사용한 CSS가 한단계 더 선택하여서
+            우선 순위가 높으므로 이것보다 우선순위를 
+            높이는 가장쉬운 방법은 한단계위의 부모요소를
+            써준면 된다~!!!
+            -> 여기서 한단계 위의 부모는 body!
+        */
+        body ul.part1 li:last-child {
+            /* 40px, 맑은 고딕, coral */
+            font-size: 40px;
+            font-family: "맑은 고딕";
+            color: coral;
+        }
 
 
 
