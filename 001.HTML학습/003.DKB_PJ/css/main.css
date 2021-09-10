@@ -76,7 +76,16 @@ body{
     box-sizing: border-box;
 
     /* outline: 10px dotted blue; */
+
+    /* 트랜지션: 속시이지 */
+    transition: margin-top .8s ease-in-out;
 }
+
+/* 캐릭터개별박스(.cat)에 마우스 오버시 마진top올라가기 */
+.cat:hover {
+    margin-top: -50px;
+}
+
 /* 캐릭터 이미지 */
 .ci>img{/* 직계자식 이미지만! */
     width: 100%;
@@ -127,10 +136,46 @@ body{
     background: url(../images/eachBG.jpg) no-repeat center/cover;
 
     /* 
-    트랜지션으로 애니메이션 설정하기
-    transition: 속성명 시간 이징 지연시간;
+    [ 트랜지션으로 애니메이션 설정하기 ]
+
+    - 트랜지션이란? CSS속성값이 변경되는 과정을
+    애니메이션으로 보여주는 속성
+    
+    - 형식:
+        transition: 속성명 시간 이징 지연시간;
+        -> 속시이지!
+    - 설정값:
+        1) 속성명 - 애니메이션 지정 대상 속성
+            예컨데 height값을 쓰면 
+            height에 대한 애니만나옴!
+            -> all 이라고 쓰거나 안쓰면 
+                모든 변경에 대한 애니!
+        2) 시간 - 애니메이션 시간설정
+                -> 초단위로 표시 , 뒤에 s라는 단위를 씀
+                -> 초단위 중 0.5s 이런식의 소숫점 앞자리가 0이면
+                이것을 생략하여 표현하기도 함 -> .5s
+        3) 이징 - 애니메이션 가속도설정
+                ease-in 시작할때 천천히
+                ease-out 끝날때 천천히
+                ease-in-out 시작과 끝에 천천히
+                linear 등속도
+                ease 약한정도로 시작과 끝에 천천히
+        4) 지연시간 - 애니메이션 시작전 대기시간
+                - 초단위(뒤에 s)
+        
+        -> 왜 속성값을 쓰게 해놨나?
+        속시이지 의 순서로 속성별로 설정을 모두 다르게
+        여러개를 설정할 수 있음!!! 아주 뛰어남!!!
+
+        예) transform: width .3s ease-in,
+                        height .5s ease-out .5s;
+                    
+        ->>> 마우스 오버시 이징설정시 양방향을 모두
+        같은 설정으로 하고자 할때는 over에 설정말고
+        원본에 설정한다-> over아닌곳에 설정함!!!
+
     */
-    transition: 1s;
+    transition: height .8s ease-in-out;
 }
 /* 캐릭터개별박스(.cat)에 마우스 오버시 .cd높이값 변경 */
 .cat:hover .cd{
