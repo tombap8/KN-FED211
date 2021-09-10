@@ -10,24 +10,36 @@
         /* a요소 가상클래스 주기 */
 
         /* :link 링크최초상태 */
-        h2 a:link{
+        /* h2 a:link{
             color: red;
             text-decoration: none;
-        }
-        /* :hover 마우스 오버상태 */
-        h2 a:hover {
-            color: pink;
-            text-decoration: line-through;
+        } */
+
+        /* 일반적으로 a요소 자체 디자인을 잡는다! */
+        h2 a{
+            color: hotpink;
+            text-decoration: none;/* 밑줄없앰 */
             text-shadow: 2px 2px 2px #777;
             /* 
                 글자그림자
                 text-shadow: x축 y축 블러 색;
             */
         }
-        /* :active 마우스로 눌려진상태(클!) */
-        h2 a:active {
-            color: blue;
+
+        /* :hover 마우스 오버상태 */
+        h2 a:hover {
+            color: red;
+            text-decoration: overline;
         }
+        /* :active 마우스로 눌려진상태(클!) */
+        /* h2 a:active {
+            color: blue;
+        } */
+
+        /* :visited 링크 방문후(한번클릭후) */
+        /* h2 a:visited {
+            color: mediumseagreen;
+        } */
 
 
 
