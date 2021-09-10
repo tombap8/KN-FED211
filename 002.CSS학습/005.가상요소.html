@@ -67,7 +67,24 @@
             */
         }
         /* 맨뒤 추가요소 ::after */
-        
+        h2::after {
+            content: '';
+            /* 이미지를 url로 넣을 경우 크기를 변경할
+            수 없으므로 박스를 만들고 배경이미지로 넣어
+            서 크기를 변경한다! */
+            display: inline-block;
+            /* display 설정을 안하면 inline이어서
+            크기적용이 되지 않는다. 따라서 block을
+            해야 적용되지만 줄바꿈이 되므로 inline-block
+            을 사용한다! */
+            width: 50px;
+            height: 25px;
+            margin-left: 20px;
+            vertical-align: -5px;
+
+            background: url(./imgs/blogo.png) no-repeat center/cover;
+            /* outline: 2px dotted red; */
+        }
 
         /* dl요소 디자인 */
         dl {
