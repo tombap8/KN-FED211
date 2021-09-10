@@ -50,7 +50,7 @@
 
              */
         /* h2요소 맨앞에 이미지 넣기 */
-        h2::before{
+        h2::before {
             content: url(./imgs/blogo.png);
             /* 이미지는 원본이미지만 들어가며 
             크기기조정불가! */
@@ -66,6 +66,7 @@
 
             */
         }
+
         /* 맨뒤 추가요소 ::after */
         h2::after {
             content: '';
@@ -96,20 +97,29 @@
         }
 
         /* 반복되는 요소의 앞에 아이콘 가상요소로 넣기 */
-        
+        dl dt::before {
+            content: "♣";
+            color: blue;
+            vertical-align: 2px;
+            margin-right: 5px;
+        }
 
         /* dd전체와 dd.story>h3에 가상요소 before적용하기 */
-        
+        dl dd::before,
+        dd.story>h3::before {
+            content: "♥";
+            color: red;
+            vertical-align: 2px;
+            margin-right: 5px;
+
+        }
+
 
         /* 스토리의 dd는 가상요소 없애기 */
-        
+
         /* .story의 첫번째 p태그의 첫번째 글자 디자인 변경하기 */
-        
+
         /* .story의 첫번째 p태그의 첫번째줄 디자인 변경하기 */
-        
-
-        
-
     </style>
 </head>
 
@@ -145,7 +155,8 @@
                 벌어지는 신비로운 낭만 설화
             </p>
             <p>
-                <b>불</b><span>멸의 삶을 끝내기 위해 인간 신부가</span> 필요한 도깨비, 그와 기묘한 동거를 시작한 기억상실증 저승사자. 그런 그들 앞에 '도깨비 신부'라 주장하는 '죽었어야 할 운명'의 소녀가 나타나며
+                <b>불</b><span>멸의 삶을 끝내기 위해 인간 신부가</span> 필요한 도깨비, 그와 기묘한 동거를 시작한 기억상실증 저승사자. 그런 그들 앞에 '도깨비 신부'라 주장하는
+                '죽었어야 할 운명'의 소녀가 나타나며
                 벌어지는 신비로운 낭만 설화
             </p>
 
