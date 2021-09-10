@@ -201,12 +201,15 @@ body{
 
 /* 하단영역 */
 .info{
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 15px;
 }
 /* 하단링크 */
 ul.bm{
-    margin: 0;
+    width: 720px;
+    max-width: 90%;
+
+    margin: 0 auto;/* 마영오! */
     padding: 0;
     list-style: none;
     /* 3無 */
