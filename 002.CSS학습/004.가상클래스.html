@@ -65,7 +65,7 @@
         포커스는 요소가 클릭되어 활성화된 상태를 유지함
         - 포커스를 없애고 싶으면 다른요소를 클릭하면 됨
         - 포커스가 없어지는 상태를 blur(블러)라고함
-        
+
     */
 
 
@@ -229,6 +229,47 @@
             font-family: "맑은 고딕";
             color: coral;
         }
+
+        /* 두번째 파트 */
+
+        /* 두번째 div */
+        div.part2 {
+            width: 800px;
+            margin: 0 auto;/* 마영오! */
+            margin-top: 20px;
+            border: 2px solid #ccc;/* 보더 */
+            border-radius: 20px;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+
+        /* 30px, 궁서, blueviolet */
+        div.part2 div:nth-of-type(2){
+            font-size: 30px;
+            font-family: "궁서";
+            color: blueviolet;
+        }
+
+        /* 첫번째 i */
+        /* 20px, bold, palevioletred */
+        div.part2 i:first-of-type {
+            font-size: 20px;
+            font-weight: bold;
+            color: palevioletred;
+        }
+
+        /* 3번째 div 이후 div형제요소 모두 */
+        /* red, 궁서 */
+        div.part2 div:nth-of-type(3)~div {
+            color: red;
+            font-family: "궁서";
+        }
+        /* 
+            div.part2 div:nth-of-type(3)~i
+            예컨데 마지막 선택을 i로 한다면
+            선택된 요소 이후의 모든 i요소를 선택함!
+        */
 
 
 
