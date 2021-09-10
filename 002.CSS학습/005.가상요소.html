@@ -114,12 +114,34 @@
 
         }
 
-
         /* 스토리의 dd는 가상요소 없애기 */
+        dd.story::before {
+            display: none;
+        }
 
         /* .story의 첫번째 p태그의 첫번째 글자 디자인 변경하기 */
+        dd.story p:first-of-type::first-letter {
+            font-size: 50px;
+            font-weight: bold;
+            color: hotpink;
+        }
 
         /* .story의 첫번째 p태그의 첫번째줄 디자인 변경하기 */
+        dd.story p:first-of-type::first-line {
+            color: blue;
+        }
+
+        /* 두번째 p태그는 태그로 
+        첫번째 글자(b태그), 첫번째 줄(span)변경 */
+        dd.story p:last-of-type b{
+            font-size: 50px;
+            font-weight: bold;
+            color: hotpink;
+        }
+        dd.story p:last-of-type span {
+            color: blue;
+        }
+
     </style>
 </head>
 
@@ -155,7 +177,7 @@
                 벌어지는 신비로운 낭만 설화
             </p>
             <p>
-                <b>불</b><span>멸의 삶을 끝내기 위해 인간 신부가</span> 필요한 도깨비, 그와 기묘한 동거를 시작한 기억상실증 저승사자. 그런 그들 앞에 '도깨비 신부'라 주장하는
+                <b>불</b><span>멸의 삶을 끝내기 위해 인간 신부가</span> <br> 필요한 도깨비, 그와 기묘한 동거를 시작한 기억상실증 저승사자. 그런 그들 앞에 '도깨비 신부'라 주장하는
                 '죽었어야 할 운명'의 소녀가 나타나며
                 벌어지는 신비로운 낭만 설화
             </p>
