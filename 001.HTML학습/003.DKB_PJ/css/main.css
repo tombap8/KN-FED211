@@ -245,5 +245,10 @@ ul.bm a:hover{
     border: 5px double #555;
     padding: 10px 0;/* 위아래 10px 양쪽0 */
 }
+/* 하단로고 박스 */
+#blogo{
+    text-align: center;
+    /* 인라인요소 중앙정렬 */
+}
 
 
