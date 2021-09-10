@@ -16,6 +16,20 @@ body{
 
 }
 
+/* 스크롤바 트랙 변경하기 클래스 */
+/* -webkit- 벤더사명(크롬,사파리) 접두어 */
+.scbar::-webkit-scrollbar{/* 전체 스크롤바 크기 */
+    width: 7px;
+}
+.scbar::-webkit-scrollbar-thumb{/* 스크롤바 */
+    background-color: #666;
+    border-radius: 5px;
+}
+.scbar::-webkit-scrollbar-track{/* 스크롤바 트렉 */
+    background-color: #ddd;
+    border-radius: 5px;
+}
+
 /* 1. 상단영역 */
 
 /* 로고 */
@@ -101,6 +115,9 @@ body{
 
 /* 캐릭터 설명 박스 */
 .cd {
+    height: 250px;
+    overflow: auto;/* 넘치면 스크롤바 */
+    margin-top: 15px;
     background: url(../images/eachBG.jpg) no-repeat center/cover;
 }
 
