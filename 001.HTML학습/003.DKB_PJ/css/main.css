@@ -118,6 +118,12 @@ body{
     height: 250px;
     overflow: auto;/* 넘치면 스크롤바 */
     margin-top: 15px;
+    border-radius: 20px 0 0 20px;/* 오른쪽위,오른쪽아래 */
+    /* 
+        둥근 모서리 방향별로 주기!
+        border-radius: 왼위 오른위 오른아래 왼아래;
+        (왼쪽위 부터 시계방향설정)
+    */
     background: url(../images/eachBG.jpg) no-repeat center/cover;
 }
 
