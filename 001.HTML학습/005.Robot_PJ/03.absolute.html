@@ -41,6 +41,8 @@
                 -> static이 아닌 포지션이란?
                 relative / absolute / fixed
 
+                -> 위치이동값을 사용하지 않는 부분은 젠틀하다!
+
                 [만약 부모자격이 모두 없으면 보이는 화면을 기준한다!]
                 -> 보이는 화면은 body를 말하는 것이 아니다!!!
                 보이는 브라우저 화면 즉, window화면이다!
@@ -99,7 +101,7 @@
             /* position: relative; */
         }
         .s8{
-            /* position: relative; */
+            position: relative;
         }
 
         .a2{
@@ -107,6 +109,12 @@
             top: 0;
             left: 0;
             /* 나의 부모는 누구인가? */
+
+            width: auto;
+            height: auto;
+            /* 가로,세로 크기가 자동일경우
+            앱솔루트는 내용만큼만 크기를 가진다! */
+
             background-color: red;            
         }
         .a3{
