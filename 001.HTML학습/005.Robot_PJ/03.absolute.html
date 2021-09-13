@@ -82,6 +82,41 @@
             background-color: yellow;
         }
 
+        /* 부모찾는 앱솔루트 */
+        .bx{
+            width: auto;
+            height: auto;
+            padding: 50px;
+        }
+
+        .s5{
+            /* position: relative; */
+        }
+        .s6{
+            /* position: relative; */
+        }
+        .s7{
+            /* position: relative; */
+        }
+        .s8{
+            /* position: relative; */
+        }
+
+        a2{
+            position: absolute;
+            top: 0;
+            left: 0;
+            /* 나의 부모는 누구인가? */
+            background-color: red;            
+        }
+        a3{
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            /* 나의 부모는 누구인가? */
+            background-color: pink;            
+        }
+
     </style>
 </head>
 <body>
@@ -90,5 +125,17 @@
     <div id="a1">a1</div>
     <div id="r2">r2</div>
     <div id="s3">s3</div>
+
+    <!-- 부모를 찾는 absolute요소 -->
+    <div class="bx s5">s5
+        <div class="bx s6">s6
+            <div class="bx s7">s7
+                <div class="bx s8">s8
+                    <div class="a2">a2</div>
+                    <div class="a3">a3</div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
