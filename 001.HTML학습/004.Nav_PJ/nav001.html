@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>유형1.가로네비 서브별 드롭다운 세로형</title>
+    <style>
+        /* ul,ol 초기화셋팅 */
+        ul,ol{
+            /* 3無 */
+            margin: 0;
+            padding: 0;
+            list-style: none;/* 블릿,숫자없앰 */
+        }
+        /* 가상요소 float해제 */
+        ul::after,
+        ol::after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+        li{
+            float: left;
+        }
+
+        /* GNB메뉴 */
+        .gnb{
+            background-color: #2f71eb;
+        }
+        .gnb>ul{
+            width: 800px;
+            margin: 0 auto;/* 마영오! */
+        }
+        .gnb>ul>li {
+            width: 200px;
+            text-align: center;
+            outline: 2px dashed red;
+        }
+        /* a요소 - 글자색, 밑줄처리 */
+        .gnb>ul>li>a{
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>유형1.가로네비 서브별 드롭다운 세로형</h1>
+    <nav class="gnb">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">웹개발</a></li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">프로필</a></li>
+        </ul>
+    </nav>
+    <!--     
+        [ 네비게이션 구현의 일반원칙 ]
+        1. 네비게이션은 nav태그에 넣는것을 추천
+        nav 요소는 네비게이션을 넣는 시멘틱 태그다!
+
+        2. 네비게이션은 사이트의 흐름을 한번에 제공하는
+        역할을 하므로 하나로 묶어서 보여줘야 하므로
+        ul>li / ol>li / dl>dt+dd 과 같은 그룹요소를 사용
+        하여 표현한다.
+
+        3. 메뉴는 접근성 원칙에 따라 스크린리더기가
+        읽을 수 있도록 a요소로 구성해야만 한다!
+        또한 메뉴는 tab버튼을 눌러서 선택이동 할 수 
+        있어야 하므로 a요소는 필수다!
+
+        참고)
+        메인 메뉴가 gnb 라고 이름지어지는 이유는?
+        gnb는 Global Navigation Bar의 약자임
+        전역 네비게이션 바 라는 의미로써
+        사이트의 어느 페이지에서도 항상 보이기 때문
+
+        -> lnb 라는 이름도 많이쓰임
+        lnb는 Local Navigation Bar의 약자임
+        지역 네비게이션 바 라는 의미로써
+        서브페이지에서만 나오는 메뉴에 사용한다
+     -->
+</body>
+</html>
