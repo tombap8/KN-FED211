@@ -58,14 +58,30 @@
         /* GNB메뉴 */
         .gnb{
             position: fixed;
-            top: 0;
+            top: -100%;/* 화면만큼 위로 올라감! */
             left: 0;
             /* 보이는 화면기준!!! */
             width: 100%;
             height: 100%;
             background-color: #2f71eb;
+
+            /* 트랜지션: 속시이지 */
+            transition: top 1.2s ease-in-out;
         }
         .gnb>ul{
+            position: relative;
+            top: calc(50% - 125px);
+            /* 
+            [세로 중앙계산하기]
+            싸고있는 부모크기의 50%위치 
+            - 내자신크기의 절반(높이값 250px/2)
+
+            [ css로 계산하기 함수 ]
+            calc(숫자 - 숫자)
+            -> 마이너스 앞뒤로 띄어쓰기 필수!
+            -> 퍼센트에서 px값을 뺄때 많이씀!
+
+            */
             width: 800px;
             margin: 0 auto;/* 마영오! */
         }
@@ -103,7 +119,7 @@
 
         /* 서브메뉴 */
         .smenu{
-            position: absolute;
+            /* position: absolute; */
             width: 200px;
             background-color: #92c1ff;
            
