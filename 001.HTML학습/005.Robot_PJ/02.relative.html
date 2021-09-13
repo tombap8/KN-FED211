@@ -77,6 +77,7 @@
                     - 숫자가 높은 것이 위에 온다!
                     - static요소는 무조건 밑에 깔린다!
                     - 마이너스 숫자를 주면 static보다 아래로!
+                    - 숫자가 같을 경우 나중것이 위에옴!
 
 
                 - 유의사항!!!
@@ -85,6 +86,9 @@
                 부모요소의 다른 형제요소가 z-index가 높으면 올라갈 수 없다!
 
 
+                __________________________
+
+                9. 
 
 
 
@@ -100,7 +104,8 @@
             top: 50px;
             left: 50px;
 
-
+            z-index: 1;
+            /* 1만줘도 올라감! */
 
             background-color: red;
         }
@@ -109,6 +114,9 @@
             position: relative;
             bottom: 75px;
             right: -86px;
+
+            z-index: -1;
+            /* static보다 아래! 마이너스값! */
 
             background-color: skyblue;
         }
