@@ -36,7 +36,7 @@
             outline: 2px dashed red;
         }
         /* a요소 - 글자색, 밑줄처리 */
-        .gnb>ul>li>a{
+        .gnb>ul>li a{/* a는 .smenu의 a까지 모두 선택! */
             display: block;/* 크기디자인때문 */
             width: 200px;
             height: 50px;
@@ -51,6 +51,42 @@
 
             font-weight: bold;/* 글자두껍게 */
             font-size: 14px;
+
+            /* 트랜지션: 속시이지 */
+            transition: .4s;
+
+        }
+        /* 상위메뉴에 마우스 오버시 글자색,배경색 변경 */
+        .gnb>ul>li:hover>a {
+            color: navy;
+            background-color: lightcyan;
+        }
+
+        /* 서브메뉴 */
+        .smenu{
+            position: absolute;
+            width: 200px;
+            background-color: #92c1ff;
+            height: 0;
+            overflow: hidden;
+
+            /* 트랜지션: 속시이지 */
+            transition: height .4s ease-out;
+        }
+        /* 상위메뉴 li에 마우스 오버시 하위메뉴 보이기 */
+        /* 두번째 메뉴 */
+        .gnb>ul>li:nth-child(2):hover .smenu{
+            height: 200px;
+        }
+        /* 세번째 메뉴 */
+        .gnb>ul>li:nth-child(3):hover .smenu{
+            height: 100px;
+        }
+
+        /* 상위메뉴 오버시 하위메뉴 a 글자색,배경색 */
+        .smenu a:hover{
+            color: navy;
+            background-color: lightskyblue;
         }
     </style>
 </head>
