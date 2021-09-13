@@ -43,10 +43,27 @@
 
                 -> 위치이동값을 사용하지 않는 부분은 젠틀하다!
 
+                -> 부모자격이 있는 부모요소들 중 가장 가까운 것이
+                부모가 된다!!!
+
                 [만약 부모자격이 모두 없으면 보이는 화면을 기준한다!]
                 -> 보이는 화면은 body를 말하는 것이 아니다!!!
                 보이는 브라우저 화면 즉, window화면이다!
                 (스크롤이 생겨도 스크롤위쪽화면을 말함!!!)
+
+
+                2. 앱솔루트에 가로,세로 크기를 주지 않은 경우
+                일반적으로는 block요소이므로 auto로써
+                부모요소의 끝까지 차지하지만 앱솔루트는...
+                내용만큼만 그 크기를 자동으로 설정한다!!!
+                -> 판타롱스타킹!!!
+
+                3. 인라인요소에 앱솔루트를 준 경우
+                자동으로 display가 block으로 설정됨!!!
+                -> 일반적으로 앱솔루트는 block이다!!!
+
+
+
             */
 
 
@@ -92,13 +109,13 @@
         }
 
         .s5{
-            /* position: relative; */
+            position: relative;
         }
         .s6{
-            /* position: relative; */
+            position: relative;
         }
         .s7{
-            /* position: relative; */
+            position: relative;
         }
         .s8{
             position: relative;
@@ -114,6 +131,7 @@
             height: auto;
             /* 가로,세로 크기가 자동일경우
             앱솔루트는 내용만큼만 크기를 가진다! */
+            line-height: normal;
 
             background-color: red;            
         }
@@ -125,6 +143,12 @@
             background-color: pink;            
         }
 
+        /* span 앱솔루트 */
+        .sa{
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
     </style>
 </head>
 <body>
@@ -141,9 +165,14 @@
                 <div class="bx s8">s8
                     <div class="a2">a2</div>
                     <div class="a3">a3</div>
+                    <span class="sa">나는 span앱솔루트!!!</span>
                 </div>
             </div>
         </div>
     </div>
+
+
+
+
 </body>
 </html>
