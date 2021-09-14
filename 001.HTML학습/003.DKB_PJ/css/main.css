@@ -2,13 +2,15 @@
 /* 도깨비 메인 CSS - main.css */
 
 /* 초기화 셋팅 */
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
-    height: 100%;/* 보이는 화면 높이값 채우기 */
+    height: 100%;
+    /* 보이는 화면 높이값 채우기 */
 }
 
-body{
+body {
     /* 배경 한번에 셋팅하기! */
     /* background: 색 이미지 반복 고정 위치/크기;
     background: 색이반고윙/크; */
@@ -18,56 +20,81 @@ body{
 
 /* 스크롤바 트랙 변경하기 클래스 */
 /* -webkit- 벤더사명(크롬,사파리) 접두어 */
-.scbar::-webkit-scrollbar{/* 전체 스크롤바 크기 */
+.scbar::-webkit-scrollbar {
+    /* 전체 스크롤바 크기 */
     width: 7px;
 }
-.scbar::-webkit-scrollbar-thumb{/* 스크롤바 */
+
+.scbar::-webkit-scrollbar-thumb {
+    /* 스크롤바 */
     background-color: #666;
     border-radius: 5px;
 }
-.scbar::-webkit-scrollbar-track{/* 스크롤바 트렉 */
+
+.scbar::-webkit-scrollbar-track {
+    /* 스크롤바 트렉 */
     background-color: #ddd;
     border-radius: 5px;
 }
 
 /* 공통 초기화 */
-ul,ol{
+ul,
+ol {
     /* 3無 */
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 /* float해제 */
-ul::after, ol::after{
+ul::after,
+ol::after {
     content: '';
     display: block;
     clear: both;
 }
-li{
-    float: left;/* 옆으로 흐르게 */
+
+li {
+    float: left;
+    /* 옆으로 흐르게 */
 }
 
 /* 1. 상단영역 */
 
 /* 로고 */
-.logo img{/* 이미지 마진위치조정 */
+.logo img {
+    /* 이미지 마진위치조정 */
     margin-top: 45px;
     margin-left: 70px;
 }
 
 
 /* GNB 메뉴 */
-.gnb{
-
+.gnb {
+    position: absolute;
 }
-.gnb>ul{
 
+.gnb>ul {}
+
+.gnb>ul>li{
+    padding-right: 34px;
+}
+
+.gnb>ul>li>a{
+    color: #000;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+/* 서브메뉴 */
+.smenu{
+    display: none;
 }
 
 /* 2. 메인영역 */
 
 /* 캐릭터 박스 */
-#cbx{
+#cbx {
     width: 90%;
     height: 450px;
     /* height: 300px; 
@@ -79,16 +106,18 @@ li{
     /* 마영오! - 가로중앙정렬 */
     /* outline: 15px dashed lime; */
 }
+
 /* 가상요소로 float해제 */
-.clb::after{
+.clb::after {
     content: '';
     display: block;
     clear: both;
 }
 
 /* 개별 캐릭터 박스 공통 */
-.cat{
-    width: 25%;/* 4등분 */
+.cat {
+    width: 25%;
+    /* 4등분 */
     /* height: 100%; 
     높이값이 없으면 auto이고 내용만큼 늘어남!!!*/
     float: left;
@@ -114,14 +143,18 @@ li{
 }
 
 /* 캐릭터 이미지 */
-.ci>img{/* 직계자식 이미지만! */
+.ci>img {
+    /* 직계자식 이미지만! */
     width: 100%;
     /* 이미지의 height는 자동(비율유지) */
 }
+
 /* 캐릭터 이름 */
-.ci span{
-    display: block;/* 블록변경 */
-    text-align: center;/* 가로중앙 적용! */
+.ci span {
+    display: block;
+    /* 블록변경 */
+    text-align: center;
+    /* 가로중앙 적용! */
     margin-top: -22%;
     /* 비율로 이미지가 변경되므로
     마진도 상대적으로 변경되게함! */
@@ -134,15 +167,17 @@ li{
 
 /* 캐릭터 이름 첫번째 이미지 숨기기 */
 /* display:none사용 */
-.ci span img:first-child{
+.ci span img:first-child {
     display: none;
 }
+
 /* .cat박스에 마우스 오버시 */
 /* 캐릭터 이름 첫번째 이미지 보이기 */
 /* 원래 이미지는 display:inline */
 .cat:hover .ci span img:first-child {
     display: inline;
 }
+
 /* .cat박스에 마우스 오버시 */
 /* 캐릭터 이름 마지막 이미지 숨기기 */
 .cat:hover .ci span img:last-child {
@@ -151,10 +186,13 @@ li{
 
 /* 캐릭터 설명 박스 */
 .cd {
-    height: 0px;/* 마우스오버시 250px */
-    overflow: auto;/* 넘치면 스크롤바 */
+    height: 0px;
+    /* 마우스오버시 250px */
+    overflow: auto;
+    /* 넘치면 스크롤바 */
     margin-top: 15px;
-    border-radius: 20px 0 0 20px;/* 오른쪽위,오른쪽아래 */
+    border-radius: 20px 0 0 20px;
+    /* 오른쪽위,오른쪽아래 */
     /* 
         둥근 모서리 방향별로 주기!
         border-radius: 왼위 오른위 오른아래 왼아래;
@@ -204,77 +242,90 @@ li{
     */
     transition: height .8s ease-in-out;
 }
+
 /* 캐릭터개별박스(.cat)에 마우스 오버시 .cd높이값 변경 */
-.cat:hover .cd{
+.cat:hover .cd {
     height: 250px;
 }
 
 /* 캐릭터설명 타이틀 */
-.cd h3{
+.cd h3 {
     padding: 5px 10px 0px;
 }
 
 /* 캐릭터설명 문단 */
-.cd p{
+.cd p {
     padding: 10px;
 
     font: 14px/2 '맑은 고딕', '돋움', arial;
     /* font: 스타일 두께 크기/줄간격 글자체;
     font: 스 두 크/줄 체; */
 
-    text-align: justify;/* 양쪽정렬 */
+    text-align: justify;
+    /* 양쪽정렬 */
 }
 
 /* 하단영역 */
-.info{
+.info {
     background-color: rgba(255, 255, 255, 0.7);
     padding: 15px;
 }
+
 /* 하단링크 */
-ul.bm{
+ul.bm {
     width: 720px;
     max-width: 90%;
 
-    margin: 0 auto;/* 마영오! */
+    margin: 0 auto;
+    /* 마영오! */
     padding: 0;
     list-style: none;
     /* 3無 */
 }
-ul.bm::after{/* float해제 */
+
+ul.bm::after {
+    /* float해제 */
     content: '';
     display: block;
     clear: both;
 }
-ul.bm li{
+
+ul.bm li {
     float: left;
     padding: 0 5px;
 }
-ul.bm a{
+
+ul.bm a {
     color: #222;
-    text-decoration: none;/* 밑줄없앰 */
+    text-decoration: none;
+    /* 밑줄없앰 */
     font: bold 14px/2 "맑은 고딕";
 }
-ul.bm a:hover{
+
+ul.bm a:hover {
     color: red;
-    text-decoration: underline;/* 밑줄 */
+    text-decoration: underline;
+    /* 밑줄 */
 }
 
 /* 주소박스 */
-.info address{
+.info address {
     width: 720px;
     max-width: 90%;
 
-    margin: 20px auto;/* 위아래 20px 양쪽auto(중앙) */
+    margin: 20px auto;
+    /* 위아래 20px 양쪽auto(중앙) */
     font: normal 12px/2 "맑은 고딕";
-    text-align: center;/* 글자중앙 */
+    text-align: center;
+    /* 글자중앙 */
 
     border: 5px double #555;
-    padding: 10px 0;/* 위아래 10px 양쪽0 */
+    padding: 10px 0;
+    /* 위아래 10px 양쪽0 */
 }
+
 /* 하단로고 박스 */
-#blogo{
+#blogo {
     text-align: center;
     /* 인라인요소 중앙정렬 */
 }
-
-
