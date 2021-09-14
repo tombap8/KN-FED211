@@ -37,7 +37,15 @@ ul,ol{
     padding: 0;
     list-style: none;
 }
-
+/* float해제 */
+ul::after, ol::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+li{
+    float: left;/* 옆으로 흐르게 */
+}
 
 /* 1. 상단영역 */
 
