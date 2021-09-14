@@ -115,6 +115,7 @@ h1.logo img {
 /* 서브메뉴 */
 .smenu{
     position: absolute;
+    background-color: #fff;
 }
 .smenu li{
     float: none;/* 플롯없앰 */
@@ -125,7 +126,7 @@ h1.logo img {
     font-size: 13px;
     line-height: 30px;
 }
-/* 상위메뉴 마우스 오버시 */
+/* 상위메뉴 마우스 오버시 서브메뉴 보이기 */
 
 /* 2. 메인영역 */
 
