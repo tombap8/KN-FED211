@@ -4,11 +4,42 @@
 /* 최대크기로 셋팅할 경우 큰 사이즈에서
 작은사이즈 순서로 미디어쿼리를 작성해야 잘 적용된다! */
 @media only screen and (max-width:800px) {
+
     /* 1. GNB없애기 */
-    .gnb{
+    .gnb {
         display: none;
     }
-}/* 미디어쿼리 */
+
+    /* 2. 상단영역 */
+    .top {
+        padding-bottom: 20px;
+    }
+
+    /* 3. 햄버거버튼 */
+    .ham {
+        display: block;
+        /* 보이기 */
+    }
+
+    /* 4. 개별 캐릭터 박스 공통 */
+    .cat {
+        width: 100%;
+    }
+
+    /* 5. 캐릭터 박스 */
+    #cbx {
+        position: static;
+        /* relative포지션 해제! */
+    }
+
+    /* 캐릭터개별박스(.cat)에 마우스 오버시 마진top없애기 */
+    .cat:hover {
+        margin-top: 0;
+    }
+
+}
+
+/* 미디어쿼리 */
 
 
 
