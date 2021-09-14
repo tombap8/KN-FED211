@@ -30,12 +30,30 @@ body{
     border-radius: 5px;
 }
 
+/* 공통 초기화 */
+ul,ol{
+    /* 3無 */
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
 /* 1. 상단영역 */
 
 /* 로고 */
 .logo img{/* 이미지 마진위치조정 */
     margin-top: 45px;
     margin-left: 70px;
+}
+
+
+/* GNB 메뉴 */
+.gnb{
+
+}
+.gnb>ul{
+
 }
 
 /* 2. 메인영역 */
