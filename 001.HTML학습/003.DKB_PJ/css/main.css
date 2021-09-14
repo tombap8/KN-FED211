@@ -8,6 +8,9 @@ body {
     padding: 0;
     height: 100%;
     /* 보이는 화면 높이값 채우기 */
+    overflow-x: hidden;
+    /* 뷰포트 적용시 내용이 넘쳐서 x축공간이 비어 보일 경우
+    이 코드 설정한다!!! */
 }
 
 /* 스크롤바 트랙 변경하기 클래스 */
@@ -74,9 +77,10 @@ h1.logo img {
 
 /* GNB 메뉴 */
 .gnb {
-    width: 635px;
+    max-width: 635px;
+    /* 최대크기 635px을 유지하다가
+    화면이 635px보다 작아지면 width:auto적용! */
     margin: 0 auto;/* 블록요소 가로중앙 */
-    
     
 }
 
