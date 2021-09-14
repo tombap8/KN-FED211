@@ -66,6 +66,8 @@ li {
 .top{
     position: relative;
     /* 부모자격 - .gnb */
+    background-color: #fff;
+    padding-top: 20px;
 }
 
 /* 로고 */
@@ -82,15 +84,10 @@ h1.logo img {
 
 /* GNB 메뉴 */
 .gnb {
-    position: absolute;
-    top: 0;
-    /* 나의 부모는? */
     width: 635px;
-    left: calc(50% - 317px);
-    /* calc(%수치 - 특정px)
-    -> 앱솔루트로 가로 중앙정렬 */
+    margin: 0 auto;/* 블록요소 가로중앙 */
     
-    background-color: #fff;
+    
 }
 
 .gnb>ul {}
@@ -101,10 +98,19 @@ h1.logo img {
 }
 
 .gnb>ul>li>a{
+    display: block;/* 높이값 적용위해 */
+    height: 100%;/* 적용되나? */
     color: #000;
     text-decoration: none;
     font-size: 13px;
+    line-height: 54px;
+    box-sizing: border-box;/* 보더,패딩 내부로 포함 */
 }
+.gnb>ul>li>a:hover {
+    border-bottom: 4px solid red;
+}
+
+/* 상위 메뉴에 마우스 오버시 밑줄만들기 */
 
 /* 서브메뉴 */
 .smenu{
