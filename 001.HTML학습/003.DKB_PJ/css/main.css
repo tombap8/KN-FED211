@@ -103,8 +103,6 @@ h1.logo img {
     
 }
 
-.gnb>ul {}
-
 .gnb>ul>li{
     padding: 0 17px;
     /* 양쪽을 동일하게 밀고 사이간격은 34px */
