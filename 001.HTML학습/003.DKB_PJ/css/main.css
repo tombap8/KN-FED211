@@ -116,6 +116,13 @@ h1.logo img {
 .smenu{
     position: absolute;
     background-color: #fff;
+
+    /* 서브메뉴 숨기기 */
+    height: 0;
+    overflow: hidden;
+
+    /* 트랜지션: 속시이지 */
+    transition: height .4s ease-out;
 }
 .smenu li{
     float: none;/* 플롯없앰 */
@@ -127,6 +134,15 @@ h1.logo img {
     line-height: 30px;
 }
 /* 상위메뉴 마우스 오버시 서브메뉴 보이기 */
+.gnb>ul>li:first-child:hover .smenu {
+    height: 90px;
+}
+.gnb>ul>li:nth-child(3):hover .smenu {
+    height: 120px;
+}
+.gnb>ul>li:nth-child(4):hover .smenu {
+    height: 60px;
+}
 
 /* 2. 메인영역 */
 
