@@ -65,9 +65,10 @@ li {
 /* 1. 상단영역 */
 .top{
     position: relative;
-    /* 부모자격 - .gnb */
+    /* 부모자격 - .gnb>ul>li::after */
     background-color: #fff;
     padding-top: 20px;
+    border-bottom: 1px solid #ccc;/* 하단구분선 */
 }
 
 /* 로고 */
@@ -115,11 +116,14 @@ h1.logo img {
 /* 서브메뉴 */
 .smenu{
     position: absolute;
-    background-color: #fff;
+    /* background-color: #fff; */
 
     /* 서브메뉴 숨기기 */
     height: 0;
     overflow: hidden;
+
+    /* 부모 li 가상요소 앱솔루트 보다 위로! */
+    z-index: 1;
 
     /* 트랜지션: 속시이지 */
     transition: height .4s ease-out;
@@ -137,11 +141,34 @@ h1.logo img {
 .gnb>ul>li:first-child:hover .smenu {
     height: 90px;
 }
+.gnb>ul>li:first-child:hover::after {
+    height: 100px;
+    border-bottom: 2px solid red;
+}
 .gnb>ul>li:nth-child(3):hover .smenu {
     height: 120px;
 }
 .gnb>ul>li:nth-child(4):hover .smenu {
     height: 60px;
+}
+
+/* JS없이 가상요소로 서브메뉴 전체 배경 깔아주기! */
+/* top값없이 젠틀하게 하려고 ::after를 사용함! */
+.gnb>ul>li::after {
+    content: '';
+    display: block;/* 명시적 block코딩 */
+    position: absolute;/* 앱솔루트는 자동block! */
+    left: 0;
+    /* 나의 부모는? .top */
+    width: 100%;/* 부모요소를 꽉채움! */
+    height: 0;/* 처음에 안보임! */
+    background-color: #fff;
+
+    /* 부모요소 .top의 하단 보더 보이게 하기위해 마진탑이동! */
+    margin-top: 1px;
+
+    /* 트랜지션: 속시이지 - .smenu와 동일! */
+    transition: height .4s ease-out;
 }
 
 /* 2. 메인영역 */
