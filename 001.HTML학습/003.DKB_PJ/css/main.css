@@ -14,7 +14,9 @@ body {
     /* 배경 한번에 셋팅하기! */
     /* background: 색 이미지 반복 고정 위치/크기;
     background: 색이반고윙/크; */
-    background: url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
+    background: 
+    url(../images/bg_logo_a_01.png) no-repeat fixed 10% 20%/10%,
+    url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
 
 }
 
@@ -60,8 +62,16 @@ li {
 }
 
 /* 1. 상단영역 */
+.top{
+    position: relative;
+    /* 부모자격 - .gnb */
+}
 
 /* 로고 */
+.logo {
+    margin: 0;
+    padding: 0;
+}
 .logo img {
     /* 이미지 마진위치조정 */
     margin-top: 45px;
@@ -72,12 +82,21 @@ li {
 /* GNB 메뉴 */
 .gnb {
     position: absolute;
+    top: 0;
+    /* 나의 부모는? */
+    width: 635px;
+    left: calc(50% - 317px);
+    /* calc(%수치 - 특정px)
+    -> 앱솔루트로 가로 중앙정렬 */
+    
+    background-color: #fff;
 }
 
 .gnb>ul {}
 
 .gnb>ul>li{
-    padding-right: 34px;
+    padding: 0 17px;
+    /* 양쪽을 동일하게 밀고 사이간격은 34px */
 }
 
 .gnb>ul>li>a{
