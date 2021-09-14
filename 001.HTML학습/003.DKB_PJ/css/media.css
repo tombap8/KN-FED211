@@ -32,9 +32,14 @@
         /* relative포지션 해제! */
     }
 
-    /* 캐릭터개별박스(.cat)에 마우스 오버시 마진top없애기 */
+    /* 6. 캐릭터개별박스(.cat)에 마우스 오버시 마진top없애기 */
     .cat:hover {
         margin-top: 0;
+    }
+
+    /* 7. 하단링크 */
+    ul.bm {
+        display: none;
     }
 
 }
