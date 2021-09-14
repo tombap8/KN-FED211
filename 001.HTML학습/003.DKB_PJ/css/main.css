@@ -127,18 +127,26 @@ h1.logo img {
     line-height: 30px;
 }
 /* 상위메뉴 마우스 오버시 서브메뉴 보이기 */
-.gnb>ul>li:first-child:hover .smenu {
+.gnb>ul>li:first-child:hover .smenu {/* 서브메뉴 */
     height: 90px;
 }
-.gnb>ul>li:first-child:hover::after {
+.gnb>ul>li:first-child:hover::after {/* 가상요소배경 */
     height: 100px;
     border-bottom: 2px solid red;
 }
-.gnb>ul>li:nth-child(3):hover .smenu {
+.gnb>ul>li:nth-child(3):hover .smenu {/* 서브메뉴 */
     height: 120px;
 }
-.gnb>ul>li:nth-child(4):hover .smenu {
+.gnb>ul>li:nth-child(3):hover::after {/* 가상요소배경 */
+    height: 130px;
+    border-bottom: 2px solid red;
+}
+.gnb>ul>li:nth-child(4):hover .smenu {/* 서브메뉴 */
     height: 60px;
+}
+.gnb>ul>li:nth-child(4):hover::after {/* 가상요소배경 */
+    height: 70px;
+    border-bottom: 2px solid red;
 }
 
 /* JS없이 가상요소로 서브메뉴 전체 배경 깔아주기! */
@@ -166,15 +174,15 @@ h1.logo img {
     /* background: 색 이미지 반복 고정 위치/크기;
     background: 색이반고윙/크; */
     background: 
-    url(../images/bg_logo_a_01.png) no-repeat fixed 10% 20%/10%,
+    url(../images/bg_logo_a_01.png) no-repeat fixed 10% 25%/10%,
     url(../images/bg_mainvisual.jpg) no-repeat fixed center/cover;
     /* 배경이미지를 여러개 사용할 경우 먼저 쓴것이 위에온다! */
 }
 
 /* 2. 메인영역 */
 .cont{
-    min-height: 700px;
-    /* 최소높이 700px유지~ */
+    min-height: 800px;
+    /* 최소높이 800px유지~ */
 }
 
 /* 캐릭터 박스 */
@@ -219,12 +227,12 @@ h1.logo img {
     /* outline: 10px dotted blue; */
 
     /* 트랜지션: 속시이지 */
-    transition: margin-top .8s ease-in-out;
+    transition: margin-top .6s ease-out;
 }
 
 /* 캐릭터개별박스(.cat)에 마우스 오버시 마진top올라가기 */
 .cat:hover {
-    margin-top: -50px;
+    margin-top: -200px;
 }
 
 /* 캐릭터 이미지 */
@@ -325,7 +333,7 @@ h1.logo img {
         원본에 설정한다-> over아닌곳에 설정함!!!
 
     */
-    transition: height .8s ease-in-out;
+    transition: height .6s ease-out;
 }
 
 /* 캐릭터개별박스(.cat)에 마우스 오버시 .cd높이값 변경 */
