@@ -1,0 +1,12 @@
+@charset "utf-8";
+/* CGV PJ 메인 CSS - main.css */
+
+/* 외부CSS파일 합치기(머징:merging) */
+@import url(reset.css);
+@import url(core.css);
+
+/* 외부파일 합치는 @import는 하나의 CSS외부파일
+에서 다른 외부CSS파일을 하나의 문서로 합치는 기능을
+한다. html에서 link방식의 요청을 최소화 할 수 있어서
+랜더링 효율성을 높여준다! */
+
