@@ -1,6 +1,14 @@
 @charset "utf-8";
 /* 도깨비 메인 CSS - main.css */
 
+/* 웹폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Dokdo&family=Nanum+Gothic&display=swap');
+/* 
+font-family: 'Do Hyeon', sans-serif;
+font-family: 'Dokdo', cursive;
+font-family: 'Nanum Gothic', sans-serif;
+*/
+
 /* 초기화 셋팅 */
 html,
 body {
@@ -113,6 +121,7 @@ h1.logo img {
     height: 54px;/* 적용되나? */
     color: #000;
     text-decoration: none;
+    font-family: 'Nanum Gothic', sans-serif;
     font-size: 13px;
     line-height: 54px;
     box-sizing: border-box;/* 보더,패딩 내부로 포함 */
@@ -364,6 +373,10 @@ h1.logo img {
 
 /* 캐릭터설명 타이틀 */
 .cd h3 {
+    font-family: 'Dokdo', cursive;
+    font-size: 30px;
+    letter-spacing: -1px;
+    font-weight: lighter;
     padding: 5px 10px 0px;
 }
 
@@ -371,7 +384,7 @@ h1.logo img {
 .cd p {
     padding: 10px;
 
-    font: 14px/2 '맑은 고딕', '돋움', arial;
+    font: 18px/2 'Do Hyeon','맑은 고딕', '돋움', arial;
     /* font: 스타일 두께 크기/줄간격 글자체;
     font: 스 두 크/줄 체; */
 
@@ -381,6 +394,7 @@ h1.logo img {
 
 /* 하단영역 */
 .info {
+    font-family: 'Nanum Gothic', sans-serif;
     background-color: rgba(255, 255, 255, 0.7);
     padding: 15px;
 }
