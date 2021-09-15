@@ -37,12 +37,16 @@
             text-shadow: 2px 2px 2px #000;
             /* 글자그림자 */
 
-            box-shadow: 0 0 20px 5px pink;
+            box-shadow: 0 0 20px 5px pink,
+                inset 0 0 20px 5px #000;
 
             /* [ 박스 그림자 ] - 밝은색을 쓰면 glow효과임!
-            box-shadow: x축 y축  blur spread 색;
+            box-shadow: inset x축 y축  blur spread 색;
             blur 그림자 경계선 흐림 
-            spread 그림자 크기 (생략가능)*/
+            spread 그림자 크기 (생략가능,박스그림자에만 있음)
+            inset을 쓰면 내부그림자로 전환됨(생략하면 일반그림자)
+            -> 콤마로 셋팅하면 여러개의 그림자 효과를 줄 수 있다!
+            */
 
             background: pink url(./images/robot_03.png) no-repeat;
             background-position: center 10px;/* 가로축 세로축 */
