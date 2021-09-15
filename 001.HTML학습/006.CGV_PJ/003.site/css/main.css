@@ -10,3 +10,31 @@
 한다. html에서 link방식의 요청을 최소화 할 수 있어서
 랜더링 효율성을 높여준다! */
 
+body {
+    background-color: #000;
+    /* 전체 검정색 배경 */
+}
+
+/* 레이아웃 공통 클래스 */
+.part {
+    width: 1200px;
+    margin: 0 auto;
+    /* 가로중앙 */
+    outline: 3px dotted yellow;
+}
+
+/* 1. 상단영역 */
+#top {
+    height: 80px;
+}
+
+/* 2. 메인영역 */
+#cont {
+    height: 788px;
+    background: url(../images/bg.jpg) no-repeat;
+}
+
+/* 3. 하단영역 */
+#info {
+    height: 100px;
+}
