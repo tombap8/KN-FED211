@@ -236,10 +236,69 @@
             border: 3px solid #fff;
             border-radius: 20px;
             padding: 15px 30px;
+            /* 패딩 : 위아래 양쪽 */
 
             color: #fff;
-
+            /* 글자색 */
+            text-shadow: 1px 1px 1px #000;
+            /* 글자그림자: x y 블러 색 */
+            background-color: rgba(0, 0, 0, 0.527);
+            /* 반투명 배경색 */
+            box-shadow: inset 0 0 60px cyan;
+            /* 박스 내부그림자 글로우효과 */
         }
+        /* 로봇설명제목 */
+        #rdesc h2{
+            color: lime;
+            /* 글자색 */
+            font-size: 35px;
+            /* 글자크기 */
+            text-align: center;
+            /* 글자정렬중앙 */
+        }
+        /* 설명출처 */
+    #rdesc small{
+        display: block;/* 원래 inline을 변경함 */
+        text-align: center;/* 글자중앙적용! */
+        color: #ff0;
+    }
+
+    /* 설명문단 */
+    #rdesc p{
+        font-size: 15px;
+        /* 글자크기 */
+        line-height: 25px;
+        /* 줄간격 */
+        letter-spacing: 1px;
+        /* 자간 */
+        word-spacing: 2px;
+        /* 단어간격 */
+
+        /* 가독성을 위한 다단설정 */
+        /* 다단표기(다중열속성) */
+        column-count: 3;
+        /* 다중열 개수 */
+        column-rule: 5px dotted lime;
+        /* 다중열 구분선 - 값설정은 보더와 같음(두께 종류 색상) */
+        column-gap: 50px;
+        /* 다중열 사이간격 - 구분선 오른쪽 간격조정 */
+
+        text-align: justify;
+        /* 양쪽정렬 */
+        word-break: break-all;
+        /* 단어깨기-다깨! 단어단위로 붙어있는 것을 철자하나씩깸*/
+        text-indent: 20px;
+        /* 첫줄 들여쓰기(마이너스는 반대방향) */
+    }
+    /* 첫글자 크게하기!!! -> 가상요소::first-letter */
+    #rdesc p::first-letter {
+        font-size: 30px;
+        font-weight: bold;
+        color: lightsalmon;
+    }
+
+
+
     </style>
 </head>
 
