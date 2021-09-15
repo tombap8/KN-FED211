@@ -91,11 +91,30 @@
              */
 
             /* 웹폰트 설정 */
-            @font-face {
+            @font-face {/* 싱글데이 */
                 font-family: sday;
                 src: url(./fonts/SingleDay-Regular.woff) format("woff");
             }
-            
+            @font-face {/* 구기체 */
+                font-family: gu;
+                src: url(./fonts/Gugi-Regular.woff) format("woff");
+            }
+            @font-face {/* 나눔펜 */
+                font-family: napen;
+                src: url(./fonts/NanumBrushScript-Regular.woff) format("woff");
+            }
+            @font-face {
+                font-family: medi;
+                src: url(./fonts/MedievalSharp-Regular.woff2) format("woff2");
+            }
+            @font-face {
+                font-family: orbi;
+                src: url(./fonts/Orbitron-Regular.woff) format("woff");
+            }
+            @font-face {
+                font-family: paci;
+                src: url(./fonts/Pacifico-Regular.woff2) format("woff2");
+            }
 
             /* 적용하기 */
             .wf1{
@@ -103,23 +122,24 @@
                 color: purple;
             }
             .wf2{
-                
+                font-family: gu;
+                font-weight: lighter;
                 color: hotpink;
             }
             .wf3{
-                
+                font-family: napen;
                 color: rgb(15, 197, 61);
             }
             .wf4{
-                
+                font-family: medi;
                 color: rgb(184, 3, 144);
             }
             .wf5{
-                
+                font-family: orbi;
                 color: rgb(0, 197, 231);
             }
             .wf6{
-                
+                font-family: paci;
                 color: rgb(247, 99, 0);
                 font-weight: normal;
             }
