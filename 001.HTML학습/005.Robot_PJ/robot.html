@@ -10,10 +10,39 @@
             /* 배경: 색이반고윙/크 */
             background: url(./images/bg.jpg) no-repeat fixed top/cover;
         }
-
         /* body>*{
             outline: 5px dashed lime;
         } */
+
+        /* 로봇 페이지 로고 */
+        h1#logo{
+            position: fixed;
+            top: 50px;
+            left: 50px;
+            /* 무조건 화면기준! */
+            width: 200px;
+            height: 200px;
+            border: 2px solid #ccc;
+            border-radius: 50%;/* 원 */
+            box-sizing: border-box;
+            /* 패딩,보더포함-크기유지 */
+
+            /* 글자중앙 */
+            text-align: center;
+            color: #fff;
+            line-height: 196px;
+            /* 보더가 4px이므로 뺌 */
+
+            background: pink url(./images/robot_03.png) no-repeat;
+            background-position: center 10px;/* 가로축 세로축 */
+            background-size: 160px auto;/* 가로 세로 */
+
+            margin: 0;
+            padding: 0;
+        }
+
+
+
         /* 로봇 머리 */
         #head {
             position: relative;
@@ -183,6 +212,9 @@
 </head>
 
 <body>
+    <!-- 로봇 페이지 로고 -->
+    <h1 id="logo">R2D2</h1>
+
     <!-- 로봇 머리 -->
     <div id="head">
         <!-- 눈1 -->
