@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robot PJ</title>
     <style>
-        body{
+        body {
             /* 배경: 색이반고윙/크 */
             background: url(./images/bg.jpg) no-repeat fixed top/cover;
         }
-        body>*{
+
+        /* body>*{
             outline: 5px dashed lime;
-        }
+        } */
         /* 로봇 머리 */
-        #head{
+        #head {
             position: relative;
             /* 부모자격 */
             width: 250px;
@@ -23,6 +25,7 @@
             margin-top: 100px;
             background: url(./images/metal01.jpg) no-repeat center/cover;
         }
+
         /* 눈1 */
         #eye1 {
             position: absolute;
@@ -33,6 +36,7 @@
             height: 50px;
             background: url(./images/e1.jpg) no-repeat 0/100% 100%;
         }
+
         /* 눈2 */
         #eye2 {
             position: absolute;
@@ -87,17 +91,19 @@
         }
 
         /* 로봇 몸통 */
-        #body{
+        #body {
             position: relative;
             /* 부모자격 */
             width: 250px;
             height: 300px;
-            margin: 0 auto;/* 마영오! */
+            margin: 0 auto;
+            /* 마영오! */
             margin-top: 50px;
             background: url(./images/metal01.jpg) no-repeat center/cover;
         }
+
         /* 목 */
-        #neck{
+        #neck {
             position: absolute;
             top: -50px;
             left: 100px;
@@ -106,14 +112,16 @@
             height: 50px;
             background: url(./images/metal02.jpg) no-repeat 0/100% 100%;
         }
+
         /* 팔,다리 공통 */
-        .part{
+        .part {
             position: absolute;
             /* 위치이동시 나의부모? #body */
             width: 50px;
             height: 250px;
             background: url(./images/metal02.jpg) repeat-y 0/100%;
         }
+
         /* 왼팔 */
         #arm1 {
             left: -50px;
@@ -134,8 +142,46 @@
             top: 300px;
             right: 0;
         }
+
+        /* 로봇 tv */
+        #tv {
+            position: absolute;
+            top: 70px;
+            left: 25px;
+            width: 200px;
+            height: 150px;
+            background: url(./images/tv.jpg) no-repeat 0/100% 100%;
+        }
+
+        /* 스크린 */
+        #screen {
+            position: absolute;
+            top: 17px;
+            left: 13px;
+            /* 나의 부모는? #tv */
+            width: 138px;
+            height: 105px;
+            background-color: #000;
+            border-radius: 21px;
+            /* 모서리둥글게 */
+            overflow: hidden;
+            /* 넘치는 자식요소 숨기기 */
+        }
+
+        /* 아이프레임 */
+        #screen iframe {
+            position: absolute;
+            top: -16px;
+            left: -76px;
+            /* 부모는? #screen */
+            width: 213%;
+            height: 128%;
+            border: none;
+            /* 0도 됨 */
+        }
     </style>
 </head>
+
 <body>
     <!-- 로봇 머리 -->
     <div id="head">
@@ -160,7 +206,22 @@
         <div id="arm2" class="part"></div>
         <div id="leg1" class="part"></div>
         <div id="leg2" class="part"></div>
+        <!-- tv -->
+        <div id="tv">
+            <div id="screen">
+                <iframe src="https://www.youtube.com/embed/RMD91n01DuA"></iframe>
+                <!-- 
+                    iframe 요소 (inline frame)
+                    - 다른 url의 외부 페이지를 호출하여
+                    한 페이지안에 보여줄때 사용하는 요소
+                    - src 속성 : 실제 불러올 페이지 경로
+                    - 스타일 시트에서 width, height, border:0;
+                        등 설정을 해준다!(기본보더가 있음)
+                 -->
+            </div>
+        </div>
     </div>
-    
+
 </body>
+
 </html>
