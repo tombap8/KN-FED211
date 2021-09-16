@@ -43,8 +43,21 @@ body {
 
 /* 2. 메인영역 */
 #cont {
+    position: relative;
+    /* 부모자격 */
     height: 788px;
     background: url(../images/bg.jpg) no-repeat;
+}
+/* 2-1.스크린박스 */
+#screen{
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* 나의 부모는? #cont */
+    width: 701px;
+    height: 398px;
+    background-color: #f00;
+
 }
 
 /* 3. 하단영역 */
