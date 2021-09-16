@@ -82,13 +82,27 @@
          */
          #trans1:hover img{
              transform: rotateY(180deg);
+             filter: grayscale(100%);
+             /* 이미지변경 필터(흑백) */
          }
         /* 
             2. rotateX(각도deg) - X축회전
          */
          #trans2:hover img{
              transform: rotateX(180deg);
+             filter: blur(2px);
+             /* 이미지변경 필터 (블러-흐림효과) */
          }
+
+         /* 
+            [ CSS 필터속성 ]
+            - 흑백, 흐림, 세피아, 명암, 채도 등 출력 이미지를
+            변경하고 할때 사용하는 속성
+            -> 소스 참고:
+            https://www.w3schools.com/cssref/playit.asp?filename=playcss_filter&preval=blur(5px)
+         */
+
+
          /* 
             3. translateX(거리) - X축이동
             - 단위: px, %
@@ -217,21 +231,21 @@
                #trans10 img:last-child{
                     transform: rotateY(0deg);
                    /* 트랜지션: 속시이지 */
-                   transition: transform .4s .4s;
+                   transition: transform .4s ease-out .4s;
                }
                /* 2. 보거미 오버상태 */
                /* Y축 90도회전 - 회전후 안보임*/
                #trans10:hover img:last-child{
                    transform: rotateY(90deg);
                    /* 트랜지션: 속시이지 */
-                   transition: transform .4s;
+                   transition: transform .4s ease-in;
                }
                /* 3. 유정이 처음상태(돌아옴) */
                /* 처음에 이미 Y축 90도 회전상태 - 안보임 */
                #trans10 img:first-child{
                    transform: rotateY(90deg);
                    /* 트랜지션: 속시이지 */
-                   transition: transform .4s;
+                   transition: transform .4s ease-in;
                 }
                /* 4. 유정이 오버상태 */
                /* Y축 0도로 회전 
@@ -239,11 +253,12 @@
                #trans10:hover img:first-child{
                    transform: rotateY(0deg);
                    /* 트랜지션: 속시이지 */
-                   transition: transform .4s .4s;
+                   transition: transform .4s ease-out .4s;
                 }
 
                 /* 
                     [ 트랜지션 이징(easing) 가속도 ]
+                    - transition-timing-function
                     - 설정에 따라 빠르기를 조정함
                     1. ease : 기본값
                         - 애니메이션 전후에 약간 느려짐
@@ -262,7 +277,8 @@
 
                     6. cubic-bezier : 자유로운 가속도
                         - 설정은 브라우저에서 가속도
-                        곡선을 변경하여 수치를 생성한다
+                        곡선을 변경하여 수치를 생성한다.
+                        생성된 코드를 복사하여 사용한다!
                     
                     (6번 예시)
                     https://www.w3schools.com/cssref/tryit.asp?filename=trycss3_transition-timing-function3
