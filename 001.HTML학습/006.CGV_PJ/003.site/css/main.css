@@ -28,6 +28,15 @@ body {
     height: 80px;
 }
 
+/* 1-1. 페이지 타이틀 */
+.tit{
+    color: aquamarine;
+    font-size: 40px;
+    line-height: 80;
+    text-align: center;
+    font-family: 'Jua', sans-serif;
+}
+
 /* 2. 메인영역 */
 #cont {
     height: 788px;
