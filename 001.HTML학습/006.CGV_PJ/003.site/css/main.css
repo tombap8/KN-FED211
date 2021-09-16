@@ -26,15 +26,19 @@ body {
 /* 1. 상단영역 */
 #top {
     height: 80px;
+    background: url(../images/curtain.jpg) repeat-x;
 }
 
 /* 1-1. 페이지 타이틀 */
 .tit{
     color: aquamarine;
     font-size: 40px;
-    line-height: 80;
+    line-height: 80px;
     text-align: center;
     font-family: 'Jua', sans-serif;
+
+    /* 그림자를 이용한 Glow효과 */
+    text-shadow: 0 0 10px aquamarine;
 }
 
 /* 2. 메인영역 */
