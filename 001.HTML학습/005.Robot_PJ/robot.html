@@ -69,9 +69,11 @@
 
             /* 애니메이션: 이시이지반방마 */
             animation: logoAni 2s ease-in-out 1s forwards,
-                    logoAni2 1s ease-in-out 3s infinite alternate;
             /* 1초후에 2초간 처음과 마지막에 천천히 
             애니후 끝상태유지(기본값은 1번만 실행!) */
+                logoAni2 1s ease-in-out 3s infinite alternate;
+            /* 앞의 애니시간을 기다려 3초후 한번동작을 1초간 
+            하도록 영원히 시작-끝-시작 반복설정함 */
         }
 
         /* 애니메이션 키프레임 */
@@ -231,7 +233,29 @@
         /* 오른팔 */
         #arm2 {
             right: -50px;
+            transform-origin: top;
+            /* 팔상단으로 기준점 변경 */
+
+            /* 애니메이션:이시이지반방마 */
+            animation: armAni1 .8s ease-in-out 4s forwards,
+                    armAni2 .3s ease-in-out 4.8s infinite alternate;
+
         }
+        /* 처음에 팔올리기 키프레임 */
+        @keyframes armAni1 {
+            to{
+                transform: rotate(-140deg);
+            }
+        }/* 키프레임 */
+        /* 빠이빠이 키프레임 */
+        @keyframes armAni2 {
+            from{/* 값이 중간에 변경되어서 from필요함! */
+                transform: rotate(-140deg);
+            }
+            to{
+                transform: rotate(-170deg);
+            }
+        }/* 키프레임 */
 
         /* 왼다리 */
         #leg1 {
