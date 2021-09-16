@@ -77,7 +77,8 @@ body {
 
 /* li디자인 */
 .mlist ul>li {
-    padding: 0 10px;
+    margin: 0 10px;
+    /* li 바깥쪽 양쪽밀기 */
 }
 
 /* 포스터 이미지 */
