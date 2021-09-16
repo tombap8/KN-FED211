@@ -66,6 +66,22 @@ body {
     border: none;
 }
 
+/* 2-2. 예고편선택메뉴 */
+.mlist{
+    position: absolute;
+    bottom: 50px;
+    left: 200px;
+}
+/* li디자인 */
+.mlist ul>li{
+    padding: 0 10px;
+}
+/* 포스터 이미지 */
+.mlist img{
+    width: 99px;
+    height: 140px;
+}
+
 /* 3. 하단영역 */
 #info {
     height: 100px;
