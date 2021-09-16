@@ -30,7 +30,7 @@ body {
 }
 
 /* 1-1. 페이지 타이틀 */
-.tit{
+.tit {
     color: aquamarine;
     font-size: 40px;
     line-height: 80px;
@@ -48,8 +48,9 @@ body {
     height: 788px;
     background: url(../images/bg.jpg) no-repeat;
 }
+
 /* 2-1.스크린박스 */
-#screen{
+#screen {
     position: absolute;
     top: 135px;
     left: 257px;
@@ -59,25 +60,28 @@ body {
     background-color: #000;
 
 }
+
 /* 스크린 아이프레임 */
-#screen iframe{
+#screen iframe {
     width: 100%;
     height: 100%;
     border: none;
 }
 
 /* 2-2. 예고편선택메뉴 */
-.mlist{
+.mlist {
     position: absolute;
-    bottom: 50px;
-    left: 200px;
+    bottom: 56px;
+    left: 252px;
 }
+
 /* li디자인 */
-.mlist ul>li{
+.mlist ul>li {
     padding: 0 10px;
 }
+
 /* 포스터 이미지 */
-.mlist img{
+.mlist img {
     width: 99px;
     height: 140px;
 }
