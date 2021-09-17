@@ -175,11 +175,20 @@ body {
     position: absolute;
     top: -17px;
     right: 9px;
-    width: 200px;
+    width: 0px;
+    /* width: 200px로 트랜지션 변경할것! */
     height: 71px;
     background: url(../images/bim.png) no-repeat;
     background-position: right center;
     background-size: auto 100%;
+
+    /* 트랜지션: 속시이지 */
+    transition: width .3s linear;
+    /* linear 등속도 */
+}
+/* .gnb에 마우스 오버시 빔등장! */
+.gnb:hover .bim{
+    width: 200px;
 }
 
 
