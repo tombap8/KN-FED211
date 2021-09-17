@@ -56,7 +56,7 @@
         /* html의 기본글자크기는 16px이다! */
 
         .f1{
-            
+            font-size: 2em;
             /* 
                 32px을 em으로 만들려면?
 
@@ -74,7 +74,7 @@
         }
 
         .f2{
-            
+            font-size: 0.75em;
             /* 
             원하는 px / 상속된 px
 
@@ -87,7 +87,7 @@
         }
 
         .f3{
-            
+            font-size: .58em;
             /* 
                 원하는 px은 14px
 
@@ -106,13 +106,13 @@
 
          */
          .rf1{/* 32px / 16px = 2rem */
-             
+             font-size: 2rem;
          }
          .rf2{/* 24px / 16px = 1.5rem */
-             
+             font-size: 1.5rem;
          }
          .rf3{/* 14px / 16px = 0.87rem */
-             
+             font-size: 0.87rem;
          }
 
          /* 
@@ -120,13 +120,13 @@
             즉, 부모요소에서 상속된 글자 크기의 상대적인 크기단위다!
           */
           .pf1{/* 2em === 200% */
-              
+              font-size: 200%;
           }
           .pf2{/* 0.75em === 75% */
-              
+              font-size: 75%;
           }
           .pf3{/* 0.58em === 58% */
-              
+              font-size: 58%;
           }
 
           /* 미디어쿼리 */
@@ -136,13 +136,13 @@
                 왜냐하면 모든 상대단위가 html에 의존하고 있기때문이다!
                */
                 html{
-                    
+                    font-size: 14px;
                 }
           }/* 미디어쿼리 */
 
           @media only screen and (max-width:800px) {
               html{
-                  
+                  font-size: 10px;
               }
           }/* 미디어쿼리 */
 
