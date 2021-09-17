@@ -45,12 +45,13 @@ body {
 }
 
 /* 1-2. 전체메뉴(GNB) */
-.gnb{
+.gnb {
     position: absolute;
     bottom: 15px;
     right: 15px;
     /* 나의부모는? #top */
 }
+
 /* GNB li리스트 */
 .gnb li {
     position: relative;
@@ -61,21 +62,31 @@ body {
 }
 
 /* GNB 서브메뉴 */
-.smenu{
+.smenu {
     position: absolute;
     /* left와 transform을 이용한 가로 중앙정렬법! */
-    left: 50%;/* 부모가로크기의 절반만큼 밀어준다! */
+    left: 50%;
+    /* 부모가로크기의 절반만큼 밀어준다! */
     transform: translateX(-50%);
     /* 자기자신크기의 절반을 왼쪽으로 이동! */
+    margin-top: 5px;
+    /* 상단밀기 위치조정 */
 
     width: 120px;
     /* 특정크기를 주지 않고 auto일 경우 부모크기로 한정됨!
     따라서 특정크기를 줘야하는 케이스임! */
     background: url(../images/bg_smenu.png) no-repeat center/cover;
+
+    padding: 6px;
+    /* 패딩 */
+    border-radius: 5px;
+    /* 둥근모서리 */
+    box-shadow: 0 0 5px #fff;
+    /* 박스글로우 : x y blur (spread) 색 */
 }
 
 /* 가상요소로 삼각형모양 만들기 */
-.smenu::before{
+.smenu::before {
     content: '';
     display: block;
     position: absolute;
@@ -87,16 +98,23 @@ body {
     /* 삼각형 만들기 */
     width: 0;
     height: 0;
-    border-bottom: 10px solid red;
+    border-bottom: 10px solid #353535;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
     /* 역삼각형은 border-bottom대신 border-top을 사용! */
     /* transparent는 투명색 - 다른표현은 rgba(0,0,0,0) */
 }
 
-.smenu li{
-    float: none;/* float해제 */
+.smenu li {
+    float: none;
+    /* float해제 */
     font-size: 12px;
+    line-height: 2;
+}
+
+/* 탑 보더 클래스 */
+.tbar{
+    border-top: 1px solid #ccc;
 }
 
 /* 2. 메인영역 */
@@ -149,9 +167,10 @@ body {
 }
 
 /* 영화정보박스 */
-.movtxt{
+.movtxt {
     position: absolute;
-    top: 100%;/* 아래쪽에 나가있음! */
+    top: 100%;
+    /* 아래쪽에 나가있음! */
     /* 나의 부모는? .mlist */
     /* left값은 셋팅하지 않으므로 젠틀하다! 
     그래서 모두 li안에 그대로 있음! */
@@ -172,22 +191,23 @@ body {
 }
 
 /* 영화정보 li */
-.movtxt li{
+.movtxt li {
     float: none;
     /* float해제 */
 }
 
 /* 첫번째 li는 영화제목임 */
-.movtxt li:first-child{
+.movtxt li:first-child {
     color: aqua;
     font-size: 17px;
-    letter-spacing: -1px;/* 자간 */
+    letter-spacing: -1px;
+    /* 자간 */
     margin-top: 30px;
     /* 상단밀기-아래li도 같이밀림! */
 }
 
 /* 포스터 리스트에 마우스 오버시 영화정보 올라오기 */
-.mlist>ul>li:hover .movtxt{
+.mlist>ul>li:hover .movtxt {
     top: 0;
 }
 
