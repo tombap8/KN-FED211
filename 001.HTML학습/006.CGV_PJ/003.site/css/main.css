@@ -154,13 +154,17 @@ body {
 }
 /* 영사기 이미지 */
 #cam img{
+    position: relative;
+    /* z-index적용위해 */
+    z-index: 1;
+    /* 빔박스보다 위! */
     width: 50px;
 }
 /* 빔박스 */
 .bim{
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -17px;
+    right: 9px;
     width: 200px;
     height: 71px;
     background: url(../images/bim.png) no-repeat;
