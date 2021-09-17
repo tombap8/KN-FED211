@@ -84,6 +84,14 @@ body {
     /* 둥근모서리 */
     box-shadow: 0 0 5px #fff;
     /* 박스글로우 : x y blur (spread) 색 */
+
+    display: none;
+    /* 처음에 안보임! */
+}
+
+/* 상위메뉴 오버시 서브메뉴 보이기 */
+.gnb>ul>li:hover .smenu{
+    display: block;
 }
 
 /* 가상요소로 삼각형모양 만들기 */
