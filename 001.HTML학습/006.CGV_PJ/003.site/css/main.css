@@ -87,6 +87,36 @@ body {
     height: 140px;
 }
 
+/* 영화정보박스 */
+.movtxt{
+    position: absolute;
+
+    width: 99px;
+    height: 140px;
+    background-color: #f00;
+
+    /* 글자셋팅 */
+    font-family: 'Cute Font', cursive;
+    font-size: 14px;
+    line-height: 25px;
+    color: #fff;
+    text-align: center;
+}
+
+/* 영화정보 li */
+.movtxt li{
+    float: none;
+    /* float해제 */
+}
+
+/* 첫번째 li는 영화제목임 */
+.movtxt li:first-child{
+    color: aqua;
+    font-size: 17px;
+    letter-spacing: -1px;/* 자간 */
+    margin-top: 30px;
+}
+
 /* 3. 하단영역 */
 #info {
     height: 100px;
