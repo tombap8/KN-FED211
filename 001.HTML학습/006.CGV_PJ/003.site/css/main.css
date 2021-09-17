@@ -67,7 +67,31 @@ body {
     left: 50%;/* 부모가로크기의 절반만큼 밀어준다! */
     transform: translateX(-50%);
     /* 자기자신크기의 절반을 왼쪽으로 이동! */
+
+    width: 120px;
+    /* 특정크기를 주지 않고 auto일 경우 부모크기로 한정됨!
+    따라서 특정크기를 줘야하는 케이스임! */
     background: url(../images/bg_smenu.png) no-repeat center/cover;
+}
+
+/* 가상요소로 삼각형모양 만들기 */
+.smenu::before{
+    content: '';
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    /* 부모는? .smenu */
+    transform: translateX(-50%);
+
+    /* 삼각형 만들기 */
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid red;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    /* 역삼각형은 border-bottom대신 border-top을 사용! */
+    /* transparent는 투명색 - 다른표현은 rgba(0,0,0,0) */
 }
 
 .smenu li{
