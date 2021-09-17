@@ -41,8 +41,18 @@ body {
     font-family: 'Jua', sans-serif;
 
     /* 그림자를 이용한 Glow효과 */
-    text-shadow: 0 0 10px aquamarine;
+    text-shadow: 0 0 12px aquamarine;
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: titAni 1s ease-in-out infinite alternate;
 }
+
+/* 타이틀 글로우 효과 애니메이션 키프레임 */
+@keyframes titAni {
+    to{
+        text-shadow: 0 0 5px aquamarine;
+    }
+} /* 키프레임 */
 
 /* 1-2. 전체메뉴(GNB) */
 .gnb {
