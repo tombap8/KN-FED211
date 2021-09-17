@@ -25,8 +25,11 @@ body {
 
 /* 1. 상단영역 */
 #top {
+    position: relative;
+    /* 부모자격! - .gnb */
     height: 80px;
     background: url(../images/curtain.jpg) repeat-x;
+    z-index: 999;
 }
 
 /* 1-1. 페이지 타이틀 */
@@ -39,6 +42,20 @@ body {
 
     /* 그림자를 이용한 Glow효과 */
     text-shadow: 0 0 10px aquamarine;
+}
+
+/* 1-2. 전체메뉴(GNB) */
+.gnb{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    /* 나의부모는? #top */
+}
+/* GNB li리스트 */
+.gnb li {
+    padding: 0 10px;
+    font-family: 'Jua', sans-serif;
+    /* 글자크기 미지정시 16px임! */
 }
 
 /* 2. 메인영역 */
