@@ -53,9 +53,26 @@ body {
 }
 /* GNB li리스트 */
 .gnb li {
+    position: relative;
+    /* 부모자격 - .smenu */
     padding: 0 10px;
     font-family: 'Jua', sans-serif;
     /* 글자크기 미지정시 16px임! */
+}
+
+/* GNB 서브메뉴 */
+.smenu{
+    position: absolute;
+    /* left와 transform을 이용한 가로 중앙정렬법! */
+    left: 50%;/* 부모가로크기의 절반만큼 밀어준다! */
+    transform: translateX(-50%);
+    /* 자기자신크기의 절반을 왼쪽으로 이동! */
+    background: url(../images/bg_smenu.png) no-repeat center/cover;
+}
+
+.smenu li{
+    float: none;/* float해제 */
+    font-size: 12px;
 }
 
 /* 2. 메인영역 */
