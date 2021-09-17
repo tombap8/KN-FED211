@@ -197,6 +197,9 @@ body {
     /* 트랜지션: 속시이지 */
     transition: width .3s linear;
     /* linear 등속도 */
+
+    /* 애니메이션: 이시이지반방마 */
+    animation: bimAni .04s linear infinite alternate;
 }
 /* .gnb에 마우스 오버시 빔등장! */
 .gnb:hover .bim{
@@ -205,6 +208,20 @@ body {
     /* 오버시 빔만 .5초 기다림(카메라 도는시간) */
 }
 
+/* 빔이 너울너울 거리도록 애니메이션 키프레임 */
+@keyframes bimAni {
+    from{
+        opacity: .9;
+    }
+    to{
+        opacity: .5;
+    }
+}/* 키프레임 */
+/* 
+    opacity 속성 
+    - 투명도를 주는 속성
+    - 0 완전투명, 1은 보임, 0.1~0.9 중간투명도
+*/
 
 
 /*************** 2. 메인영역 ****************/
