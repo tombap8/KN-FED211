@@ -59,6 +59,7 @@ body {
     padding: 0 10px;
     font-family: 'Jua', sans-serif;
     /* 글자크기 미지정시 16px임! */
+    font-size: 20px;
 }
 
 /* GNB 서브메뉴 */
@@ -72,7 +73,7 @@ body {
     margin-top: 5px;
     /* 상단밀기 위치조정 */
 
-    width: 120px;
+    width: 150px;
     /* 특정크기를 주지 않고 auto일 경우 부모크기로 한정됨!
     따라서 특정크기를 줘야하는 케이스임! */
     background: url(../images/bg_smenu.png) no-repeat center/cover;
@@ -105,7 +106,7 @@ body {
     /* transparent는 투명색 - 다른표현은 rgba(0,0,0,0) */
 }
 
-.smenu ol{
+.smenu ol {
     border: 1px solid #ccc;
     padding: 5px;
 }
@@ -113,12 +114,26 @@ body {
 .smenu li {
     float: none;
     /* float해제 */
-    font-size: 12px;
+    font-size: 16px;
     line-height: 2;
 }
 
+/* 서브메뉴 a요소 오버시 */
+.smenu a:hover {
+    color: red;
+}
+
+/* 서브메뉴 a요소 오버시 가상요소로 손가락모양 */
+.smenu a:hover::after {
+    content: '☞';
+    /* 손가락모양 */
+    float: right;
+    /* 인라인요소 오른쪽끝! */
+    font-weight: bold;
+}
+
 /* 탑 보더 클래스 */
-.tbar{
+.tbar {
     border-top: 1px solid #ccc;
 }
 
