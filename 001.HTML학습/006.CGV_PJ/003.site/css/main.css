@@ -73,6 +73,9 @@ body {
     position: absolute;
     bottom: 56px;
     left: 252px;
+    overflow: hidden;
+    /* 넘치는 자식요소 숨기기
+    -> .movtxt요소의 부모에 줘야 적용된다! */
 }
 
 /* li디자인 */
@@ -90,10 +93,14 @@ body {
 /* 영화정보박스 */
 .movtxt{
     position: absolute;
+    top: 100%;/* 아래쪽에 나가있음! */
+    /* 나의 부모는? .mlist */
+    /* left값은 셋팅하지 않으므로 젠틀하다! 
+    그래서 모두 li안에 그대로 있음! */
 
     width: 99px;
     height: 140px;
-    background-color: #f00;
+    background-color: rgba(0, 0, 0, 0.7);
 
     /* 글자셋팅 */
     font-family: 'Cute Font', cursive;
@@ -115,6 +122,7 @@ body {
     font-size: 17px;
     letter-spacing: -1px;/* 자간 */
     margin-top: 30px;
+    /* 상단밀기-아래li도 같이밀림! */
 }
 
 /* 3. 하단영역 */
