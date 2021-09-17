@@ -23,7 +23,7 @@ body {
     outline: 3px dotted yellow;
 }
 
-/* 1. 상단영역 */
+/************** 1. 상단영역 *******************/
 #top {
     position: relative;
     /* 부모자격! - .gnb */
@@ -145,7 +145,32 @@ body {
     border-top: 1px solid #ccc;
 }
 
-/* 2. 메인영역 */
+/* 영사기 박스 */
+#cam{
+    position: absolute;
+    bottom: -19px;
+    right: -50px;
+    /* 부모는? .gnb */
+}
+/* 영사기 이미지 */
+#cam img{
+    width: 50px;
+}
+/* 빔박스 */
+.bim{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 71px;
+    background: url(../images/bim.png) no-repeat;
+    background-position: right center;
+    background-size: auto 100%;
+}
+
+
+
+/*************** 2. 메인영역 ****************/
 #cont {
     position: relative;
     /* 부모자격 */
@@ -239,7 +264,7 @@ body {
     top: 0;
 }
 
-/* 3. 하단영역 */
+/************** 3. 하단영역 *******************/
 #info {
     height: 100px;
 }
