@@ -169,7 +169,17 @@ body {
     z-index: 1;
     /* 빔박스보다 위! */
     width: 50px;
+    /* 트랜스폼 회전 */
+    transform: rotate(20deg);
+    /* 트랜지션: 속시이지 */
+    transition: transform .5s;
 }
+/* .gnb에 마우스 오버시 회전원상복귀 */
+.gnb:hover #cam img{
+    transform: rotate(0deg);
+}
+
+
 /* 빔박스 */
 .bim{
     position: absolute;
