@@ -172,11 +172,13 @@ body {
     /* 트랜스폼 회전 */
     transform: rotate(20deg);
     /* 트랜지션: 속시이지 */
-    transition: transform .5s;
+    transition: transform .5s .3s;
 }
 /* .gnb에 마우스 오버시 회전원상복귀 */
 .gnb:hover #cam img{
     transform: rotate(0deg);
+    transition-delay: 0;
+    /* 오버시엔 지연없이 바로실행! */
 }
 
 
@@ -199,6 +201,8 @@ body {
 /* .gnb에 마우스 오버시 빔등장! */
 .gnb:hover .bim{
     width: 200px;
+    transition-delay: .5s;
+    /* 오버시 빔만 .5초 기다림(카메라 도는시간) */
 }
 
 
