@@ -108,6 +108,9 @@ body {
     line-height: 25px;
     color: #fff;
     text-align: center;
+
+    /* 트랜지션: 속시이지 */
+    transition: top .4s ease-out;
 }
 
 /* 영화정보 li */
@@ -123,6 +126,11 @@ body {
     letter-spacing: -1px;/* 자간 */
     margin-top: 30px;
     /* 상단밀기-아래li도 같이밀림! */
+}
+
+/* 포스터 리스트에 마우스 오버시 영화정보 올라오기 */
+.mlist>ul>li:hover .movtxt{
+    top: 0;
 }
 
 /* 3. 하단영역 */
