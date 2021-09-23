@@ -162,6 +162,25 @@
 
             -> 주의사항: 클래스를 단 하나만 썼어도 순번선택 필수!
 
+            3. 태그요소 선택법 - getElementsByTagName() 메서드
+            document.getElementsByTagName(태그명)
+            - html요소 중 태그요소는 여러개 올 수 있기 때문에
+            컬렉션집합을 만들어서 관리하므로 순번으로 선택해야함!
+            - .item(순번) 또는 [순번]
+            - 순번은 0부터!
+
+            - 메서드이름분석
+            -> get 가져와라
+            -> Elements 요소들을
+            -> By Tag Name 태그명에 의한 것으로
+
+            예) 해당클래스명을 가진 요소 중 첫번째 것 선택
+            document.getElementsByTagName(태그명).item(0)
+            또는
+            document.getElementsByTagName(태그명)[0]
+
+            -> 주의사항: 태그를 단 하나만 썼어도 순번선택 필수!
+
 
 
 
