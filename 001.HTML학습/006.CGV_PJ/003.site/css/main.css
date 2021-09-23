@@ -368,5 +368,16 @@ body {
     outline: 2px solid lime;
     /* 배경이미지 넣기 - 스프라이츠(Sprites) */
     background: url(../images/sprites_logo.png) no-repeat;
+}
+/* 페이스북 */
+.sns li:first-child{
+    background-position: -509px -425px;
+}
+/* 트위터 */
+.sns li:nth-child(2){
+    background-position: -509px -425px;
+}
+/* 인스타그램 */
+.sns li:last-child{
     background-position: -509px -425px;
 }
