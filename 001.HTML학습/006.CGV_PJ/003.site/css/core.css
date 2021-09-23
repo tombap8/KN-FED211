@@ -9,3 +9,11 @@
     font-family: 'Cute Font', cursive;
     font-family: 'Jua', sans-serif;
 */
+
+/* IR(Image Replacement)클래스 */
+.bld{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
