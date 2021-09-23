@@ -365,9 +365,15 @@ body {
     width: 34px;
     height: 34px;
     margin: 2px;
-    outline: 2px solid lime;
+    /* outline: 2px solid lime; */
     /* 배경이미지 넣기 - 스프라이츠(Sprites) */
     background: url(../images/sprites_logo.png) no-repeat;
+    /* 흑백처리-오버시칼라(0%) */
+    filter: grayscale(100%);
+}
+/* li오버시 칼라로! */
+.sns li:hover {
+    filter: grayscale(0%);
 }
 /* 페이스북 */
 .sns li:first-child{
