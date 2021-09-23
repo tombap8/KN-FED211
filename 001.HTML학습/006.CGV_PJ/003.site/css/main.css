@@ -330,6 +330,8 @@ body {
 
 /************** 3. 하단영역 *******************/
 #info {
+    position: relative;
+    /* 부모자격 */
     height: 100px;
 }
 /* 3-1.회사정보박스 */
@@ -349,4 +351,22 @@ body {
     float: left;
     /* 이미지는 왼쪽에 글자는 오른쪽으로 흐르게 */
     margin-right: 20px;/* 오른쪽여백 */
+}
+
+/* 3-2.sns버튼 */
+.sns{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* 부모는? #info */
+}
+/* sns li박스 */
+.sns li{
+    width: 34px;
+    height: 34px;
+    margin: 2px;
+    outline: 2px solid lime;
+    /* 배경이미지 넣기 - 스프라이츠(Sprites) */
+    background: url(../images/sprites_logo.png) no-repeat;
+    background-position: -509px -425px;
 }
