@@ -199,7 +199,7 @@
             인라인 코딩되어 들어간다!(최우선 순위로 적용됨!)
 
 
-            [ JS에서 코드를 재상용하는 방법 ]
+            [ JS에서 코드를 재사용하는 방법 ]
             - 선택요소를 변수에 넣기!
             - 변수는 어떤 값이나 객체를 저장하는 공간
             - 변수명은 그 저장된 공간의 주소명이다!
@@ -225,17 +225,24 @@
             document.getElementById("name").innerHTML =
             '<img src="images/kim.png" alt="김비서가 왜그럴까?">';
 
-            /// CSS변경하기 ///////
+            /// CSS 변경하기 ///////
+            // 대상선정: .pbox
+            // 대상을 변수에 담아서 재사용한다!
+            var tg = document.getElementsByClassName("pbox").item(0);
+            // var는 variable(변수)에서 나온말. 선언시 사용한다!
 
             // (2) 글자색 변경하기
-            // 대상선정: .pbox
-            // 변경내용: 글자색 라임색
-            document.getElementsByClassName("pbox").item(0)
-            .style.color = "lime";
+            // 변경내용: 글자색 라임색            
+            tg.style.color = "lime";
 
             // (3) 글자크기 변경하기
-            // 대상선정: .pbox
             // 변경내용: 글자크기 50px
+            tg.style.fontSize = "50px";
+
+            // (4) 트랜지션주기(2초)
+            tg.style.transition = "2s";
+
+
             
 
 
