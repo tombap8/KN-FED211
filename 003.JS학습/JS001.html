@@ -337,6 +337,26 @@
             text-shadow: 1px 1px 1px #000;
             /* background: url(./images/kimbs.jpg) no-repeat top/cover; */
         }
+
+        .circle{
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .circle:first-of-type {
+            background-image: url(./images/01.png);
+        }
+        .circle:nth-of-type(2) {
+            background-image: url(./images/02.png);
+        }
+        .circle:nth-of-type(3) {
+            background-image: url(./images/03.png);
+        }
     </style>
 </head>
 <body>
@@ -344,6 +364,13 @@
         나는 요즘 매일 생각한다! <br>
         도대체 <span id="name"></span>
     </p>
+
+
+    <div class="circle" onclick="circle(0)"></div>
+    <div class="circle" onclick="circle(1)"></div>
+    <div class="circle" onclick="circle(2)"></div>
+
+    <div id="rect" onclick="rect()"></div>
     
 
     
