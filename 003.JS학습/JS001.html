@@ -181,6 +181,46 @@
 
             -> 주의사항: 태그를 단 하나만 썼어도 순번선택 필수!
 
+            _______________________________________________
+
+            4. CSS선택자를 그대로 사용하는 선택법!
+
+            (1) 하나의 요소를 선택하는법
+            document.querySelector(CSS선택자)
+            -> 무조건 선택요소가 여러개여도 처음 만나는 것 하나만 선택!
+            예)
+            document.querySelector("#my") 
+            -> 아이디가 my인 요소
+            document.querySelector(".say") 
+            -> 클래스가 say인 요소 중 첫번째것
+            document.querySelector("ul>li")
+            -> li요소 중 첫번째 요소
+
+            -> 매서드명 분석
+            - query 쿼리 -> 질의(기술적인질문)
+            - Selector 선택자 -> CSS선택자
+             -> 브라우저에게 CSS선택자로 질의한다!요소를 선택한다!
+
+            (2) 여러개의 요소를 선택하는 방법!
+            document.querySelectorAll(CSS선택자)
+            -> 선택시 컬렉션 집합에 결과를 담는다!
+            -> 따라서 요소가 하나일지라도 순번으로 선택한다!
+            방법: .item(순번) 또는 [순번]
+                -> 순번은 0부터~!
+            -> 컬렉션 개수는 .length 로 구해온다.
+            (위의 방법은 
+            getElementsByClassName,
+            getElementsByTagName과 동일함!)
+
+            예) 
+            document.querySelectorAll("#my>li").item(3)
+            -> 아이디가 my인 요소 아래 li중 4번째 요소 선택
+            동일한 표현법은
+            document.querySelectorAll("#my>li")[3]
+
+            _______________________________________________
+
+
             [ JS에서 요소 선택 후 html 변경하기 ]
             선택요소.innerHTML = html코드
             -> 선택요소 내부 자식으로 html코드를 집어 넣는다!
