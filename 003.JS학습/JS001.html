@@ -319,6 +319,37 @@
         } //////////// showMe 함수 //////////////////
         /////////////////////////////////////////////
 
+        /*/////////////////////////////////////////
+            함수명: circle
+            기능: 선택요소 중앙으로 보내기!
+        *//////////////////////////////////////////
+        function circle(num){ // num 순번전달변수
+            // 1. 함수호출확인 및 전달값확인
+            console.log(num+"나야나!")
+            // 2. 대상선정 : .circle
+            var cc = document.querySelectorAll(".circle");
+            // 3. 변경내용 : 트랜지션으로 화면중앙으로 이동하기!
+            console.log("개수:"+cc.length);
+            // 트랜지션
+            cc.item(num).style.transition = "1s ease-out";
+            // 화면중앙이동
+            cc.item(num).style.top = "50%";
+            cc.item(num).style.right = "50%";
+            cc.item(num).style.transform = "translate(50%,-50%)"
+
+        } //////////// circle 함수 /////////////////
+        ////////////////////////////////////////////
+
+        /*///////////////////////////////////////////////////
+            함수명: rect
+            기능: 오른쪽 상단으로 이동하여 사각형으로 전체채우기
+        *////////////////////////////////////////////////////
+        function rect(){
+            // 1. 함수호출확인
+            console.log("사각사각!");
+        } //////// rect 함수 ///////////////////////////////
+        ////////////////////////////////////////////////////
+
 
 
     </script>
@@ -338,7 +369,7 @@
             /* background: url(./images/kimbs.jpg) no-repeat top/cover; */
         }
 
-        .circle{
+        .circle, #rect{
             position: absolute;
             top: 0;
             right: 0;
@@ -356,6 +387,10 @@
         }
         .circle:nth-of-type(3) {
             background-image: url(./images/03.png);
+        }
+        #rect{
+            top: 40%;
+            background-image: url(./images/04.png);
         }
     </style>
 </head>
