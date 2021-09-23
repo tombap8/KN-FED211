@@ -357,6 +357,9 @@
             rt.style.transition = "3s 1s,top 1s 0s";
             // 트랜지션 top값만 1초, 나머지는 1초후 3초간 변경
 
+            // 4. 추가 변경: 글자넣기
+            rt.innerText = "축하합니다~!!!";
+
         } //////// rect 함수 ///////////////////////////////
         ////////////////////////////////////////////////////
 
@@ -401,6 +404,11 @@
         #rect{
             top: 40%;
             background-image: url(./images/04.png);
+            font-size: 40px;
+            text-align: center;
+            color: red;
+            line-height: 200px;
+            white-space: nowrap;/* 줄바꿈방지 */
         }
     </style>
 </head>
