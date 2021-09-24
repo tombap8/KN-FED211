@@ -72,3 +72,12 @@ body::after {
     font: bold 34px/40px 'Audiowide';
     /* font: 스두크/줄체; */
 }
+/* 로고 이미지 */
+#enter img{
+    transition: transform .4s ease-out;
+    /* 트랜지션: 속시이지 */
+}
+/* 박스에 마우스 오버시 로고이미지 변형하기 */
+#enter:hover img {
+    transform: rotate(-15deg) scale(1.5);
+}
