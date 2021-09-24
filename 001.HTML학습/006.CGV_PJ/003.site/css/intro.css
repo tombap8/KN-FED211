@@ -71,7 +71,16 @@ body::after {
     /* 글자중앙 */
     font: bold 34px/40px 'Audiowide';
     /* font: 스두크/줄체; */
+    transition: transform .4s ease-out .2s;
+    /* 트랜지션 지연시간 0.2초설정(양방향) */
 }
+/* 박스에 오버시 span 변형하기 */
+#enter:hover span{
+    transform: scale(2);
+    color: chartreuse;
+}
+
+
 /* 로고 이미지 */
 #enter img{
     transition: transform .4s ease-out;
