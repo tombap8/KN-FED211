@@ -269,6 +269,29 @@
             해석: 뒷변수를 먼저 앞변수에 할당 후 뒷변수를 1증가한다!
       */
 
+      /* 
+            6. 논리 연산자
+            (1) 논리합(OR) -> || (바를 2개쓴다)
+                - 여러조건 중 하나만 true이면 true
+            (2) 논리곱(AND) -> && (엠퍼센드 2개쓴다)
+                - 여러조건 모두 true이면 true
+            (3) 논리부정(NOT) -> ! (느낌표)
+                - true이면 false, false이면 true
+      */
+      document.write("<h1>6.논리연산자:</h1>");
+
+      // 여자나이
+      var woman = 25;
+
+      document.write("<h1>여자분의 나이는 "+woman+"살입니다.</h1>");
+      document.write("<h1>이 여자분은 30살 이상입니까? "+(woman >= 30)+"</h1>");
+      document.write("<h1>이 여자분은 40살 미만입니까? "+(woman < 40)+"</h1>");
+      document.write("<h1>이 여자분은 30대입니까? "+
+        (woman >= 30 && woman < 40)+"</h1>");
+        // 30대라 함은 30이상 40미만이 조건이다!(논리곱)
+
+
+
     </script>
 </head>
 
