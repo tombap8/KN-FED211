@@ -32,6 +32,14 @@
             // 2-4. 칭찬스티커대상:
             var jshow = document.querySelector("#jshow");
 
+            // 2.5. 입력값 걸러내기
+            // 2.5-1. 숫자 아니면 나가!
+            // is Not a Number? 숫자가 아니니?
+            // 숫자가 아니면 true
+            // JS숫자여부 판별 내장함수 -> isNaN()
+            // 사용법: isNaN(값) -> 숫자아니면 true
+            console.log("숫자가 아니니?"+isNaN(score));
+
 
             // 3. 점수환산하기
             // 기준:
@@ -45,27 +53,35 @@
             // 색상변수
             var fc;
 
+            // 배경위치변수
+            var bgp;
+
             // console.log(score>=90);
 
             if(score>=90){ // 90점이상
                 res = "매우잘함";
                 fc = "blue";
+                bgp = "0 0";
             } /// if ////
             else if(score>=80){ // 80점이상
                 res = "잘함";
                 fc = "green";
+                bgp = "-322px 0";
             } /// else if ////
             else if(score>=70){ // 70점이상
                 res = "보통";
                 fc = "purple";
+                bgp = "-322px -322px";
             } /// else if ////
             else if(score>=60){ // 60점이상
                 res = "노력요함";
                 fc = "orange";
+                bgp = "-644px -644px";
             } /// else if ////
             else{ // 위의 모든 조건에 해당없을때
                 res = "재시험";
                 fc = "red";
+                bgp = "-322px -644px";
             } //// else /////
 
             // 결과확인
@@ -83,7 +99,7 @@
             jexp.style.color = fc;
 
             // 4-3. 결과에 따른 칭찬스티커 변경하기
-            jshow.style.backgroundPosition = "0 0";
+            jshow.style.backgroundPosition = bgp;
 
          } ////////// jumsu 함수 ////////////////////
          ////////////////////////////////////////////
