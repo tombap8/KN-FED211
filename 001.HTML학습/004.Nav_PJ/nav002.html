@@ -84,13 +84,24 @@
             height: 50px;
         }
 
-
-
         /* 상위메뉴 오버시 하위메뉴 a 글자색,배경색 */
         .smenu a:hover{
             color: navy;
             background-color: lightskyblue;
         }
+
+        /* 유형변경5
+            - a요소가 기존변경 block에서 inline으로 변경
+            - 이유가 width, height 디자인 미적용을 위함
+            - 기존 적용된 선택자와 같은 레벨의 부모를 써서
+            적용우선순위를 높여준다!(상위부모 .gnb를 써준다!)
+        */
+        .gnb .smenu a{
+            display: inline;
+            margin: 0 10px;/* 양쪽마진 */
+        }
+
+
     </style>
 </head>
 <body>
