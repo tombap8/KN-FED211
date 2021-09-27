@@ -12,7 +12,7 @@
 3) 함수 : 선언적 함수 + 익명함수
 5) 데이터 가공 : 문자가공 + 숫자가공
 6) Date + Math 객체
-4) 함수 응용 : Rolling Gallery
+7) 함수 응용 : Rolling Gallery
 
 3. CSS학습
 1) 미디어쿼리 + 비율유지박스
