@@ -24,8 +24,32 @@
 
         /* GNB메뉴 */
         .gnb{
+            position: relative;
+            /* 부모자격 - .gnb::before */
             background-color: #2f71eb;
         }
+        /* 유형변경2 : GNB가상요소로 전체 서브창 배경 만들기 */
+        .gnb::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50px;
+            /* 부모는? .gnb */
+            width: 100%;
+            height: 0;/* 오버시 220px로 변경 */
+            background-color: #92c1ff;
+            /* .smenu의 배경색과 동일 */
+
+            /* 트랜지션: 속시이지 -> .smenu와 동일! */
+            transition: height .4s ease-out;
+        }
+        /* .gnb에 오버시 가상요소 높이값 변경하기 */
+        /* 가상요소 오버시엔 붙여서 바로 뒤에 쓴다! */
+        .gnb:hover::before {
+            height: 220px;
+        }
+
+
         .gnb>ul{
             width: 800px;
             margin: 0 auto;/* 마영오! */
@@ -73,14 +97,9 @@
             /* 트랜지션: 속시이지 */
             transition: height .4s ease-out;
         }
-        /* 상위메뉴 li에 마우스 오버시 하위메뉴 보이기 */
-        /* 두번째 메뉴 */
-        .gnb>ul>li:nth-child(2):hover .smenu{
+        /* 유형변경1 : .gnb에 오버시 전체 서브 한꺼번에 보이기 */
+        .gnb:hover>ul>li .smenu{
             height: 200px;
-        }
-        /* 세번째 메뉴 */
-        .gnb>ul>li:nth-child(3):hover .smenu{
-            height: 100px;
         }
 
         /* 상위메뉴 오버시 하위메뉴 a 글자색,배경색 */
