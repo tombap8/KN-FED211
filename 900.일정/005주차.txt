@@ -6,7 +6,7 @@
 3) SliceMove_PJ - flex 레이아웃 연습
 
 2. JS학습
-1) 제어문 : if문+switch case문+for문+while문
+1) 제어문 : if문 + switch case문 + for문 + while문
   - 제어문 연습예제
 2) 배열과 객체
 3) 함수 : 선언적 함수 + 익명함수
