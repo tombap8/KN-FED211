@@ -32,13 +32,38 @@
             // 2-4. 칭찬스티커대상:
             var jshow = document.querySelector("#jshow");
 
-            // 2.5. 입력값 걸러내기
+            // 2.5. 입력값 걸러내기 /////////////////
             // 2.5-1. 숫자 아니면 나가!
             // is Not a Number? 숫자가 아니니?
             // 숫자가 아니면 true
             // JS숫자여부 판별 내장함수 -> isNaN()
             // 사용법: isNaN(값) -> 숫자아니면 true
             console.log("숫자가 아니니?"+isNaN(score));
+
+            if(isNaN(score)){ // 숫자가 아닐때
+
+                // 1. 메시지 출력
+                jexp.innerText = "숫자를 입력하세요!";
+                // 2. 글자색검정(바꿔있을 수 있으므로)
+                jexp.style.color = "#000";
+                // 3. 칭찬스티커 원위치(나왔을 수 있으므로)
+                jshow.style.backgroundPosition = "322px 0";
+                // 4. 입력창 내용 지우기(초기화)
+                jum.value = "";
+                // 5. 입력창에 포커스 주기
+                jum.focus();
+                // focus() - 선택요소에 포커스를 주는 JS내장함수
+
+                // if문에 들어왔다면 여기서
+                // 함수실행을 끝내야함!
+                // 여기서 끝낼때 쓰는 키워드는?
+                // 돌아가! -> return
+                return;
+                // return 키워드
+                // 뒤에 값을 쓰면 호출곳으로 
+                // 값을 가지고 나간다~! 함수편에서 자세히!
+
+            } //////// if ////////////////
 
 
             // 3. 점수환산하기
@@ -175,7 +200,7 @@
      <h2>if문 연습</h2>
      <h3 id="jexp">평가출력</h3>
      <label for="jumsu">점수입력 : </label>
-     <input type="text" id="jumsu">점
+     <input type="text" id="jumsu" placeholder="점수를 입력하세요!">점
      <button class="sbtn" onclick="jumsu()">평가하기</button>
 
      <!-- 점수에 따른 칭찬스티커 -->
@@ -196,6 +221,8 @@
          input 요소 : 입력양식 요소
                     (텍스트,라디오버튼,체크박스 등)
         - type="text" 텍스트 입력양식
+        - placeholder 속성 : 안내문구출력(글자입력시 사라짐)
+        - value 속성 : 미리입력할 글자 넣기
 
         label 요소 : 입력양식 설명요소
         - for 속성은 연결된 input의 아이디명을 써줌
