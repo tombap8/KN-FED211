@@ -27,6 +27,8 @@
             background-color: #2f71eb;
         }
         .gnb>ul{
+            position: relative;
+            /* 변경1 : 부모자격 - .smenu */
             width: 800px;
             margin: 0 auto;/* 마영오! */
         }
@@ -65,7 +67,10 @@
         /* 서브메뉴 */
         .smenu{
             position: absolute;
-            width: 200px;
+            left: 0;
+            /* 변경2: 부모는? .gnb>ul  */
+            width: 800px;
+            /* 변경3: 부모박스 만큼 설정 */
             background-color: #92c1ff;
             height: 0;
             overflow: hidden;
@@ -74,13 +79,9 @@
             transition: height .4s ease-out;
         }
         /* 상위메뉴 li에 마우스 오버시 하위메뉴 보이기 */
-        /* 두번째 메뉴 */
-        .gnb>ul>li:nth-child(2):hover .smenu{
-            height: 200px;
-        }
-        /* 세번째 메뉴 */
-        .gnb>ul>li:nth-child(3):hover .smenu{
-            height: 100px;
+        /* 변경4: 메뉴 오버시 높이 통일함! */
+        .gnb>ul>li:hover .smenu{
+            height: 50px;
         }
 
         /* 상위메뉴 오버시 하위메뉴 a 글자색,배경색 */
