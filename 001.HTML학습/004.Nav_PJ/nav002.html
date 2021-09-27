@@ -28,7 +28,7 @@
         }
         .gnb>ul{
             position: relative;
-            /* 변경1 : 부모자격 - .smenu */
+            /* 유형변경1 : 부모자격 - .smenu */
             width: 800px;
             margin: 0 auto;/* 마영오! */
         }
@@ -68,9 +68,9 @@
         .smenu{
             position: absolute;
             left: 0;
-            /* 변경2: 부모는? .gnb>ul  */
+            /* 유형변경2: 부모는? .gnb>ul  */
             width: 800px;
-            /* 변경3: 부모박스 만큼 설정 */
+            /* 유형변경3: 부모박스 만큼 설정 */
             background-color: #92c1ff;
             height: 0;
             overflow: hidden;
@@ -79,7 +79,7 @@
             transition: height .4s ease-out;
         }
         /* 상위메뉴 li에 마우스 오버시 하위메뉴 보이기 */
-        /* 변경4: 메뉴 오버시 높이 통일함! */
+        /* 유형변경4: 메뉴 오버시 높이 통일함! */
         .gnb>ul>li:hover .smenu{
             height: 50px;
         }
