@@ -87,7 +87,7 @@
         /* 상위메뉴 오버시 하위메뉴 a 글자색,배경색 */
         .smenu a:hover{
             color: navy;
-            background-color: lightskyblue;
+            background-color: rgb(182, 180, 255);
         }
 
         /* 유형변경5
@@ -98,7 +98,17 @@
         */
         .gnb .smenu a{
             display: inline;
+            padding: 0 10px;/* 양쪽패딩 */
             margin: 0 10px;/* 양쪽마진 */
+        }
+        /* 유형변경6 - 서브메뉴 시작위치 변경을 위한 클래스 */
+        /* 두번째 메뉴 왼쪽마진 */
+        .ml2{
+            margin-left: 200px;
+        }
+        /* 세번째 메뉴 왼쪽마진 */
+        .ml3{
+            margin-left: 400px;
         }
 
 
@@ -113,7 +123,7 @@
                 <a href="#">웹개발</a>
                 <!-- 서브메뉴 -->
                 <ol class="smenu">
-                    <li>
+                    <li class="ml2">
                         <a href="#">웹디자인</a>
                     </li>
                     <li>
@@ -131,7 +141,7 @@
                 <a href="#">게시판</a>
                 <!-- 서브메뉴 -->
                 <ol class="smenu">
-                    <li>
+                    <li class="ml3">
                         <a href="#">Q&amp;A</a>
                         <!-- &amp;는 &의 특수문자처리 -->
                     </li>
