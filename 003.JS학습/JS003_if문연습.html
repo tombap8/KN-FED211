@@ -37,7 +37,22 @@
         }
     </style>
     <script>
-        
+        // 함수는 코드 저장소다!
+        /*/////////////////////////////////////////
+            함수명: chgImg
+            기능: 버튼 클릭시 해당 이미지변경하기
+        *//////////////////////////////////////////
+        function chgImg(txt){//txt - 버튼글자
+            // 함수 소괄호에 변수를 하나쓰면
+            // 하나의 전달값을 받는다는 의미!
+            // 만약 chgImg(a,b,c,d) -> 변수개수만큼!
+            // 전달값 변수는 var 로 선언 안한다!
+            // 여러개를 쓸때는 콤마로 구분
+            // 전달변수 === 파라미터변수 로 부른다!
+
+
+        } //////// chgImg 함수 /////////////////////
+        ////////////////////////////////////////////
     </script>
 </head>
 <body>
@@ -51,7 +66,14 @@
 
     <!-- 선택버튼박스 -->
     <div class="btnbx">
-        <button class="btns" onclick="">포스터</button>
+        <button class="btns" onclick="chgImg(this)">포스터</button>
+        <!-- 
+            [ this 키워드 ]
+            따옴표로 안싸고 this를 보내면
+            버튼 자신을 보낸다는 의미!
+            보낸 요소의 정보를 함수에서 알아낼 수 있다!
+            요소의 정보란? 속성의 값, 데이터 등
+         -->
         <button class="btns" onclick="">장면1</button>
         <button class="btns" onclick="">장면2</button>
         <button class="btns" onclick="">장면3</button>
