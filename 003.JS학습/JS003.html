@@ -352,6 +352,16 @@
              height: 0;
              overflow: hidden;
          }
+
+         /* 구구단 출력박스 */
+         .gugu{
+             width: 300px;
+             height: 300px;
+             overflow-y: scroll;
+             /* y축 스크롤 */
+             border: 2px dashed blue;
+             text-align: center;
+         }
      </style>
  </head>
 
@@ -439,8 +449,12 @@
           <option value="17">17단</option>
           <option value="18">18단</option>
           <option value="19">19단</option>
-          <option>20단</option>
+          <option value="20">20단</option>
       </select>
+
+      <br>
+      <!-- 구구단 출력박스 -->
+      <div class="gugu"></div>
 
       <!-- 
         select 요소
@@ -452,7 +466,6 @@
             -> 데이터로 값을 넣고 이 값을 선택했을때의 코드를 넣는다
             value 속성은 이 구분코드에 해당함!
             : 만약 value를 안쓰면 데이터를 읽어감
-
        -->
 
       
