@@ -325,6 +325,26 @@
             - default에는 break문을 쓰지 않는다!
          
          */
+
+         /*////////////////////////////////////////////////////
+            함수명: gugu
+            기능: 선택박스에서 선택된 구구단을 출력함
+            연결이벤트: change
+                - 선택박스(select)가 변경될때 발생하는 이벤트
+         */////////////////////////////////////////////////////
+         function gugu(U){ // U - 선택박스 자신 전달변수
+
+            // 옵션값 변수
+            var opt = U.value;
+            // value는 선택된 option의 value값!
+            
+            // 1. 호출 및 전달값 확인
+            console.log("구구단!"+opt);
+
+         } /////////// gugu 함수 //////////////////////////////
+         //////////////////////////////////////////////////////
+
+
      </script>
      <style>
          /* 칭찬스티커 */
@@ -361,6 +381,7 @@
              /* y축 스크롤 */
              border: 2px dashed blue;
              text-align: center;
+             margin-top: 10px;
          }
      </style>
  </head>
@@ -429,8 +450,10 @@
      <!-- for문 연습 -->
      <h2>for문 연습</h2>
       <h3>구구단 출력하기</h3>
-      <select name="sel" id="sel">
-          <option value="1">1단</option>
+      <!-- onchange 이벤트속성: 선택박스 옵션이 변경될때발생 -->
+      <select name="sel" id="sel" onchange="gugu(this)">
+        <!-- this키워드로 선택박스의 선택변경을 알 수 있다! -->
+          <option value="1">구구단을 선택하세요!</option>
           <option value="2">2단</option>
           <option value="3">3단</option>
           <option value="4">4단</option>
