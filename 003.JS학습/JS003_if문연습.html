@@ -52,10 +52,38 @@
             // 함수호출시 chgImg(this)의 this는 함수와
             // 연결된 요소 자신을 말한다!
 
-            // 버튼 텍스트 읽어오기
+            // 1. 버튼 텍스트 읽어오기
             var txt = U.innerText;
             // innerText는 선택요소의 내부글자데이터를 읽어옴
             // innerText를 이퀄 왼쪽에 쓰면 할당, 오른쪽에 쓰면 읽어오기
+
+            // 2. 값확인!호출여부확인!
+            console.log(txt);
+
+            // 3. 변경대상선정: #scene
+            var tg = document.querySelector("#scene");
+
+            // 4. 변경내용: 버튼에 따라 포스터 이미지를 변경함
+            // 분기문(if문)을 이용함!
+
+            // 새로운 이미지 경로변수
+            var isrc; //선언만, 할당은 if문에서!
+
+            if(txt==="포스터"){
+                isrc = "./images/ala1.jpg";
+            } //// if /////////
+            else if(txt==="장면1"){
+                isrc = "./images/ala2.jpg";
+            } /// else if ////////
+            else if(txt==="장면2"){
+                isrc = "./images/ala3.jpg";
+            } /// else if ////////
+            else if(txt==="장면3"){
+                isrc = "./images/ala4.jpg";
+            } /// else if ////////
+
+            // 할당된 isrc값 확인
+            console.log(isrc);
 
 
 
@@ -90,9 +118,9 @@
             보낸 요소의 정보를 함수에서 알아낼 수 있다!
             요소의 정보란? 속성의 값, 데이터 등
          -->
-        <button class="btns" onclick="">장면1</button>
-        <button class="btns" onclick="">장면2</button>
-        <button class="btns" onclick="">장면3</button>
+        <button class="btns" onclick="chgImg(this)">장면1</button>
+        <button class="btns" onclick="chgImg(this)">장면2</button>
+        <button class="btns" onclick="chgImg(this)">장면3</button>
     </div>
 
 </body>
