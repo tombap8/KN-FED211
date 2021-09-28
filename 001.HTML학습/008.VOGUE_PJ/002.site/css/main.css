@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* VOGUE PJ 메인 CSS - main.css */
+
+/* 외부CSS 합치기 */
+@import url(reset.css);
+
+/* 공통 class */
+
+/* 속박스 */
+.ibx{
+    max-width: 1300px;
+    margin: 0 auto;
+    /* 1300px보다 크면 중앙정렬
+    작으면 auto로 width를 유지함! */
+    outline: 3px dotted blue;
+}
+/* 1. 상단영역 */
+.top{
+    height: 206px;
+}
+/* 2. 메인영역 */
+/* 파트타입1 - 이미지1개 */
+.pt1{
+    height: 724px;
+}
+/* 파트타입2 - 이미지3개 */
+.pt2{
+    height: 650px;
+}
+/* 3. 하단영역 */
+.info{
+    height: 285px;
+}
