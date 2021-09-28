@@ -85,6 +85,19 @@
             // 할당된 isrc값 확인
             console.log(isrc);
 
+            // 5. 타겟 이미지에 src값 변경하기!
+
+            // 속성에 직접 접근하여 값 변경하기
+            // tg.src = isrc;
+            // 선택요소의 속성중 src 속성에 값을 할당한다!
+
+            // 속성을 넣는 다른방법: JS내장함수 이용하기!
+            // -> setAttribute(속성명,속성값)
+            tg.setAttribute("src",isrc);
+
+            // 속성 읽어오기 JS내장함수는
+            // getAttribute(속성명)
+
 
 
         } //////// chgImg 함수 /////////////////////
