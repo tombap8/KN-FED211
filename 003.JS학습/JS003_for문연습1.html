@@ -36,8 +36,22 @@
             함수명: insMini
             기능: 미니언즈 이미지를 파란박스에 넣기
         */ ////////////////////////////////////////
-        function insMini() {
-            
+        function insMini(num) {
+            // num - 함수호출 시 보낸 숫자 받는 전달변수
+
+            // 1. 함수호출,전달값 확인
+            console.log("미니언즈 들어가!" + num);
+
+            // 2. 대상선정: .Bcase
+            var tg = document.querySelector(".Bcase");
+
+            // 3. 대상에 이미지 넣기
+            for (var i = 0; i < num; i++) {
+
+                tg.innerHTML += '<img src="./images/Minions.png" alt="미니언즈">';
+
+            } /////// for문 //////////////////
+
 
 
         } ////////// insMini 함수 /////////////////
@@ -47,8 +61,8 @@
 
 <body>
     <h1>for문 연습1 - 파란상자에 미니언즈 집어넣기</h1>
-    <img src="./images/Minions.png" alt="미니언즈" class="mini" title="나를 클릭하면 한개씩 가방에 들어갈꼬얌~!" onclick="insMini()">
-    <img src="./images/Minions.png" alt="미니언즈" class="mini" title="나를 클릭하면 열개씩 가방에 들어갈꼬얌~!" onclick="insMini()">
+    <img src="./images/Minions.png" alt="미니언즈" class="mini" title="나를 클릭하면 한개씩 가방에 들어갈꼬얌~!" onclick="insMini(1)">
+    <img src="./images/Minions.png" alt="미니언즈" class="mini" title="나를 클릭하면 열개씩 가방에 들어갈꼬얌~!" onclick="insMini(10)">
     <!-- 파란상자 -->
     <div class="Bcase"></div>
 
