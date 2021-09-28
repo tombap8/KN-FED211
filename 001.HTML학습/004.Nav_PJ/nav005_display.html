@@ -75,20 +75,18 @@
             left: 100%;/* 오른쪽바깥으로 밀어냄 */
             width: 200px;
             background-color: #92c1ff;
-            height: 0;
-            overflow: hidden;
+            /* height: 0;
+            overflow: hidden; */
+            display: none;
+            /* 유형변경4 : display속성활용 */
 
             /* 트랜지션: 속시이지 */
-            transition: height .4s ease-out;
+            /* transition: height .4s ease-out; */
         }
         /* 상위메뉴 li에 마우스 오버시 하위메뉴 보이기 */
-        /* 두번째 메뉴 */
-        .gnb>ul>li:nth-child(2):hover .smenu{
-            height: 200px;
-        }
-        /* 세번째 메뉴 */
-        .gnb>ul>li:nth-child(3):hover .smenu{
-            height: 100px;
+        /* diplay:block으로 오버시 보이기 */
+        .gnb>ul>li:hover .smenu{
+            display: block;
         }
 
         /* 상위메뉴 오버시 하위메뉴 a 글자색,배경색 */
