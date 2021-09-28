@@ -34,9 +34,37 @@
             Cannot set properties of null 
             (setting 'innerText')
         */
+       // html 요소 모두 로딩 후 실행하면 에러 안남!
+       // 로딩구역 만들자!
+       // 로딩관련 이벤트 2가지!
+       // 1. load -> 이미지나 동영상까지 모두 로딩후 발생
+       // 2. DOMContentLoaded -> html태그가 모두 로딩되면 발생
+       // 2번 이벤트가 더 속도가 빠른장점이 있음
+
+       /// 이벤트 등록 JS 내장함수 ///////////
+    //    addEventListener(이벤트명,함수)
+    //    -> 특정이벤트와 함수를 연결해주는 JS내장함수
+
+    // 전체 페이지 객체는 window
+    // 이름없는 코드 저장함수 -> 익명함수 -> function(){}
+    // function(){}
+    // 줄여쓰면 ()=>{} 화살표함수
+    
+    // 로딩구역 /////////////////////////////////
+    // window.addEventListener("load",function(){
+    window.addEventListener("DOMContentLoaded",function(){
+        // 이벤트 발생시 함수구역의 코드가 실행된다!
+
+        // 로드확인
+        console.log("로딩완료!");
 
         var txt1 = document.getElementById("txt1");
         txt1.innerText = "나야나";
+
+    }); /////////////// load ///////////////////////
+    ////////////////////////////////////////////////
+
+
 
     </script>
 </head>
@@ -49,7 +77,6 @@
     <div id="txt4"></div>
     <div id="txt5"></div>
     <div id="txt6"></div>
-
 
 </body>
 
