@@ -34,6 +34,8 @@
             margin: 0 auto;/* 마영오! */
         }
         .gnb>ul>li {
+            position: relative;
+            /* 유형변경3 : 부모자격 - .smenu */
             width: 200px;
             text-align: center;
             outline: 2px dashed red;
@@ -67,15 +69,18 @@
 
         /* 서브메뉴 */
         .smenu{
-            /* position: absolute; */
-            /* 유형변경3 : 포지션을 static으로! */
+            position: absolute;
+            /* 유형변경3 : top,left위치설정+싸고있는 li부모자격 */
+            top: 0;
+            left: 100%;/* 오른쪽바깥으로 밀어냄 */
             width: 200px;
             background-color: #92c1ff;
             height: 0;
             overflow: hidden;
 
             /* 트랜지션: 속시이지 */
-            transition: height .4s ease-out;
+            /* transition: height .4s ease-out; */
+            /* 유형변경4 - 옵션에 따라 트랜지션이 없는 유형이 많다 */
         }
         /* 상위메뉴 li에 마우스 오버시 하위메뉴 보이기 */
         /* 두번째 메뉴 */
