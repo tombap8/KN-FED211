@@ -24,6 +24,19 @@
     <script>
         
 
+        // JS는 코드가 만나는 순간 바로실행됨
+        // 따라서 html body 상단에 코딩된 JS는
+        // body내부의요소들이 로딩전에 실행됨
+        // 그래서 에러가 남!
+        /* 
+            예컨데
+            JS004.html:33 Uncaught TypeError: 
+            Cannot set properties of null 
+            (setting 'innerText')
+        */
+
+        var txt1 = document.getElementById("txt1");
+        txt1.innerText = "나야나";
 
     </script>
 </head>
