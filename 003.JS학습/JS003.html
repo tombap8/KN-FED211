@@ -206,56 +206,96 @@
          */ ///////////////////////////////////////////////
          function local() {
 
-            // 1. 함수호출여부확인!
-            console.log("국번안내서비스!");
+             // 1. 함수호출여부확인!
+             console.log("국번안내서비스!");
 
-            // 2. 읽어올 대상 : input#local
-            var tg = document.querySelector("#local");
+             // 2. 읽어올 대상 : input#local
+             var tg = document.querySelector("#local");
 
-            // 3. 입력값 읽어오기
-            var txt = tg.value;
-            // value - input요소의 값을 읽어오는 속성!
-            // <input type="text" value="출력값">
-            // value라는 속성이 아예 존재한다!!!
-            console.log("입력된 지역명:"+txt);
+             // 3. 입력값 읽어오기
+             var txt = tg.value;
+             // value - input요소의 값을 읽어오는 속성!
+             // <input type="text" value="출력값">
+             // value라는 속성이 아예 존재한다!!!
+             console.log("입력된 지역명:" + txt);
 
-            // 4. 지역명을 switch case문으로 분류하여 메시지 넣기
+             // 4. 지역명을 switch case문으로 분류하여 메시지 넣기
 
-            // 메시지 변수
-            var msg;// 선언만, 할당은 제어문에서!
+             // 메시지 변수
+             var msg; // 선언만, 할당은 제어문에서!
 
-            switch(txt){
-                case "서울": msg = "02"; break;
-                case "경기": msg = "031"; break;
-                case "인천": msg = "032"; break;
-                case "부산": msg = "051"; break;
-                case "대구": msg = "053"; break;
-                case "광주": msg = "062"; break;
-                case "전북": msg = "063"; break;
-                case "전남": msg = "061"; break;
-                case "경북": msg = "054"; break;
-                case "경남": msg = "055"; break;
-                case "세종": msg = "044"; break;
-                case "울산": msg = "052"; break;
-                case "대전": msg = "042"; break;
-                case "강원": msg = "033"; break;
-                case "충북": msg = "043"; break;
-                case "충남": msg = "041"; break;
-                case "제주": msg = "064"; break;
-                default: msg = "esc";
-            } /////// switch case /////////
+             switch (txt) {
+                 case "서울":
+                     msg = "02";
+                     break;
+                 case "경기":
+                     msg = "031";
+                     break;
+                 case "인천":
+                     msg = "032";
+                     break;
+                 case "부산":
+                     msg = "051";
+                     break;
+                 case "대구":
+                     msg = "053";
+                     break;
+                 case "광주":
+                     msg = "062";
+                     break;
+                 case "전북":
+                     msg = "063";
+                     break;
+                 case "전남":
+                     msg = "061";
+                     break;
+                 case "경북":
+                     msg = "054";
+                     break;
+                 case "경남":
+                     msg = "055";
+                     break;
+                 case "세종":
+                     msg = "044";
+                     break;
+                 case "울산":
+                     msg = "052";
+                     break;
+                 case "대전":
+                     msg = "042";
+                     break;
+                 case "강원":
+                     msg = "033";
+                     break;
+                 case "충북":
+                     msg = "043";
+                     break;
+                 case "충남":
+                     msg = "041";
+                     break;
+                 case "제주":
+                     msg = "064";
+                     break;
+                 default:
+                     msg = "esc";
+             } /////// switch case /////////
 
-            // 5. 메시지 만들기
-            // msg변수에 최종 출력내용을 다시 담아서 변경함
-            if(msg === "esc"){
-                msg = "등록되지 않는 지역입니다!";
-            } ////// if /////////////
-            else{
-                msg = txt + "의 지역번호는 " + msg + "입니다.";
-            } ////// else ////////////
+             // 5. 메시지 만들기
+             // msg변수에 최종 출력내용을 다시 담아서 변경함
+             if (msg === "esc") {
+                 msg = "등록되지 않는 지역입니다!";
+             } ////// if /////////////
+             else {
+                 msg = txt + "의 지역번호는 " + msg + "입니다.";
+             } ////// else ////////////
 
-            // 메시지 확인
-            console.log("메시지:"+msg);
+             // 메시지 확인
+             console.log("메시지:" + msg);
+
+             // 6. 메시지 화면출력
+             // 출력대상 : #info
+             var info = document.querySelector("#info");
+             info.innerText = msg;
 
          } ////////// local 함수 //////////////////////////
          //////////////////////////////////////////////////
@@ -285,7 +325,6 @@
             - default에는 break문을 쓰지 않는다!
          
          */
-
      </script>
      <style>
          /* 칭찬스티커 */
