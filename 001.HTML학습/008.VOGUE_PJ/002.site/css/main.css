@@ -19,6 +19,9 @@
     height: 206px;
 }
 /* 2. 메인영역 */
+.cont>div{
+    outline: 2px dashed red;
+}
 /* 파트타입1 - 이미지1개 */
 .pt1{
     height: 724px;
