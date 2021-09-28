@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +9,35 @@
     <link href="https://fonts.googleapis.com/css?family=Audiowide&amp;display=swap" rel="stylesheet">
     <style>
         /* 타이틀 */
-        .tit{
+        .tit {
             text-align: center;
             font: bold 72px/100px 'Audiowide';
         }
+
         /* 스틸컷장면박스 */
-        .photo{
+        .photo {
             text-align: center;
             /* 인라인요소 가로중앙정렬 */
             background-color: skyblue;
             padding: 20px;
             margin-bottom: 50px;
         }
+
         /* 메인이미지 */
-        #scene{
+        #scene {
             height: 290px;
             /* width는 비율에 맞게 자동임! */
         }
+
         /* 선택버튼박스 */
-        .btnbx{
+        .btnbx {
             text-align: center;
             /* 버튼요소는 인라인블록이지만 
             인라인특성이 있으므로 글자중앙정렬적용됨! */
         }
+
         /* 버튼공통 */
-        .btns{
+        .btns {
             font-size: 42px;
         }
     </style>
@@ -41,20 +46,31 @@
         /*/////////////////////////////////////////
             함수명: chgImg
             기능: 버튼 클릭시 해당 이미지변경하기
-        *//////////////////////////////////////////
-        function chgImg(txt){//txt - 버튼글자
-            // 함수 소괄호에 변수를 하나쓰면
-            // 하나의 전달값을 받는다는 의미!
-            // 만약 chgImg(a,b,c,d) -> 변수개수만큼!
-            // 전달값 변수는 var 로 선언 안한다!
-            // 여러개를 쓸때는 콤마로 구분
-            // 전달변수 === 파라미터변수 로 부른다!
+        */ /////////////////////////////////////////
+        function chgImg(U) { 
+            // U - 버튼자신을 보낸값을 받는 전달변수
+            // 함수호출시 chgImg(this)의 this는 함수와
+            // 연결된 요소 자신을 말한다!
+
+            // 버튼 텍스트 읽어오기
+            var txt = U.innerText;
+            // innerText는 선택요소의 내부글자데이터를 읽어옴
+            // innerText를 이퀄 왼쪽에 쓰면 할당, 오른쪽에 쓰면 읽어오기
+
 
 
         } //////// chgImg 함수 /////////////////////
         ////////////////////////////////////////////
+
+        // 함수 소괄호에 변수를 하나쓰면
+        // 하나의 전달값을 받는다는 의미!
+        // 만약 chgImg(a,b,c,d) -> 변수개수만큼!
+        // 전달값 변수는 var 로 선언 안한다!
+        // 여러개를 쓸때는 콤마로 구분
+        // 전달변수 === 파라미터변수 로 부른다!
     </script>
 </head>
+
 <body>
     <!-- 전체 타이틀 -->
     <h1 class="tit">All New Aladin</h1>
@@ -78,6 +94,7 @@
         <button class="btns" onclick="">장면2</button>
         <button class="btns" onclick="">장면3</button>
     </div>
-    
+
 </body>
+
 </html>
