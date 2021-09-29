@@ -282,6 +282,21 @@
 
             }; ////////// GU 객체 //////////////
 
+            // GU객체 출력하기
+            // 출력대상: #txt5
+            var txt5 = document.getElementById("txt5");
+
+            // 줄간격 변경
+            txt5.style.lineHeight = "24px";
+
+            // 내용출력
+            txt5.innerHTML =
+            "저는 " + GU.name + "입니다.";
+
+            txt5.innerHTML +=
+            "몸무게는 비밀인데요 그래도 말씀드리자면 " +
+            GU.weight + "입니다. ㅎㅎㅎ<br>";
+
 
 
         }); /////////////// load ///////////////////////
