@@ -361,7 +361,7 @@
                     // 대상: body 끝에 추가! += 대입연산자 중요!!!
                     document.body.innerHTML += 
                     '<div id="mv">' +
-                    '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/lPYxbbKYYmE?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
+                    '<iframe width="100%" height="100%" src="https://www.youtube.com/embed/lPYxbbKYYmE?autoplay=1&loop=1&playlist=lPYxbbKYYmE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>' +
                     '<span class="cbtn">×</span>' +
                     '</div>';
 
@@ -373,6 +373,22 @@
                     mv.style.transform = "translate(-50%,-50%)";
                     mv.style.width = "700px";
                     mv.style.height = "450px";
+
+                    // 닫기버튼 셋팅
+                    var cbtn = document.querySelector(".cbtn");
+                    cbtn.style.position = "absolute";
+                    cbtn.style.top = "0";
+                    cbtn.style.right = "-70px";
+                    cbtn.style.width = "50px";
+                    cbtn.style.height = "50px";
+                    cbtn.style.backgroundColor = "blue";
+                    cbtn.style.textAlign = "center";
+                    cbtn.style.fontSize = "40px";
+                    cbtn.style.fontWeight = "bold";
+                    cbtn.style.color = "white";
+                    cbtn.style.borderRadius = "50%";
+                    cbtn.style.cursor = "pointer";
+                    cbtn.style.lineHeight = "40px";
 
 
 
