@@ -333,6 +333,39 @@
                 // \n 줄바꿈문자를 사용한다!
             }; /////// click이벤트 함수 ////////////
 
+            // 미션: #txt6는 객체를 만들어서 자유출력하시오!
+            // 자신이 영화를 선정하여 아래와 같은 항목으로
+            // 영화정보를 셋팅하시오.
+
+            // 변수명을 자신이 지어본다!
+            var myMovie = {
+                // 1. 영화제목
+                title: "미나리(Minari)",
+                // 2. 감독
+                director: "정이삭",
+                // 3. 배우
+                actors: "윤여정,한예리",
+                // 4. 장르
+                genre: "드라마",
+                // 5. 관람가
+                ratings:"12세관람가",
+                // 6. 예고편
+                trailer: function(){}
+
+            }; /////////// 영화정보 객체 ////////
+
+            // 화면출력
+            // 대상: #txt6
+            var txt6 = document.getElementById("txt6");
+            txt6.style.lineHeight = "34px"; // 줄간격조정
+
+            txt6.innerHTML = 
+            "▣영화명: " + myMovie.title +
+            "▣감독: " + myMovie.director +
+            "▣배우: " + myMovie.actors +
+            "<br>▣장르: " + myMovie.genre +
+            "▣등급: " + myMovie.ratings;
+
 
 
         }); /////////////// load ///////////////////////
