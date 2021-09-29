@@ -357,6 +357,13 @@
                 trailer: function () {
                     // 1. 호출확인
                     console.log("예고편!");
+                    // 2. 영화박스만들고 iframe 넣기
+                    // 대상: body 끝에 추가! += 대입연산자 중요!!!
+                    document.body.innerHTML += 
+                    '<div id="mv">' +
+                    '' +
+                    '<span class="cbtn">×</span>' +
+                    '</div>';
 
                 } //////// trailer 메서드 /////
 
