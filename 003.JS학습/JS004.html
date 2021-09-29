@@ -267,6 +267,10 @@
                 -> 변수형 속성 호출
                     객체명.속성명
                     예) obj.name 
+
+                    또는
+                    객체명["속성명"]
+                    예) obj["name"] -> 반드시 변수를 따옴표로!
             */
 
             var GU = {
@@ -360,11 +364,14 @@
             txt6.style.lineHeight = "34px"; // 줄간격조정
 
             txt6.innerHTML = 
-            "▣영화명: " + myMovie.title +
+            "▣영화명: " + myMovie["title"] +
             "▣감독: " + myMovie.director +
             "▣배우: " + myMovie.actors +
             "<br>▣장르: " + myMovie.genre +
             "▣등급: " + myMovie.ratings;
+
+            // 변수형 속성 객체의 호출시 
+            // 변수명.변수형속성명 또는 변수명["변수형속성명"]
 
 
 
