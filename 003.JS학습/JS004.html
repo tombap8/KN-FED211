@@ -148,13 +148,13 @@
 
             // 배열 개수만큼 for문을 돌려서 show변수에 할당한다!
             for (var i = 0; i < arr3.length; i++) {
-                
+
                 show += arr3[i];
 
                 // 배열의 마지막번호 -> arr3.length-1
                 // 항상 배열개수-1 이 마지막 배열번호다!!!
                 // 마지막 번호일때 아래 코드를 실행하지 말아라!
-                if(i === arr3.length-1) break;
+                if (i === arr3.length - 1) break;
                 // break 키워드를 만나면 제어문을 빠져나간다!
                 // 결과적으로 아래의 별넣는 문장이 실행안됨!
 
@@ -199,18 +199,18 @@
             */
 
             var SHK = new Object({
-                "너의 이름은?":"김수현",
-                "생일":"1988년 2월 16일",
-                "키":"180cm",
-                "몸무게":"65kg",
-                "성별":"남자",
-                "비밀번호":7777,
-                "팬레터":function(){
+                "너의 이름은?": "김수현",
+                "생일": "1988년 2월 16일",
+                "키": "180cm",
+                "몸무게": "65kg",
+                "성별": "남자",
+                "비밀번호": 7777,
+                "팬레터": function () {
                     // 1. 메시지 띄우기
                     alert("오빠, 지금뭐해?");
                     // 2. 배경이미지 출력박스에 넣기
                     txt4.style.background =
-                    "url(./images/shk.jpg) repeat-x top/auto 100%";
+                        "url(./images/shk.jpg) repeat-x top/auto 100%";
                     // 3. 글자색 흰색
                     txt4.style.color = "#fff";
                     // 4. 글자그림자
@@ -232,13 +232,13 @@
 
             txt4.innerHTML =
                 "당신이 좋아하는 남자배우는? " + SHK["너의 이름은?"];
-            
+
             txt4.innerHTML +=
                 " / 몸무게를 아세요? " + SHK["몸무게"];
 
             // 객체에 셋팅된 함수를 보통 "메서드"라고 부른다.
             // 이 메서드를 호출해 보자!
-            txt4.onclick = function(){
+            txt4.onclick = function () {
                 SHK["팬레터"]();
                 // 함수호출시 반드시 소괄호 필수!!!
             }; ///// click이벤트 함수 ////////////
@@ -274,22 +274,22 @@
             */
 
             var GU = {
-                name:"공유",
-                tall:"184cm",
-                weight:"74kg",
-                com:"매니지먼트 숲",
+                name: "공유",
+                tall: "184cm",
+                weight: "74kg",
+                com: "매니지먼트 숲",
                 work: "도깨비,부산행",
-                msg:function(txt){ // txt는 전달변수
+                msg: function (txt) { // txt는 전달변수
                     // 1. 메시지 띄우기
-                    alert("팬레터: "+txt);
+                    alert("팬레터: " + txt);
                     // 2. 공유 이미지 배경넣기
                     txt5.style.background =
-                    "url(./images/gu.png) repeat-x top/auto 100%";
+                        "url(./images/gu.png) repeat-x top/auto 100%";
                     // 3. 글자색변경
                     txt5.style.color = "#fff";
                     // 4. 글자테두리(글자그림자를 이용한 테두리)
                     txt5.style.textShadow =
-                    "2px 0 #000,-2px 0 #000,0 2px #000,0 -2px #000";
+                        "2px 0 #000,-2px 0 #000,0 2px #000,0 -2px #000";
                     // 5. 높이값 변경
                     txt5.style.height = "100px";
                     // 6. 트랜지션
@@ -311,27 +311,27 @@
 
             // 내용출력
             txt5.innerHTML =
-            "저는 " + GU.name + "입니다.";
+                "저는 " + GU.name + "입니다.";
 
             txt5.innerHTML +=
-            "몸무게는 비밀인데요 그래도 말씀드리자면 " +
-            GU.weight + "입니다. ㅎㅎㅎ<br>";
+                "몸무게는 비밀인데요 그래도 말씀드리자면 " +
+                GU.weight + "입니다. ㅎㅎㅎ<br>";
 
             txt5.innerHTML +=
-            "제 대표작은 " + GU.work + "입니다.<br>";
+                "제 대표작은 " + GU.work + "입니다.<br>";
 
             txt5.innerHTML +=
-            "제 소속사는 잘 모르시는 분들이 많은데 " +
-            GU.com + "입니다. 빠이빠이~!";
+                "제 소속사는 잘 모르시는 분들이 많은데 " +
+                GU.com + "입니다. 빠이빠이~!";
 
             // 공유박스 마우스 오버시 툴팁보이기
             // 속성넣기의 2가지 방법: .속성명=값 or setAttribute()
-            txt5.setAttribute("title","공유의 펜레터를 확인하세요! 바로클릭!");
+            txt5.setAttribute("title", "공유의 펜레터를 확인하세요! 바로클릭!");
             // 오버시 손가락모양
             txt5.style.cursor = "pointer";
 
             // 공유박스 클릭시 GU객체의 메서드 호출하기!
-            txt5.onclick = function(){
+            txt5.onclick = function () {
                 GU.msg("\n공유오빠, 서복에서도 멋쩠어요! \n차기작도 기대해요! 화이팅!!!");
                 // alert창은 html태그를 사용할 수 없고 줄바꿈은
                 // \n 줄바꿈문자를 사용한다!
@@ -352,9 +352,9 @@
                 // 4. 장르
                 genre: "드라마",
                 // 5. 관람가
-                ratings:"12세관람가",
+                ratings: "12세관람가",
                 // 6. 예고편
-                trailer: function(){
+                trailer: function () {
                     // 1. 호출확인
                     console.log("예고편!");
 
@@ -367,19 +367,26 @@
             var txt6 = document.getElementById("txt6");
             txt6.style.lineHeight = "34px"; // 줄간격조정
 
-            txt6.innerHTML = 
-            "▣영화명: " + myMovie["title"] +
-            "▣감독: " + myMovie.director +
-            "▣배우: " + myMovie.actors +
-            "<br>▣장르: " + myMovie.genre +
-            "▣등급: " + myMovie.ratings;
+            txt6.innerHTML =
+                "▣영화명: " + myMovie["title"] +
+                "▣감독: " + myMovie.director +
+                "▣배우: " + myMovie.actors +
+                "<br>▣장르: " + myMovie.genre +
+                "▣등급: " + myMovie.ratings;
 
             // 변수형 속성 객체의 호출시 
             // 변수명.변수형속성명 또는 변수명["변수형속성명"]
 
             // 마우스 오버시 툴팁과 손가락모양 셋팅
-            txt6.title = "클릭하시면 "+myMovie.name+"예고편을 보실 수 있습니다!";
+            txt6.title = "클릭하시면 " + myMovie.title + 
+            "예고편을 보실 수 있습니다!";
             txt6.style.cursor = "pointer";
+
+            // 트레일러 함수 호출하기
+            // #txt6를 클릭시
+            txt6.onclick = function(){
+
+            }; ////// click 이벤트 함수 ///////
 
 
 
