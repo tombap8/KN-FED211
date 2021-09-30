@@ -32,7 +32,20 @@
 .bg5{
     background-image: url(../images/cont3a.jpg);
 }
-
+/* 4번 컨텐츠 3개 */
+.bg6{
+    background-image: url(../images/cont4-1.jpg);
+}
+.bg7{
+    background-image: url(../images/cont4-2.jpg);
+}
+.bg8{
+    background-image: url(../images/cont4-3.jpg);
+}
+/* 5번 컨텐츠 */
+.bg9{
+    background-image: url(../images/cont5a.jpg);
+}
 
 
 
