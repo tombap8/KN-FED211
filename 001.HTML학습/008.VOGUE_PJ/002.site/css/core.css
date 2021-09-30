@@ -40,3 +40,17 @@
     right: 0;
     left: 0;
 }
+
+/* 컨텐츠 박스 - 실제 내용이 들어가는 박스 */
+.cbx {
+    height: 100%;
+    /* 부모박스를 채움 */
+}
+
+/* 배경이미지 공통 */
+.bgi {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+

@@ -5,14 +5,23 @@
 @import url(reset.css);
 @import url(core.css);
 
-/* 1. 상단영역 */
+/**************** 1. 상단영역 *****************/
 .top{
     height: 206px;
 }
-/* 2. 메인영역 */
+/*************** 2. 메인영역 ******************/
 .cont>div{
     outline: 2px dashed red;
 }
+
+/* 1번 컨텐츠 */
+.bg1{
+    background-image: url(../images/cont1a.jpg);
+}
+
+
+
+
 /* 파트타입1 - 이미지1개 */
 .pt1{
     /* height: 724px; */
@@ -21,7 +30,7 @@
 .pt2{
     height: 650px;
 }
-/* 3. 하단영역 */
+/***************** 3. 하단영역 *********************/
 .info{
     height: 285px;
 }
