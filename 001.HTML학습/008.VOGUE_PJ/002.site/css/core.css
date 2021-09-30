@@ -11,3 +11,32 @@
     작으면 auto로 width를 유지함! */
     outline: 3px dotted blue;
 }
+/* 비율유지박스 */
+.rbx {
+    position: relative;
+    /* 부모자격 - .rbxIn */
+    outline: 2px dotted orange;
+}
+/* 비율밀기 가상요소 */
+.rbx::before {
+    content: '';
+    display: block;
+    /* padding-top비율은 각 클래스와 연결한다! */
+}
+/* 스타일별 비율밀기 */
+/* 이미지 하나짜리 */
+.pt1.rbx::before{
+    padding-top: 50%;
+}
+/* 이미지 세개짜리 */
+.pt2.rbx::before{
+    padding-top: 60%;
+}
+/* 비율박스 속박스 */
+.rbxIn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
