@@ -3,17 +3,8 @@
 
 /* 외부CSS 합치기 */
 @import url(reset.css);
+@import url(core.css);
 
-/* 공통 class */
-
-/* 속박스 */
-.ibx{
-    max-width: 1300px;
-    margin: 0 auto;
-    /* 1300px보다 크면 중앙정렬
-    작으면 auto로 width를 유지함! */
-    outline: 3px dotted blue;
-}
 /* 1. 상단영역 */
 .top{
     height: 206px;
