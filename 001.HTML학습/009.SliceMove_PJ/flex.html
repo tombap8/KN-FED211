@@ -249,6 +249,14 @@
             justify-content: space-between;
             /* 사이간격 일정 */
         }
+        /* 줄바꿈할 곳에 li를 넣고 flex-basis를 100%로
+        줄바꿈역할을 해준다. 단, 안보이게 처리할것! */
+        .tit .brk{
+            flex-basis: 100%;
+            /* width를 100% 준 효과와 동일 */
+            height: 0;
+            border: none;
+        }
 
     </style>
 </head>
@@ -326,6 +334,7 @@
             <li>T</li>
             <li>T</li>
             <li>E</li>
+            <li class="brk"></li>
             <li>W</li>
             <li>O</li>
             <li>R</li>
