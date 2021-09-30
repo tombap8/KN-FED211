@@ -20,9 +20,50 @@
         }
         /* 전체부모 */
         #wrap{
-            
+            height: 100%;
+            /* 화면채우기 */
         }
         
+        /* ul 파티션 부모박스 */
+        #wrap>ul{
+            display: flex;
+            /* 
+                [ flex 란? ]
+                - 가변적인 자식요소를 컨트롤 하기 위해 CSS3에서 새롭게 선보인 display 기술
+                - 자식요소를 같은 비율 혹은 다른비율로 분할이 쉽다
+                - 자식요소의 순서를 일괄적으로 변경할 수 있다
+                - 무엇보다도 블록요소를 옆으로 흐르게 하는데 탁월하다!
+                [ 셋팅법 ]
+                - 옆으로 흐르게 할 요소의 부모요소에 
+                display: flex 로 설정함
+                - 자식요소의 flax: 1 로 설정하면 등분할 된다!
+            
+            */
+            height: 100%;
+            /* 화면채우기 */
+        }
+
+        /* li공통 */
+        #wrap>ul>li{
+            flex: 1;
+        }
+
+        /* 각 파티션 li */
+        #wrap>ul>li:nth-child(1) {
+            background: url(./images/m01_bg.jpg) no-repeat center/cover;
+        }
+        #wrap>ul>li:nth-child(2) {
+            background: url(./images/m02_bg.jpg) no-repeat center/cover;
+        }
+        #wrap>ul>li:nth-child(3) {
+            background: url(./images/m03_bg.jpg) no-repeat center/cover;
+        }
+        #wrap>ul>li:nth-child(4) {
+            background: url(./images/m04_bg.jpg) no-repeat center/cover;
+        }
+        #wrap>ul>li:nth-child(5) {
+            background: url(./images/m05_bg.jpg) no-repeat center/cover;
+        }
     </style>
 </head>
 <body>
