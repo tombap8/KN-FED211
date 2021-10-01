@@ -58,6 +58,10 @@
         .abtn button{
             font-size: 1.5rem;
         }
+        /* 처음에 멈춤버튼 안보이기 */
+        .end {
+            display: none;
+        }
 
     </style>
     <script>
@@ -183,7 +187,36 @@
 
                 // 자동넘김 버튼대상: .abtn
                 var abtn = document.querySelectorAll(".abtn button");
-                console.log("자동버튼:"+abtn);
+                console.log("자동버튼:"+abtn.length);
+
+                // 자동넘김 버튼 클릭시
+                abtn[0].onclick = function(){
+                    // 호출확인!
+                    console.log("자동넘김!");
+                }; ////// click 이벤트 함수 ///////////
+                //////////////////////////////////////
+
+
+
+                /* 
+                    [ JS 타이밍 함수 : Timing function ]
+
+                    1. setInterval(함수,시간)
+                    - 일정시간 간격으로 함수를 호출!
+                    - 시간은 1/1000초임, 단위없음 (예:1000->1초)
+                    -> 인터발함수를 지울때는 변수에 담고 
+                    아래 함수를 호출한다!
+                    -> clearInterval(변수)
+
+                    2. setTimeout(함수,시간)
+                    - 일정시간 후 한번만 함수를 호출함!
+                    - 시간: 1/1000초, 단위없음
+                    -> 타임아웃함수를 지울때는 변수에 담고
+                    아래 함수를 호출한다!
+                    -> clearTimeout(변수)
+                
+                
+                */
 
 
 
