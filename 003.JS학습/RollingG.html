@@ -45,24 +45,25 @@
         }
 
         /* 이미지텍스트 출력박스 */
-        .imgtxt{
+        .imgtxt {
             text-align: center;
             color: red;
             text-shadow: 1px 1px 1px #777;
         }
 
         /* 자동넘김 버튼박스 */
-        .abtn{
+        .abtn {
             text-align: center;
         }
-        .abtn button{
+
+        .abtn button {
             font-size: 1.5rem;
         }
+
         /* 처음에 멈춤버튼 안보이기 */
         .end {
             display: none;
         }
-
     </style>
     <script>
         /// 전역변수구역 ////////
@@ -80,8 +81,8 @@
         ];
         // 3.이미지 설명 글자색
         var tcolor = [
-            "red","orange","yellow","green",
-            "blue","navy","purple"
+            "red", "orange", "yellow", "green",
+            "blue", "navy", "purple"
         ];
 
 
@@ -110,17 +111,9 @@
                 btn[1].onclick = function () {
                     // 1. 호출확인
                     console.log("나,오른쪽!");
-                   
-                    // 2. 이미지 전역변수 읽어와서 변경하기!
-                    // 전역변수 num 1씩증가하기
-                    num++;
-                    if (num > 7) num = 1;
-                    // 한계값 7초과이면 처음번호로 변경하기!
 
-                    console.log("전역변수num:" + num);
-
-                    // 3. 변경함수 호출!
-                    chgImg();
+                    // 2. 변경함수 호출!
+                    chgImg(1);
 
 
                 }; ///////////// click함수 //////////
@@ -131,7 +124,7 @@
                     // 1. 호출확인
                     console.log("나,왼쪽!");
 
-                 
+
                     // 2. 이미지 전역변수 읽어와서 변경하기!
                     // 전역변수 num 1씩감소하기
                     num--;
@@ -141,7 +134,7 @@
                     console.log("전역변수num:" + num);
 
                     // 3. 변경함수 호출
-                    chgImg();
+                    chgImg(0);
 
                 }; ///////////// click함수 //////////
 
@@ -157,24 +150,42 @@
                     기능: 이미지의 src를 변경한다!
                     -> 할당형 익명함수!
                 */ ///////////////////////////////////////
-                var chgImg = function () {
+                var chgImg = function (dir) {
+                    // dir - 방향구분 전달변수(1-오른쪽,0-왼쪽)
 
                     // 호출확인!
-                    console.log("이미지변경함수!");
+                    console.log("이미지변경함수!" + dir);
+
+                    /// 오른쪽 왼쪽버튼 분기! ///////////////////
+                    // dir===1 오른쪽 //////////////////////////
+                    if (dir) { /// 값1은 true와 같다!
+                        // 2. 이미지 전역변수 읽어와서 변경하기!
+                        // 전역변수 num 1씩증가하기
+                        num++;
+                        if (num > 7) num = 1;
+                        // 한계값 7초과이면 처음번호로 변경하기!
+
+                        console.log("전역변수num:" + num);
+                    } //////////// if문 ////////////////////////
+                    //// 왼쪽은 dir===0 그런데 else로 처리!
+                    else{
+                        
+                    } /////////// else문 ///////////////////////
+
 
                     // 1. 변경내용: 대상이미지의 src속성을 변경
                     // 변경규칙: 현재이미지 번호+1(단,7번이후는 1번으로)
                     tg.src = "./images/img" + num + ".jpg";
 
                     // 2. 이미지텍스트 변경하기
-                    itxt.innerText = txt[num-1];
+                    itxt.innerText = txt[num - 1];
                     // 대상: .imgtxt -> itxt변수에 담김!
                     // 변경할 내용은 txt 배열변수에 담김!
                     // 배열번호는 이미지번호인 num보다 1작다!
                     // txt[num-1] -> 해당배열번호임!
 
                     // 3. 이미지 텍스트 글자색 변경하기
-                    itxt.style.color = tcolor[num-1];
+                    itxt.style.color = tcolor[num - 1];
                     // 대상: .imgtxt -> itxt변수
                     // 변경은 style.color로 변경하자!
                     // 변경값은 tcolor배열변수에 있음!
@@ -187,21 +198,21 @@
 
                 // 자동넘김 버튼대상: .abtn
                 var abtn = document.querySelectorAll(".abtn button");
-                console.log("자동버튼:"+abtn.length);
+                console.log("자동버튼:" + abtn.length);
 
                 // 자동넘김 버튼 클릭시
-                abtn[0].onclick = function(){
+                abtn[0].onclick = function () {
                     // 호출확인!
                     console.log("자동넘김!");
 
                     // 1. 인터발함수로 이미지넘김함수 호출!
-                    setInterval(function(){
+                    setInterval(function () {
                         // num 1씩증가, 한계수체크
                         num++;
-                        if(num>7) num=1;
+                        if (num > 7) num = 1;
                         // 이미지넘김함수
                         chgImg();
-                    },3000);
+                    }, 3000);
 
                     // 2. 멈춤버튼 보이기
                     abtn[1].style.display = "inline-block";
