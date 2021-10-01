@@ -50,7 +50,7 @@
             color: red;
             text-shadow: 1px 1px 1px #777;
         }
-        
+
     </style>
     <script>
         /// 전역변수구역 ////////
@@ -132,6 +132,9 @@
                 var tg = document.querySelector("#mbox img");
                 // 한번만 변수에 할당하여 재사용한다!
 
+                // 공통 이미지 텍스트 변경대상: .imgtxt
+                var itxt = document.querySelector(".imgtxt");
+
                 /*///////////////////////////////////////
                     함수명: chgImg
                     기능: 이미지의 src를 변경한다!
@@ -145,6 +148,14 @@
                     // 1. 변경내용: 대상이미지의 src속성을 변경
                     // 변경규칙: 현재이미지 번호+1(단,7번이후는 1번으로)
                     tg.src = "./images/img" + num + ".jpg";
+
+                    // 2. 이미지텍스트 변경하기
+                    itxt.innerText = txt[num-1];
+                    // 대상: .imgtxt -> itxt변수에 담김!
+                    // 변경할 내용은 txt 배열변수에 담김!
+                    // 배열번호는 이미지번호인 num보다 1작다!
+                    // txt[num-1] -> 해당배열번호임!
+
 
                 }; ///////// chgImg 함수 /////////////////
                 //////////////////////////////////////////
