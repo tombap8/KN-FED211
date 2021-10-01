@@ -197,18 +197,23 @@
                 var abtn = document.querySelectorAll(".abtn button");
                 console.log("자동버튼:" + abtn.length);
 
+                // 인터발용 변수
+                var autoI;
+                // 두 자동넘김,멈춤 버튼에서 참조함!
+
                 // 자동넘김 버튼 클릭시
                 abtn[0].onclick = function () {
                     // 호출확인!
                     console.log("자동넘김!");
 
                     // 1. 인터발함수로 이미지넘김함수 호출!
-                    setInterval(function(){
+                    autoI = setInterval(function(){
                         // 방법1: 이미지넘김함수 호출
                         chgImg(1);// 오른쪽으로 넘김
 
                         // 방법2: 오른쪽버튼 클릭이벤트 발생
                         //btn[1].click();
+                        // 선택요소.click() 클릭이벤트 강제발생!
 
                     }, 3000);
 
@@ -217,10 +222,25 @@
 
                     // 3. 자기자신(자동넘김버튼) 숨기기
                     this.style.display = "none";
+                    // this 키워드는 이벤트 설된 요소 자신
 
 
                 }; ////// click 이벤트 함수 ///////////
                 //////////////////////////////////////
+
+                /// 멈춤버튼 클릭시 //////////
+                abtn[1].onclick = function(){
+                    // 호출확인
+                    console.log("멈춤버튼!");
+
+                    // 1. 인터발지우기
+                    clearInterval(autoI);
+                    // clearInterval(변수) 사용!
+                    // 주의사항: setInterval() 함수를 변수에 할당!
+
+
+                }; /////// click 이벤트 함수 ////////////
+                ////////////////////////////////////////
 
 
 
