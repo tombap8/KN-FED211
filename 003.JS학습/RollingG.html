@@ -51,6 +51,14 @@
             text-shadow: 1px 1px 1px #777;
         }
 
+        /* 자동넘김 버튼박스 */
+        .abtn{
+            text-align: center;
+        }
+        .abtn button{
+            font-size: 1.5rem;
+        }
+
     </style>
     <script>
         /// 전역변수구역 ////////
@@ -173,6 +181,10 @@
                 }; ///////// chgImg 함수 /////////////////
                 //////////////////////////////////////////
 
+                // 자동넘김 버튼대상: .abtn
+                var abtn = document.querySelectorAll(".abtn button");
+                console.log("자동버튼:"+abtn);
+
 
 
 
@@ -205,6 +217,12 @@
     <h2 class="imgtxt">
         노랑잉꼬가 먹이를 꼭꼭 찍어먹어요~
     </h2>
+
+    <!-- 자동넘김 버튼박스 -->
+    <div class="abtn">
+        <button class="start">자동넘김</button>
+        <button class="end">멈춤</button>
+    </div>
 
 </body>
 
