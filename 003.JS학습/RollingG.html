@@ -203,13 +203,7 @@
                     console.log("자동넘김!");
 
                     // 1. 인터발함수로 이미지넘김함수 호출!
-                    setInterval(function () {
-                        // num 1씩증가, 한계수체크
-                        num++;
-                        if (num > 7) num = 1;
-                        // 이미지넘김함수
-                        chgImg();
-                    }, 3000);
+                    setInterval("chgImg(1)", 3000);
 
                     // 2. 멈춤버튼 보이기
                     abtn[1].style.display = "inline-block";
