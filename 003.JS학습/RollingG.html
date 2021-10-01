@@ -203,7 +203,14 @@
                     console.log("자동넘김!");
 
                     // 1. 인터발함수로 이미지넘김함수 호출!
-                    setInterval("chgImg(1)", 3000);
+                    setInterval(function(){
+                        // 방법1: 이미지넘김함수 호출
+                        chgImg(1);// 오른쪽으로 넘김
+
+                        // 방법2: 오른쪽버튼 클릭이벤트 발생
+                        //btn[1].click();
+
+                    }, 3000);
 
                     // 2. 멈춤버튼 보이기
                     abtn[1].style.display = "inline-block";
