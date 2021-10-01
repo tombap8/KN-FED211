@@ -40,6 +40,20 @@
     </style>
     <script>
 
+        // 로드구역: html태그가 모두 그려진후실행구역
+        // -> DOMContentLoaded (비교: load이벤트)
+        // 이벤트연결 JS내장함수 
+        // -> addEventListener(이벤트명,함수)
+        // 전체창은 window
+        window.addEventListener("DOMContentLoaded",
+        function(){
+
+            // 로딩확인
+            console.log("로딩완료!");
+
+        }); ///////////// 로드구역 ///////////////////
+        /////////////////////////////////////////////
+
     </script>
 </head>
 <body>
@@ -60,6 +74,5 @@
             <img src="./images/right_btn.png" alt="오른쪽버튼">
         </a>
     </div>
-    
 </body>
 </html>
