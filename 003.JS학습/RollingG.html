@@ -34,13 +34,16 @@
             padding-top: 20px;
             /* outline: 2px dotted red; */
         }
+
         /* 미니언즈 */
-        #mini{
+        #mini {
             position: absolute;
-            top: 0;
-            left: 0;
+            top: 86%;/* 0으로! */
+            left: -100%;/* 0으로! */
             /* 부모는? #wrap */
             width: 150px;
+            transform: rotate(720deg);/* 0으로! */
+            transition: all 1.5s ease-out;
         }
 
         /* 메인이미지박스 */
@@ -224,7 +227,7 @@
                         // 방법2: 오른쪽버튼 클릭이벤트 발생
                         //btn[1].click();
                         // 선택요소.click() 클릭이벤트 강제발생!
-                        
+
                     }, 1000);
 
                     // 2. 멈춤버튼 보이기
