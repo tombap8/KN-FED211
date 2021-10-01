@@ -69,16 +69,14 @@
                 var btn = document.querySelectorAll(".btn");
                 console.log("버튼확인:" + btn.length);
 
-                // 오른쪽버튼 -> 두번째 컬렉션[1] -> 컬렉션은 배열아님
+                // 오른쪽버튼 -> 두번째 컬렉션[1] 
+                // -> 컬렉션은 배열아님
                 // btn.item(1)
                 btn[1].onclick = function () {
                     // 1. 호출확인
                     console.log("나,오른쪽!");
-
-                    // 2. 변경대상: #mbox img
-                    var tg = document.querySelector("#mbox img");
-
-                    // 3. 이미지 전역변수 읽어와서 변경하기!
+                   
+                    // 2. 이미지 전역변수 읽어와서 변경하기!
                     // 전역변수 num 1씩증가하기
                     num++;
                     if (num > 7) num = 1;
@@ -86,11 +84,8 @@
 
                     console.log("전역변수num:" + num);
 
-                    // 4. 변경내용: 대상이미지의 src속성을 변경
-                    // 변경규칙: 현재이미지 번호+1(단,7번이후는 1번으로)
-                    tg.src = "./images/img" + num + ".jpg";
-
-
+                    // 3. 변경함수 호출!
+                    chgImg();
 
 
                 }; ///////////// click함수 //////////
@@ -101,10 +96,8 @@
                     // 1. 호출확인
                     console.log("나,왼쪽!");
 
-                    // 2. 변경대상: #mbox img
-                    var tg = document.querySelector("#mbox img");
-
-                    // 3. 이미지 전역변수 읽어와서 변경하기!
+                 
+                    // 2. 이미지 전역변수 읽어와서 변경하기!
                     // 전역변수 num 1씩감소하기
                     num--;
                     if (num < 1) num = 7;
@@ -112,11 +105,8 @@
 
                     console.log("전역변수num:" + num);
 
-                    // 4. 변경내용: 대상이미지의 src속성을 변경
-                    // 변경규칙: 현재이미지 번호+1(단,7번이후는 1번으로)
-                    tg.src = "./images/img" + num + ".jpg";
-
-
+                    // 3. 변경함수 호출
+                    chgImg();
 
                 }; ///////////// click함수 //////////
 
@@ -137,7 +127,7 @@
                     // 1. 변경내용: 대상이미지의 src속성을 변경
                     // 변경규칙: 현재이미지 번호+1(단,7번이후는 1번으로)
                     tg.src = "./images/img" + num + ".jpg";
-                    
+
                 }; ///////// chgImg 함수 /////////////////
                 //////////////////////////////////////////
 
