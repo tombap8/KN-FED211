@@ -64,6 +64,16 @@
             btn[1].onclick = function(){
                 // 1. 호출확인
                 console.log("나,오른쪽!");
+
+                // 2. 변경대상: #mbox img
+                var tg = document.querySelector("#mbox img");
+
+                // 3. 변경내용: 대상이미지의 src속성을 변경
+                // 변경규칙: 현재이미지 번호+1(단,7번이후는 1번으로)
+                tg.src = "./images/img2.jpg";
+
+
+
             }; ///////////// click함수 //////////
 
             // 왼쪽버튼 -> 첫번째 컬렉션[0] -> 컬렉션은 배열아님
