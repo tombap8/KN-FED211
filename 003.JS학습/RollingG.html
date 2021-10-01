@@ -266,6 +266,23 @@
                 }; /////// click 이벤트 함수 ////////////
                 ////////////////////////////////////////
 
+                //// 일정시간뒤 미니언즈 이미지에 클래스 넣기 ! //
+                // 대상선정: #mini
+                var mini = document.querySelector("#mini");
+                setTimeout(() => {
+                    mini.classList.add("on");
+                }, 2000);
+
+                // 4초뒤 제거
+                setTimeout(() => {
+                    mini.classList.remove("on");
+                }, 4000);
+
+                // 6초뒤 toggle로 판단(없으면 넣고 있으면 빼고)
+                setTimeout(() => {
+                    mini.classList.toggle("on");
+                }, 6000);
+
 
 
                 /* 
@@ -284,6 +301,16 @@
                     -> 타임아웃함수를 지울때는 변수에 담고
                     아래 함수를 호출한다!
                     -> clearTimeout(변수)
+
+
+
+                    [ JS 클래스관련 내장함수 ]
+                    classList -> 클래스를 요소에 넣거나 
+                    빼기위한 속성을 지정해주는 내장속성
+                    (하위메서드)
+                    1. add(클래스명) : 클래스추가
+                    2. remove(클래스명) : 클래스제거
+                    3. toggle(클래스명) : 클래스있으면 넣고 없으면 제거
                 
                 */
 
