@@ -26,12 +26,16 @@
 
         /* 갤러리 부모박스 */
         #wrap {
+            position: relative;
+            /* 부모자격 #mini */
             width: 520px;
             margin: 0 auto;
             text-align: center;
             padding-top: 20px;
             /* outline: 2px dotted red; */
         }
+        /* 미니언즈 */
+        
 
         /* 메인이미지박스 */
         #mbox {
@@ -207,15 +211,15 @@
                     console.log("자동넘김!");
 
                     // 1. 인터발함수로 이미지넘김함수 호출!
-                    autoI = setInterval(function(){
+                    autoI = setInterval(function () {
                         // 방법1: 이미지넘김함수 호출
-                        chgImg(1);// 오른쪽으로 넘김
+                        chgImg(1); // 오른쪽으로 넘김
 
                         // 방법2: 오른쪽버튼 클릭이벤트 발생
                         //btn[1].click();
                         // 선택요소.click() 클릭이벤트 강제발생!
 
-                    }, 3000);
+                    }, 1000);
 
                     // 2. 멈춤버튼 보이기
                     abtn[1].style.display = "inline-block";
@@ -229,7 +233,7 @@
                 //////////////////////////////////////
 
                 /// 멈춤버튼 클릭시 //////////
-                abtn[1].onclick = function(){
+                abtn[1].onclick = function () {
                     // 호출확인
                     console.log("멈춤버튼!");
 
