@@ -25,9 +25,9 @@ window.addEventListener("load", () => {
     // 슬라이드 순번변수(click함수 바깥!)
     let snum = 0;
 
-    // 변경대상 블릿li
+    // 변경대상: 블릿li
     let indic = document.querySelectorAll(".indic li");
-    console.log("블릿개수:"+indic.length); 
+    // console.log("블릿개수:"+indic.length); 
 
 
     ///// 오른쪽 버튼 클릭시 ///////////
@@ -77,6 +77,16 @@ window.addEventListener("load", () => {
         slide.style.transition = "left .8s ease-in-out";
         // 이동원리: -100%이면 두번째 슬라이드 
         // -> -100 * 슬라이드순번(0부터)
+
+        // 4. 블릿변경하기
+        // 해당순번 블릿에 class="on" 넣기
+        // 블릿순번 === 슬라이드순번 === snum
+        indic[snum].classList.add("on");
+
+        // [ 클래스 조작 메서드 ] ///////////////
+        // classList.add(클래스명) : 넣기
+        // classList.remove(클래스명) : 빼기
+        // classList.toggle(클래스명) : 넣거나빼기(반대로!)
 
 
     }; /////////// goSlide함수 ////////////
