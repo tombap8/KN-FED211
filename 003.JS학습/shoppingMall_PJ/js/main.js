@@ -10,16 +10,24 @@ window.addEventListener("load", () => {
 
     // [ 구현내용 ]
     // - 버튼 클릭시 배너를 다음/이전으로 이동함
+
     // - 이벤트 대상: .abtn(이동버튼2개)
     let abtn = document.querySelectorAll(".abtn");
     // console.log("버튼개수:" + abtn.length);
+
     // - 변경대상: #slide
     let slide = document.querySelector("#slide");
+    
     // 슬라이드 개수(마지막번호 계산에 사용!)
     let scnt = slide.querySelectorAll("li").length;
     // console.log("슬라이드개수:" + scnt);
+
     // 슬라이드 순번변수(click함수 바깥!)
     let snum = 0;
+
+    // 변경대상 블릿li
+    let indic = document.querySelectorAll(".indic li");
+    console.log("블릿개수:"+indic.length); 
 
 
     ///// 오른쪽 버튼 클릭시 ///////////
