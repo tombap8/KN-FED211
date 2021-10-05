@@ -3,7 +3,7 @@
 //////////////////////// html 로드구역 ////////////////////////
 //// html 태그요소 보다 위에 있는 JS를 요소로딩후 실행구역 //////
 // laod이벤트 / DOMContentLoaded 이벤트 ////
-window.addEventListener("load",()=>{
+window.addEventListener("load", () => {
 
     // 로딩완료확인
     console.log("로딩완료!");
@@ -12,38 +12,26 @@ window.addEventListener("load",()=>{
     // - 버튼 클릭시 배너를 다음/이전으로 이동함
     // - 이벤트 대상: .abtn(이동버튼2개)
     let abtn = document.querySelectorAll(".abtn");
-    console.log("버튼개수:"+abtn.length);
+    console.log("버튼개수:" + abtn.length);
     // - 변경대상: #slide
     let slide = document.querySelector("#slide");
     // 슬라이드 개수(마지막번호 계산에 사용!)
     let scnt = slide.querySelectorAll("li").length;
-    console.log("슬라이드개수:"+scnt);
+    console.log("슬라이드개수:" + scnt);
     // 슬라이드 순번변수(click함수 바깥!)
     let snum = 0;
 
 
     ///// 오른쪽 버튼 클릭시 ///////////
     // 내용: 슬라이드가 오른쪽으로 이동하여 다음슬라이드가 보임!
-    abtn[1].onclick = ()=>{
+    abtn[1].onclick = () => {
 
         // 1. 호출확인
         console.log("오른쪽이양!");
 
         // 2. 슬라이드 이동함수 호출!
-        goSlide(1);//전달값 1보내기
+        goSlide(1); //전달값 1보내기
 
-        // 2. 슬라이드 번호 증가하기!
-        snum++;
-        // 한계값 체크(슬라이드 개수 이상이면!)
-        if(snum >= scnt) 
-            snum = 0; // 옵션1: 처음 슬라이드로 가기
-            // snum = scnt - 1; // 옵션2: 끝번호에 고정
-
-        // 3. 슬라이드 이동하기
-        slide.style.left = (-100*snum)+"%";
-        slide.style.transition = "left .8s ease-in-out";
-        // 이동원리: -100%이면 두번째 슬라이드 
-        // -> -100 * 슬라이드순번(0부터)
 
 
     }; //////////// click함수 ////////////
@@ -52,20 +40,45 @@ window.addEventListener("load",()=>{
     /*////////////////////////////////////
         함수명: goSlide
         기능: 슬라이드 이동하기
-    */////////////////////////////////////
-    let goSlide = dir => { 
+    */ ////////////////////////////////////
+    let goSlide = dir => {
         // dir:버튼방향(1-오른쪽,0-왼쪽)
         // 1은 true와 같으므로 if문에 편리하다! (0은 false)
 
         // 1. 호출확인, 전달값 확인
-        console.log("나야나!"+dir);
+        console.log("나야나!" + dir);
+
+        // 2. 방향에 따른 분기
+        // dir===1이면 오른쪽 / dir===0이면 왼쪽
+
+        // 2-1. 슬라이드 번호 증가하기!
+        if(dir){
+            snum++;
+            // 한계값 체크(슬라이드 개수 이상이면!)
+            if (snum >= scnt)
+                snum = 0; // 옵션1: 처음 슬라이드로 가기
+            // snum = scnt - 1; // 옵션2: 끝번호에 고정
+        } /////////// if문 /////////////////////////////
+
+        // 2-2. 슬라이드 번호 감소하기!
+        else { // dir===0을 else로 처리!
+            snum--;
+            // 한계값 체크(0 이하이면!)
+            if (snum <= 0)
+                snum = scnt - 1; // 끝번호에 돌아가기
+        } //////////// else 문 /////////////////////////
+
+        // 3. 슬라이드 이동하기
+        slide.style.left = (-100 * snum) + "%";
+        slide.style.transition = "left .8s ease-in-out";
+        // 이동원리: -100%이면 두번째 슬라이드 
+        // -> -100 * 슬라이드순번(0부터)
+
 
     }; /////////// goSlide함수 ////////////
     ///////////////////////////////////////
 
 
 
-
-
-});//////////// load구역 ///////////////////
+}); //////////// load구역 ///////////////////
 ////////////////////////////////////////////
