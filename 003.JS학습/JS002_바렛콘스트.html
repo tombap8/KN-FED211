@@ -151,10 +151,47 @@
         // valueOf() 메서드 - 배열전체값 찍기
         // (안써도 브라우저가 자동으로 이 메서드를 호출함!)
 
+        ////////////////////////////////////////
+        //// for문 내부 지역변수 전달 테스트 /////
+
+        /// 로드구역 ///////////////////////////////
+        window.addEventListener("load",function(){
+
+            console.log("로딩완료!");
+
+            // var 테스트
+            var varit = document.querySelectorAll(".varit");
+            console.log("varit개수:"+varit.length);
+            // 버튼 개수만큼 링크 걸기
+            // -> for문의 지역변수를 var로 선언!
+            // for(시작값;한계값;증감){코드}
+            for(var i=0; i < varit.length; i++){
+
+                // 링크생성하기
+                varit[i].onclick = function(){
+                    console.log("i변수전달:"+i);
+                }; //////// click 함수 /////////
+
+            } ////////////// for문 //////////////
+
+        }); //////////// load 구역 //////////////////
+        /////////////////////////////////////////////
 
     </script>
 </head>
 <body>
+    <button class="varit">var테스트1</button>
+    <button class="varit">var테스트2</button>
+    <button class="varit">var테스트3</button>
+    <button class="varit">var테스트4</button>
+
+    <br><br>
+
+    <button class="letit">let테스트1</button>
+    <button class="letit">let테스트2</button>
+    <button class="letit">let테스트3</button>
+    <button class="letit">let테스트4</button>
+
     
 </body>
 </html>
