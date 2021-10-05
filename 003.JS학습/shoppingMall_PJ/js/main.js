@@ -15,6 +15,12 @@ window.addEventListener("load",()=>{
     console.log("버튼개수:"+abtn.length);
     // - 변경대상: #slide
     let slide = document.querySelector("#slide");
+    // 슬라이드 개수(마지막번호 계산에 사용!)
+    let scnt = slide.querySelectorAll("li").length;
+    console.log("슬라이드개수:"+scnt);
+    // 슬라이드 순번변수(click함수 바깥!)
+    let snum = 0;
+
 
     ///// 오른쪽 버튼 클릭시 ///////////
     // 내용: 슬라이드가 오른쪽으로 이동하여 다음슬라이드가 보임!
@@ -23,7 +29,11 @@ window.addEventListener("load",()=>{
         // 1. 호출확인
         console.log("오른쪽이양!");
 
-        // 2. 슬라이드 이동하기
+        // 2. 슬라이드 번호 증가하기!
+        snum++;
+        
+
+        // 3. 슬라이드 이동하기
         slide.style.left = "-100%";
         slide.style.transition = "left .8s ease-in-out";
         // 이동원리: -100%이면 두번째 슬라이드 
