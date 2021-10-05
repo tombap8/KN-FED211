@@ -41,12 +41,28 @@
         */
 
         // 일반적인 할당형 변수 ///
-        var x = function(a,b){
-            return a*b;
-        }; ///// 함수 //////////
+        // var x = function(a,b){
+        //     return a*b;
+        // }; ///// 함수 //////////
 
+        // 축약형 ///
+        // const x = (a,b) => {return a*b;};
+        const x = (a,b) => a*b;
+        
         // 함수호출하기
         console.log("x(100,20)함수호출:"+x(100,20));
+
+        // 일반적인 함수할당
+        // let my = function(x){
+        //     console.log("나는 "+x+"다!");
+        // }; //////// 함수 /////////
+
+        // 축약형 
+        let my = x => console.log("나는 "+x+"다!");
+
+        // 함수호출하기
+        my("프론트엔드 개발자");
+
     </script>
 </head>
 <body>
