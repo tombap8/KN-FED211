@@ -119,8 +119,35 @@
 
         dog = "강아지";
         console.log("dog:"+dog);
-        let dog; // let으로 변수선언을 아래쪽에서 가능한가?X
+        // let dog; // let으로 변수선언을 아래쪽에서 가능한가?X
         // -> let 은 선언전에 변수를 할당할 수 없다!
+
+        // 상수 연습
+        const fish = "고등어";
+        console.log("상수fish:"+fish);
+
+        // fish = "참치"; // 재할당불가!
+        // console.log("상수fish:"+fish);
+
+        // const movie;
+        // movie = "원더우먼";//선언과 할당을 따로가능? X
+        // console.log("상수movie:"+movie);
+
+        const myArr = ["상추","고기","마늘"];
+        console.log("상수myArr배열중 2번째:"+myArr[1]);
+        // 상수로 선언된 배열의 값 변경되나? OK
+        myArr[1] = "닭고기";
+        console.log("상수myArr배열중 2번째:"+myArr[1]);
+        // 상수로 선언된 배열자체는 변경불가하나
+        // 내부의 항목값을 변경가능하다!
+        // 배열값자체 값을 변경못하게 const선언할 것을 권고함!
+        
+        // 상수인 배열의 값을 추가할 수 있나?
+        // push()메서드 - 배열값 뒤에 추가하는 기능
+        myArr.push("쑥갓");
+        console.log("상수myArr 전체값:"+myArr.valueOf());
+        // valueOf() 메서드 - 배열전체값 찍기
+        // (안써도 브라우저가 자동으로 이 메서드를 호출함!)
 
 
     </script>
