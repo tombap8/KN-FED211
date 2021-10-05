@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>JS - Slide Images</title>
-    <style type="text/css">
+    <style>
         html,
         body {
             margin: 0px;
@@ -161,7 +161,13 @@
         }
     </style>
     <!-- 외부JS삽입 -->
-    
+    <script src="js/main.js"></script>
+    <!-- <script src="js/main.js" defer></script> -->
+    <!-- defer옵션을 쓰면 html태그가 모두 로딩후 실행하지만
+    일반적으로 로드구역을 JS코드내에 만드는 경우가 많다.
+    defer를 잘 안쓰는 이유는 불러올때 defer를 누락하는 경우
+    에러를 막을 수 없기 때문이다! -->
+
 </head>
 
 <body>
