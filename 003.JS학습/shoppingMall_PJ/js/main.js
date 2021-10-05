@@ -6,47 +6,31 @@
 window.addEventListener("load", () => {
 
     // 로딩완료확인
-    console.log("로딩완료!");
+    // console.log("로딩완료!");
 
     // [ 구현내용 ]
     // - 버튼 클릭시 배너를 다음/이전으로 이동함
     // - 이벤트 대상: .abtn(이동버튼2개)
     let abtn = document.querySelectorAll(".abtn");
-    console.log("버튼개수:" + abtn.length);
+    // console.log("버튼개수:" + abtn.length);
     // - 변경대상: #slide
     let slide = document.querySelector("#slide");
     // 슬라이드 개수(마지막번호 계산에 사용!)
     let scnt = slide.querySelectorAll("li").length;
-    console.log("슬라이드개수:" + scnt);
+    // console.log("슬라이드개수:" + scnt);
     // 슬라이드 순번변수(click함수 바깥!)
     let snum = 0;
 
 
     ///// 오른쪽 버튼 클릭시 ///////////
     // 내용: 슬라이드가 오른쪽으로 이동하여 다음슬라이드가 보임!
-    abtn[1].onclick = () => {
-
-        // 1. 호출확인
-        console.log("오른쪽이양!");
-
-        // 2. 슬라이드 이동함수 호출!
-        goSlide(1); //전달값 1보내기
-
-
-    }; //////////// click함수 ////////////
+    abtn[1].onclick = () => goSlide(1);
+    // goSlide함수 호출: 전달값 1로 오른쪽확인!
 
     ///// 왼쪽 버튼 클릭시 ///////////
     // 내용: 슬라이드가 왼쪽으로 이동하여 이전슬라이드가 보임!
-    abtn[0].onclick = () => {
-
-        // 1. 호출확인
-        console.log("왼쪽이양!");
-
-        // 2. 슬라이드 이동함수 호출!
-        goSlide(0); //전달값 0보내기
-
-
-    }; //////////// click함수 ////////////
+    abtn[0].onclick = () => goSlide(0);
+    // goSlide함수 호출: 전달값 0으로 왼쪽확인!
 
 
     /*////////////////////////////////////
@@ -58,7 +42,7 @@ window.addEventListener("load", () => {
         // 1은 true와 같으므로 if문에 편리하다! (0은 false)
 
         // 1. 호출확인, 전달값 확인
-        console.log("나야나!" + dir);
+        // console.log("나야나!" + dir);
 
         // 2. 방향에 따른 분기
         // dir===1이면 오른쪽 / dir===0이면 왼쪽
