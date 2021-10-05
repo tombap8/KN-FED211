@@ -79,7 +79,21 @@ window.addEventListener("load", () => {
         // -> -100 * 슬라이드순번(0부터)
 
         // 4. 블릿변경하기
-        // 해당순번 블릿에 class="on" 넣기
+
+        // 4-1. 모든 블릿li class 지우기!
+        // for문으로 지움!
+        for(let x of indic){
+            x.classList.remove("on");
+        } ///// for of문 /////////////
+
+        // [ 배열이나 컬렉션을 위한 for of문 ]
+        // -> ES6에서 새로 추가된 for문
+        // 배열이나 컬렉션(다수의 요소를 담은 집합)을 변수에 담고
+        // 그 개수만큼 자동으로 돌아주는 for문! for of문!!!
+        // 형식: for(변수 of 배열/컬렉션){실행문}
+        // -> for문 앞에 선언된 변수는 배열/컬렉션 자신임(하나씩!)
+
+        // 4-2. 해당순번 블릿에 class="on" 넣기
         // 블릿순번 === 슬라이드순번 === snum
         indic[snum].classList.add("on");
 
