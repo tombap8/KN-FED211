@@ -36,6 +36,7 @@
     var seoul = "서울";
     var jeju = "제주도";
     let toktok = "카톡";
+    let sport = "축구";
 
     // JS에서 중괄호{}는 코드구역을 나타낸다!
     // -> 함수에서 코드를 중괄호를 싸면 코드 지역이 분할된다!
@@ -56,6 +57,10 @@
         // 전역변수 var로 선언된 변수를 같은이름으로 let재설정
         let toktok = "라인";
         // 전역변수 let을 다시 let 선언할당함!
+        // var sport = "배구";
+        // 에러난 이유: let으로 전역변수와 같은 이름의 지역변수
+        // 를 선언하였으므로 지역에서 전역변수와 구분되게
+        // let으로 선언하지 않았으므로 var를 쓰면 에러가 난다!
 
 
         /// 지역변수를 지역에서 찍어보기 ///
@@ -64,6 +69,7 @@
         console.log("myitem:"+myitem);
         console.log("jeju:"+jeju);
         console.log("toktok:"+toktok);
+        //console.log("sport:"+sport);
 
 
     }
