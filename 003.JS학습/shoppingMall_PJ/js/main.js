@@ -23,6 +23,13 @@ window.addEventListener("load",()=>{
         // 1. 호출확인
         console.log("오른쪽이양!");
 
+        // 2. 슬라이드 이동하기
+        slide.style.left = "-100%";
+        slide.style.transition = "left .8s ease-in-out";
+        // 이동원리: -100%이면 두번째 슬라이드 
+        // -> -100 * 슬라이드순번(0부터)
+
+
     }; //////////// click함수 ////////////
 
 
