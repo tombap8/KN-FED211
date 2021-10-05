@@ -174,6 +174,22 @@
 
             } ////////////// for문 //////////////
 
+
+            // let 테스트
+            let letit = document.querySelectorAll(".letit");
+            console.log("letit개수:"+letit.length);
+            // 버튼 개수만큼 링크 걸기
+            // -> for문의 지역변수를 let로 선언!
+            // for(시작값;한계값;증감){코드}
+            for(let i=0; i < letit.length; i++){
+
+                // 링크생성하기
+                letit[i].onclick = function(){
+                    console.log("i변수전달:"+i);
+                }; //////// click 함수 /////////
+
+            } ////////////// for문 //////////////
+
         }); //////////// load 구역 //////////////////
         /////////////////////////////////////////////
 
