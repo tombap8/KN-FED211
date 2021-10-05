@@ -93,6 +93,18 @@
         console.log("myitem:"+myitem);
         console.log("toktok:"+toktok);// 전역변수가 살아있다!
 
+        // 선언과 할당의 순서는?
+
+        cat = "고양이";//선언없이 할당!
+        console.log("cat:"+cat);
+        var cat; // 변수선언을 할당코드 아래쪽에서 가능한가?OK
+        // 이와 같이 선언이 아래 있는 것을 끌어당겨서 처리한다고
+        // 해서 이런것을 호이스팅(hoisting)이라고 함!
+
+        dog = "강아지";
+        console.log("dog:"+dog);
+        let dog; // let으로 변수선언을 아래쪽에서 가능한가?X
+        // -> let 은 선언전에 변수를 할당할 수 없다!
 
 
     </script>
