@@ -111,7 +111,7 @@ body * {
     /* 투명하기때문에 아래있어서 숨기기 */
     height: 0;
     overflow: hidden;
-    
+
     /* 트랜지션: 속시이지 */
     transition: opacity .4s ease-in-out;
 }
@@ -135,4 +135,9 @@ body * {
 .smsub a:hover{
     color: #333;
     background-color: #fafafa;
+}
+
+/* 첫번째 사이드 메뉴에 마우스 오버시 커서모양 text */
+.smbx>li:first-child>a{
+    cursor: text;
 }
