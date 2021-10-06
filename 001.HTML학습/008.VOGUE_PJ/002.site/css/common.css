@@ -96,3 +96,20 @@ body * {
     color: #747474;
 
 }
+
+/* 사이트메뉴 서브메뉴 */
+.smsub{
+    position: absolute;
+    /* 젠틀앱솔루트! */
+    width: 120px;
+    border: 1px solid #e5e5e5;
+    box-sizing: border-box;
+    /* 보더,패딩 포함 크기유지 박스 */
+}
+.smsub a{
+    display: block;
+    padding: 7px 10px;
+    font-family: 'NanumBarunGothic', sans-serif;
+    font-size: 12px;
+    color: #333;
+}
