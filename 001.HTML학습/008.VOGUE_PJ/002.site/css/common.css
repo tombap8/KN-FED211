@@ -68,3 +68,29 @@ body * {
 .sns a:last-child{
     background: url(../images/sns_kakao.png) center/auto 100%;
 }
+
+/* 1-1-2. 사이드메뉴 */
+.sideMenu{
+    position: relative;
+    /* 부모자격 */
+}
+/* 사이드메뉴 내용박스 */
+.smbx{
+    position: absolute;
+    right: 0;
+    /* 부모는? .sideMenu */
+    display: flex;
+    /* 플렉스박스 */
+}
+.smbx>li{
+    
+}
+/* a요소 */
+.smbx>li>a{
+    display: block;
+    padding: 0 13px;
+    line-height: 44px;
+
+    font-family: 'Roboto','NanumBarunGothic', sans-serif;
+
+}
