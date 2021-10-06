@@ -188,7 +188,7 @@ body * {
 .gnb>ul{
     display: flex;
     flex-wrap: wrap;/* 줄바꿈 */
-    max-width: 700px;
+    max-width: 758px;
     margin: 0 auto;/* 가로가운데 */
 }
 /* 리스트요소 */
