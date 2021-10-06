@@ -182,12 +182,17 @@ body * {
     font-size: 16px;
     font-weight: 700;
     line-height: 46px;
+
+    margin-top: 7px;
 }
 
 /* GNB 플렉스 박스 */
 .gnb>ul{
     display: flex;
     flex-wrap: wrap;/* 줄바꿈 */
+    justify-content: center;
+    /* 자식요소 가로 중앙정렬 */
+
     max-width: 758px;
     margin: 0 auto;/* 가로가운데 */
 }
@@ -195,3 +200,20 @@ body * {
 .gnb li{
     margin: 0 23px;/* 양쪽마진 */
 }
+
+/* 마지막 검색 li의 a요소 */
+.gnb li:last-child a{
+    width: 16px;
+    height: 16px;
+    font-weight: bold;
+}
+
+/* 링크 트랜지션 */
+.gnb a{
+    transition: color .3s;
+}
+/* 마우스 오버시 글자색 */
+.gnb a:hover{
+    color: #f00;
+}
+
