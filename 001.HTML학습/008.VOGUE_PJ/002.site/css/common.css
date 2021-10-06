@@ -4,3 +4,18 @@
     공통기능: 상단영역(로고, 메뉴, GNB)
             하단영역(하단로고, 회사정보)
 */
+
+/* 공사중 외곽선 */
+body * {
+    outline: 4px dotted rgb(182, 182, 182);
+}
+
+/* 1-1. 상단메뉴 */
+.tmenu{
+    display: flex;
+    /* 플렉스박스 */
+    max-width: 970px;
+    /* 최대970px이고 이것보다 작아지면 auto */
+    height: 45px;
+    margin: 0 auto;
+}
