@@ -180,13 +180,30 @@
             // 이미지변경대상
             let tg = document.querySelector(".ibox img");
 
+            // 이전랜덤수 저장변수
+            let temp = 1;//처음에 1번이미지가 있으므로!
+
             /// 1~7사이의 난수로 이미지를 랜덤하게 나오게하기
             setInterval(() => {
+                // 1. 랜덤수 발생
                 let num = Math.ceil(Math.random() * 7);
                 console.log("이미지랜덤수:" + num);
 
-                // 이미지 src변경하기
+                // 2. 램덤수 검사 : 이전번호와 같으면 다시발생
+                // while(조건문){코드} 
+                // -> 조건문이 true일동안 코드를 계속실행함
+                while(num === temp){ // 이전수와 같으면
+                    num = Math.ceil(Math.random() * 7);
+                    console.log("새로랜덤:"+num);
+                } ////// while문 ///////////////
+                // while문에 안걸리면 바로 3번으로 감!
+
+                // 3. 이미지 src변경하기
                 tg.src = "./images/img" + num + ".jpg";
+
+                // 4. 지금 발생시킨 확정된 num을 temp에 저장함
+                // 왜? 다음 랜덤 발생시 비교할 이전랜덤수니까~!!
+                temp = num;
 
             }, 2000); ////////// 인터발함수 ///////////
 
