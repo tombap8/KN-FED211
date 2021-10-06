@@ -144,3 +144,24 @@ body * {
 .smbx>li:first-child>a{
     cursor: text;
 }
+
+/* 1-2.로고박스 */
+.logo{
+    text-align: center;
+    /* 글자,인라인요소 가로중앙 */
+    font-size: 100%;
+    /* 기본 h1태그는 font-size:2em 으로 잡혀있음
+    이것때문에 박스 높이가 조금 더 잡힌다.
+    100%로 해주면 기본 글자크기 16px로 셋업되어서
+    높이값이 내용만큼 나온다! */
+}
+.logo img{
+    vertical-align: bottom;
+    /* 
+        블록박스에 이미지를 넣은 경우 아래쪽에 약 4px정도의
+        간극이 생긴다. 이것을 없애려면 인라인요소 세로정렬
+        속성에 bottom 값으로 셋팅하면 해결된다!
+        또는 top 을 줘도 되네?^^ 세로방향을 주면 됩니다!
+        middle도 되네?^^
+    */
+}
