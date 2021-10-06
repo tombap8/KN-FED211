@@ -19,3 +19,8 @@ body * {
     height: 45px;
     margin: 0 auto;
 }
+/* 상단메뉴 하위 박스 등분할 */
+.tmenu>div{
+    flex: 1;
+    
+}
