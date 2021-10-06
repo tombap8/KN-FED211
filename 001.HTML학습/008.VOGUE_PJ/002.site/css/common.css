@@ -113,13 +113,15 @@ body * {
     height: 0;
     overflow: hidden;
 
-    /* 트랜지션: 속시이지 */
-    transition: opacity .4s ease-in-out;
+    
 }
 /* 상위 메뉴에 마우스 오버시 서브메뉴 보이기 */
 .smbx>li:hover .smsub{
     opacity: 1;
     height: auto;
+    
+    /* 트랜지션: 속시이지 */
+    transition: opacity .4s ease-in-out;
 }
 .smsub a{
     display: block;
