@@ -45,6 +45,14 @@ body * {
     /* 위치조정 */
     margin-top: 15px;
     margin-right: 16px;
+
+    /* 트랜지션: 속시이지 */
+    transition: opacity .2s;
+}
+
+/* a요소 마우스 오버시 */
+.sns a:hover {
+    opacity: 0.8;
 }
 
 /* 트위터 아이콘 박스 */
