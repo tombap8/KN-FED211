@@ -225,10 +225,22 @@ body * {
     background-color: #000;
     box-sizing: border-box;
     padding: 70px;
+    font-family: 'Roboto','NanumBarunGothic', sans-serif;
 }
 /* 3-1. 하단로고 */
 .blogo{
     text-align: center;
 }
-/* 3-2. */
-
+/* 3-2. 회사주소*/
+.addr{
+    font-style: normal;/* 이탤릭해제 */
+    text-align: center;
+    font-size: 11px;
+    color: #747474;
+    margin: 20px 0 10px;
+    /* 위 20px 양쪽 0 아래 10px */
+}
+/* 3-3. 하단링크 */
+.blink{
+    display: flex;
+}
