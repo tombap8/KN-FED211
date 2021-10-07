@@ -70,7 +70,7 @@
         }; ///////////////// mvi 객체 //////////////////////
 
         /////// 로드구역 ////////////////////////////////
-        window.addEventListener("load",()=>{
+        window.addEventListener("load", () => {
 
             console.log("로딩완료");
 
@@ -89,7 +89,7 @@
             // console.log("버튼개수:"+btn.length);
 
             // 버튼 개수만큼 for of문으로 click이벤트 함수 만들기! ///
-            for(let x of btn) { // x는 개별 버튼요소 
+            for (let x of btn) { // x는 개별 버튼요소 
 
                 // let으로 선언된 x변수는 for문 내부의 익명함수
                 // 안으로 변수를 전달할 수 있다!(var는 불가!)
@@ -105,10 +105,22 @@
                     // console.log(seti);
 
                     // 3. 해당 요소에 객체의 데이터를 넣어주기
-                    for(let x in seti) {
+                    for (let x in seti) {
 
-                        console.log("x는 속성명: " + x);
-                        console.log("속성값: " + seti[x])
+                        // console.log("x는 속성명: " + x);
+                        // console.log("속성값: " + seti[x]);
+
+                        // 각 속성명에 해당하는 작업분기하기 //
+                        switch (x) {
+                            case "포스터":
+                                // 1. 포스터넣기
+                                document.querySelector(".photo")
+                                    .innerHTML =
+                                    '<img src="' + seti[x] +
+                                    '" alt="포스터">';
+                                    break;
+                        } ////////// switch case문 ////////////
+
 
 
                     } ////////// for in 문 ////////////////
@@ -133,8 +145,6 @@
             - 변수는 객체의 속성명이다!
         
         */
-
-        
     </script>
 </head>
 
