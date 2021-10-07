@@ -154,8 +154,17 @@
 
                             // 한글자씩 span으로 싼다!
                             for (let x of tg){ // x는 한글자씩!
-                                show += "<span>" + x + "</span>";
-                            } //////// for of문 ///////
+
+                                // 공백일 경우처리
+                                if(x === " "){
+                                    // 공백특수문자처리 : &nbsp; 
+                                    show += "&nbsp;&nbsp;&nbsp;";
+                                } ///////////// if ///////////////
+                                else {
+                                    show += "<span>" + x + "</span>";
+                                } /////////// else ////////////////
+
+                            } ////////////// for of문 //////////////
 
                             // 넣을 대상에 html넣기
                             document.querySelector(".show")
