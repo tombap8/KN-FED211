@@ -6,18 +6,22 @@
 */
 
 /* 공사중 외곽선 */
-body * {
+/* body * {
     outline: 1px dashed rgb(182, 182, 182);
-}
+} */
 
 /**************** 1. 상단영역 *****************/
-.top{
+#top {/* 상단 최상위 부모박스 */
+    box-shadow: 0 5px 5px #000;
+    /* 박스 그림자 */
+}
+.top {
     min-height: 206px;
     /* 206px 잡고 있다가 내용늘면 늘어남! */
 }
 
 /* 1-1. 상단메뉴 */
-.tmenu{
+.tmenu {
     display: flex;
     /* 플렉스박스 */
     max-width: 970px;
@@ -25,8 +29,9 @@ body * {
     height: 45px;
     margin: 0 auto;
 }
+
 /* 상단메뉴 하위 박스 등분할 */
-.tmenu>div{
+.tmenu>div {
     flex: 1;
     /* flex 등분할시 높이값은 자동채우기됨!
     height:100% 를 안해도 됨! */
@@ -34,7 +39,7 @@ body * {
 
 /* 1-1-1. sns박스 */
 /* sns박스 a */
-.sns a{
+.sns a {
     display: inline-block;
     /* 디자인 적용위해! */
     width: 16px;
@@ -62,38 +67,42 @@ body * {
 }
 
 /* 트위터 아이콘 박스 */
-.sns a.fi-twitter{
+.sns a.fi-twitter {
     font-size: 13px;
 }
+
 /* 유튜브 아이콘 박스 */
-.sns a.fi-youtube-play{
+.sns a.fi-youtube-play {
     font-size: 11px;
 }
 
 /* sns 마지막 a요소에 카스 이미지넣기 */
-.sns a:last-child{
+.sns a:last-child {
     background: url(../images/sns_kakao.png) center/auto 100%;
 }
 
 /* 1-1-2. 사이드메뉴 */
-.sideMenu{
+.sideMenu {
     position: relative;
     /* 부모자격 */
 }
+
 /* 사이드메뉴 내용박스 */
-.smbx{
+.smbx {
     position: absolute;
     right: 0;
     /* 부모는? .sideMenu */
     display: flex;
     /* 플렉스박스 */
 }
+
 /* 메뉴 사이구분선 */
-.smbx>li:first-child{
+.smbx>li:first-child {
     border-right: 1px solid #e5e5e5;
 }
+
 /* a요소 */
-.smbx>li>a{
+.smbx>li>a {
     display: block;
     padding: 0 13px;
     line-height: 44px;
@@ -105,7 +114,7 @@ body * {
 }
 
 /* 사이트메뉴 서브메뉴 */
-.smsub{
+.smsub {
     position: absolute;
     /* 젠틀앱솔루트! */
     width: 120px;
@@ -119,17 +128,19 @@ body * {
     height: 0;
     overflow: hidden;
 
-    
+
 }
+
 /* 상위 메뉴에 마우스 오버시 서브메뉴 보이기 */
-.smbx>li:hover .smsub{
+.smbx>li:hover .smsub {
     opacity: 1;
     height: auto;
-    
+
     /* 트랜지션: 속시이지 */
     transition: opacity .4s ease-in-out;
 }
-.smsub a{
+
+.smsub a {
     display: block;
     padding: 7px 10px;
     font-family: 'NanumBarunGothic', sans-serif;
@@ -140,19 +151,20 @@ body * {
     /* 트랜지션: 속시이지 */
     transition: all .2s ease-in-out;
 }
+
 /* a에 오버시 */
-.smsub a:hover{
+.smsub a:hover {
     color: #333;
     background-color: #fafafa;
 }
 
 /* 첫번째 사이드 메뉴에 마우스 오버시 커서모양 text */
-.smbx>li:first-child>a{
+.smbx>li:first-child>a {
     cursor: text;
 }
 
 /* 1-2.로고박스 */
-.logo{
+.logo {
     text-align: center;
     /* 글자,인라인요소 가로중앙 */
     font-size: 100%;
@@ -161,7 +173,8 @@ body * {
     100%로 해주면 기본 글자크기 16px로 셋업되어서
     높이값이 내용만큼 나온다! */
 }
-.logo img{
+
+.logo img {
     vertical-align: bottom;
     /* 
         블록박스에 이미지를 넣은 경우 아래쪽에 약 4px정도의
@@ -173,7 +186,7 @@ body * {
 }
 
 /* 1-3.GNB박스 */
-.gnb{
+.gnb {
     min-height: 46px;
     /* 최소 46px 높이를 유지하다가 내용이 많아지면 높이값 늘어남 */
 
@@ -187,73 +200,86 @@ body * {
 }
 
 /* GNB 플렉스 박스 */
-.gnb>ul{
+.gnb>ul {
     display: flex;
-    flex-wrap: wrap;/* 줄바꿈 */
+    flex-wrap: wrap;
+    /* 줄바꿈 */
     justify-content: center;
     /* 자식요소 가로 중앙정렬 */
 
     max-width: 758px;
-    margin: 0 auto;/* 가로가운데 */
+    margin: 0 auto;
+    /* 가로가운데 */
 }
+
 /* 리스트요소 */
-.gnb li{
-    margin: 0 23px;/* 양쪽마진 */
+.gnb li {
+    margin: 0 23px;
+    /* 양쪽마진 */
 }
 
 /* 마지막 검색 li의 a요소 */
-.gnb li:last-child a{
+.gnb li:last-child a {
     width: 16px;
     height: 16px;
     font-weight: bold;
 }
 
 /* 링크 트랜지션 */
-.gnb a{
+.gnb a {
     transition: color .3s;
 }
+
 /* 마우스 오버시 글자색 */
-.gnb a:hover{
+.gnb a:hover {
     color: #f00;
 }
 
 
 /***************** 3. 하단영역 *********************/
-.info{
+.info {
     min-height: 285px;
     /* 최소 285px높이를 유지하다가 내용이 많아지면 늘어남 */
     background-color: #000;
     box-sizing: border-box;
     padding: 70px;
-    font-family: 'Roboto','NanumBarunGothic', sans-serif;
+    font-family: 'Roboto', 'NanumBarunGothic', sans-serif;
 }
+
 /* 3-1. 하단로고 */
-.blogo{
+.blogo {
     text-align: center;
 }
+
 /* 3-2. 회사주소*/
-.addr{
-    font-style: normal;/* 이탤릭해제 */
+.addr {
+    font-style: normal;
+    /* 이탤릭해제 */
     text-align: center;
     font-size: 11px;
     color: #747474;
     margin: 20px 0 10px;
     /* 위 20px 양쪽 0 아래 10px */
 }
+
 /* 3-3. 하단링크 */
-.blink{
+.blink {
     display: flex;
+    flex-wrap: wrap;
+    /* 컨텐츠 크기보다 작아지면 줄바꿈 */
     justify-content: center;
     /* 플렉스 가로방향 정렬-> justify-content */
 
 }
+
 /* 하단링크 a요소 */
-.blink a{
+.blink a {
     color: #747474;
     font-size: 13px;
     margin: 0 5px;
 }
+
 /* 마지막 li만 두껍게! */
-.blink li:last-child a{
+.blink li:last-child a {
     font-weight: bold;
 }
