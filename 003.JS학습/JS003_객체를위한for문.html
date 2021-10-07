@@ -112,13 +112,23 @@
 
                         // 각 속성명에 해당하는 작업분기하기 //
                         switch (x) {
+                            // 1. 포스터넣기
                             case "포스터":
-                                // 1. 포스터넣기
                                 document.querySelector(".photo")
-                                    .innerHTML =
-                                    '<img src="' + seti[x] +
-                                    '" alt="포스터">';
-                                    break;
+                                .innerHTML =
+                                '<img src="' + seti[x] +
+                                '" alt="포스터">';
+                                break;
+                            // 2. 제목넣기
+                            case "제목":
+                                document.querySelector(".tit")
+                                .innerText = "제목: " + seti[x];
+                                break;
+                            // 3. 개요넣기
+                            case "개요":
+                                document.querySelector(".sum")
+                                .innerText = "장르: " + seti[x];
+                                break;
                         } ////////// switch case문 ////////////
 
 
