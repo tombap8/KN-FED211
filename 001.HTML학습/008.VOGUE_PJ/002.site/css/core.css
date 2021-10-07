@@ -124,10 +124,25 @@
     font-size: 33px;
     color: #fff;
     text-align: center;
+    font-weight: lighter;
+    /* 가는 글씨두께 */
 
     box-sizing: border-box;
     /* 크기유지 */
     padding: 50px;
+
+    /* 그라데이션 배경넣기(글자잘보이게!) */
+    background-image: 
+    linear-gradient(to top, #000, transparent);
+    /* 
+        [ 선형 그라데이션 속성 ]
+        linear-gradient(방향, 색1, 색2, 색3,...);
+        - 방향: 그라데이션 진행방향
+            (to top, to bottom, to left, to right)
+        - 색상은 지정한 개수만큼 등분되어 그라데이션 표현된다!
+        - 색상 비율을 바꿀수 있다
+        linear-gradient(방향, 색1 몇%, 색2 몇%, 색3 몇%,...);
+    */
 }
 
 /* .pt2 아래 .cbx만 플로팅과 3등분적용! */
