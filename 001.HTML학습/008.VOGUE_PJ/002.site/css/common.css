@@ -12,7 +12,9 @@
 
 /**************** 1. 상단영역 *****************/
 #top {/* 상단 최상위 부모박스 */
-    box-shadow: 0 5px 5px #000;
+    position: relative;
+    z-index: 9999;
+    box-shadow: 0 0 4px #c0c0c0;
     /* 박스 그림자 */
 }
 .top {
