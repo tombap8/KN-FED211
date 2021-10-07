@@ -243,4 +243,17 @@ body * {
 /* 3-3. 하단링크 */
 .blink{
     display: flex;
+    justify-content: center;
+    /* 플렉스 가로방향 정렬-> justify-content */
+
+}
+/* 하단링크 a요소 */
+.blink a{
+    color: #747474;
+    font-size: 13px;
+    margin: 0 5px;
+}
+/* 마지막 li만 두껍게! */
+.blink li:last-child a{
+    font-weight: bold;
 }
