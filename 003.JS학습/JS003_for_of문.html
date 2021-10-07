@@ -28,8 +28,26 @@
 
                 x.onclick = () => {
                     let obj = event.currentTarget;
+                    // 화살표함수 사용시
+                    // this 대신 event.currentTarget
 
-                    console.log(obj.innerText);
+                    // console.log(obj.innerText);
+
+                    // 1. 버튼텍스트 읽어오기
+                    let txt = obj.innerText;
+
+                    // 데이터 타겟 변수
+                    let tg;
+
+                    // 2. 버튼별 데이터 구분하기
+                    switch(txt){
+                        case "": tg = mv1; break;
+                        case "": tg = mv2; break;
+                        case "": tg = mv3; break;
+                    } /////// switch case문 /////
+
+
+
                 }; ////// 클릭함수 //////////
 
             } //////// for of문 /////////////
