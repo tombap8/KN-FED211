@@ -117,6 +117,7 @@
 .cbx h2 {
     position: absolute;
     bottom: 0;
+    width: 100%;
     
     font-family: 'Pistilli', 'NanumBarunGothic';
     /* 웹폰튼 영문체(Pistilli), 한글체(NanumBarunGothic) */
@@ -124,6 +125,8 @@
     color: #fff;
     text-align: center;
 
+    box-sizing: border-box;
+    /* 크기유지 */
     padding: 50px;
 }
 
