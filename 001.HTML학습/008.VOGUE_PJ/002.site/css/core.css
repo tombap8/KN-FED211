@@ -109,8 +109,22 @@
 }
 
 /* .pbx에 마우스 오버시 보더 생기기 */
-.pbx:hover::after{
+.cbx:hover::after{
     border: 20px solid #f00;
+}
+
+/* 컨텐츠 타이틀 박스 */
+.cbx h2 {
+    position: absolute;
+    bottom: 0;
+    
+    font-family: 'Pistilli', 'NanumBarunGothic';
+    /* 웹폰튼 영문체(Pistilli), 한글체(NanumBarunGothic) */
+    font-size: 33px;
+    color: #fff;
+    text-align: center;
+
+    padding: 50px;
 }
 
 /* .pt2 아래 .cbx만 플로팅과 3등분적용! */
