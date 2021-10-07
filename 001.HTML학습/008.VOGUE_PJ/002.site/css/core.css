@@ -84,9 +84,27 @@
 
 /* 컨텐츠 박스 - 실제 내용이 들어가는 박스 */
 .cbx {
+    position: relative;
+    /* 부모자격 */
     height: 100%;
     /* 부모박스를 채움 */
 }
+
+/* 컨텐츠 박스 가상요소로 보더애니구현 */
+.cbx::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    /* 나의 부모는? .cbx */
+    box-sizing: border-box;
+    /* 보더가 생겨도 커지지 않도록 설정! */
+    border: 20px solid #f00;
+}
+
 /* .pt2 아래 .cbx만 플로팅과 3등분적용! */
 .pt2 .rbxIn{/* 3등분박스의 직계부모 */
     display: flex;/* flex는 직계부모에게 준다! */
