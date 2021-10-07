@@ -65,15 +65,18 @@
         console.log(sub1);
 
         // "도깨비"만 추출
-        // 여기에 코딩!
+        console.log(sub1.substr(10,3));
+        console.log(sub1.substring(10,13));
         // 주의사항: substring의 끝번호는 잘라올 
         //          마지막문자 번호 다음순번을 써야함!
 
         // "공유"만 추출
-        // 여기에 코딩!
+        console.log(sub1.substr(15,2));
+        console.log(sub1.substring(15,17));
 
         // "도깨비, 공유씨!" 도깨비부터 마지막까지 잘라오기!
-        // 여기에 코딩!
+        console.log(sub1.substr(10));
+        console.log(sub1.substring(10));
 
         /* 
             3. 문자 자르기 함수 : split(자를기준문자열)
@@ -83,11 +86,11 @@
         console.log(sp1);
 
         // 특수문자(^)로 잘라서 변수에 할당
-        // 여기에 코딩!
-        // console.log(arr);
+        let arr = sp1.split("^");
+        console.log(arr);
 
         // "목요일"을 선택하여 출력
-        // 여기에 코딩!
+        console.log(arr[4]);
 
         // 배열에서 데이터를 선택하여 다른말로 변경하시오.
         // "나는 학원에서까지 공부한다"
