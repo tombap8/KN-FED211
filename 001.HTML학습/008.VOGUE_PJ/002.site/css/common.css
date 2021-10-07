@@ -217,3 +217,13 @@ body * {
     color: #f00;
 }
 
+
+/***************** 3. 하단영역 *********************/
+.info{
+    min-height: 285px;
+    /* 최소 285px높이를 유지하다가 내용이 많아지면 늘어남 */
+    background-color: #000;
+    box-sizing: border-box;
+    padding: 70px;
+}
+
