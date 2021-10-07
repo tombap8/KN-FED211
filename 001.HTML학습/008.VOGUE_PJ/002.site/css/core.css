@@ -102,6 +102,14 @@
     /* 나의 부모는? .cbx */
     box-sizing: border-box;
     /* 보더가 생겨도 커지지 않도록 설정! */
+    border: 0px solid transparent;
+
+    /* 트랜지션: 속시이지 */
+    transition: all .2s ease-in;
+}
+
+/* .pbx에 마우스 오버시 보더 생기기 */
+.pbx:hover::after{
     border: 20px solid #f00;
 }
 
