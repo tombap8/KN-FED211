@@ -226,4 +226,9 @@ body * {
     box-sizing: border-box;
     padding: 70px;
 }
+/* 3-1. 하단로고 */
+.blogo{
+    text-align: center;
+}
+/* 3-2. */
 

@@ -18,3 +18,8 @@ img{
     border: none;
 }
 
+/* 박스 이미지 하단간극 없애기(약4px) */
+img{
+    vertical-align: bottom;
+}
+
