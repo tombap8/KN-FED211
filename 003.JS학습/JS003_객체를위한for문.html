@@ -150,7 +150,16 @@
                             let show = "";
                             // "문구" 속성값 변수
                             let tg = seti[x];
-                            console.log("문구:"+tg);
+                            // console.log("문구:"+tg);
+
+                            // 한글자씩 span으로 싼다!
+                            for (let x of tg){ // x는 한글자씩!
+                                show += "<span>" + x + "</span>";
+                            } //////// for of문 ///////
+
+                            // 넣을 대상에 html넣기
+                            document.querySelector(".show")
+                            .innerHTML = show;
 
                         } ////////// if문 ///////////////
 
