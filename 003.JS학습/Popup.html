@@ -10,13 +10,25 @@
             함수명: popup
             기능: 팝업창 띄우기
         */ ////////////////////////////////////
-        function popup() {
+        function popup(gubun) {//gubun 팝업구분하기
             // 1.함수호출확인
             console.log("팝업이양~!");
 
-            // 2. 팝업창 띄우기
+            // 2. url구분하기
+            let url;
+
+            if(gubun)
+                url = "https://www.w3schools.com/";
+            else
+                url = "popwin.html";
+
+            // 3. 팝업창 띄우기
             // window.open(url,창형식/창이름,옵션)
-            window.open("https://www.w3schools.com/","_blank","width=300,height=400,top=200,left=200");
+            window.open(url,"_blank","width=500,height=600,top=200,left=200");
+            // window.open("https://www.w3schools.com/");
+            // -> url만 쓰면 탭메뉴로 새창열림!
+
+
             
             /*
             - 익스는 최신엣지가 아닌 이전 익스임!
@@ -44,9 +56,13 @@
 
 <body>
     <h1>
-        <a href="#" onclick="popup()">
+        <a href="#" onclick="popup(1)">
             여기를 클릭하시면 팝업이 열립니다!
         </a>
+
+        <br>
+        <br>
+        <a href="#" onclick="popup(0)" id="my">내팝업!</a>
     </h1>
 
 </body>
