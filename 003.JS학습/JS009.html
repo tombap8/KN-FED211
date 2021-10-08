@@ -207,12 +207,29 @@
             let ctg  = document.querySelector("#div02 ul");
 
 
-
-
+            /////////////////////////////////////////////
             // 새리스트 생성 버튼 클릭시 리스트 만들기 ////
             // 이벤트 종류: click
             // 이벤트 대상: .nbt
-            // 변경 대상: #div01 ul
+            // 변경 대상: #div02 ul -> ctg 변수에 할당!
+            /////////////////////////////////////////////
+            document.querySelector(".nbt").onclick = () => {
+
+                // 1. 호출확인
+                console.log("새리스트생성!");
+
+                // 2. 새로운 li를 생성하여 변수에 할당한다!
+                let nn = document.createElement("li");
+
+                // 3. 메모리상에 새로 생성된 li에 이미지 넣기
+                nn.innerHTML = 
+                '<img src="images/img1.jpg" alt="이미지">';
+
+                // 4. 변경대상 ctg에 새로운 li넣기
+                ctg.appendChild(nn);
+
+
+            }; //////////// click 이벤트 함수 //////////////
 
 
 
@@ -294,6 +311,11 @@
 
 
             }; //////////// click 이벤트 함수 ///////////////
+
+            /* 
+                ※ appendChild() 와 insertBefore()는 대상을
+                정하는 것에 따라 중간에 적용할 수 있다!
+            */
 
 
 
