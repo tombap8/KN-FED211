@@ -31,8 +31,15 @@
                     // 하위 div 선택
                     let tg = x.querySelector("div");
 
+                    // 하위 ol의 높이값 구하기
+                    let hv = x.querySelector("ol").offsetHeight;
+                    // console.log("높이값:"+hv);
+                    
+                    // 하단 여백 보정
+                    hv = hv + 10;
+
                     // 1-1. 하위 div의 높이값 주기
-                    tg.style.height = "100px";
+                    tg.style.height = hv + "px";
                     tg.style.transition = "height .4s ease-out";
 
                 }; ////// mouseover 이벤트 함수 //////
