@@ -105,9 +105,6 @@
             /*주소요소 기본 이탤릭 해제*/
         }
     </style>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
-
     <script>
         ///// 전역변수 구역 ///////
         // 언어별 메뉴 글자 셋팅하기 ///
@@ -154,7 +151,17 @@
 
                 // 1. 선택값 가져오기 : option value속성
                 let opt = obj.value;
-                console.log(opt);
+                // console.log(opt);
+
+                // 2. 메뉴 변경하기
+
+                // 2-1. lang객체의 코드별 속성값을 가져온다!
+                let menu = lang[opt]["메뉴"];
+                console.log(menu);
+
+                // 2-2.
+
+
 
 
             }; //////////// change 이벤트 함수 ///////////
