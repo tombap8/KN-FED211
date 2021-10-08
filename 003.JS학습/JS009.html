@@ -268,11 +268,32 @@
             // 이벤트 종류: click
             // 이벤트 대상: .mvf
             // 변경대상1: #div02 ul li(마지막요소 선택-매번 갱신)
-            // 변경대상2: #div02 ul (리스트의 부모에서 이동명령!)
+            // 변경대상2: #div02 ul -> ctg 변수에 할당!
+            //          (리스트의 부모에서 이동명령!)
             // 사용 메서드: insertBefore(넣을놈,넣을놈전놈)
             // 넣을놈 - 마지막 li요소
             // 넣을놈전놈 - 맨처음 li요소
             //////////////////////////////////////////////////
+            document.querySelector(".mvf").onclick = () => {
+
+                // 1. 호출확인
+                console.log("맨앞으로!");
+
+                // 2. li리스트 새로 변수에 담기(매번바뀌니까!)
+                let nlist = ctg.querySelectorAll("li");
+
+                // 3. 넣을놈 : 마지막 li
+                let lele = nlist[nlist.length-1];
+                // [개수-1] 이 마지막 번호임!
+
+                // 4. 넣을놈전놈 : 첫번째 li
+                let fele = nlist[0];
+                
+                // 5. insertBefore(넣을놈,넣을놈전놈)
+                ctg.insertBefore(lele,fele); 
+
+
+            }; //////////// click 이벤트 함수 ///////////////
 
 
 
