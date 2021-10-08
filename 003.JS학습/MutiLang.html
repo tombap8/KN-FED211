@@ -177,6 +177,13 @@
                 document.querySelector("#info address")
                 .innerText = lang[opt]["주소"];
 
+                // 4. 메인 이미지 변경하기
+                // 이미지명이 같은 경로에 opt변수의 코드값과 같다!
+                // images/코드명.jpg
+                // 대상: #cont img
+                document.querySelector("#cont img")
+                .setAttribute("src","images/" + opt + ".jpg");
+
 
 
 
