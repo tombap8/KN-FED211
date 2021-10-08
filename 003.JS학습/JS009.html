@@ -23,7 +23,7 @@
             // console.log("메뉴개수:"+menu.length);
 
             // 마우스 오버/아웃 이벤트를 for of문으로 걸어보자!
-            for(let x of menu){ // x는 li.menu 각 요소
+            for (let x of menu) { // x는 li.menu 각 요소
 
                 /// 1. 마우스 오버시 ////////////////
                 x.onmouseover = () => {
@@ -34,7 +34,7 @@
                     // 하위 ol의 높이값 구하기
                     let hv = x.querySelector("ol").offsetHeight;
                     // console.log("높이값:"+hv);
-                    
+
                     // 하단 여백 보정
                     hv = hv + 10;
 
@@ -74,81 +74,105 @@
             // console.log("서브메뉴개수:"+link.length);
 
             /// for of문으로 컬렉션의 개수만큼 반복해서 click셋팅하기!
-            for(let x of link) {
+            for (let x of link) { // x는 각 a요소
+
+                x.onclick = () => {
+
+                    // 1. a요소 텍스트 읽어오기
+                    let txt = x.innerText;
+                    // console.log(txt);
+
+                    // 2. 각 이동할 url 주소 셋팅하기
+                    // url주소 변수
+                    let url;
+                    // 분기를 switch case문으로!
+                    switch (txt) {
+                        case "Google":
+                            url = "http://www.google.com";
+                            break;
+                        case "Naver":
+                            url = "http://www.naver.com";
+                            break;
+                        case "Daum":
+                            url = "http://www.daum.net";
+                            break;
+                        case "Nate":
+                            url = "http://www.nate.com";
+                            break;
+                        case "SK":
+                            url = "http://www.sktelecom.com";
+                            break;
+                        case "KT":
+                            url = "http://www.kt.com";
+                            break;
+                        case "Uplus":
+                            url = "http://www.uplus.co.kr";
+                            break;
+                        case "CGV":
+                            url = "http://www.cgv.co.kr";
+                            break;
+                        case "MEGABOX":
+                            url = "http://www.megabox.co.kr";
+                            break;
+                        case "LOTTE CINEMA":
+                            url = "https://www.lottecinema.co.kr/NLCHS";
+                            break;
+                        case "GMARKET":
+                            url = "http://www.gmarket.co.kr";
+                            break;
+                        case "11번가":
+                            url = "http://www.11st.co.kr";
+                            break;
+                        case "Auction":
+                            url = "http://www.auction.co.kr";
+                            break;
+                        case "스토어팜":
+                            url = "https://shopping.naver.com/";
+                            break;
+                        case "인터파크":
+                            url = "http://www.interpark.co.kr";
+                            break;
+                        case "쿠팡":
+                            url = "http://www.coopang.co.kr";
+                            break;
+                        case "Apple":
+                            url = "http://www.apple.com";
+                            break;
+                        case "Samsung":
+                            url = "http://www.samsung.com";
+                            break;
+                        case "넷마블":
+                            url = "http://www.netmarble.net";
+                            break;
+                        case "넥슨":
+                            url = "https://www.nexon.com";
+                            break;
+                        case "IMC":
+                            url = "http://www.imc.co.kr";
+                            break;
+                    } ///// switch case문 ///// 
+
+                    // console.log(url);
+
+                    // 3. 페이지 이동하기(새창으로!)
+                    window.open().location.href = url;
+                    // window.open() : 새창열기
+                    // location.href = 주소 : 페이지 이동하기
+
+                    return false;
+                    // 함수를 나갈때 a링크 이동속성
+                    // 작동하지 않도록 false를 리턴!
+                    // false는 아무것도 하지마! 이런뜻!
+
+                }; //////// click 이벤트 함수 ////////
 
             } ///////// for of 문 ///////////////////////
+
 
             // html 컬렉션 참고:
             // https://www.w3schools.com/js/js_htmldom_collections.asp
 
 
-            /*
-            switch (txt) {
-                case "Google":
-                    url = "http://www.google.com";
-                    break;
-                case "Naver":
-                    url = "http://www.naver.com";
-                    break;
-                case "Daum":
-                    url = "http://www.daum.net";
-                    break;
-                case "Nate":
-                    url = "http://www.nate.com";
-                    break;
-                case "SK":
-                    url = "http://www.sktelecom.com";
-                    break;
-                case "KT":
-                    url = "http://www.kt.com";
-                    break;
-                case "Uplus":
-                    url = "http://www.uplus.co.kr";
-                    break;
-                case "CGV":
-                    url = "http://www.cgv.co.kr";
-                    break;
-                case "MEGABOX":
-                    url = "http://www.megabox.co.kr";
-                    break;
-                case "LOTTE CINEMA":
-                    url = "https://www.lottecinema.co.kr/NLCHS";
-                    break;
-                case "GMARKET":
-                    url = "http://www.gmarket.co.kr";
-                    break;
-                case "11번가":
-                    url = "http://www.11st.co.kr";
-                    break;
-                case "Auction":
-                    url = "http://www.auction.co.kr";
-                    break;
-                case "스토어팜":
-                    url = "https://shopping.naver.com/";
-                    break;
-                case "인터파크":
-                    url = "http://www.interpark.co.kr";
-                    break;
-                case "쿠팡":
-                    url = "http://www.coopang.co.kr";
-                    break;
-                case "Apple":
-                    url = "http://www.apple.com";
-                    break;
-                case "Samsung":
-                    url = "http://www.samsung.com";
-                    break;
-                case "넷마블":
-                    url = "http://www.netmarble.net";
-                    break;
-                case "넥슨":
-                    url = "https://www.nexon.com";
-                    break;
-                case "IMC":
-                    url = "http://www.imc.co.kr";
-                    break;
-            } ///// switch case문 ///// 
-            */
 
 
 
@@ -181,7 +205,7 @@
             // 이벤트 종류: click
             // 이벤트 대상: .nbt
             // 변경 대상: #div01 ul
-            
+
 
 
             /// 랜덤생성 버튼 클릭시 새로운 li에 랜덤으로 img넣기
@@ -196,7 +220,7 @@
             // 이벤트대상: #div02 ul li
             // 변경대상: 이벤트대상
             // 변경내용: 변경대상 삭제하기
-            
+
 
 
             ///// 맨앞요소를 맨뒤로 이동하기 ////////////////////
@@ -210,7 +234,7 @@
             // 사용 메서드: appendChild(요소)
             // -> 기존요소를 선택하면 이동이 됨!
             /////////////////////////////////////////////////
-            
+
 
 
 
@@ -224,9 +248,9 @@
             // 넣을놈 - 마지막 li요소
             // 넣을놈전놈 - 맨처음 li요소
             //////////////////////////////////////////////////
-            
 
-            
+
+
 
 
         }); ///////// 로드구역 //////////////////////////////////////
