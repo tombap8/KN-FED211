@@ -25,7 +25,7 @@
             // 마우스 오버/아웃 이벤트를 for of문으로 걸어보자!
             for(let x of menu){ // x는 li.menu 각 요소
 
-                /// 1. 마우스 오버시
+                /// 1. 마우스 오버시 ////////////////
                 x.onmouseover = () => {
 
                     // 하위 div 선택
@@ -37,7 +37,27 @@
 
                 }; ////// mouseover 이벤트 함수 //////
 
+                /// 2. 마우스 아웃시 ////////////////
+                x.onmouseout = () => {
+
+                    // 하위 div 선택
+                    let tg = x.querySelector("div");
+
+                    // 1-1. 하위 div의 높이값 0
+                    tg.style.height = "0px";
+
+                }; ////// mouseover 이벤트 함수 //////
+
             } //////////// for of문 /////////////////////
+
+            /* 
+                [ 선택요소의 현재 크기, 위치값 알아오는 JS속성 ]
+                1. 선택요소.offsetWidth : 가로값
+                2. 선택요소.offsetHeight : 높이값
+                3. 선택요소.offsetTop : top 위치값
+                4. 선택요소.offsetLeft : left 위치값
+            
+            */
 
 
 
