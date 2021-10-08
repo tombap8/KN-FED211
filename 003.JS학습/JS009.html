@@ -12,7 +12,35 @@
             console.log("로딩완료!");
 
             //// #div01의 각 메뉴에 마우스 오버시 하위메뉴 보이기 ////
-            
+            // 이벤트 대상: .smenu
+            // 이벤트 : mouseover / mouseout
+            // 변경대상 : .smenu > div
+            // 변경내용 : 마우스 오버시 서브메뉴보이기 / 아웃시 숨기기
+            // 특이사항 : 각 서브메뉴의 높이만큼 높이값 트랜지션주기!
+
+            // 각 서브를 가진 li메뉴 : .smenu
+            let menu = document.querySelectorAll(".smenu");
+            // console.log("메뉴개수:"+menu.length);
+
+            // 마우스 오버/아웃 이벤트를 for of문으로 걸어보자!
+            for(let x of menu){ // x는 li.menu 각 요소
+
+                /// 1. 마우스 오버시
+                x.onmouseover = () => {
+
+                    // 하위 div 선택
+                    let tg = x.querySelector("div");
+
+                    // 1-1. 하위 div의 높이값 주기
+                    tg.style.height = "100px";
+                    tg.style.transition = "height .4s ease-out";
+
+                }; ////// mouseover 이벤트 함수 //////
+
+            } //////////// for of문 /////////////////////
+
+
+
 
             /*
             switch (txt) {
