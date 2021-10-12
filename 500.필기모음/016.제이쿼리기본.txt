@@ -62,6 +62,13 @@ https://tombap8.github.io/FED211/004.jQuery%ED%95%99%EC%8A%B5/001.%EA%B8%B0%EB%B
     3) 몇번째 자식요소 : eq() -> sequence에서 나온말
         $(선택자).eq(순번) : 순번은 0부터
         예) $(".my li").eq(3) -> 4번째 li선택
+    4) 첫번째 자식 
+        $(선택자).first()
+        예) $("li").first() -> 첫번째 li
 
 6. 이벤트 메서드
 1) click(함수) - 클릭시 함수실행 
+
+7. 기능 메서드
+1) hide() -> 선택요소를 display:none 으로 변경
+2) show() -> 선택요소를 원래 display로 변경함!
