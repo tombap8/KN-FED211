@@ -44,6 +44,14 @@ $(function(){
     // 대상4 : 메시지 - .msg
     let msg = $(".msg");
 
+    // 좀비 태그 셋업
+    let mz1 = '<img src="images/mz1.png" alt="좀비1" class="mz">';
+    let mz2 = '<img src="images/mz2.png" alt="좀비2" class="mz">';
+    let zom = '<img src="images/zom.png" alt="좀비들" class="mz">';
+
+    // 주사기 태그 셋업
+    let inj = '<img src="images/inj.png" alt="주사기" class="inj">';
+
     ///////////////////////////////////////////
     /// 2. 초기화 셋팅 /////////////////////////
     ///////////////////////////////////////////
@@ -64,8 +72,18 @@ $(function(){
     // - 이 메서드를 사용하면 for문을 안써도 됨!
     bd.each(function(idx,ele){
         // console.log(idx);
+
         // 1. 각 li요소에 글자넣기(순번)
         $(ele).text(idx);
+
+        // 2. 좀비 넣기
+        if(idx===9)
+            $(ele).append(mz1);
+        else if(idx===7)
+            $(ele).append(mz2);
+        else if(idx===1)
+            $(ele).append(zom);
+
     }); ////// each //////////////////
 
 
