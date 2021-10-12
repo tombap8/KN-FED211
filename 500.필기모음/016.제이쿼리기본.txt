@@ -128,6 +128,7 @@ https://tombap8.github.io/FED211/004.jQuery%ED%95%99%EC%8A%B5/001.%EA%B8%B0%EB%B
 
 10) fadeIn() 메서드
     - opacity값을 1로 변경하며 서서히 나타남
+    - 특징-> display:none인 상태를 보이는 상태로 변경함!
     fadeIn(시간,이징,함수)
     - 시간은 1/1000초
     - 이징은 가속도
