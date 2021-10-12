@@ -63,9 +63,10 @@ body {
     text-shadow: 2px 2px 2px #000;
 }
 
+/* 미니언즈 주인공! */
 .mi {
     position: absolute;
-    bottom: 5%;
+    top: 75%;
     left: 5%;
     height: 20%;
     z-index: 999;
