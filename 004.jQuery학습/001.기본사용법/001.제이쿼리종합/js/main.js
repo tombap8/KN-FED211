@@ -52,6 +52,14 @@ $(function(){
     // 주사기 태그 셋업
     let inj = '<img src="images/inj.png" alt="주사기" class="inj">';
 
+    // 미니언즈 가로크기 보정값
+    // 윈도우 가로크기의 5%
+    let win5 = $(window).width()*0.05;
+    // console.log("가로크기5%:" + win5);
+    // width() 선택요소의 가로크기 구하기
+    // height() 선택요소의 세로크기 구하기
+    // -> 단위없는 px값
+
     ///////////////////////////////////////////
     /// 2. 초기화 셋팅 /////////////////////////
     ///////////////////////////////////////////
@@ -101,20 +109,28 @@ $(function(){
     btns.first().click(function(){
         console.log("들어가기 버튼!");
 
+        // 메시지 지우기
+        msg.fadeOut(200);
+        // fadeOut(시간) - opacity로 서서히 사라짐
+
         // 이동할 빌딩 li의 위치정보 알아내기!
         // offset() 메서드 위치나 크기정보를 알려줌
         // offset().top - top값
         // offset().left - left값
 
         // 이동할 li 타겟 -> bd변수에 할당(.building li)
-        // let tg = bd.eq();
+        let tg = bd.eq(8); // 8번방
+        let tval = tg.offset().top; // 화면에서의 top값
+        let lval = tg.offset().left + win5; // 화면에서의 left값
+        // win5는 미니언즈를 left값 보정함!(화면의 5%)
+        console.log(tval+"/"+lval);
 
         // 미니언즈 이동하기
         // 대상: .mi -> mi변수에 할당!
         mi.animate({
-            top: "500px",
-            left: "500px"
-        },2000);
+            top: tval + "px",
+            left: lval + "px"
+        },1000);
 /* 
         [animate 메서드]
         animate({CSS설정},시간,이징,함수)
