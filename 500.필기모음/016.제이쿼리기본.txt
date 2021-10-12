@@ -97,11 +97,16 @@ https://tombap8.github.io/FED211/004.jQuery%ED%95%99%EC%8A%B5/001.%EA%B8%B0%EB%B
         문자형: "border-radius"
         -> 변수형을 더 많이 씀
 
-5) each(function(idx,ele){구현부})
+5) each() 메서드
+    each(function(idx,ele){구현부})
    -> 선택요소를 순서대로 돌면서 구현부를 실행하는 메서드
    -> idx 전달변수는 순번이 전달됨(0부터)
    (idx -> index에서 나온말로 변수명 사용)
    -> ele 전달변수는 요소자신(this키워드와 동일)
    (ele -> element에서 나온말로 변수명 사용)
-   - 참고로 idx, ele변수면은 변경가능. 변수의 순서중요!
+   - 참고로 idx, ele변수명은 변경가능. 변수의 순서가 중요!
    - 이 메서드를 사용하면 for문을 안써도 됨!
+
+6) text() 메서드 : 글자데이터를 읽거나 넣는 메서드
+    - $(선택요소).text() -> 선택요소의 글자데이터 읽어옴
+    - $(선택요소).text(내용) -> 선택요소의 글자데이터 넣기
