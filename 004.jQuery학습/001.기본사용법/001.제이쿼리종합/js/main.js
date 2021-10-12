@@ -76,13 +76,15 @@ $(function(){
         // 1. 각 li요소에 글자넣기(순번)
         $(ele).text(idx);
 
-        // 2. 좀비 넣기
+        // 2. 좀비+주사기 넣기
         if(idx===9)
             $(ele).append(mz1);
         else if(idx===7)
             $(ele).append(mz2);
         else if(idx===1)
             $(ele).append(zom);
+        else if(idx===2)
+            $(ele).append(inj);
 
     }); ////// each //////////////////
 
