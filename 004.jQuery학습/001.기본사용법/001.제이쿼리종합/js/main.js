@@ -157,7 +157,7 @@ $(function(){
 
     // 3-2. '옆방으로!' 버튼 //////////////////
     btns.eq(1).click(function(){
-        console.log("들어가기 버튼!");
+        console.log("옆방으로! 버튼!");
 
         // 1. 자기자신 버튼 없애기
         $(this).slideUp(400);
@@ -173,7 +173,7 @@ $(function(){
         // offset().left - left값
 
         // 이동할 li 타겟 -> bd변수에 할당(.building li)
-        let tg = bd.eq(9); // 8번방
+        let tg = bd.eq(9); // 9번방
         let tval = tg.offset().top; // 화면에서의 top값
         let lval = tg.offset().left + win5; // 화면에서의 left값
         // win5는 미니언즈를 left값 보정함!(화면의 5%)
@@ -186,20 +186,26 @@ $(function(){
             top: tval + "px",
             left: lval + "px"
         },1000,function(){ // 콜백함수 (애니후 실행!) //
-            
-            // 5. 메시지변경
-            // 메시지요소
-            msg
-            // 메시지 넣기
-            .text("악!;;;; 좀비! 어서피하자!")
-            // 나타나기
-            .fadeIn(200);
-            // 한번 선택하고 이어서 메서드를 계속
-            // 쓰는 방법을 메서드 체인이라고 함!
-            // 중간에 이어서 쓸땐 세미콜론 없어야함!
 
-            // 6. 다음변경 버튼 보이기
-            btns.eq(2).slideDown(400);
+            
+            // 5. 좀비 나타나기! (콜백에서 2초후)
+            setTimeout(() => {
+                // 현재li(tg변수)에 있는 좀비만 보여라!
+                tg.find(".mz").fadeIn(300);
+                // find(요소) 하위 중 자손요소 찾기!
+
+                // 6. 메시지변경
+                msg.text("악!;;;; 좀비! 어서피하자!")
+                .delay(500).fadeIn(200);
+                // delay(시간) - 애니메이션 앞에서 지연시간주기
+    
+                // 7. 다음변경 버튼 보이기
+                btns.eq(2).slideDown(400);
+
+            }, 2000); /// 타임아웃함수 ////////
+
+
+            
 
         }); ////////// animate //////////
 
