@@ -109,11 +109,15 @@ $(function(){
     btns.first().click(function(){
         console.log("들어가기 버튼!");
 
-        // 메시지 지우기
-        msg.fadeOut(10000);
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(400);
+
+        // 2. 메시지 지우기
+        msg.fadeOut(200);
         // fadeOut(시간) - opacity로 서서히 사라짐
 
-        // 이동할 빌딩 li의 위치정보 알아내기!
+        // 3. 이동할 빌딩 li의 위치정보 알아내기!
+
         // offset() 메서드 위치나 크기정보를 알려줌
         // offset().top - top값
         // offset().left - left값
@@ -125,12 +129,15 @@ $(function(){
         // win5는 미니언즈를 left값 보정함!(화면의 5%)
         console.log(tval+"/"+lval);
 
-        // 미니언즈 이동하기
+        // 4. 미니언즈 이동하기
         // 대상: .mi -> mi변수에 할당!
+        // animate({CSS설정},시간,이징,함수)
         mi.animate({
             top: tval + "px",
             left: lval + "px"
         },1000,function(){ // 콜백함수 (애니후 실행!) //
+            
+            // 5. 메시지변경
             // 메시지요소
             msg
             // 메시지 넣기
@@ -141,18 +148,64 @@ $(function(){
             // 쓰는 방법을 메서드 체인이라고 함!
             // 중간에 이어서 쓸땐 세미콜론 없어야함!
 
+            // 6. 다음변경 버튼 보이기
+            btns.eq(1).slideDown(400);
+
         }); ////////// animate //////////
-/* 
-        [animate 메서드]
-        animate({CSS설정},시간,이징,함수)
-        - CSS 설정에 따라 애니메이션 연출 메서드
-        - 시간 - 1/1000초 (단위없음)
-        - 이징 - 가속도
-        - 함수 - 애니후 실행코드 함수(콜백함수)
- */
+
+    }); ///// 3-1. '들어가기' 버튼 click ////////
+
+    // 3-2. '옆방으로!' 버튼 //////////////////
+    btns.eq(1).click(function(){
+        console.log("들어가기 버튼!");
+
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(400);
+
+        // 2. 메시지 지우기
+        msg.fadeOut(200);
+        // fadeOut(시간) - opacity로 서서히 사라짐
+
+        // 3. 이동할 빌딩 li의 위치정보 알아내기!
+
+        // offset() 메서드 위치나 크기정보를 알려줌
+        // offset().top - top값
+        // offset().left - left값
+
+        // 이동할 li 타겟 -> bd변수에 할당(.building li)
+        let tg = bd.eq(9); // 8번방
+        let tval = tg.offset().top; // 화면에서의 top값
+        let lval = tg.offset().left + win5; // 화면에서의 left값
+        // win5는 미니언즈를 left값 보정함!(화면의 5%)
+        console.log(tval+"/"+lval);
+
+        // 4. 미니언즈 이동하기
+        // 대상: .mi -> mi변수에 할당!
+        // animate({CSS설정},시간,이징,함수)
+        mi.animate({
+            top: tval + "px",
+            left: lval + "px"
+        },1000,function(){ // 콜백함수 (애니후 실행!) //
+            
+            // 5. 메시지변경
+            // 메시지요소
+            msg
+            // 메시지 넣기
+            .text("악!;;;; 좀비! 어서피하자!")
+            // 나타나기
+            .fadeIn(200);
+            // 한번 선택하고 이어서 메서드를 계속
+            // 쓰는 방법을 메서드 체인이라고 함!
+            // 중간에 이어서 쓸땐 세미콜론 없어야함!
+
+            // 6. 다음변경 버튼 보이기
+            btns.eq(2).slideDown(400);
+
+        }); ////////// animate //////////
+
+    }); /// 3-2. '옆방으로!' 버튼 click ////////
 
 
-    }); ////////// 3-1 click /////////////
 
 
 
