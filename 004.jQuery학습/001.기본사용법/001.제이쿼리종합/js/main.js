@@ -613,7 +613,12 @@ $(function(){ //////// jQB /////////////////////
                 $(this).animate({
                     right: tg.width()*1.3 + "px"
                     // li하나의 width크기의 1.3배만큼 right에서 이동
-                }, 5000)
+                }, 5000); ///// animate ////
+
+                // 헬기 등장
+                $(".heli").animate({
+                    left: "20%"
+                }, 2000)
 
             }); ///////// fadeIn //////////////
 
