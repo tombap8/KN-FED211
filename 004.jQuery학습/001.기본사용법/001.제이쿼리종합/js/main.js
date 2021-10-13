@@ -568,6 +568,52 @@ $(function(){ //////// jQB /////////////////////
 
 
 
+    // 3-9. '헬기를 호출!' 버튼 //////////////////
+    btns.last().click(function(){
+        console.log("헬기를 호출! 버튼!");
+
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(400);
+
+        // 2. 메시지 지우기
+        msg.fadeOut(200);
+        // fadeOut(시간) - opacity로 서서히 사라짐
+
+        // 3. 이동할 빌딩 li의 위치정보 알아내기!
+
+        // offset() 메서드 위치나 크기정보를 알려줌
+        // offset().top - top값
+        // offset().left - left값
+
+        // 이동할 li 타겟 -> bd변수에 할당(.building li)
+        let tg = bd.eq(0); // 0번방
+        let tval = tg.offset().top; // 화면에서의 top값
+        let lval = tg.offset().left + win5; // 화면에서의 left값
+        // win5는 미니언즈를 left값 보정함!(화면의 5%)
+        console.log(tval+"/"+lval);
+
+        // 4. 미니언즈 이동하기
+        // 대상: .mi -> mi변수에 할당!
+        // animate({CSS설정},시간,이징,함수)
+        mi.animate({
+            top: tval + "px",
+            left: lval + "px"
+        },1000,function(){ // 콜백함수 (애니후 실행!) //
+
+            // 메시지 보이기
+            msg.text("도와줘요~!!!").fadeIn(200);
+
+            // 좀비들 최종추적!!!
+            // 좀비는? bd.eq(1) 1번방에 있는 좀비들
+            bd.eq(1).find(".mz").fadeIn(200)
+
+
+        }); ////////// animate //////////
+
+    }); /// 3-9. '헬기를 호출!' 버튼 click ////////
+
+
+
 
 
 
