@@ -455,7 +455,11 @@ $(function(){ //////// jQB /////////////////////
             // 주사놓은 후(1.5초후) 다시 미니언즈2(후유증)
             setTimeout(() => {
                 // 미니언즈 이미지 변경하기
-                mi.find("img").attr("src","images/mi2.png");
+                mi.find("img").attr("src","images/m2.png");
+
+                // 주사기 없애기
+                $(".inj").remove();
+                // remove() 선택요소 삭제하기
 
             }, 1500); /////// 타임아웃 //////////
 
