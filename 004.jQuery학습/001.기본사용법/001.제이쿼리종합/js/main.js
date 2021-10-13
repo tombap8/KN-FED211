@@ -457,6 +457,13 @@ $(function(){ //////// jQB /////////////////////
                 // 미니언즈 이미지 변경하기
                 mi.find("img").attr("src","images/m2.png");
 
+                // 메시지넣기
+                msg.text("치료완료!").fadeIn(200)
+                .delay(1000).fadeIn(200,
+                    ()=>{
+                        msg.html("이제, 조금만 더<br>가면 탈출이닷!");
+                    }); //// fadeIn /////////////
+
                 // 주사기 없애기
                 $(".inj").remove();
                 // remove() 선택요소 삭제하기
