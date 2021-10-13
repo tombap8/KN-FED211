@@ -83,16 +83,19 @@
             console.log("로딩완료!!!");
 
             // 타이틀요소
-            // 여기에 코딩!
+            let tit = document.querySelector("#title");
 
             // 1. 타이틀넣기
-            // 여기에 코딩!
+            tit.innerText = pm;
 
             // 2. 배경색 넣기(scolor객체에 샵명과 연결!)
-            // 여기에 코딩!
+            tit.style.backgroundColor = scolor[pm];
 
             // 3. 메인박스 배경이미지 변경하기
-            // 여기에 코딩!
+            document.querySelector("#main")
+            .style.backgroundImage =
+            "url(images/shop_" + scolor[pm] + ".jpg)";
+            // 배경이미지명 규칙: shop_영어색상명.jpg
 
 
         });/////////// 로드구역 //////////////////////////////////
