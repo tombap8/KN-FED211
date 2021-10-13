@@ -270,7 +270,54 @@ $(function(){ //////// jQB /////////////////////
 
         }); ////////// animate //////////
 
-    }); /// 3-2. '옆방으로!' 버튼 click ////////
+    }); /// 3-3. '윗층으로 도망가!' 버튼 click ////////
+
+    // 3-4. '다시옆방으로!' 버튼 //////////////////
+    btns.eq(3).click(function(){
+        console.log("다시옆방으로! 버튼!");
+
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(400);
+
+        // 2. 메시지 지우기
+        msg.fadeOut(200);
+        // fadeOut(시간) - opacity로 서서히 사라짐
+
+        // 3. 이동할 빌딩 li의 위치정보 알아내기!
+
+        // offset() 메서드 위치나 크기정보를 알려줌
+        // offset().top - top값
+        // offset().left - left값
+
+        // 이동할 li 타겟 -> bd변수에 할당(.building li)
+        let tg = bd.eq(6); // 6번방
+        let tval = tg.offset().top; // 화면에서의 top값
+        let lval = tg.offset().left + win5; // 화면에서의 left값
+        // win5는 미니언즈를 left값 보정함!(화면의 5%)
+        console.log(tval+"/"+lval);
+
+        // 4. 미니언즈 이동하기
+        // 대상: .mi -> mi변수에 할당!
+        // animate({CSS설정},시간,이징,함수)
+        mi.animate({
+            top: tval + "px",
+            left: lval + "px"
+        },1000,function(){ // 콜백함수 (애니후 실행!) //
+
+            // 5. 메시지변경
+            msg.text("여긴 없겠지?...")
+            .css({left:"100%"})
+            .delay(500).fadeIn(200);
+
+            // 6. 다음메시지: 2초후 변경하기
+            setTimeout(() => {
+                msg.html("그래도 무서우니까<br>윗층으로 가자!");
+            }, 2000);
+
+
+        }); ////////// animate //////////
+
+    }); /// 3-3. '윗층으로 도망가!' 버튼 click ////////
 
 
 
