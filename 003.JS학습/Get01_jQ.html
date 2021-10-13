@@ -49,12 +49,35 @@
         }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
     <!-- 
-        제이쿼리 라이브러리 CDN 
+        제이쿼리 라이브러리 CDN(Content Delivery Network)
         https://developers.google.com/speed/libraries#jquery
-
     -->
+    <script>
+        /* 반드시 jQeury 라이브러리 아래서 코딩한다! */
+        $(function(){ // jQB ////////////////////////
+
+            // 링크걸 대상: #gnb a
+            // 제이쿼리는 for문 없이 여러요소가 링크걸린다!
+            $("#gnb a").click(function(){
+
+                // a요소의 텍스트
+                let txt = $(this).text();
+                console.log(txt);
+
+                // 페이지이동
+                location.href = "Get02.html?sn=" + escape(txt);
+
+
+            }); /////////// click ///////////
+
+
+
+
+
+        }); ////// jQB ///////////////////////////////
+        //////////////////////////////////////////////
+    </script>
 </head>
 
 <body>
