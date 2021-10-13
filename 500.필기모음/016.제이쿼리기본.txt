@@ -19,7 +19,7 @@ https://tombap8.github.io/FED211/004.jQuery%ED%95%99%EC%8A%B5/001.%EA%B8%B0%EB%B
     -> 서버 배포시엔 용량이 1/3정도로 가벼운 압축버전을씀
     압축버전은 파일명에 min이라는 단어가 들어가 있음!
     jquery-3.6.0.min.js
-
+    
 -> 제이쿼리 라이브러리 CDN(Content Delivery Network)
  : 네트워크로 라이브러리를 불러올 수 있다
  예) 구글링크
@@ -171,9 +171,6 @@ https://tombap8.github.io/FED211/004.jQuery%ED%95%99%EC%8A%B5/001.%EA%B8%B0%EB%B
     - 주의사항: 애니메이션 되는 메서드가 아니면 효과가 없다!
     예) $(선택자).delay(2000).css({left:"100px"}) -> 지연안됨!
       $(선택자).delay(2000).animate({left:"100px"},400) -> OK!
-
-15) empty() 메서드
-    - 선택요소 텍스트 데이터 지우기
 
 8. 수치리턴 메서드 - 선택요소의 위치, 크기 구하기
 1) $(선택요소).offset() : 선택요소의 설정값 읽어오기
