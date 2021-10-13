@@ -637,7 +637,18 @@ $(function(){ //////// jQB /////////////////////
                 }) //// animate ////
                 .animate({ // 마지막 화면밖으로 10초간 천천히 나감
                     left: "100%"
-                }, 10000); //// animate /////
+                }, 10000, function(){ // 콜백함수 (애니후)
+                    // 미리 지정한 class를 타이틀에 줘서 간판떨어짐
+                    // 대상: .tit -> tit변수
+                    tit.addClass("on");
+                    // addClass(클래스명) - 선택요소에 class넣기
+                    
+                    // 3초후에 class "on2" 넣기
+                    setTimeout(() => {
+                        tit.addClass("on2");
+                    }, 3000);
+
+                }); //// animate /////
 
             }); ///////// fadeIn //////////////
 

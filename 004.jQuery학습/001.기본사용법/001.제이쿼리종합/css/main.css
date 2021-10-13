@@ -43,8 +43,8 @@ body {
 }
 /* 두번째 변경 */
 .tit.on2{
-    top: 90%;
-    transform: translateX(-50%) rotate(0deg);
+    top: 95%;
+    transform: translateX(-50%) rotate(6deg);
 }
 
 .building {
