@@ -197,6 +197,19 @@ https://tombap8.github.io/FED211/004.jQuery%ED%95%99%EC%8A%B5/001.%EA%B8%B0%EB%B
 
 17) remove() 메서드 : 선택요소를 제거하는 메서드
 
+18) addClass(클래스명) 
+: 선택요소에 클래스 넣기
+19) removeClass(클래스명) 
+: 선택요소에 클래스 제거하기, 클래스명 안쓰면 모든 클래스를 지움!
+20) toggleClass(클래스명) 
+: 선택요소에 해당클래스가 있으면 빼고 없으면 넣기
+
+비교) JS 기본 내장함수 : 
+    classList.add(클래스명)
+    classList.remove(클래스명)
+    classList.toggle(클래스명)
+
+
 8. 수치리턴 메서드 - 선택요소의 위치, 크기 구하기
 1) $(선택요소).offset() : 선택요소의 설정값 읽어오기
     - $(선택요소).offset().top : top값
