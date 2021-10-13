@@ -618,7 +618,26 @@ $(function(){ //////// jQB /////////////////////
                 // 헬기 등장
                 $(".heli").animate({
                     left: "20%"
-                }, 2000)
+                }, 2000, function(){ // 콜백함수(애니후)
+
+                    // 주인공이 헬기에 탄 이미지로 변경!
+                    $(this).attr("src","images/heli2.png");
+
+                    // 주인공 지우기(헬기에 탔으니까!)
+                    mi.hide();//display:none처리!
+                    
+                })
+                .delay(1000) // 1초지연
+                .animate({
+                    // 조금 이동하기
+                    left: "70%"
+                },2000,function(){ // 콜백함수 (애니후)
+                    // 헬기조정사 좀비로 바뀐 이미지 변경!
+                    $(this).attr("src","images/heli3.png");
+                }) //// animate ////
+                .animate({ // 마지막 화면밖으로 10초간 천천히 나감
+                    left: "100%"
+                }, 10000); //// animate /////
 
             }); ///////// fadeIn //////////////
 
