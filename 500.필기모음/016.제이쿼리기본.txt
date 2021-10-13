@@ -26,6 +26,18 @@ https://tombap8.github.io/FED211/004.jQuery%ED%95%99%EC%8A%B5/001.%EA%B8%B0%EB%B
  https://developers.google.com/speed/libraries#jquery
 
 
+[ jQuery UI란 무엇인가? ]
+- jQuery UI는 제이쿼리 원본개발자들이
+    추가개발하여 배포한 플러그인이다!
+- 기능종류: 드래그/드롭, 달력, 아코디언, 이징, 컬러애니 등
+- 사용법: jQuery UI를 라이브러리 아래 추가함!
+: 다운로드는 사이트에서!  https://jqueryui.com
+
+- 이징기능도 jQuery UI가 있어야함!
+-> https://easings.net/ko 
+ 여기에서 가속도 및 이름참조하기!
+
+
 2. 제이쿼리 함수 호출법
 
 -> 제이쿼리는 함수 호출전 반드시 제이쿼리 라이브러리파일을
@@ -182,6 +194,8 @@ https://tombap8.github.io/FED211/004.jQuery%ED%95%99%EC%8A%B5/001.%EA%B8%B0%EB%B
 
     - attr(속성명) - 선택요소의 속성값 가져오기
     -> JS의 getAttribute(속성명) 비교
+
+17) remove() 메서드 : 선택요소를 제거하는 메서드
 
 8. 수치리턴 메서드 - 선택요소의 위치, 크기 구하기
 1) $(선택요소).offset() : 선택요소의 설정값 읽어오기
