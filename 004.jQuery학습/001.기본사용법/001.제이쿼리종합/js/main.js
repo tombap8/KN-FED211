@@ -646,6 +646,7 @@ $(function(){ //////// jQB /////////////////////
                     // 3초후에 class "on2" 넣기
                     setTimeout(() => {
                         tit.addClass("on2");
+                        bd.parent().addClass("on");
                     }, 3000);
 
                 }); //// animate /////
