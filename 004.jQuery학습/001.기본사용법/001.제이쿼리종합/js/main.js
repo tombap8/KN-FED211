@@ -384,6 +384,11 @@ $(function(){ //////// jQB /////////////////////
                     mi.find("img").attr("src","images/mz1.png");
                     // attr(속성명,값) - 선택요소의 속성바꾸기
                     // attr(속성명) - 선택요소의 속성값 가져오기
+                    
+                    // 메시지 변경하기
+                    msg.html("나도좀비!;;;<br>어서치료주사를!");
+                    // 다음버튼 보이기
+                    btns.eq(5).fadeIn(200);
                 });
                 
                 // 가속도 easing 주기(이징명이 정확해야함!)
@@ -404,6 +409,53 @@ $(function(){ //////// jQB /////////////////////
         }); ////////// animate //////////
 
     }); /// 3-5. '무서우니 윗층으로!' 버튼 click ////////
+
+
+    // 3-6. '치료주사방으로!' 버튼 //////////////////
+    btns.eq(5).click(function(){
+        console.log("치료주사방으로! 버튼!");
+
+        // 1. 자기자신 버튼 없애기
+        $(this).slideUp(400);
+
+        // 2. 메시지 지우기
+        msg.fadeOut(200);
+        // fadeOut(시간) - opacity로 서서히 사라짐
+
+        // 3. 이동할 빌딩 li의 위치정보 알아내기!
+
+        // offset() 메서드 위치나 크기정보를 알려줌
+        // offset().top - top값
+        // offset().left - left값
+
+        // 이동할 li 타겟 -> bd변수에 할당(.building li)
+        let tg = bd.eq(2); // 2번방
+        let tval = tg.offset().top; // 화면에서의 top값
+        let lval = tg.offset().left + win5; // 화면에서의 left값
+        // win5는 미니언즈를 left값 보정함!(화면의 5%)
+        console.log(tval+"/"+lval);
+
+        // 4. 미니언즈 이동하기
+        // 대상: .mi -> mi변수에 할당!
+        // animate({CSS설정},시간,이징,함수)
+        mi.animate({
+            top: tval + "px",
+            left: lval + "px"
+        },1000,function(){ // 콜백함수 (애니후 실행!) //
+
+            // 1. 주사기 돌기! (주사기는 하나뿐)
+            // 주의: transform은 animate지원불가!
+            // -> css의 transition설정으로 애니메이션할것!
+            $(".inj").css({
+                transform:"rotate(-150deg)",
+                transition:".5s ease-out 1s", // 속시이지 (지연시간 1초)
+                zIndex: "9999" // 주인공보다 위!
+            });//////// css ////////////
+
+
+        }); ////////// animate //////////
+
+    }); /// 3-6. '치료주사방으로!' 버튼 click ////////
 
 
 
