@@ -605,7 +605,17 @@ $(function(){ //////// jQB /////////////////////
 
             // 좀비들 최종추적!!!
             // 좀비는? bd.eq(1) 1번방에 있는 좀비들
-            bd.eq(1).find(".mz").fadeIn(200)
+            bd.eq(1).find(".mz")
+            .fadeIn(200,function(){ // 콜백함수 (애니후 실행)
+
+                // 좀비들 움직이기
+                // this키워드 === bd.eq(1).find(".mz")
+                $(this).animate({
+                    right: tg.width()*1.3 + "px"
+                    // li하나의 width크기의 1.3배만큼 right에서 이동
+                }, 5000)
+
+            }); ///////// fadeIn //////////////
 
 
         }); ////////// animate //////////
