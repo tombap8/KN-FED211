@@ -51,23 +51,29 @@
         // url 문자값 가공처리하기 //
 
         // 1. ?(물음표)로 잘라 뒤엣것 저장하기
-        // 여기에 코딩!
+        pm = pm.split("?")[1];
         // 물음표로 자르면 배열에 물음표 앞뒤로 담기고
         // 그 중 뒤엣것 즉 [1]이 전달값이다!
-        // console.log(pm);
+        console.log(pm);
 
         // 2. =(이퀄)로 잘라 뒤엣것 저장하기
-        // 여기에 코딩!
+        pm = pm.split("=")[1];
 
         // 3. escape변환문자 복원하기(unescape)
-        // 여기에 코딩!
-        // console.log(pm);
+        pm = unescape(pm);
+        console.log(pm);
 
         // 4. 샵명과 색상명 연결하기 (객체만들기)
-        // 여기에 코딩!
+        let scolor = {
+            "레드샵":"red",
+            "오렌지샵":"orange",
+            "그린샵":"green",
+            "블루샵":"blue",
+            "블랙샵":"black"
+        };
 
         // 해당 샵 색상명 매칭확인-> 예) scolor["레드샵"]
-        // 여기에 코딩!
+        console.log(scolor[pm]);
 
         //////// 로드구역 ////////////////////////
         // DOMContentLoaded는 html만 모두 그려지면 발생하는 이벤트!
