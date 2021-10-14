@@ -242,6 +242,14 @@
 }
 
 /************* 슬림 상단영역 : #top에 .on을 준다!**********/
+#top.on{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* 내용만큼 줄어드니까 width는 100% */
+    background-color: #fff;
+}
 /* 속박스 */
 #top.on .top{
     min-height: auto;
@@ -259,13 +267,20 @@
 }
 /* 로고 이미지 */
 #top.on .logo img{
-    height: 28px;
-    margin: 12px 0 0 12px;
+    height: 26px;
+    margin: 5px 0 0 7px;
 }
 /* GNB */
 #top.on .gnb{
-
+    font-size: 14px;
 }
+#top.on .gnb li{
+    margin: 0 18px;
+}
+#top.on .gnb li a{
+    color: #333;
+}
+
 
 
 
