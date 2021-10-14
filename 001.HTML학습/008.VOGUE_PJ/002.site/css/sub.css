@@ -38,6 +38,11 @@
     color: #333;
 }
 
+/* 첫번째 메뉴 */
+.lnb li:first-child a {
+    color: #f00;
+}
+
 
 /* 개별 배경이미지 셋업 */
 .bg1-1{
