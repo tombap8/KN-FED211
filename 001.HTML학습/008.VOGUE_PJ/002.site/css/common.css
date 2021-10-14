@@ -241,6 +241,31 @@
     color: #f00;
 }
 
+/************* 슬림 상단영역 : #top에 .on을 준다!**********/
+/* 속박스 */
+#top.on .top{
+    min-height: auto;
+    /* 최소높이없애기 */
+}
+/* 상단메뉴 없애기 */
+#top.on .tmenu{
+    display: none;
+}
+/* 로고 */
+#top.on .logo {
+    position: absolute;
+}
+/* 로고 이미지 */
+#top.on .logo img{
+    height: 28px;
+    margin: 12px 0 0 12px;
+}
+/* GNB */
+#top.on .gnb{
+    
+}
+
+
 
 /***************** 3. 하단영역 *********************/
 .info {
@@ -307,4 +332,10 @@
     color: #fff;
     z-index: 999;
 
+    /* 트랜지션: 속시이지 */
+    transition: .3s;
+}
+/* 탑버튼 마우스 오버시 */
+.tbtn:hover {
+    background-color: #f00;
 }
