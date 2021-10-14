@@ -5,3 +5,23 @@
 @import url(reset.css);
 @import url(core.css);
 @import url(common.css);
+
+/* 개별 배경이미지 셋업 */
+.bg1-1{
+    background-image: url(../images/fashion/cont1-1a.jpg);
+}
+.bg1-2{
+    background-image: url(../images/fashion/cont1-2a.jpg);
+}
+.bg1-3{
+    background-image: url(../images/fashion/cont1-3a.jpg);
+}
+.bg2-1{
+    background-image: url(../images/fashion/cont2-1a.jpg);
+}
+.bg2-2{
+    background-image: url(../images/fashion/cont2-2a.jpg);
+}
+.bg2-3{
+    background-image: url(../images/fashion/cont2-3a.jpg);
+}
