@@ -11,7 +11,8 @@
 } */
 
 /**************** 1. 상단영역 *****************/
-#top {/* 상단 최상위 부모박스 */
+#top {
+    /* 상단 최상위 부모박스 */
     position: relative;
     /* z-index 적용위해 포지션줌 */
     z-index: 9999;
@@ -19,6 +20,7 @@
     box-shadow: 0 0 4px #c0c0c0;
     /* 박스 그림자 */
 }
+
 .top {
     min-height: 206px;
     /* 206px 잡고 있다가 내용늘면 늘어남! */
@@ -286,4 +288,23 @@
 /* 마지막 li만 두껍게! */
 .blink li:last-child a {
     font-weight: bold;
+}
+
+/* 위로가기 버튼 */
+.tbtn {
+    position: fixed;
+    bottom: 0;
+    right: 75px;
+    width: 48px;
+    height: 35px;
+    text-align: center;
+    /* 가로중앙 */
+    line-height: 35px;
+    /* 세로중앙 */
+    background-color: #333;
+    border-radius: 4px 4px 0 0;
+    /* 둥근모서리: 왼위 오른위 오른아래 왼아래 */
+    color: #fff;
+    z-index: 999;
+
 }
