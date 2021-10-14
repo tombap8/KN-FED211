@@ -117,6 +117,24 @@ $(function(){ ///// jQB /////////////////////////
     let data = sinfo[pm];
     console.log(data);
 
+    // 2. 데이터 셋팅하기
+    // 원리: 가져온 데이터에서 속성명으로 각 파트에 맞는 값을 셋팅한다!
+
+    // 2-1. 제목넣기
+    // 대상: .stit
+    let stit = $(".stit"); 
+    stit.text(data["제목"]);
+
+    // 제목 예외 : runway
+    if(pm === "runway"){
+
+        stit.css({
+            // 배경넣기
+            background: "url(images/bg_02.jpg) no-repeat center/cover",
+            color:"#fff"
+        }); //// css ////
+
+    } ////////// if /////////////
 
 
 
