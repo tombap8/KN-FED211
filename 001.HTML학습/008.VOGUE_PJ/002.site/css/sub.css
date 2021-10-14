@@ -36,12 +36,21 @@
     font-family: 'NanumBarunGothic', sans-serif;
     font-size: 18px;
     color: #333;
+    font-weight: lighter;
+    /* 트랜지션: 속시이지 */
+    transition: color .5s;
+}
+
+/* 마우스오버시 */
+.lnb a:hover{
+    color: #f00;
 }
 
 /* 첫번째 메뉴 */
 .lnb li:first-child a {
     color: #f00;
 }
+
 
 
 /* 개별 배경이미지 셋업 */
