@@ -108,34 +108,60 @@ let sinfo = {
 }; ////////// sinfo ////////////////
 
 
-$(function(){ ///// jQB /////////////////////////
+$(function () { ///// jQB /////////////////////////
 
     // 1. 데이터 선택하기
     // 방법: Get방식으로 받은 파라미터값 pm변수를 이용하여
     // 셋팅된 서브메뉴 데이터 객체인 sinfo속성 중 해당 이름의 
     // 속성을 선택하여 값을 셋팅한다! 그 해당이름은 pm변수에 담겨있다!
     let data = sinfo[pm];
-    console.log(data);
+    // console.log(data);
 
-    // 2. 데이터 셋팅하기
+    // 2. 데이터 셋팅하기 /////////
     // 원리: 가져온 데이터에서 속성명으로 각 파트에 맞는 값을 셋팅한다!
 
-    // 2-1. 제목넣기
+    // 2-1. 제목넣기 //////////
     // 대상: .stit
-    let stit = $(".stit"); 
+    let stit = $(".stit");
     stit.text(data["제목"]);
 
     // 제목 예외 : runway
-    if(pm === "runway"){
+    if (pm === "runway") {
 
         stit.css({
             // 배경넣기
             background: "url(images/bg_02.jpg) no-repeat center/cover",
-            color:"#fff"
+            color: "#fff"
         }); //// css ////
 
     } ////////// if /////////////
 
+    //2-2. 서브메뉴(LNB) 넣기 ////
+    // 메뉴 데이터 넣기
+    let lnb = data["메뉴"];
+    console.log(lnb);
+    // 메뉴값이 "없음"이 아닐때만 셋팅하기 //
+    if (lnb !== "없음") {
+
+        // 메뉴는 ul>li구조로 되어있다
+        // 이것을 html로 구성하여 넣어준다!
+        let mhtml = "<ul>";
+
+        // 메뉴배열값 만큼 돌기 -> for of문!
+        for (let x of lnb) { // x는 각각의 배열값!
+            mhtml +=
+                '<li><a href="#">' + x + '</a></li>';
+        } //////////////// for of ////////////////////
+
+         mhtml += "</ul>";
+
+        //  console.log(mhtml);
+
+         // LNB 메뉴 박스요소에 html 메뉴 코드넣기!
+         $(".lnb").html(mhtml);
+         // html(코드) -> 제이쿼리 메서드
+
+    } //////////////////// if /////////////////////////
 
 
 
