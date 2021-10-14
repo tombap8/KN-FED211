@@ -6,6 +6,33 @@
 @import url(core.css);
 @import url(common.css);
 
+/* 1. 서브타이틀 */
+.stit{
+    font-family: 'Pistilli', sans-serif;
+    font-size: 50px;
+    padding: 40px 0 20px;
+    /* 위40px 양쪽0 아래20px */
+    text-align: center;
+    font-weight: normal;
+}
+
+/* 2. 서브메뉴(LNB-Local Navigation Bar) */
+.lnb{
+    padding: 5px 0 50px;
+    /* 위5px 양쪽0 아래50px */
+}
+.lnb ul{
+    display: flex;
+    /* 플렉스박스 */
+    justify-content: center;
+    /* 가로컨텐츠 중앙 */
+}
+.lnb li{
+    margin: 0 10px;
+    /* 양쪽마진 10px */
+}
+
+
 /* 개별 배경이미지 셋업 */
 .bg1-1{
     background-image: url(../images/fashion/cont1-1a.jpg);
