@@ -32,6 +32,12 @@
     /* 양쪽마진 10px */
 }
 
+.lnb a{
+    font-family: 'NanumBarunGothic', sans-serif;
+    font-size: 18px;
+    color: #333;
+}
+
 
 /* 개별 배경이미지 셋업 */
 .bg1-1{
