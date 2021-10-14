@@ -194,3 +194,9 @@
 .shopping .bg2-3{
     background-image: url(../images/shopping/cont2-3a.jpg);
 }
+
+
+/* runway 타이틀 작은글씨 */
+.cbx h2 small{
+    font-size: 14px;
+}
