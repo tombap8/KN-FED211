@@ -30,7 +30,8 @@ $(function () { /////// jQB /////////////////////////
         console.log(mtxt);
 
         // 3. 페이지 이동하기 
-        location.href = "sub.html?cat=" + mtxt;
+        if (mtxt !== "search") // 검색이 아닐때만 이동!
+            location.href = "sub.html?cat=" + mtxt;
         // url뒤에 ?(물음표) 키=값 쌍으로 보냄
         // cat이라는 키이름은 내가 지은것이다!
         // 키=값 으로 데이터를 맞추기 위함!
