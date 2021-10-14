@@ -254,6 +254,8 @@
 /* 로고 */
 #top.on .logo {
     position: absolute;
+    left: 0;
+    /* 부모는? #top - 겉박스가 기준! */
 }
 /* 로고 이미지 */
 #top.on .logo img{
@@ -262,7 +264,7 @@
 }
 /* GNB */
 #top.on .gnb{
-    
+
 }
 
 
