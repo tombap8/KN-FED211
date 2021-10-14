@@ -273,12 +273,21 @@
 /* GNB */
 #top.on .gnb{
     font-size: 14px;
+    box-sizing: border-box;
+    padding: 0 107px;
+    /* 양쪽패딩으로 끝에 닿기전에 줄바꿈되게함! */
+}
+#top.on .gnb ul{
+    max-width: 631px;
 }
 #top.on .gnb li{
     margin: 0 18px;
 }
 #top.on .gnb li a{
     color: #333;
+}
+#top.on .gnb li a:hover{
+    color: #f00;
 }
 
 
