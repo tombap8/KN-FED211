@@ -5,21 +5,11 @@ let pm = location.href;
 // location.href 를 이퀄 오른쪽에 쓰면 url을 읽어옴
 
 
-console.log("원본:"+pm);
+// console.log("원본:"+pm);
 
 // 파라미터값 가공하기 
 // -> ?로 자르고 뒤엣것, =로 자르고 뒤엣것
-pm = pm.split("?");
-console.log(pm);
-
-pm = pm[1];
-console.log(pm);
-
-
-pm = pm.split("=");
-console.log(pm);
-
-pm = pm[1];
+pm = pm.split("?")[1].split("=")[1];
 console.log(pm);
 
 ///// 각 서브별 데이터 셋팅하기 /////
@@ -119,6 +109,21 @@ let sinfo = {
 
 
 $(function(){ ///// jQB /////////////////////////
+
+    // 1. 데이터 선택하기
+    // 방법: Get방식으로 받은 파라미터값 pm변수를 이용하여
+    // 셋팅된 서브메뉴 데이터 객체인 sinfo속성 중 해당 이름의 
+    // 속성을 선택하여 값을 셋팅한다! 그 해당이름은 pm변수에 담겨있다!
+    let data = sinfo[pm];
+    console.log(data);
+
+
+
+
+
+
+
+
 
 }); /////////////// jQB ///////////////////////////
 ///////////////////////////////////////////////////
