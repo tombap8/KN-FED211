@@ -177,8 +177,15 @@ $(function () { ///// jQB /////////////////////////
     // 대상: .cbx h2
     // 사용할 메서드: each(function(idx,ele){구현코드})
     // -> idx 는 순번(0부터), ele 는 요소자신(this와 동일)
+
+
     $(".cbx h2").each(function(idx, ele){
-        console.log(idx);
+        // console.log(idx);
+
+        // 타이틀 넣기
+        $(ele).html(data["타이틀"][idx]);
+        // data["타이틀"][순번] -> 해당순번의 타이틀 배열값!
+
     }); /////////// each ///////////////////////
 
 
