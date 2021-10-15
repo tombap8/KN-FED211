@@ -1,19 +1,25 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회전하는 폰!</title>
     <style>
-        html,body{
+        html,
+        body {
             margin: 0;
             padding: 0;
             height: 100%;
             /* 보이는화면채우기 */
+            overflow: hidden;
+            /* 넘치는 요소숨기기, 스크롤없앰 */
         }
-        .ip{
+
+        .ip {
             position: relative;
-            top: 20%;/* body부모 기준% */
+            top: 20%;
+            /* body부모 기준% */
             width: 200px;
             height: 400px;
             /* outline: 2px solid red; */
@@ -26,8 +32,9 @@
             transform: rotateX(10deg) rotateY(30deg);
 
         }
+
         /* 각면 공통 */
-        .ip li{
+        .ip li {
             position: absolute;
             width: 200px;
             height: 400px;
@@ -35,59 +42,133 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
         }
+
         /* 앞면 */
-        .ip li:first-child{
+        .ip li:first-child {
             background-image: url(images/ip01.png);
             transform: translateZ(10px);
         }
+
         /* 왼쪽면 */
-        .ip li:nth-child(2){
+        .ip li:nth-child(2) {
             left: -10px;
             width: 20px;
             background-image: url(images/ip04.png);
             transform: rotateY(-90deg);
         }
+
         /* 오른쪽면 */
-        .ip li:nth-child(3){
+        .ip li:nth-child(3) {
             right: -10px;
             width: 20px;
             background-image: url(images/ip03.png);
             transform: rotateY(90deg);
         }
+
         /* 윗면 */
-        .ip li:nth-child(4){
+        .ip li:nth-child(4) {
             top: -10px;
             height: 20px;
             background-image: url(images/ip06.png);
             transform: rotateX(-90deg);
         }
+
         /* 아랫면 */
-        .ip li:nth-child(5){
+        .ip li:nth-child(5) {
             bottom: -10px;
             height: 20px;
             background-image: url(images/ip05.png);
             transform: rotateX(90deg);
         }
+
         /* 뒷면 */
-        .ip li:last-child{
+        .ip li:last-child {
             background-image: url(images/ip02.png);
             transform: translateZ(-10px) rotateY(180deg);
         }
-        .ip-ani{
+
+        .ip-ani {
             /* 애니메이션: 이시이지반방마 */
-            animation:  ipAni 2s ease-in-out 1s 2 alternate;
+            animation: ipAni 2s ease-in-out 1s 2 alternate;
             /* 이름 시간 이징 지연시간 반복횟수 대체경로 */
         }
+
         /* 키프레임 */
         @keyframes ipAni {
+            to {
+                transform: rotateX(370deg) rotateY(-330deg);
+                /* y축만 회전함 */
+            }
+        }
+
+        /* 키프레임 */
+
+        /* 흘러가는 글자박스 */
+        .ftxt {
+            position: absolute;
+            top: 5%;
+            left: 0;
+            width: 200%;
+            display: flex;
+
+            /* 애니메이션: 이시이지반방마 */
+            animation: flowAni 10s linear infinite;
+            /* from->to 상태를 계속 반복함! */
+        }
+
+        /* 아랫쪽 글자박스 */
+        .ft2{
+            top: auto;
+            /* 설정값 초기화! 꼭해야함! */
+            bottom: 5%;
+            /* 새로운값 설정 */
+        }
+
+        .tbx {
+            flex: 1;
+            display: flex;
+            /* 아래 자식요소 flex */
+        }
+
+        /* 글자박스 */
+        .tbx span {
+            display: block;
+            flex: 1;
+            text-align: center;
+            font-size: 3.5vw;
+            font-weight: bold;
+            white-space: nowrap;
+            color: #ccc;
+        }
+
+        /* 흘러가는 글자 키프레임 */
+        @keyframes flowAni {
             to{
-                transform: rotateY(-330deg);
+                left: -100%;
             }
         } /* 키프레임 */
     </style>
 </head>
+
 <body>
 
+    <!-- 흘러가는 글자박스 -->
+    <div class="ftxt">
+        <div class="tbx">
+            <span>iPhone 2021</span>
+            <span>iPhone 2021</span>
+            <span>iPhone 2021</span>
+            <span>iPhone 2021</span>
+        </div>
+        <div class="tbx">
+            <span>iPhone 2021</span>
+            <span>iPhone 2021</span>
+            <span>iPhone 2021</span>
+            <span>iPhone 2021</span>
+        </div>
+    </div>
+
+    <!-- 회전하는 폰 -->
     <ul class="ip ip-ani">
         <li></li>
         <li></li>
@@ -96,6 +177,23 @@
         <li></li>
         <li></li>
     </ul>
-    
+
+    <!-- 흘러가는 글자박스 -->
+    <div class="ftxt ft2">
+        <div class="tbx">
+            <span>iPhone 2021</span>
+            <span>iPhone 2021</span>
+            <span>iPhone 2021</span>
+            <span>iPhone 2021</span>
+        </div>
+        <div class="tbx">
+            <span>iPhone 2021</span>
+            <span>iPhone 2021</span>
+            <span>iPhone 2021</span>
+            <span>iPhone 2021</span>
+        </div>
+    </div>
+
 </body>
+
 </html>
