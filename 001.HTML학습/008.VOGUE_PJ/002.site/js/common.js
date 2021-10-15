@@ -50,11 +50,15 @@ $(function(){ ////// jQB ////////////////////////
             scSts = 0;//한번밖에 못들어옴!
             console.log("실행1");
             tm.addClass("on");
+            // 아래코드로 공간보정해봐유~!
+            $(".cont").css("margin-top","160px");
         } ////////// if //////////
         else if(scTop < 100 && scSts===0){ // 100미만
             scSts = 1;//한번밖에 못들어옴!
             console.log("실행2");
             tm.removeClass("on");
+            // 아래코드로 공간보정해봐유~!
+            $(".cont").css("margin-top","0px");
         } //////// else /////////////
 
 
