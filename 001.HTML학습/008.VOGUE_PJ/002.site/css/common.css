@@ -359,7 +359,7 @@
     z-index: 999;
 
     /* 트랜지션: 속시이지 */
-    transition: .3s;
+    transition: background-color .3s;
 
     display: none;
     /* 처음에 안보임 */
