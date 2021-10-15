@@ -16,7 +16,7 @@
             top: 20%;/* body부모 기준% */
             width: 200px;
             height: 400px;
-            outline: 2px solid red;
+            /* outline: 2px solid red; */
             margin: 0 auto;
             padding: 0;
             list-style: none;
@@ -31,14 +31,14 @@
             position: absolute;
             width: 200px;
             height: 400px;
+            background-color: #fff;
             background-repeat: no-repeat;
             background-size: 100% 100%;
         }
         /* 앞면 */
         .ip li:first-child{
             background-image: url(images/ip01.png);
-            transform: translateZ(20px);
-            display: none;
+            transform: translateZ(10px);
         }
         /* 왼쪽면 */
         .ip li:nth-child(2){
@@ -66,13 +66,29 @@
             bottom: -10px;
             height: 20px;
             background-image: url(images/ip05.png);
-            transform: rotateX(-90deg);
+            transform: rotateX(90deg);
         }
+        /* 뒷면 */
+        .ip li:last-child{
+            background-image: url(images/ip02.png);
+            transform: translateZ(-10px) rotateY(180deg);
+        }
+        .ip-ani{
+            /* 애니메이션: 이시이지반방마 */
+            animation:  ipAni 2s ease-in-out 1s 2 alternate;
+            /* 이름 시간 이징 지연시간 반복횟수 대체경로 */
+        }
+        /* 키프레임 */
+        @keyframes ipAni {
+            to{
+                transform: rotateY(-330deg);
+            }
+        } /* 키프레임 */
     </style>
 </head>
 <body>
 
-    <ul class="ip">
+    <ul class="ip ip-ani">
         <li></li>
         <li></li>
         <li></li>
