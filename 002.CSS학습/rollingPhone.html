@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회전하는 폰!</title>
+    <style>
+        html,body{
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            /* 보이는화면채우기 */
+        }
+        .ip{
+            position: relative;
+            top: 20%;/* body부모 기준% */
+            width: 200px;
+            height: 400px;
+            outline: 2px solid red;
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+
+            /* 3D설정 */
+            transform-style: preserve-3d;
+            transform: rotateX(10deg) rotateY(30deg);
+
+        }
+        .ip li{
+            position: absolute;
+        }
+        /* 앞면 */
+        .ip li:first-child{
+            width: 200px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+    <ul class="ip">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    
+</body>
+</html>
