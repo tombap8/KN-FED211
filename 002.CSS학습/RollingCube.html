@@ -43,9 +43,10 @@
                 - 기본값은 flat 즉, 2D
                 - preserve-3d 는 3D 전환설정!
             */
-            /* transform-style: preserve-3d; */
+            transform-style: preserve-3d;
             
             /* 입체를 잘보기위해 x축,y축으로 약간회전해 놓는다 */
+            transform: rotateX(10deg) rotateY(30deg);
 
         }
 
@@ -62,12 +63,12 @@
         /* 1. 앞면 */
         .cube>li:nth-child(1){
             background-color: red;
-            
+            transform: translateZ(150px);
             /* 화면방향으로 li크기의 절반만큼 이동함 */
         }
         /* 2. 오른쪽면 */
         .cube>li:nth-child(2){
-            /* background-color: green; */
+            background-color: green;
             
             /* 화면방향으로 li크기의 절반만큼 이동함 */
         }
