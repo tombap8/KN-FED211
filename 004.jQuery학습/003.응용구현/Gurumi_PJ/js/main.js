@@ -94,6 +94,7 @@ $(function(){ // jQB ////////////////////
         console.log("자동지우기!");
         // 인터발 지우기
         clearInterval(autoI);
+        // clearInterval() 인터발함수 지우는 메서드
 
     }; /////////// clearAuto 함수 //////////////
 
