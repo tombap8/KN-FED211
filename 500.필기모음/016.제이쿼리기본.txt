@@ -69,6 +69,12 @@ https://tombap8.github.io/FED211/004.jQuery%ED%95%99%EC%8A%B5/001.%EA%B8%B0%EB%B
  예) $(".my li")
 
 5. 요소 선택 세부옵션
+    - 선택자 자체 선택옵션 : 선택자 따옴표 안에 표기
+    1) 자기자신의 하위 요소 선택: this키워드 사용시
+        직계자식 - $(">선택자",this) == $(this).children("선택자")
+        자손선택 - $("선택자",this) == $(this).find("선택자")
+
+    - 탐색 선택옵션 : 선택후 뒤에 메서드형태로 선택함
     1) children(선택자) : 직계자식 선택
         $(선택자).children(선택자)
         예) $("#hay").children("div")
