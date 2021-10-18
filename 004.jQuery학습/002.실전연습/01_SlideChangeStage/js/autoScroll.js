@@ -51,8 +51,7 @@ $(function(){ //// jQB ///////////////////////
         // 이벤트명에 일반용과 파이어폭스용 이벤트를 모두 쓴다!
         // 해당되는 이벤트가 적용된다!
         // 대상: document
-        $(document).on("mousewheel DOMMouseScroll",
-        function(e){
+        $(document).on("mousewheel DOMMouseScroll",function(e){
 
             console.log("마우스휠~!");
 
