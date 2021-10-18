@@ -78,12 +78,14 @@ $(function(){ //// jQB ///////////////////////
                 [ 마우스휠 방향 알아내기 위한 값 -> wheelDelta ]
                 - 휠델타란? 마우스 이벤트에 따라 발생하는
                 이벤트 횟수 및 방향, 이동거리 등의 정보를 제공함
-                - ie, chrome 브라우저 공용
+                - ie, chrome 등 브라우저 공용
                 - opera 브라우저는 detail을 사용함
             */
            let delta = e.detail ? e.detail : e.wheelDelta;
            // delta변수에 유효한 설정이 적용되어 할당된다!
            // 조건연산자(삼항연산자) -> 비?집:놀이동산;
+
+           console.log("휠델타정보:"+delta);
 
 
         }); //////////// mousewheel 이벤트함수 //////////////
