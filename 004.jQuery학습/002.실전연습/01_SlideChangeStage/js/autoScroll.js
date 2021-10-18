@@ -191,8 +191,10 @@ $(function () { //// jQB ///////////////////////
         /////////////////////////////////////////
         // 5. 현재 GNB메뉴의 li에 class넣기 ///////
         //////////////////////////////////////////
-        // 대상: .gnb li
+        // 대상: .gnb li + .indic li
         $(".gnb li").eq(pno).addClass("on")
+        .siblings().removeClass("on");
+        $(".indic li").eq(pno).addClass("on")
         .siblings().removeClass("on");
 
 

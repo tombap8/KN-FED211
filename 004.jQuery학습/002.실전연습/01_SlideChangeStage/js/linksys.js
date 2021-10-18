@@ -9,9 +9,11 @@
 
 $(function(){ //////// jQB ////////////////////////////
 
-    // 대상: .gnb a 
+    // 대상: .gnb a + .indic a
+    // -> GNB와 인디케이터는 구조가 똑같음!
+    // 따라서 이미 구현된 클릭이벤트함수에 추가만해도됨!
     
-    $(".gnb a").click(function(e){
+    $(".gnb a, .indic a").click(function(e){
 
         // 1. 기본이동막기
         e.preventDefault();
@@ -52,9 +54,12 @@ $(function(){ //////// jQB ////////////////////////////
         ////////////////////////////////////////////////
         // 5. 현재 페이지에 해당하는 메뉴에 클래스 on넣기!
         ////////////////////////////////////////////////
-        // 대상: .gnb li 
+        // 대상: .gnb li + .indic li
         // 해당 li에 클래스를 넣으면 css에서 셋팅된 디자인적용!
-        $(this).parent().addClass("on")
+        $(".gnb li").eq(pno).addClass("on")
+        .siblings().removeClass("on");
+        //다른 li형제들 class제거!
+        $(".indic li").eq(pno).addClass("on")
         .siblings().removeClass("on");
         //다른 li형제들 class제거!
     
