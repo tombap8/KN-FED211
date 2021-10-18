@@ -9,20 +9,24 @@
 
 $(function(){ //////// jQB ////////////////////////////
 
+    /////////// a요소 기본이동 막기 //////////
+    $(".gnb a, .indic a").click(function(e){
+        // 1. 기본이동막기
+        e.preventDefault();
+    }); /////////// a요소 기본이동 막기 //////////
+
     // 대상: .gnb a + .indic a
     // -> GNB와 인디케이터는 구조가 똑같음!
     // 따라서 이미 구현된 클릭이벤트함수에 추가만해도됨!
     
-    $(".gnb a, .indic a").click(function(e){
+    $(".gnb li, .indic li").click(function(e){
 
-        // 1. 기본이동막기
-        e.preventDefault();
-
+        // 1. a요소 기본이동막기는 위에서 별도로 처리!
+        
         // 2. 클릭된 a의 부모 li의 순번 알아내기
         // index() 메서드사용! -> 선택요소의 순번을 리턴!
-        // parent() 메서드는 a요소의 부모인 li로 올라간다!
         // li는 순번이 0부터 읽어옴!
-        let idx = $(this).parent().index();
+        let idx = $(this).index();
     
         console.log("메뉴클릭!"+idx);
 
