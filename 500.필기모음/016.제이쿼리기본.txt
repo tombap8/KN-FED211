@@ -109,6 +109,8 @@ https://tombap8.github.io/FED211/004.jQuery%ED%95%99%EC%8A%B5/001.%EA%B8%B0%EB%B
     5) last() : 마지막째 자식 
         $(선택자).last()
         예) $("li").last() -> 첫번째 li
+    6) prev() 선택요소 앞형제요소
+    7) next() 선택요소 뒤형제요소
 
 6. 이벤트 메서드
 1) click(함수) - 클릭시 함수실행 
