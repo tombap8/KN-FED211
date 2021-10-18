@@ -111,6 +111,8 @@ https://tombap8.github.io/FED211/004.jQuery%ED%95%99%EC%8A%B5/001.%EA%B8%B0%EB%B
         예) $("li").last() -> 첫번째 li
     6) prev() 선택요소 앞형제요소
     7) next() 선택요소 뒤형제요소
+    8) siblings() 선택요소 외의 다른 형제요소들 선택
+    9) parent() 선택요소의 부모요소 선택
 
 6. 이벤트 메서드
 1) click(함수) - 클릭시 함수실행 
