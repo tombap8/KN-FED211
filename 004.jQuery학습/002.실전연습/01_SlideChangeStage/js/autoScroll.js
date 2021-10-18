@@ -152,7 +152,7 @@ $(function () { //// jQB ///////////////////////
         //          -> 두개다 잡는게 브라우저공통임! 
         $("html,body").animate({
             scrollTop: pos + "px"
-        }, 800);
+        }, 800, "easeInOutQuart");
 
 
     }); //////////// mousewheel 이벤트함수 //////////////
