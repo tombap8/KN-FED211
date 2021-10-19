@@ -81,15 +81,19 @@
     .bg1 {
         background-image: url(../images/cont1b.jpg);
     }
-
     /* 3번 컨텐츠 */
     .bg5 {
         background-image: url(../images/cont3b.jpg);
     }
-
     /* 5번 컨텐츠 */
     .bg9 {
         background-image: url(../images/cont5b.jpg);
+    }
+
+    /* 10. 컨텐츠 타이틀 변경 */
+    .cbx h2 {
+        font-size: 5vw;
+        padding: 5vw;
     }
 
 
