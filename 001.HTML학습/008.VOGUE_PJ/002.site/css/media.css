@@ -96,6 +96,15 @@
         padding: 5vw;
     }
 
+    /* 11. 하단박스 */
+    .info {
+        padding: 40px;
+    }
+
+    /* 12. 하단로고 */
+    .blogo img{
+        width: 200px;
+    }
 
 }
 
