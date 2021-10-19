@@ -55,6 +55,8 @@
         /* 모바일 버튼의 부모자격! */
         min-height: auto;
         height: 55px;
+        background-color: #fff;
+        /* 상단메뉴 배경흰색! */
     }
 
     /* 5. 모바일 전용버튼 보이기 */
