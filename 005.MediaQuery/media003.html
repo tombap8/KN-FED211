@@ -190,7 +190,12 @@
             }
 
             /* 1:1 비율로 모두 변경하기 */
-
+            .rbx::before {
+                padding-top: 100%;
+            }
+            /* .rbx1::before,.rbx2::before,.rbx3::before 
+            개별 가상요소와 같은 레벨의 공통 .rbx::before로
+            셋팅하면 모든 개별요소 설정을 덮어쓴다! */
 
 
         }
