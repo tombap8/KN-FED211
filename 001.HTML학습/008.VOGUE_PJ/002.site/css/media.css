@@ -26,10 +26,12 @@
         top: 0;
         left: 0;
         width: 100vw;
-        height: 100vh;
         overflow-y: scroll;
         z-index: 9999;
-        background-color: #fff;
+    }
+    /* #top에 높이값 100vh적용 클래스 */
+    #top.hv {
+        height: 100vh;
     }
 
     /* 2. 상단메뉴, GNB메뉴 숨기기 */
