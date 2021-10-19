@@ -6,6 +6,11 @@
 @import url(core.css);
 @import url(common.css);
 
+/* 서브 전체박스 */
+.scont{
+    margin-bottom: 100px;
+}
+
 /* 1. 서브타이틀 */
 .stit{
     font-family: 'Pistilli', sans-serif;
