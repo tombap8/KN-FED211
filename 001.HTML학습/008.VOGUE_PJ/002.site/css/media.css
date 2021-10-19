@@ -13,3 +13,16 @@
 
 }
 /* 1024px 이하 */
+
+
+/* 500px 이하 */
+@media only screen and (max-width:500px) {
+    
+    /* 상단영역고정 */
+    #top {
+        
+    }
+
+
+}
+/* 500px 이하 */
