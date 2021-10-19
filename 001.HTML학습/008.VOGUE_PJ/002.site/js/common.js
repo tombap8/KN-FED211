@@ -141,7 +141,7 @@ $(function () { ////// jQB ////////////////////////
         e.preventDefault();
 
         // 모바일 메뉴 슬라이드 애니메이션
-        $("#mobx").slideToggle(600);
+        $("#mobx").slideToggle(600,"easeInOutQuart");
         $("#top").toggleClass("hv");
         // toggleClass(클래스명)
         // 해당클래스가 없으면 넣고 있으면 뺌!
@@ -154,11 +154,14 @@ $(function () { ////// jQB ////////////////////////
     /// 검색버튼 클릭시 검색창 보이기/숨기기 ///
     // 이벤트대상: .sbtn - 검색버튼
     // 변경대상: .mos - 검색창박스
-    $(".sbtn").click(function(){
+    $(".sbtn").click(function(e){
+
+        // 기본이동막기
+        e.preventDefault();
 
         // 검색창 보이기/숨기기 : slideToggle()
-        $(".mos").slideToggle(300);
-        
+        $(".mos").slideToggle(300,"easeOutQuint");
+
     }); ////////// click ///////////////////
 
 
