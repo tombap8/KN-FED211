@@ -3,22 +3,24 @@
 
 /* 1024px 이하 */
 @media only screen and (max-width:1024px) {
-    
+
     /* 컨텐츠 박스 타이틀 h2요소 */
     .cbx h2 {
         font-size: 3vw;
         padding: 5vw;
     }
+
     /* 보이는 화면기준 뷰포트 단위사용! vw */
 
 }
+
 /* 1024px 이하 */
 
 
 /* 500px 이하 */
 @media only screen and (max-width:500px) {
-    
-    /* 상단영역고정 */
+
+    /* 1. 상단영역고정 */
     #top {
         position: fixed;
         top: 0;
@@ -28,6 +30,69 @@
         background-color: #fff;
     }
 
+    /* 2. 상단메뉴, GNB메뉴 숨기기 */
+    .tmenu,
+    .gnb {
+        display: none;
+    }
+
+    /* 3. 로고박스 + 로고이미지 */
+    .logo {
+        padding: 10px;
+    }
+
+    .logo img {
+        width: 130px;
+    }
+
+    /* 4. 상단영역 - 최소높이 없앰 */
+    .top {
+        min-height: auto;
+        height: 55px;
+    }
+
+    /* 5. 모바일 전용버튼 보이기 */
+    .mobtn {
+        display: block;
+    }
+
+    /* 6. 컨텐츠박스 상단 밀기(상단메뉴에 덮이므로) */
+    .cont {
+        margin-top: 55px;
+        /* 상단메뉴 높이값 만큼 밀었음! */
+    }
+
+    /* 7. 컨텐츠박스 3번째 안보에게 처리 */
+    /* 방법 - flex:0으로 처리함 */
+    .pt2 .cbx:last-child {
+        flex: 0;
+    }
+
+    /* 8. 비율박스 비율변경 */
+    .pt1.rbx::before {
+        padding-top: 150%;
+    }
+    .pt2.rbx::before {
+        padding-top: 75%;
+    }
+
+    /* 9. 컨텐츠 배경이미지 모바일용 변경 */
+    /* 1번 컨텐츠 */
+    .bg1 {
+        background-image: url(../images/cont1b.jpg);
+    }
+
+    /* 3번 컨텐츠 */
+    .bg5 {
+        background-image: url(../images/cont3b.jpg);
+    }
+
+    /* 5번 컨텐츠 */
+    .bg9 {
+        background-image: url(../images/cont5b.jpg);
+    }
+
 
 }
+
 /* 500px 이하 */
