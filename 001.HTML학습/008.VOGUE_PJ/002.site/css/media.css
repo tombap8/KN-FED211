@@ -25,7 +25,9 @@
         position: fixed;
         top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
+        height: 100vh;
+        overflow-y: scroll;
         z-index: 9999;
         background-color: #fff;
     }
@@ -47,6 +49,8 @@
 
     /* 4. 상단영역 - 최소높이 없앰 */
     .top {
+        position: relative;
+        /* 모바일 버튼의 부모자격! */
         min-height: auto;
         height: 55px;
     }

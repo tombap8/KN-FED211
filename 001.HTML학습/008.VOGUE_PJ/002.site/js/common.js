@@ -130,6 +130,25 @@ $(function () { ////// jQB ////////////////////////
     }); ///////// click ////////////
 
 
+    ////////// 모바일 코드 ////////////////////////
+
+    // 햄버거버튼 클릭시 메뉴보이기 //
+    // 대상: #mobx - 모바일메뉴박스
+    $(".hbtn").click(function(){
+        $("#mobx").slideToggle(600);
+    }); ////////// click ///////////
+    
+    // slideToggle(시간,이징,함수)
+    // -> display:none이면 slideDown
+    // 아니면 slideUp 을 실행함
+    // 토글(toggle)은 두가지 기능 겸하는 것을 말함
+
+    // 확장:
+    // toggle(시간,이징,함수) -> show/hide전환
+    // fadeToggle(시간,이징,함수) -> fadeIn/fadeOut전환
+
+
+
 
 
 
