@@ -98,12 +98,19 @@
 
     /* 11. 하단박스 */
     .info {
+        min-height: auto;
         padding: 40px;
     }
 
     /* 12. 하단로고 */
     .blogo img{
         width: 200px;
+    }
+
+    /* 13. 위로이동버튼 */
+    .tbtn {
+        right: 15px;
+        bottom: 100px;
     }
 
 }
