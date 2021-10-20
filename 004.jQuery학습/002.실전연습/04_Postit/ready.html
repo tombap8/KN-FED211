@@ -139,7 +139,12 @@
 					}); ///// css /////
 
 					// 8. 동영상 박스에 유튜브 iframe 넣기
-					mbox.html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/miSL86dtqis?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
+					// 드롭된 요소마다 data-mv라는 사용자속성에
+					// 동영상 코드가 들어가 있다!
+					// 이것을 읽어서 아래 iframe 동영상코드 부분에
+					// 넣어준다!
+
+					mbox.html('<iframe width="100%" height="100%" src="https://www.youtube.com/embed/'+ tg.attr("data-mv") +'?autoplay=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');
 
 					// 9. 동영상박스 숨기고 1초후에 슬라이드 보이기
 					mbox.hide().delay(1000).slideDown(2000);
