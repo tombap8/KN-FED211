@@ -74,7 +74,8 @@
 		// -> on(이벤트명,함수)
 		// 대상: .draggable -> dg변수
 		dg.on("dragstart",function(){
-			console.log("드래그시작!");
+			// console.log("드래그시작!");
+			$(this).addClass("invert");
 		}); /////// dragstart 함수 /////////////
 
 
