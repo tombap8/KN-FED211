@@ -13,6 +13,13 @@
 /* Pistilli체 */
 @import url('http://fonts.cdnfonts.com/css/pistilli');
 
+@font-face {
+    font-family: 'Pistilli';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Pistilli'), url(../fonts/Pistilli-Roman.woff) format('woff');
+}
+
 /* 
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
