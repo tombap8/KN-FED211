@@ -1,112 +1,119 @@
 <!DOCTYPE HTML>
 <html>
+
 <head>
-<meta charset="utf-8">
+	<meta charset="utf-8">
 
-<title>drag and drop 기능</title>
-<style>
-	div.draggable {
-		float: left;
-		width: 160px;
-		height: 160px;
-		padding: 10px 0px 0px 20px;
-		background: url(post.png) no-repeat;
-		font-size: 14px;
-	}
+	<title>drag and drop 기능</title>
+	<style>
+		div.draggable {
+			float: left;
+			width: 160px;
+			height: 160px;
+			padding: 10px 0px 0px 20px;
+			background: url(post.png) no-repeat;
+			font-size: 14px;
+		}
 
-	div.draggable img {
-		width: 130px;
-		height: 80px;
-	}
+		div.draggable img {
+			width: 130px;
+			height: 80px;
+		}
 
-	div.invert {
-		background: url(post2.png) no-repeat;
-	}
+		div.invert {
+			background: url(post2.png) no-repeat;
+		}
 
-	/* 드롭박스 */
-	.dropshow {
-		width: 500px;
-		height: 400px;
-		text-align: center;
-		background:
-			url(addimg/effect2.jpg) no-repeat center/cover;
-		font: bold 36px/400px "맑은 고딕", "굴림";
-		color: #f00;
-		text-shadow: 1px 0 #fff, -1px 0 #fff,
-			0 1px #fff, 0 -1px #fff;
-		/* 글자그림자를 이용한 테두리 */
-		margin: 50px auto;
-		/* 가로중앙 */
-	}
+		/* 드롭박스 */
+		.dropshow {
+			width: 500px;
+			height: 400px;
+			text-align: center;
+			background:
+				url(addimg/effect2.jpg) no-repeat center/cover;
+			font: bold 36px/400px "맑은 고딕", "굴림";
+			color: #f00;
+			text-shadow: 1px 0 #fff, -1px 0 #fff,
+				0 1px #fff, 0 -1px #fff;
+			/* 글자그림자를 이용한 테두리 */
+			margin: 50px auto;
+			/* 가로중앙 */
+		}
 
-	/* 드래그 박스 */
-	.dbox {
-		width: 720px;
-		height: 170px;
-		margin: 0 auto;
-		border: 2px dashed blue;
-	}
-</style>
+		/* 드래그 박스 */
+		.dbox {
+			width: 720px;
+			height: 170px;
+			margin: 0 auto;
+			border: 2px dashed blue;
+		}
+	</style>
 
-<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
-<script type="text/javascript" src="jquery-ui.min.js"></script>
-<!-- 제이쿼리 라이브러리 아래에 제이쿼리 UI 가 있어야 드래그 앤 드롭 기능을 사용할 수 있다! -->
-<script>
-	$(function(){ ///// jQB ///////////////////////////
+	<script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+	<script type="text/javascript" src="jquery-ui.min.js"></script>
+	<!-- 제이쿼리 라이브러리 아래에 제이쿼리 UI 가 있어야 드래그 앤 드롭 기능을 사용할 수 있다! -->
+	<script>
+		$(function () { ///// jQB ///////////////////////////
 
-		// 드래그 대상
-		let dg = $(".draggable");
+			// 드래그 대상
+			let dg = $(".draggable");
 
-		// [ 드래그 기능 적용하기 ]
-		// 제이쿼리 UI의 draggable() 메서드를 호출함
-		// -> https://jqueryui.com/draggable/
-		// 대상: .draggable
-		// -> draggable() 메서드에 옵션은 객체형식{}으로 셋팅함
-		dg.draggable({
-			cursor: "move", // 커서모양 "이동중" 표시로변경
-			stack: ".draggable", // 드래그 대상 상위처리(선택요소명)
-			opacity: 0.7 // 이동중 투명도 설정
-		});
+			// [ 드래그 기능 적용하기 ]
+			// 제이쿼리 UI의 draggable() 메서드를 호출함
+			// -> https://jqueryui.com/draggable/
+			// 대상: .draggable
+			// -> draggable() 메서드에 옵션은 객체형식{}으로 셋팅함
+			dg.draggable({
+				cursor: "move", // 커서모양 "이동중" 표시로변경
+				stack: ".draggable", // 드래그 대상 상위처리(선택요소명)
+				opacity: 0.7 // 이동중 투명도 설정
+			});
 
-		// 1. 드래그가 시작될때 배경이미지 class로 변경하기
-		// 이벤트 종류: dragstart (드래그시작시 발생이벤트)
-		// 이벤트와 함수를 묶어주는 메서드를 사용함!
-		// -> on(이벤트명,함수)
-		// 대상: .draggable -> dg변수
-		dg.on("dragstart",function(){
-			// console.log("드래그시작!");
-			$(this).addClass("invert");
-		}); /////// dragstart 함수 /////////////
+			// 1. 드래그가 시작될때 배경이미지 class로 변경하기
+			// 이벤트 종류: dragstart (드래그시작시 발생이벤트)
+			// 이벤트와 함수를 묶어주는 메서드를 사용함!
+			// -> on(이벤트명,함수)
+			// 대상: .draggable -> dg변수
+			dg.on("dragstart", function () {
+				// console.log("드래그시작!");
+				$(this).addClass("invert");
+			}); /////// dragstart 함수 /////////////
 
-		// 2. 드래그가 끝날때 배경이미지 class로 변경하기
-		// 이벤트 종류: dragstop (드래그끝날때 발생이벤트)
-		// 이벤트와 함수를 묶어주는 메서드를 사용함!
-		// -> on(이벤트명,함수)
-		// 대상: .draggable -> dg변수
-		dg.on("dragstop",function(){
-			// console.log("드래그끝!");
-			$(this).removeClass("invert");
-		}); /////// dragstop 함수 /////////////
+			// 2. 드래그가 끝날때 배경이미지 class로 변경하기
+			// 이벤트 종류: dragstop (드래그끝날때 발생이벤트)
+			// 이벤트와 함수를 묶어주는 메서드를 사용함!
+			// -> on(이벤트명,함수)
+			// 대상: .draggable -> dg변수
+			dg.on("dragstop", function () {
+				// console.log("드래그끝!");
+				$(this).removeClass("invert");
+			}); /////// dragstop 함수 /////////////
 
-		/// 드롭할때 발생하는 이벤트 처리하기 ///////
-		// droppable() 메서드 : 드롭되는 요소처리
-		// 이벤트 대상: .dropshow
-		$(".dropshow").droppable({
-			// 드롭처리 속성 -> drop: 함수
-			drop: function(evt, ui){
-				// evt - 이벤트전달변수, ui - 드롭관련객체
-				// console.log("나, 빠졌다~!");
+			/// 드롭할때 발생하는 이벤트 처리하기 ///////
+			// droppable() 메서드 : 드롭되는 요소처리
+			// 이벤트 대상: .dropshow
+			$(".dropshow").droppable({
+				// 드롭처리 속성 -> drop: 함수
+				drop: function (evt, ui) {
+					// evt - 이벤트전달변수, ui - 드롭관련객체
+					// console.log("나, 빠졌다~!");
 
-				// 드롭된요소 -> ui.draggable
-				let tg = ui.draggable;
+					// 드롭된요소 -> ui.draggable
+					let tg = ui.draggable;
 
-				// 1. 드롭된 요소의 이미지의 src를 읽어옴
-				let isrc = tg.find("img").attr("src");
-				console.log("이미지경로:"+isrc);
+					// 1. 드롭된 요소의 이미지의 src를 읽어옴
+					let isrc = tg.find("img").attr("src");
+					// console.log("이미지경로:"+isrc);
 
-			} ///// drop ////
-			
-		}); ////////// droppable /////////////////////
+					// 2. 드롭영역의 배경이미지 변경하기
+					// $(this) === $(".dropshow")
+					$(this).css({
+						backgroundImage: "url(" + isrc + ")"
+					}); //////// css ///////////
+
+				} ///// drop ////
+
+			}); ////////// droppable /////////////////////
 
 
 
@@ -114,8 +121,8 @@
 
 
 
-	}); /////////////// jQB ///////////////////////////
-</script>
+		}); /////////////// jQB ///////////////////////////
+	</script>
 
 </head>
 
@@ -150,18 +157,5 @@
 
 
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
