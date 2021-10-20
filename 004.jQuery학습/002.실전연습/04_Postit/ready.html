@@ -166,8 +166,12 @@
 					// 12. 닫기버튼 클릭시 기능구현
 					cbtn.click(function(){
 						// 1. mbox 닫기
-						mbox.slideUp(1000);
-						
+						mbox.slideUp(1000,function(){
+							// 2. 자기자신 없애기
+							$(this).remove();
+							
+						}); ///// slideUp //////
+
 					}); ////// click ////////
 
 
