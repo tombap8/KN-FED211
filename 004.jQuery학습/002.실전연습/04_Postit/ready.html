@@ -58,7 +58,10 @@
 		// 제이쿼리 UI의 draggable() 메서드를 호출함
 		// -> https://jqueryui.com/draggable/
 		// 대상: .draggable
-		$(".draggable").draggable();
+		// -> draggable() 메서드에 옵션은 객체형식{}으로 셋팅함
+		$(".draggable").draggable({
+			cursor: "move" // 커서모양 "이동중" 표시로변경
+		});
 
 
 
