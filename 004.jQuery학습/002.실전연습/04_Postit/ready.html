@@ -88,6 +88,19 @@
 			$(this).removeClass("invert");
 		}); /////// dragstop 함수 /////////////
 
+		/// 드롭할때 발생하는 이벤트 처리하기 ///////
+		// droppable() 메서드 : 드롭되는 요소처리
+		// 이벤트 대상: .dropshow
+		$(".dropshow").droppable({
+			// 드롭처리 속성 -> drop: 함수
+			drop: function(evt, ui){
+				// evt - 이벤트전달변수, ui - 드롭관련객체
+				console.log("나, 빠졌다~!");
+
+			} ///// drop ////
+			
+		}); ////////// droppable /////////////////////
+
 
 
 
