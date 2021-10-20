@@ -169,7 +169,14 @@
 						mbox.slideUp(1000,function(){
 							// 2. 자기자신 없애기
 							$(this).remove();
-							
+							// 3. 드롭된 요소 다시보이기
+							tg.show();
+							// 4. 드롭된 요소 원래위치로
+							tg.css({
+								top: "0",
+								left: "0"
+							}); /// css ////
+
 						}); ///// slideUp //////
 
 					}); ////// click ////////
