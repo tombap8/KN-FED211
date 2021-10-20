@@ -113,10 +113,13 @@
 
 					// 3. 드롭된 요소의 자식p태그의 글자읽어오기
 					let dtxt = tg.find("p").text();
-					console.log("글자:"+dtxt);
+					// console.log("글자:"+dtxt);
 
 					// 4. 드롭영역에 글자넣기
 					$(this).text(dtxt + " 당첨~!!!");
+
+					// 5. 드롭된 요소 사라지게 하기
+					tg.hide();
 
 				} ///// drop ////
 
