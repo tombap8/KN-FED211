@@ -41,8 +41,8 @@ $(function(){ //////// jQB ////////////////////////////
         // .page의 top값으로 구하면 되지만 새로운버전의
         // 제이쿼리에서 씽크 불일치가 발생함!
         ///////////////////////////////////////////
-        let pos = $(window).height() * pno;
-        // $(window).height() 윈도우 높이값
+        let pos = $(window).width() * pno;
+        // $(window).width() 윈도우 가로값
 
         console.log("이동위치:"+pos);
 
@@ -52,7 +52,7 @@ $(function(){ //////// jQB ////////////////////////////
         // 전체 스크롤 이동대상: html,body 
         //          -> 두개다 잡는게 브라우저공통임! 
         $("html,body").animate({
-            scrollTop: pos + "px"
+            scrollLeft: pos + "px"
         }, 800, "easeInOutQuart");
 
         ////////////////////////////////////////////////
