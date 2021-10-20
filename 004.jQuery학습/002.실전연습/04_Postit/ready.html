@@ -8,49 +8,88 @@
 <script type="text/javascript" src="jquery-ui.min.js"></script>
 
 <style>
+	div.draggable {
+		float: left;
+		width: 160px;
+		height: 160px;
+		padding: 10px 0px 0px 20px;
+		background: url(post.png) no-repeat;
+		font-size: 14px;
+	}
 
-div.draggable {
-	float:left;
-	width: 160px;
-	height: 160px;
-	padding:10px 0px 0px 20px;
-	background:url(post.png) no-repeat;
-}
+	div.draggable img {
+		width: 130px;
+		height: 80px;
+	}
 
-div.invert {  background:url(post2.png) no-repeat;}
+	div.invert {
+		background: url(post2.png) no-repeat;
+	}
 
+	/* 드롭박스 */
+	.dropshow {
+		width: 500px;
+		height: 400px;
+		text-align: center;
+		background:
+			url(addimg/effect2.jpg) no-repeat center/cover;
+		font: bold 36px/400px "맑은 고딕", "굴림";
+		color: #f00;
+		text-shadow: 1px 0 #fff, -1px 0 #fff,
+			0 1px #fff, 0 -1px #fff;
+		/* 글자그림자를 이용한 테두리 */
+		margin: 50px auto;
+		/* 가로중앙 */
+	}
 
+	/* 드래그 박스 */
+	.dbox {
+		width: 720px;
+		height: 170px;
+		margin: 0 auto;
+		border: 2px dashed blue;
+	}
 </style>
 
 </head>
 
 <body>
 
+	<!-- 드롭 박스 -->
+	<div class="dropshow">
+		여기에 드롭하세요~~!
+	</div>
+
+	<!-- 
+		w3c에서 허용하는 새로운 속성은 data-라는 시작명으로
+		작성하면 된다!
+		-> data-내가지은이름
+		예) data-myhouse="값"
+	 -->
+
+	<!-- 드래그 박스 -->
+	<div class="dbox">
+		<!-- data-mv속성은 동영상코드 셋업 -->
+		<div class="draggable" data-mv="67O-LdK3kFA">
+			<p>쇼핑몰 자유이용권</p>
+			<img src="addimg/gm.jpg" alt="쥐마켓">
+		</div>
+		<div class="draggable" data-mv="D_-S-A4qnDk">
+			<p>롯떼월들 자유이용권</p>
+			<img src="addimg/lottee.jpg" alt="롯떼월들">
+		</div>
+		<div class="draggable" data-mv="o2IehnnGGIU">
+			<p>큐챠 자유이용권</p>
+			<img src="addimg/coocha.jpg" alt="큐챠">
+		</div>
+		<div class="draggable" data-mv="ISTsLeAGQ9Q">
+			<p>해외여행 자유이용권</p>
+			<img src="addimg/effect1.jpg" alt="허나투어">
+		</div>
+
+	</div>
 
 
-
-<div class="draggable">
-	<p>title</p>
-</div>
-
-<div  class="draggable">
-	<p>Lorem ipsum dolor <br /> sit amet, consecteturlit. Aenean</p>    
-</div>
-
-<div  class="draggable">
-	<p>Drag me around</p>
-</div>
-
-<div id ="gg" class="draggable">
-	<p>Drag me around</p>
-	<img src="img/effect1.jpg" width="130" height="80" />
-</div>
-
-<script>
-
-
- 
-</script>
 </body>
 </html>
 
