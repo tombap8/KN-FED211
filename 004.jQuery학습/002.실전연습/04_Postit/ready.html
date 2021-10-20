@@ -95,7 +95,14 @@
 			// 드롭처리 속성 -> drop: 함수
 			drop: function(evt, ui){
 				// evt - 이벤트전달변수, ui - 드롭관련객체
-				console.log("나, 빠졌다~!");
+				// console.log("나, 빠졌다~!");
+
+				// 드롭된요소 -> ui.draggable
+				let tg = ui.draggable;
+
+				// 1. 드롭된 요소의 이미지의 src를 읽어옴
+				let isrc = tg.find("img").attr("src");
+				console.log("이미지경로:"+isrc);
 
 			} ///// drop ////
 			
