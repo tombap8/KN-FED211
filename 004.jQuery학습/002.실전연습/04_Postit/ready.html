@@ -111,6 +111,10 @@
 						backgroundImage: "url(" + isrc + ")"
 					}); //////// css ///////////
 
+					// 3. 드롭된 요소의 자식p태그의 글자읽어오기
+					let dtxt = tg.find("p").text();
+					console.log("글자:"+dtxt);
+
 				} ///// drop ////
 
 			}); ////////// droppable /////////////////////
