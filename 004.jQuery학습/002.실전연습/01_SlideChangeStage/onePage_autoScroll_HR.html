@@ -48,10 +48,25 @@
 
         /* 공통 class */
 
+        /* 페이지 전체 부모박스 */
+        .wrap {
+            display: flex;
+            /* 플렉스 박스 */
+            width: 700%;
+            /* 7개 슬라이드 크기 */
+            height: 100%;
+        }
+
         /* 페이지 공통 class */
         .page{/* 한페이지 보이는 화면 채우기 */
-            width: 100%;
-            height: 100%;
+
+            /* 플렉스박스 자식요소 등분할 설정 */
+            flex: 1;
+            /* height: 100% 설정도 불필요! */
+
+
+            /* width: 100%;
+            height: 100%; */
             /* 
                 width: 100vw;
                 height: 100vh;
@@ -242,13 +257,15 @@
     </div>
 
     <!-- 2. 페이지영역 -->
-    <section id="pg1" class="page"></section>
-    <section id="pg2" class="page"></section>
-    <section id="pg3" class="page"></section>
-    <section id="pg4" class="page"></section>
-    <section id="pg5" class="page"></section>
-    <section id="pg6" class="page"></section>
-    <section id="pg7" class="page"></section>
+    <div class="wrap">
+        <section id="pg1" class="page"></section>
+        <section id="pg2" class="page"></section>
+        <section id="pg3" class="page"></section>
+        <section id="pg4" class="page"></section>
+        <section id="pg5" class="page"></section>
+        <section id="pg6" class="page"></section>
+        <section id="pg7" class="page"></section>
+    </div>
 
     
     <!-- 3. 인디케이터(위치표시자) -->
