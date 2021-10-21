@@ -72,6 +72,20 @@ $(function(){ /////// jQB ///////////////////
             let res = vReg(cv,cid);
             console.log("검사결과:"+res);
 
+            // 결과가 false일 경우 메시지 띄우기
+            if(!res){ // !(NOT연산자)로 결과 반대로!
+
+                $(this).siblings(".msg")
+                .text("영문자로 시작하는 6~20글자 영문자/숫자");
+
+            } /////// if문 : 결과가 false일때 ////
+            else {
+
+                $(this).siblings(".msg")
+                .text("훌륭한 아이디네요~!");
+
+            } /////// else문 : 결과가 true일때 ////
+
 
         } /////////// else if문 : 아이디일때 /////////
 
