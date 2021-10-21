@@ -93,12 +93,12 @@
 
             ////// 이동위치 한계설정 ////
 
-            // 첫번째 한계선 : 화면가로크기의 절반값
-            let fpt = $(window).width() / 2;
+            // 첫번째 한계선 : 화면가로크기의 1/3값
+            let fpt = $(window).width() / 3;
             // first point 첫번째 포인트 지점
 
-            // 마지막 한계선 : move박스 가로크기 - 화면절반
-            let lpt = move.width() - fpt;
+            // 마지막 한계선 : move박스 가로크기 - 화면2/3
+            let lpt = move.width() - fpt*2;
             // last point 마지막 포인트 지점(끝 절반이 보임!)
             // console.log("마지막포인트:"+lpt);
 
