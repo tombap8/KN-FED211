@@ -76,13 +76,15 @@ $(function(){ /////// jQB ///////////////////
             if(!res){ // !(NOT연산자)로 결과 반대로!
 
                 $(this).siblings(".msg")
-                .text("영문자로 시작하는 6~20글자 영문자/숫자");
+                .text("영문자로 시작하는 6~20글자 영문자/숫자")
+                .removeClass("on");// 글자색 변경 제거
 
             } /////// if문 : 결과가 false일때 ////
             else {
 
                 $(this).siblings(".msg")
-                .text("훌륭한 아이디네요~!");
+                .text("훌륭한 아이디네요~!")
+                .addClass("on");// 글자색변경 class
 
             } /////// else문 : 결과가 true일때 ////
 
