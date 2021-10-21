@@ -3,22 +3,8 @@
 
 /* 웹폰트 */
 
-/* Roboto체 */
-@font-face {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 300;
-    font-display: swap;
-    src: url(../fonts/Roboto-Light.woff) format('woff');
-}
-/* Roboto Condensed체 */
-@font-face {
-    font-family: 'Roboto Condensed';
-    font-style: normal;
-    font-weight: 700;
-    font-display: swap;
-    src: url(../fonts/RobotoCondensed-Bold.woff) format('woff');
-}
+/* Roboto체 + Roboto Condensed체 */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&family=Roboto:wght@300&display=swap');
 
 
 /* 나눔바른고딕 */
