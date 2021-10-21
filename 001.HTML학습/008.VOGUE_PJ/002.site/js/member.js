@@ -265,8 +265,9 @@ $(function () { /////// jQB ///////////////////
         } ///// if문 : init일때 /////
         else if(cv === "free"){ // free일때
 
-            // 1.직접입력창 보이기
-            eml2.fadeIn(300);
+            // 1.직접입력창 보이기(fadeIn)
+            //   + 값초기화(val) + 포커스주기(focus)
+            eml2.fadeIn(300).val("").focus();
 
             // 2. 이메일 주소 만들기
             let comp = eml1.val() + "@" + eml2.val();
