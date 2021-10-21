@@ -100,7 +100,7 @@
             // 마지막 한계선 : move박스 가로크기 - 화면절반
             let lpt = move.width() - fpt;
             // last point 마지막 포인트 지점(끝 절반이 보임!)
-            console.log("마지막포인트:"+lpt);
+            // console.log("마지막포인트:"+lpt);
 
             //  화면에서 마우스가 움직일때 이벤트는? 
             // -> mousemove (터치펀치 모바일변경 -> touchmove)
@@ -131,6 +131,12 @@
                         }); /// css ///
 
                     } /////// if /////////
+                    // 3. 마지막 한계값 체크 후 고정하기
+                    else if(mpos < -lpt){
+                        move.css({
+                            left: -lpt + "px"
+                        }); //// css ///
+                    } /////// else if ///////
 
 
                 }); /////////// mousemove /////////////
