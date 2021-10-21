@@ -198,7 +198,7 @@ $(function(){ /////// jQB ///////////////////
    // 2. keyup : 키가 눌렸다가 올라올때
    // 3. keydown : 키가 눌려져 내려갈때
    // 과연 글자가 입력되는 순간은 어떤 키보드 이벤트를 써야할까?
-   // -> 
+   // -> keyup이벤트가 바로 입력된 글자가 전달됨!
 
    // 이메일 앞주소
    let eml1 = $("#email1");
@@ -208,13 +208,35 @@ $(function(){ /////// jQB ///////////////////
    let seleml = $("#seleml");
 
    // 이벤트 대상: #email1, #email2 ////////
-   $("#email1, #email2").on("keypress",function(){
+   $("#email1, #email2").on("keyup",function(){
 
-    // 1. 현재 입력된 값 읽어오기
+    // 1. 현재 이벤트 대상 아이디 읽어오기
+    let cid = $(this).attr("id");
+    console.log("현재아이디:"+cid);
+
+    // 2. 현재 입력된 값 읽어오기
     let cv = $(this).val();
     console.log("입력값:"+cv);
 
-   }); ////////////// key.... //////////////////
+    // 3. 이메일 뒷주소 셋팅하기
+    let backeml = 
+    cid === "email1" ? seleml.val() : eml2.val();
+    // 조건연산자로 선택박스값 또는 직접입력값을 할당한다!
+    // 비?집:놀이동산;
+
+    // 4. 선택박스의 선택값이 "free"(직접입력)이면 이메일 뒷주소변경
+    if(seleml.val()==="free") backeml = eml2.val();
+
+    // 5. 이메일 전체주소 조합하기!
+    let comp = eml1.val() + "@" + backeml;
+    console.log("이멜주소:"+comp);
+
+    // 6. 이메일 검사 결과함수 호출!
+    resEml(comp);
+
+
+   }); ////////////// keyup ///////////////////
+   ////////////////////////////////////////////
 
 
 
