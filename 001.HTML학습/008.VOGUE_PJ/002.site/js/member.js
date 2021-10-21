@@ -265,9 +265,14 @@ $(function () { /////// jQB ///////////////////
         } ///// if문 : init일때 /////
         else if(cv === "free"){ // free일때
 
-            // 직접입력창 보이기
+            // 1.직접입력창 보이기
             eml2.fadeIn(300);
 
+            // 2. 이메일 주소 만들기
+            let comp = eml1.val() + "@" + eml2.val();
+
+            // 3. 이메일 검사처리함수 호출
+            resEml(comp);
 
         } ///// else if문 : free일때 /////
         else { // 기타 이메일 선택시
