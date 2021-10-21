@@ -1,0 +1,241 @@
+---------- html --------------
+
+<section class="scont">
+                <div id="meminfo">
+                    <form action="process.php" method="POST">
+                        <ul>
+                            <li>
+                                <label for="mid">아이디</label>
+                                <input type="text" id="mid" name="mid" maxlength="25" placeholder="영문자로 시작하는 6~20글자 영문자/숫자">
+                                <span class="msg"></span>
+                            </li>
+                            <li>
+                                <label for="mpw">비밀번호</label>
+                                <input type="password" id="mpw" name="mpw" maxlength="20"
+                                    placeholder="특수문자,문자,숫자포함 형태의 5~15자리">
+                                <span class="msg"></span>
+                            </li>
+                            <li>
+                                <label for="mpw2">비밀번호확인</label>
+                                <input type="password" id="mpw2" name="mpw2" maxlength="20" placeholder="비밀번호 확인을 입력해 주세요">
+                                <span class="msg"></span>
+                            </li>
+                            <li>
+                                <label for="mnm">이름</label>
+                                <input type="text" id="mnm" name="mnm" maxlength="20" placeholder="이름을 입력해 주세요">
+                                <span class="msg"></span>
+                            </li>
+                            <li>
+                                <label for="gen1">성별</label>
+                                남성
+                                <input type="radio" name="gen" id="gen1">
+                                여성
+                                <input type="radio" name="gen" id="gen2" checked>
+                                <!-- 라디오버튼은 name속성값을 같은
+                                이름으로 하면 하나만 선택되는
+                                 그룹핑이된다 
+                                    checked속성은 미리선택되게 함
+                                -->
+                            </li>
+                            <li>
+                                <label for="email1">이메일</label>
+                                <input type="text" id="email1" name="email1" placeholder="이메일앞주소">
+                                @
+                                <select name="seleml" id="seleml">
+                                    <option value="init">선택해주세요</option>
+                                    <option value="naver.com">naver.com</option>
+                                    <option value="daum.net">daum.net</option>
+                                    <option value="hotmail.com">hotmail.com</option>
+                                    <option value="hanmail.net">hanmail.net</option>
+                                    <option value="gmail.com">gmail.com</option>
+                                    <option value="free">직접입력</option>
+                                </select>
+                                <span class="msg"></span>
+                            </li>
+                            <li>
+                                <label for="email2"></label>
+                                <input type="text" id="email2" name="email2" placeholder="이메일뒷주소">
+                            </li>
+                            <li>
+                                <!-- 서브밋버튼 -->
+                                <input type="submit" value="가입하기" id="btnj">
+                            </li>
+                        </ul>
+                    </form>
+                </div>
+            </section>
+
+-------------- css --------------------
+/* 서브 전체박스 */
+.scont{
+    margin-bottom: 100px;
+}
+
+/* 1. 서브타이틀 */
+.stit{
+    font-family: 'Pistilli', sans-serif;
+    font-size: 50px;
+    padding: 40px 0 20px;
+    /* 위40px 양쪽0 아래20px */
+    text-align: center;
+    font-weight: normal;
+}
+
+
+/* 메시지박스 */
+.msg {
+    display: block;
+    width: 100px;
+    height: 15px;
+    line-height: 12px;
+    margin-top: -12px;
+    font-size: 9px;
+    color: #f00;
+    white-space: nowrap;
+}
+/* 메시지 글자색변경 */
+.msg.on{
+    color: green;
+}
+
+
+/* 가상요소로 아이콘 넣기 */
+.stit::before {
+    content: url(../images/mem_icon.png);
+    vertical-align: -10px;
+    margin-left: 5px;
+    margin-right: 18px;
+}
+
+/* 회원가입박스 */
+#meminfo {
+    width: 700px;
+    height: 464px;
+    margin: 0 auto;
+    margin-top: 20px;
+    border: 2px solid #737373;
+    border-radius: 10px;
+    padding: 30px 51px;
+    box-sizing: border-box;
+    /* 보더,패딩포함 */
+}
+
+/* 리스트 ul */
+#meminfo ul {
+    width: 100%;
+    height: 100%;
+    font-size: 1.25rem;
+    /* 20px */
+    font-weight: bold;
+    color: #373737;
+}
+
+/* 리스트 li */
+#meminfo li {
+    width: 100%;
+    /* 한줄에 하나씩 */
+    height: 50px;
+    line-height: 50px;
+    /* outline: 2px dotted red; */
+}
+
+/* 라벨공통 */
+#meminfo label {
+    display: inline-block;
+    /* 가로크기 디자인적용위해 */
+    width: 200px;
+}
+
+/* 크롬브라우저 포커스 아웃라인 없애기 */
+input:focus,
+select:focus {
+    outline: none;
+}
+
+/* 입력박스공통 */
+#meminfo input[type=text],
+#meminfo input[type=password] {
+    width: 340px;
+    height: 36px;
+    font-size: 1.125rem;
+    /* 18px */
+    border: 1px solid #737373;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+
+/* 라디오버튼 */
+#meminfo input[type=radio] {
+    width: 20px;
+    height: 20px;
+    vertical-align: -4px;
+}
+
+/* 이메일 입력창 */
+#meminfo #email1 {
+    width: 170px;
+}
+
+/* 이메일 선택박스 */
+#seleml {
+    width: 146px;
+    height: 40px;
+    border: 1px solid #737373;
+    border-radius: 5px;
+    font-size: 1.125rem;
+}
+
+/* 이메일 직접입력창 */
+#meminfo #email2 {
+    width: 139px;
+    margin-left: 201px;
+    display: none;/* 처음에 안보임 */
+}
+
+/* 가입하기 버튼 */
+#btnj {
+    width: 113px;
+    height: 40px;
+    border: 1px solid #737373;
+    border-radius: 5px;
+    color: #fff;
+    background-image: linear-gradient(to bottom, #ddd, #555);
+    float: right;/* 오른쪽 위치! */    
+    margin-right: 40px;
+    margin-top: 6px;
+    font: bold 16px 'ng';
+    cursor: pointer;
+}
+
+/* 약관동의박스 */
+#conf {
+    position: absolute;
+    /* 부모는? #cont */
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 600px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+
+/* 동의/비동의 버튼박스 */
+.YNbox {
+    text-align: center;
+}
+/* 버튼공통 */
+.YNbox button {
+    width: 113px;
+    height: 40px;
+    border: 1px solid #737373;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    font-weight: bold;
+    background-image: linear-gradient(to bottom, #ddd, #555);
+    margin: 0 20px;
+    cursor: pointer;
+}
