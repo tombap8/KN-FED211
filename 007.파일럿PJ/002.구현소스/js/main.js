@@ -29,16 +29,38 @@ $(function(){ ///// jQB ////////////////////////
 
    
     // 윈도우 가로크기 구하는함수
-   let awin = ()=>{
-       return $(window).width();
-    }; //// awin함수 ////
+   let awin = () => $(window).width();
+    //// awin함수 ////
+    // 화살표함수 뒤에 중괄호{} 없이 명령문 하나만 있으면
+    // 그게 바로 return 문이다! -> 함수호출한 곳으로 가져감!
 
     // 윈도우 가로크기
     let win = awin();
+
+    // 화면크기변경(resize)시 윈도우 가로크기 업데이트!
+    $(window).resize(()=>{
+        win = awin();
+        console.log("윈도가로:"+win);
+    });/////// resize ///////
     
     console.log("윈도가로:"+win);
 
-    /// 1. 
+    // 현재 슬라이드 위치값 구하기
+    // 슬라이드 위치값
+    let spos;
+    // 대상: .slide
+    let slide = $(".slide");
+    // 이벤트: drag
+    slide.on("drag",function(){
+        // 슬라이드 위치값 구하기
+        spos = slide.offset().left;
+        // offset().left 화면 왼쪽기준선 left위치
+        console.log("슬위:"+spos);
+    }); ////////// drag ////////////
+
+    ///////////////// 이동구현하기 /////////////////////////
+    /// 1. 오른쪽에서 들어오는 이동 -> left: -110% 보다 작을때
+    // -110% 구하기 -> win*1.1
 
 
 
