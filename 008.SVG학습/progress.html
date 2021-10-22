@@ -72,7 +72,8 @@
             -> 데쉬옵셋으로 공백부터 보이게 한후 이값을 0으로 만들면
             원래 선부터 셋팅된 부분이 보이게 된다!            
             */
-            transition: stroke-dashoffset .7s ease-in-out;
+            transition: .1s linear;
+            /* 퍼센트증가에 따른 트랜지션 */
 
         }
         /* 오버시 데쉬옵셋변경하기! */
@@ -92,8 +93,13 @@
             color: #fff;
         }
 
-
-
+        /* 버튼 */
+        #pbtn{
+            text-align: center;
+        }
+        #pbtn button{
+            font-size: 50px;
+        }
     </style>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script>
