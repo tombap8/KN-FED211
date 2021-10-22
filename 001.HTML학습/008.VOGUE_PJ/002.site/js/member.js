@@ -348,7 +348,16 @@ $(function () { /////// jQB ///////////////////
             // 입력완료시에 위의 메시지를 띄워준다!
 
             // 로그인페이지로 이동하기
-            location.href = "login.html";
+            location.replace("login.html");
+            // location.href = "login.html";
+            /* 
+                location.href 는 뒤로 가기시 history가 살아있어서
+                보안상 위험하다! 따라서 현재 페이지에
+                그대로 덮어쓰기로 위치 이동을 하는 방법을 쓴다!
+                location.replace(이동주소)
+                -> 현재 페이지 history가 덮어써져서 사라진다!
+                (전페이지 돌아가기 안됨!!!)
+            */
 
         } /////////////// if ///////////////
         else { // 불통과시!
