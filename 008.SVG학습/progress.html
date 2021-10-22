@@ -20,6 +20,8 @@
 
         /* 팽수박스 */
         .pang{
+            position: relative;
+            /* .txt의 부모자격 */
             width: 200px;
             height: 200px;
             margin: 100px auto;
@@ -77,6 +79,20 @@
         /* .pang:hover .c1{
             stroke-dashoffset: 0;
         } */
+
+        /* 퍼센트 글자박스 */
+        .txt{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            /* 정중앙이동 */
+            font-size: 5vw;
+            text-shadow: 2px 2px 2px #000;
+            color: #fff;
+        }
+
+
 
     </style>
     <script src="js/jquery-3.3.1.min.js"></script>
