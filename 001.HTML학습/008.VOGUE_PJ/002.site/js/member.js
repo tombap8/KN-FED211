@@ -30,6 +30,8 @@ $(function () { /////// jQB ///////////////////
 
             console.log("아이디:" + cid);
 
+            if(!cid) return;
+
             // 2. 입력된 값 알아오기 : val() 메서드
             let cv; // 현재읽어온 값 (current value)
 
@@ -63,6 +65,10 @@ $(function () { /////// jQB ///////////////////
             if (cv === "") {
                 $(this).siblings(".msg").text("필수입력!");
                 // siblings(필터) -> 선택요소 이외의 형제들 중 특정요소
+
+                // 통과여부 false
+                pass = false;
+
             } /////////// if문: 빈값일때 ////////////
 
             // 4. 아이디일때 검사하기 ///////////////////
@@ -78,6 +84,9 @@ $(function () { /////// jQB ///////////////////
                     $(this).siblings(".msg")
                         .text("영문자로 시작하는 6~20글자 영문자/숫자")
                         .removeClass("on"); // 글자색 변경 제거
+
+                    // 통과여부 false
+                    pass = false;
 
                 } /////// if문 : 결과가 false일때 ////
                 else {
@@ -104,6 +113,9 @@ $(function () { /////// jQB ///////////////////
                     $(this).siblings(".msg")
                         .text("특수문자,문자,숫자포함 형태의 5~15자리");
 
+                    // 통과여부 false
+                    pass = false;
+
                 } ///// if문 : 결과가 false일때 ////
                 else { // 통과시 내용비우기 : empty()
 
@@ -122,6 +134,9 @@ $(function () { /////// jQB ///////////////////
 
                     $(this).siblings(".msg")
                         .text("비밀번호가 일치하지 않습니다!");
+
+                    // 통과여부 false
+                    pass = false;
 
                 } /////// if문 : 결과가 같지 않으면 true ///
                 else { // 통과시 내용비우기 : empty()
@@ -182,6 +197,9 @@ $(function () { /////// jQB ///////////////////
             eml1.siblings(".msg")
                 .text("맞지않는 이메일 형식입니다")
                 .removeClass("on"); //글자색 복원
+
+            // 통과여부 false
+            pass = false;
 
         } ////// else문 : 결과가 false일때 //////
 
