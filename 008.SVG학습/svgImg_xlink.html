@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG이미지 불러오기</title>
     <style>
+        svg{
+            width: 100%;
+            /* 가로크기 박스에 맞춤! */
+        }
         .logo {
             width: 200px;
         }
@@ -65,23 +69,23 @@
 
     <!-- 카본뷰티로고 -->
     <div class="cblogo">
-        <svg></svg>
+        <svg>
+            <use xlink:href="#logo-header"></use>
+        </svg>
     </div>
 
     <!-- 장바구니모양 -->
     <div class="cart">
-        <svg id="bag" viewBox="0 0 32 32">
-            <path class="est0" d="M22.4 0H9.6v7.7H3.8V32h24.5V7.7h-5.9V0zm-10 2.7h7.2v5h-7.2v-5z"></path>
+        <svg>
+            <use xlink:href="#bag"></use>
         </svg>
     </div>
 
     <!-- 돋보기모양 -->
     <div class="mag">
         <a href="https://www.naver.com" target="_blank">
-            <svg id="search" viewBox="0 0 32 32">
-                <path id="pmagnifier-1" class="pst0"
-                    d="M31.9 27.8l-8.5-8.5c1.2-2 2-4.3 2-6.7 0-7-5.7-12.6-12.6-12.6C5.8 0 .1 5.7.1 12.6c0 7 5.7 12.6 12.6 12.6 2.4 0 4.6-.6 6.5-1.8l8.5 8.5 4.2-4.1zM4.8 12.6c0-4.4 3.6-7.9 7.9-7.9 4.4 0 7.9 3.6 7.9 7.9 0 4.4-3.6 7.9-7.9 7.9-4.3 0-7.9-3.5-7.9-7.9z">
-                </path>
+            <svg>
+                <use xlink:href="#search"></use>
             </svg>
         </a>
     </div>
@@ -125,6 +129,14 @@
                     d="M39.1 48.3c-2.7 0-4.3 2.5-4.3 5 0 2.4 1.6 5 4.3 5 2.7 0 4.3-2.5 4.3-5 0-2.4-1.6-5-4.3-5zM21 50.3c0-1.1-.7-1.9-1.6-1.9h-3.9v3.8h3.9c1 0 1.6-.8 1.6-1.9zM39.1 21.6l-2 5H41zM19.9 54.3h-4.4v4H20c1 0 1.9-.9 1.9-2-.1-1.1-1-2-2-2z">
                 </path>
             
+            </symbol>
+            <symbol viewBox="0 0 32 32" id="bag">
+                <path class="est0" d="M22.4 0H9.6v7.7H3.8V32h24.5V7.7h-5.9V0zm-10 2.7h7.2v5h-7.2v-5z"></path>
+            </symbol>
+            <symbol viewBox="0 0 32 32" id="search">
+                <path id="pmagnifier-1" class="pst0"
+                    d="M31.9 27.8l-8.5-8.5c1.2-2 2-4.3 2-6.7 0-7-5.7-12.6-12.6-12.6C5.8 0 .1 5.7.1 12.6c0 7 5.7 12.6 12.6 12.6 2.4 0 4.6-.6 6.5-1.8l8.5 8.5 4.2-4.1zM4.8 12.6c0-4.4 3.6-7.9 7.9-7.9 4.4 0 7.9 3.6 7.9 7.9 0 4.4-3.6 7.9-7.9 7.9-4.3 0-7.9-3.5-7.9-7.9z">
+                </path>
             </symbol>
 
 
