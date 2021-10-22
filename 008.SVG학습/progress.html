@@ -97,7 +97,7 @@
         #pbtn{
             text-align: center;
         }
-        #pbtn button{
+        #pbtn button, #sel{
             font-size: 50px;
         }
     </style>
@@ -118,6 +118,9 @@
 
             // svg circle요소
             let c1 = $(".c1");
+
+            // %선택박스
+            let sel = $("#sel");
 
             //////////////////////
             // 퍼센트 증가 함수 ///
@@ -150,7 +153,8 @@
 
 
                 // 5. 재귀호출(함수자신을 다시호출!)
-                if(pers < 70){ // 100보다 작을때 호출!
+                // sel.val()은 퍼센트 선택값이다!(10,20,...,100)
+                if(pers < sel.val()){ // 100보다 작을때 호출!
                     // 호출이 너무 빠르므로 setTimeout으로 시간조정
                     setTimeout(() => {
                         progFn();                        
