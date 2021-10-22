@@ -14,14 +14,14 @@ $(function () { /////// jQB ///////////////////
                             text, password
         input[type=text],input[type=password]
         (유의사항: type=text 인 요소 중에서 아이디가 email2
-            인요소는 검사에서 제외함!)
-        제외하기 위한 선택자: input[type=text][id!=email2]
+            인요소는 검사에서 제외함!+모바일검색 input요소 제외추가!)
+        제외하기 위한 선택자: input[type=text][id!=email2][class!=search]
         -> (!=) 선택연산자는 제이쿼리전용임!
 
         - 제이쿼리 사용 메서드 : blur() 메서드
     
     */
-    $("input[type=text][id!=email2],input[type=password]")
+    $("input[type=text][id!=email2][class!=search],input[type=password]")
         .blur(function () {
             // console.log("블러써?");
 
@@ -29,8 +29,6 @@ $(function () { /////// jQB ///////////////////
             let cid = $(this).attr("id");
 
             console.log("아이디:" + cid);
-
-            if(!cid) return;
 
             // 2. 입력된 값 알아오기 : val() 메서드
             let cv; // 현재읽어온 값 (current value)
@@ -335,7 +333,7 @@ $(function () { /////// jQB ///////////////////
         // 3. 입력창 blur이벤트 발생시키기(전체검사)
         // 대상: input[type=text][id!=email2],input[type=password]
         // 이벤트발생 메서드: trigger(이벤트명) -> blue이벤트 발생!
-        $("input[type=text][id!=email2],input[type=password]")
+        $("input[type=text][id!=email2][class!=search],input[type=password]")
         .trigger("blur");
 
         console.log("통과여부:"+pass);
