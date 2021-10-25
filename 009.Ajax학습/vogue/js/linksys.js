@@ -7,7 +7,7 @@ $(function () { /////// jQB /////////////////////////
     /// 1. 로고 클릭시 첫페이지로 가기!
     // 대상: .logo a
     $(".logo a").click(function(){
-        location.href = "index.html";
+        location.href = "index.php";
     }); /////////// click ////////////
 
     /// 2. GNB 메뉴 링크 연결하기 ///
@@ -37,7 +37,7 @@ $(function () { /////// jQB /////////////////////////
 
         // 3. 페이지 이동하기 
         if (mtxt !== "search") // 검색이 아닐때만 이동!
-            location.href = "sub.html?cat=" + mtxt;
+            location.href = "sub.php?cat=" + mtxt;
         // url뒤에 ?(물음표) 키=값 쌍으로 보냄
         // cat이라는 키이름은 내가 지은것이다!
         // 키=값 으로 데이터를 맞추기 위함!
