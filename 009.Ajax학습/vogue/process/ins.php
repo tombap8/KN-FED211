@@ -46,7 +46,7 @@ $seleml === "free" ?
 //echo $email1."@".$emailback;
 
 // INSERT 쿼리문 만들기
-$sql = "INSERT INTO `member`
+$sql = "INSERT INTO `member2`
 (`mid`, `mpw`, `name`, `gen`, `email1`, `email2`) 
 VALUES 
 ('$mid','$mpw','$mnm','$gen','$email1','$emailback')";
