@@ -48,9 +48,18 @@ $(function(){ ///// jQB ////////////////////////
     // 현재 슬라이드 위치값 구하기
     // 슬라이드 위치값
     let spos;
+    // 이징변수
+    let easing = "easeOutQuint";
+    // 화면커버(광드래그막기)
+    let cover = $(".cover");
+
     // 대상: .slide -> slide변수
     // 이벤트: dragstop -> 드래그가 끝날때
     slide.on("dragstop",function(){
+
+        // 광드래그 막기 커버보이기
+        cover.show();
+
         // 슬라이드 위치값 구하기
         spos = slide.offset().left;
         // offset().left 화면 왼쪽기준선 left위치
@@ -63,16 +72,21 @@ $(function(){ ///// jQB ////////////////////////
         if(spos < -win*1.1){
 
             // 슬라이드가 -200%위치로 이동한다!
-            slide.animate({
+            // stop() 메서드는 animate가 큐에 쌓이는 것을 막는다!
+            slide.stop().animate({
                 left: -win*2 + "px"
-            }, 700,function(){ // 콜백함수(이동후)
+            }, 600,easing,function(){ // 콜백함수(이동후)
                 // 변경대상: .slide -> slide변수
                 slide
                 // 첫번째 슬라이드li를 맨뒤로 보내기
                 .append(slide.find("li").first())
                 // 이때 left값을 -100%위치로 고정해야함!
                 .css({left:-win+"px"});
-            });
+
+                // 광드래그 커버 지우기
+                cover.hide();
+
+            }); ///////// animate /////////
 
         } /////// if문 : -110% 보다 작을때 ////
 
@@ -82,16 +96,20 @@ $(function(){ ///// jQB ////////////////////////
         else if(spos > -win*0.9){
 
             // 슬라이드가 0위치로 이동한다!
-            slide.animate({
+            slide.stop().animate({
                 left: "0px"
-            }, 700, function(){ // 콜백함수(이동후)
+            }, 600,easing, function(){ // 콜백함수(이동후)
                 // 대상: .slide -> slide변수
                 slide
                 // 맨뒤의 슬라이드li를 맨앞으로 이동
                 .prepend(slide.find("li").last())
                 // left값을 원래 위치인 -100%로 변경
                 .css({left:-win+"px"});
-            });
+
+                // 광드래그 커버 지우기
+                cover.hide();
+                
+            }); ///////// animate /////////
 
         } /////// else if문 : -90% 보다 클때 ////
 
@@ -99,9 +117,15 @@ $(function(){ ///// jQB ////////////////////////
         // -110% < 범위 < -90% 
         else {
             // 슬라이드가 원위치로 돌아옴!
-            slide.animate({
+            slide.stop().animate({
                 left: -win + "px"
-            }, 300);
+            }, 300,easing,function(){ // 콜백함수(이동후)
+
+                // 광드래그 커버 지우기
+                cover.hide();
+                
+            }); ///////// animate /////////
+
         } ///////// else문 : 사이범위 ////////////
 
 
