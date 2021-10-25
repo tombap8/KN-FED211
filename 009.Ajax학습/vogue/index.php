@@ -104,13 +104,8 @@
     </div>
     <!-- 3. 하단영역 -->
     <div class="bgc">
-        
+
     </div>
     
-    <!-- 위로가기 버튼 -->
-    <a href="#" class="tbtn fi fi-angle-up">
-        <span class="ir">위로가기버튼</span>
-    </a>
-
 </body>
 </html>
