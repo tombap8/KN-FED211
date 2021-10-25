@@ -21,7 +21,7 @@
 <body>
     <!-- 1. 상단영역 -->
     <div id="top">
-
+        <?php include "inc/top.inc" ?>
     </div><!-- #top -->
 
     <!-- 2. 메인영역 -->
@@ -104,7 +104,7 @@
     </div>
     <!-- 3. 하단영역 -->
     <div class="bgc">
-
+        <?php include "inc/info.inc" ?>
     </div>
     
 </body>
