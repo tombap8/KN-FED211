@@ -65,7 +65,14 @@ $(function(){ ///// jQB ////////////////////////
             // 슬라이드가 -200%위치로 이동한다!
             slide.animate({
                 left: -win*2 + "px"
-            }, 700);
+            }, 700,function(){ // 콜백함수(이동후)
+                // 변경대상: .slide -> slide변수
+                slide
+                // 첫번째 슬라이드li를 맨뒤로 보내기
+                .append(slide.find("li").first())
+                // 이때 left값을 -100%위치로 고정해야함!
+                .css({left:-win+"px"});
+            });
 
         } /////// if문 : -110% 보다 작을때 ////
 
