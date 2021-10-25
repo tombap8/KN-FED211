@@ -84,7 +84,14 @@ $(function(){ ///// jQB ////////////////////////
             // 슬라이드가 0위치로 이동한다!
             slide.animate({
                 left: "0px"
-            }, 700);
+            }, 700, function(){ // 콜백함수(이동후)
+                // 대상: .slide -> slide변수
+                slide
+                // 맨뒤의 슬라이드li를 맨앞으로 이동
+                .prepend(slide.find("li").last())
+                // left값을 원래 위치인 -100%로 변경
+                .css({left:-win+"px"});
+            });
 
         } /////// else if문 : -90% 보다 클때 ////
 
