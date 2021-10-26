@@ -60,9 +60,16 @@ $(function () { ///// jQB ////////////////////////
     let scnt = slide.find("li").length;
     // console.log("슬수:"+scnt);
 
+    /// 자동넘김지우기는 드래그시작이벤트(dragstart)에서
+    // 해줘야 미리 끊어줄 수 있다~!
+    slide.on("dragstart",()=>{clearAuto();});
+    
     // 대상: .slide -> slide변수
     // 이벤트: dragstop -> 드래그가 끝날때
     slide.on("dragstop", function () {
+
+        // 자동넘김 지우기
+        clearAuto();
 
         // 광드래그 막기 커버보이기
         cover.show();
