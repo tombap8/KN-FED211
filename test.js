@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
         data: {
             message: 'Hello Vue.js!'
         }
-    })
+    });
 
     // 2. 반복 렌더링
     new Vue({
@@ -14,7 +14,7 @@ window.addEventListener("load", () => {
         data: {
             list: ['사과', '바나나', '딸기']
         }
-    })
+    });
 
     // 3. 이벤트 사용하기
     new Vue({
@@ -24,7 +24,7 @@ window.addEventListener("load", () => {
                 alert(event.target) // [object HTMLButtonElement]
             }
         }
-    })
+    });
 
     // 4. 입력 양식과 동기화하기
     new Vue({
@@ -32,7 +32,7 @@ window.addEventListener("load", () => {
         data: {
             message: '초기 메시지'
         }
-    })
+    });
 
     // 5. 조건 분기
     new Vue({
@@ -40,6 +40,8 @@ window.addEventListener("load", () => {
         data: {
             show: true
         }
-    })
+    });
+
+    
 }); ////////////// load ///////////////////////
 ///////////////////////////////////////////////
