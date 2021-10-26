@@ -174,7 +174,7 @@ $(function () { /// jQB ////////////////////////
 
             $("html,body").stop().animate({
                 scrollTop: pos + "px"
-            }, 1200, "easeOutQuint");
+            }, 1200, "easeOutQuint", pageAction);
 
 
             ///////////////////////////////////////////////
