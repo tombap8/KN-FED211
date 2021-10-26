@@ -104,21 +104,45 @@ $(function () { /////// jQB ///////////////////
                         - $.ajax(전송할페이지,전송방식,보낼데이터,전송할데이터타입,비동기옵션,성공처리,실패처리)
                     */
 
-                        $.ajax(
-                            // 1. 전송할페이지
-                            // 2. 전송방식
-                            // 3. 보낼데이터
-                            // 4. 전송할데이터타입
-                            // 5. 비동기옵션
-                            // 6. 성공처리
-                            // 7. 실패처리
-                        ); ///////// ajax 메서드 /////////////
+                    $.ajax({
+                        // 1. 전송할페이지
+                        url: "process/chkID.php",
+                        // 2. 전송방식(get/post)
+                        type: "post",
+                        // 3. 보낼데이터
+                        data: {
+                            "mid": $("#mid").val()
+                        },
+                        // 4. 전송할데이터타입
+                        dataType: "html",
+                        // 5. 비동기옵션(false로 해야 JS파일의 전역변수를 여기에서 사용가능함!)-> 여기서는 pass를 쓰기위함
+                        async: false,
+                        // 6. 성공처리
+                        success: function (res) {
+                            alert(res);
+                            if (res === "ok") {
+                                $("#mid").siblings(".msg")
+                                    .text("훌륭한 아이디네요~!")
+                                    .addClass("on"); 
+                                    // 글자색변경 class
+                            } ///// if ///////
+                            else{// DB에 이미 같은 ID가 있는 경우
+                                $("#mid").siblings(".msg")
+                                    .text("사용중인 ID입니다!")
+                                    .removeClass("on"); 
+                                    // 글자색변경 class
+
+                                    // 통과여부 false
+                                    pass = false;
+
+                            } ////// else ///////
+                        }
+                        // 7. 실패처리
+                    }); ///////// ajax 메서드 /////////////
 
 
 
-                    $(this).siblings(".msg")
-                        .text("훌륭한 아이디네요~!")
-                        .addClass("on"); // 글자색변경 class
+
 
                 } /////// else문 : 결과가 true일때 ////
 
