@@ -98,13 +98,11 @@ session_start();
       $("#loginMsg").css({
           position: "absolute",
           width: "400px",
-          height: "50px",
-          top: "50%",
+          top: "5%",
           left: "50%",
-          transform: "translate(-50%, -50%)",
+          transform: "translateX(-50%)",
           fontSize: "14px",
           fontWeight: "bold",
-          lineHeight:"50px",
           textAlign: "center",
           whiteSpace: "nowrap"
       }); ////// css //////////
