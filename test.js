@@ -36,12 +36,20 @@ window.addEventListener("load", () => {
 
     // 5. 조건 분기
     new Vue({
-        el: '#app',
+        el: '#app5',
         data: {
             show: true
         }
     });
 
-    
+    // 6. 트랜지션과 애니메이션
+    var app = new Vue({
+        el: '#app6',
+        data: {
+          show: true
+        }
+    });
+
+
 }); ////////////// load ///////////////////////
 ///////////////////////////////////////////////

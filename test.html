@@ -8,42 +8,88 @@
     <title>Document 한글사용에 관하여</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
     <script src="test.js"></script>
+    <style>
+        .tit{
+            text-align: center;
+        }
+        .book{
+            display: flex;
+        }
+        .book>div{
+            flex: 1;
+            padding: 50px;
+        }
+        .part1{
+            background-color: #ffdaf3;
+        }
+        .part2{
+            background-color: #deffda;
+        }
+
+        .v-enter-active,
+        .v-leave-active {
+            transition: opacity 1s;
+        }
+
+        /* opacity:0에서 1까지 페이드인&페이드아웃하기 */
+        .v-enter,
+        .v-leave-to {
+            opacity: 0;
+        }
+    </style>
 </head>
 
 <body>
+    <h1 class="tit">Vue JS 기초편</h1>
+    <div class="book">
+        <!-- ************* Vue.js 기본기능 ************** -->
+        <div class="part1">
 
-    <h1>Vue JS 기초편</h1>
+            <h2>1. 텍스트 바인딩</h2>
+            <div id="app1">
+                <p>{{ message }}</p>
+            </div>
 
-    <h2>1. 텍스트 바인딩</h2>
-    <div id="app1">
-        <p>{{ message }}</p>
+            <h2>2. 반복 렌더링</h2>
+            <div id="app2">
+                <ol>
+                    <li v-for="item in list">{{ item }}</li>
+                </ol>
+            </div>
+
+            <h2>3. 이벤트 사용하기</h2>
+            <div id="app3">
+                <button v-on:click="handleClick">Click</button>
+            </div>
+
+            <h2>4. 입력 양식과 동기화하기</h2>
+            <div id="app4">
+                <input v-model="message">
+                <p>{{ message }}</p>
+            </div>
+
+            <h2>5. 조건 분기</h2>
+            <div id="app5">
+                <button v-on:click="show=!show">변경하기</button>
+                <p v-if="show">Hello Vue.js!</p>
+            </div>
+
+            <h2>6. 트랜지션과 애니메이션</h2>
+            <div id="app6">
+                <button v-on:click="show=!show">변경하기</button>
+                <transition>
+                    <p v-if="show">Hello Vue.js!</p>
+                </transition>
+            </div>
+
+
+
+        </div>
+        <!-- *************  ************** -->
+        <div class="part2">
+
+        </div>
     </div>
-
-    <h2>2. 반복 렌더링</h2>
-    <div id="app2">
-        <ol>
-            <li v-for="item in list">{{ item }}</li>
-        </ol>
-    </div>
-
-    <h2>3. 이벤트 사용하기</h2>
-    <div id="app3">
-        <button v-on:click="handleClick">Click</button>
-    </div>
-
-    <h2>4. 입력 양식과 동기화하기</h2>
-    <div id="app4">
-        <input v-model="message">
-        <p>{{ message }}</p>
-    </div>
-
-    <h2>5. 조건 분기</h2>
-    <div id="app5">
-        <button v-on:click="show=!show">변경하기</button>
-        <p v-if="show">Hello Vue.js!</p>
-    </div>
-
-
 
 
 </body>
