@@ -146,11 +146,8 @@ $(function () { /////// jQB ///////////////////
                         error: function(xhr,status,error){
                             alert("연결실행실패:"+error);
                         } /////// error함수 ///////
-                        
+
                     }); ///////// ajax 메서드 /////////////
-
-
-
 
 
                 } /////// else문 : 결과가 true일때 ////
