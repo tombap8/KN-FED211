@@ -174,7 +174,11 @@ $(function () { /// jQB ////////////////////////
 
             $("html,body").stop().animate({
                 scrollTop: pos + "px"
-            }, 1200, "easeOutQuint", pageAction);
+            }, 1200, "easeOutQuint");
+
+            // animate 콜백함수가 아닌 바깥에서 호출하면
+            // 페이지액션이 출발과 동시에 작동된다!
+            pageAction();
 
 
             ///////////////////////////////////////////////

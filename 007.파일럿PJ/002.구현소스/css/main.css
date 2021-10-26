@@ -27,7 +27,7 @@
 /* 트랜지션 지연시간 차이주기 */
 /* 이미지 */
 img.act.on {
-    transition-delay: .1s;
+    transition-delay: .3s;
 }
 /* 글자 */
 a.act.on{
