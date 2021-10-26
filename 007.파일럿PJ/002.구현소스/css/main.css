@@ -8,6 +8,25 @@
 
 
 /* 2. 페이지영역 */
+
+/* 페이지 액션 class */
+.act {
+    display: block;
+    /* 트랜스폼 적용위해 block으로!
+    a요소는 inline으로 트랜스폼 적용이 안되므로! */
+    transform: rotate(25deg);
+    transform-origin: left top;
+    opacity: 0;
+    transition: all 1s ease-out;
+}
+/* 액션상태변경 */
+.act.on {
+    transform: rotate(0deg);
+    opacity: 1;
+}
+
+
+
 /* 개별 페이지 셋팅 */
 
 /********** 2-1.배너영역 ************/
