@@ -1,5 +1,7 @@
 // 보그코리아 회원가입 페이지 JS - member.js //
 
+const { error } = require("jquery");
+
 $(function () { /////// jQB ///////////////////
 
     /* 
@@ -120,7 +122,7 @@ $(function () { /////// jQB ///////////////////
                         // 6. 성공처리
                         success: function (res) {
                             alert(res);
-                            if (res === "ok") {
+                            if (res === "ok") { // DB에 없는 ID
                                 $("#mid").siblings(".msg")
                                     .text("훌륭한 아이디네요~!")
                                     .addClass("on"); 
@@ -136,8 +138,15 @@ $(function () { /////// jQB ///////////////////
                                     pass = false;
 
                             } ////// else ///////
-                        }
+                        }, ///// success함수 /////
                         // 7. 실패처리
+                        // xhr - XMLHttpRequest객체
+                        // status - 실패상태코드번호
+                        // error - 에러결과값
+                        error: function(xhr,status,error){
+                            alert("연결실행실패:"+error);
+                        } /////// error함수 ///////
+                        
                     }); ///////// ajax 메서드 /////////////
 
 
