@@ -119,7 +119,7 @@ $(function () { /////// jQB ///////////////////
                         async: false,
                         // 6. 성공처리
                         success: function (res) {
-                            alert(res);
+                            // alert(res);
                             if (res === "ok") { // DB에 없는 ID
                                 $("#mid").siblings(".msg")
                                     .text("훌륭한 아이디네요~!")
