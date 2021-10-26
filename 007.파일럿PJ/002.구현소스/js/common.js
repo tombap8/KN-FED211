@@ -26,8 +26,15 @@ $(function () { //////// jQB //////////////////////
         // 있으면 play() , 없으면 pause()
         // 선택요소에 어떤 class가 있는지 알고 싶을때
         // $(선택자).is(필터) -> 필터가 있으면 true 없으면 false
-        $(".bgm").get(0).play();
-        console.log($(this).is(".on"));
+        
+        if($(this).is(".on")) // .on이 있으면 재생
+            $(".bgm").get(0).play();
+        else // .on이 없으면 멈춤
+            $(".bgm").get(0).pause();
+        
+        
+        
+        // console.log($(this).is(".on"));
         
 
     }); /////////// click /////////////////
