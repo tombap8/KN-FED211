@@ -166,6 +166,22 @@ $(function () { ///// jQB ////////////////////////
         // console.log("블순:"+sno);
     }; ///////////// chgIndic함수 ///////////// 
 
+    //// 배너등장텍스트 ////
+    let banTxt = [
+        "Men's Season<br>Collection",
+        "2021 Special<br>Collection",
+        "GongYoo<br>Collection",
+        "T-Shirt<br>Collection",
+        "Shoes<br>Collection",
+        "Wind Jacket<br>Collection",
+    ];
+
+    //////////// 배너글자 등장 함수 /////////////////
+    let showTxt = () => {
+
+    }; //////////// showTxt 함수 /////////////////
+    //////////////////////////////////////////////
+
 
 
 
