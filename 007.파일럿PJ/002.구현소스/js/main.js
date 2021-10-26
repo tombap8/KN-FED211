@@ -16,7 +16,7 @@ $(function () { ///// jQB ////////////////////////
         // 유의사항: 첫번째 li가 안보이도록 있어서
         // 페이지 순번과 정확히 일치함!
         let idx = $(this).parent().index();
-        console.log("순번:"+idx);
+        // console.log("순번:"+idx);
 
         // 중요!!!
         // pno에 idx넣기!
