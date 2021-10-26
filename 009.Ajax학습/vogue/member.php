@@ -33,7 +33,7 @@
             <!-- 2. 로그인 컨텐츠박스 -->
             <section class="scont">
                 <div id="meminfo">
-                    <form action="process.php" method="POST">
+                    <form action="process/ins.php" method="POST">
                         <ul>
                             <li>
                                 <label for="mid">아이디</label>
