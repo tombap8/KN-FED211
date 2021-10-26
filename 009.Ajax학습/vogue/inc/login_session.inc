@@ -27,8 +27,8 @@ session_start();
           $("#loginMsg").text(msg);
 
           // 2. 로그인 버튼을 로그아웃 버튼으로 변경하기
-          // 대상: .tmenu li:eq(1) a
-          $(".tmenu li").eq(1).find("a").text("로그아웃")
+          // 대상: .smsub li:eq(1) a
+          $(".smsub li").eq(1).find("a").text("로그아웃")
 
           // 3. 로그아웃 클릭시 로그아웃하기
           .click(function(){
@@ -72,13 +72,13 @@ session_start();
           });///// click /////////////////////
 
           // 4. 회원가입 버튼 제거하기
-          // 대상: .tmenu li:eq(0)
-          $(".tmenu li").first().remove();
+          // 대상: .smsub li:last-child
+          $(".smsub li").last().remove();
           
         // 5. auth 권한 값이 "A"일 경우 
         //    "관리자" 메뉴 생성하여 추가하기
         if (auth === "A" || auth === "S") {
-            $(".tmenu")
+            $(".smsub")
                 .append(
                     "<li><a href='admin/index.php'>관리자</a></li>");
         } /////////// if /////////////////
