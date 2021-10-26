@@ -7,52 +7,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document 한글사용에 관하여</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <script>
-        window.addEventListener("load", () => {
-            new Vue({
-                el: '#app1',
-                data: {
-                    message: 'Hello Vue.js!'
-                }
-            })
-
-            new Vue({
-                el: '#app2',
-                data: {
-                    list: ['사과', '바나나', '딸기']
-                }
-            })
-
-            new Vue({
-                el: '#app3',
-                methods: {
-                    handleClick: function (event) {
-                        alert(event.target) // [object HTMLButtonElement]
-                    }
-                }
-            })
-
-            new Vue({
-                el: '#app4',
-                data: {
-                    message: '초기 메시지'
-                }
-            })
-        });
-    </script>
+    <script src="test.js"></script>
 </head>
 
 <body>
-    <p id="app1">{{ message }}</p>
-    <ol id="app2">
-        <li v-for="item in list">{{ item }}</li>
-    </ol>
-    <button id="app3" v-on:click="handleClick">Click</button>
+
+    <h1>Vue JS 기초편</h1>
+
+    <h2>1. 텍스트 바인딩</h2>
+    <div id="app1">
+        <p>{{ message }}</p>
+    </div>
+
+    <h2>2. 반복 렌더링</h2>
+    <div id="app2">
+        <ol>
+            <li v-for="item in list">{{ item }}</li>
+        </ol>
+    </div>
+
+    <h2>3. 이벤트 사용하기</h2>
+    <div id="app3">
+        <button v-on:click="handleClick">Click</button>
+    </div>
+
+    <h2>4. 입력 양식과 동기화하기</h2>
     <div id="app4">
         <input v-model="message">
-    <p>{{ message }}</p>
-
+        <p>{{ message }}</p>
     </div>
+
+    <h2>5. 조건 분기</h2>
+    <div id="app5">
+        <button v-on:click="show=!show">변경하기</button>
+        <p v-if="show">Hello Vue.js!</p>
+    </div>
+
+
+
+
+
 </body>
 
 </html>
