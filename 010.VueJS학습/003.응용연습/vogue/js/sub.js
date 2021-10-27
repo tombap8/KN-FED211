@@ -34,11 +34,16 @@ $(function () { ///// jQB /////////////////////////
         mounted: function () {
             axios.get("./js/real.json")
                 .then(response => (this.items = response))
-        }
+        },
         // 파일경로는 html위치에서 부터 찾아야함!
         // mounted 속성은 "읽어들여진"의 뜻으로
         // 외부파일을 가져와서 셋팅하는 기능!
-
+        methods:{
+            chgTit: function(tit){
+                document.querySelector("title").innerText = 
+                tit + " | 보그 코리아 (Vogue Korea)";
+            } //// chgTit함수 ///
+        } ///// methods //////
 
     }); //////// Vue /////////
 
