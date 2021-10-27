@@ -50,7 +50,17 @@
 <body>
     <h1>Vue JS 데이터 바인딩 연습</h1>
     <div id="app">
-        <span>{{}}</span>. <span>{{}}</span>
+        <h2 v-for="(v,i) in items.data">
+            <span>{{v.no}}</span>. <span>{{v.title}}</span>
+            <!-- {{}}안에는 json에서 셋팅된 속성명을 사용함 -->
+            <!-- 
+                v-for 데이터 개수 만큼 반복함
+                값 -> (v,i) in items.data
+                v는 실제값, i는 순번
+                in items.data 는 넘어온 실제 데이터 전체
+                               안에서 돈다!
+             -->
+        </h2>
     </div>
 </body>
 </html>
