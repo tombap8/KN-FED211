@@ -58,8 +58,15 @@
                 }
             }); ///// Vue ////
 
-
-
+            // 5. 조건분기 ///////////////////////////
+            new Vue({
+                el:"#app5",
+                data: {
+                    show: true
+                    // show 속성은 디스플레이를 보이고 숨길때
+                    // 속성값을 true/false로 변경하도록 값을 셋팅함
+                }
+            }); //// Vue ////
 
 
         }); ////////////// 로드구역 ////////////////////
@@ -122,8 +129,13 @@
 
     <h2>5. 조건분기</h2>
     <div id="app5">
-        <button>변경하기</button>
-        <p>나는 프론트엔드 개발자다!</p>
+        <button v-on:click="show=!show">변경하기</button>
+        <!-- 
+            v-on:click 요소 클릭시
+            값 show=!show 
+            해석: true면 false, false면 true로 값변경!
+         -->
+        <p v-if="show">나는 프론트엔드 개발자다!</p>
     </div>
 
 
