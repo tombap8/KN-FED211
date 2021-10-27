@@ -222,11 +222,13 @@
     </div><!-- #top -->
     
     <!-- 2. 메인영역 -->
-    <div class="bgc">
-        <main class="cont ibx">
+    <div class="bgc" id="cont">
+        <main class="cont ibx" v-for="(v,i) in items.data" v-if="v.경로===catName">
 
             <!-- 1. 타이틀 -->
-            <h2 class="stit"></h2>
+            <h2 class="stit">
+                {{v.제목}}
+            </h2>
 
             <!-- 2. 서브메뉴(LNB-Local Navigation Bar) -->
             <nav class="lnb"></nav>
