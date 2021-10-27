@@ -15,6 +15,32 @@
 
             console.log("로딩완료!");
 
+            new Vue({
+                el: "#app",
+                data:{
+                    items:[] // json데이터 종류(빈배열형 셋팅)
+                },
+                mounted: function(){
+                    axios.get("test.json")
+                    .then(response => (this.items = response))
+                    //axios는 외부파일을 읽어올 수 있는 라이브러리
+                    //get() 메서드는 가져올 파일 경로를 셋팅함
+                    //then() 메서드는 가져온 후 셋팅내용을 코딩함
+                    // response => (this.items = response)
+                    // 해석: 가져온 파일 내용을 response변수로
+                    // 함수 내부에 전달하여 이 값을 Vue JS에
+                    // 셋팅된 this.items 즉, 현재 변수 items에
+                    // 집어넣어라!
+                    //()=>{} 화살표함수를 줄여쓴것!
+                }
+                // mounted 속성은 "읽어들여진"의 뜻으로
+                // 외부파일을 가져와서 셋팅하는 기능!
+
+
+            }); //////// Vue /////////
+
+
+
         }); ////////////// 로딩구역 //////////////////////
 
     </script>
@@ -23,6 +49,8 @@
 </head>
 <body>
     <h1>Vue JS 데이터 바인딩 연습</h1>
-    
+    <div id="app">
+        <span>{{}}</span>. <span>{{}}</span>
+    </div>
 </body>
 </html>
