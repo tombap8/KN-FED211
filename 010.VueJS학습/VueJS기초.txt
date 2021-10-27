@@ -49,3 +49,8 @@ https://rintiantta.github.io/jpub-vue/
 - 파일확장자는 .json
 - 현재 xml 데이터 보다 더 많이 사용됨!
 (이유: 간단하니까!)
+
+5. Vue JS html 태그에 사용하는 속성은?
+    디렉티브 라고 하며
+    v- 로 시작한다!
+예) v-for, v-bind, v-if 등
