@@ -20,7 +20,7 @@
                     el: "#app",
                     data: {
                         items: {}, // json데이터 종류(빈객체형 셋팅),
-                        catName: ""
+                        catName: "fashion"
                     },
                     mounted: function () {
                         axios.get("real.json")
@@ -43,7 +43,12 @@
 <body>
     <h1>Vue JS 데이터 바인딩 연습</h1>
     <ul id="app">
-        <li v-for="(v,i) in items.data">
+        <li v-for="(v,i) in items.data" v-if="v.경로===catName">
+            <!-- 
+                v-if="v.경로===catName"
+                v.경로의 값이 catName에 설정된 값과 같은 경우에만
+                li를 만들어라!
+             -->
             {{v.제목}}
             <ol v-if="v.메뉴!=='없음'">
                 <!-- 
