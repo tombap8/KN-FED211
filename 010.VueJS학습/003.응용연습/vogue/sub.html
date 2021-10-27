@@ -223,8 +223,11 @@
     
     <!-- 2. 메인영역 -->
     <div class="bgc" id="cont">
-        <main class="cont ibx" v-for="(v,i) in items.data" v-if="v.경로===catName">
-
+        <main class="cont ibx" v-for="(v,i) in items.data" v-if="v.경로===catName" v-bind:class="catName">
+            <!-- 
+                v-bind:class="catName"
+                클래스명 만들어주기 -> 경로명과 같은 이름으로 설정
+             -->
             <!-- 1. 타이틀 -->
             <h2 class="stit">
                 {{v.제목}}
