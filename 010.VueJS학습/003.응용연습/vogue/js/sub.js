@@ -29,12 +29,13 @@ $(function () { ///// jQB /////////////////////////
         el: "#cont", // 바인딩할 대상(변경요소 포함 부모요소)
         data: {
             items: {}, // json데이터 종류(빈객체형 셋팅),
-            catName: "fashion"
+            catName: pm // 파라미터로 넘어온 경로값넣기!
         },
         mounted: function () {
-            axios.get("real.json")
+            axios.get("./js/real.json")
                 .then(response => (this.items = response))
         }
+        // 파일경로는 html위치에서 부터 찾아야함!
         // mounted 속성은 "읽어들여진"의 뜻으로
         // 외부파일을 가져와서 셋팅하는 기능!
 

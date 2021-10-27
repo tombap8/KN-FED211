@@ -231,7 +231,20 @@
             </h2>
 
             <!-- 2. 서브메뉴(LNB-Local Navigation Bar) -->
-            <nav class="lnb"></nav>
+            <nav class="lnb">
+                <ul v-if="v.메뉴!=='없음'">
+                    <li v-for="(m,i) in v.메뉴">
+                        <a href="#">
+                            {{m}}
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- 
+                v-if="v.메뉴!=='없음'"
+                만약에 v.메뉴의 값이 '없음'이 아니면 true
+                이때 for문이 실행됨! false이면 실행안됨!
+            -->
 
             <!-- 3. 서브컨텐츠박스 -->
             <section class="pt2 rbx">
