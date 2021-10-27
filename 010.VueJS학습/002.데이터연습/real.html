@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,44 +12,52 @@
 
     <script>
         window.addEventListener("DOMContentLoaded",
-        ()=>{
+            () => {
 
-            console.log("로딩완료!");
+                console.log("로딩완료!");
 
-            new Vue({
-                el: "#app",
-                data:{
-                    items:{}, // json데이터 종류(빈객체형 셋팅),
-                    catName:""
-                },
-                mounted: function(){
-                    axios.get("real.json")
-                    .then(response => (this.items = response))
-                }
-                // mounted 속성은 "읽어들여진"의 뜻으로
-                // 외부파일을 가져와서 셋팅하는 기능!
-
-
-            }); //////// Vue /////////
+                new Vue({
+                    el: "#app",
+                    data: {
+                        items: {}, // json데이터 종류(빈객체형 셋팅),
+                        catName: ""
+                    },
+                    mounted: function () {
+                        axios.get("real.json")
+                            .then(response => (this.items = response))
+                    }
+                    // mounted 속성은 "읽어들여진"의 뜻으로
+                    // 외부파일을 가져와서 셋팅하는 기능!
 
 
+                }); //////// Vue /////////
 
-        }); ////////////// 로딩구역 //////////////////////
 
+
+            }); ////////////// 로딩구역 //////////////////////
     </script>
 
 
 </head>
+
 <body>
     <h1>Vue JS 데이터 바인딩 연습</h1>
     <ul id="app">
         <li v-for="(v,i) in items.data">
             {{v.제목}}
-            <ol>
-                <li v-for="(m,i) in v.메뉴">{{m}}</li>
+            <ol v-if="v.메뉴!=='없음'">
+                <!-- 
+                    v-if="v.메뉴!=='없음'"
+                    만약에 v.메뉴의 값이 '없음'이 아니면 true
+                    이때 for문이 실행됨! false이면 실행안됨!
+                -->
+                <li v-for="(m,i) in v.메뉴">
+                    {{m}}
+                </li>
             </ol>
 
         </li>
     </ul>
 </body>
+
 </html>
