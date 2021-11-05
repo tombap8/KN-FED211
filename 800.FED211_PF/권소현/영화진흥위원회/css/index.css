@@ -1,0 +1,274 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(common.css);
+
+/*슬라이더 시작*/
+#slide_banner{
+	position:relative;
+	width:100%;
+	height:500px;
+}
+
+#slide_banner>aside{
+	position:relative;
+	width:100%;
+	height:100%;
+	margin:0 auto;
+	overflow:hidden;
+}
+
+#slider{ 
+	position:relative;
+	top:0;
+	left:0;
+	width:5800px;
+	height:100%;
+	transition:left 2s ease-in-out;
+}/*슬라이더 끝*/
+
+/*icon 배너 시작*/
+#icon_banner{ 
+	position:relative;
+	margin:0 auto;
+	padding-left:50px;
+	top:35px;
+	left:0;
+	width:1000px;
+	height:180px;
+}
+
+#icon_banner .icon{
+	margin:0;
+	list-style:none;
+	float:left;
+	text-align:center;
+	padding: 0 23px 0 23px;
+}
+
+#icon_banner .icon::after{
+	content:"";
+	diplay:block;
+	clear:both;	
+}
+
+#icon_banner .icon>li{
+	padding-bottom:10px;
+}
+
+
+#icon_banner .icon>li:hover>a{ /*icon 배너 끝*/
+	text-decoration:underline;
+}
+
+/*img 배너 시작*/
+#img_banner{/*img 배너 겉박스*/
+	position:relative;
+	margin:0 auto;
+	top:15px;
+	width:1000px;
+}
+
+#img_banner .ibnr{/*div 클래스*/
+	margin-bottom: 10px;	
+}
+
+#img_banner .ibnr>img{
+	padding-right:10px;
+}
+#img_banner .ibnr a {
+	display:inline;
+	padding-right:10px;
+}
+#img_banner .img_ul{/*img 배너1*/
+	position:absolute;	
+	top:80px;
+    left:318px;
+    list-style:none;
+	font-size: 13px;
+	letter-spacing:-1px;
+}
+
+#img_banner .img_ul>li{
+	padding-bottom:5px;
+}
+
+#img_banner .img_ul>li a{
+    color:#fff;
+}
+
+#img_banner .img_ul>li a:hover{
+    color:#fff;
+	text-decoration:underline;
+}
+
+#img_banner .img_ul2{/*img 배너2*/
+	position:absolute;	
+	top:80px;
+    left:648px;
+    list-style:none;
+	font-size: 13px;
+	letter-spacing:-1px;
+}
+
+#img_banner .img_ul2>li{
+	padding-bottom:5px;
+}
+
+#img_banner .img_ul2>li a{
+    color:#333330;
+}
+
+#img_banner .img_ul2>li a:hover{
+    color:#333330;
+	text-decoration:underline;
+}
+
+
+/*notice*/
+
+#notice{/*겉박스*/
+	position:relative;
+	top:18px;
+	margin-bottom:15px;
+	width:100%;
+	height:240px;	
+	
+}
+
+#notice #box{/*속박스*/
+	position:relative;
+	width:1000px;
+	height:100%;
+	margin:0 auto;	
+}
+
+#notice #box{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+/*진흥사업 공지사항*/
+#notice #box .box_notice{
+    position:relative;
+    width:487px;
+    height:100%;
+    margin-right:11px;
+    float:left;
+    border:1px solid #d7d7d7;
+    box-sizing:content-box;	
+}
+
+#notice #box .box_notice .ntxt{
+	position:absolute;
+	width:480px;
+	height:80px;
+	top:36px;
+	left:-30px;
+	font-size:13px;	
+	list-style:none;
+}
+
+#notice #box .box_notice .ntxt>li{
+    list-style:none;
+    padding:10px 0px 2px 4px;
+}
+
+#notice #box .box_notice .ntxt>li>a:hover{
+    text-decoration:underline;
+}
+
+#notice #box .box_notice .ntxt2{
+	position:absolute;
+	width:50px;
+	top:36px;
+	right:8px;
+	font-size:13px;	
+	list-style:none;
+}
+
+#notice #box .box_notice .ntxt2>li{
+    list-style:none;
+    padding:10px 0px 2px 4px;
+}
+
+#notice #box .box_notice .ntxt2>li>a:hover{
+    text-decoration:underline;
+}
+
+
+/*KOFIC 공지사항*/
+#notice #box .box_notice2{
+    position:relative;
+    width:487px;
+    height:100%;
+    margin-right:11px;
+    float:left;
+    border:1px solid #d7d7d7;
+    box-sizing:content-box;	
+}
+
+#notice #box .box_notice2 .ntxt3{
+	position:absolute;
+	width:480px;
+	height:80px;
+	top:36px;
+	left:-30px;
+	font-size:13px;	
+	list-style:none;
+}
+
+#notice #box .box_notice2 .ntxt3>li{
+    list-style:none;
+    padding:10px 0px 2px 4px;
+}
+
+#notice #box .box_notice2 .ntxt3>li>a:hover{
+    text-decoration:underline;
+}
+
+#notice #box .box_notice2 .ntxt4{
+	position:absolute;
+	width:50px;
+	top:36px;
+	right:8px;
+	font-size:13px;	
+	list-style:none;
+}
+
+#notice #box .box_notice2 .ntxt4>li{
+    list-style:none;
+    padding:10px 0px 2px 4px;
+}
+
+#notice #box .box_notice2 .ntxt4>li>a:hover{
+    text-decoration:underline;
+}
+
+/*사이트 배너*/
+
+#fam{
+	position:relative;
+	width:100%;
+	height:50px;
+	border-top:1px solid #d7d7d7;
+	border-bottom:1px solid #d7d7d7;
+	top:35px;
+	margin-bottom:34px;
+}
+#fam #fam_i a{
+	display:inline-block;
+	margin-right:34px;
+}
+
+#fam #fam_i{	
+	position:relative;
+	margin:0 auto;
+	width:1000px;
+	padding:13px 0px 0px 0px;
+}
+
+#fam #fam_i a:last-child{
+	margin-right:0px !important;
+}

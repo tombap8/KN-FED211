@@ -1,0 +1,143 @@
+@charset "utf-8";
+/*******************************************상단***********************/
+#top{/*상단 전체*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../images/Untitled-1_02.png) no-repeat center bottom/cover;
+	margin: 0 auto;
+	/*outline: 1px solid red;*/
+}
+#top>header{/*로고,메뉴 전체틀*/
+	position: relative;
+	width: 63%;
+	height: 16%;
+	margin: 0 auto;
+/*	outline: 1px solid red;*/
+}
+#top>header>aside:first-child{/*로고*/
+	position: relative;
+	top:24%;
+	left: 0;
+	width: 20%;
+/*	outline: 1px solid red;*/
+}
+#top>header>aside:first-child img{/*로고 이미지*/
+	width: 100%;
+	height: 100%;
+}
+/**********************GNB메뉴***************************/
+#gnb{/*최상위 메뉴*/
+	position: absolute;
+	top: 5%;
+	right: 0;
+	width: 80%;
+	height: 30%;
+	float: left;
+	margin-top: 2%;
+	font-family: NanumGothicCoding;
+/*	outline: 1px solid yellow;*/
+}
+#gnb dl{/*메뉴 내용*/
+	position:relative;
+	top: 24%;
+	width:18%;
+/*	height: 240px;*/
+	float:left;	
+	margin:0;
+	padding:0;
+	text-align: center;
+	box-sizing: border-boxbor;
+/*	outline: 1px solid red;*/
+}
+#gnb::after{/*float해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+#gnb dl dt{/*최상위 메뉴*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 5% 0 5% 0;
+	font-weight:700;
+	font-size: 1.375em;/*22px*/
+/*	outline: 1px solid pink;*/
+}
+#gnb dl:hover dt{
+	background-color: #545656;
+	
+}
+#gnb dl:hover dd{
+	transition:height 0.4s;
+	display: block;
+}
+#gnb dl dd:hover{
+	background-color: #fee100;
+}
+#gnb dl dt a{/*메뉴 글씨색*/
+	color: #fff;
+}
+#gnb dl dd{/*하위 메뉴*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 1.125em;/*18px*/
+	display: none;
+	padding: 5% 0 5% 0;
+	font-weight:600;
+	font-family: NanumGothicCoding;
+	background-color: #fff;
+	margin-left: 0 !important;
+/*	outline: 1px solid silver;*/
+}
+#gnb dl dd a{/*하위 메뉴 글씨색*/
+	color: #3a3a3a;
+}
+#gnb a{
+	display:block;/*디자인 적용을 위해*/
+	width:100%;
+	height:100%;	
+}
+
+.log{/*로그인*/
+	position: absolute;
+	width: 72px;
+	top: 24%;
+	right: 0;
+	/*outline: 1px solid lime;*/
+}
+.log img{/*로그인 이미지*/
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+
+/*******햄버거 버튼*********/
+#ham{
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	width: 32px;
+	height: 25px;
+	cursor: pointer;
+	display: none;/*안보임*/
+}
+#ham div{
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	background-color: #fff;
+	transition: all 0.8s;
+}
+#ham div:first-child{
+	top: 0;
+}
+#ham div:nth-child(2){
+	top: 10px;
+	left:0;/*초기값 반드시 셋팅!*/
+}
+#ham div:last-child{
+	top: 20px;
+}

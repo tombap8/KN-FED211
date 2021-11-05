@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(core.css);
+@import url(common.css);
+
+#back{ /*백그라운드이미지*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+#back img{
+	width: 100%;
+	height: 100%;
+}
+/*******************************************************************************/
+#box{
+	position: absolute;
+	width: 100%;
+	top: 55%;
+	left: 0;
+}
+#box>ul{
+	position: relative;
+	margin: 0 auto;
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+}
+#box>ul>li{
+	margin-top: 7%;
+}
+#box>ul>li:last-child{
+	width: 100%;
+	height: 50px;
+	background-color: #595758;
+	color: #fff;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	line-height: 2em;
+}
+.selbox{
+	width: 100%;
+	height: 50px;
+	border:1px solid #595758;
+	color: #000;
+	font-size: 1.25em;
+	font-weight: bold;
+	padding: 0 2%;
+	outline:none; /*크롬*/
+}
+
+
+#sicon{
+	margin-bottom: 5%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

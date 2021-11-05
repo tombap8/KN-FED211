@@ -1,0 +1,1011 @@
+@charset "utf-8";
+/*******************************************상단***********************/
+#top{/*상단 전체*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../images/nikon-614640_1920.jpg) no-repeat top/cover;
+	margin: 0 auto;
+	/*outline: 1px solid red;*/
+}
+#top>header{/*로고,메뉴 전체틀*/
+	position: relative;
+	width: 63%;
+	height: 16%;
+	margin: 0 auto;
+/*	outline: 1px solid red;*/
+}
+#top>header>aside:first-child{/*로고*/
+	position: relative;
+	top:24%;
+	left: 0;
+	width: 20%;
+/*	outline: 1px solid red;*/
+}
+#top>header>aside:first-child img{/*로고 이미지*/
+	width: 100%;
+	height: 100%;
+}
+/**********************GNB메뉴***************************/
+#gnb{/*최상위 메뉴*/
+	position: absolute;
+	top: 5%;
+	right: 0;
+	width: 80%;
+	height: 30%;
+	float: left;
+	margin-top: 2%;
+	font-family: NanumGothicCoding;
+	z-index: 1;
+/*	outline: 1px solid yellow;*/
+}
+#gnb dl{/*메뉴 내용*/
+	position:relative;
+	top: 24%;
+	width:18%;
+/*	height: 240px;*/
+	float:left;	
+	margin:0;
+	padding:0;
+	text-align: center;
+	box-sizing: border-boxbor;
+/*	outline: 1px solid red;*/
+}
+#gnb::after{/*float해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+#gnb dl dt{/*최상위 메뉴*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 5% 0 5% 0;
+	font-weight:700;
+	font-size: 1.375em;/*22px*/
+/*	outline: 1px solid pink;*/
+}
+#gnb dl:hover dt{
+	background-color: #545656;
+}
+#gnb dl:hover dd{
+	transition:height 0.4s;
+	display: block;
+}
+#gnb dl dd:hover{
+	background-color: #fee100;
+}
+#gnb dl dt a{/*메뉴 글씨색*/
+	color: #fff;
+}
+#gnb dl dd{/*하위 메뉴*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 1.125em;/*18px*/
+	display: none;
+	padding: 5% 0 5% 0;
+	font-weight:600;
+	font-family: NanumGothicCoding;
+	background-color: #fff;
+	margin-left: 0 !important;
+/*	outline: 1px solid silver;*/
+}
+#gnb dl dd a{/*하위 메뉴 글씨색*/
+	color: #3a3a3a;
+}
+#gnb a{
+	display:block;/*디자인 적용을 위해*/
+	width:100%;
+	height:100%;	
+}
+.log{/*로그인*/
+	position: absolute;
+	width: 6.8%;
+	top: 24%;
+	right: -1%;
+	cursor: pointer;
+}
+.logbox{
+	position: absolute;
+	width: 7%;
+	height: 39%;
+	top: 24%;
+	right: -1%;
+	z-index: 99;
+	cursor: pointer;
+/*	outline: 1px solid lime;*/
+}
+.fil{
+	position: absolute;
+	width: 4%;
+	height: 60%;
+	right: 0.5%;
+	top: 59%;
+/*	outline: 1px solid lime;*/
+}
+.fil img{
+	width: 80%;
+	height: 70%;
+}
+/**************서브 메뉴*****************/
+#submenu{/*서브 네비게이션*/
+	position: relative;
+	left: 64%;
+	margin-top: 0.7%;
+	width: 15%;
+	font-family:NanumBarunGothic;
+/*	outline: 5px solid red;*/	
+}
+/***************상품 선택 탭 메뉴****************/
+#schtab{/*탭 메뉴 전체 박스*/
+	position: relative;
+	width: 57.8%;
+	margin: 0 auto;
+	margin-top: 4%;
+	font-family:NanumBarunGothic;
+/*	outline: 1px solid red;*/
+}
+#schtab>h3{/*포토스쿨 안내 타이틀*/
+	font-size: 1.75em;/*28px*/
+	margin: 0 0 2% 2%;
+}
+#sfm{/*탭 메뉴 제목*/
+	display: flex;
+	width: 100%;
+	font-size: 1.4375em;/*23px*/
+	justify-content:space-between;
+	margin-left: 2%;
+/*	outline: 1px solid lime;*/
+}
+#sfm>li:nth-child(2){
+	width: 9%;
+	text-align: center;
+	border-bottom: 4px solid #ffe100;
+}
+/*****************강의 신청 안내 박스**************/
+.sch4{/*중간 타이틀*/
+	position: relative;
+	width: 55.8%;
+	margin: 0 auto;
+	margin-top: 1.5%;
+	font-size: 1.4375em;
+	font-family:NanumBarunGothic;
+}
+#guide{/*강의 신청 안내 박스*/
+	position: relative;
+	width: 57.8%;
+	margin: 0 auto;
+	margin-top: 1%;
+	box-shadow: 1px 1px 20px #ccc;
+	font-family:NanumBarunGothic;
+}
+#guide::before{
+	content: "";
+	display: block;
+	padding-top: 37%;
+}
+#gbox{/*강의 신청 안내 박스 속박스*/
+	position: absolute;
+	width: 98%;
+	top: 6%;
+	left: 2%;
+	font-size: 1.1875em;/*19px*/
+	line-height: 35px;
+}
+#gbox>li{/*글자 li 각각 width 100%차지*/
+	width: 100%;
+}
+#gbox>li:nth-child(2),#gbox>li:nth-child(5),#gbox>li:nth-child(6),#gbox>li:nth-child(10){
+	margin-left: 3%;
+	color: #b1740b;
+}
+.step{/*단계별 내용 타이틀*/
+	position: relative;
+	width: 57.8%;
+	margin: 0 auto;
+	padding: 1% 0 1% 0;
+	font-family:NanumBarunGothic;
+	font-size: 1.25em;/*20px*/
+}
+#steptxt{
+	font-family:NanumBarunGothic;
+	font-size: 1.125em;/*18px*/
+}
+/****************단계별 쫄라맨*****************/
+#icon{/*전체 박스*/
+	position: relative;
+	width: 57.8%;
+	margin: 0 auto;
+}
+#icon::before{
+	content: "";
+	display: block;
+	padding-top: 9%;
+	font-family:NanumBarunGothic;
+}
+#icon_s{/*속박스*/
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+#zz{/*쫄라맨 아이콘*/
+	width: 100%;
+}
+#zz>li:first-child{/*초급 아이콘*/
+	position: relative;
+	margin: 0 0 0 15.5%;
+}
+#zz>li:nth-child(2){/*초,중급 아이콘*/
+	position: relative;
+	margin: 0 0 0 30.2%;
+}
+#zz>li:nth-child(3){/*중급 아이콘*/
+	position: relative;
+	margin: 0 0 0 30.7%;
+}
+#zzbar img{/*단계별 표시바*/
+	width: 100%;
+}
+#steptxt{
+	position: relative;
+	width: 100%;
+	margin: 0 auto;
+/*	outline: 1px solid red;*/
+}
+#steptxt>li:first-child{/*초급*/
+	position: relative;
+	margin: 0 0 0 15.2%;
+}
+#steptxt>li:nth-child(2){/*초,중급*/
+	position: relative;
+	margin: 0 0 0 29.2%;
+}
+#steptxt>li:nth-child(3){/*중급*/
+	position: relative;
+	margin: 0 0 0 29.5%;
+}
+
+/****************초급 단계 테이블*****************/
+#ele{
+	position: relative;
+	width: 57.8%;
+	margin: 0 auto;
+	margin-top: 1.5%;
+	font-family:NanumBarunGothic;
+	font-size: 1.125em;/*18px*/
+/*	display: none;*/
+}
+table{
+    border-collapse: collapse;
+	box-shadow: 1px 1px 20px #ccc;
+}
+table, th, td{
+	border: 1px solid #dedede;
+}
+#ele th{
+	padding: 1.5%;
+	color: #b1740b;
+	background-color: #f7f0e8;
+	font-size: 1.1875em;/*19px*/
+}
+#ele th,td{
+    text-align: left;
+    padding-left: 8%;
+}
+td{
+/*	padding-top: 0.5%;*/
+	line-height: 28px;
+	font-size: 1.125em;/*18px*/
+	color: #5e5d5d;
+}
+/****************초,중급 단계 테이블*****************/
+#mid{
+	position: relative;
+	width: 57.8%;
+	margin: 0 auto;
+	margin-top: 1.5%;
+	font-family:NanumBarunGothic;
+	font-size: 1.125em;/*18px*/
+	display: none;
+}
+#mid th{
+	padding: 1.5%;
+	color: #b1740b;
+	background-color: #f7f0e8;
+}
+#mid th,td{
+    text-align: left;
+    padding-left: 8%;
+}
+
+/****************중급 단계 테이블*****************/
+#high{
+	position: relative;
+	width: 57.8%;
+	margin: 0 auto;
+	margin-top: 1.5%;
+	font-family:NanumBarunGothic;
+	font-size: 1.125em;/*18px*/
+	display: none;
+}
+#high th{
+	padding: 1.5%;
+	color: #b1740b;
+	background-color: #f7f0e8;
+}
+#high th,td{
+    text-align: left;
+    padding-left: 8%;
+}
+
+/**************************2단계******************************/
+#time{
+	position: relative;
+	width: 57.8%;
+	margin: 0 auto;
+}
+#time img{
+	width: 100%;
+}
+
+
+
+
+
+
+/**************************3단계******************************/
+#buy{/*큰 박스*/
+	position: relative;
+	width: 57.8%;
+	margin: 0 auto;
+	font-family:NanumBarunGothic;
+	font-size: 1.125em;/*18px*/
+}
+#buy_s{/*속 박스*/
+	width: 100%;
+	margin-left: 2%;
+}
+#buy_s>li:nth-child(1),#buy_s>li:nth-child(4),#buy_s>li:nth-child(7){/*아이콘 이동*/
+	margin-top: -0.8%;
+}
+#buy_s>li:nth-child(3),#buy_s>li:nth-child(6){/*화살표 이동*/
+	margin: 0 1% 0 1%;
+}
+#price{
+	position: relative;
+	width: 57.8%;
+	margin: 0.5% auto;
+	padding: 0.5% 0;
+	line-height: 30px;
+	color: #5e5d5d;
+	box-shadow: 1px 1px 20px #ccc;
+	font-family:NanumBarunGothic;
+	font-size: 1.125em;/*18px*/
+}
+#price>li{
+	width: 100%;
+	margin-left: 2%;
+}
+#pin{
+	position: relative;
+	width: 57.8%;
+	margin: 0 auto;
+	margin-top: 1%;
+	text-align: left;
+	color: #5e5d5d;
+	font-family:NanumBarunGothic;
+	font-size: 1.125em;/*18px*/
+}
+#pin th{
+	padding-left: 2%;
+	line-height: 30px;
+	background-color: #f8f8f8;
+}
+#pin td{
+	padding-left: 2%;
+	line-height: 30px;
+}
+#check{
+	position: relative;
+	width: 57.8%;
+	margin: 1% auto;
+/*	outline: 1px solid red;*/
+	font-family:NanumBarunGothic;
+	font-size: 1.125em;/*18px*/
+}
+#chin{
+	position: relative;
+	width: 50%;
+	margin-left: 21%;
+}
+#chin>li{
+	position: relative;
+	width: 8%;
+	margin-right: 4%;
+	padding: 2% 1%;
+	text-align: center;
+	cursor: pointer;
+/*	outline: 1px solid red;*/
+}
+#chin>li:first-child{
+	background-color: #e1e1e1;
+}
+#chin>li:last-child{
+	background-color: #ffe100;
+}
+th{
+	font-weight: normal;
+}
+
+/**************************************************하단***********************/
+#info{/*하단 큰박스*/
+	position: relative;
+	width: 100%;
+/*	height: 40%;*/
+	margin-top: 2%;
+	font-family:NanumBarunGothic;
+	background-color: #2f2f2f;
+/*	outline: 1px solid red;*/
+}
+#info::before{
+	content: "";
+	display: block;
+	padding-top: 16.5%;
+}
+#info>aside{/*하단 속 박스*/
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left:-29%;
+	width: 57.8%;
+	height: 100%;
+/*	outline: 1px solid blue;*/
+}
+#int{/*하단 소개 박스(왼쪽)*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 73%;	
+	height: 100%;
+	color: #fff;
+	letter-spacing: 1px;
+/*	outline: 1px solid lime;*/
+}
+#int>ul{/*하단 소개 박스 속 박스*/
+	width: 100%;
+	margin-top: 5%;
+/*	outline: 1px solid lime;*/
+}
+#int>ul>li{/*하단 소개 내용*/
+	width: 100%;
+	line-height: 30px;
+}
+#int>ul>li:first-child{/*|주|니콘이미징코리아*/
+	font-size: 1.0625em;/*17px*/
+}
+#int>ul>li:nth-child(2){/*화살표 있는 소개*/
+	width: 100%;
+	line-height: 55px;
+	cursor: pointer;
+/*	outline: 1px solid lime;*/
+}
+#int>ul>li:nth-child(3),#int>ul>li:nth-child(4),#int>ul>li:nth-child(5),#int>ul>li:nth-child(6),#int>ul>li:nth-child(7){
+	font-size: 0.9375em;/*15px*/	
+}
+#int>ul>li:nth-child(2) img{/*하단 소개 화살표 이미지*/
+	width: 3%;
+}
+#int>ul>li>span{
+	vertical-align: 9px;
+	margin: 0 3% 0 0.5%;
+/*	outline: 1px solid lime;*/
+}
+#int2{/*하단 소개 박스(오른쪽)*/
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 27%;
+	height: 100%;
+	color: #fff;
+/*	outline: 1px solid pink;*/
+}
+#int2>ul{/*하단 소개 박스(오른쪽) 내용*/
+	position: absolute;
+	right: 0;
+	width: 100%;
+	margin-top: 47%;
+/*	outline: 1px solid lime;*/
+}
+#int2>ul>li{/*아이콘*/
+	width: 17%;
+/*	outline: 1px solid red;*/
+}
+#int2>ul>li:first-child{/*블로그*/
+	margin-left: 22%;
+}
+#int2>ul>li:nth-child(2){/*페북*/
+	margin-left: 3%;
+}
+#int2>ul>li:nth-child(3){/*유튜브*/
+	margin-left: 3%;
+}
+#int2>ul>li:nth-child(4){/*인스타*/
+	margin-left: 3%;
+}
+#int2>ul>li:first-child img{/*블로그 이미지*/
+	width: 95%;
+}
+#int2>ul>li:nth-child(2) img{/*페북 이미지*/
+	width: 95%;
+}
+#int2>ul>li:nth-child(3) img{/*유튜브 이미지*/
+	width: 95%;
+}
+#int2>ul>li:nth-child(4) img{/*인스타 이미지*/
+	width: 95%;
+}
+#int2>ul>li:last-child{/*아이콘 아래 글씨*/
+	margin-left: 14%;
+	margin-top: 4%;
+	width: 98%;
+	font-size: 0.875em;/*14px*/
+/*	outline: 1px solid red;*/
+}
+#site{/*패밀리 박스*/
+	position: absolute;
+	width: 95%;
+	height: 11%;
+	right: 0;
+	margin-top: 28%;
+	font-size: 1em;/*16px*/
+	cursor: pointer;
+	outline:none;/*크롬*/	
+}
+
+.hov{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 100%;
+	left: 0;
+	background-color: #000;
+	opacity: 0.2;
+}
+
+/*******************************media Query****************************************/
+@media only screen and (max-width:1800px){/*********************1800px*/
+#submenu{/*서브 네비게이션*/
+	left: 63%;
+	width: 16.5%;
+}
+#gbox{/*강의 신청 안내 박스 속박스*/
+	top: 3%;
+	line-height: 34px;
+	font-size: 1.125em;/*18px*/
+}
+#zz>li:first-child{/*초급 아이콘*/
+	margin: 0 0 0 15.2%;
+}
+#zz>li:nth-child(2){/*초,중급 아이콘*/
+	margin: 0 0 0 29.7%;
+}
+#zz>li:nth-child(3){/*중급 아이콘*/
+	margin: 0 0 0 30.5%;
+}
+#steptxt>li:first-child{/*초급*/
+	margin: 0 0 0 15%;
+}
+#steptxt>li:nth-child(2){/*초,중급*/
+	margin: 0 0 0 29%;
+}
+#steptxt>li:nth-child(3){/*중급*/
+	margin: 0 0 0 28%;
+}
+	
+	
+	
+	
+}
+/*********************************************************1800px끝*/
+@media only screen and (max-width:1700px){/*********************1700px*/
+#gnb dl dd{/*하위 메뉴*/
+	font-size: 1.0625em;/*17px*/
+}
+.fil{
+	right: 0.1%;
+}
+#schtab>h3{/*포토스쿨 안내 타이틀*/
+	font-size: 1.6875em;/*27px*/
+}
+#sfm{/*탭 메뉴 제목*/
+	font-size: 1.375em;/*22px*/
+}
+.sch4{/*중간 타이틀*/
+	font-size: 1.6875em;/*27px*/
+}	
+#gbox{/*강의 신청 안내 박스 속박스*/
+	line-height: 32px;
+	font-size: 1.0625em;/*17px*/
+}
+	
+	
+	
+	
+#int>ul{/*하단 소개 박스 속 박스*/
+	margin-top: 3%;
+}
+#int>ul>li:nth-child(2){/*화살표 있는 소개*/
+	line-height: 45px;
+	font-size: 0.9375em;/*15px*/
+}
+#int>ul>li:first-child{/*|주|니콘이미징코리아*/
+	font-size: 1em;/*16px*/
+}
+#int>ul>li:nth-child(3),#int>ul>li:nth-child(4),#int>ul>li:nth-child(5),#int>ul>li:nth-child(6),#int>ul>li:nth-child(7){
+	font-size: 0.8125em;/*13px*/	
+}
+#int>ul>li:nth-child(2) img{/*하단 소개 화살표 이미지*/
+	width: 3%;
+}
+#int2>ul>li:last-child{/*아이콘 아래 글씨*/
+	margin-left: 8.5%;
+	font-size: 0.8125em;/*13px*/
+}	
+#int>ul>li>span{
+	vertical-align: 7px;
+}
+	
+}
+/*********************************************************1700px끝*/	
+	
+@media only screen and (max-width:1600px){/*********************1600px*/
+.fil{
+	right: -0.3%;
+}
+#submenu{/*서브 네비게이션*/
+	left: 61.5%;	
+	width: 22.3%;
+}
+#schtab>h3{/*포토스쿨 안내 타이틀*/
+	font-size: 1.625em;/*26px*/
+}
+#sfm{/*탭 메뉴 제목*/
+	font-size: 1.3125em;/*21px*/
+}	
+.sch4{/*중간 타이틀*/
+	font-size: 1.625em;/*26px*/
+}	
+#gbox{/*강의 신청 안내 박스 속박스*/
+	top: 2%;
+	line-height: 30px;
+	font-size: 1em;/*16px*/
+}	
+.step{/*단계별 내용 타이틀*/
+	font-size: 1.1875em;/*19px*/
+}	
+#zz>li:first-child{/*초급 아이콘*/
+	margin: 0 0 0 15%;
+}
+#zz>li:nth-child(2){/*초,중급 아이콘*/
+	margin: 0 0 0 29.5%;
+}
+#zz>li:nth-child(3){/*중급 아이콘*/
+	margin: 0 0 0 30%;
+}
+#steptxt>li:nth-child(2){/*초,중급*/
+	margin: 0 0 0 28.5%;
+}
+#steptxt>li:nth-child(3){/*중급*/
+	margin: 0 0 0 27.5%;
+}	
+	
+	
+
+#int>ul{/*하단 소개 박스 속 박스*/
+	margin-top: 2.2%;
+}
+#int>ul>li:nth-child(2){/*화살표 있는 소개*/
+	line-height: 40px;
+	font-size: 0.875em;/*14px*/
+}
+#int>ul>li:first-child{/*|주|니콘이미징코리아*/
+	font-size: 0.9375em;/*15px*/
+}
+#int>ul>li:nth-child(3),#int>ul>li:nth-child(4),#int>ul>li:nth-child(5),#int>ul>li:nth-child(6),#int>ul>li:nth-child(7){
+	font-size: 0.75em;/*12px*/	
+}	
+#int2>ul>li:last-child{/*아이콘 아래 글씨*/
+	margin-left: 7.7%;
+	font-size: 0.75em;/*12px*/
+}	
+#int>ul>li>span{
+	vertical-align: 5px;
+}	
+	
+}/*******************************************************1600px끝*/
+@media only screen and (max-width:1500px){/*********************1500px*/
+#gnb dl dt{/*최상위 메뉴*/
+	font-size: 1.25em;/*20px*/
+}
+#gnb dl dd{/*하위 메뉴*/
+	font-size: 1em;/*16px*/
+}
+#submenu{/*서브 네비게이션*/
+	left: 60%;
+	width: 24%;
+}
+#schtab>h3{/*포토스쿨 안내 타이틀*/
+	font-size: 1.5625em;/*25px*/
+}
+#sfm{/*탭 메뉴 제목*/
+	font-size: 1.25em;/*20px*/
+}		
+.sch4{/*중간 타이틀*/
+	font-size: 1.5625em;/*25px*/
+}	
+#gbox{/*강의 신청 안내 박스 속박스*/
+	top: 2%;
+	line-height: 29px;
+}
+.step{/*단계별 내용 타이틀*/
+	font-size: 1.125em;/*18px*/
+}	
+	
+	
+	
+#int>ul{/*하단 소개 박스 속 박스*/
+	margin-top: 2%;
+}
+#int>ul>li:nth-child(2){/*화살표 있는 소개*/
+	line-height: 35px;
+	font-size: 0.8125em;/*13px*/
+}
+#int>ul>li:first-child{/*|주|니콘이미징코리아*/
+	font-size: 0.875em;/*14px*/
+}
+#int>ul>li:nth-child(3),#int>ul>li:nth-child(4),#int>ul>li:nth-child(5),#int>ul>li:nth-child(6),#int>ul>li:nth-child(7){
+	font-size: 0.6875em;/*11px*/	
+}	
+#int>ul>li:nth-child(2) img{/*하단 소개 화살표 이미지*/
+	width: 2.9%;
+}
+#int2>ul>li:last-child{/*아이콘 아래 글씨*/
+	margin-left: 13%;
+	font-size: 0.6875em;/*11px*/
+}	
+	
+}/*******************************************************1500px끝*/
+@media only screen and (max-width:1400px){/*********************1400px*/	
+#gnb dl dt{/*최상위 메뉴*/
+	font-size: 1em;/*18px*/
+}
+#gnb dl dd{/*하위 메뉴*/
+	font-size: 0.75em;/*12px*/
+}
+#gnb dl{
+	font-size: 1.25em;/*20px*/
+}
+.log img{
+	width: 88%;
+	height: 88%;
+}
+.fil{
+	right: 0.6%;
+	top: 46%;
+}
+.fil img{
+	width: 70%;
+	height: 60%;
+}
+#submenu{/*서브 네비게이션*/
+	left: 61%;
+	font-size: 0.9375em;
+}			
+#schtab>h3{/*포토스쿨 안내 타이틀*/
+	font-size: 1.5em;/*24px*/
+}
+#sfm{/*탭 메뉴 제목*/
+	font-size: 1.125em;/*18px*/
+}	
+.sch4{/*중간 타이틀*/
+	font-size: 1.5em;/*24px*/
+}		
+#gbox{/*강의 신청 안내 박스 속박스*/
+	top: 1.5%;
+	line-height: 27px;
+}
+.step{/*단계별 내용 타이틀*/
+	font-size: 1.0625em;/*17px*/
+}	
+#zz>li:first-child{/*초급 아이콘*/
+	margin: 0 0 0 14.8%;
+}
+#zz>li:nth-child(2){/*초,중급 아이콘*/
+	margin: 0 0 0 29%;
+}
+#zz>li:nth-child(3){/*중급 아이콘*/
+	margin: 0 0 0 29.8%;
+}
+#steptxt>li:first-child{/*초급*/
+	margin: 0 0 0 15%;
+}	
+#steptxt>li:nth-child(2){/*초,중급*/
+	margin: 0 0 0 27.9%;
+}
+#steptxt>li:nth-child(3){/*중급*/
+	margin: 0 0 0 26.7%;
+}	
+	
+	
+#int{/*하단 소개 박스(왼쪽)*/
+	width: 79%;	
+}
+#int2{/*하단 소개 박스(오른쪽)*/
+	width: 21%;
+}	
+#int>ul{/*하단 소개 박스 속 박스*/
+	margin-top: 1.5%;
+}
+#int>ul>li:first-child{/*|주|니콘이미징코리아*/
+	font-size: 0.875em;/*14px*/
+	margin-bottom: 2%;
+}
+#int>ul>li:nth-child(3),#int>ul>li:nth-child(4),#int>ul>li:nth-child(5),#int>ul>li:nth-child(6){
+	font-size: 0.75em;/*12px*/	
+}	
+#int>ul>li:nth-child(2) img{/*하단 소개 화살표 이미지*/
+	width: 2.9%;
+}
+#int2>ul{/*아이콘*/
+	margin-top: 53%;
+}
+#int2>ul>li:last-child{/*아이콘 아래 글씨*/
+	display: none;
+}
+#site{/*패밀리 박스*/
+	width: 90%;
+	margin-top: 32%;
+	font-size: 0.875em;/*14px*/	
+}
+#int>ul>li:nth-child(7){/*사업자 등록번호*/
+		display: none;
+}
+		
+}/*******************************************************1400px끝*/
+@media only screen and (max-width:1300px){/*********************1300px*/
+#gnb dl dt{/*최상위 메뉴*/
+	font-size: 1em;/*16px*/
+}
+#gnb dl{
+	width: 17%;
+	font-size: 1.125em;/*18px*/
+}
+.fil{
+	right: 0.4%;
+	top: 44%;
+}
+.fil img{
+	width: 60%;
+	height: 50%;
+}
+#submenu{/*서브 네비게이션*/
+	left: 58%;
+}
+#schtab>h3{/*포토스쿨 안내 타이틀*/
+	font-size: 1.375em;/*22px*/
+}
+#sfm{/*탭 메뉴 제목*/
+	font-size: 1em;/*16px*/
+}	
+.sch4{/*중간 타이틀*/
+	font-size: 1.375em;/*22px*/
+}
+#gbox{/*강의 신청 안내 박스 속박스*/
+	top: 1%;
+	line-height: 25px;
+	font-size: 0.9375em;
+}	
+	
+	
+	
+#int>ul>li:nth-child(2){/*화살표 있는 소개*/
+	line-height: 20px;
+}
+#int>ul>li>span{
+	margin: 0 2% 0 0.5%;
+}
+#site{/*패밀리 박스*/
+	font-size: 0.8125em;/*13px*/	
+}
+#int>ul>li{/*하단 소개 내용*/
+	line-height: 28px;
+}	
+	
+	
+	
+}/*******************************************************1300px끝*/	
+@media only screen and (max-width:1200px){/*********************1200px*/
+#gnb dl dt{/*최상위 메뉴*/
+	font-size: 0.9375em;/*15px*/
+}
+#gnb dl{
+	width: 17%;
+	font-size: 1.125em;/*18px*/
+}
+.log{
+	right: 2%;
+}
+.log img{
+	width: 84%;
+	height: 84%;
+}
+.fil{
+	right: 3.4%;
+	top: 42%;
+}
+.fil img{
+	height: 40%;
+}
+#submenu{/*서브 네비게이션*/
+	left: 56%;
+}		
+#schtab>h3{/*포토스쿨 안내 타이틀*/
+	font-size: 1.25em;/*20px*/
+}
+#sfm{/*탭 메뉴 제목*/
+	font-size: 0.9375em;/*15px*/
+}
+.sch4{/*중간 타이틀*/
+	font-size: 1.25em;/*20px*/
+}	
+#gbox{/*강의 신청 안내 박스 속박스*/
+	top: 0%;
+	line-height: 23px;
+	font-size: 0.8125em;
+}
+.step{/*단계별 내용 타이틀*/
+	font-size: 1em;/*16px*/
+}	
+#zz>li:nth-child(2){/*초,중급 아이콘*/
+	margin: 0 0 0 28.3%;
+}
+#zz>li:nth-child(3){/*중급 아이콘*/
+	margin: 0 0 0 29.3%;
+}
+#steptxt>li:first-child{/*초급*/
+	margin: 0 0 0 14.7%;
+}	
+#steptxt>li:nth-child(2){/*초,중급*/
+	margin: 0 0 0 27%;
+}
+#steptxt>li:nth-child(3){/*중급*/
+	margin: 0 0 0 26.1%;
+}		
+	
+	
+	
+	
+#int>ul>li:nth-child(2){/*화살표 있는 소개*/
+	line-height: 15px;
+	font-size: 0.75em;/*12px*/
+}
+#site{/*패밀리 박스*/
+	font-size: 0.75em;/*12px*/
+}	
+	
+	
+
+}/*******************************************************1200px끝*/
+
+
+
+
+
+
+
+
+
+
+
+

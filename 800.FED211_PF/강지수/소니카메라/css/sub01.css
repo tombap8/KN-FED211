@@ -1,0 +1,1265 @@
+@charset "utf-8";
+/*******************************************상단***********************/
+#top{/*상단 전체*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: url(../images/123123.png) no-repeat center bottom/cover;
+	margin: 0 auto;
+/*	outline: 1px solid red;*/
+}
+#top>header{/*로고,메뉴 전체틀*/
+	position: relative;
+	width: 63%;
+	height: 16%;
+	margin: 0 auto;
+/*	outline: 1px solid red;*/
+}
+#top>header>aside:first-child{/*로고*/
+	position: relative;
+	top:24%;
+	left: 0;
+	width: 20%;
+/*	outline: 1px solid red;*/
+}
+#top>header>aside:first-child img{/*로고 이미지*/
+	width: 100%;
+	height: 100%;
+}
+/**********************GNB메뉴***************************/
+#gnb{/*최상위 메뉴*/
+	position: absolute;
+	top: 5%;
+	right: 0;
+	width: 80%;
+	height: 30%;
+	float: left;
+	margin-top: 2%;
+	font-family: NanumGothicCoding;
+	z-index: 1;
+/*	outline: 1px solid yellow;*/
+}
+#gnb dl{/*메뉴 내용*/
+	position:relative;
+	top: 24%;
+	width:18%;
+/*	height: 240px;*/
+	float:left;	
+	margin:0;
+	padding:0;
+	text-align: center;
+	box-sizing: border-boxbor;
+/*	outline: 1px solid red;*/
+}
+#gnb::after{/*float해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+#gnb dl dt{/*최상위 메뉴*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+	padding: 5% 0 5% 0;
+	font-weight:700;
+	font-size: 1.375em;/*22px*/
+/*	outline: 1px solid pink;*/
+}
+#gnb dl:hover dt{
+	background-color: #545656;
+}
+#gnb dl:hover dd{
+	transition:height 0.4s;
+	display: block;
+}
+#gnb dl dd:hover{
+	background-color: #fee100;
+}
+#gnb dl dt a{/*메뉴 글씨색*/
+	color: #fff;
+}
+#gnb dl dd{/*하위 메뉴*/
+	position: relative;
+	width: 100%;
+	height: 100%;
+	font-size: 1.125em;/*18px*/
+	display: none;
+	padding: 5% 0 5% 0;
+	font-weight:600;
+	font-family: NanumGothicCoding;
+	background-color: #fff;
+	margin-left: 0 !important;
+/*	outline: 1px solid silver;*/
+}
+#gnb dl dd a{/*하위 메뉴 글씨색*/
+	color: #3a3a3a;
+}
+#gnb a{
+	display:block;/*디자인 적용을 위해*/
+	width:100%;
+	height:100%;	
+}
+.log{/*로그인*/
+	position: absolute;
+	width: 6.8%;
+	top: 24%;
+	right: -1%;
+	cursor: pointer;
+}
+.logbox{
+	position: absolute;
+	width: 7%;
+	height: 39%;
+	top: 24%;
+	right: -1%;
+	z-index: 99;
+	cursor: pointer;
+/*	outline: 1px solid lime;*/
+}
+.fil{
+	position: absolute;
+	width: 4%;
+	height: 60%;
+	right: 0.5%;
+	top: 59%;
+/*	outline: 1px solid lime;*/
+}
+.fil img{
+	width: 80%;
+	height: 70%;
+}
+/*******햄버거 버튼*********/
+#ham{
+	position: absolute;
+	top: 20px;
+	right: 25px;
+	width: 32px;
+	height: 25px;
+	cursor: pointer;
+	display: none;/*안보임*/
+}
+#ham div{
+	position: absolute;
+	width: 100%;
+	height: 4px;
+	background-color: #fff;
+	transition: all 0.8s;
+}
+#ham div:first-child{
+	top: 0;
+}
+#ham div:nth-child(2){
+	top: 10px;
+	left:0;/*초기값 반드시 셋팅!*/
+}
+#ham div:last-child{
+	top: 20px;
+}
+
+/***********************메인 상단이미지******************************/
+h1{/*상단 큰 제목*/
+	position: relative;
+	width: 35%;
+	top: 6%;
+	left: 18.5%;
+	font-family:NanumSquareR;
+	font-size: 3.125em;
+	font-weight: bold;
+/*	outline: 5px solid red;*/
+}
+h3{/*상단 서브 제목*/
+	position: relative;
+	width: 35%;
+	top: 6%;
+	left: 18.5%;
+	font-family:arial;
+	color: #353636;
+	font-size: 2em;
+}
+#c1{/*폴라로이드 사진*/
+	position: absolute;
+	width: 20%;
+	right: 37%;
+	bottom: 2%;
+	z-index: 1;
+}
+#c1 img{/*폴라로이드 사진 이미지*/
+	width: 98%;
+}
+#c2{/*상단 카메라*/
+	position: absolute;
+	width: 20%;
+	right: 20%;
+	bottom: 0;
+}
+#c2 img{/*상단 카메라 이미지*/
+	width: 100%;
+/*	outline: 5px solid red;*/
+}
+/**************서브 메뉴*****************/
+#submenu{/*서브 네비게이션*/
+	position: relative;
+	left: 66%;
+	margin-top: 0.7%;
+	width: 15%;
+	font-family:NanumBarunGothic;
+/*	outline: 5px solid red;*/	
+}
+/**************상품 탭메뉴***************/
+#sbox{/*탭 한줄로 박스로 묶음*/
+	position: relative;
+	width: 58%;
+	height: 5%;
+	left: 21%;
+	margin-top: 4%;
+	font-family:NanumBarunGothic;
+	font-size: 1.25em;/*20px*/
+/*	outline: 5px solid blue;*/
+}
+#sfm{/*상품 전체/포맷 선택 탭*/
+	position: relative;
+	width: 20%;
+	cursor: pointer;
+/*	outline: 5px solid red;*/
+}
+#sfm>li:first-child{
+	width: 20%;
+	text-align: center;
+	border-bottom: 4px solid #ffe100;
+}
+#ss{/*조회순 탭*/
+	position: absolute;
+	width: 13%;
+	right: 1%;
+	top: 0;
+	cursor: pointer;
+/*	outline: 5px solid red;*/
+}
+/************************new상품 내용 틀 공통 사항********************************/
+.st{/*기종명*/
+	margin: 5% 0 5% 0;
+	font-family:NanumBarunGothic;
+	font-size: 1.8753em;/*30px*/
+/*	outline: 1px solid red;*/
+}
+.stw{/*기종 타이틀*/
+	margin-bottom: 5%;
+	font-family:NanumBarunGothic;
+	font-size: 1.1875em;/*19px*/
+}
+.stt{/*설명 틀 밑부분 마진*/
+	margin-bottom: 8%;
+}
+.boxtxt{/*new상품 부분 설명 틀*/
+	position: absolute;
+	bottom: 2.5%;
+	width: 18.5%;
+	height: 18%;
+	font-size: 0.9375em;
+	color: #3a3a3a;
+	font-family:NanumBarunGothic;
+/*	outline: 1px solid red;*/
+}
+.stbox{/*하위 설명 부분 가운데 정렬*/
+	width: 23%;
+	margin-top: 3.2%;
+}
+.heart{
+	position: absolute;
+	width: 14%;
+	right: 14%;
+	bottom: 36%;
+	cursor: pointer;
+}
+.sliver{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.pink{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.heart>.pink{/*하트 모양 회색*/
+	opacity: 0;
+}
+.heart:hover .pink{/*하트 모양 핑크색*/
+	opacity: 1;
+	transition: opacity 1s;
+}
+
+/****윗부분*****/
+.boxt1{/*윗부분 틀*/
+	position: absolute;
+	top: 6%;
+	width: 100%;
+/*	outline: 1px solid green;*/
+}
+.boxt1>li:nth-child(1){/*포맷*/
+	width: 19%;
+	padding: 5% 0 5% 0;
+	text-align: center;
+/*	outline: 1px solid yellow;*/
+}
+.boxt1>li:nth-child(2){/*유효화소수*/
+	width: 23%;
+	padding: 1% 0 1% 0;
+	margin-left: 4%;
+	text-align: center;
+/*	outline: 1px solid yellow;*/
+}
+.boxt1>li:nth-child(3){/*상용 ISO강도*/
+	width: 23%;
+	padding: 1% 0 1% 0;
+	margin-left: 4%;
+	text-align: center;
+/*	outline: 1px solid yellow;*/
+}
+.boxt1>li:nth-child(4){/*고속 연속촬영*/
+	width: 23%;
+	padding: 1% 0 1% 0;
+	margin-left: 4%;
+	text-align: center;
+/*	outline: 1px solid yellow;*/
+}
+
+/****아래부분*****/
+.boxt2{/*아래부분 틀*/
+	position: absolute;
+	bottom: -7%;
+	width: 100%;
+/*	outline: 1px solid green;*/
+}
+.boxt2>li:nth-child(1){/*포맷 내용*/
+	width: 19%;
+	padding: 1.5% 0 1.5% 0;
+	text-align: center;
+/*	outline: 1px solid red;*/
+}
+.boxt2>li:nth-child(2){/*유효화소수 내용*/
+	width: 23%;
+	padding: 4.7% 0 4.5% 0;
+	margin-left: 4%;
+	text-align: center;
+/*	outline: 1px solid red;*/
+}
+.boxt2>li:nth-child(3){/*상용 ISO강도 내용*/
+	width: 23%;
+	padding: 1% 0 1% 0;
+	margin-left: 4%;
+	text-align: center;
+/*	outline: 1px solid red;*/
+}
+.boxt2>li:nth-child(4){/*고속 연속촬영 내용*/
+	width: 23%;
+	padding: 1% 0 1% 0;
+	margin-left: 4%;
+	text-align: center;
+/*	outline: 1px solid red;*/	
+}
+
+/***************전체 상품틀 설명부분***************/
+.boxtxt_1{
+	position: absolute;
+	bottom: 6.5%;
+	width: 74%;
+	height: 17.5%;
+	font-size: 0.9375em;
+	color: #3a3a3a;
+	font-family:NanumBarunGothic;
+/*	outline: 1px solid red;*/
+}
+/****윗부분*****/
+.boxt11{/*윗부분 틀*/
+	position: absolute;
+	top: 3.5%;
+	width: 100%;
+/*	outline: 1px solid lime;*/
+}
+.boxt11>li:nth-child(1){/*포맷*/
+	position: relative;
+	width: 19%;
+	padding: 5% 0 5% 0;
+	text-align: center;
+/*	outline: 1px solid yellow;*/
+}
+.boxt11>li:nth-child(2){/*유효화소수*/
+	position: relative;
+	width: 23%;
+	padding: 1% 0 1% 0;
+	margin-left: 4%;
+	text-align: center;
+/*	outline: 1px solid yellow;*/
+}
+.boxt11>li:nth-child(3){/*상용 ISO강도*/
+	position: relative;
+	width: 23%;
+	padding: 1% 0 1% 0;
+	margin-left: 4%;
+	text-align: center;
+/*	outline: 1px solid yellow;*/
+}
+.boxt11>li:nth-child(4){/*고속 연속촬영*/
+	position: relative;
+	width: 23%;
+	padding: 1% 0 1% 0;
+	margin-left: 4%;
+	text-align: center;
+/*	outline: 1px solid yellow;*/
+}
+
+/****아래부분*****/
+.boxt22{/*아래부분 틀*/
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+/*	outline: 1px solid green;*/
+}
+.boxt22>li:nth-child(1){/*포맷 내용*/
+	position: relative;
+	width: 19%;
+	padding-top: 2%;
+	text-align: center;
+/*	outline: 1px solid red;*/
+}
+.boxt22>li:nth-child(2){/*유효화소수 내용*/
+	position: relative;
+	width: 23%;
+	padding: 4.5% 0 4.5% 0;
+	margin-left: 4%;
+	text-align: center;
+/*	outline: 1px solid red;*/
+}
+.boxt22>li:nth-child(3){/*상용 ISO강도 내용*/
+	position: relative;
+	width: 23%;
+	padding: 1% 0 1% 0;
+	margin-left: 4%;
+	text-align: center;
+/*	outline: 1px solid red;*/
+}
+.boxt22>li:nth-child(4){/*고속 연속촬영 내용*/
+	position: relative;
+	width: 23%;
+	padding: 1% 0 1% 0;
+	margin-left: 4%;
+	text-align: center;
+/*	outline: 1px solid red;*/	
+}
+
+
+/****************new상품 박스******************/
+#newbox{/*큰박스*/
+	position: relative;
+	width: 57.8%;
+/*	height: 56%;*/
+	margin: 0 auto;
+	overflow: hidden;
+	box-shadow: 2px 2px 20px #ccc;
+/*	outline: 5px solid red;*/
+}
+#newbox:before{
+	content: "";
+	display: block;
+	padding-top: 48%;
+}
+#newbox_s{/*속박스*/
+	display: flex;
+	position: absolute;
+	justify-content:space-between;
+	top: 0;
+	left: 0;
+	width: 133.333%;
+}
+#newbox_s>div{
+	width:33.333%;
+}
+/**********D5************/
+#D5box{/*속박스*/
+	width: 100%;
+	margin: 10% 0 0 13%;
+}
+#D5box img{/*카메라 이미지*/
+	width: 75%;
+}
+#D5box>ul>li{
+	width: 100%;
+}
+#newf{/*new상품 깃발*/
+	position: absolute;
+	top: 3%;
+	left: 1%;
+}
+#newf img{/*new 깃발 이미지*/
+	width: 100%;
+	height: 100%;
+}
+
+.bL{/*new 상품 왼쪽 화살표*/
+	position: absolute;
+	top: 38%;
+	left: 1.5%;
+	width: 1.8%;
+	cursor: pointer;
+	z-index: 9;
+}
+.bR{/*new 상품 오른쪽 화살표*/
+	position: absolute;
+	top: 38%;
+	right: 1.5%;
+	width: 1.8%;
+	cursor: pointer;
+	z-index: 9;
+}
+/**********D500************/
+#D500box{/*속박스*/
+	width: 100%;
+	margin: 10% 0 0 13%;
+}
+#D500box img{/*카메라 이미지*/
+	width: 75%;
+}
+#D500box>ul>li{
+	width: 100%;
+}
+/**********D5600************/
+#D5600box{/*속박스*/
+	width: 100%;
+	margin: 10% 0 0 13%;
+}
+#D5600box img{/*카메라 이미지*/
+	width: 75%;
+}
+#D5600box>ul>li{
+	width: 100%;
+}
+/**********D3400************/
+#D3400box{/*속박스*/
+	width: 100%;
+	margin: 9% 0 0 13%;
+}
+#D3400box img{/*카메라 이미지*/
+	width: 75%;
+}
+#D3400box>ul>li{
+	width: 100%;
+}
+
+/********************전체 상품 첫째줄**********************/
+#allone{/*큰박스*/
+	position: relative;
+	width: 57.8%;
+/*	height: 60%;*/
+	margin: 0 auto;
+	margin-top: 1.5%;
+}
+#allone:before{
+	content: "";
+	display: block;
+	padding-top: 48%;
+}
+#newbox_s1{/*속박스*/
+	display: flex;
+	position: absolute;
+	justify-content:space-around;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+/********************전체 상품 둘째줄**********************/
+#alltwo{/*큰박스*/
+	position: relative;
+	width: 57.8%;
+/*	height: 60%;*/
+	margin: 0 auto;
+	margin-top: 1.5%;
+}
+#alltwo:before{
+	content: "";
+	display: block;
+	padding-top: 48%;
+}
+#newbox_s2{/*속박스*/
+	display: flex;
+	position: absolute;
+	justify-content:space-around;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+/********************전체 상품 셋째줄**********************/
+#allthree{/*큰박스*/
+	position: relative;
+	width: 57.8%;
+/*	height: 60%;*/
+	margin: 0 auto;
+	margin-top: 1.5%;
+}
+#allthree:before{
+	content: "";
+	display: block;
+	padding-top: 48%;
+}
+#newbox_s3{/*속박스*/
+	display: flex;
+	position: absolute;
+	justify-content:space-around;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+/**********왼쪽 줄 상품들************/
+.DL{/*겉박스*/
+	position: absolute;
+	left: 0;
+	width: 31%;
+	box-shadow: 2px 2px 20px #ccc;
+	overflow: hidden;
+	
+/*	outline: 1px solid lime;*/
+}
+.DLbox img{/*카메라 이미지*/
+	width: 75%;
+}
+.DLbox{/*속박스*/
+	width: 100%;
+	margin: 10% 0 0 12.5%;
+}
+.DLbox>ul>li{
+	width: 100%;
+}
+/**********가운데 줄 상품들************/
+.DM{/*겉박스*/
+	position: absolute;
+	width: 31%;
+	box-shadow: 2px 2px 20px #ccc;
+	overflow: hidden;
+/*	outline: 1px solid lime;*/
+}
+.DMbox img{/*카메라 이미지*/
+	width: 75%;
+}
+.DMbox{/*속박스*/
+	width: 100%;
+	margin: 10% 0 0 12.5%;
+}
+.DMbox>ul>li{
+	width: 100%;
+}
+/**********오른쪽 줄 상품들************/
+.DR{/*겉박스*/
+	position: absolute;
+	right: 0;
+	width: 31%;
+	box-shadow: 2px 2px 20px #ccc;
+	overflow: hidden;
+/*	outline: 1px solid lime;*/
+}
+.DRbox img{/*카메라 이미지*/
+	width: 75%;
+}
+.DRbox{/*속박스*/
+	width: 100%;
+	margin: 10% 0 0 12.5%;
+}
+.DRbox>ul>li{
+	width: 100%;
+}
+
+
+
+/**************************************************하단***********************/
+#info{/*하단 큰박스*/
+	position: relative;
+	width: 100%;
+/*	height: 40%;*/
+	margin-top: 2%;
+	font-family:NanumBarunGothic;
+	background-color: #2f2f2f;
+/*	outline: 1px solid red;*/
+}
+#info::before{
+	content: "";
+	display: block;
+	padding-top: 16.5%;
+}
+#info>aside{/*하단 속 박스*/
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left:-29%;
+	width: 57.8%;
+	height: 100%;
+/*	outline: 1px solid blue;*/
+}
+#int{/*하단 소개 박스(왼쪽)*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 73%;	
+	height: 100%;
+	color: #fff;
+	letter-spacing: 1px;
+/*	outline: 1px solid lime;*/
+}
+#int>ul{/*하단 소개 박스 속 박스*/
+	width: 100%;
+	margin-top: 5%;
+/*	outline: 1px solid lime;*/
+}
+#int>ul>li{/*하단 소개 내용*/
+	width: 100%;
+	line-height: 30px;
+}
+#int>ul>li:first-child{/*|주|니콘이미징코리아*/
+	font-size: 1.0625em;/*17px*/
+}
+#int>ul>li:nth-child(2){/*화살표 있는 소개*/
+	width: 100%;
+	line-height: 55px;
+	cursor: pointer;
+/*	outline: 1px solid lime;*/
+}
+#int>ul>li:nth-child(3),#int>ul>li:nth-child(4),#int>ul>li:nth-child(5),#int>ul>li:nth-child(6),#int>ul>li:nth-child(7){
+	font-size: 0.9375em;/*15px*/	
+}
+#int>ul>li:nth-child(2) img{/*하단 소개 화살표 이미지*/
+	width: 3%;
+}
+#int>ul>li>span{
+	vertical-align: 9px;
+	margin: 0 3% 0 0.5%;
+/*	outline: 1px solid lime;*/
+}
+#int2{/*하단 소개 박스(오른쪽)*/
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 27%;
+	height: 100%;
+	color: #fff;
+/*	outline: 1px solid pink;*/
+}
+#int2>ul{/*하단 소개 박스(오른쪽) 내용*/
+	position: absolute;
+	right: 0;
+	width: 100%;
+	margin-top: 47%;
+/*	outline: 1px solid lime;*/
+}
+#int2>ul>li{/*아이콘*/
+	width: 17%;
+/*	outline: 1px solid red;*/
+}
+#int2>ul>li:first-child{/*블로그*/
+	margin-left: 22%;
+}
+#int2>ul>li:nth-child(2){/*페북*/
+	margin-left: 3%;
+}
+#int2>ul>li:nth-child(3){/*유튜브*/
+	margin-left: 3%;
+}
+#int2>ul>li:nth-child(4){/*인스타*/
+	margin-left: 3%;
+}
+#int2>ul>li:first-child img{/*블로그 이미지*/
+	width: 95%;
+}
+#int2>ul>li:nth-child(2) img{/*페북 이미지*/
+	width: 95%;
+}
+#int2>ul>li:nth-child(3) img{/*유튜브 이미지*/
+	width: 95%;
+}
+#int2>ul>li:nth-child(4) img{/*인스타 이미지*/
+	width: 95%;
+}
+#int2>ul>li:last-child{/*아이콘 아래 글씨*/
+	margin-left: 14%;
+	margin-top: 4%;
+	width: 98%;
+	font-size: 0.875em;/*14px*/
+/*	outline: 1px solid red;*/
+}
+#site{/*패밀리 박스*/
+	position: absolute;
+	width: 95%;
+	height: 11%;
+	right: 0;
+	margin-top: 28%;
+	font-size: 1em;/*16px*/
+	cursor: pointer;
+	outline:none;/*크롬*/	
+}
+
+.hov{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 100%;
+	left: 0;
+	background-color: #000;
+	opacity: 0.2;
+}
+
+/*******************************media Query****************************************/
+@media only screen and (max-width:1800px){/*********************1800px*/
+h1{/*상단 큰 제목*/
+	top: 10%;
+}
+h3{/*상단 서브 제목*/
+	top: 10%;
+}
+#submenu{/*서브 네비게이션*/
+	left: 64%;	
+}
+#sfm{/*상품 전체/포맷 선택 탭*/
+	width: 21%;
+}
+#ss{/*조회순 탭*/
+	width: 14%;
+}
+#newf img{/*new 깃발 이미지*/
+	width: 90%;
+	height: 90%;
+}
+.st{/*기종명*/
+	font-size: 1.6875em;/*27px*/
+}
+.stw{/*기종 타이틀*/
+	font-size: 1.0625em;/*17px*/
+}
+.boxtxt{/*new상품 부분 설명 틀*/
+	font-size: 0.8125em;
+}
+.boxtxt_1{
+	font-size: 0.8125em;
+}	
+	
+	
+}
+/*********************************************************1800px끝*/
+@media only screen and (max-width:1700px){/*********************1700px*/
+#gnb dl dd{/*하위 메뉴*/
+	font-size: 1.0625em;/*17px*/
+}
+.fil{
+	right: 0.1%;
+}
+h1{/*상단 큰 제목*/
+	top: 17%;
+}
+h3{/*상단 서브 제목*/
+	top: 17%;
+}
+#sbox{/*탭 한줄로 박스로 묶음*/
+	font-size: 1.1875em;/*19px*/
+}
+#sfm{/*상품 전체/포맷 선택 탭*/
+	width: 22%;
+}
+#ss{/*조회순 탭*/
+	width: 15%;
+}
+	
+	
+	
+#int>ul{/*하단 소개 박스 속 박스*/
+	margin-top: 3%;
+}
+#int>ul>li:nth-child(2){/*화살표 있는 소개*/
+	line-height: 45px;
+	font-size: 0.9375em;/*15px*/
+}
+#int>ul>li:first-child{/*|주|니콘이미징코리아*/
+	font-size: 1em;/*16px*/
+}
+#int>ul>li:nth-child(3),#int>ul>li:nth-child(4),#int>ul>li:nth-child(5),#int>ul>li:nth-child(6),#int>ul>li:nth-child(7){
+	font-size: 0.8125em;/*13px*/	
+}
+#int>ul>li:nth-child(2) img{/*하단 소개 화살표 이미지*/
+	width: 3%;
+}
+#int2>ul>li:last-child{/*아이콘 아래 글씨*/
+	margin-left: 8.5%;
+	font-size: 0.8125em;/*13px*/
+}	
+#int>ul>li>span{
+	vertical-align: 7px;
+}
+	
+}
+/*********************************************************1700px끝*/	
+	
+@media only screen and (max-width:1600px){/*********************1600px*/
+.fil{
+	right: -0.3%;
+}
+h1{/*상단 큰 제목*/
+	top: 18%;
+	font-size: 2.875em;
+}
+h3{/*상단 서브 제목*/
+	top: 18%;
+	font-size: 1.875em;
+}
+#submenu{/*서브 네비게이션*/
+	left: 63.5%;	
+	width: 16%;
+}	
+#sbox{/*탭 한줄로 박스로 묶음*/
+	font-size: 1.125em;/*18px*/
+}
+#sfm{/*상품 전체/포맷 선택 탭*/
+	width: 24%;
+}
+#ss{/*조회순 탭*/
+	width: 16.5%;
+	right: -0.7%;
+}
+#newf img{/*new 깃발 이미지*/
+	width: 85%;
+	height: 85%;
+}		
+.st{/*기종명*/
+	font-size: 1.5em;/*24px*/
+}
+.stw{/*기종 타이틀*/
+	font-size: 1em;/*16px*/
+}
+.boxtxt{/*new상품 부분 설명 틀*/
+	font-size: 0.75em;
+}
+.boxtxt_1{
+	font-size: 0.75em;
+}	
+	
+	
+	
+#int>ul{/*하단 소개 박스 속 박스*/
+	margin-top: 2.2%;
+}
+#int>ul>li:nth-child(2){/*화살표 있는 소개*/
+	line-height: 40px;
+	font-size: 0.875em;/*14px*/
+}
+#int>ul>li:first-child{/*|주|니콘이미징코리아*/
+	font-size: 0.9375em;/*15px*/
+}
+#int>ul>li:nth-child(3),#int>ul>li:nth-child(4),#int>ul>li:nth-child(5),#int>ul>li:nth-child(6),#int>ul>li:nth-child(7){
+	font-size: 0.75em;/*12px*/	
+}	
+#int2>ul>li:last-child{/*아이콘 아래 글씨*/
+	margin-left: 7.7%;
+	font-size: 0.75em;/*12px*/
+}	
+#int>ul>li>span{
+	vertical-align: 5px;
+}	
+	
+}/*******************************************************1600px끝*/
+@media only screen and (max-width:1500px){/*********************1500px*/
+#gnb dl dt{/*최상위 메뉴*/
+	font-size: 1.25em;/*20px*/
+}
+#gnb dl dd{/*하위 메뉴*/
+	font-size: 1em;/*16px*/
+}
+h1{/*상단 큰 제목*/
+	top: 23%;
+	font-size: 2.6875em;
+}
+h3{/*상단 서브 제목*/
+	top: 23.5%;
+	font-size: 1.75em;
+}
+#submenu{/*서브 네비게이션*/
+	width: 17%;
+}		
+.st{/*기종명*/
+	font-size: 1.3125em;/*21px*/
+}
+.stw{/*기종 타이틀*/
+	font-size: 0.9375em;/*15px*/
+}
+.boxtxt{/*new상품 부분 설명 틀*/
+	font-size: 0.6875em;
+}
+.boxtxt_1{
+	font-size: 0.6875em;
+}		
+	
+	
+#int>ul{/*하단 소개 박스 속 박스*/
+	margin-top: 2%;
+}
+#int>ul>li:nth-child(2){/*화살표 있는 소개*/
+	line-height: 35px;
+	font-size: 0.8125em;/*13px*/
+}
+#int>ul>li:first-child{/*|주|니콘이미징코리아*/
+	font-size: 0.875em;/*14px*/
+}
+#int>ul>li:nth-child(3),#int>ul>li:nth-child(4),#int>ul>li:nth-child(5),#int>ul>li:nth-child(6),#int>ul>li:nth-child(7){
+	font-size: 0.6875em;/*11px*/	
+}	
+#int>ul>li:nth-child(2) img{/*하단 소개 화살표 이미지*/
+	width: 2.9%;
+}
+#int2>ul>li:last-child{/*아이콘 아래 글씨*/
+	margin-left: 13%;
+	font-size: 0.6875em;/*11px*/
+}	
+	
+}/*******************************************************1500px끝*/
+@media only screen and (max-width:1400px){/*********************1400px*/	
+#gnb dl dt{/*최상위 메뉴*/
+	font-size: 1em;/*18px*/
+}
+#gnb dl dd{/*하위 메뉴*/
+	font-size: 0.75em;/*12px*/
+}
+#gnb dl{
+	font-size: 1.25em;/*20px*/
+}
+.log img{
+	width: 88%;
+	height: 88%;
+}
+.fil{
+	right: 0.6%;
+	top: 46%;
+}
+.fil img{
+	width: 70%;
+	height: 60%;
+}
+#submenu{/*서브 네비게이션*/
+	left: 63%;
+	width: 19%;
+	font-size: 0.9375em;
+}		
+#sbox{/*탭 한줄로 박스로 묶음*/
+	font-size: 1.0625em;/*17px*/
+}
+#sfm{/*상품 전체/포맷 선택 탭*/
+	width: 25%;
+}
+#ss{/*조회순 탭*/
+	width: 17.5%;
+	right: -0.7%;
+}	
+#newf img{/*new 깃발 이미지*/
+	width: 75%;
+	height: 75%;
+}
+.stw{/*기종 타이틀*/
+	font-size: 0.875em;/*14px*/
+}
+.boxtxt{/*new상품 부분 설명 틀*/
+	font-size: 0.625em;
+}
+.boxtxt_1{
+	font-size: 0.625em;
+}			
+	
+	
+	
+#int{/*하단 소개 박스(왼쪽)*/
+	width: 79%;	
+}
+#int2{/*하단 소개 박스(오른쪽)*/
+	width: 21%;
+}	
+#int>ul{/*하단 소개 박스 속 박스*/
+	margin-top: 1.5%;
+}
+#int>ul>li:first-child{/*|주|니콘이미징코리아*/
+	font-size: 0.875em;/*14px*/
+	margin-bottom: 2%;
+}
+#int>ul>li:nth-child(3),#int>ul>li:nth-child(4),#int>ul>li:nth-child(5),#int>ul>li:nth-child(6){
+	font-size: 0.75em;/*12px*/	
+}	
+#int>ul>li:nth-child(2) img{/*하단 소개 화살표 이미지*/
+	width: 2.9%;
+}
+#int2>ul{/*아이콘*/
+	margin-top: 53%;
+}
+#int2>ul>li:last-child{/*아이콘 아래 글씨*/
+	display: none;
+}
+#site{/*패밀리 박스*/
+	width: 90%;
+	margin-top: 32%;
+	font-size: 0.875em;/*14px*/	
+}
+#int>ul>li:nth-child(7){/*사업자 등록번호*/
+		display: none;
+}
+		
+}/*******************************************************1400px끝*/
+@media only screen and (max-width:1300px){/*********************1300px*/
+#gnb dl dt{/*최상위 메뉴*/
+	font-size: 1em;/*16px*/
+}
+#gnb dl{
+	width: 17%;
+	font-size: 1.125em;/*18px*/
+}
+.fil{
+	right: 0.4%;
+	top: 44%;
+}
+.fil img{
+	width: 60%;
+	height: 50%;
+}
+h1{/*상단 큰 제목*/
+	top: 25%;
+	font-size: 2.625em;
+}
+h3{/*상단 서브 제목*/
+	top: 25.5%;
+	font-size: 1.5em;
+}	
+#submenu{/*서브 네비게이션*/
+	left: 61%;
+	width: 19%;
+}	
+#sbox{/*탭 한줄로 박스로 묶음*/
+	font-size: 1em;/*16px*/
+}
+#sfm{/*상품 전체/포맷 선택 탭*/
+	width: 27%;
+}
+#ss{/*조회순 탭*/
+	width: 18.5%;
+	right: 2%;
+}		
+.st{/*기종명*/
+	font-size: 1.1875em;/*19px*/
+}
+.stw{/*기종 타이틀*/
+	font-size: 0.875em;/*14px*/
+}
+.boxtxt{/*new상품 부분 설명 틀*/
+	display: none;
+}
+.boxtxt_1{
+/*	display: none;*/
+}	
+#D5box>ul>li:nth-child(3) img{
+	display: none;
+}
+#D500box>ul>li:nth-child(3) img{
+	display: none;
+}	
+#D5600box>ul>li:nth-child(3) img{
+	display: none;
+}
+#D3400box>ul>li:nth-child(3) img{
+	display: none;
+}
+/*
+.DLbox>ul>li:nth-child(3) img{
+	display: none;
+}
+.DMbox>ul>li:nth-child(3) img{
+	display: none;
+}
+.DRbox>ul>li:nth-child(3) img{
+	display: none;
+}	
+*/
+	
+	
+#int>ul>li:nth-child(2){/*화살표 있는 소개*/
+	line-height: 20px;
+}
+#int>ul>li>span{
+	margin: 0 2% 0 0.5%;
+}
+#site{/*패밀리 박스*/
+	font-size: 0.8125em;/*13px*/	
+}
+#int>ul>li{/*하단 소개 내용*/
+	line-height: 28px;
+}	
+	
+	
+	
+}/*******************************************************1300px끝*/	
+@media only screen and (max-width:1200px){/*********************1200px*/
+#gnb dl dt{/*최상위 메뉴*/
+	font-size: 0.9375em;/*15px*/
+}
+#gnb dl{
+	width: 17%;
+	font-size: 1.125em;/*18px*/
+}
+.log{
+	right: 2%;
+}
+.log img{
+	width: 84%;
+	height: 84%;
+}
+.fil{
+	right: 3.4%;
+	top: 42%;
+}
+.fil img{
+	height: 40%;
+}
+h1{/*상단 큰 제목*/
+	top: 23%;
+	font-size: 2.375em;
+}
+h3{/*상단 서브 제목*/
+	top: 23.5%;
+	font-size: 1.25em;
+}	
+#submenu{/*서브 네비게이션*/
+	left: 58.5%;
+	width: 22%;
+}	
+#newf img{/*new 깃발 이미지*/
+	width: 65%;
+	height: 65%;
+}		
+	
+	
+	
+	
+#int>ul>li:nth-child(2){/*화살표 있는 소개*/
+	line-height: 15px;
+	font-size: 0.75em;/*12px*/
+}
+#site{/*패밀리 박스*/
+	font-size: 0.75em;/*12px*/
+}	
+	
+	
+
+}/*******************************************************1200px끝*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

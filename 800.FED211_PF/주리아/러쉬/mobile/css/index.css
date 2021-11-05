@@ -1,0 +1,1014 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face{
+	font-family:NanumGothic;
+	src:url(../fonts/NanumGothic.woff) format("woff"), url(../fonts/NanumGothic.eof) format("eof"), url(../fonts/NanumGothic.ttf) format("ttf")
+}
+@font-face{
+	font-family:NanumBarunGothic;
+	src:url(../fonts/NanumBarunGothic.woff) format("woff"), url(../fonts/NanumBarunGothic.eof) format("eof"), url(../fonts/NanumBarunGothic.ttf) format("ttf")
+}
+@font-face{
+	font-family:NanumBarunpenR;
+	src:url(../fonts/NanumBarunpenR.woff) format("woff"), url(../fonts/NanumBarunpenR.eof) format("eof"), url(../fonts/NanumBarunpenR.ttf) format("ttf")
+}
+@font-face{
+	font-family:NanumSquareR;
+	src:url(../fonts/NanumSquareR.woff) format("woff"), url(../fonts/NanumSquareR.eof) format("eof"), url(../fonts/NanumSquareR.ttf) format("ttf")
+}
+
+html, body{
+	padding:0px;
+	margin:0px;
+	width:100%;
+	height:100%;
+	margin:0 auto;
+}
+
+body{
+	overflow-x:hidden;
+}
+
+ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
+ul::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+a{
+	display:block;
+	width:100%;
+	height:100%;
+	text-decoration:none;
+}
+
+img{
+	border:none;
+}
+
+/* 전체부모 */
+#wrap{
+	position:relative;
+	width:100%;
+	height:auto;
+	margin:0 auto;
+}
+
+
+/* top */
+
+
+#wrap #top{	
+	position:relative;
+	width:100%;
+	height:80px;
+	background-color: #000;
+}
+
+#wrap #top #menu{
+	position:absolute;
+	width:50px;
+	height:50px;
+	top:15px;
+	left:3%;
+	background:url(../images/menu.png) no-repeat 50% 50%;
+	background-size:80%;
+	cursor:pointer;
+}
+
+
+#wrap #top #logo{
+	position:absolute;
+	width:150px;
+	height:80px;
+	left:33%;
+	background:url(../../web/images/lushLogo.png) no-repeat 50% 50%;
+	background-size:85%;
+	cursor:pointer;
+}
+
+
+#wrap #top #search{
+	position:absolute;
+	width:50px;
+	height:50px;
+	top:15px;
+	right:3%;
+	background:url(../images/search.png) no-repeat 50% 50%;
+	background-size:80%;	
+	cursor:pointer;
+}
+
+/* top2 */
+
+
+#wrap #top2{	
+	position:relative;
+	width:100%;
+	height:70px;
+	background-color:#000;
+}
+
+#wrap #top2::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+#wrap #top2 .text01{
+	position:relative;
+	text-align:center;
+	width:100%;
+	height:100%;
+	text-align:center;
+	display:block;
+	float:left;
+	color:#FFF;
+	font:bold 1em/70px NanumSquareR;
+	cursor:pointer;
+	transition:all 0.4s;
+}
+#wrap #top2 .text01 a{
+	width:auto;
+	height:auto;
+	text-decoration:none;
+	color:#fff;
+	display:inline;
+	padding:0 10px;
+}
+
+#wrap #top2 .text01 a:hover{
+	color:#ffcf0e;
+}
+
+/* banner */
+
+#wrap #banner{
+	position:relative;
+	width:100%;
+	height:auto;
+	background-color:#e7eaea;
+	padding-bottom:20px;
+}
+
+#wrap #banner #bimg{
+	position:relative;
+	width:100%;
+	height:auto;
+}
+#wrap #banner #bimg img{
+	position:absolute;
+	display:none;
+}
+#wrap #banner #bimg img:first-child{
+	display:inline;
+}
+#wrap #banner #bimg>div{
+	position:relative;
+	width:100%;
+	height:300px;
+}
+
+
+#wrap #banner #bimg>div>img{
+	width:100%;
+	height:100%;
+}
+
+
+#wrap #banner #bbut{
+	position:absolute;
+	width:100%;
+	height:60px;
+	bottom:0;
+	left:0;
+}
+
+#wrap #banner #bbut ul{
+	position:relative;
+	width:150px;
+	height:30px;
+	margin:0 auto;
+}
+
+#wrap #banner #bbut ul li{
+	float:left;
+	position:relative;
+	width:30px;
+	height:30px;
+	background:url(../images/mbut.png) no-repeat -30px 0px;
+	cursor:pointer;
+	opacity:0.9;
+}
+
+#wrap #banner #bbut ul li:first-child{
+	background-position:0px 0px;
+	opacity:1;
+}
+
+/* 타이틀 공통 */
+.title_icon{
+	position:relative;
+	padding-top:40px;
+	width:100%;
+	height:40px;
+}
+
+.title_icon>img{
+	position:absolute;
+	top:40px;
+	left:45%;
+}
+
+.title_txt{
+	position:relative;
+	width:100%;
+	height:40px;
+	padding-bottom:30px;
+	font:bold 2em/40px NanumBarunpenR;
+	text-align:center;
+}
+
+
+/* cont1 부분 */
+
+#cont1{
+	position:relative;
+	width:100%;
+	height:500px;
+	background-color:#e7eaea;
+}
+
+#cont1 ul{
+	position:relative;
+	width:100%;
+	height:95%;
+	background-color:#fff;
+	padding-top:30px;
+	padding-bottom:30px;
+}
+
+#cont1 ul li{
+	position:relative;
+	float:left;
+	width:50%;
+	height:49%;
+}
+
+#cont1 ul li .cont1_img{
+	position:relative;
+	width:80%;
+	margin:0 auto;
+	border-radius:50%;
+}
+#cont1 ul li .cont1_img>img{
+	position:relative;
+	width:100%;
+	height:auto;
+	margin:0 auto;
+}
+
+#cont1 ul li .cont1_title{
+	position:relative;
+	display:block;
+	width:100%;
+	height:50px;
+	text-align:center;
+	font:bold 0.8em/55px NanumBarunGothic;
+	color:#444;
+}
+
+
+/* cont2 부분 디자인 */
+
+#cont2{
+	position:relative;
+	width:100%;
+	height:auto;
+	background-color:#e7eaea;
+}
+
+#cont2 ul{
+	padding-top:20px;
+	padding-bottom:40px;
+	position:relative;
+	width:100%;
+}
+
+#cont2 ul li{
+	margin-top:20px;
+	position:relative;
+	width:100%;
+	background-color:#fff;
+}
+
+#cont2 ul li .cont2_img{
+	position:relative;
+	width:100%;
+}
+
+#cont2 ul li .cont2_img>img{
+	width:100%;
+}
+
+#cont2 ul li .cont2_title{
+	position:relative;
+	width:100%;
+}
+
+#cont2 ul li .cont2_title strong{
+	position:relative;
+	left:20px;
+	font:bold 1em/40px NanumBarunGothic;
+	color:#444;
+}
+
+#cont2 ul li .cont2_title span{
+	left:20px;
+	position:relative;
+	font:0.8em/40px NanumBarunGothic;
+	color:#777;	
+}
+
+
+
+/* cont3 부분 디자인 */
+#cont3{
+	position:relative;
+	width:100%;
+	height:auto;
+	background-color:#e7eaea;
+	padding-bottom:30px;
+}
+
+#cont3 #c3_wrap{
+	position:relative;
+	padding:0px 20px 30px 20px;
+	background-color:#FFF;
+}
+
+#cont3 #c3_wrap .c3_con{
+	position:relative;
+	width:100%;
+	display:none;
+}
+
+#cont3 #c3_wrap .c3_con:first-child{
+	display:inline;
+}
+
+#cont3 #c3_wrap .c3_con .cont3_title{
+	position:relative;
+	width:100%;
+	background-color:#fff;
+}
+
+#cont3 #c3_wrap .c3_con .cont3_title>p{
+	position:relative;
+	width:100%;
+	height:110px;
+}
+
+#cont3 #c3_wrap .c3_con .cont3_title>p>strong{
+	display:block;
+	position:relative;
+	width:100%;
+	text-align:center;
+	text-decoration:underline;
+	font:bold 1.8em Verdana, Geneva, sans-serif;
+}
+
+#cont3 #c3_wrap .c3_con .cont3_title>p>span{
+	display:block;
+	position:relative;
+	width:100%;
+	font:1.2em/30px NanumBarunpenR;
+	text-align:center;
+}
+
+#cont3 #c3_wrap .c3_con .cont3_img{
+	position:relative;
+	width:100%;
+	margin:0 auto;
+}
+
+#cont3 #c3_wrap .c3_con .cont3_img>img{
+	width:100%;
+}
+
+#cont3 #c3_but{
+	position:relative;
+	width:100%;
+	height:60px;
+	padding-bottom:30px;
+	background-color:#FFF;
+}
+
+#cont3 #c3_but ul{
+	position:relative;
+	width:90px;
+	height:30px;
+	margin:0 auto;
+}
+
+#cont3 #c3_but ul li{
+	float:left;
+	position:relative;
+	width:30px;
+	height:30px;
+	background:url(../images/mbut2.png) no-repeat -30px 0px;
+	cursor:pointer;
+}
+
+#cont3 #c3_but ul li:first-child{
+	background-position:0px 0px;
+}
+
+
+/* cont4 부분 디자인 */
+
+#cont4{
+	position:relative;
+	width:100%;
+	height:auto;
+	padding-bottom:30px;
+}
+
+#cont4 #c4_wrap{
+	position:relative;
+	width:90%;
+	margin:0 auto;
+	background-color:#fff;
+	overflow:hidden;
+}
+
+#cont4 #c4_wrap .c4_one{
+	position:relative;
+	width:100%;
+	display:none;
+}
+
+#cont4 #c4_wrap .c4_one:first-child{
+	display:inline;
+}
+
+#cont4 #c4_wrap .c4_one .c4_con{
+	display:inline-block;
+	position:relative;
+	width:47%;
+	margin:0 auto;
+	padding:1%;
+}
+
+#cont4 #c4_wrap .c4_one .c4_con .cont4_img{
+	position:relative;
+	width:100%;
+}
+
+#cont4 #c4_wrap .c4_one .c4_con .cont4_img img{
+	width:100%;
+}
+
+
+#cont4 #c4_wrap .c4_one .c4_con .cont4_title{
+	position:relative;
+	width:100%;
+	height:100px;
+}
+
+#cont4 #c4_wrap .c4_one .c4_con .cont4_title>p{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+#cont4 #c4_wrap .c4_one .c4_con .cont4_title>p>strong{
+	position:relative;
+	display:block;
+	text-align:center;
+	font:1em NanumBarunGothic;
+	color:#000;
+}
+
+#cont4 #c4_wrap .c4_one .c4_con .cont4_title>p>span{
+	position:relative;
+	display:block;
+	text-align:center;
+	font:0.8em NanumBarunGothic;
+	color:#666;
+}
+
+
+#cont4 #c4_but{
+	position:relative;
+	width:100%;
+	height:60px;
+	padding-bottom:20px;
+}
+
+#cont4 #c4_but ul{
+	position:relative;
+	width:150px;
+	height:30px;
+	margin:0 auto;
+}
+
+#cont4 #c4_but ul li{
+	float:left;
+	position:relative;
+	width:30px;
+	height:30px;
+	background:url(../images/mbut2.png) no-repeat -30px 0px;
+	cursor:pointer;
+}
+
+#cont4 #c4_but ul li:first-child{
+	background-position:0px 0px;
+}
+
+
+
+
+/* cont5 부분 디자인 */
+
+#cont5{
+	position:relative;
+	width:100%;
+	background-color:#aebdc1;
+}
+
+#cont5 #c5_txt{
+	position:relative;
+	width:100%;
+	height:50px;
+	text-align:center;
+	padding-top:30px;
+	font:bold 1.6em/65px Verdana, Geneva, sans-serif;
+	color:#FFF;
+}
+
+#cont5 #cont5_con{
+	position:relative;
+	width:100%;
+}
+
+#cont5 .c5_wrap{
+	position:relative;
+	width:100%;
+	margin:0 auto;
+	display:none;
+}
+
+#cont5 .c5_wrap:first-child{
+	display:inline;
+}
+
+#cont5 .c5_wrap .c5_con{
+	position:relative;
+	width:85%;
+	margin:0 auto;
+}
+
+#cont5 .c5_con .cont5_title{
+	position:relative;
+	width:100%;
+	padding-top:30px;
+	padding-bottom:30px;
+	background-color:#FFF;
+	margin-top:50px;
+}
+
+#cont5 .c5_con .cont5_title>strong{
+	position:relative;
+	display:block;
+	text-align:center;
+	font:bold 1.6em Verdana, Geneva, sans-serif;
+	color:#000;
+}
+#cont5 .c5_con .cont5_title>span{
+	position:relative;
+	display:block;
+	text-align:center;
+	font:1.4em NanumSquareR;
+	color:#000;
+}
+
+#cont5 .c5_con .cont5_img{
+	position:relative;
+	width:100%;
+}
+
+#cont5 .c5_con .cont5_img>img{
+	position:relative;
+	width:100%;
+	height:auto;
+}
+
+#cont5 #c5_but{
+	position:relative;
+	width:100%;
+	top:10px;
+	height:60px;
+	background-color:#aebdc1;
+}
+
+#cont5 #c5_but ul{
+	position:relative;
+	width:90px;
+	height:30px;
+	margin:0 auto;
+}
+
+#cont5 #c5_but ul li{
+	float:left;
+	position:relative;
+	width:30px;
+	height:30px;
+	background:url(../images/mbut.png) no-repeat -30px 0px;
+	cursor:pointer;
+}
+
+#cont5 #c5_but ul li:first-child{
+	background-position:0px 0px;
+}
+
+
+
+/* footer 부분 디자인 */
+#footer{
+	position:relative;
+	width:100%;
+	height:auto;
+	background-color:#f4f7f7;
+	padding-top:30px;
+}
+
+#footer article{
+	position:relative;
+	width:100%;
+	height:auto;
+	margin:0 auto;
+}
+
+#footer article section:nth-child(1){
+	position:relative;
+	width:100%;
+	height:40px;
+	background-color:#e7ebeb;
+	border-top:3px solid #ffcf0e;
+}
+
+#footer article section:nth-child(1) ul{
+	position:relative;
+	width:200px;
+	height:40px;
+	margin:0 auto;
+}
+
+#footer article section:nth-child(1) ul li{
+	position:relative;
+	width:100px;
+	height:40px;
+	float:left;
+	font:12px/40px NanumBarunGothic;
+	text-align:center;
+}
+
+#footer article section:nth-child(1) ul li:first-child{	
+	width:80px;
+}
+#footer article section:nth-child(1) ul li:last-child{	
+	width:120px;
+}
+
+#footer article section:nth-child(1) ul li a{
+	color:#000;
+}
+
+#footer article section:nth-child(1) ul li:hover a{
+	font:bold 12px/40px NanumBarunGothic;
+	color:#06F;
+}
+
+#footer article section:nth-child(2){
+	position:relative;
+	width:100%;
+	height:160px;
+	padding-top:10px;
+	background-color:#e7ebeb;
+}
+
+#footer article section:nth-child(2) div:first-child{
+	position:absolute;
+	width:100%;
+	height:100px;
+	text-align:center;
+}
+
+#footer article section:nth-child(2) div:first-child p:first-child{
+	font:bold 12px/20px NanumBarunGothic;
+}
+
+#footer article section:nth-child(2) div:first-child p:last-child{
+	font:11px/20px NanumBarunGothic;
+}
+
+#footer article section:nth-child(2) div:first-child p:last-child span{	
+	font:bold 11px/20px NanumBarunGothic;
+}
+
+
+#footer article section:nth-child(3){
+	position:relative;
+	width:100%;
+	height:40px;
+	background-color:#e7ebeb;
+}
+
+#footer article section:nth-child(3) ul{
+	position:relative;
+	width:210px;
+	height:40px;
+	margin:0 auto;
+}
+
+#footer article section:nth-child(3) ul li{
+	position:relative;
+	width:60px;
+	height:40px;
+	float:left;
+	font:12px/40px NanumBarunGothic;
+	text-align:center;
+}
+
+#footer article section:nth-child(3) ul li:last-child{	
+	width:90px;
+}
+
+#footer article section:nth-child(3) ul li a{
+	color:#000;
+}
+
+#footer article section:nth-child(3) ul li a span{
+	font-weight:bold;
+	color:#F00;
+}
+
+
+#footer article section:nth-child(4){
+	position:relative;
+	width:100%;
+	height:80px;
+}
+
+#footer article section:nth-child(4) div{
+	position:relative;
+	width:100%;	
+}
+
+#footer article section:nth-child(4) div p{
+	position:relative;
+	width:100%;
+	text-align:center;
+	padding-top:10px;
+	padding-bottom:5px;
+	font:11px NanumBarunGothic;
+	color:#000;
+}
+
+#footer article section:nth-child(4) div p span{
+	color:#F00;
+}
+
+#footer article section:nth-child(4) div aside{
+	position:relative;
+	width:100%;
+}
+
+#footer article section:nth-child(4) div aside>ul{
+	position:relative;
+	width:190px;
+	height:40px;
+	margin:0 auto;
+}
+
+#footer article section:nth-child(4) div aside>ul>li{
+	float:left;
+	width:40px;
+	height:40px;
+	margin-right:10px;
+	background:url(../images/SNS.png) no-repeat;
+	cursor:pointer;
+}
+#footer article section:nth-child(4) div aside>ul>li:nth-child(1){
+	background-position:0px 0px; /* left top */
+}
+#footer article section:nth-child(4) div aside>ul>li:nth-child(1):hover{
+	background-position:0px -40px; /* left top */
+}
+#footer article section:nth-child(4) div aside>ul>li:nth-child(2){
+	background-position:-40px 0px; /* left top */
+}
+#footer article section:nth-child(4) div aside>ul>li:nth-child(2):hover{
+	background-position:-40px -40px; /* left top */
+}
+#footer article section:nth-child(4) div aside>ul>li:nth-child(3){
+	background-position:-80px 0px; /* left top */
+}
+#footer article section:nth-child(4) div aside>ul>li:nth-child(3):hover{
+	background-position:-80px -40px; /* left top */
+}
+#footer article section:nth-child(4) div aside>ul>li:nth-child(4){
+	background-position:-120px 0px; /* left top */
+	margin:0;
+}
+#footer article section:nth-child(4) div aside>ul>li:nth-child(4):hover{
+	background-position:-120px -40px; /* left top */
+	margin:0;
+}
+
+#footer article section:nth-child(5){
+	position:relative;
+	width:100%;
+	height:60px;
+	text-align:center;
+	font:11px/60px NanumBarunGothic;
+	color:#000;
+	padding-bottom:30px;
+}
+
+
+/* top 버튼 */
+#top_btn{
+	position:fixed;
+	width:60px;
+	height:60px;
+	right:8%;
+	bottom:8%;
+}
+
+#top_btn img{
+	width:100%;
+	height:100%;
+}
+
+
+/* nav 부분 디자인 */
+#mnav{
+	position:absolute;
+	top:0;
+	left:0;
+	width:90%;
+	height:auto;
+	background-color:#000;
+	display:none;
+}
+
+#mnav #login{
+	position:relative;
+	width:100%;
+	height:60px;
+	background-color:#ffcf0e;
+	padding:10px 15px;
+	box-sizing:border-box;
+}
+
+#mnav #login>div{
+	display:inline-block;
+	position:relative;
+	width:30%;
+	height:40px;
+	background-color:#fff;
+	border-radius:5px;
+	text-align:center;
+	font:bold 1em/42px NanumBarunGothic;
+	cursor:pointer;
+}
+
+#mnav #login>div:first-child{
+	color:#ffcf0e;
+}
+
+#mnav #login>div:last-child{
+	background-color:#000;
+	color:#FFF;
+	margin-left:5px;
+}
+
+#mnav #close{
+	position:absolute;
+	width:40px;
+	height:40px;
+	top:10px;
+	right:15px;
+	cursor:pointer;
+}
+
+#mnav #close img{
+	width:100%;
+}
+
+#mnav #mutil{
+	position:relative;
+	width:100%;
+	height:100px;
+	background-color:#f4f7f7;
+}
+
+#mnav #mutil ul{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+#mnav #mutil ul li{
+	position:relative;
+	float:left;
+	width:33.333%;
+	height:100%;
+}
+
+#mnav #mutil ul li a{
+	transition:all 0.4s;
+}
+
+#mnav #mutil ul li:hover a{
+	background-color:#CCC;
+}
+
+#mnav #mutil ul li .micon{
+	position:relative;
+	top:15px;
+	width:35px;
+	margin:0 auto;
+}
+
+#mnav #mutil ul li .micon img{
+	width:100%;
+}
+#mnav #mutil ul li .mtxt{
+	position:relative;
+	width:100%;
+	text-align:center;
+	font:bold 0.8em/65px NanumBarunGothic;
+	color:#000;
+}
+
+#mnav #msubnav{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+#mnav #msubnav ul{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+#mnav #msubnav ul li{
+	position:relative;
+	width:100%;
+	height:80px;
+	font:bold 1.5em/80px NanumBarunGothic;
+	text-align:center;
+}
+
+#mnav #msubnav ul li:hover a{
+	background-color:#ffcf0e;
+}
+
+#mnav #msubnav ul li a{
+	color:#FFF;
+	transition:all 0.4s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

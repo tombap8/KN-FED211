@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(core.css);
+@import url(common.css);
+
+
+.bar{ /*그라데이션바 박스*/
+	position: relative;
+	width: 100%;
+	height: 5px;
+}
+.bar img{ 
+	width: 100%;
+	height: auto;
+}
+
+/*로그인 전체박스스*/
+#join{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+/***************타이틀************/
+#join>h1{
+	font-size: 2em;
+	color: #595758;
+	text-align: center;
+	margin: 5% 0;
+	font-family: "Helvetica75";
+}
+/**************join, login****************/
+#join>div{ /*전체박스*/
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+#join>div>ul:first-child{
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+	margin-right: 10%;
+}
+#join>div>ul:last-child{
+	width: 45%;
+	display: flex;
+	flex-direction: column;
+}
+#join>div>ul>li{
+	color: #595758;
+	font-family: "Helvetica-Light";
+	font-size: 1.6em;
+}
+#join>div>ul:first-child>li:nth-child(6), #join>div>ul:first-child>li:nth-child(7){ 
+	opacity: 0;
+}
+#join>div>ul>li:nth-child(1){ /*타이틀텍스트*/
+	font-size: 1.75em;
+	font-weight: bolder;
+	font-family: "Helvetica75";
+}
+#join>div>ul>li:nth-child(2){ /*주소*/
+	margin-top: 5%;
+}
+.box{
+	position: relative;
+	width: 100%;
+	height: 50px;
+	display:inline-block;
+	margin-top: 1%;
+}
+#join>div>ul>li .put{
+	width: 100%;
+	height: 100%;
+}
+#join>div>ul>li .put input{
+	border: 1px solid #595758;
+	width:100% ;
+	height: 100%;
+	font-size: 1em;
+	padding-left: 1em;
+}
+#join>div>ul>li:nth-child(4){ /*패스워드*/
+	position: relative;
+	margin-top: 5%;
+}
+#join>div>ul>li:nth-child(4)>div:first-child{
+	float: left;
+}
+.pass{ /*패스워드설명*/
+	font-style: italic;
+	text-align: right;
+}
+#join>div>ul>li:nth-child(6){/*패스워드확인*/
+	margin-top: 5%;
+}
+#join>div>ul>li:nth-child(8){/*들어가기박스*/
+	width: 35%;
+	height: 55px;
+	margin: 10% auto 0 auto;
+	background: linear-gradient(to bottom right, #b5b5b5, #f099b6);
+	text-align: center;
+	font-size: 1.75em;
+	font-weight: bolder;
+	font-family: "Helvetica75";
+	line-height: 2.0em;
+	cursor: pointer;	
+}
+
+
+/*********************************************************************************************************************************************/
+
+@media only screen and (max-width:1500px){
+	.pass{
+		font-size: 0.875em;
+	}
+} 
+
+
+@media only screen and (max-width:1300px){
+	.pass{
+		font-size: 0.725em;
+	}
+} 
+
+@media only screen and (max-width:1250px){
+	.pass{
+		font-size: 0.625em;
+	}
+} 
+
+
+
+
+
+
+
+

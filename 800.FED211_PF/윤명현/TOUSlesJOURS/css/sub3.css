@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(temp.css);
+@import url(core.css);
+
+/**********top네비**************/
+#topnav{
+	position:fixed;
+	width:30px;
+	height:30px;
+	text-align:center;
+	font:bold 10px Verdana, Geneva, sans-serif;
+	right:7%;
+	bottom:10%;
+	color:#00529c;
+	border:3px solid #00529c;
+	cursor:pointer;
+	z-index:9999;
+	background-color: #FFFFFF;
+}
+#topnav>a{
+	color:#00529c;
+}
+
+.cont{
+	position: relative;
+	width: 100%;
+	height: 2550px;
+	background-color: #fff;
+}
+
+
+/************  컨텐츠 박스 상단 타이틀 영역   ***********/
+.cont>h3{/*메뉴 가이드*/
+	position:relative;
+	width:300px;
+	height:40px;
+	top:45px;
+	left:19%;
+	margin-left:3px;
+	color:#a5a5a5;
+}
+.cont>h3>img{/*집모양*/
+	position:relative;
+	width:11px;
+	margin-left:5px;
+}
+.cont>h3>span{/*메뉴가이드 글*/
+	font:bold 0.875em NanumGothic;
+	font-style:normal;
+	letter-spacing:1px;
+}
+.cont>h1{
+	position:relative;
+	width:300px;
+	height:28px;
+	top:80px;
+	left:19%;
+}
+.cont>h2{/*파란색 줄*/
+	position:relative;
+	width:1440px;
+	height:3px;
+	top:110px;
+	margin:0 auto;
+	border-top:2px solid #0074d7;
+	opacity:0.8;
+}
+
+
+/*******************         가장 위 배너 컨텐츠 (핫 이벤트)          *********************/
+
+#hBox{
+	position: relative;
+	width: 926px;
+	height: 310px;
+	left: 0%;
+/*	outline: 1px solid red;*/
+	margin: 160px auto;
+	overflow: hidden;
+}
+#hBox>ul{
+	position: relative;
+	width: 200%;/*두개의 이미지 크기*/
+	height: 100%;
+/*	outline: 1px solid green;*/
+}
+#hBox>ul>li{/*각 배너 항목*/
+	width:50%;
+	height: 100%;
+}
+/*******************************       핫 이벤트배너 블릿         **************************/
+#hblit{
+	position: relative;
+	width: 100%;
+	height: 20px;
+/*	outline: 1px solid red;*/
+	bottom: 150px;
+}
+#hblit>div{
+/*	outline: 1px solid lime;*/
+	position: relative;
+	margin: 0 auto;
+	width: 150px;
+	height: 20px;
+}
+#hblit>div img{
+	position: relative;
+	padding-left: 5px;
+}
+
+/**************    메인이벤트 배너    ********************/
+
+#mBox{
+	position: relative;
+	width: 1100px;
+	height: 600px;
+	margin: -40px auto;
+/*	outline: 1px solid red;*/
+}
+#mBox img{
+/*	box-shadow: 1px 1px #cecece;*/
+	border: 1px solid #D1D1D1;
+}
+/*******************     이벤트 상자        ***********************/
+
+#rbox{
+	position: relative;
+	width: 940px;
+	height: 1300px;
+	margin: 100px auto;
+/*	background-color: #806DCB;*/
+}
+#rbox .elist{
+	position: relative;
+	width: 450px;
+	height: 360px;
+	float: left;
+	margin: 10px;
+	outline: 3px solid #6AA5EB;
+	text-align: center;
+
+}
+.elist img{
+	position: relative;
+	margin-top: 15px;
+	top: 15px;
+	outline: 1px solid #cecece;	
+	cursor: pointer;
+}
+
+.elist ul{
+	position: relative;
+	margin: 0 auto;
+	width: 380px;
+	height: 170px;
+/*	outline: 1px solid red;*/
+}
+.elist>ul>li{
+	position: relative;
+	width: 100%;
+	text-align: center;
+	margin: auto;
+	
+/*	outline: 1px solid lime;*/
+}
+.elist>ul li:first-child{
+	font-size: 16px;
+	color: #6c6c6c;
+	margin-top: 25px;
+	font-weight: 500;
+}
+.elist>ul li:nth-child(2){
+	font-size: 14px;
+	height: 64px;
+	color: #333;
+	margin-top: 15px;
+}
+.elist span{
+	position: relative;
+	width: 100%;
+	height: 20px;
+	font-size: 18px;
+	color: #6c6c6c;
+	bottom: 5px;
+}
+
+/***********     숫자블릿    ***********/
+
+
+
+
+
+
+
+

@@ -1,0 +1,194 @@
+@charset "utf-8";
+/* CSS Document */
+/********************************햄버튼메뉴*********************************/
+#menu{
+	position: fixed;
+	margin-top: 70px;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	height: auto;
+	z-index: 999;
+	overflow-x: hidden;
+	background: url(../images/back.png);
+}
+
+/***********서치박스***********/
+#serch{
+	position: relative;
+	width: 90%;
+	height: auto;
+	display:inline-block;
+	margin: 5% 0 0 3%;
+}
+#serch img{
+	position: absolute;
+	top: 15%;
+	right: -2%;
+	width: 8%;
+	height: auto;
+}
+#serch .put{
+	width: 100%;
+	height: 30px;
+}
+#serch .put input{
+	width: 100%;
+	height: 100%;
+	padding-left: 3%;
+}
+
+#menu>h2{
+	font-size: 1.125em;
+	color: #595758;
+	font-family: "Helvetica-Light";
+	margin: 5% 0 0 5%;
+	letter-spacing: -0.05em;
+}
+/****************************버튼******************************/
+#LJ{
+	position: relative;
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 5%;
+}
+#LJ>li:first-child{
+	width: 47.5%;
+	height: 45px;
+	background-color: #313030;
+	text-align: center;
+	color: #fff;
+	font-size: 1.25em;
+	line-height: 2em;
+}
+#LJ>li:last-child{
+	width: 47.5%;
+	height: 45px;
+	margin-left: 5%;
+	background-color: #c9c9c9;
+	text-align: center;
+	color: #000;
+	font-size: 1.25em;
+	line-height: 2em;
+}
+/******************************아이콘******************************/
+#sicon{
+	position: relative;
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 5%;
+	border-top: 1px solid #c9c9c9;
+	border-bottom: 1px solid #c9c9c9;
+}
+#sicon>li{
+	width: 33%;
+	height: auto;
+}
+#sicon>li:first-child{
+	border-right: 1px solid #c9c9c9;
+}
+#sicon>li:last-child{
+	border-left: 1px solid #c9c9c9;
+}
+#sicon>li img{
+	width: 100%;
+	height: 100%;
+}
+
+
+/***************************************메뉴*****************************************/
+#tabmenu{
+position:relative;
+width:100%;
+height:auto;
+margin-top: 5%;
+}
+#tabmenu a{/*탭메뉴링크*/
+	display: block;/*디자인적용위해*/
+	width:100%;
+	height:40px;
+	color: #000;
+	text-decoration: none;
+	line-height: 2em;
+}
+#tabmenu>ul{/*탭메뉴*/
+	position:relative;
+	width:auto;
+	text-align:center;
+	margin: 0;
+	padding: 0;
+}
+#tabmenu>ul>li{/*각메뉴*/
+	width:50%;
+	list-style: none;
+	float: left;
+}
+#tabmenu>ul>li a{
+	font-family: "Helvetica75";
+	font-size: 1.25em;
+}
+#tabmenu>ul>li:first-child a{
+	background-color: #fde9f2;
+}
+#tabmenu>ul>li:last-child a{
+	background-color: #eeeeee;
+}
+/*************탭메뉴 컨텐츠***************/
+#tabmenu>section{
+	position:relative;
+	width:100%;
+	height:250px;
+}
+#tabmenu>section>nav{/*각 탭 컨텐츠*/
+	position:relative;/*겹치게*/
+	top:0;
+	width:100%;
+	height:auto;
+	display:none;/*안보이게*/
+}
+#tabmenu>section>nav:first-child{
+	display:block;/*첫번째만 보이게*/
+}
+
+.navi{
+	position: relative;
+	width: 100%;
+	height: 200%;
+	display: flex;
+	flex-direction: column;
+}
+.title{
+	width: 100%;
+	height:35px;
+	background:#fde9f2;
+	cursor:pointer;
+	font-family: "Helvetica-Light";
+	font-weight: bold;
+	margin-bottom: 0.5%;
+	line-height: 2em;
+	padding-left: 5%;
+}
+.sub>li{
+	width: 100%;
+	height:35px;
+	background:#eeeeee;
+	cursor:pointer;
+	margin-bottom: 0.5%;
+}
+.sub>li a{
+	text-decoration:none;
+	display:block;
+	width:100%;
+	height:100%;
+	color:#000;
+	font-family: "Helvetica-Light";
+	padding-left: 5%;
+}
+#sale{
+	color: #fa05e6; 
+}
+
+/**************************************************************************************************/
+

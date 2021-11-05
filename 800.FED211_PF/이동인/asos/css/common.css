@@ -1,0 +1,231 @@
+@charset "utf-8";
+/* CSS Document */
+
+/***************************top*****************************/
+#top{
+	position: relative;
+	width: 100%;
+	height: 200px;
+	z-index: 999;
+}
+#top>div{ /*탑화이트 빈박스*/
+	width: 100%;
+	height: 50px;
+	background-color: #fff;
+}
+#tmenu{ 
+	position: relative;
+	width: 100%;
+	height: 70px;
+	background-color: #000;
+}
+#tmenu>div{ /*로고*/
+	width: 51%;
+	height: 100%;
+	margin-left: 9.09%;
+	float: left;
+}
+#tmenu>div>svg{ /*로고*/
+	margin-top: 20px;
+}
+
+#tmenu>ul{ /*장바구니 아이콘*/
+	width: 32.5%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-right: 9.09%;
+}
+#tmenu>ul>li{
+	cursor: pointer;
+}
+#gnb{
+	position: relative;
+	width: 100%;
+	height: 80px;
+	transition:all 0.7s ease-out;
+	overflow: hidden;
+	background: url(../images/gnbback.png);
+}
+#gnb:hover{
+	height:380px;
+}
+#gnb::after{
+				content:"";
+				display:block;
+				clear:both;
+			   }
+#gnb a{
+	display:block;/*디자인적용을 위해*/
+	width:100%;
+	height:100%;
+}
+#white{
+	position: absolute;
+	width: 100%;
+	height: 80px;
+	background-color: #fff;
+}
+#mmenu{
+	position: absolute;
+	width: 90.91%;
+	height: 80px;
+	margin-left: 9.09%;
+	display: flex;
+	justify-content: space-around;
+}
+#mmenu>dl{
+	position: relative;
+	float: left;
+	height: auto;
+	margin-right: 12%;
+	width: 15%;
+}
+#mmenu>dl:last-child{
+	width: 3.5%;
+}
+#mmenu>dl>dt{
+	font-size: 1.5em;
+	color: #000;
+	line-height: 50px;
+	margin-bottom: 15%;
+}
+#mmenu>dl>dt:hover{
+	text-decoration: overline;
+}
+#mmenu>dl>dt:last-child{
+	color:  #fa05e6;
+	cursor: pointer;
+}
+#subM>dl>dt:hover{
+	text-decoration: overline;
+}
+#mmenu>dl>dt a{
+	color: #000;
+}
+#mmenu>dl>dd{
+	font-size: 1.25em;
+	color: #595758;
+	padding: 0;
+	margin-left: 0;
+	position: relative;
+	margin-top: 5%;
+}
+#subM>dl>dd:hover{
+	text-decoration: overline;
+}
+#mmenu>dl>dd a:hover{
+	color: #fff;
+}
+#mmenu>dl>dd>a span{ /*각메뉴옆 아이콘*/
+	position: absolute;
+	top: -70%;
+	display: none;
+}
+
+#mmenu>dl>dd a:hover span{
+	display:inline;
+}
+#mmenu>dl:last-child>dd{
+	margin-top: 5%;
+}
+/************************footer*************************/
+#footer{
+	position: relative;
+	width: 100%;
+	margin-top: 5%;
+}
+#footer>div{
+	width: 100%;	
+	height:200px;
+}
+#footer>div img{
+	width: 100%;
+	height:100%;
+}
+#icons{
+	display: flex;
+	flex-direction: row;
+	width: 80%;
+	height: auto;
+	margin-top: 3%;
+}
+#icons>li{
+	padding-right: 3%;
+}
+
+#footer>div:nth-child(2){
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 20%;
+	left: 3%;
+}
+#footer>div:nth-child(3){
+	position: absolute;
+	width: auto;
+	height: auto;
+	top: 70%;
+	right: 2.5%;
+}
+
+
+
+/*********************************************************************************************************************************************/
+
+@media only screen and (max-width:1700px){
+		#mmenu>dl>dd{
+			margin-top: 6%;
+		}
+	}
+
+
+
+@media only screen and (max-width:1600px){
+		#mmenu>dl>dd{
+			margin-top: 7%;
+		}
+	}
+
+@media only screen and (max-width:1500px){
+		#mmenu>dl>dd{
+			margin-top: 8%;
+		}
+	}
+  
+@media only screen and (max-width:1350px){
+		#mmenu>dl>dd{
+			margin-top: 10%;
+			font-size: 1.125em;
+		}
+	}
+
+@media only screen and (max-width:1250px){
+		#mmenu>dl>dd{
+			margin-top: 11%;
+		}
+	}
+
+@media only screen and (max-width:1200px){
+		#mmenu>dl>dd{
+			margin-top: 12%;
+		}
+	}
+
+@media only screen and (max-width:1170px){
+		#mmenu>dl>dd{
+			margin-top: 10%;
+			font-size: 1em;
+		}
+		#mmenu>dl>dt{
+			margin-bottom: 30%;
+		}
+
+	}
+
+
+
+
+
+

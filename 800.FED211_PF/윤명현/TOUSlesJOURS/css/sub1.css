@@ -1,0 +1,173 @@
+@charset "utf-8";
+/* 파리바게뜨 서브1 페이지 디자인변경 css */
+@import url(temp.css);
+@import url(core.css);
+
+
+
+/***************          컨텐츠                **********************/
+
+#cont{/*전체 박스*/
+	position:relative;
+	width:1300px;
+	height:800px;
+	background-color:#fff;
+	margin:140px auto;
+	background-color: #ededed;
+}
+
+#box>h3{/*메뉴 가이드*/
+	position:relative;
+	width:100%;
+	height:40px;
+	top:45px;
+	left:19%;
+	margin-left:3px;
+	color:#a5a5a5;
+}
+#box>h3>img{/*집모양*/
+	position:relative;
+	width:11px;
+	margin-left:5px;
+}
+#box>h3>span{/*메뉴가이드 글*/
+	font:bold 0.875em NanumGothic;
+	font-style:normal;
+	letter-spacing:1px
+	
+}
+#box>h1{
+	position:relative;
+	width:453px;
+	height:28px;
+	top:80px;
+	left:19%;
+}
+#box>h2{/*파란색 줄*/
+	position:relative;
+	width:1440px;
+	height:3px;
+	top:110px;
+	margin:0 auto;
+	border-top:2px solid #0074d7;
+	opacity:0.8;
+}
+
+/**********   메인 컨텐츠 박스 영역   ***********/
+#cont>section>article{
+	position:relative;
+	margin:0;
+	padding:0;
+	width:660px;
+	height:410px;
+	top:0;
+	left:0;
+}
+
+
+#myVideo{
+	position:absolute;
+	width:660px;
+	height:410px;
+	top:26px;
+	left:50px;
+}
+
+/*영상 소개글 영역*/
+#pbox{
+	position:absolute;
+	width:662px;
+	height:322px;
+	padding: 0 15px;
+	background-color:#fff;
+	top:57%;
+	left:50px;
+	border-bottom-color:4px;
+	background:url(../imges/pbg.png) no-repeat;	
+	overflow-y: scroll;
+	text-align: center;
+}
+#pbox>p{
+	position:absolute;
+	color:#00529c;
+	font-size:1.125em;
+	line-height:30px;
+	font-weight:500;
+	width:500px;
+	height:150px;
+	top:3%;
+	left:50%;
+	transform:translateX(-50%);
+	display: none;
+}
+#pbox>p:first-child{
+	display: block;
+}
+
+
+/*영상 리스트영역*/
+#mlist{
+	position:absolute;
+	width:460px;
+	height:770px;
+	right:50px;
+	top:26px;
+}
+
+#mlist>ul>li{
+	width:230px;
+	height:153px;
+	margin-bottom:2px;
+}
+#mlist>ul>li>a{
+	position: relative;
+	width: 218px;
+	height: 133px;
+}
+#mlist>ul>li>a:first-child{
+	border-color:#0074d7;
+}
+#mlist>ul>li>a>img:hover{
+	border-color:#0074d7;
+}
+#mlist>ul>li>a>img{
+	border:4px solid #797979;
+	border-radius:15px;
+}
+#mlist>ul>li>ul{
+	position: relative;
+	width: 220px;
+/*	outline: 1px solid red;*/
+	
+}
+#mlist>ul>li>ul>li{
+	font-size:0.8em;
+	text-align: center;
+	color: #001C4E;
+	font-weight: 400;
+}
+
+#mlist>ul>li>em{
+	position: absolute;
+	width: 470px;
+	height: 155px;
+	left: -135%;
+	top: 65%;
+	color:#00529c;
+	font-size:1.125em;
+	font-weight:500;
+	font-style: normal;
+}
+
+
+
+#screen {
+
+}
+#screen>iframe{
+	border-style: none;
+}
+
+article {
+	
+}
