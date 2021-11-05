@@ -135,18 +135,12 @@
         .sbox {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
+            left: 150%;
+            transform: translate(-50%,-50%);
             width: 800px;
             z-index: 9999;
         }
 
-        .s1 {
-            right: 100%;
-        }
-
-        .s2 {
-            left: 100%;
-        }
 
         .sbox li {
             position: relative;
@@ -367,21 +361,21 @@
         .mtit {
             position: absolute;
             top: 50%;
-            transform: translateY(-50%);
-            width: 400px;
-            height: 400px;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            width: 20vw;
             margin: 0;
             padding: 0;
-            padding-top: 80px;
-            font: bold 60px/100px Verdana;
-            color: #fff;
-            text-align: center;
-            text-shadow: 0 0 3px #777;
             box-sizing: border-box;
             cursor: pointer;
         }
 
         .mtit::before {
+            content: '';
+            display: block;
+            padding-top: 100%;
+        }
+        .mtit::after {
             content: "";
             display: block;
             position: absolute;
@@ -390,9 +384,23 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background: url(images/cyberpan.jpg) no-repeat -210px -70px/800px;
+            background: url(images/cyberpan.jpg) no-repeat center/cover;
 
 
+        }
+        /* 내부글자 */
+        .mtit>span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font: bold 3vw/20vw Verdana;
+            color: #fff;
+            text-align: center;
+            text-shadow: 0 0 3px #777;
+            white-space: nowrap;
+            z-index: 1;
         }
 
         .rot:hover::before {
@@ -437,9 +445,6 @@
             }
         }
 
-        .mtit>span {
-            position: relative;
-        }
 
         .mt1 {
             right: 60%;
@@ -559,9 +564,6 @@
 
 
 
-
-
-
         window.addEventListener("DOMContentLoaded", function() {
             var tg = document.getElementsByClassName("mtit");
             var tg2 = document.getElementsByClassName("sbox");
@@ -582,24 +584,7 @@
                 tg2[1].style.transition = "all .5s ease-in-out";
 
             }); ///// click //////////////////////////////
-            tg[1].addEventListener("click", function() {
-                //                alert("ㅋㅋ");
-                this.style.top = "15%";
-                this.style.transform = "translateY(-50%) scale(.4)";
-                this.style.transition = "all .5s ease-in-out";
-
-                tg[0].style.top = "50%";
-                tg[0].style.transform = "translateY(-50%) scale(1)";
-                tg[0].style.transition = "all .5s ease-in-out";
-
-                tg2[0].style.right = "100%";
-                tg2[0].style.transition = "all .5s ease-in-out";
-
-                tg2[1].style.left = "50%";
-                tg2[1].style.transition = "all .5s ease-in-out";
-
-            }); ///// click //////////////////////////////
-
+            
 
         });
     </script>
@@ -609,297 +594,142 @@
 
     <!--제목-->
     <h1 class="mainTit">
-        디자인씽킹<br>
-        디지털디자인<br>
-        웹디자인·웹퍼블리셔<br>
+        프론트엔드<br>
+        웹개발<br>
         1회차<br>
-        <span>2020.02.14~2020.07.08</span>
+        <span>2021.09.02~2021.10.27</span>
     </h1>
     
 
     <ul class="sbox s1">
         <li>
-            <a href="#" class="kw">김나현</a>
+            <a href="#" class="kw">KJS</a>
             <div class="cbox">
                 <div></div>
                 <div>
-                    <h2 class="tit">클로바 프렌즈</h2>
-                    <img src="images/kimna.png" alt="김나현1차포폴">
+                    <h2 class="tit">소니 카메라</h2>
+                    <img src="images/kimna.png" alt="강지수포폴">
                     <p class="desc">
-                        <a href="#">1. 분석/설계 자료</a>
-                        <a href="#">2. 디자인 자료</a>
-                        <a href="#">3. 구현 사이트</a>
+                        <a href="#">1. 포트폴리오 사이트</a>
+                        <a href="#">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
         </li>
         <li>
-            <a href="#" class="kw">김혜림</a>
+            <a href="#" class="kw">KSR</a>
             <div class="cbox">
                 <div></div>
                 <div>
-                    <h2 class="tit">고봉민 김밥인</h2>
-                    <img src="images/kimhae.png" alt="김혜림 1차포폴">
+                    <h2 class="tit">네이처 리퍼블릭</h2>
+                    <img src="images/kimhae.png" alt="고세라포폴">
                     <p class="desc">
-                        <a href="#">1. 분석/설계 자료</a>
-                        <a href="#">2. 디자인 자료</a>
-                        <a href="#">3. 구현 사이트</a>
+                        <a href="#">1. 포트폴리오 사이트</a>
+                        <a href="#">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
         </li>
         <li>
-            <a href="#" class="kw">도기용</a>
+            <a href="#" class="kw">KSH</a>
             <div class="cbox">
                 <div></div>
                 <div>
-                    <h2 class="tit">라라랩</h2>
-                    <img src="images/doki.png" alt="도기용 1차포폴">
+                    <h2 class="tit">영화진흥위원회</h2>
+                    <img src="images/doki.png" alt="권소현포폴">
                     <p class="desc">
-                        <a href="#">1. 분석/설계 자료</a>
-                        <a href="#">2. 디자인 자료</a>
-                        <a href="#">3. 구현 사이트</a>
+                        <a href="#">1. 포트폴리오 사이트</a>
+                        <a href="#">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
         </li>
         <li>
-            <a href="#" class="kw">안지영</a>
+            <a href="#" class="kw">MSW</a>
             <div class="cbox">
                 <div></div>
                 <div>
-                    <h2 class="tit">닥터자르트</h2>
-                    <img src="images/angee.png" alt="안지영 1차포폴">
+                    <h2 class="tit">K2</h2>
+                    <img src="images/angee.png" alt="문성원포폴">
                     <p class="desc">
-                        <a href="#">1. 분석/설계 자료</a>
-                        <a href="#">2. 디자인 자료</a>
-                        <a href="#">3. 구현 사이트</a>
+                        <a href="#">1. 포트폴리오 사이트</a>
+                        <a href="#">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
         </li>
         <li>
-            <a href="#" class="kw">이가현</a>
+            <a href="#" class="kw">YMH</a>
             <div class="cbox leega1">
                 <div></div>
                 <div>
-                    <h2 class="tit">메가박스</h2>
-                    <img src="images/leega.png" alt="메가박스">
+                    <h2 class="tit">뚜레쥬르</h2>
+                    <img src="images/leega.png" alt="윤명현포폴">
                     <p class="desc">
-                        <a href="#">1. 분석/설계 자료</a>
-                        <a href="#">2. 디자인 자료</a>
-                        <a href="#">3. 구현 사이트</a>
+                        <a href="#">1. 포트폴리오 사이트</a>
+                        <a href="#">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
         </li>
         <li>
-            <a href="#" class="kw">이주명</a>
+            <a href="#" class="kw">LDI</a>
             <div class="cbox">
                 <div></div>
                 <div>
-                    <h2 class="tit">라한호텔</h2>
-                    <img src="images/leeju.png" alt="이주명 1차포폴">
+                    <h2 class="tit">asos</h2>
+                    <img src="images/leeju.png" alt="이동인포폴">
                     <p class="desc">
-                        <a href="#">1. 분석/설계 자료</a>
-                        <a href="#">2. 디자인 자료</a>
-                        <a href="#">3. 구현 사이트</a>
+                        <a href="#">1. 포트폴리오 사이트</a>
+                        <a href="#">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
         </li>
         <li>
-            <a href="#" class="kw">임경민</a>
+            <a href="#" class="kw">JEK</a>
             <div class="cbox">
                 <div></div>
                 <div>
-                    <h2 class="tit">애플사</h2>
-                    <img src="images/limk.png" alt="임경민 1차포폴">
+                    <h2 class="tit">동국제강</h2>
+                    <img src="images/limk.png" alt="장은경포폴">
                     <p class="desc">
-                        <a href="#">1. 분석/설계 자료</a>
-                        <a href="#">2. 디자인 자료</a>
-                        <a href="#">3. 구현 사이트</a>
+                        <a href="#">1. 포트폴리오 사이트</a>
+                        <a href="#">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
         </li>
         <li>
-            <a href="#" class="kw">주민경</a>
+            <a href="#" class="kw">JRA</a>
             <div class="cbox">
                 <div></div>
                 <div>
-                    <h2 class="tit">댕냥이집</h2>
-                    <img src="images/jumin.png" alt="주민경 1차포폴">
+                    <h2 class="tit">러쉬</h2>
+                    <img src="images/jumin.png" alt="주리아포폴">
                     <p class="desc">
-                        <a href="#">1. 분석/설계 자료</a>
-                        <a href="#">2. 디자인 자료</a>
-                        <a href="#">3. 구현 사이트</a>
+                        <a href="#">1. 포트폴리오 사이트</a>
+                        <a href="#">2. 가이드 문서</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">HHK</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">온더보더</h2>
+                    <img src="images/jumin.png" alt="한희경포폴">
+                    <p class="desc">
+                        <a href="#">1. 포트폴리오 사이트</a>
+                        <a href="#">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
         </li>
     </ul>
-    <ul class="sbox s2">
-        <li>
-            <a href="#" class="kw">김나현</a>
-            <div class="cbox">
-                <div></div>
-                <div>
-                    <h2 class="tit">
-                    <a href="https://www.baskinrobbins.co.kr/" target="_blank">베스킨라빈스</a></h2>
-                    <img src="images/kimna2.png" alt="김나현2차포폴">
-                    <p class="desc">
-                        <a href="#">1. 분석자료</a>
-                        <a href="#">2. 설계자료</a>
-                        <a href="#">3. 목업자료</a>
-                        <a href="#">4. 디자인자료</a>
-                        <a href="#">5. 구현사이트</a>
-                        <a href="#">6. 가이드문서</a>
-                    </p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="#" class="kw">김혜림</a>
-            <div class="cbox">
-                <div></div>
-                <div>
-                    <h2 class="tit">
-                    <a href="https://www.menada-winery.com/en" target="_blank">MENADA</a></h2>
-                    <a href="https://www.queengarnet.com/" target="_blank">
-                    <img src="images/kimhae2.png" alt="김혜림2차포폴"></a>
-                    <p class="desc">
-                        <a href="#">1. 분석자료</a>
-                        <a href="#">2. 설계자료</a>
-                        <a href="#">3. 목업자료</a>
-                        <a href="#">4. 디자인자료</a>
-                        <a href="#">5. 구현사이트</a>
-                        <a href="#">6. 가이드문서</a>
-                    </p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="#" class="kw">도기용</a>
-            <div class="cbox">
-                <div></div>
-                <div>
-                    <h2 class="tit"><a href="https://www.jype.com/" target="_blank">JYP Ent.</a></h2>
-                    <a href="https://studiomaertens.com/" target="_blank">이미지</a>
-                    <p class="desc">
-                        <a href="#">1. 분석자료</a>
-                        <a href="#">2. 설계자료</a>
-                        <a href="#">3. 목업자료</a>
-                        <a href="#">4. 디자인자료</a>
-                        <a href="#">5. 구현사이트</a>
-                        <a href="#">6. 가이드문서</a>
-                    </p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="#" class="kw">안지영</a>
-            <div class="cbox">
-                <div></div>
-                <div>
-                    <h2 class="tit">
-                    <a href="https://www.jomalone.co.kr/" target="_blank">Jo Malone</a></h2>
-                    <a href="https://www.completone.com/index.html" target="_blank">
-                    <img src="images/angee2.png" alt="안지영2차포폴"></a>
-                    <p class="desc">
-                        <a href="#">1. 분석자료</a>
-                        <a href="#">2. 설계자료</a>
-                        <a href="#">3. 목업자료</a>
-                        <a href="#">4. 디자인자료</a>
-                        <a href="#">5. 구현사이트</a>
-                        <a href="#">6. 가이드문서</a>
-                    </p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="#" class="kw">이가현</a>
-            <div class="cbox">
-                <div></div>
-                <div>
-                    <h2 class="tit">
-                    <a href="https://www.sony.co.kr/" target="_blank">SONY Camera</a></h2>
-                    <a href="https://www.fillvoid.com/kr/ko/index.html" target="_blank">
-                    <img src="images/leega2.png" alt="이가현2차포폴"></a>
-                    <p class="desc">
-                        <a href="#">1. 분석자료</a>
-                        <a href="#">2. 설계자료</a>
-                        <a href="#">3. 목업자료</a>
-                        <a href="#">4. 디자인자료</a>
-                        <a href="#">5. 구현사이트</a>
-                        <a href="#">6. 가이드문서</a>
-                    </p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="#" class="kw">이주명</a>
-            <div class="cbox">
-                <div></div>
-                <div>
-                    <h2 class="tit">
-                    <a href="http://www.monami.com/index.php" target="_blank">Monami</a></h2>
-                    <a href="https://dentiguard-lab.com/" target="_blank">
-                    <img src="images/leeju2.png" alt="이주명2차포폴"></a>
-                    <p class="desc">
-                        <a href="#">1. 분석자료</a>
-                        <a href="#">2. 설계자료</a>
-                        <a href="#">3. 목업자료</a>
-                        <a href="#">4. 디자인자료</a>
-                        <a href="#">5. 구현사이트</a>
-                        <a href="#">6. 가이드문서</a>
-                    </p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="#" class="kw">임경민</a>
-            <div class="cbox">
-                <div></div>
-                <div>
-                    <h2 class="tit">
-                    <a href="https://www.tpirates.com/%ED%99%88" target="_blank">오리크림빵</a></h2>
-                    <a href="https://www.mangoplate.com/" target="_blank">
-                    <img src="images/limk2.png" alt="임경민2차포폴"></a>
-                    <p class="desc">
-                        <a href="#">1. 분석자료</a>
-                        <a href="#">2. 설계자료</a>
-                        <a href="#">3. 목업자료</a>
-                        <a href="#">4. 디자인자료</a>
-                        <a href="#">5. 구현사이트</a>
-                        <a href="#">6. 가이드문서</a>
-                    </p>
-                </div>
-            </div>
-        </li>
-        <li>
-            <a href="#" class="kw">주민경</a>
-            <div class="cbox">
-                <div></div>
-                <div>
-                    <h2 class="tit">
-                    <a href="" target="_blank">한의원</a></h2>
-                    <a href="" target="_blank">
-                    <img src="images/jumin2.png" alt="주민경2차포폴"></a>
-                    <p class="desc">
-                        <a href="#">1. 분석자료</a>
-                        <a href="#">2. 설계자료</a>
-                        <a href="#">3. 목업자료</a>
-                        <a href="#">4. 디자인자료</a>
-                        <a href="#">5. 구현사이트</a>
-                        <a href="#">6. 가이드문서</a>
-                    </p>
-                </div>
-            </div>
-        </li>
-    </ul>
-    <h2 class="mtit mt1 rot"><span>1차<br>포트폴리오</span></h2>
-    <h2 class="mtit mt2 rot"><span>2차<br>포트폴리오</span></h2>
+    <h2 class="mtit rot"><span>포트폴리오</span></h2>
 
     <!--전체중앙디피박스-->
     <div id="dpbox">
