@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio Management</title>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        body {
+            background: url(images/bg.jpg) no-repeat center/cover;
+            overflow: hidden;
+            perspective: 480px;
+
+        }
+
+        ul {
+            margin: 0 auto;
+            padding: 0;
+            list-style: none;
+        }
+
+        ul::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 18px;
+        }
+
+
+        /*큰제목*/
+        .mainTit {
+            position: absolute;
+            top: 5%;
+            left: 50%;
+            transform: translateX(-50%) rotateY(5deg);
+            width: 600px;
+            height: 200px;
+            text-align: center;
+            background: url(images/cyberpan.jpg) no-repeat center/cover;
+            color: #fff;
+            font-size: 28px;
+            line-height: 40px;
+            text-shadow: 1px 0 #000, -1px 0 #000,
+                0 1px #000, 0 -1px #000;
+            overflow: hidden;
+            cursor: pointer;
+            animation: mtitAni 1s ease-in-out infinite alternate;
+        }
+
+        .mainTit:hover {
+            animation: mtitAni2 1s ease-in-out infinite alternate;
+        }
+
+        .mainTit::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: -100px;
+            left: -50%;
+            width: 70px;
+            height: 500px;
+            background-image: linear-gradient(to left, #fff 5%, transparent 50%, transparent);
+            transform: rotate(30deg);
+            opacity: .5;
+            animation: reflect 1s ease-in-out infinite alternate;
+        }
+
+        .mainTit:hover::after {
+            left: -100px;
+            top: -50%;
+            height: 70px;
+            width: 1000px;
+            background-image: linear-gradient(to bottom, #fff 5%, transparent 50%, transparent);
+            transform: rotate(10deg);
+            opacity: .5;
+            animation: reflect2 1s ease-in-out infinite alternate;
+        }
+
+        .mainTit span {
+            font-size: 20px;
+        }
+
+        @keyframes mtitAni {
+            from {
+                transform: translateX(-50%) rotateY(5deg);
+            }
+
+            to {
+                transform: translateX(-50%) rotateY(-5deg);
+            }
+        }
+
+        @keyframes mtitAni2 {
+            from {
+                transform: translateX(-50%) rotateY(0deg) rotateX(15deg);
+            }
+
+            to {
+                transform: translateX(-50%) rotateY(0deg) rotateX(-15deg);
+            }
+        }
+
+        @keyframes reflect {
+            from {
+                left: -50%;
+            }
+
+            to {
+                left: 150%;
+            }
+        }
+
+        @keyframes reflect2 {
+            from {
+                top: -50%;
+            }
+
+            to {
+                top: 150%;
+            }
+        }
+
+        .sbox {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 800px;
+            z-index: 9999;
+        }
+
+        .s1 {
+            right: 100%;
+        }
+
+        .s2 {
+            left: 100%;
+        }
+
+        .sbox li {
+            position: relative;
+            float: left;
+            width: 25%;
+            margin: 50px 0;
+        }
+
+        .cbox {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            width: 0;
+            /*300px;*/
+            height: 300px;
+            overflow: hidden;
+            transition: .2s ease-out .2s;
+            /*            outline: 1px solid red;*/
+        }
+
+        .cbox>div {
+            float: left;
+            height: 100%;
+        }
+
+        .cbox>div:first-child {
+            position: relative;
+            width: 100px;
+            /*            background: #d05858;*/
+        }
+
+        .cbox>div:first-child::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 110%;
+            height: 1px;
+            background: #00ffeb;
+            transform-origin: right;
+            transform: rotate(-30deg);
+            box-shadow: 0 0 5px #000;
+        }
+
+        .cbox>div:last-child {
+            position: absolute;
+            top: 0;
+            left: 100px;
+            width: 200px;
+            height: 0px;
+            background: #000 url(images/cyberpan.jpg) no-repeat center 50px/100%;
+            border: 2px solid #00ffeb;
+            color: #fff;
+            text-shadow: 0 1px #000, 0 -1px #000,
+                1px 0 #000, -1px 0 #000;
+            text-align: center;
+
+            box-sizing: border-box;
+            overflow: hidden;
+            transition: .2s ease-out;
+        }
+
+        .cbox>div:last-child img {
+            width: 100%;
+        }
+
+
+        .kw {
+            position: relative;
+            display: block;
+            width: 90px;
+            height: 90px;
+            margin: 0 auto;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 90px;
+            text-shadow: 0 0 2px #777;
+            z-index: 1;
+        }
+
+        .s1>li .kw {
+            background-image: radial-gradient(farthest-side at 110% 110%, #f8b2d8 10%, #c7207a 70%);
+            animation: updown2 .5s ease-in-out infinite alternate;
+        }
+
+        .s2>li .kw {
+            background-image: radial-gradient(farthest-side at 110% 110%, #a2b8ff 10%, #2047c7 70%);
+            animation: updown2 .5s ease-in-out infinite alternate;
+        }
+
+        .s1>li .cbox {
+            animation: updown2 .5s ease-in-out infinite alternate;
+        }
+
+        .s2>li .cbox {
+            animation: updown2 .5s ease-in-out infinite alternate;
+        }
+
+        /*
+        .s1>li .cbox>div:first-child::before {
+            animation: rot .5s ease-in-out infinite alternate;
+        }
+*/
+
+        .sbox>li .cbox>div:first-child::before {
+            animation: rot2 .5s ease-in-out infinite alternate;
+        }
+
+        .sbox>li:hover .cbox {
+            width: 300px;
+            transition: .4s ease-out;
+            z-index: 2;
+        }
+
+        .sbox>li:hover .cbox>div:last-child {
+            height: 300px;
+            transition: .4s ease-out .4s;
+        }
+
+        .s2>li:hover .kw {
+            background-image: radial-gradient(farthest-side at 30% 30%, #a2b8ff 10%, #2047c7 70%);
+            z-index: 3;
+        }
+
+        .s1>li:hover .kw {
+            background-image: radial-gradient(farthest-side at 30% 30%, #f8b2d8 10%, #c7207a 70%);
+            z-index: 3;
+        }
+
+        .tit {
+            margin: 0;
+            padding: 10px 0;
+            background: rgba(0, 0, 255, 0.67);
+            font-size: 18px;
+        }
+
+        .desc {
+            overflow: auto;
+            height: 120px;
+            background: rgba(0, 0, 0, 0.7);
+            font-size: 12px;
+            margin: 0;
+            padding: 10px;
+            text-align: left;
+            line-height: 25px;
+        }
+
+        .desc::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        .desc::-webkit-scrollbar-thumb {
+            background: #666;
+            border-radius: 5px;
+        }
+
+        .desc::-webkit-scrollbar-track {
+            background: #ddd;
+            border-radius: 5px;
+        }
+
+        .desc>a {
+            display: block;
+        }
+
+        .two {
+            line-height: 30px;
+            padding-top: 15px;
+            box-sizing: border-box;
+        }
+
+        @keyframes updown {
+            from {
+                transform: translateY(1px);
+            }
+
+            to {
+                transform: translateY(-1px);
+            }
+        }
+
+        @keyframes updown2 {
+            from {
+                transform: translateY(-1px);
+            }
+
+            to {
+                transform: translateY(1px);
+            }
+        }
+
+        @keyframes rot {
+            from {
+                transform: rotate(-31deg);
+            }
+
+            to {
+                transform: rotate(-29deg);
+            }
+        }
+
+        @keyframes rot2 {
+            from {
+                transform: rotate(-29deg);
+            }
+
+            to {
+                transform: rotate(-31deg);
+            }
+
+        }
+
+        .mtit {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 400px;
+            height: 400px;
+            margin: 0;
+            padding: 0;
+            padding-top: 80px;
+            font: bold 60px/100px Verdana;
+            color: #fff;
+            text-align: center;
+            text-shadow: 0 0 3px #777;
+            box-sizing: border-box;
+            cursor: pointer;
+        }
+
+        .mtit::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: url(images/cyberpan.jpg) no-repeat -210px -70px/800px;
+
+
+        }
+
+        .rot:hover::before {
+            animation: rot 3s ease-in-out infinite;
+        }
+
+        @keyframes rot {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            12.5% {
+                transform: rotate(45deg);
+            }
+
+            25% {
+                transform: rotate(90deg);
+            }
+
+            37.5% {
+                transform: rotate(135deg);
+            }
+
+            50% {
+                transform: rotate(180deg);
+            }
+
+            62.5% {
+                transform: rotate(225deg);
+            }
+
+            75% {
+                transform: rotate(270deg);
+            }
+
+            87.5% {
+                transform: rotate(315deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .mtit>span {
+            position: relative;
+        }
+
+        .mt1 {
+            right: 60%;
+        }
+
+        .mt2 {
+            left: 60%;
+        }
+
+        /*전체중앙디피박스*/
+        #dpbox {
+            position: fixed;
+            width: 60%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999999;
+            background-color: rgba(255, 255, 255, 0.51);
+            overflow: hidden;
+            border-radius: 10px;
+            padding: 5px;
+            display: none;
+        }
+
+        #dpbox::before {
+            content: "";
+            display: block;
+            padding-top: 60%;
+        }
+
+        #dpbox>div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        #dpbox>span {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 30px;
+            height: 30px;
+            font-size: 24px;
+            text-align: center;
+            line-height: 30px;
+            color: #000;
+            text-shadow: 0 0 3px #fff;
+            cursor: pointer;
+        }
+
+        #dpbox>div>iframe {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            overflow-y: auto;
+            border: none;
+        }
+    </style>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script>
+        $(function() { // jQB /////////////////
+
+            // 메인타이틀 클릭시
+            $(".mainTit").click(function() {
+                $(".mtit").css({
+                    top: "50%",
+                    transform: "translateY(-50%) scale(1)"
+                }); /// css ///
+                $(".s1").css({
+                    right: "100%"
+                }); /// css ///
+                $(".s2").css({
+                    left: "100%"
+                }); /// css ///
+            });
+
+            // 링크 클릭시 //
+
+            var ctg = ["01.분석","02.설계","03.목업", "04.디자인", "05.코드","06.문서"];
+            var fnm = ["디지털디자인프로젝트분석제출","디지털디자인프로젝트설계제출","프로토타입스케치목업", "프로토타입시안", "index"];
+            $(".desc a").click(function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                // 상위폴더명
+                var nm = $(this).parents(".cbox").prev().text();
+                console.log("이름:" + nm);
+                // a순번
+                var idx = $(this).index();
+                console.log("순번:" + idx);
+                
+                var tgsrc;
+                if(idx===4) tgsrc = nm + '/' + ctg[idx] + '/index.html';
+                else tgsrc = nm + '/' + ctg[idx] + '/' + fnm[idx] + '_' + nm + '.pdf';
+
+                // 문서넣기
+                $("#dpbox>div").html('<iframe src="../' + tgsrc +'"></iframe>');
+                
+                // 보이기
+                $("#dpbox").fadeIn(300);
+
+            }); //// click ///////
+            
+            $("#dpbox>span").click(function(){
+                // 숨기기
+                $("#dpbox").fadeOut(300);
+            }); //// click ///////
+
+
+
+        }); ///////// jQB /////////////////////
+        /////////////////////////////////////
+
+
+
+
+
+
+
+        window.addEventListener("DOMContentLoaded", function() {
+            var tg = document.getElementsByClassName("mtit");
+            var tg2 = document.getElementsByClassName("sbox");
+            tg[0].addEventListener("click", function() {
+                //                alert("하하");
+                this.style.top = "15%";
+                this.style.transform = "translateY(-50%) scale(.4)";
+                this.style.transition = "all .5s ease-in-out";
+
+                tg[1].style.top = "50%";
+                tg[1].style.transform = "translateY(-50%) scale(1)";
+                tg[1].style.transition = "all .5s ease-in-out";
+
+                tg2[0].style.right = "50%";
+                tg2[0].style.transition = "all .5s ease-in-out";
+
+                tg2[1].style.left = "100%";
+                tg2[1].style.transition = "all .5s ease-in-out";
+
+            }); ///// click //////////////////////////////
+            tg[1].addEventListener("click", function() {
+                //                alert("ㅋㅋ");
+                this.style.top = "15%";
+                this.style.transform = "translateY(-50%) scale(.4)";
+                this.style.transition = "all .5s ease-in-out";
+
+                tg[0].style.top = "50%";
+                tg[0].style.transform = "translateY(-50%) scale(1)";
+                tg[0].style.transition = "all .5s ease-in-out";
+
+                tg2[0].style.right = "100%";
+                tg2[0].style.transition = "all .5s ease-in-out";
+
+                tg2[1].style.left = "50%";
+                tg2[1].style.transition = "all .5s ease-in-out";
+
+            }); ///// click //////////////////////////////
+
+
+        });
+    </script>
+</head>
+
+<body>
+
+    <!--제목-->
+    <h1 class="mainTit">
+        디자인씽킹<br>
+        디지털디자인<br>
+        웹디자인·웹퍼블리셔<br>
+        1회차<br>
+        <span>2020.02.14~2020.07.08</span>
+    </h1>
+    
+
+    <ul class="sbox s1">
+        <li>
+            <a href="#" class="kw">김나현</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">클로바 프렌즈</h2>
+                    <img src="images/kimna.png" alt="김나현1차포폴">
+                    <p class="desc">
+                        <a href="#">1. 분석/설계 자료</a>
+                        <a href="#">2. 디자인 자료</a>
+                        <a href="#">3. 구현 사이트</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">김혜림</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">고봉민 김밥인</h2>
+                    <img src="images/kimhae.png" alt="김혜림 1차포폴">
+                    <p class="desc">
+                        <a href="#">1. 분석/설계 자료</a>
+                        <a href="#">2. 디자인 자료</a>
+                        <a href="#">3. 구현 사이트</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">도기용</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">라라랩</h2>
+                    <img src="images/doki.png" alt="도기용 1차포폴">
+                    <p class="desc">
+                        <a href="#">1. 분석/설계 자료</a>
+                        <a href="#">2. 디자인 자료</a>
+                        <a href="#">3. 구현 사이트</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">안지영</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">닥터자르트</h2>
+                    <img src="images/angee.png" alt="안지영 1차포폴">
+                    <p class="desc">
+                        <a href="#">1. 분석/설계 자료</a>
+                        <a href="#">2. 디자인 자료</a>
+                        <a href="#">3. 구현 사이트</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">이가현</a>
+            <div class="cbox leega1">
+                <div></div>
+                <div>
+                    <h2 class="tit">메가박스</h2>
+                    <img src="images/leega.png" alt="메가박스">
+                    <p class="desc">
+                        <a href="#">1. 분석/설계 자료</a>
+                        <a href="#">2. 디자인 자료</a>
+                        <a href="#">3. 구현 사이트</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">이주명</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">라한호텔</h2>
+                    <img src="images/leeju.png" alt="이주명 1차포폴">
+                    <p class="desc">
+                        <a href="#">1. 분석/설계 자료</a>
+                        <a href="#">2. 디자인 자료</a>
+                        <a href="#">3. 구현 사이트</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">임경민</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">애플사</h2>
+                    <img src="images/limk.png" alt="임경민 1차포폴">
+                    <p class="desc">
+                        <a href="#">1. 분석/설계 자료</a>
+                        <a href="#">2. 디자인 자료</a>
+                        <a href="#">3. 구현 사이트</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">주민경</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">댕냥이집</h2>
+                    <img src="images/jumin.png" alt="주민경 1차포폴">
+                    <p class="desc">
+                        <a href="#">1. 분석/설계 자료</a>
+                        <a href="#">2. 디자인 자료</a>
+                        <a href="#">3. 구현 사이트</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <ul class="sbox s2">
+        <li>
+            <a href="#" class="kw">김나현</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">
+                    <a href="https://www.baskinrobbins.co.kr/" target="_blank">베스킨라빈스</a></h2>
+                    <img src="images/kimna2.png" alt="김나현2차포폴">
+                    <p class="desc">
+                        <a href="#">1. 분석자료</a>
+                        <a href="#">2. 설계자료</a>
+                        <a href="#">3. 목업자료</a>
+                        <a href="#">4. 디자인자료</a>
+                        <a href="#">5. 구현사이트</a>
+                        <a href="#">6. 가이드문서</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">김혜림</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">
+                    <a href="https://www.menada-winery.com/en" target="_blank">MENADA</a></h2>
+                    <a href="https://www.queengarnet.com/" target="_blank">
+                    <img src="images/kimhae2.png" alt="김혜림2차포폴"></a>
+                    <p class="desc">
+                        <a href="#">1. 분석자료</a>
+                        <a href="#">2. 설계자료</a>
+                        <a href="#">3. 목업자료</a>
+                        <a href="#">4. 디자인자료</a>
+                        <a href="#">5. 구현사이트</a>
+                        <a href="#">6. 가이드문서</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">도기용</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit"><a href="https://www.jype.com/" target="_blank">JYP Ent.</a></h2>
+                    <a href="https://studiomaertens.com/" target="_blank">이미지</a>
+                    <p class="desc">
+                        <a href="#">1. 분석자료</a>
+                        <a href="#">2. 설계자료</a>
+                        <a href="#">3. 목업자료</a>
+                        <a href="#">4. 디자인자료</a>
+                        <a href="#">5. 구현사이트</a>
+                        <a href="#">6. 가이드문서</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">안지영</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">
+                    <a href="https://www.jomalone.co.kr/" target="_blank">Jo Malone</a></h2>
+                    <a href="https://www.completone.com/index.html" target="_blank">
+                    <img src="images/angee2.png" alt="안지영2차포폴"></a>
+                    <p class="desc">
+                        <a href="#">1. 분석자료</a>
+                        <a href="#">2. 설계자료</a>
+                        <a href="#">3. 목업자료</a>
+                        <a href="#">4. 디자인자료</a>
+                        <a href="#">5. 구현사이트</a>
+                        <a href="#">6. 가이드문서</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">이가현</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">
+                    <a href="https://www.sony.co.kr/" target="_blank">SONY Camera</a></h2>
+                    <a href="https://www.fillvoid.com/kr/ko/index.html" target="_blank">
+                    <img src="images/leega2.png" alt="이가현2차포폴"></a>
+                    <p class="desc">
+                        <a href="#">1. 분석자료</a>
+                        <a href="#">2. 설계자료</a>
+                        <a href="#">3. 목업자료</a>
+                        <a href="#">4. 디자인자료</a>
+                        <a href="#">5. 구현사이트</a>
+                        <a href="#">6. 가이드문서</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">이주명</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">
+                    <a href="http://www.monami.com/index.php" target="_blank">Monami</a></h2>
+                    <a href="https://dentiguard-lab.com/" target="_blank">
+                    <img src="images/leeju2.png" alt="이주명2차포폴"></a>
+                    <p class="desc">
+                        <a href="#">1. 분석자료</a>
+                        <a href="#">2. 설계자료</a>
+                        <a href="#">3. 목업자료</a>
+                        <a href="#">4. 디자인자료</a>
+                        <a href="#">5. 구현사이트</a>
+                        <a href="#">6. 가이드문서</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">임경민</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">
+                    <a href="https://www.tpirates.com/%ED%99%88" target="_blank">오리크림빵</a></h2>
+                    <a href="https://www.mangoplate.com/" target="_blank">
+                    <img src="images/limk2.png" alt="임경민2차포폴"></a>
+                    <p class="desc">
+                        <a href="#">1. 분석자료</a>
+                        <a href="#">2. 설계자료</a>
+                        <a href="#">3. 목업자료</a>
+                        <a href="#">4. 디자인자료</a>
+                        <a href="#">5. 구현사이트</a>
+                        <a href="#">6. 가이드문서</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <a href="#" class="kw">주민경</a>
+            <div class="cbox">
+                <div></div>
+                <div>
+                    <h2 class="tit">
+                    <a href="" target="_blank">한의원</a></h2>
+                    <a href="" target="_blank">
+                    <img src="images/jumin2.png" alt="주민경2차포폴"></a>
+                    <p class="desc">
+                        <a href="#">1. 분석자료</a>
+                        <a href="#">2. 설계자료</a>
+                        <a href="#">3. 목업자료</a>
+                        <a href="#">4. 디자인자료</a>
+                        <a href="#">5. 구현사이트</a>
+                        <a href="#">6. 가이드문서</a>
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+    <h2 class="mtit mt1 rot"><span>1차<br>포트폴리오</span></h2>
+    <h2 class="mtit mt2 rot"><span>2차<br>포트폴리오</span></h2>
+
+    <!--전체중앙디피박스-->
+    <div id="dpbox">
+        <div></div>
+        <span>×</span>
+    </div>
+
+</body></html>
