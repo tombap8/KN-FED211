@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Portfolio Management</title>
     <style>
         html,
@@ -136,7 +136,7 @@
             position: absolute;
             top: 50%;
             left: 150%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             width: 800px;
             z-index: 9999;
         }
@@ -145,7 +145,7 @@
         .sbox li {
             position: relative;
             float: left;
-            width: 25%;
+            width: 33.33%;
             margin: 50px 0;
         }
 
@@ -360,9 +360,9 @@
 
         .mtit {
             position: absolute;
-            top: 50%;
+            top: 60%;
             left: 50%;
-            transform: translate(-50%,-50%);
+            transform: translate(-50%, -50%);
             width: 20vw;
             margin: 0;
             padding: 0;
@@ -375,6 +375,7 @@
             display: block;
             padding-top: 100%;
         }
+
         .mtit::after {
             content: "";
             display: block;
@@ -384,10 +385,11 @@
             width: 100%;
             height: 100%;
             border-radius: 50%;
-            background: url(images/cyberpan.jpg) no-repeat center/cover;
+            background: url(images/circle.png) no-repeat center/cover;
 
 
         }
+
         /* 내부글자 */
         .mtit>span {
             position: absolute;
@@ -403,7 +405,7 @@
             z-index: 1;
         }
 
-        .rot:hover::before {
+        .rot:hover::after {
             animation: rot 3s ease-in-out infinite;
         }
 
@@ -508,50 +510,42 @@
     <script src="js/jquery-3.5.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script>
-        $(function() { // jQB /////////////////
+        $(function () { // jQB /////////////////
 
             // 메인타이틀 클릭시
-            $(".mainTit").click(function() {
+            $(".mainTit").click(function () {
                 $(".mtit").css({
                     top: "50%",
                     transform: "translateY(-50%) scale(1)"
                 }); /// css ///
                 $(".s1").css({
-                    right: "100%"
-                }); /// css ///
-                $(".s2").css({
                     left: "100%"
                 }); /// css ///
             });
 
             // 링크 클릭시 //
-
-            var ctg = ["01.분석","02.설계","03.목업", "04.디자인", "05.코드","06.문서"];
-            var fnm = ["디지털디자인프로젝트분석제출","디지털디자인프로젝트설계제출","프로토타입스케치목업", "프로토타입시안", "index"];
-            $(".desc a").click(function(e) {
+            $(".desc a").click(function (e) {
                 e.preventDefault();
                 e.stopPropagation();
 
-                // 상위폴더명
-                var nm = $(this).parents(".cbox").prev().text();
-                console.log("이름:" + nm);
-                // a순번
-                var idx = $(this).index();
-                console.log("순번:" + idx);
-                
-                var tgsrc;
-                if(idx===4) tgsrc = nm + '/' + ctg[idx] + '/index.html';
-                else tgsrc = nm + '/' + ctg[idx] + '/' + fnm[idx] + '_' + nm + '.pdf';
+                const idx = $(this).index();
+
+                // a링크의 href값
+                const tgsrc = $(this).attr("href");
 
                 // 문서넣기
-                $("#dpbox>div").html('<iframe src="../' + tgsrc +'"></iframe>');
-                
-                // 보이기
-                $("#dpbox").fadeIn(300);
+                if (idx) { // pdf문서는 내부창으로!
+                    $("#dpbox>div").html(`<iframe src="${tgsrc}"></iframe>`);
+                    // 보이기
+                    $("#dpbox").fadeIn(300);
+                } else { // 사이트 열기는 새창으로
+                    window.open().location.href = tgsrc;
+                }
+
 
             }); //// click ///////
-            
-            $("#dpbox>span").click(function(){
+
+            $("#dpbox>span").click(function () {
                 // 숨기기
                 $("#dpbox").fadeOut(300);
             }); //// click ///////
@@ -564,27 +558,20 @@
 
 
 
-        window.addEventListener("DOMContentLoaded", function() {
+        window.addEventListener("DOMContentLoaded", function () {
             var tg = document.getElementsByClassName("mtit");
             var tg2 = document.getElementsByClassName("sbox");
-            tg[0].addEventListener("click", function() {
+            tg[0].addEventListener("click", function () {
                 //                alert("하하");
                 this.style.top = "15%";
                 this.style.transform = "translateY(-50%) scale(.4)";
                 this.style.transition = "all .5s ease-in-out";
 
-                tg[1].style.top = "50%";
-                tg[1].style.transform = "translateY(-50%) scale(1)";
-                tg[1].style.transition = "all .5s ease-in-out";
-
-                tg2[0].style.right = "50%";
+                tg2[0].style.left = "50%";
                 tg2[0].style.transition = "all .5s ease-in-out";
 
-                tg2[1].style.left = "100%";
-                tg2[1].style.transition = "all .5s ease-in-out";
-
             }); ///// click //////////////////////////////
-            
+
 
         });
     </script>
@@ -599,7 +586,7 @@
         1회차<br>
         <span>2021.09.02~2021.10.27</span>
     </h1>
-    
+
 
     <ul class="sbox s1">
         <li>
@@ -608,10 +595,10 @@
                 <div></div>
                 <div>
                     <h2 class="tit">소니 카메라</h2>
-                    <img src="images/kimna.png" alt="강지수포폴">
+                    <img src="images/pf1.png" alt="강지수포폴">
                     <p class="desc">
-                        <a href="#">1. 포트폴리오 사이트</a>
-                        <a href="#">2. 가이드 문서</a>
+                        <a href="../강지수/소니카메라/index.html">1. 포트폴리오 사이트</a>
+                        <a href="../강지수/최종 포폴.pdf">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
@@ -622,10 +609,10 @@
                 <div></div>
                 <div>
                     <h2 class="tit">네이처 리퍼블릭</h2>
-                    <img src="images/kimhae.png" alt="고세라포폴">
+                    <img src="images/pf2.png" alt="고세라포폴">
                     <p class="desc">
-                        <a href="#">1. 포트폴리오 사이트</a>
-                        <a href="#">2. 가이드 문서</a>
+                        <a href="../고세라/네이처리퍼블릭/main.html">1. 포트폴리오 사이트</a>
+                        <a href="../고세라/고세라_최종발표.pdf">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
@@ -636,10 +623,10 @@
                 <div></div>
                 <div>
                     <h2 class="tit">영화진흥위원회</h2>
-                    <img src="images/doki.png" alt="권소현포폴">
+                    <img src="images/pf3.png" alt="권소현포폴">
                     <p class="desc">
-                        <a href="#">1. 포트폴리오 사이트</a>
-                        <a href="#">2. 가이드 문서</a>
+                        <a href="../권소현/영화진흥위원회/index.html">1. 포트폴리오 사이트</a>
+                        <a href="../권소현/권소현_영화진흥위원회.pdf">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
@@ -650,10 +637,10 @@
                 <div></div>
                 <div>
                     <h2 class="tit">K2</h2>
-                    <img src="images/angee.png" alt="문성원포폴">
+                    <img src="images/pf4.png" alt="문성원포폴">
                     <p class="desc">
-                        <a href="#">1. 포트폴리오 사이트</a>
-                        <a href="#">2. 가이드 문서</a>
+                        <a href="../문성원/K2/index.html">1. 포트폴리오 사이트</a>
+                        <a href="../문성원/K2_문성원.pdf">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
@@ -664,10 +651,10 @@
                 <div></div>
                 <div>
                     <h2 class="tit">뚜레쥬르</h2>
-                    <img src="images/leega.png" alt="윤명현포폴">
+                    <img src="images/pf5.png" alt="윤명현포폴">
                     <p class="desc">
-                        <a href="#">1. 포트폴리오 사이트</a>
-                        <a href="#">2. 가이드 문서</a>
+                        <a href="../윤명현/TOUSlesJOURS/index.html">1. 포트폴리오 사이트</a>
+                        <a href="../윤명현/뚜레쥬르_윤명현.pdf">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
@@ -678,10 +665,10 @@
                 <div></div>
                 <div>
                     <h2 class="tit">asos</h2>
-                    <img src="images/leeju.png" alt="이동인포폴">
+                    <img src="images/pf6.png" alt="이동인포폴">
                     <p class="desc">
-                        <a href="#">1. 포트폴리오 사이트</a>
-                        <a href="#">2. 가이드 문서</a>
+                        <a href="../이동인/asos/index.html">1. 포트폴리오 사이트</a>
+                        <a href="../이동인/asos_이동인.pdf">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
@@ -692,10 +679,10 @@
                 <div></div>
                 <div>
                     <h2 class="tit">동국제강</h2>
-                    <img src="images/limk.png" alt="장은경포폴">
+                    <img src="images/pf7.png" alt="장은경포폴">
                     <p class="desc">
-                        <a href="#">1. 포트폴리오 사이트</a>
-                        <a href="#">2. 가이드 문서</a>
+                        <a href="../장은경/동국제강/index.html">1. 포트폴리오 사이트</a>
+                        <a href="../장은경/동국제강_장은경.pdf">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
@@ -706,10 +693,10 @@
                 <div></div>
                 <div>
                     <h2 class="tit">러쉬</h2>
-                    <img src="images/jumin.png" alt="주리아포폴">
+                    <img src="images/pf8.png" alt="주리아포폴">
                     <p class="desc">
-                        <a href="#">1. 포트폴리오 사이트</a>
-                        <a href="#">2. 가이드 문서</a>
+                        <a href="../주리아/러쉬/web/index.html">1. 포트폴리오 사이트</a>
+                        <a href="../주리아/러쉬_주리아.pdf">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
@@ -720,10 +707,10 @@
                 <div></div>
                 <div>
                     <h2 class="tit">온더보더</h2>
-                    <img src="images/jumin.png" alt="한희경포폴">
+                    <img src="images/pf9.png" alt="한희경포폴">
                     <p class="desc">
-                        <a href="#">1. 포트폴리오 사이트</a>
-                        <a href="#">2. 가이드 문서</a>
+                        <a href="../한희정/온더보더/index.html">1. 포트폴리오 사이트</a>
+                        <a href="../한희정/온더보더_한희정.pdf">2. 가이드 문서</a>
                     </p>
                 </div>
             </div>
@@ -737,4 +724,6 @@
         <span>×</span>
     </div>
 
-</body></html>
+</body>
+
+</html>
