@@ -134,10 +134,10 @@
 
         .sbox {
             position: absolute;
-            top: 50%;
+            margin-top: 15vh;
             left: 150%;
-            transform: translate(-50%, -50%);
-            width: 800px;
+            /* transform: translate(-50%, -50%); */
+            width: 100vw;
             z-index: 9999;
         }
 
@@ -145,17 +145,17 @@
         .sbox li {
             position: relative;
             float: left;
-            width: 33.33%;
-            margin: 50px 0;
+            width: 100%;
+            margin: 0;
         }
 
         .cbox {
-            position: absolute;
+            /* position: absolute; */
             top: 0;
             left: 50%;
-            width: 0;
+            /* width: 0; */
             /*300px;*/
-            height: 300px;
+            height: 0px;
             overflow: hidden;
             transition: .2s ease-out .2s;
             /*            outline: 1px solid red;*/
@@ -168,18 +168,18 @@
 
         .cbox>div:first-child {
             position: relative;
-            width: 100px;
+            /* width: 100px; */
             /*            background: #d05858;*/
         }
 
         .cbox>div:first-child::before {
-            content: "";
+            /* content: ""; */
             display: block;
             position: absolute;
             top: 0;
             right: 0;
-            width: 110%;
-            height: 1px;
+            /* width: 110%; */
+            /* height: 1px; */
             background: #00ffeb;
             transform-origin: right;
             transform: rotate(-30deg);
@@ -189,8 +189,8 @@
         .cbox>div:last-child {
             position: absolute;
             top: 0;
-            left: 100px;
-            width: 200px;
+            left: 0;
+            width: 100%;
             height: 0px;
             background: #000 url(images/cyberpan.jpg) no-repeat center 50px/100%;
             border: 2px solid #00ffeb;
@@ -198,36 +198,36 @@
             text-shadow: 0 1px #000, 0 -1px #000,
                 1px 0 #000, -1px 0 #000;
             text-align: center;
-
             box-sizing: border-box;
             overflow: hidden;
             transition: .2s ease-out;
         }
 
         .cbox>div:last-child img {
-            width: 100%;
+            width: auto;
+            float: left;
         }
 
 
         .kw {
             position: relative;
             display: block;
-            width: 90px;
-            height: 90px;
+            width: 100%;
+            height: 5vh;
             margin: 0 auto;
             font-size: 24px;
             font-weight: bold;
             text-decoration: none;
             color: #fff;
-            border-radius: 50%;
+            /* border-radius: 50%; */
             text-align: center;
-            line-height: 90px;
+            line-height: 5vh;
             text-shadow: 0 0 2px #777;
             z-index: 1;
         }
 
         .s1>li .kw {
-            background-image: radial-gradient(farthest-side at 110% 110%, #f8b2d8 10%, #c7207a 70%);
+            background-image: linear-gradient(to bottom, #f8b2d8 10%, #c7207a 70%);
             animation: updown2 .5s ease-in-out infinite alternate;
         }
 
@@ -253,15 +253,15 @@
         .sbox>li .cbox>div:first-child::before {
             animation: rot2 .5s ease-in-out infinite alternate;
         }
-
         .sbox>li:hover .cbox {
-            width: 300px;
+            height: 20vh;
+            /* width: 300px; */
             transition: .4s ease-out;
             z-index: 2;
         }
 
         .sbox>li:hover .cbox>div:last-child {
-            height: 300px;
+            height: 20vh;
             transition: .4s ease-out .4s;
         }
 
@@ -284,13 +284,13 @@
 
         .desc {
             overflow: auto;
-            height: 120px;
+            height: 20vh;
             background: rgba(0, 0, 0, 0.7);
-            font-size: 12px;
+            font-size: 3vh;
             margin: 0;
             padding: 10px;
             text-align: left;
-            line-height: 25px;
+            line-height:5vh;
         }
 
         .desc::-webkit-scrollbar {
@@ -506,267 +506,6 @@
             overflow-y: auto;
             border: none;
         }
-
-        @media only screen and (max-width:1200px) {
-
-
-            /*큰제목*/
-            .mainTit {
-                position: absolute;
-                top: 5%;
-                left: 50%;
-                transform: translateX(-50%) rotateY(5deg);
-                width: 40vw;
-                text-align: center;
-                background: url(images/cyberpan.jpg) no-repeat center/cover;
-                color: #fff;
-                font-size: 2vw;
-                line-height: 4vw;
-                text-shadow: 1px 0 #000, -1px 0 #000,
-                    0 1px #000, 0 -1px #000;
-                overflow: hidden;
-                cursor: pointer;
-                animation: mtitAni 1s ease-in-out infinite alternate;
-            }
-
-            .mainTit:hover {
-                animation: mtitAni2 1s ease-in-out infinite alternate;
-            }
-
-            .mainTit::after {
-                content: "";
-                display: block;
-                position: absolute;
-                top: -100px;
-                left: -50%;
-                width: 70px;
-                height: 500px;
-                background-image: linear-gradient(to left, #fff 5%, transparent 50%, transparent);
-                transform: rotate(30deg);
-                opacity: .5;
-                animation: reflect 1s ease-in-out infinite alternate;
-            }
-
-            .mainTit:hover::after {
-                left: -100px;
-                top: -50%;
-                height: 70px;
-                width: 1000px;
-                background-image: linear-gradient(to bottom, #fff 5%, transparent 50%, transparent);
-                transform: rotate(10deg);
-                opacity: .5;
-                animation: reflect2 1s ease-in-out infinite alternate;
-            }
-
-            .mainTit span {
-                font-size: 20px;
-            }
-
-
-            .sbox {
-                position: absolute;
-                margin-top: 15vh;
-                left: 150%;
-                /* transform: translate(-50%, -50%); */
-                width: 100vw;
-                z-index: 9999;
-            }
-
-
-            .sbox li {
-                position: relative;
-                float: left;
-                width: 100%;
-                margin: 0;
-            }
-
-            .cbox {
-                position: static;
-                top: 0;
-                left: 50%;
-                width: auto;
-                /*300px;*/
-                height: 0px;
-                overflow: hidden;
-                transition: .2s ease-out .2s;
-                /*            outline: 1px solid red;*/
-            }
-
-            .cbox>div {
-                float: left;
-                height: 100%;
-            }
-
-            .cbox>div:first-child {
-                position: relative;
-                width: auto;
-                /*            background: #d05858;*/
-            }
-
-            .cbox>div:first-child::before {
-                display: none;
-            }
-
-            .cbox>div:last-child {
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 0px;
-                background: #000 url(images/cyberpan.jpg) no-repeat center 50px/100%;
-                border: 2px solid #00ffeb;
-                color: #fff;
-                text-shadow: 0 1px #000, 0 -1px #000,
-                    1px 0 #000, -1px 0 #000;
-                text-align: center;
-                box-sizing: border-box;
-                overflow: hidden;
-                transition: .2s ease-out;
-            }
-
-            .cbox>div:last-child img {
-                width: auto;
-                float: left;
-            }
-
-
-            .kw {
-                position: relative;
-                display: block;
-                width: 100%;
-                height: 5vh;
-                margin: 0 auto;
-                font-size: 24px;
-                font-weight: bold;
-                text-decoration: none;
-                color: #fff;
-                border-radius: 0;
-                text-align: center;
-                line-height: 5vh;
-                text-shadow: 0 0 2px #777;
-                z-index: 1;
-            }
-
-            .s1>li .kw {
-                background-image: linear-gradient(to bottom, #f8b2d8 10%, #c7207a 70%);
-                animation: updown2 .5s ease-in-out infinite alternate;
-            }
-
-            .s2>li .kw {
-                background-image: radial-gradient(farthest-side at 110% 110%, #a2b8ff 10%, #2047c7 70%);
-                animation: updown2 .5s ease-in-out infinite alternate;
-            }
-
-            .s1>li .cbox {
-                animation: updown2 .5s ease-in-out infinite alternate;
-            }
-
-            .s2>li .cbox {
-                animation: updown2 .5s ease-in-out infinite alternate;
-            }
-            .sbox>li .cbox>div:first-child::before {
-                animation: rot2 .5s ease-in-out infinite alternate;
-            }
-
-            .sbox>li:hover .cbox {
-                height: 20vh;
-                width: auto;
-                transition: .4s ease-out;
-                z-index: 2;
-            }
-
-            .sbox>li:hover .cbox>div:last-child {
-                height: 20vh;
-                transition: .4s ease-out .4s;
-            }
-
-            .s2>li:hover .kw {
-                background-image: radial-gradient(farthest-side at 30% 30%, #a2b8ff 10%, #2047c7 70%);
-                z-index: 3;
-            }
-
-            .s1>li:hover .kw {
-                background-image: radial-gradient(farthest-side at 30% 30%, #f8b2d8 10%, #c7207a 70%);
-                z-index: 3;
-            }
-
-            .tit {
-                margin: 0;
-                padding: 10px 0;
-                background: rgba(0, 0, 255, 0.67);
-                font-size: 18px;
-            }
-
-            .desc {
-                overflow: auto;
-                height: 20vh;
-                background: rgba(0, 0, 0, 0.7);
-                font-size: 3vh;
-                margin: 0;
-                padding: 10px;
-                text-align: left;
-                line-height: 5vh;
-            }
-
-            
-            
-
-            .mtit {
-                position: absolute;
-                top: 60%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                width: 20vw;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                cursor: pointer;
-            }
-
-            .mtit::before {
-                content: '';
-                display: block;
-                padding-top: 100%;
-            }
-
-            .mtit::after {
-                content: "";
-                display: block;
-                position: absolute;
-                top: 0;
-                left: 0;
-                width: 100%;
-                height: 100%;
-                border-radius: 50%;
-                background: url(images/circle.png) no-repeat center/cover;
-
-
-            }
-
-            /* 내부글자 */
-            .mtit>span {
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                font: bold 3vw/20vw Verdana;
-                color: #fff;
-                text-align: center;
-                text-shadow: 0 0 3px #777;
-                white-space: nowrap;
-                z-index: 1;
-            }
-
-            .rot:hover::after {
-                animation: rot 3s ease-in-out infinite;
-            }
-
-            
-
-        }
-
-        /* 미디어쿼리 */
     </style>
     <script src="js/jquery-3.5.0.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
@@ -828,7 +567,8 @@
                 this.style.transform = "translateY(-50%) scale(.4)";
                 this.style.transition = "all .5s ease-in-out";
 
-                tg2[0].style.left = "50%";
+                tg2[0].style.left = "0%";
+                tg2[0].style.zIndex = "9999";
                 tg2[0].style.transition = "all .5s ease-in-out";
 
             }); ///// click //////////////////////////////
@@ -985,6 +725,43 @@
         <span>×</span>
     </div>
 
-</body>
+<!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script></body>
 
 </html>
