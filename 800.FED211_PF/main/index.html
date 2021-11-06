@@ -664,6 +664,7 @@
             .s2>li .cbox {
                 animation: updown2 .5s ease-in-out infinite alternate;
             }
+
             .sbox>li .cbox>div:first-child::before {
                 animation: rot2 .5s ease-in-out infinite alternate;
             }
@@ -708,8 +709,8 @@
                 line-height: 5vh;
             }
 
-            
-            
+
+
 
             .mtit {
                 position: absolute;
@@ -762,7 +763,7 @@
                 animation: rot 3s ease-in-out infinite;
             }
 
-            
+
 
         }
 
@@ -789,20 +790,10 @@
                 e.preventDefault();
                 e.stopPropagation();
 
-                const idx = $(this).index();
-
                 // a링크의 href값
                 const tgsrc = $(this).attr("href");
 
-                // 문서넣기
-                // if (idx) { // pdf문서는 내부창으로!
-                //     $("#dpbox>div").html(`<iframe src="${tgsrc}"></iframe>`);
-                //     // 보이기
-                //     $("#dpbox").fadeIn(300);
-                // } else { // 사이트 열기는 새창으로
-                    window.open().location.href = tgsrc;
-                // }
-
+                window.open().location.href = tgsrc;
 
             }); //// click ///////
 
