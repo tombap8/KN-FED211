@@ -795,13 +795,13 @@
                 const tgsrc = $(this).attr("href");
 
                 // 문서넣기
-                if (idx) { // pdf문서는 내부창으로!
-                    $("#dpbox>div").html(`<iframe src="${tgsrc}"></iframe>`);
-                    // 보이기
-                    $("#dpbox").fadeIn(300);
-                } else { // 사이트 열기는 새창으로
+                // if (idx) { // pdf문서는 내부창으로!
+                //     $("#dpbox>div").html(`<iframe src="${tgsrc}"></iframe>`);
+                //     // 보이기
+                //     $("#dpbox").fadeIn(300);
+                // } else { // 사이트 열기는 새창으로
                     window.open().location.href = tgsrc;
-                }
+                // }
 
 
             }); //// click ///////
