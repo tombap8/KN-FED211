@@ -1,0 +1,178 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(common.css);
+
+#content{
+    width:1000px;
+    margin:0 auto;
+    position:relative;
+    overflow:hidden;
+    height:750px;
+	border-bottom:1px solid #e0e0e0;
+}
+
+#content .lnb_1{
+	width:190px;
+	float:left;	
+}
+#content .lnb_1 ul{
+	margin:0;
+	padding:0;
+}
+
+#content .lnb_1 .lnb_logo{
+	margin-bottom:40px;
+    padding:34px 0 0;
+}
+
+#content li a.oneD {
+    letter-spacing:-1.5px;
+    padding:14px 0 15px 15px;
+    font-size:15px;
+    color:#333;
+    border-top:1px solid #e0e0e0;
+    background:url(../images/arrow.png) no-repeat 160px 13px;
+}
+
+#content li a.oneD:hover {
+    font-weight:bold;
+    color:#ab1f24;
+	text-decoration:underline;
+    background: url(../images/arrow.png) no-repeat 160px 17px;
+	background-color:#f6f6f6;
+}
+
+#content li.on a.oneD {
+    font-weight:bold;
+    color:#ab1f24;
+	text-decoration:underline;
+	background-color:#f6f6f6;
+}
+
+/***********컨텐츠 영역(타이틀)*************/
+#content .content_1{
+	position:relative;
+    width:730px;
+ 	height:750px;
+    float:right;
+    padding:48px 0 40px 39px;
+    border-left:1px solid #e0e0e0;
+}
+.content_1 .indicate a{
+	display:inline-block;
+}
+
+.content_1 .indicate{
+	position:absolute;
+    top:50px;
+    right:0;
+    font-size:12px;
+    color:#666;
+	letter-spacing:-0.5px;
+}
+
+.content_1 h3{
+	position:absolute;
+	top:9px;
+	padding-bottom:12px;
+    margin-bottom:50px;
+    font-size:37px;
+    color:#333;
+    background:url(../images/subtit_bg.gif) no-repeat 0 bottom;
+
+}
+
+.content_1 .cont{
+    position:absolute;
+    top:146px;
+}
+
+/*************컨텐츠 영역(컨텐츠)***********/
+.board_list{
+	width:730px;
+    border-collapse:collapse;
+    font-size:13px;
+	color:#333333;
+}
+
+.board_list thead th{
+    border-bottom:1px solid #c3c3c3;
+    border-top:1px solid #ab1f24;
+    background-color:#f6f6f6;
+    height:40px;
+    color:#2d2d2d;
+}
+
+.board_list tbody td {
+    text-align:center;
+    height:38px;
+    border-bottom:1px solid #e4e4e4;
+	font-size:13px;
+}
+
+.board_list tbody td.left {
+    text-align:left;
+}
+
+.board_list tbody td.ftd {
+    padding:0px 15px;
+}
+
+
+.paging{
+	position:absolute;
+	top:620px;
+	width:730px;
+	text-align:center;
+} 
+
+.paging ul{
+    display:inline-block;
+    height:35px;
+    overflow:hidden;
+    text-align:center;
+}
+
+.paging li{
+    display:inline-block;
+    line-height:27px;
+    width:29px;
+    height:27px;
+    vertical-align:top;
+}
+
+.paging .pagingNum{
+    width:27px;
+    border:1px solid #e4e4e4;
+	cursor:pointer; 
+	font-weight: bold;
+}
+
+/*검색옵션*/
+.board_s select {
+	position:absolute;
+	top:113px;
+	right:180px;
+    width:80px;
+    height:30px;
+    vertical-align: middle;
+    border: 1px solid #e8e8e8;
+    color: #646464;
+    margin: 0 5px 0 0;
+}
+
+.board_s input{
+	position:absolute;
+	top:113px;
+	right:29px;
+    width:151px;
+    height:26px;
+    border: 1px solid #e8e8e8;
+}
+
+.board_s #seach_i{
+	position:absolute;
+	top:113px;
+	right:0px;
+}

@@ -1,0 +1,236 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(core.css);
+@import url(common.css);
+
+/***********************************메인이미지*************************************/
+#mainimg{
+	position: relative;
+	width: 100%;
+	margin-top: 70px;
+}
+#banner::before{
+	content: "";
+	display: block;
+}
+#banner{
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+#banner #sliderM{
+	width: 300%;
+	left: 0;
+}
+#banner #sliderM li{
+	width: 33.333333%;
+	height: 100%;
+}
+#banner #sliderM li img{
+	width: 100%;
+	height: 100%;
+}
+
+/***********************************배너*************************************/
+#ban{
+	position: relative;
+	width: 100%;
+	margin-top: 7%;
+}
+#ban>ul{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+#ban>ul>li{
+	width: 50%;
+	height: auto;
+}
+#ban>ul>li img{
+	width: 100%;
+	height: 100%;
+}
+
+/********************************뉴*********************************/
+#new{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: 7%;
+}
+#new>h1{
+	width: 100%;
+	font-size: 1.5em;
+	font-weight: bold;
+	text-align: center;
+	color: #595758;
+}
+
+/********************뉴박스**********************/
+#newG{
+	width: 100%;
+	height: auto;
+}
+#gallery{ /*갤러리 부모박스*/
+		    position: relative;
+			width: 90%;
+			height: auto;
+			margin: 0 auto;
+			margin-top: 5%;
+	   }
+   #gallery::after{
+	   content: "";
+	   display: block;
+	   clear: both;
+   }
+.photobox{/*개별이미지 박스*/
+	   position: relative;/*부모자격*/
+	   width:46%;
+	   height: auto;
+	   float: left;
+	   cursor: pointer;
+	   overflow: hidden;
+	   margin:0 2%;
+	   margin-bottom: 5%;
+	   }
+.photobox:hover{
+	outline: 3px solid #77c1ec;
+}  
+.photobox img{/*갤러리 이미지*/
+	   width:100%;
+   }
+   .caption{/*글자배경박스*/
+	   position: absolute;
+	   top: 100%;
+	   width:100%;
+	   height: 50%;
+	   background-color: #b5b5b5;
+	   opacity: 0.5;
+   }
+.txt{/*이미지설명글*/
+   position: absolute;
+   color: #3d3c3d;
+   font-size:1em;
+   font-family:  "Helvetica-Light";
+	font-weight: bold;
+   margin: 5% 0 0 5%;
+   }
+.txt1{
+	position: absolute;
+	color: #fa05e6;
+	font-size:1em;
+    font-family:  "Helvetica-Light";
+	font-weight: bold;
+    margin: 25% 0 0% 5%;
+}
+.my{ /*아이콘*/
+	position: absolute;
+    margin: 23% 0 0 50%;
+}
+.my img{ 
+	width: 45%;
+	float: left;
+	margin-right: 3%;
+}
+
+/********************************인스타*********************************/
+#your{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: 7%;
+}
+#your>div{
+	width: 100%;
+	height: auto;
+}
+#your>div img{
+	width: 100%;
+	height: 100%;
+}
+#your>ul{
+	position: relative;
+	width: 90%;
+	margin: 0 auto;
+	height: auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 3%;
+}
+#your>ul>li{
+	width: 23%;
+	height: auto;
+	margin: 0 1%;
+}
+#your>ul>li img{
+	width: 100%;
+	height: 100%;
+}
+
+/********************************푸터*********************************/
+#footer{
+	position: relative;
+	width: 100%;
+	margin-top: 7%;
+}
+#footer>div>h2{
+	font-family: "Helvetica-Light";
+	font-size: 0.625em;
+}
+#footer>article{
+	width: 100%;	
+	height:auto;
+}
+#footer>article img{
+	width: 100%;
+	height: 100%;
+}
+#footer>div:nth-child(2){
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 3% 0 0 5%;
+}
+#footer>div:nth-child(3){
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin:0 0 3% 0;
+}
+#icons{
+	width: 70%;
+	margin: 0 0 3% 23%;
+}
+#icons>li{
+	width: 25%;
+	height: auto;
+}
+#icons>li a img{
+	width: 90%;
+	height: 90%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

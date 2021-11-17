@@ -1,0 +1,370 @@
+@charset "utf-8";
+/* men.css 남성페이지 */
+@import url(base.css);
+@import url(reset.css);
+/* @import 방식은 html에 여러개의 css삽입에 따른 메모리 리소스를 절약하는 방법 */
+/**{outline:1px solid lime;}*/
+body{overflow-y:visible;}
+/*탑메뉴 영역*/
+#top{
+	position:fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height:auto;/*height값을 주지 않아도 auto-컨텐츠에 따라 늘어남*/
+	font:16px Ubuntu;
+	z-index:999;
+}
+/*탑영역 반투명 배경*/
+.obg{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0;
+}
+/*로고 이미지*/
+#top>img{
+	position:relative;
+	margin:3% 0 1% 3%;
+	width:15%;/*height를 안쓰면 auto*/
+	cursor:pointer;
+}
+/*메뉴*/
+#top>ul{
+	position:absolute;
+	width:20%;
+	right:4%;
+	bottom:15%;
+}
+#top>ul>li{
+	width:33.333%;
+	text-align:center;
+	line-height:30px;
+}
+#top>ul>li>a{/*메뉴*/
+	display:block;
+	width:100%;
+	height:100%;
+	color:#fff;
+}
+/*햄버거 버튼*/
+#ham{
+	position:absolute;
+	top:25px;
+	right:25px;
+	width:40px;
+	height:25px;
+	cursor:pointer;	
+	display:none;/*처음에 버튼 숨김*/
+}
+#ham div{
+	position:absolute;
+	width:100%;
+	height:5px;
+	background-color:#fff;
+	transition:all 0.8s;	/*애니메이션*/
+}
+#ham div:first-child{/*1번바*/
+	top:0;
+}
+#ham div:nth-child(2){/*2번바*/
+	top:10px;
+	left:0;
+}
+#ham div:last-child{/*3번바*/
+	top:20px;
+}
+
+/*모바일용 메뉴*/
+#menu{
+	position:fixed;
+	top:0;
+	right:0;
+	width:0;/*안보임*/
+	height:100%;
+	z-index:998;
+	overflow:hidden;/*자식숨김*/
+}
+#menu ul{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:50%;
+	height:50%;
+}
+#menu ul li{
+	width:100%;
+	height:70px;
+	text-align:center;
+	font:36px Ubuntu;
+}
+#menu ul li a{
+	color:#fff;
+}
+/*배경*/
+#menu .obg{
+	opacity:0.7;
+}
+
+/************배너페이지**************/
+#banner{
+	position:relative;
+	width:100%;
+	height:100%;
+	overflow:hidden;
+}
+#banner>ul{
+	position:relative;
+	left:0;
+	width:200%;
+	height:100%;
+}
+#banner>ul>li{/*공통*/
+	width:50%;
+	height:100%;
+}
+#banner>ul>li:first-child{/*첫 li에 배경사진*/
+	background:url(../images/ban01.jpg) no-repeat top/cover;
+}
+/*버튼*/
+.abtn{
+	position:absolute;
+	width:25px;
+	height:49px;
+	top:50%;
+	transform:translateY(-50%);
+	cursor:pointer;
+}
+
+.abtn:first-of-type{
+	left:5%;
+	background:url(../images/btn_shop_bn_left.png) no-repeat;
+}
+.abtn:last-of-type{
+	right:5%;
+	background:url(../images/btn_shop_bn_right.png) no-repeat;
+}
+.abtn:hover{
+	background-position:0 -49px;
+}
+
+/*블릿메뉴*/
+#banner>aside{
+	position:absolute;
+	width:100px;
+	height:10px;
+	bottom:5%;
+	left:5%;
+}
+#banner>aside li{
+	width:10px;
+	height:10px;
+	margin-left:10px;
+	background:url(../images/dot_page.png) no-repeat;
+	cursor:pointer;
+}
+#banner>aside li:first-child{
+	background-position:0 -10px;/*top위치 이동*/
+}
+
+
+/*********컨텐츠페이지 1********/
+#cont1{
+	position:relative;
+	width:100%;
+	height:100%;
+	/*background-color:#9C9;*/
+}
+#cont1>ul{
+	width:100%;
+	height:100%;
+}
+/*이미지 슬라이드 자식*/
+.gongUani{	
+	animation:gongU 20s infinite alternate;/*이시이지반방마!*/
+}
+#cont1{
+	margin-top:100px;
+}
+#cont1>ul>li:first-child{
+	position:relative;/*부모자격*/
+	width:50%;
+	height:70%;
+	background-color:#FC9;
+}
+#cont1>ul>li:first-child>ul>li{
+	width:25%;
+	height:30%;
+	/*border:1px solid red;*/
+}
+#cont1>ul>li:first-child>ul>li img{
+	height:100%;
+}
+#cont1>ul>li:first-child>ul>li:first-child{
+	width:100%;
+	height:30%;
+}
+#cont1>ul>li:nth-child(2){
+	position:relative;
+	width:50%;
+	height:70%;
+	background-color:#9F9;
+}
+#cont1>ul>li:last-child{
+	position:relative;
+	width:100%;
+	height:200%;
+	background-color:#C9C;
+}
+
+
+/*하단정보*/
+#info{
+	position:relative;
+	width:100%;
+	height:50%;
+	background-color:#101629;
+}
+#info p {
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:700px;
+	margin:0 auto;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fffefe;
+    padding: 14px;
+	border:4px double #ccc;
+}
+
+/*위로가기버튼*/
+#tbtn{
+	position:fixed;
+	width:50px;
+	height:50px;
+	border-radius:25px;
+	bottom:5%;
+	right:5%;
+	color:#fff;
+	font:bold 16px/50px Ubuntu;
+	text-align:center;
+	overflow:hidden;
+	cursor:pointer;
+	display:none;
+}
+#tbtn span{
+	position:relative;
+}
+#tbtn .obg{
+	opacity:0.7;
+}
+
+
+
+/*모바일디자인*/
+@media only screen and (max-width:1100px){
+	#ham{display:block;}/*햄버거버튼 보이게*/
+	body{overflow:visible;}
+	#banner{
+		height:30%;
+	}
+	#cont1,#cont2{/*1,2번페이지*/
+		height:50% !important;
+	}
+	/*1,2번페이지 이미지박스*/
+	#cont1>ul>li:first-child,#cont2>ul>li:last-child{
+		width:100% !important;
+		height:100% !important;
+	}
+	/*1,2번페이지 글자박스*/
+	#cont1>ul>li:last-child, #cont2>ul>li:first-child{
+		position:absolute;
+		top:50%;
+		left:20%;
+		width:100% !important;
+		height:30% !important;
+		z-index:1;
+	}
+	/*1,2번페이지 이미지 크기변경*/
+	#cont1>ul>li:first-child img, #cont2>ul>li:last-child img{
+		width:150% !important;
+		height:auto !important;
+	}
+	/*1,2번페이지 글자태그*/
+	#cont1>ul>li h1, #cont2>ul>li h1{		
+		font-size:20px !important;
+		left:40% !important;
+	}
+	
+	/*3번페이지 이미지박스*/
+	#cont3>ul>li:first-child,#cont3>ul>li:last-child{
+		width:100% !important;
+		height:50% !important;
+	}
+	/*3번페이지 글자박스*/
+	#cont3>ul>li:nth-child(2){
+		position:absolute;
+		top:0;
+		left:0;
+		width:100% !important;
+		height:100% !important;
+		z-index:1;
+	}
+	/*3번페이지 이미지 크기변경*/
+	#cont3>ul>li:last-child img{
+		width:100% !important;
+		height:auto !important;
+	}
+	/*3번페이지 글자태그*/
+	#cont3>ul>li:nth-child(2) h1:first-child{		
+		font-size:20px !important;
+		left:40% !important;
+		top:70% !important;
+	}
+	
+	#cont3>ul>li:nth-child(2) h1:last-child{		
+		font-size:20px !important;
+		left:40% !important;
+		top:30% !important;
+		color:#fff;
+	}
+	/*하단정보*/
+	#info p {
+	width:90%;
+    font-size: 10px;
+    line-height: 15px;
+    color: #fffefe;
+    padding: 14px;
+	border:4px double #ccc;
+}
+	
+	
+	/*탑부분 배경투명도 변경*/
+	#top .obg{
+		opacity:0.5;
+	}
+	/*로고 이미지*/
+	#top>img{
+		position:absolute;
+		top:5%;
+		left:50%;
+		transform:translateX(-50%);/*가로가운데*/
+		width:35%;/*height를 안쓰면 auto*/
+	}
+	
+}
+
+
+
+
+
+
+
+
+

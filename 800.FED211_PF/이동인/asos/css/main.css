@@ -1,0 +1,139 @@
+@charset "utf-8";
+/* CSS mainpage */
+@import url(core.css);
+@import url(common.css);
+
+
+/***********************************메인이미지*************************************/
+#mainimg{
+	position: relative;
+	width: 100%;
+}
+#mainimg::before{
+	content: "";
+	display: block;
+	padding-top: 50%;
+}
+#banner{
+	width: 100%;
+	height: 100%;
+}
+#banner #sliderM{
+	width: 100%;
+}
+#banner #sliderM li{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	transition: opacity ease-out 1s;
+	opacity: 0;
+}
+#banner #sliderM li img{
+	width: 100%;
+	height: 100%;
+}
+#banner #sliderM li:nth-child(1){
+	opacity: 1;
+}
+
+/*******블릿버튼*******/
+#bbtn{
+	position: absolute;
+	top: 50%;
+	left: 3%;
+	display: flex;
+	flex-direction: column;
+	height: 20%;
+	justify-content: space-around;
+}
+#bbtn img{
+	width: 30%;
+}
+/*********************************배너부분*************************************/
+#ban{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+#ban>ul{
+	position: relative;
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 9.09%;
+}
+#ban>ul>li{
+	width: 33.333333%;
+	height: auto;
+	cursor: pointer;
+}
+#ban>ul>li img{
+	width: 100%;
+}
+
+/*********************************NEW image 부분***********************************/
+
+#new{
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+#new>ul:nth-child(1){
+	position: relative;
+	width: 31.818%;
+	height: auto;
+	margin: 9.09% 0 4.09% 0;
+	display: flex;
+	flex-direction: column;
+}
+#new>ul:nth-child(2){
+	position: relative;
+	width: 36.363%;
+	height: auto;
+	margin: 9.09% 0 4.09% 0;
+	display: flex;
+	flex-direction: column;
+}
+#new>ul:nth-child(3){
+	position: relative;
+	width: 31.818%;
+	height: auto;
+	margin: 9.09% 0 4.09% 0;
+	display: flex;
+	flex-direction: column;
+}
+#new>ul>li img{
+	width: 100%;
+}
+#new>ul>li{
+	overflow: hidden;
+	position: relative;
+}
+#new>ul>li img:hover{
+	cursor: pointer;
+	transition:all 1s ease-in-out;
+}
+#new>ul>li:hover{
+	border: 3px solid #77c1ec;
+}
+#new>ul>li>span{
+	position: absolute;
+	bottom: -100%;
+	display: block;
+	
+}
+#new>ul:first-child>li:first-child:hover{
+	border: none;
+}
+#new>ul:last-child>li:last-child:hover{
+	border: none;
+}
+
+
+
+
+

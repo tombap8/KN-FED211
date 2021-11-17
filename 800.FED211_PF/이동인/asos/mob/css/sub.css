@@ -1,0 +1,159 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(core.css);
+@import url(common.css);
+
+/*****************************************************/
+#msub{
+	position: relative;
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 70px;
+}
+#cbox{
+	width: 100%;
+	height: 35px;
+	border:1px solid #595758;
+	color: #000;
+	font-size: 1.125em;
+	padding: 0 2%;
+	text-align: center;
+	margin-top: 5%;
+	outline:none; /*크롬*/
+}
+#msub>p{
+	color: #595758;
+	font-size: 1.125em;
+	font-weight: bold;
+	margin-top: 5%;
+}
+#msub>ul{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin-top: 3%;
+	margin-bottom: 5%;
+}
+#msub>ul>li{
+	width: 48%;
+	height: auto;
+}
+#msub>ul>li:first-child{
+	margin-right: 4%;
+}
+#msub>ul>li img{
+	width: 100%;
+}
+.btn{
+	position: relative;
+	width: 20%;
+	height: auto;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+.btn img{
+	width: 25%;
+	height: 25%;
+	cursor: pointer;
+}
+
+#bar{
+	width: 100%;
+	height: auto;
+	margin-top: 7%;
+}
+#bar img{
+	width: 100%;
+	height: 3px;
+}
+#subI{
+	position: relative;
+	width: 90%;
+	height: auto;
+	margin: 0 auto;
+}
+#subI>p{
+	color: #595758;
+	font-size: 1.125em;
+	font-weight: bold;
+	margin-top: 5%;
+}
+#subI>ul{
+	position: relative;
+	width: 100%;
+	margin-top: 5%;
+}
+#subI>ul>li{
+	width: 48%;
+	height: auto;
+	position: relative;
+}
+#subI>ul>li>div:first-child{
+	width: 100%;
+	height: auto;
+	margin-bottom: 5%;
+}
+#subI>ul>li>div:last-child{
+	color: #595758;
+	font-size: 0.8em;
+	margin-bottom: 12%;
+}
+#subI>ul>li>div:first-child img{
+	width: 100%;
+	height: auto;
+}
+#subI>ul>li:nth-child(1), #subI>ul>li:nth-child(3), #subI>ul>li:nth-child(5), #subI>ul>li:nth-child(7), #subI>ul>li:nth-child(9){
+	margin-right: 4%;
+} 
+/********************************푸터*********************************/
+#footer{
+	position: relative;
+	width: 100%;
+	margin-top: 7%;
+}
+#footer>div>h2{
+	font-family: "Helvetica-Light";
+	font-size: 0.625em;
+}
+#footer>article{
+	width: 100%;	
+	height:auto;
+}
+#footer>article img{
+	width: 100%;
+	height: 100%;
+}
+#footer>div:nth-child(2){
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin: 3% 0 0 5%;
+}
+#footer>div:nth-child(3){
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	margin:0 0 3% 0;
+}
+#icons{
+	width: 70%;
+	margin: 0 0 3% 23%;
+}
+#icons>li{
+	width: 25%;
+	height: auto;
+}
+#icons>li a img{
+	width: 90%;
+	height: 90%;
+}
+
+
+
+
+
+
+

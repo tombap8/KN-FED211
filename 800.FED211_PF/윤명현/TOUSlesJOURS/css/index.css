@@ -1,0 +1,367 @@
+@charset "utf-8";
+/*파리바게트 index페이지 css*/
+@import url(temp.css);
+@import url(core.css);
+
+html,body{
+	background-color:#F0F2F4;
+}
+/**********top네비**************/
+#topnav{
+	position:fixed;
+	width:30px;
+	height:30px;
+	text-align:center;
+	font:bold 10px Verdana, Geneva, sans-serif;
+	right:7%;
+	bottom:10%;
+	color:#0d4633;
+	border:3px solid #0d4633;
+	cursor:pointer;
+	z-index:9999;
+	background-color: #FFFFFF;
+}
+#topnav>a{
+	color:#0d4633;
+}
+
+/************************           배너부분          ************************/
+#banner{
+	position:relative;
+	width:1100px;
+	height:540px;
+	margin:0 auto;
+}
+/*배너 리스트 박스*/
+#banner>ul#slider{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+#banner>ul>li{/*배너 리스트 공통*/
+	position:absolute;/*li 겹치게*/
+	width:100%;
+	height:100%;
+	opacity:0;/*모두투명*/
+	transition:opacity ease-out 1s;
+}
+
+#banner>ul>li:nth-child(1){
+	background:url(../imges/mainbanner_1.jpg) no-repeat center;
+	opacity:1;/*첫번째만 보이게*/
+}
+#banner>ul>li:nth-child(2){
+	background:url(../imges/hot_3.jpg) no-repeat center;
+}
+#banner>ul>li:nth-child(3){
+	background:url(../imges/mainban02.jpg) no-repeat center;
+}
+
+#slider li span{/*배너 설명 안보이기*/
+	display:none;
+}
+
+
+/*슬라이드 블릿포인트 디자인*/
+#slidenavi{
+	position:absolute;
+	width:92px;
+	height:16px;
+	bottom:5%;
+	left:50%;
+	transform:translateX(-70%);
+}
+#slidenavi div{/*블릿이미지를 싸고 있는 div*/
+	position:relative;
+	width:16px;
+	height:16px;
+	float:left;
+	padding-left:10px;
+}
+#slidenavi div img:hover{
+	cursor:pointer;
+}
+#slidenavi div img{
+	position:absolute;/*이미지겹치게*/
+}
+#slidenavi div img:last-child{/*각각의 div아래 회색 블릿을 선택*/
+	opacity:0;/*회색블릿이 투명하게*/
+}
+#slidenavi div:first-child img:last-child{
+	opacity:1;/*첫번째 회색블릿 보이게*/
+}
+
+/*좌우이동버튼*/
+.btn{/*버튼공통*/
+	position:absolute;
+	top:43%;
+	
+
+}
+.Lbtn{
+	left:2%;
+}
+.Rbtn{
+	right:2%;
+}
+.btn img:hover{
+	cursor:pointer;
+}
+
+
+
+/***************   퀵메뉴 부분  ***************/
+#qmenu{
+	position:relative;
+	width:1100px;
+	height:85px;
+	background-color:#fff;
+	margin:50px auto;
+	
+}
+
+#qmenu>h3{
+	position:relative;
+	width:150px;
+}
+#qtit{
+	position:absolute;
+	bottom:25px;
+	padding-bottom:5px;
+	width:150px;
+	height:20px;
+	font-size:1.125em;
+	left:0;
+	text-align:center;
+	font-weight:normal;
+	background-color:#0d4633;
+	color:#fff;
+}
+#qmenu>ul li{
+	position:relative;
+	bottom:16px;
+	margin: 0 9px;
+	left: 56px;
+}
+
+#qmenu>ul li img{
+	width: 75%;
+}
+
+/***************고정이미지 부분***************/
+#fiximg{
+	position:relative;
+	width:1100px;
+	height:400px;
+	margin:50px auto;
+	background:url(../imges/42318_1_1540.jpg) no-repeat fixed;
+}
+
+
+/***************신&인기 제품 부분***************/
+#item{/*전체 박스*/
+	position:relative;
+	width:1100px;
+	height:600px;
+	background-color:#F0F2F4;
+	margin:0 auto;
+	margin-top:50px;
+}
+#viewer{
+	position:absolute;
+	width:100%;
+	top:20%;
+	left:5%;
+	float:left;
+	
+}
+#viewer img{/*겹쳐있는 신제품 이미지들*/
+	position:absolute;
+	opacity:0;
+}
+#viewer img:nth-child(1){/*신제품들*/
+	opacity:1
+}
+
+
+#bmenu{/*신제품 블릿*/
+	position:absolute;
+	width:220px;
+	height:20px;
+	bottom:2%;
+	left:21.5%;
+}
+#bmenu img{/*블릿이미지 손가락*/
+	cursor:pointer;
+	margin-left:15px;
+}
+
+
+#item>aside{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+
+/**************      딜리버리 부분         ******************/
+#deli{
+	position:relative;
+	width:1100px;
+	height:600px;
+	background-color:#F0F2F4;
+	margin:50px auto;
+	outline:1px solid #cecece;
+}
+
+#deli>.drag{/*첫번째 박스 검색기능창*/
+	position:relative;
+	width:500px;
+	height:600px;
+	background:url(../imges/delry.png) no-repeat;
+	float:left;
+	text-align: center;
+}
+.drag>div{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	bottom: 5%;
+	width: 70%;
+/*	outline: 1px solid red;*/
+}
+
+.drag>div>p{
+	color: #0d4633;
+	font:500 15px/62px NanumGothic,Nanum;
+}
+
+#deli>div:first-child .midle{/*검색창*/
+	position:absolute;
+	height:21px;
+	width:271px;
+	top:90px;
+	left:109px;
+}
+#deli>div:first-child button{/*찾기버튼*/
+	position:absolute;
+	width:92px;
+	height:25px;
+	top:90px;
+	right:4%;
+	border: 0;
+	font-size:12px;
+	color:#fff;
+	background-color:#272262;
+}
+#deli>div:first-child>ul{
+	position:relative;
+	width:100%;
+	top:55%;
+	margin:0 auto;
+	/*border:1px solid red;*/
+}
+#deli>div:first-child>ul>li{
+	position: relative;
+	margin-left:60px;
+	height:100px;
+	cursor:pointer;
+}
+#deli .dropshow{/*딜리버리소개 옆 이미지 박스*/
+	position:absolute;
+	width: 600px;
+	height: 600px;
+	right:0;
+/*	outline: 1px solid red;*/
+}
+#deli .dropshow>div{
+	position: absolute;
+	width: 98%;
+	height: 98%;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #fff;
+	text-align: center;
+	border: 6px double #0d4633;
+	display: none;
+}
+#deli .dropshow>div>nav{
+	position: absolute;
+	width: 50%;
+	height: 5%;
+	bottom: 1%;
+	left: 50%;
+	transform: translateX(-50%);
+/*	outline: 1px solid red;*/
+}
+#deli .dropshow>div>nav img{
+	cursor: pointer;
+}
+#deli .dropshow>div>p{
+	color: #0d4633;
+	font: bold 1.35em/50px NanumGothic,Nanum;
+}
+.dropshow>div>ul{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 450px;
+	height: 400px;
+/*	outline: 1px solid red;*/
+}
+.dropshow>div>ul li{
+	position: absolute;
+	opacity: 0;
+	transition: all 0.4s ease-in-out;
+}
+
+/**************    디 퀸즈 케이터링 부분     ******************/
+#cater{
+	position:relative;
+	width:1100px;
+	height:600px;
+	background:url(../imges/cater_bg.png) no-repeat;
+	margin:50px auto;
+	padding:0;
+}
+#cater>a{
+	position:absolute;
+	bottom:-3px;
+	right:3%;
+	
+}
+/**************    인스타그램 부분   *****************/
+#insta{
+	position:relative;
+	width:1100px;
+	height:343px;
+	background-color:#F0F2F4;
+	margin:90px auto;
+	overflow: hidden;
+}
+#insta>div:first-child{
+	position:relative;
+	text-align: center;
+	top:0;
+	left:50%;
+	transform:translateX(-50%);
+	margin-bottom: 43px;
+}
+
+#insta>div:last-child ul{
+	position:relative;
+	left:0;
+	width:200%;
+}
+#insta>div:last-child>ul>li{
+	width: 7.692307%;
+}
+
+#insta>div:last-child>ul>li img{
+	width:100%;
+	cursor:pointer;
+}
+
+
+

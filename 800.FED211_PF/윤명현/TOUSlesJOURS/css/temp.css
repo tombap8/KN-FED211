@@ -1,0 +1,341 @@
+@charset "utf-8";
+/* 파리바게트 tample 사이트 공통 CSS */
+
+
+
+/************  최상단 탑메뉴   ****************/
+#tmenu{
+	position:relative;
+	top:0;
+	width:100%;
+	height:31px;
+	background-color:#FFF;
+	z-index:997;
+	margin:0 auto;
+}
+#tmenu>div{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+#tmenu>div>nav{
+	position:absolute;
+	width:600px;
+	top:0;
+	left:21%;
+}
+#tmenu>div>nav>ul>li>a>img{
+	margin:6px 3px 0 10px;
+}
+
+
+/**************  우측상단 로그인 창  *****************/
+.mem{
+	position:absolute;
+	top:35%;
+	left:73%;	
+	/*outline:3px solid lime;*/
+}
+.mem>ul>li:hover{
+	cursor:pointer;
+}
+.mem>ul>li{
+	width:60px;
+	height:100%;
+	font-size:12px;
+	text-align:center;
+}
+.mem>ul>li:first-child{
+	color:#555;
+}
+.mem>ul>li:last-child{
+	color:#0d4633;
+}
+/*****************     로고 포함 탑부분       ***************/
+
+/*헤더박스*/
+#top{
+	position:relative;
+	width:100%;
+	height:100px;
+	background-color:#0d4633;
+	z-index:998;
+}
+                 /**********  로고   ****************/
+.logo>ul>li{/*메인로고 이미지*/
+	position:absolute;
+	top:70px;
+	left:50%;
+	transform:translate(-50%,-50%);
+	width:252px;
+	height:113px;
+}
+.logo>ul{/*로고 이미지 박스*/
+	position:relative;
+	width:100%;
+	height:100%;
+	margin:0 auto;
+}
+
+.logo>ul>li>img{/* 로고 이미지 */
+	position:absolute;
+	top:40%;
+	left:59%;
+	transform:translate(-50%,-50%);
+}
+.logo>div>label{/*검색 박스의 박스*/
+	position:absolute;
+	width:225px;
+	height:20px;
+	top:20px;
+	right:22%;
+}
+.haeder{/*검색 박스*/
+	position:absolute;
+	width:220px;
+	height:20px;
+	border:1px solid #737373;
+	border-radius:6px;
+	font-size:0.75em;
+	color:#666;
+	padding-left:3px;
+}
+#serch{
+	width: 243px;
+    border: none;
+    height: 20px;
+}
+
+.tinput{
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.tinput label{
+	position: relative;
+	width: 20%;
+}
+.tinput>button{
+	position:absolute;
+	top:21px;
+	right:21.2%;
+	width:20px;
+	height: 19px;
+	font-size:0px;
+	border: 0;
+	cursor: pointer;
+	text-indent: -99px;
+	background:url(../imges/IconsAndLogo/GS.png) no-repeat 50% 50%;
+}
+/**************     GNB       ************************/
+#navibar{
+	position:relative;
+	width:100%;
+	height:50px;
+	background-color:#0d4633;
+	z-index:999;
+}
+#navibar>ul{/*3無*/
+	position:relative;/*부모자격*/
+	margin:0 auto;/*가운데*/
+	padding:0;
+	list-style:none;
+	width:1100px;
+	height:100%;
+}
+#navibar>ul>li{
+	/*position:relative;*/
+	float:left;/*block요소를 옆으로 흐르게*/
+	width:180px;
+	height:100%;
+	text-align:center;/*텍스트 가로가운데*/
+	font:bolder 16px/50px  NanumGothic;
+}
+#navibar>ul>li a{/*글자색 등의 설정은 a링크태그가 우선함*/
+	display:block;/*width, height, padding 등의 속성이 적용되기 위한 display변경*/
+	color:#fff;
+	text-decoration:none;
+	width:200px;
+	height:100%;	
+	/*애니메이션은 마우스 오버 하기 전 CSS에 주면됨*/
+	transition:all 0.4s;
+}
+/*     서브메뉴 디자인     */
+#navibar>ul>li>ul{/*3無*/
+	position:absolute;
+	left:0;
+	background-color:#fff;
+	width:100%;/*수정*/
+	height:0;
+	overflow:hidden;/*넘치는 자식요소 감추기*/
+	transition:height 0.4s;/*애니메이션-마우스오버 전 상태*/
+	box-sizing:border-box;
+	font-size:16px;
+	font-weight:500;
+	/*clear:both;*/
+}
+#navibar>ul>li:nth-child(1)>ul{
+	padding-left:0;
+}
+#navibar>ul>li:nth-child(2)>ul{
+	padding-left:20px;
+}
+#navibar>ul>li:nth-child(3)>ul{
+	padding-left:100px;
+}
+#navibar>ul>li:nth-child(4)>ul{
+	padding-left:360px;
+}
+#navibar>ul>li:nth-child(5)>ul{
+	padding-left:550px;
+}
+#navibar>ul>li:nth-child(6)>ul{
+	padding-left:550px;
+}
+/*서브메뉴의 li설정*/
+#navibar>ul>li>ul>li{
+	position:relative;
+	display:list-item;
+	width:180px;
+	color:#0d4633;
+	float:left;
+	cursor:pointer;
+}
+
+/* 마우스 오버시 a태그에 글자색 배경색 변경 */
+#navibar>ul>li:hover>ul>li{
+	color:#0d4633;	
+}
+
+
+/*상위메뉴 오버시 하위 메뉴 ul 보이기(height값 변경하기) */
+#navibar>ul>li:hover>ul{/*상위메뉴 li에 오버시*/
+	width:100%;
+	height:100%;
+	
+}
+
+
+/***************                        풋터 부분                           ***************/
+#info{/*풋터부모*/
+	position:relative;
+	width:100%;
+	/* height값이 없으면 height:auto와 같다(내용에 따라 늘어남) */
+	background-color:#999;
+	margin:90px 0 auto;
+	border-top:2px solid #dddcdb;
+	overflow-x: hidden;
+}
+/***  대표사랑 계열사  ****/
+#info>div{
+	position: relative;
+	width: 100%;
+	height: 230px;
+	background-color: #fff;
+/*	outline:1px solid red;*/
+}
+#info>ul{/*연관 회사 풋터*/
+	position:relative;
+	width:100%;
+	height:200px;
+	background-color:#fff;
+}
+#info>ul>li{
+	position: relative;
+	width: 33%;
+	height: 100%;
+/*	outline: 1px solid lime;*/
+}
+#info>ul>li:nth-child(2){
+	border-left: 2px solid #dddcdb;
+	border-right: 2px solid #dddcdb;
+}
+
+
+.ty{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top:30px;
+	color: #47433D;
+	font-size: 16px;
+	font-weight: bold;
+	
+}
+.L{
+	position: relative;
+	width: 560px;
+	height: 100%;
+	right: -20px;
+}
+.L li:last-child{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	top: 75px;
+	left: 10px;
+}
+
+.C{
+	position: relative;
+	width: 100%;
+	height: 100%;
+/*	outline: 1px solid red;*/
+}
+.C li:first-child{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	left: 10px;
+	top:25px;
+}
+.C li:last-child{
+	position: relative;
+	text-align: center;
+	width: 100%;
+	top: 55px;
+	left: 10px;
+}
+
+.R{
+	position: relative;
+	width: 450px;
+	height: 100%;
+	margin: 0 auto;
+/*	outline: 1px solid red;*/
+	
+}
+.R li{
+	position: relative;
+	width:100px;
+	top: 50px;
+	margin-left: 37px;
+}
+
+
+.R li img{
+	width: 100%;
+	cursor: pointer;
+}
+/*회사 정보 풋터*/
+#info>address{
+	position:relative;
+	width:100%;
+	height:180px;
+	background-color:#626262;
+	color:#fff;
+}
+#info>address>div{
+	position:relative;
+	width:900px;
+	height:130px;
+	margin:0 auto;
+	text-align:center;
+	font-size:14px;
+	font-style:normal;
+	top:25%;
+	letter-spacing:2px;
+}
+
+/********************* 전체메뉴 **********************/

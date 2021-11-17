@@ -1,0 +1,266 @@
+@charset "utf-8";
+/* CSS Document */
+/*@font-face{
+	font-family:NanumGothic;
+	src:url(../fonts/NanumGothic.woff) format("woff"), url(../fonts/NanumGothic.eof) format("eof"), url(../fonts/NanumGothic.ttf) format("ttf")
+}*/
+
+
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+html, body{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;
+	font-family: 'Nanum Gothic';
+
+}
+
+a{
+	display:block;
+	color:#77776f;
+	text-decoration:none;
+}	
+
+ul{
+	list-style:none;
+
+}
+
+img{
+	border:none;
+}
+
+/*top 디자인*/
+#contents{ /*겉박스*/
+	position:relative;
+	width:100%;	
+	height:128px;
+	z-index:999999; 
+	/*border:1px solid #00F;*/
+}
+
+#contents>section{
+	position:relative;
+	width:1000px;	
+	height:100%;
+	margin:0 auto;
+	z-index:9999; 
+	/*border:1px solid red;*/	
+}
+
+#contents #logo{ /*로고*/
+	width:100%;
+	height:33px;
+	margin-top:36px;
+	position:relative;
+	left:360px;/*
+	background:url(../images/index_03.png) no-repeat center center;	*/
+}
+
+#contents #top_navi{ /*로그인메뉴*/
+	position:absolute;
+	top:0px;
+	right:-10px;
+	width:280px;
+}
+
+#contents #top_navi ul{/*로그인메뉴-순서*/
+/*	float:left;
+	position:absolute;
+	top:24px;
+	right:0px;
+	margin:0;
+	padding:0;
+	height:70px;
+	list-style:none;*/
+	margin:0;
+    padding:0;
+    list-style:none;
+    overflow:auto; /* li가 left를 먹어서 영역을 잃어서 이 속성을 넣으면 영역을 잡을 수 있는 능력이 생김 */
+	}	
+	
+#contents #top_navi ul::after{/*float:left 해제*/
+	content:"";
+	diplay:block;
+	clear:both;
+	}
+	
+#contents #top_navi ul li{
+	float:left;
+	padding:5px;
+	font:12px/20px "Nanum Gothic", "맑은 고딕", "굴림체", "돋움체";
+	}
+	
+#contents #top_navi ul li:hover a{
+	color:#ab1f24;
+	}
+		
+#contents #top_navi ul li:last-child{
+	padding-left:5px;
+	margin-top:-5px;
+}
+
+
+#contents #main_navi{ /*메인메뉴*/
+	width:100%;
+	top:50px;
+	position:relative;
+}
+
+#contents #main_navi>ul{
+	margin:0;
+	padding:0;
+	list-style:none;	
+}	
+
+#contents #main_navi>ul::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+#contents #main_navi>ul>.main_m{
+	float:left;/*
+	width:142.857px;*/
+	text-align:center;
+	padding-right:80px;
+}		
+
+#contents #main_navi>ul>.main_m:last-child{
+	padding-right:0px;
+}	
+
+#contents #main_navi>ul>.main_m:nth-child(5){
+	margin-top:-13px;
+}
+
+/*서브메뉴 디자인*/
+#sub_bg{/*박스*/
+	position:absolute;
+	top:128px;
+	left:0;
+	width:100%;
+	height:0px;
+	border-top: 3px solid #ab1f24;
+	overflow:hidden;
+	transition:all 0.6s ease-in-out;
+	background:#fff;
+}
+
+
+#contents #main_navi .sub{
+	position:absolute;
+	top:48px;
+	left:0px;
+	float:left;
+	width:100%;
+	list-style:none;
+	margin:0;
+	padding:0;
+	color:#333;
+	overflow:hidden;
+}
+
+
+#contents #main_navi .main_m>ul{
+	height:0px;
+	overflow:hidden;
+}
+	
+#contents #main_navi .sub li{
+   width:168.857px;
+   float:left;
+   margin:17px 0px 0 0;
+   text-align:left;
+}
+
+#contents #main_navi .sub li a:hover{
+	color:#ab1f24;
+	text-decoration:underline;
+}
+
+#contents #main_navi .sub .bullet{
+	display:block;
+}
+
+#contents #main_navi .sub img{
+	margin-bottom:5px;
+	margin-top:15px;
+}
+
+
+
+/*푸터 디자인*/
+
+#footer{
+	position:relative;
+	width:100%;
+	height:154px;
+	top:0px;	
+	padding-top:0px;/*
+	border-top:1px solid #d7d7d7;*/
+}
+
+#footer a{
+	display:inline-block; 
+}
+
+#footer .fbox{
+	width:1000px;
+	height:100%;
+	margin:0 auto;
+	position: relative;
+}
+
+#footer .fbox .ful{
+	font-size:12px;
+	list-style:none;
+	float:left;
+	color: #bdbdbd;
+	margin-top:37px;
+}
+
+#footer .fbox .ful>a{
+	padding-right:33px;
+	font-weight:bold;
+}
+
+#footer .fbox .ful>a:hover{
+	padding-right:33px;
+	color:#ab1f24;
+	text-decoration:underline;
+}
+
+#footer .fbox .ful2{
+	float:right;
+}
+
+#footer .fbox .ful2>img{
+	padding-left:20px;
+	padding-right:10px;
+	padding-top: 30px;
+}
+
+#f_sel{/*로그인메뉴의 언어선택 디자인*/
+	position:absolute;
+	top:32px;
+	right:5px;
+	width:172px;
+	height:30px;
+	border:1px solid #e0e0e0;
+	color:#888;
+	font-size:11px;	
+}
+
+.flogo{
+	display:inline-block;
+	position:absolute;
+    top:78px;
+    right:4px;
+}
+
+.flogo img{
+	margin-left:15px;
+}

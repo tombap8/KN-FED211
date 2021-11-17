@@ -1,0 +1,806 @@
+@charset "utf-8";
+
+html, body{
+	margin:0;
+	padding:0;
+	width:100%;
+	height:100%;	
+}
+
+
+
+
+ul{/*ul 기본설정*/
+	padding:0;
+	margin:0;
+	list-style:none;
+}
+
+ul::after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+#wrap{
+	position:relative;
+	width:100%;
+	max-width:1920px;/*최대사이즈 설정*/
+	min-width:1024px;/*최소사이즈 설정*/
+	/*height:auto;-->  설정하지 않으면 기본값이 auto임*/
+	margin:0 auto;/*중앙정렬*/
+}
+
+
+p{
+	margin:0;
+	padding:0;	
+
+}
+/*햄버거버튼*/
+.hbtn{
+	position:absolute;
+	width:80px;
+	height:80px;
+	cursor:pointer;/*손가락*/
+	display:none;
+
+}
+#msub{
+	display:none;
+}
+
+
+#top{/*겉박스*/
+	position:relative;
+	width:100%;
+	height:150px;
+	background-color:#2b1511;
+	z-index:999;
+	
+}
+
+#top>header{/*속박스*/
+	position:relative;
+	width:1024px;
+	height:100%;
+	margin:0 auto;
+		
+}
+
+#top>header>aside{/*로고부분 부모박스*/
+	position:absolute;
+	width:100%;
+	height:95px;
+	top:0;
+}
+
+#top>header>aside>article:nth-child(2)>.mlogo{
+		width:100%;
+		height:100%;
+		display:none;	
+	}
+
+a{
+	display:block;/*a링크로 block요소를 감싸주기위한 설정*/
+	text-decoration:none;
+	color:#a6ce39;
+	width:100%;
+	height:100%;
+}
+
+#top>header>aside>article{/*로고부분 속박스들*/
+	position:relative;
+	width:33%;
+	height:100%;
+	float:left;
+
+}
+
+#top>header>aside>article:nth-child(2){/*로고박스*/
+    text-align: center;
+    box-sizing: border-box;
+    padding-top: 24px;
+}
+
+
+#snsicon{/*sns 로고 Sprites 기법사용*/
+	position:relative;
+	top:20px;
+}
+
+#snsicon li{
+	float:left;
+	width:54px;
+	height:54px;
+	background:url(../images/sns_icon.png) no-repeat;
+	list-style:none;
+	/*transition:all 0.4s;*/
+}
+
+#snsicon li:first-child{/*트위터*/
+	background-position:0px 0px;/*left값, top값*/
+}
+#snsicon li:first-child:hover{/*트위터 오버시*/
+	background-position:0px -54px;/*left값, top값*/
+}
+#snsicon li:nth-child(2){/*인스타그램*/
+	background-position:-54px 0px;
+}
+#snsicon li:nth-child(2):hover{/*인스타그램 오버시*/
+	background-position:-54px -54px;
+}
+
+#snsicon li:nth-child(3){/*페이스북*/
+	background-position:-108px 0px;;
+}
+#snsicon li:nth-child(3):hover{/*페이스북 오버시*/
+	background-position:-108px -54px;
+}
+
+#snsicon li:last-child{/*블로그*/
+	background-position:-164px 0px;
+}
+#snsicon li:last-child:hover{/*블로그 오버시*/
+	background-position:-164px -54px;
+}
+
+/*
+ IR 기법 -> Image Replacement(이미지설명 대체텍스트 구현방법)
+*/
+#snsicon span{
+	display:none;/*IR기법*/
+}
+
+
+/*헤더 오른쪽 부분*/
+
+#headerR{
+	position:relative;
+	top:37.5px;
+	width:333px;
+	height:20px;;
+	font:bold 0.875em "나눔고딕";
+	color:#425d00;
+	
+		
+}
+
+#headerR>li{
+	float:left;
+	width:65px;
+	height:20px;
+	text-align:center;	
+}
+
+
+/*서브메뉴 디자인*/
+#top>header>nav{
+	position:absolute;
+	width:100%;
+	height:55px;
+	bottom:0;
+}
+
+#top>header>nav>#menu{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:1024px;
+	height:100%;
+	border-top:2px solid #425d00;
+	font:bold 1.05em/50px "나눔고딕";	
+}
+
+#menu>li{
+	position:relative;/*하위메뉴 부모*/
+	float:left;
+	width:20%;
+	height:50px;
+	text-align:center;
+	color:#ef4837;	
+}
+
+
+#menu>li:hover>a{/*메뉴에 마우스 오버시*/
+	color:#ef4837;	
+}
+
+#menu>li>ul>li:hover>a{/*메뉴에 마우스 오버시*/
+	color:#fff;
+	background-color:#2b1511;	
+}
+
+
+
+
+
+/*하위메뉴 디자인*/
+
+#menu .sub{
+	position:relative;
+	width:200px;
+	height:200px;
+	font:bold 0.8em/25px "나눔고딕";
+	text-align:left;
+	overflow:hidden;
+	z-index:999;
+	text-align:center;
+	margin:0 auto;	
+}
+
+#menu>li>ul>li{
+	height:25px;
+
+}
+
+
+
+/*서브메뉴 디자인*/
+#submenu{/*박스*/
+	position:absolute;
+	top:100%;
+	left:0;
+	width:100%;
+	height:200px;/*140px;*/
+	background-color:#ef4837;
+	border-bottom:2px solid #425d00;
+	overflow:hidden;/*넘치는 자식요소 감추기*/
+	/*transition:all 0.4s ease-in-out;*//*애니메이션*/
+	z-index:998;
+}
+
+#submenu div{/*배경이미지용 div 중앙정렬*/
+	width:1024px;
+	height:200px;
+	margin:0 auto;
+
+}
+
+
+/*scont 애슐리 소개 큰박스*/
+
+#scont{
+	position:relative;
+	width:100%;
+	height:4000px;
+	/*background-color:lime;*/	
+}
+
+#scont>article{
+	position:relative;
+	width:1024px;
+	height:100%;
+	background:url(../images/sub_images/sub3_1/sub33_1.png) no-repeat;
+	margin:0 auto;	
+}
+
+#scont2{
+	position:absolute;
+	width:50%;
+	height:160px;
+	right:0;
+	bottom:300px;
+	
+	
+	
+	
+}
+
+.cimg{
+	position:relative;
+	width:200px;
+	height:140px;
+	top:0px;
+	left:15px;
+	border:3px solid #666;
+	float:left;
+	margin-left:15px;
+	overflow:hidden;			
+}
+
+.cimg::after{
+	content:"";
+	display:block;
+	clear:both;
+			
+}
+
+.cimg>img{
+	width:100%;
+	height:100%;	
+	
+}
+
+.cover{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:#FFF;
+	opacity:0.7;	
+}
+
+.caption{/*글씨배경*/
+	position:absolute;
+	top:100%;
+	width:100%;
+	height:100%;	
+	background-color:#000;
+	opacity:0.5;	
+}
+
+.txt{/*글씨*/
+	position:absolute;
+	top:100%;
+	width:100%;
+	height:30%;
+	color:#FFF;
+	font:0.625em "맑은 고딕", "새굴림", "바탕", "나눔고딕";
+	text-align:center;
+	opacity:0.7
+			
+}
+
+
+
+#scont>article>.scont1{
+	position:absolute;
+	top:293px;
+	width:100%;
+	height:2920px;
+
+	
+}
+
+#scont>article>.scont1>aside{
+	position:relative;
+	width:100%;
+	height:243px;
+	
+	
+}
+
+
+.yr{
+	font:bold 48px/20px "나눔고딕";
+	color:#425d00;	
+	
+}
+
+#scont>article>.scont1>aside:nth-child(1){
+	position:relative;
+	width:100%;
+	height:270px;
+
+	
+}
+
+#scont>article>.scont1>.c1>h1{
+	position:absolute;
+	width:49%;
+	height:100%;
+	right:0;
+	font:bold 60px/60px "나눔고딕";
+	margin:0;
+	padding:0;
+	letter-spacing:-5px;
+		
+}
+
+#scont>article>.scont1>.c1>h1 span{
+	font:bold 4.5vw/70px "나눔고딕";
+	color:#425d00;
+	letter-spacing:-5px;
+	white-space: nowrap;
+}
+
+
+.c1{
+	font:bold 22px/30px "나눔고딕"
+		
+}
+
+.cf{
+	position:absolute;
+	width:400px;
+	height:400px;	
+}
+
+.cf img{
+	width:100%;
+	height:100%;	
+}
+
+.c2{
+	font:bold 22px/30px "나눔고딕";
+	text-align:right;
+	
+		
+}
+
+
+#scont>article>.scont1>aside:nth-child(2){
+	height:345px;
+
+}
+
+#scont>article>.scont1>aside:nth-child(2)>ul{
+	position:absolute;
+	top:130px;
+	right:0px;
+	width:475px;
+	height:206px;
+}
+
+#scont>article>.scont1>aside:nth-child(2)>ul>li{
+	font:bold 22px/30px "나눔고딕";		
+}
+
+
+
+
+
+#scont>article>.scont1>aside:nth-child(3){
+	height:250px;	
+}
+
+#scont>article>.scont1>aside:nth-child(3)>ul{
+	position:absolute;
+	top:20px;
+	left:0px;
+	width:475px;
+	height:206px;
+	
+}
+
+#scont>article>.scont1>aside:nth-child(3)>ul>li{
+	font:bold 22px/30px "나눔고딕";
+	text-align:right;		
+}
+
+
+
+
+#scont>article>.scont1>aside:nth-child(4){
+	height:270px;
+
+}
+
+#scont>article>.scont1>aside:nth-child(4)>ul{
+	position:absolute;
+	top:35px;
+	right:0px;
+	width:475px;
+	height:206px;
+}
+
+#scont>article>.scont1>aside:nth-child(4)>ul>li{
+	font:bold 22px/30px "나눔고딕";		
+}
+
+#scont>article>.scont1>aside:nth-child(4)>ul>li>span{
+	font:bold 18px/20px "나눔고딕";
+	color:#425d00;		
+}
+
+#scont>article>.scont1>aside:nth-child(4)>ul>li>.yr{
+	font:bold 48px/20px "나눔고딕";
+	color:#425d00;
+	
+}
+#scont>article>.scont1>aside:nth-child(5){
+	height:290px;	
+}
+
+#scont>article>.scont1>aside:nth-child(5)>ul{
+	position:absolute;
+	top:5px;
+	left:0px;
+	width:475px;
+	height:206px;
+}
+
+#scont>article>.scont1>aside:nth-child(5)>ul>li{
+	font:bold 22px/30px "나눔고딕";		
+}
+
+#scont>article>.scont1>aside:nth-child(5)>ul>li>span{
+	font:bold 18px/20px "나눔고딕";
+	color:#425d00;		
+}
+
+#scont>article>.scont1>aside:nth-child(5)>ul>li>.yr{
+	font:bold 48px/20px "나눔고딕";
+	color:#425d00;
+	
+}
+
+#scont>article>.scont1>aside:nth-child(6){
+	height:200px;
+	
+}
+
+
+#scont>article>.scont1>aside:nth-child(6)>ul{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:475px;
+	height:206px;
+	
+}
+
+#scont>article>.scont1>aside:nth-child(6)>ul>li{
+	font:bold 22px/30px "나눔고딕";		
+}
+
+#scont>article>.scont1>aside:nth-child(6)>ul>li>span{
+	font:bold 18px/20px "나눔고딕";
+	color:#425d00;		
+}
+
+#scont>article>.scont1>aside:nth-child(6)>ul>li>.yr{
+	font:bold 48px/20px "나눔고딕";
+	color:#425d00;
+	
+}
+
+#scont>article>.scont1>aside:nth-child(7){
+	height:135px;	
+	
+}
+
+
+#scont>article>.scont1>aside:nth-child(7)>ul{
+	position:absolute;
+	top:10px;
+	left:0px;
+	width:475px;
+	height:206px;
+}
+
+#scont>article>.scont1>aside:nth-child(7)>ul>li{
+	font:bold 22px/30px "나눔고딕";		
+}
+
+#scont>article>.scont1>aside:nth-child(7)>ul>li>span{
+	font:bold 18px/20px "나눔고딕";
+	color:#425d00;		
+}
+
+#scont>article>.scont1>aside:nth-child(7)>ul>li>.yr{
+	font:bold 48px/20px "나눔고딕";
+	color:#425d00;
+	
+}
+
+
+
+#scont>article>.scont1>aside:nth-child(8)>ul{
+	position:absolute;
+	top:10px;
+	right:0px;
+	width:475px;
+	height:206px;
+}
+
+#scont>article>.scont1>aside:nth-child(8)>ul>li{
+	font:bold 22px/30px "나눔고딕";		
+}
+
+#scont>article>.scont1>aside:nth-child(8)>ul>li>span{
+	font:bold 18px/20px "나눔고딕";
+	color:#425d00;		
+}
+
+#scont>article>.scont1>aside:nth-child(8)>ul>li>.yr{
+	font:bold 48px/20px "나눔고딕";
+	color:#425d00;
+	
+}
+
+#scont>article>.scont1>aside:nth-child(9)>ul{
+	position:absolute;
+	top:10px;
+	left:0px;
+	width:475px;
+	height:206px;
+}
+
+#scont>article>.scont1>aside:nth-child(9){
+	height:300px;	
+}
+
+
+
+#scont>article>.scont1>aside:nth-child(9)>ul>li{
+	font:bold 22px/30px "나눔고딕";		
+}
+
+#scont>article>.scont1>aside:nth-child(9)>ul>li>span{
+	font:bold 18px/20px "나눔고딕";
+	color:#425d00;		
+}
+
+#scont>article>.scont1>aside:nth-child(9)>ul>li>.yr{
+	font:bold 48px/20px "나눔고딕";
+	color:#425d00;
+	
+}
+#scont>article>.scont1>aside:nth-child(10){
+	height:120px;	
+}
+
+#scont>article>.scont1>aside:nth-child(10)>ul{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:475px;
+	height:120px;
+}
+
+#scont>article>.scont1>aside:nth-child(10)>ul>li{
+	font:bold 22px/30px "나눔고딕";		
+}
+
+#scont>article>.scont1>aside:nth-child(10)>ul>li>span{
+	font:bold 18px/20px "나눔고딕";
+	color:#425d00;		
+}
+
+#scont>article>.scont1>aside:nth-child(10)>ul>li>.yr{
+	font:bold 48px/20px "나눔고딕";
+	color:#425d00;
+	
+}
+
+
+
+#scont>article>.scont1>aside:nth-child(11){
+	height:210px;	
+}
+
+#scont>article>.scont1>aside:nth-child(11)>ul{
+	position:absolute;
+	top:15px;
+	left:0px;
+	width:475px;
+	height:206px;
+}
+
+#scont>article>.scont1>aside:nth-child(11)>ul>li{
+	font:bold 22px/30px "나눔고딕";		
+}
+
+#scont>article>.scont1>aside:nth-child(11)>ul>li>span{
+	font:bold 18px/20px "나눔고딕";
+	color:#425d00;		
+}
+
+#scont>article>.scont1>aside:nth-child(11)>ul>li>.yr{
+	font:bold 48px/20px "나눔고딕";
+	color:#425d00;
+	
+}
+
+#scont>article>.scont1>aside:nth-child(12){
+	height:600px;	
+}
+
+#scont>article>.scont1>aside:nth-child(12)>ul{
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:475px;
+	height:206px;
+}
+
+#scont>article>.scont1>aside:nth-child(12)>ul>li{
+	font:bold 22px/30px "나눔고딕";		
+}
+
+#scont>article>.scont1>aside:nth-child(12)>ul>li>span{
+	font:bold 18px/20px "나눔고딕";
+	color:#425d00;		
+}
+
+#scont>article>.scont1>aside:nth-child(12)>ul>li>.yr{
+	font:bold 48px/20px "나눔고딕";
+	color:#425d00;
+	
+}
+
+
+
+#dispbg{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	display:none;
+		
+}
+
+#dispimg{ 
+	position:absolute;
+	display:none;
+}
+
+#dispbg>div:first-child{/*배경*/
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-color:#fff;
+	opacity:0.7;
+}
+
+#dispbg>div:nth-child(2){/*닫기 버튼*/
+	position:absolute;	
+	width:80px;
+	height:80px;
+	top:0px;
+	right:0px;
+	text-align:center;
+	font:4.5em/109px Verdana, Geneva, sans-serif;
+	color:#666;
+	cursor:pointer;
+}
+#dispbg>div:nth-child(2) img{
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;	
+}
+
+#dispbg>div.btnarr{/*버튼 공통*/
+	position:absolute;
+	width:120px;
+	height:70px;
+	top:50%;
+	transform:translateY(-50%);/*세로가운데*/
+	text-align:center;
+	font:4.5em/70px Verdana, Geneva, sans-serif;
+	color:#666;
+	cursor:pointer;
+}
+
+#dispbg>div:nth-child(3){/*오른쪽 버튼*/
+	right:0;	
+}
+
+
+
+footer{
+	position:relative;
+	width:100%;
+	height:150px;
+	background-color:#999;	
+	
+}
+
+footer>ul{
+	position:relative;
+	top:10%;
+	width:1024px;
+	height:150px;
+	margin:0 auto;
+	
+	
+}
+footer>ul>li{
+	font:0.75em/20px "돋움";	
+	text-align:center;	
+}
+
+
+
+
+
+	
+

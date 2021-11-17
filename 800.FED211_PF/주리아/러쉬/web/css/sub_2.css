@@ -1,0 +1,189 @@
+@charset "utf-8";
+/* CSS Document */
+
+@import url(sub.css);
+
+
+#sub_cont>article>div:first-child>span{
+	font-weight:normal;
+}
+
+
+#sub_nav>li:first-child{
+	background-color:#ffcf0e;
+}
+
+#sub_nav li:first-child>a{
+	color:#FFF;
+}
+
+
+#sub_cont #BS_01{	
+	position:relative;
+	width:770px;
+	height:200px;
+	padding-bottom:80px;
+}
+
+#sub_cont #BS_01>img{
+	position:absolute;
+	top:0;
+	left:0;
+	width:770px;
+	height:200px;
+}
+
+#sub_cont .flower{
+	position:relative;
+	width:100%;
+	height:40px;
+}
+
+#sub_cont .flower>img{
+	position:absolute;
+	top:0;
+	left:50%;
+	transform:translateX(-50%);
+}
+
+#sub_cont .BS_txt{
+	position:relative;
+	width:100%;
+	height:60px;
+	padding-bottom:40px;
+	font:bold 18px/60px NanumSquareR;
+	text-align:center;
+	color:#1d81e8;
+}
+
+
+/******************************************** BS_02 부분 디자인 ********************************************/
+
+
+
+
+#sub_cont #BS_02{
+	position:relative;
+	width:100%;
+	height:420px;
+	padding-bottom:100px;
+}
+
+#sub_cont #BS_02>div:first-child{
+	position:absolute;
+	top:0;
+	left:0;
+	width:380px;
+	height:420px;
+}
+
+#sub_cont #BS_02 .BS_txtR{
+	position:absolute;
+	top:0;
+	right:0;
+	width:350px;
+	height:auto;
+	letter-spacing:-0.5px;
+	font:14px/30px NanumBarunGothic;
+	color:#000;
+}
+
+
+
+/******************************************** BS_03 부분 디자인 ********************************************/
+
+
+#sub_cont #BS_03{
+	position:relative;
+	width:100%;
+	height:440px;
+	padding-bottom:100px;
+}
+
+#sub_cont #BS_03>div:first-child{
+	position:absolute;
+	top:0;
+	right:0;
+	width:380px;
+	height:440px;
+}
+
+#sub_cont #BS_03 .BS_txtL{
+	position:absolute;
+	top:0;
+	left:0;
+	width:350px;
+	height:auto;
+	letter-spacing:-0.5px;
+	font:14px/30px NanumBarunGothic;
+	color:#000;
+}
+
+
+/******************************************** BS_04 부분 디자인 ********************************************/
+
+
+#sub_cont #BS_04{
+	position:relative;
+	width:100%;
+	height:210px;
+	padding-bottom:100px;
+}
+
+#sub_cont #BS_04>div:first-child{
+	position:absolute;
+	top:0;
+	left:0;
+	width:380px;
+	height:210px;
+}
+
+#sub_cont #BS_04 .BS_txtR{
+	position:absolute;
+	top:0;
+	right:0;
+	width:350px;
+	height:auto;
+	letter-spacing:-0.5px;
+	font:14px/30px NanumBarunGothic;
+	color:#000;
+}
+
+
+/******************************************** BS_05 부분 디자인 ********************************************/
+
+
+#sub_cont #BS_05{
+	position:relative;
+	width:100%;
+	height:110px;
+	padding-bottom:140px;
+}
+
+#sub_cont #BS_05>div:first-child{
+	position:absolute;
+	top:0;
+	right:0;
+	width:380px;
+	height:110px;
+}
+
+#sub_cont #BS_05 .BS_txtL{
+	position:absolute;
+	top:0;
+	left:0;
+	width:350px;
+	height:auto;
+	letter-spacing:-0.5px;
+	font:14px/30px NanumBarunGothic;
+	color:#000;
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,227 @@
+@charset "utf-8";
+/* CSS mainpage */
+@import url(core.css);
+@import url(common.css);
+
+/***********************************sub mainimage***********************************/
+.bar{ /*그라데이션바 박스*/
+	position: relative;
+	width: 100%;
+	height: 5px;
+}
+.bar img{ 
+	width: 100%;
+	height: auto;
+}
+#subM{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+#subM>dl{ /*서브 메뉴텍스트*/
+	width: 27%;
+	margin: 0;
+	padding: 0;
+	margin-left: 9.09%;
+}
+#subM>dl>dt{
+	font-size: 1.75em;
+	margin: 10% 0 15% 0;
+}
+#subM>dl>dt:hover{
+	text-decoration: overline;
+}
+#subM>dl>dd{
+	font-size: 1.5em;
+	margin-bottom: 5%;
+}
+#subM>dl>dd:hover{
+	text-decoration: overline;
+}
+#subM>dl>dt a{
+	color:  #fa05e6;
+	font-weight: bold;
+}
+#subM>dl>dd a{
+	color: #595758;
+	font-weight: bold;
+}
+
+#subM>div{ /*서브페이지 동영상*/
+	width: 53.5%;
+	height: auto;
+	overflow: hidden;
+}
+#myVideo{
+	width: 100%;
+	/*object-fit:cover; 동영상객체 부모에 채우기*/
+			   }
+#subM>h2{
+	position: absolute;
+	top: 5%;
+	left: 58%;
+	color: #000;
+	font-size: 1.5em;
+	z-index: 1;
+	text-align: center;
+}
+/***********서치박스***********/
+#serch{
+	position: relative;
+	width: 100%;
+	height: 10%;
+	display:inline-block;
+}
+#serch .put{
+	position: absolute;
+	right: 9.09%;
+	color: #595758;
+	font-size: 1.5em;
+	text-align:right;
+	width: 25%;
+	height: 35%;
+}
+
+#serch .put input{
+	border: 1px solid #595758;
+	width:60% ;
+	height: 100%;
+	padding-left: 1em;
+}
+
+/***********************************서브이미지 박스********************************************/
+#subG{
+	width: 100%;
+	height: auto;
+}
+#gallery{ /*갤러리 부모박스*/
+		    position: relative;
+			width: 85%;
+			height: auto;
+			margin: 0 auto;
+	   }
+   #gallery::after{
+	   content: "";
+	   display: block;
+	   clear: both;
+   }
+.photobox{/*개별이미지 박스*/
+	   position: relative;/*부모자격*/
+	   width:30%;
+	   height: auto;
+	   float: left;
+	   cursor: pointer;
+	   overflow: hidden;
+	   margin:0 1.66%;
+	   margin-bottom: 5%;
+	   }
+.photobox:hover{
+	outline: 3px solid #77c1ec;
+}  
+.photobox img{/*갤러리 이미지*/
+	   width:100%;
+   }
+   .caption{/*글자배경박스*/
+	   position: absolute;
+	   top: 100%;
+	   width:100%;
+	   height: 40%;
+	   background-color: #b5b5b5;
+	   opacity: 0.5;
+   }
+   .txt{/*이미지설명글*/
+	   position: absolute;
+	   color: #3d3c3d;
+	   font-weight: bold;
+	   font-size:1.5em;
+	   margin: 5% 0 0 5%;
+   }
+.txt1{
+	position: absolute;
+	color:  #3d3c3d;
+	font-style: italic;
+	text-decoration: line-through;
+	font-weight: bold;
+	font-size:1.5em;
+    margin: 28% 0 0 5%;
+}
+.txt2{
+	position: absolute;
+	color:  #fa05e6;
+	font-weight: bold;
+	font-size:1.5em;
+    margin: 28% 0 0 5%;
+}
+.my{ /*아이콘*/
+	position: absolute;
+    margin: 23% 0 0 65%;
+}
+.my img{ 
+	width: 37%;
+	float: left;
+	margin-right: 13%;
+}
+  
+
+/**********************************************************/
+@media only screen and (max-width:1500px){
+	#subM>dl>dt{
+		font-size: 1.5em;
+	}
+} 
+
+@media only screen and (max-width:1300px){
+	#subM>dl>dt{
+		font-size: 1.25em;
+	}
+	#subM>dl>dd{
+		font-size: 1.25em;
+	}
+	.txt{
+		font-size: 1.25em;
+	}
+	.txt1{
+		font-size: 1.25em;
+	}
+	.txt2{
+		font-size: 1.25em;
+	}
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

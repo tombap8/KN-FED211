@@ -1,0 +1,513 @@
+@charset "utf-8";
+/* sub1.css */
+@import url(base.css);
+@import url(reset.css);
+
+/* 탑메뉴영역*/
+#top{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+/*컨텐츠 내용에 따라 자동으로 늘어남*/
+	font: 1.7em Ubuntu;
+	background-color: #d40a0a;
+	z-index: 9999;
+}
+/*탑메뉴 반투명 배경*/
+.obg{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.4;
+}
+
+
+/*로고이미지*/
+#top>img{
+	position: relative;
+	width:4%;
+	cursor: pointer;
+	margin: 1.1% 0 0.9% 2.5%;
+}
+/*GNB메뉴*/
+#top>ul{
+	position: absolute;
+	width: 20%;
+	right: 5%;
+	bottom: 5%;	
+}
+#top>ul>li{
+	width: 25%;
+	text-align: center;
+	line-height: 42px;
+}
+#top>ul>li>a{
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+
+/********* 햄버거 버튼*******/
+#ham{
+	position: absolute;
+	top:17px;
+	right: 20px;
+	width:40px;
+	height: 25px;
+	cursor: pointer;
+	display: none; /*일단 안보이게*/
+}
+#ham div{
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	background-color:#fff; 
+	transition: all 0.8s;
+}
+#ham div:first-child{
+	top:0;
+}
+#ham div:nth-child(2){
+	top:10px;
+	left:0;/*초기값 반드시 셋팅!!!!!*/
+}
+#ham div:last-child{
+	top:20px;
+}
+
+/*모바일용 메뉴*/
+#menu{
+	position: fixed;
+	top:0;
+	right:0;
+	width:0%;
+	height: 100%;
+	z-index: 9998; /* top 바로 아래쪽에 위치하게 999보다 작게 */
+	overflow: hidden; /*자식숨김*/
+}
+#menu .obg{
+	opacity: 0.8; /* 모바일 메뉴용 배경설정 */
+}
+#menu ul{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 50%;
+	height: 50%;
+}
+#menu ul li{
+	width: 100%;
+	height: 60px;
+	text-align: center;
+	font:2.5em Ubuntu;
+}
+#menu a{
+	color: #fff;
+}
+/*페이지영역*/
+body>section{/*각 페이지 공통디자인*/
+	position: relative;
+	width:100%;
+	overflow-x: hidden !important;
+}
+/******************* 컨텐츠 내용 **********************/
+#cont{
+	position: relative;
+	width: 100%;
+	height:auto;
+	margin: 5% 0 5% 0;
+}
+
+#cont>ul>li:first-child{
+	position: relative;
+	width: 84%;
+	height: auto;
+	top:0;
+	left:0;
+	/*outline: 1px solid red;*/
+}
+#best{/*메뉴명*/
+	position: relative;
+	width: 90%;
+	left:10%;
+	margin-top: 5%;
+}
+#best>div{
+	margin-top:4%;
+	height:auto;	
+	text-align: center;
+	font:2.25em calibri;
+}
+#best>div>span{
+	margin-right: 8px;
+	font:bold 1.1em Ubuntu;	
+}
+#best>ul{
+	margin-top:8%;
+	width: 100%;
+	text-align: center;
+	/*outline: 1px solid red;*/
+}
+#best>ul>li{
+	position: relative;
+	width:25%;
+	height: 350px;
+	/*outline: 1px solid red;*/
+	color:#404040;
+}
+#best>ul>li>dl{
+	height: 100%;
+
+}
+#best>ul>li>dl>dt{
+	height: 70%;
+	padding: 3% 3% 3% 8%;
+
+}
+#best>ul>li>dl>dt img{
+	width: 50%;
+	top:100%;
+	/*outline: 1px solid red;*/
+}
+#best>ul>li>dl>dd{
+	height:5.25%;
+}
+
+#best>ul>li>dl>dd:last-child{
+	padding-top: 2.5%;
+}
+
+.best{
+	position: absolute;
+	top:0;
+	right:0;
+}
+.best>span{
+	position: absolute;
+	top:0;
+	right:0;
+	padding: 2.5px 5.5px 0 0;
+	color: #fff;
+	z-index: 997;
+}
+
+.tit{
+	font: 0.7em;
+	color:#ff0000;
+}
+.name{
+	font-size:1.25em;
+	color:#404040;
+}
+.price{
+	font-weight: bold;
+	font-size:1.8em;
+	color:#404040;
+}
+.emp{
+	font-size: 0.5em;
+	color:#404040;
+}
+
+/***************** 아이콘박스**********************/
+#icon{/*메뉴명*/
+	position: relative;
+	width: 90%;
+	left:10%;
+}
+#icon>div{
+	margin:3% 0 1% 1%;
+	height:auto;
+	font:bold 2em NSquare;
+}
+#icon>div>span{	
+	position:absolute;
+	top:15px;
+	margin-left:0.6% ;
+	font:bold 0.5em NSquare;	
+}
+#icon>ul{
+	position: absolute;
+	top:50%;
+	margin-top:2%;
+	width: 100%;
+	height:140px;
+	text-align: center;
+	background-color: #f7f7f7;
+	border-top: 4px solid #4e4e4e;
+}
+#icon>ul>li{
+	width:16.666%;
+	height:100%;
+	color:#404040;
+	outline: 1px solid #ccc;
+}
+#icon>ul>li>img{
+	padding-top: 11%;
+}
+#icon>ul>li:nth-child(5)>img{
+	padding-top: 13%;
+}
+
+/*****************  이벤트 배너 바로가기 **********************/
+#sBan{/*메뉴명*/
+	position: relative;
+	width: 90%;
+	left:10%;
+}
+#sBan>ul{
+	position: absolute;
+	margin-top:13%;
+	width: 100%;
+	text-align: center;
+}
+#sBan>ul>li:first-child{
+	position: absolute;
+	width:49.4%;
+	left:0;
+}
+#sBan>ul>li:last-child{
+	position: absolute;
+	width:49.4%;
+	right:0;
+}
+#sBan>ul>li>img{
+	width:100%;
+	margin-bottom: 13px;
+}
+
+/***************** 아이콘박스**********************/
+#pro{/*메뉴명*/
+	position: relative;
+	width: 90%;
+	left:10%;
+	margin-top: 48%;
+	/*outline: 1px solid red;*/
+}
+#pro>ul{
+	width: 100%;
+	text-align: center;
+}
+#pro>ul>li{
+	position: relative;
+	width:25%;
+	/*outline: 1px solid red;*/
+	color:#404040;
+}
+#pro>ul>li>dl{
+	height: 100%;
+	margin-bottom: 10%;
+}
+#pro>ul>li>dl>dt{
+	height: 70%;
+	
+}
+#pro>ul>li>dl>dd{
+	height:5.25%;
+}
+
+#pro>ul>li>dl>dt img{
+	width: 60%;
+}
+#pro>ul>li>dl>dd:last-child{
+	padding-top: 2.5%;
+}
+
+/***************** 오른쪽 바로가기**********************/
+
+#cont>ul>li:last-child{
+	position: relative;
+	width: 15%;	
+}
+#cont>ul>li:last-child>div{
+	position: absolute;
+	margin-left:5%;
+	/*outline: 1px solid red;*/
+}
+#cont>ul>li:last-child img{
+	width: 111px;
+	height: auto;
+}
+#anchor{
+	width: 81px;
+	height: auto;
+	margin-top: 5px;
+	padding: 18px 15px 20px 15px ;
+	background-color: #444;
+	text-align: center;
+	font:bold 1.25em calibri;
+}
+#anchor>a{
+	color:#fff;
+}
+.anchor{
+	font:bold 0.75em calibri;	
+}
+
+#cont>ul>li:last-child>div>img:last-child{
+	margin-top: 8px;
+}
+
+.fmenu{
+	/*position: absolute;*/
+	width: 111px;
+	top:0;
+	right: 0;
+	background-color: #F4E774;
+}	
+/**************** 회사정보 ***************/
+
+#info{ 
+	height: 35%;
+	background-color: #c40505;
+}
+#infobox{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	width:740px;
+	font-size:1em;
+	line-height:23px;
+	color:#fffefe;
+	padding:25px;
+	border:1px solid #eee;	
+}
+#bizinfo{
+	position: relative;
+	top:20px;
+	height:60px;
+}
+#bizinfo>a{	
+	color:#fbea98;
+}
+
+#infobox span{
+	margin-right: 25px;
+}
+
+/*********************모바일용 미디어쿼리**********************/
+
+@media only screen and (max-width:1100px){
+
+#ham{
+		display: block;/*햄버거버튼 보이게*/
+	}
+	#top>ul{
+		display: none;/*DT메뉴 안보이게*/
+	}
+
+#top{
+	position: fixed;
+	top:0;
+	left:0;
+	width:100%;
+	height: 50px;
+	font: 0.8em Ubuntu;
+	background-color: #d40a0a;
+	z-index: 999999;
+}
+	/*로고이미지 변경*/
+	#top>img{
+		position: absolute;
+		width:57px;
+		height:30px;
+		left:50%;
+		transform: translateX(-50%);
+		margin-top: 10px;	
+	}
+
+
+	/*컨텐츠 세부내용*/
+
+	#cont{
+		top:8%;
+		margin: 5% 0 10% 0;
+		
+	}
+	#cont>ul{
+		height:50% !important;
+	}
+
+	#cont>ul>li:first-child{
+		width: 95% !important;
+		height: 95% !important;
+		left:-3%;
+	}
+	#cont>ul>li:last-child{
+		display: none;
+		}
+
+	#best>ul{
+	 height: 100% !important;
+	}
+	
+	#best>ul>li{
+		width: 48% !important;
+		height: 50% !important;
+		margin: 0 4% 10% -2%;
+	}
+		#best>ul>li>dl>dd{
+		height: 50% !important;
+	}
+	
+	#icon>ul{
+		margin-top: 8%;
+	}
+	#icon>ul>li{
+		width: 33.333% !important;
+		height: 50% !important;
+	}
+	#icon>ul>li>img{	
+		height: 60% !important;
+		
+	}
+	#sBan{
+		display: none;
+	}
+	
+	#pro>ul>li{
+		width: 48% !important;
+		height: 40% !important;
+		margin: 0 4% 12% -2%;
+	}
+	#pro>ul>li>dl>dd{
+		height: 9% !important;
+	}
+	
+.tit{
+	font: 0.4em;
+}
+.name{
+	font-size:0.9em;
+}
+.price{
+	font-weight: bold;
+	font-size:1.4em;
+}
+.emp{
+	font-size: 0.3em;
+
+}
+	
+	#info{ 
+	width:100%;
+	background-color: #c40505;
+}
+	/*하단정보박스 변경*/
+	#infobox{
+		width:80%;
+		font-size: 0.8em;
+		line-height: 15px;
+		color: #fff;
+		margin: 0px 0 10px 0;
+		border:1px solid #eee;	
+	}
+
+}/************미디어쿼리********/

@@ -1,0 +1,213 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(temp.css);
+@import url(core.css);
+/**********top네비**************/
+#topnav{
+	position:fixed;
+	width:30px;
+	height:30px;
+	text-align:center;
+	font:bold 10px Verdana, Geneva, sans-serif;
+	right:7%;
+	bottom:10%;
+	color:#00529c;
+	border:3px solid #00529c;
+	cursor:pointer;
+	z-index:9999;
+	background-color: #FFFFFF;
+}
+#topnav>a{
+	color:#00529c;
+}
+
+/************  컨텐츠 박스 상단 타이틀 영역   ***********/
+#box>h3{/*메뉴 가이드*/
+	position:relative;
+	width:300px;
+	height:40px;
+	top:45px;
+	left:19%;
+	margin-left:3px;
+	color:#a5a5a5;
+}
+#box>h3>img{/*집모양*/
+	position:relative;
+	width:11px;
+	margin-left:5px;
+}
+#box>h3>span{/*메뉴가이드 글*/
+	font:bold 0.875em NanumGothic;
+	font-style:normal;
+	letter-spacing:1px
+	
+}
+#box>h1{
+	position:relative;
+	width:300px;
+	height:28px;
+	top:80px;
+	left:19%;
+}
+#box>h2{/*파란색 줄*/
+	position:relative;
+	width:1440px;
+	height:3px;
+	top:110px;
+	margin:0 auto;
+	border-top:2px solid #0074d7;
+	opacity:0.8;
+}
+/***************          컨텐츠                **********************/
+
+#cont{/*상단 박스 부모*/
+	position:relative;
+	width:1270px;
+	background-color:#fff;
+	margin:140px auto;
+	background-color:#f2f2f2;
+	border-bottom:30px solid #08008a;
+	padding:0;
+	
+}
+
+/*상단 컨텐츠*/
+#cont>section{
+	position:relative;
+	width:1270px;
+	height:750px;
+}
+#cont>section>div{
+	position:relative;
+	top:0;
+	left:0;
+	width:810px;
+	height:750px;
+
+	float:left;
+}
+#cont>section>ul{
+	position:absolute;
+	right:0;
+	width:460px;
+	height:750px;
+
+	
+}
+#cont>section>ul>li{
+	position:relative;
+	margin:30px 6%; 
+	
+}
+	
+#cont>section>ul>li:nth-child(2)>button{
+	margin-top: 1px;
+	width:93px;
+	height: 31px;
+	text-align:center;
+	font-size:0.8em;
+	background-color:#7d7d7d;
+	color: #fff;
+	cursor: pointer;
+	border-style:none;
+}
+#find{
+	position: relative;
+	top: -1px;
+	height: 25px;
+	width:300px;
+	font-size: 1em;
+}
+
+#cont>section>ul>li:nth-child(5){
+	right: 4%;
+}
+
+/**************  하단 컨텐츠  ******************/
+
+#scont{
+	position: relative;
+	width: 1000px;
+	height: 1300px;
+	margin: 0 auto;
+/*	outline: 1px solid red;*/
+}
+
+
+.tapimg>img{
+	position: absolute;
+	opacity: 0;
+	transition:all 0.4s ease-in-out;
+}
+
+.tapimg>img:first-child{
+	opacity: 1;
+}
+
+.tap{
+	position: absolute;
+	top:160px;
+	right: -71px;
+	width:80px;
+	height: 636px;
+/*	outline: 1px solid lime;*/
+}
+.tap>ul{
+	width:100%;
+	height: 100%;
+}
+.tap>ul>li{
+	width:100%;
+	height: 143px;
+	margin-bottom: 23px;
+	cursor: pointer;
+}
+.tap>ul>li:first-child{
+	background-image: url(../imges/tap_1.png)
+}
+.tap>ul>li:nth-child(2){
+	background-image: url(../imges/tap_2.png)
+}
+.tap>ul>li:nth-child(3){
+	background-image: url(../imges/tap_3.png)
+}
+.tap>ul>li:last-child{
+	background-image: url(../imges/tap_4.png)
+}
+
+
+.tap>ul>li:first-child{
+	background-position: -80px 0;
+}
+.tap>ul>li:first-child:hover{
+	background-position: -80px 0;
+}
+
+.tap>ul>li:nth-child(2){
+	background-position: 0 0;
+}
+
+.tap>ul>li:nth-child(2):hover{
+	background-position: -80px 0;
+}
+
+.tap>ul>li:nth-child(3){
+	background-position: 0 0;
+}
+
+.tap>ul>li:nth-child(3):hover{
+	background-position: -80px 0;
+}
+
+.tap>ul>li:nth-child(4){
+	background-position: 0 0;
+}
+
+.tap>ul>li:nth-child(4):hover{
+	background-position: -80px 0;
+}
+
+
+
+
+

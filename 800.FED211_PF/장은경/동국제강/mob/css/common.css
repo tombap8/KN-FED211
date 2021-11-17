@@ -1,0 +1,504 @@
+@charset "utf-8";
+/* common.css - 포스코건설 모바일 공통 디자인 */
+
+html,body{
+	overflow: visible;
+}
+
+body{
+	position: relative;
+	right: 0%;
+	transition: all 0.3s;
+}
+
+/**************** 상단바 ****************/
+#top{/*최상위 부모*/
+	position: fixed;
+	top: 0;
+	right: 0%;
+	width: 100%;
+	height: 50px;
+	z-index: 1;/*위로*/
+	transition: all 0.3s;
+}
+#top>div:first-of-type{/*검은 배경*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #fff !important;
+	opacity: 0.5 !important;
+	transition: all 0.3s;
+}
+#logo{/*로고*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100px;
+	height: 30px;
+	transform: translate(-50%,-50%);/*세로중앙*/
+	background: url(../../images/logo.png) no-repeat top/100% !important;
+	/*transition: all 0.3s;*/
+}
+#logo a{/*로고 a링크*/
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+#topline{/*상단바 gnb라인*/
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 100%;
+	height: 1px;
+	background-color: #ccc;
+	opacity: 0;/*안보이게*/
+	transition: all 0.3s;
+}
+#ham{/*햄버거버튼 box*/
+	position:absolute;
+	display:block;
+	right: 0;
+	width:50px;
+	height:100%;
+}
+#ham>div{
+	width:17px;
+	height:15px;
+	padding:16.5px 15px;
+}
+#menuline1{
+	position: absolute;
+	width: 17px;
+	height: 2px;
+	background-color: #000 !important;
+}
+#menuline2{
+	position: absolute;
+	margin-top: 6px;
+	width: 17px;
+	height: 2px;
+	background-color: #000 !important;
+}
+#menuline3{
+	position: absolute;
+	margin-top: 12px;
+	width: 17px;
+	height: 2px;
+	background-color: #000 !important;
+}
+
+
+
+/*******************메뉴********************/
+#menu{/*메뉴 전체*/
+	position: fixed;
+	right: -100%;/*안보이게*/
+	width: 100%;
+	height: 100%;
+	transition: all 0.3s;
+	z-index: 2;/*가장 위로*/
+}
+#menu::after{/*float 해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+#gnbbg{/*gnb 바깥 검은 배경*/
+	position: relative;
+	width: 20%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0;/*안보이게*/
+	float: left;
+}
+#gnb{/*메뉴 컨텐츠 부모박스*/
+	position: relative;
+	width: 80%;
+	height: 100%;
+	background-color: #fff;
+	overflow:hidden; /*넘치는 자식 숨기기*/
+	/*transition: all 0.3s;*/
+	z-index: 2;/*가장 위로*/
+}
+#gnbtop{/*메뉴 상단바*/
+	position: relative;
+	width: 100%;
+	height: 50px;
+}
+/*로고*/
+#gnblogo{
+	position: absolute;
+	top: 25px;
+	left: 15px;
+	width: 59px;
+	height: 28px;
+	transform: translateY(-50%);/*세로중앙*/
+	background: url(../images/logo_top.png) no-repeat bottom/100%;
+	/*transition: all 0.3s;*/
+}
+
+/*언어선택창*/
+#lang{
+	position: absolute;
+	top: 10px;/*세로중앙*/
+	right: 51px;/*border고려*/
+	width: 67px;
+	height: 30px;
+	/*border: 1px solid #ccc;*/
+	overflow: hidden;
+	z-index: 1;/*위에*/
+}
+#lang>ul{/*언어선택창 ul*/
+	position: absolute;
+	top: 30px;
+	left: 0;
+	width: 67px;
+	height: 210px;
+}
+#lang a{/*언어선택창 a링크 공통*/
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #999;
+	font: 12px/30px "Daum";
+	text-align: center;
+	background-color: #fff;
+}
+#lang>a{/*선택된 언어*/
+	font-size: 11px !important;
+	color: #003f63;
+	background-color: #f2f2f2;
+}
+#lang>ul>li{
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 30px;
+}
+
+/*닫기버튼*/
+#close{
+	position:absolute;
+	display:block;
+	right: 0;
+	width:50px;
+	height:100%;
+}
+#close>div{
+	width:17px;
+	height:15px;
+	padding:16.5px 15px;
+}
+#closeline1{
+	position: absolute;
+	margin-top:6px;
+	width: 17px;
+	height: 2px;
+	transform: rotate(45deg);
+	background-color: #000;
+}
+#closeline2{
+	position: absolute;
+	margin-top:6px;
+	width: 17px;
+	height: 2px;
+	transform: rotate(-45deg);
+	background-color: #000;
+}
+
+/********메인,서브메뉴********/
+ul#navi {
+	position:relative;
+	width:100%; 
+	border-bottom:1px solid #eee;
+}
+
+li.group {/*각 메인메뉴와 그 아래의 서브메뉴*/
+	position:relative;
+	width:100%;
+}
+.group a{/*a링크 전체*/
+	display:block;
+	width:100%;
+	height:100%;
+	color:#000;
+}
+div.title {/*메인메뉴 타이틀 div*/
+	position:relative;
+	height:50px;
+	border-top:1px solid #eee;
+}
+
+
+.title>a>img{/*아이콘 이미지*/
+	position:absolute;
+	top:22%;/*최대한 세로중앙*/
+	left:15px;
+	height:25px;
+}
+.title>a>span{/*메인메뉴 제목*/
+	position:absolute;
+	left:50px;
+	font:13px/50px "Daum";
+}
+.title>a>div{/*화살표*/
+	position:absolute;
+	top:50%;
+	right:20px;
+	width:15px;
+	height:9px;
+	transform:translateY(-50%);/*세로중앙*/
+	background:url(../images/menu_arrow.png) no-repeat top;
+}
+.group:first-child>.title>a>div{/*첫번째 메인메뉴 타이틀 화살표*/
+	background-position:bottom;/*열린 상태*/
+}
+
+ul.sub{/*서브메뉴 공통*/
+	background-color:#f2f2f2;
+}
+			
+ul.sub li{/*각 서브메뉴 li*/
+	position:relative;
+	width:100%;
+	height:30px;
+	font:11px/30px "NanumBarunGothic";
+}
+ul.sub li>a{/*각 서브메뉴 a링크 공통*/
+	padding-left:50px;
+}
+ul.sub li:first-child, ul.sub li:last-child{/*첫번째, 마지막 서브메뉴 */
+	height:40px;/*높이 조절*/
+}
+ul.sub li:first-child a, ul.sub li:last-child a{/*첫번째, 마지막 서브메뉴 a링크*/
+	height:30px;/*padding 고려*/
+}
+ul.sub li:first-child a{/*첫번째 서브메뉴 a링크*/
+	padding-top:10px;
+}
+ul.sub li:last-child a{/*마지막 서브메뉴 a링크*/
+	padding-bottom:10px;
+}
+
+
+/*****************컨텐츠부분*****************/
+#conts{/*최상위 부모*/
+	position:relative;
+	width:100%;
+	height: 50%;
+	margin:0 auto;
+	background-color:#C0BC7E;
+}
+
+
+/**************** 하단바 ****************/
+#info{/*최상위 부모*/
+	position:relative;
+	width:100%;
+	/*height:300px;*/
+	background-color:#ebebeb;
+}
+#infocont{/*컨텐츠박스*/
+	position:relative;
+	width:95%;
+	height:100%;
+	margin:0 auto;
+}
+
+/*하단 메뉴,선택창 전체부모*/
+#fmenu{
+	position:relative;
+	padding-top:20px;
+	width:297px;
+	height:60px;
+	margin: 0 auto;
+}
+
+/*하단 메뉴*/
+#fmenu>ul{
+	position:relative;
+	width: 100%;
+	font:12px "NanumBarunGothic";
+	color:#666;
+}
+#fmenu>ul>li>a{/*a링크 공통*/
+	color:#333;
+}
+#fmenu>ul>li:nth-child(2)>a{/*개인정보취급방침 a링크*/
+	color:#003f63;
+	font-weight:bold;
+}
+
+/*sns,계열사 공통*/
+#fmenu>div{/*선택창*/
+	position: absolute;
+	bottom: 0;
+	width: 48%;
+	height: 28px;
+	border: 1px solid #ccc;
+	background-color: transparent;
+	cursor:pointer;
+	/*overflow: hidden;*/
+}
+#fmenu>div>span{/*글씨 공통*/
+	position:absolute;
+	left:10px;
+	color:#333;
+	font:12px/28px "NanumBarunGothic";
+}
+#fmenu>div>div{/*화살표*/
+	position:absolute;
+	top:50%;
+	right:10px;
+	width:5px;
+	height:4px;
+	transform:translateY(-50%);/*세로중앙*/
+	background:url(../images/footer_arrow.png) no-repeat top;
+}
+
+/*sns선택창*/
+#sns{
+	left: 0;
+}
+#sns>ul{/*sns선택창 ul*/
+	position: absolute;
+	bottom: 29px;
+	left: -1px;/*border고려*/
+	width: 100%;
+	height: 0px;
+	background-color: #fff;
+	border: none;
+	/*border: 1px solid #ccc;*/
+	/*border-bottom: none;*/
+	cursor: default;/*기본커서*/
+	overflow: hidden;
+	transition: height 0.5s;
+}
+#sns>ul>li{/*각 분야 li*/
+	position: relative;
+	display: block;
+	width: 100%;/*padding고려*/
+	height: auto;
+	/*padding:0 10px;*/
+	font: 11px/30px "NanumBarunGothic";
+	text-indent: 10px;
+}
+
+#sns>ul>li>a{/*sns a링크 공통*/
+	position: absolute;
+	top: 50%;
+	right: 32px;
+	display: block;
+	width: 18px;
+	height: 18px;
+	transform: translateY(-50%);/*세로중앙*/
+	background: url(../images/icon_sns.png) no-repeat right top/auto 100%;/*블로그*/
+}
+#sns>ul>li>a:last-child{/*첫번째 a링크 공통*/
+	right: 10px !important;
+}
+#sns>ul>li:nth-child(1)>a:first-child,#sns>ul>li:nth-child(2)>a:first-child,#sns>ul>li:nth-child(3)>a:first-child,#sns>ul>li:nth-child(8)>a:first-child{
+	background-position: left top;/*페이스북*/
+}
+#sns>ul>li:nth-child(3)>a:last-child,#sns>ul>li:nth-child(5)>a:first-child,#sns>ul>li:nth-child(7)>a,#sns>ul>li:nth-child(8)>a:last-child{
+	background-position: center top;/*트위터*/
+}
+
+/*계열사*/
+#fsite{
+	right: 0;
+}
+#fsite>aside{/*계열사 사이트 전체 box*/
+	position: absolute;
+	bottom: 29px;
+	right: -1px;/*border고려*/
+	width: 297px;
+	height: 0px;
+	background-color: #fff;
+	border: none;
+	/*border: 1px solid #ccc;*/
+	/*border-bottom: none;*/
+	cursor: default;/*기본커서*/
+	overflow: hidden;
+}
+#fsite>aside>div{/*세로선*/
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	width: 1px;
+	height: 95%;
+	background-color: #eee;
+}
+
+#fsite>aside::after{/*float 해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+.fsiteul{/*사이트 각 챕터 공통*/
+	position: relative;
+	width: 50%;
+	float: left;
+}
+
+.fsiteul>li{/*각 분야별 li 공통*/
+	position: relative;
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.field{/*각 분야별 li 안의 ul 공통*/
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;/*세로중앙*/
+	/*border-bottom: 1px solid #ccc;*/
+}
+.field>li{/*각 분야 li 공통*/
+	width: 100%;
+	height: 23px;
+	font: 12px/23px "NanumBarunGothic";
+	text-indent: 10px;
+}
+
+#fsite a{/*a링크 공통*/
+	position: absolute;
+	display: block;
+	left: 10px;
+	width: 128.5px;/*가로폭 좁게*/
+	height: auto;
+	color: #666;
+	font: 12px/23px "NanumBarunGothic";
+}
+.field>li:first-child{/*각 분야 첫 li*/
+	padding-top: 5px;
+}
+.field>li:last-child{/*나눠주는 가로선*/
+	width: 128.5px;/*가로폭 줄임*/
+	height: 1px;
+	background-color: #ccc;
+	margin-top: 5px;
+	margin-left: 10px;/*가로중앙*/
+}
+.fsiteul>li:last-child>ul.field>li:last-child{/*각 챕터의 마지막 가로선 없애기*/
+	background-color: #fff;/*가로선 안보이게*/
+	margin: 0;
+	height: 5px;/*패딩효과*/
+}
+
+/*주소*/
+#infocont>address{
+	position:relative;
+	padding: 20px 0;
+	width: 100%;
+	font:12px/20px "NanumBarunGothic";
+	color:#666;
+}
+
+
+.ui-loader{/*loading 글자 없애기*/
+	display: none;
+}

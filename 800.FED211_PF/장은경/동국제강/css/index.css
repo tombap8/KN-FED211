@@ -1,0 +1,1012 @@
+@charset "utf-8";
+/* 공용 CSS 가져오기 */
+@import url(core.css);
+@import url(common.css);
+
+/* index.css - 포스코건설 메인 페이지 디자인 */
+
+
+.cont{/*컨텐츠 box 공통*/
+	position:relative;
+	width:100%;
+	height:100%;
+	overflow: hidden;
+}
+.cont h1{/*페이지 제목 공통*/
+	position:absolute;
+	top:0;
+	left:50%;
+	display:inline-block;
+	height:33px;
+	transform:translateX(-50%);/*가로중앙*/
+	font:30px "Daum";
+	border-bottom:2px solid black;
+	margin:0;
+}
+.contp{/*페이지 제목 밑 설명글 공통*/
+	position: absolute;
+	top:37px;
+	left: 50%;
+	transform: translateX(-50%);/*가로중앙*/
+	font: 14px "NanumBarunGothic";
+}
+
+
+/************** 메인 banner 디자인 ***************/
+
+#page1{/*메인 배너 */
+	position:relative;
+	width:100%;
+	height:100%;
+	overflow: hidden;
+	/*background-color: #F0D7Dd;*/
+}
+/*배너 리스트 박스*/
+#page1>ul#slider{
+	position:absolute;
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+}
+/*배너 리스트 공통*/
+#page1>ul>li{
+	position:absolute; /*li 겹치게*/
+	top: 0;
+	left: 0;
+	width:100%;
+	height:100%;
+	opacity:0;/*모두 투명*/
+	transition:opacity 1s;
+}
+#page1>ul>li:nth-child(1){
+	background:url(../images/main1.jpg) center/cover;
+	opacity:1;/*첫번째만 보이게*/
+}
+#page1>ul>li:nth-child(2){
+	background:url(../images/main2.jpg) center/cover;
+}
+#page1>ul>li:nth-child(3){
+	background:url(../images/main3.jpg) center/cover;
+}
+#page1>ul>li:nth-child(4){
+	background:url(../images/main4.jpg) center/cover;
+}
+#page1>ul>li:nth-child(5){
+	background:url(../images/main5.jpg) center/cover;
+}
+#page1>ul>li:nth-child(6){
+	background:url(../images/main6.jpg) center/cover;
+}
+.opbg{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.1;
+}
+
+/*불릿 전체 box*/
+#bmenu{
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	width: 190px;
+	height: 23px;
+	transform: translateX(-50%);/*가로중앙*/
+}
+#bmenu::after{/*float 해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+#bmenu>div{/*스크롤, 불릿, 재생버튼 공통*/
+	position: absolute;
+	float: left;
+}
+#bmenu>div>div{/*각 div 공통*/
+	float: left;
+}
+
+#bmenu>div:first-child{/*스크롤 이미지 부모박스*/
+	top: 0;
+	left: 0;
+	width: 16px;
+	height: 23px;
+}
+#bmenu>div:nth-child(2){/*페이지 표시 불릿 부모박스*/
+	top: 1.5px;
+	left: 24px;
+	width: 121px;
+	height: 20px;
+}
+#bmenu>div:nth-child(2)>div:first-child{/*페이지 표시 첫번째불릿*/
+	background-color: #fff;
+}
+#bmenu>div:nth-child(2)>div:last-child{/*페이지 표시 마지막불릿*/
+	border-right: 1px solid #fff;
+}
+
+#bmenu>div:last-child{/*재생,일시정지 버튼 부모박스*/
+	top: 1.5px;
+	right: 0;
+	cursor: pointer;
+}
+#bmenu>div:last-child>div:first-child{/*재생버튼 box*/
+	width: 20px;
+	height: 20px;
+	background: url(../images/icon_play.png) no-repeat top;
+}
+#bmenu>div:last-child>div:last-child{/*일시정지버튼 box*/
+	width: 20px;
+	height: 20px;
+	background: url(../images/icon_pause.png) no-repeat bottom;
+}
+
+div.bul{/*페이지 표시 불릿 공통*/
+	position: relative;
+	width: 19px;/*border 고려*/
+	height: 18px;/*border 고려*/
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	border-left: 1px solid #fff;
+	cursor: pointer;
+}
+
+/*배너설명 안보이게 숨기기 IR*/
+#slider li span{
+	display:none;
+}
+
+/*글 box*/
+.maintxt{
+	position: absolute;
+	top: 27%;
+	left: 50%;
+	width: 800px;
+	height: 240px;
+	transform: translateX(-50%);/*가로중앙*/
+	/*outline: 1px solid red;*/
+	text-align: center;
+	display: none;/*안보이게*/
+	color: #fff;
+	text-shadow: 0 0 10px #000;
+}
+.maintxt>em{/*첫줄*/
+	font:normal 19px/36px "Daum";
+	
+}
+.maintxt>h1{/*둘째줄*/
+	font:normal 36px/48px "Daum";
+	margin: 0 0 15px 0;
+}
+.maintxt>p{/*설명부분*/
+	font: 13px/20px "Daum";
+	margin: 0;
+}
+.maintxt>button{/*enter box*/
+	position: absolute;
+	display: inline-block;
+	bottom: 0px;
+	left: 50%;
+	width: 125px;
+	height: 48px;
+	transform: translateX(-50%);/*가로중앙*/
+	background-color: #000;
+	border: none;
+	transition: all ease-out 0.4s;
+	color:#fff;
+	cursor:pointer;
+}
+
+.maintxt span{/*enter 글씨*/
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	left: 17px;
+	text-align: left;
+	font: 14px/52px "Daum";
+	text-shadow: none;
+}
+.maintxt img{/*눈 아이콘*/
+	position: absolute;
+	top: 50%;
+	right: 17px;
+	width: 29px;
+	height: 18px;
+	transform: translateY(-50%);
+}
+.maintxt>button:hover{/*엔터 box에 마우스오버 시*/
+	background-color: #003f63;
+}
+
+/*첫번째 배너의 글 box*/
+.maintxt:first-of-type{
+	display: block;
+}
+
+/*2,4,5번째 배너의 글 box*/
+.maintxt:nth-of-type(2),.maintxt:nth-of-type(4),.maintxt:nth-of-type(5){
+	top: 15%;
+	left: 10%;
+	height: 200px;
+	text-align: left;
+	transform: translateX(0%);
+}
+/*3번째 배너의 글 box*/
+.maintxt:nth-of-type(3){
+	top: auto;
+	left: auto;
+	bottom: 30%;
+	right: 10%;
+	height: 200px;
+	text-align: right;
+	transform: translateX(0%);
+}
+/*6번째 배너의 글 box*/
+.maintxt:nth-of-type(6){
+	top: 30%;
+	height: 315px;
+}
+.maintxt:nth-of-type(3)>button{/*3번째 배너 엔터박스*/
+	left: auto;
+	right: 0%;
+	transform: translateX(0%);
+}
+
+.maintxt:nth-of-type(2)>p,.maintxt:nth-of-type(3)>p,.maintxt:nth-of-type(4)>p,.maintxt:nth-of-type(5)>p{/*2,3,4,5번째 배너 설명글*/
+	font-size: 23px;
+}
+.maintxt:nth-of-type(6)>p{/*6번째 배너 설명글*/
+	position: absolute;
+	display: inline-block;
+	left: 50%;
+	bottom: 96px;
+	width: 500px;
+	height: 50px;
+	font-size: 17px;
+	line-height: 25px;
+	border: 10px solid #92C352;
+	padding: 20px;
+	transform: translateX(-50%);/*가로중앙*/
+	z-index: 1;
+}
+.maintxt:nth-of-type(2)>button,.maintxt:nth-of-type(4)>button,.maintxt:nth-of-type(5)>button{/*2,4,5번째 배너 엔터박스*/
+	left: 0%;
+	transform: translateX(0%);
+}
+
+.maintxtbg{/*6번째 배너 설명글 배경*/
+	position: absolute;
+	left: 50%;
+	bottom: 106px;
+	width: 540px;
+	height: 90px;
+	transform: translateX(-50%);/*가로중앙*/
+	background-color: #000;
+	opacity: 0.5;
+}
+.maintxt:nth-of-type(6)>button:hover{/*6번째 배너 엔터박스 마우스오버 시*/
+	background-color: #5F852E;
+}
+
+
+/**************** Our Business ****************/
+#page2{
+	background-color: #f2fbff;
+}
+#biz{/*전체부모박스*/
+	position:relative;
+	top:14%;
+	width:1000px;
+	height:740px;
+	margin:0 auto;
+	/*outline:1px solid red;*/
+}
+#biznav{/*산업종류 아이콘*/
+	position:relative;
+	top:80px;
+	width:468px;
+	height:70px;
+	margin:0 auto;
+}
+#biznav::after{/*float 해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+#biznav>div{/*각 아이콘 box*/
+	position:relative;
+	width:70px;
+	height:100%;
+	float:left;
+	/*outline:1px solid green;*/
+	margin:0 4px;
+	cursor:pointer;
+}
+#biznav>div>div{/*아이콘 이미지 box 공통*/
+	position:absolute;
+	top:0;
+	left:50%;
+	width:46px;
+	height:46px;
+	transform:translateX(-50%);/*가로중앙*/
+}
+#biznav>div>span{/*아이콘 제목(사업분야명)*/
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%;
+	font:13px "NanumBarunGothic";
+	text-align:center;
+}
+#biznav>div:nth-child(1)>div{/*1번째 아이콘 이미지 box*/
+	background:url(../images/icon_business_steel.png) no-repeat bottom;
+}
+#biznav>div:nth-child(1)>span{/*1번째 아이콘 제목*/
+	color:#003f63;
+}
+
+#biznav>div:nth-child(2)>div{/*2번째 아이콘 이미지 box*/
+	background:url(../images/icon_business_energy.png) no-repeat top;
+}
+#biznav>div:nth-child(3)>div{/*3번째 아이콘 이미지 box*/
+	background:url(../images/icon_business_chemical.png) no-repeat top;
+}
+#biznav>div:nth-child(4)>div{/*4번째 아이콘 이미지 box*/
+	background:url(../images/icon_business_water.png) no-repeat top;
+}
+#biznav>div:nth-child(5)>div{/*5번째 아이콘 이미지 box*/
+	background:url(../images/icon_business_civil.png) no-repeat top;
+}
+#biznav>div:nth-child(6)>div{/*6번째 아이콘 이미지 box*/
+	background:url(../images/icon_business_architect.png) no-repeat top;
+}
+
+/*컨텐츠박스 공통*/
+.bizcont{
+	position:relative;
+	margin-top:130px;
+	width:100%;
+	height:535px;
+	/*outline:1px solid lime;*/
+	display:none;/*안보이게*/
+}
+.bizcont:first-of-type{
+	display:block;/*첫번째 컨텐츠박스만 보이기*/
+}
+.bizcont::after{/*float 해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+.bizintro{/*소개영상,글 부모박스*/
+	position:relative;
+	width:100%;
+	height:330px;
+}
+
+.bizintro>aside:first-child{/*소개영상 box*/
+	position:absolute;
+	top:0;
+	left:0;
+	width:588px;
+	height:100%;
+	float:left;
+}
+.bizintro iframe{/*소개영상*/
+	width:588px;
+	height:330px;
+}
+.bizintro>aside:last-child{/*소개글 box*/
+	position:absolute;
+	top:0;
+	right:0;
+	width:392px;
+	height:100%;
+}
+.bizintro>aside:last-child>h2{/*소개 제목*/
+	font:20px "Daum";
+	color:#003f63;
+	margin-top:0;
+}
+.bizintro>aside:last-child>p{/*소개 내용*/
+	font:13px/19px "NanumBarunGothic";
+}
+
+.bizprev{/*공장미리보기 부모박스*/
+	position:absolute;
+	bottom:0;
+	width:100%;
+	height:175px;
+}
+.bizprev::after{/*float 해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+.bizprev>div{/*공장미리보기 각 div*/
+	position:relative;
+	width:235px;
+	height:100%;
+	margin-right:20px;
+	float:left;
+	overflow:hidden;
+}
+.bizprev>div:last-child{/*공장미리보기 마지막사진 div*/
+	margin-right:0; 
+}
+.bizprev>div>a{/*공장미리보기 a링크*/
+	display:block;
+	width:100%;
+	height:100%;
+}
+
+.bizprev>div>a>div{/*검은배경*/
+	position:absolute;
+	top:0;
+	left:0;	
+	width:100%;
+	height:100%;
+	background-color:#000;
+	opacity:0;
+	transition:all 0.5s;
+}
+.bizprev>div>a>img{/*공장 이미지*/
+	transition:all 0.5s;
+}
+.bizprev>div>a>span{/*공장 이름*/
+	position:absolute;
+	top:10px;
+	left:10px;
+	color:#fff;
+	font:12px "NanumBarunGothic";
+	text-shadow:0 0 5px #000;
+}
+.bizprev>div>a:hover>img{/*a링크에 마우스오버 시 사진확대*/
+	transform:scale(1.1);
+}
+.bizprev>div>a:hover>div{/*a링크에 마우스오버 시 검은배경*/
+	opacity:0.6;
+}
+
+/**************** Posco E&C Issue ****************/
+#page3{
+	background-color: #fffff2;
+}
+#issue{/*전체부모박스*/
+	position:relative;
+	top:14%;
+	width:1000px;
+	height:740px;
+	margin:0 auto;
+}
+#issuecont{/*컨텐츠박스*/
+	position: relative;
+	top: 130px;
+	width: 100%;
+	height: 520px;
+	/*outline:1px solid red;*/
+}
+#issuecont::after{/*float 해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+#issuecont>div{/*각 div 공통*/
+	position: relative;
+	width: 320px;
+	height: 250px;
+	float: left;
+	margin: 0 20px 20px 0;
+	overflow: hidden;
+}
+#issuecont>div:nth-child(3){
+	margin-right: 0; /*3번째 div 오른쪽 마진 제거*/
+}
+#issuecont>div:nth-child(4),#issuecont>div:nth-child(5){
+	margin-bottom: 0;/*4,5번째 div 아래마진 제거*/
+}
+#issuecont>div:nth-child(6){
+	margin: 0;/*마지막 div 마진 전체 제거*/
+}
+#issuecont a{/*a링크 공통*/
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+#issuecont>div>a>img{/*이미지*/
+	transition: all 0.5s;
+}
+#issuecont>div>a>div{/*검은 배경*/
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background-color: #000;
+	opacity: 0.6;
+	/*transition: all 0.5s;*/
+}
+#issuecont>div>a>span{/*글 제목*/
+	position: absolute;
+	display: block;
+	bottom: 0;
+	left: 0;
+	width: 290px;/*padding 고려*/
+	height: 40px;/*padding 고려*/
+	padding: 10px 15px;
+	font: 13px/20px "NanumBarunGothic";
+}
+#issuecont>div>a:hover>img{/*a링크에 마우스오버 시 사진확대*/
+	transform:scale(1.1);
+}
+#issuecont>div>a:hover>div{/*a링크에 마우스오버 시 검은배경*/
+	height: 100%;
+}
+
+/**************** Recruit ****************/
+#page4{
+	background-color: #f2fff3;
+}
+#recruit{/*전체부모박스*/
+	position:relative;
+	top:14%;
+	width:1000px;
+	height:740px;
+	margin:0 auto;
+}
+#recruitcont{/*컨텐츠박스*/
+	position: relative;
+	top: 120px;
+	width: 100%;
+	height: 635px;
+	/*outline: 1px solid red;*/
+}
+#recruitcont>aside>h2{/*직무소개, 채용안내 아이콘,제목 공통*/
+	position: relative;
+	width: 300px;
+	height: 45px;
+	margin: 0;
+}
+#recruitcont>aside>h2>img{/*아이콘 공통*/
+	vertical-align:middle;/*inline일 경우 옆에 오는 요소 정렬*/
+	margin-right:15px;
+}
+#recruitcont>aside>h2>span{/*제목 공통*/
+	color: #003f63;
+	font: 20px/45px "Daum";
+	font-weight: normal;
+}
+
+/*****직무 소개*****/
+#jobintro{
+	position: relative;
+	width: 100%;
+	height: 303px;
+	/*outline: 1px solid red;*/
+}
+#jobintro>ul{/*포스코건설,포스코엔지니어링 선택 탭 ul*/
+	position: relative;
+	margin-top: 15px;
+	margin-left: 50px;
+	color: #999;
+}
+#jobintro>ul>li>a{/*해당 탭 a링크 공통*/
+	color: #000;
+	font: 14px "NanumBarunGothic";
+}
+#jobintro>ul>li:first-child>a{/*포스코건설 탭 a링크*/
+	color: #003f63;
+	font-weight: bold;
+}
+
+/*보이는 박스 공통*/
+.poscoenc{
+	position: absolute;
+	bottom: 0px;
+	height: 194px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.encSlider::after{/*float 해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+.encSlider>div{/*각 div 공통*/
+	width: 218px;
+	height: 100%;
+	margin-right: 20px;
+	float: left;
+	overflow: hidden;
+}
+.encSlider>div:last-child{
+	margin-right: 0;/*마지막 div 오른쪽마진 제거*/
+}
+.encSlider>div>a{/*각 div a링크*/
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+.encSlider>div>a>img{/*사진*/
+	transition: all 0.5s;
+}
+.encSlider>div>a>div{/*검은 배경*/
+	position: absolute;
+	top: 0;
+	width: 218px;
+	height: 144px;
+	background-color: #000;
+	opacity: 0;/*안보이게*/
+	transition: all 0.5s;
+}
+.encSlider>div>a>span{/*사진 제목*/
+	position: absolute;
+	display: block;
+	bottom: 0;
+	width: 188px;/*padding 고려*/
+	height: 30px;/*padding 고려*/
+	background-color: #000;
+	font: 14px/30px "NanumBarunGothic";
+	padding: 10px 15px;
+}
+.encSlider>div>a:hover>img{/*마우스오버 시 사진확대*/
+	transform: scale(1.1);
+}
+.encSlider>div>a:hover>div{/*마우스오버 시 검은배경*/
+	opacity: 0.6;
+}
+
+/*건설 보이는 박스*/
+#poscoc{
+	width: 1000px;
+}
+#poscoc>div:first-of-type{/*왼쪽 그라데이션*/
+	position:absolute;
+	top:0;
+	left:0;
+	width:50px;
+	height:194px;
+	background:url(../images/main_recruit_gradated1.png) no-repeat;
+	opacity:0;/*안보이게*/
+	transition:opacity 0.3s;
+}
+#poscoc>div:last-of-type{/*오른쪽 그라데이션*/
+	position:absolute;
+	top:0;
+	right:0;
+	width:50px;
+	height:194px;
+	background:url(../images/main_recruit_gradated2.png) no-repeat;
+	transition:opacity 0.3s;
+}
+/*건설 사진 box*/
+#cSlider{/*전체박스*/
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 1884px;
+	height: 194px;
+	transition: all ease-in-out 1s;
+}
+/*엔지니어링 보이는 박스*/
+#poscoe{
+	left: 50%;
+	width: 932px;
+	transform: translateX(-50%);
+	display: none;/*안보이게*/
+}
+/*엔지니어링 사진 box*/
+#eSlider{/*전체박스*/
+	width: 932px;
+	height: 194px;
+}
+
+
+/*화살표 버튼 세팅*/
+#abox{/*화살표 전체 박스 */
+	position:absolute;
+	top:0;
+	left:50%;
+	width:1100px;
+	height:100%;
+	transform:translateX(-50%);/*가로중앙*/
+}
+.abtn{/*화살표 버튼 box*/
+	position:absolute;
+	top:60%;
+	width:20px;
+	height:36.5px;
+	cursor:pointer;
+	/*background-color:#F33;*/
+}
+.bL{/*왼쪽화살표*/
+	left:5px;
+	background:url(../images/main_recruit_arrow_left.png) no-repeat top;
+	display: none;/*안보이게*/
+}
+.bR{/*오른쪽화살표*/
+	right:5px;
+	background:url(../images/main_recruit_arrow_right.png) no-repeat top;
+}
+.abtn:hover{/*화살표 버튼 마우스오버*/
+	background-position:bottom;
+}
+
+/***** 채용 안내 *****/
+#postingbox{
+	position: relative;
+	top: 50px;
+	width: 100%;
+	height: 282px;
+	/*outline: 1px solid blue;*/
+}
+#posting{/*채용안내 글박스 부모박스*/
+	position: relative;
+	top: 25px;
+	width: 1000px;
+	height: 124px;
+	margin: 0 auto;
+}
+#posting::after{/*float 해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+#posting>article{/*채용안내 글박스 공통*/
+	position: relative;
+	width: 490px;
+	height: 100%;
+	background: url(../images/main_recruit_noticebg.jpg) no-repeat;
+	float: left;
+}
+#posting>article:first-child{/*첫번째 글박스*/
+	margin-right: 20px;
+}
+#posting>article>a{/*a링크 공통*/
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #000;
+}
+#posting>article>a>div:first-of-type{/*border효과*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 486px;
+	height: 120px;
+	border: 2px solid #003f63;
+	transition: all 0.5s;
+	opacity: 0;/*안보이게*/
+}
+#posting>article>a>div:nth-of-type(2){/*모집분류*/
+	position: relative;
+	display: block;
+	top: 20px;
+	left: 20px;
+	width: 60px;
+	height: 22px;
+	background-color: #000;
+	color: #fff;
+	font:12px/22px "NanumBarunGothic";
+	text-align: center;
+}
+#posting>article>a>strong{/*제목*/
+	position: relative;
+	display: block;
+	top: 35px;
+	left: 20px;
+	width: 420px;
+	font: bold 14px/24px "NanumBarunGothic";
+}
+#posting>article>a>span{/*모집기간*/
+	position: relative;
+	display: block;
+	top: 35px;
+	left: 20px;
+	width: 420px;
+	font: 12px/24px "NanumBarunGothic";
+}
+#posting>article>a:hover>div:first-of-type{/*각 모집글 a링크 마우스오버 시*/
+	opacity: 1;
+}
+
+/*사이트 바로가기버튼*/
+#posting>button{
+	position: absolute;
+	display: inline-block;
+	bottom: -88px;
+	right: 0px;
+	width: 220px;
+	height: 48px;
+	background-color: #688294;
+	border: none;
+	transition: all ease-out 0.4s;
+	color:#fff;
+	cursor:pointer;
+}
+#posting span{/*enter 글씨*/
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	left: 17px;
+	text-align: left;
+	font: 14px/48px "NanumBarunGothic";
+	text-shadow: none;
+}
+#posting img{/*눈 아이콘*/
+	position: absolute;
+	top: 50%;
+	right: 17px;
+	width: 29px;
+	height: 18px;
+	transform: translateY(-50%);
+}
+#posting>button:hover{/*6번째 배너 엔터박스 마우스오버 시*/
+	background-color: #003f63;
+}
+
+/**************** Quick Menu ****************/
+#page5{
+	overflow: auto;
+}
+
+#page5>div:first-of-type{/*배경사진*/
+	position: relative;
+	width:100%;
+	height: 100%;
+	background: url(../images/main_quickbg.jpg) center/cover;
+}
+#page5>div:last-of-type{/*검은배경*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	opacity: 0.2;
+}
+#quick{/*퀵메뉴 전체부모*/
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 722px;
+	height: 346px;
+	transform: translate(-50%,-50%);
+}
+#quick>ul{
+	width: 100%;
+	height: 100%;
+}
+#quick>ul::after{/*float 해제*/
+	content:"";
+	display:block;
+	clear:both;
+}
+#quick>ul>li{/*각 아이콘 li*/
+	position: relative;
+	width: 158px;
+	height: 158px;
+	float: left;
+	/*border-radius: 79px;*/
+	margin: 0 30px 30px 0;
+}
+#quick>ul>li:nth-child(4){
+	margin-right: 0;/*4번째 아이콘 오른쪽 마진 제거*/
+}
+#quick>ul>li:last-child{
+	margin: 0;/*마지막 아이콘 마진 제거*/
+}
+
+#quick>ul>li>a{/*a링크 공통*/
+	position: relative;
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+#quick>ul>li>a>div{/*검은배경*/
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #000;
+	border-radius: 79px;
+	opacity: 0;/*안보이게*/
+	transition: opacity 0.5s;
+}
+#quick>ul>li>a>img{/*아이콘 이미지*/
+	position: relative;
+	top: 35px;
+	left: 48px;/*가로중앙*/
+	width: 65px;
+	height: 62px;
+	margin: 0 auto;
+	/*transform: translateX(-50%);가로중앙*/
+}
+#quick>ul>li>a>h3{/*아이콘 제목*/
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	transform: translateX(-50%);/*가로중앙*/
+	margin: 0;
+	font: 14px "NanumBarunGothic";
+}
+
+#quick>ul>li>a:hover>div{
+	opacity: 1;
+}
+
+/************** 오른쪽 고정 navi **************/
+div#navi{/*전체부모*/
+	position: fixed;
+	top: 50%;
+	right: 20px;
+	width: 15px;
+	height: 135px;
+	transform: translateY(-50%);
+	/*outline: 1px solid red;*/
+	overflow: hidden;
+}
+#navi>ul{/*전체 불릿 ul*/
+	position: absolute;
+	right: 0;
+	width: 100%;
+	height: 100%;
+}
+#navi>ul>li{/*불릿 li*/
+	position: relative;
+	right: 0;
+	width: 100%;
+	height: 27px;
+}
+#navi>ul>li>span{/*페이지설명글 box*/
+	position: absolute;
+	/*display: block;*/
+	top: 50%;
+	right: 20px;
+	width: auto;
+	height: 20px;
+	transform: translateY(-50%);
+	font: 11px/20px "NanumBarunGothic";
+	color: #fff;
+	text-align: right;
+	background-color: #000;
+	padding: 0 8px 0 8px;
+	border-radius: 10px;
+	opacity: 0.7;
+	display: none;
+}
+#navi>ul>li>nav{/*불릿 box*/
+	position: absolute;
+	top: 50%;
+	right: 5px;
+	width: 5px;
+	height: 5px;
+	transform: translateY(-50%);
+	background-color: #000;
+	border-radius: 2.5px;
+	opacity: 0.7;
+}
+#navi>ul>li:first-child>nav{/*첫번째 불릿*/
+	right: 0;
+	width: 11px;/*border 고려*/
+	height: 11px;/*border 고려*/
+	border-radius: 7.5px;
+	border: 2px solid #003f63;
+	background-color: transparent;
+	opacity: 1;
+}
+#navi a{/*navi의 a태그 공통*/
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+

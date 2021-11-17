@@ -1,0 +1,193 @@
+@charset "utf-8";
+/* CSS Document */
+@import url(core.css);
+@import url(common.css);
+
+
+.bar{ /*그라데이션바 박스*/
+	position: relative;
+	width: 100%;
+	height: 5px;
+}
+.bar img{ 
+	width: 100%;
+	height: auto;
+}
+
+/******************************************************************************메인이미지*******************************************************************************************/
+#cont{
+	position: relative;
+	width: 100%;
+	height: auto;
+	margin: 5% 0;
+	display: flex;
+	flex-direction: row;
+}
+#cont>div:first-child{ /*이미지박스*/
+	width: 40%;
+	margin-left: 10%;
+}
+#cont>div:first-child img{ /*이미지*/
+	width: 90%;
+	height: auto;
+}
+#cont>div:last-child{ /*설명겉박스*/
+	width: 40%;
+}
+#cont>div:last-child>ul{ /*설명 부모박스*/
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin-left: 10%;
+}
+#cont>div:last-child>ul>li{ /*공통적용용*/
+	color: #595758;
+	font-weight: bold;
+}
+#cont>div:last-child>ul>li:nth-child(1){ /*타이틀*/
+	font-size: 2em;
+}
+#cont>div:last-child>ul>li:nth-child(2){ /*가격*/
+	font-size: 1.5em;
+	margin-top: 8%;
+}
+/*****************************************************************컬러*/
+#cont>div:last-child>ul>li:nth-child(3){ 
+	font-size: 1.5em;
+	margin-top: 5%;
+	width: 100%;
+}
+#cont>div:last-child>ul>li:nth-child(4){ /*컬러박스*/
+	margin-top: 3%;
+	display: flex;
+	flex-direction: row;
+}
+#cont>div:last-child>ul>li:nth-child(4)>div:nth-child(1){
+	width: 50px;
+	height: 50px;
+	background-color: #000;
+	outline: 1px solid #000;
+	margin-right: 5%;
+	cursor: pointer;
+}
+#cont>div:last-child>ul>li:nth-child(4)>div:nth-child(2){
+	width: 50px;
+	height: 50px;
+	background-color: #dfe0e0;
+	outline: 1px solid #000;
+	margin-right: 5%;
+	cursor: pointer;
+}
+#cont>div:last-child>ul>li:nth-child(4)>div:nth-child(3){
+	width: 50px;
+	height: 50px;
+	background-color: #990033;
+	outline: 1px solid #000;
+	margin-right: 5%;
+	cursor: pointer;
+}
+#cont>div:last-child>ul>li:nth-child(4)>div:nth-child(4){
+	width: 50px;
+	height: 50px;
+	background-color: #d60024;
+	outline: 1px solid #000;
+	margin-right: 5%;
+	cursor: pointer;
+}
+#cont>div:last-child>ul>li:nth-child(4)>div:nth-child(5){
+	width: 50px;
+	height: 50px;
+	background-color: #233557;
+	outline: 1px solid #000;
+	cursor: pointer;
+}
+/**************************************************************사이즈*/
+#cont>div:last-child>ul>li:nth-child(5){ 
+	font-size: 1.5em;
+	margin-top: 5%;
+}
+#cont>div:last-child>ul>li:nth-child(6){ /*사이즈박스*/
+	display: flex;
+	flex-direction: row;
+	margin-top: 3%;
+}
+#cont>div:last-child>ul>li:nth-child(6)>div{
+	width: 50px;
+	height: 50px;
+	background-color: #fff;
+	outline: 1px solid #000;
+	text-align: center;
+	font-size: 1.75em;
+	line-height: 1.75em;
+	margin-right: 5%;
+	cursor: pointer;
+}
+/*************************************************************구매박스*/
+#cont>div:last-child>ul>li:nth-child(7){ 
+	display: flex;
+	flex-direction: row;
+	margin-top: 10%;
+	justify-content: space-between;
+}
+#cont>div:last-child>ul>li:nth-child(7)>div{
+	width: 45%;
+	height: 70px;
+	background-color: #dbdbdb;
+	font-size: 1.75em;
+	text-align: center;
+	line-height: 2.5em;
+}
+#cont>div:last-child>ul>li:nth-child(8){ /*설명타이틀*/
+	font-size: 1.125em;
+	margin-top: 10%;
+}
+#cont>div:last-child>ul>li:nth-child(9){ /*설명텍스트*/
+	
+	margin-top: 5%;
+}
+#cont>div:last-child>ul>li:nth-child(10){ /*부가설명*/
+	font-size: 1.125em;
+	margin-top: 5%;
+}
+
+/**********************상세이미지*********************/
+#contg{
+	position: relative;
+	width: 100%;
+	height: auto;
+}
+#contg>div{
+	position: relative;
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+#contg>div>div{
+	width: 23%;
+}
+#contg>div>div img{
+	width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
