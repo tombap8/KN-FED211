@@ -16,6 +16,9 @@
  4) Beautify : 자동줄맞춤
   -> 단축키 지정하기
  5) CSS PEEK : CSS 미리보기/연결하기
+ 6) HTML to CSS autocompletetion 
+ : 외부CSS파일에서 아이디,클래스 이름자동완성
+ 7) Tabnine : 인공지능 자동코드완성
 
 -> vscode에서는 emmet 단축코딩툴 기본설치
     minimap이 기본설치(소스코드지도)
