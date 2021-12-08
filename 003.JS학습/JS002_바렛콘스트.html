@@ -17,7 +17,7 @@
         -> 지역에서 선언없는 변수 : 전역변수로 자동등록됨(var)
 
 
-        [ var ] : 전역 혹은 함수영역변수
+        [ var ] : 함수영역변수
         1. 함수에서 사용할때만 전역, 지역이 구분된다!
         2. 전역변수를 지역에서 같은 이름으로 할당하면
             전역변수가 다시 덮어써진다!
@@ -86,8 +86,9 @@
         console.log("함수내 korea 지역전:",korea);
         var korea = "한국";
         console.log("함수내 korea 지역후:",korea);
+        nana = "나나";
     }
-    var korea = "미국";
+    // var korea = "미국";
 
     // if문 중괄호
     if(true){
@@ -145,6 +146,9 @@
     }
     callMe();
     console.log("바깥korea:",korea);
+
+    // 함수호출 후 함수내 지역변수 nana값찍기
+    console.log("함수내 var없는 nana:",nana);
 
     //////////////////////////////////////////////
 
