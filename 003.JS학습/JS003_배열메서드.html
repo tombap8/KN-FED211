@@ -49,6 +49,16 @@
         .showit {
             padding: 15px;
             border: 4px dotted blue;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* 버튼 */
+        .mbtn,#sel{
+            font-size: 20px;
+            padding: 10px;
+            border-radius: 10px;
         }
     </style>
     <script>
@@ -63,10 +73,18 @@
                 "딸기": "fruits_09",
             }
 
+            
+
             // 공통 모듈
             let showit = document.querySelector(".showit");
             let cont = document.querySelector(".cont");
             let mbtn = document.querySelectorAll(".mbtn");
+
+            // 처음배열 출력!
+            // showit.innerText = fruit.toString();
+            showit.innerText = fruit.join("*");
+
+
 
             // 링크걸기
             for(let x of mbtn){
@@ -76,14 +94,16 @@
                     console.log(txt);
                     switch(txt){
                         case "과일주세요~!": makeIt(); break;
-                        case "배열추가요~!": addArr(); break;
-                        case "배열삭제요~!": remArr(); break;
+                        case "뒷배열추가요~!": addArr1(); break;
+                        case "앞배열추가요~!": addArr2(); break;
+                        case "뒷배열삭제요~!": remArr1(); break;
+                        case "앞배열삭제요~!": remArr2(); break;
                     }
                 };
             } /////// for of ///////////
 
 
-
+            // 과일주세요~! : 실제 화면에 배열보이기
             const makeIt = () => {
                 const mk = function (val) {
                     txt +=
@@ -101,18 +121,35 @@
 
             } ///////// maekeIt함수 ///////
 
-            const addArr = () => {
+            /*  */
+            const addArr1 = () => {
                 let sel = document.getElementById("sel").value;
                 console.log(sel);
                 fruit.push(sel);
                 console.log(fruit);
-                showit.innerText = fruit.valueOf();
+                showit.innerText = fruit.join("*");
             } ///////// addArr함수 ///////////
 
-            const remArr = () => {
+            const addArr2 = () => {
+                let sel = document.getElementById("sel").value;
+                console.log(sel);
+                fruit.unshift(sel);
+                console.log(fruit);
+                showit.innerText = fruit.join("*");
+            } ///////// addArr함수 ///////////
+
+            // 뒷배열삭제
+            const remArr1 = () => {
+                fruit.pop();
+                console.log(fruit);
+                showit.innerText = fruit.join("*");
+            } ///////// addArr함수 ///////////
+
+            // 앞배열삭제
+            const remArr2 = () => {
                 fruit.shift();
                 console.log(fruit);
-                showit.innerText = fruit.valueOf();
+                showit.innerText = fruit.join("*");
             } ///////// addArr함수 ///////////
 
 
@@ -131,8 +168,10 @@
     <div class="controler">
         <!-- 과일기능버튼 -->
         <button class="mbtn">과일주세요~!</button>
-        <button class="mbtn">배열추가요~!</button>
-        <button class="mbtn">배열삭제요~!</button>
+        <button class="mbtn">뒷배열추가요~!</button>
+        <button class="mbtn">앞배열추가요~!</button>
+        <button class="mbtn">뒷배열삭제요~!</button>
+        <button class="mbtn">앞배열삭제요~!</button>
         <!-- 과일선택박스 -->
         <select name="sel" id="sel">
             <option>사과</option>
