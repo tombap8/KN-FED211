@@ -17,7 +17,8 @@
                 el: "#app1",
                 // el은 적용할 요소(element)를 담는 속성
                 data: {
-                    message: "나는 프론트엔드 개발자다!"
+                    message: "나는 프론트엔드 개발자다!",
+                    yo:'요'
                     // message 속성은 텍스트값을 할당해서 사용
                     // 이것은 변수처럼 아래 html 뷰JS셋팅에 사용
                 }
@@ -40,12 +41,27 @@
             new Vue({
                 el: "#app3",
                 methods: {
-                    myClick: function(event){
-                        alert(event.target);// 버튼자신!
-                    } ////// myClick함수 ////
+                    myClick: function(e){
+                        // alert(event.target);// 버튼자신!
+                        e.target.innerText = "놀랐지?";
+                        // console.log(el);
+                        setTimeout(()=>this.$el.innerHTML += "<div>하하하</div>",2000);
+                        
+                    }, ////// myClick함수 ////
+                    myOver: function(){
+                        event.target.innerText = "오버하지마!";
+                        let tg = event.target;
+                        setTimeout(()=>tg.innerText = "클릭해봐!",3000);
+                    }, 
+                    myClick2: function(txt){
+                        this.$el.innerHTML += `내가 ${txt}야!`;
+                    }
 
                 }
                 // methods 속성은 함수기능을 구현하여 할당함
+                // 인스턴스 속성(Instance Properties) 
+                // - $el : Vue 인스턴스가 관리하는 컴포넌트 인스턴스인 루트 DOM 요소입니다.
+                // - $data : 컴포넌트 인스턴스의 데이터 객체는 감시됩니다.
 
             }); /// Vue ////
 
@@ -81,6 +97,7 @@
     <h2>1. 텍스트 바인딩(binding->데이터넣기!)</h2>
     <div id="app1">
         <p>{{message}}</p>
+        <p>세상은{{yo}} 너희가{{yo}} 아는바{{yo}} 그 세상이{{yo}} 아니란다!{{yo}}</p>
         <!-- {{}} 중복중괄호는 콧수염 표시자(Mustasch) 
             이 부분에 뷰JS 데이터를 넣는 자리다!
         -->
@@ -105,12 +122,14 @@
 
     <h2>3. 이벤트 사용하기</h2>
     <div id="app3">
-        <button v-on:click="myClick">Click</button>
+        <!-- <button v-on:click="myClick">Click</button> -->
+        <button @click="myClick">Click</button>
         <!-- 
-            v-on:이벤트명 
+            v-on:이벤트명 (v-on:을 줄여서 @)
             이벤트와 함수를 연결해주는 뷰JS 속성
             값은 내가 만든 methods 안의 함수명을 써준다!
          -->
+         <button @mouseover="myOver" @click="myClick2('후계자')">오버해봐!</button>
     </div>
 
     <hr>
