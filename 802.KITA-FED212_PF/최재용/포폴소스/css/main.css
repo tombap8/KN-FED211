@@ -1,0 +1,337 @@
+@charset "utf-8";
+@import url(./common.css);
+@import url(./nav.css);
+
+body {
+    background-color: #cdc6be;
+}
+
+/******************************** manu  ******************************* */
+
+#top.on .nav :nth-child(1) {
+    text-decoration: line-through tomato;
+    filter: brightness(50%);
+}
+
+#top.on .nav :nth-child(2):hover {
+    text-decoration: line-through tomato;
+    filter: drop-shadow(2px 4px 6px black);
+    transition: text-decoration .5s ease-in;
+}
+
+#top.on .nav :nth-child(3):hover {
+    text-decoration: line-through tomato;
+    filter: drop-shadow(2px 4px 6px black);
+    transition: text-decoration .5s ease-in;
+}
+
+/********************************** 컨텐츠 영역 **********************************/
+
+/************************************* ibx1 *************************************/
+
+#cont {
+    padding-top: 150px;
+}
+
+div.ibx1 {
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.bx1 a {
+    overflow: hidden;
+    transition: scale .5s ease-in-out;
+}
+
+.bx1:nth-child(1) .img {
+    width: 25vw;
+    height: 20vh;
+    background: url(../img/pipe.png) no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.bx1:nth-child(1) .img:hover {
+    transform: scale(1.5);
+}
+
+.bx1:nth-child(2) .img {
+    width: 30vw;
+    height: 20vh;
+    line-height: 1.5;
+    text-align: center;
+    font-size: 2vw;
+    color: #1d1d1b;
+    border-left: 1px solid #666;
+    border-right: 1px solid #666;
+}
+
+.bx1:nth-child(2) .img>a {
+    color: #1d1d1b;
+}
+
+.bx1:nth-child(3) .img {
+    width: 25vw;
+    height: 20vh;
+    background: url(../img/night.png) center no-repeat;
+    background-size: 100% 100%;
+}
+
+.bx1:nth-child(3) .img:hover {
+    filter: invert();
+    cursor: pointer;
+}
+
+/********************** bar1 **********************/
+.bar1 {
+    padding: 5vh 0;
+}
+
+.bar1>h1 {
+    height: 100%;
+    font-size: 18vw;
+    color: #cdc6be;
+    text-align-last: left;
+    background-color: #1d1d1b;
+}
+
+/************************************* ibx2 *************************************/
+.ibx2>div {
+    height: 45vw;
+    /* outline: 5px solid #000; */
+}
+
+.ibx2>div:nth-child(1) {
+    width: 30.5%;
+    padding-right: 3vw;
+    border-right: 1px solid #666;
+    /* outline: 5px solid #000; */
+}
+
+.bx2 h4 {
+    font-size: 4vw;
+    line-height: 1;
+}
+
+.ibx2>div:nth-child(2) {
+    width: 64.5vw;
+    padding-left: 3.5vw;
+    /* outline: 1px solid blue; */
+}
+
+div.ibx2 .img1 {
+    background: url(../img/back.jpg) center no-repeat;
+    background-size: 100% 100%;
+    height: 78%;
+    /* outline: 5px solid yellow; */
+}
+
+div.ibx2 .img1:hover {
+    background: url(../img/front.jpg) center no-repeat;
+    background-size: 100% 100%;
+    height: 78%;
+}
+
+div.ibx2 .img2 {
+    height: 77%;
+    background: url(../img/night.png) no-repeat;
+    background-size: 100% 100%;
+    /* outline: 5px solid yellow; */
+}
+
+/********************** bar2 **********************/
+
+.bar2 h1 {
+    width: 70%;
+    font-size: 10vw;
+    color: #cdc6be;
+    background-color: #1d1d1b;
+}
+
+.bar2 h1:hover {
+    width: 70%;
+    font-size: 10vw;
+    color: #1d1d1b;
+    background: url(../img/invertEye.jpg) no-repeat center;
+    background-size: 100% 100%;
+}
+
+.bar2 div.img {
+    margin: 2vw 0 2vw 5vw;
+    width: 20%;
+    background: url(../img/Sunflower.png) center no-repeat;
+    background-size: 100% 100%;
+    /* outline: 5px solid yellow; */
+}
+
+.bx2>h2,h4 {
+    font-size: 1.48vw;
+    line-height: 1.5;
+    color: #1d1d1b;
+}
+
+/************************************* ibx3 *************************************/
+.ibx3 {
+    margin: 3vw 0;
+    border-bottom: 1px solid #666;
+    /* outline: 5px solid #000; */
+
+}
+
+/********************** ibx left **********************/
+.left {
+    width: 65.5%;
+    height: 30vh;
+}
+
+.left {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.left>.box {
+    padding-left: 3vw;
+    width: 40%;
+    height: 30vh;
+    border-left: 1px solid #666;
+}
+
+.left .img1 {
+    width: 100%;
+    height: 60%;
+    background: url(../img/2in1.jpg) no-repeat;
+    background-size: 100% 100%;
+    /* outline: 5px solid yellow; */
+}
+
+.left .img1:hover {
+    transform: scale(2);
+}
+
+.left>.img2 {
+    width: 97%;
+    height: 200%;
+    background: url(../img/giveme1.jpg) no-repeat;
+    background-size: 100% 100%;
+    /* outline: 5px solid yellow; */
+}
+
+.left>.img2:hover {
+    background: url(../img/giveme2.jpg) no-repeat;
+    background-size: 100% 100%;
+}
+
+.bx3 {
+    width: 41%;
+    height: 100%;
+    margin-bottom: 3vw;
+    color: #1d1d1b;
+    /* outline: 3px solid red; */
+}
+
+.bx3 :nth-child(1) {
+    width: 100%;
+    height: 35%;
+    line-height: 2;
+    font-size: 3.8vw;
+}
+
+.bx3 :nth-child(2) {
+    width: 100%;
+    height: 35%;
+    line-height: 1.5;
+    font-size: 4.5vw;
+    /* outline: 1px dotted #000; */
+}
+
+.bx3 :nth-child(3) {
+    height: 30%;
+    line-height: 1;
+    font-size: 5vw;
+}
+
+.box :nth-child(2) {
+    height: 20%;
+    font-size: 2vw;
+    line-height: 2;
+    text-align: center;
+    color: #cdc6be;
+    background-color: #1d1d1b;
+}
+
+.box :nth-child(3) {
+    height: 20%;
+    font-size: 2vw;
+    line-height: 2;
+    text-align: center;
+    color: #cdc6be;
+    background-color: #1d1d1b;
+    text-decoration: 7px line-through red;
+}
+
+/********************** ibx right **********************/
+.right {
+    position: relative;
+    width: 25.5%;
+    height: 100vh;
+    padding-left: 3vw;
+    border-left: 1px solid #666;
+}
+
+.text {
+    position: absolute;
+    bottom: 27%;
+    left: -40%;
+    font-size: 1.8vw;
+    color: #1d1d1b;
+    transform: rotate(280deg);
+}
+
+
+footer {
+    padding: 3vw 0 2vw;
+}
+
+.mbx {
+    position: relative;
+    padding: 2 0vw;
+    left: 5px;
+    width: 200%;
+    font-size: 6vw;
+    color: #1d1d1b;
+    line-height: 8vw;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+    overflow: hidden;
+    animation: leftGo 5s linear infinite;
+}
+
+@keyframes leftGo {
+    to {
+        left: -100%;
+    }
+}
+
+.mbx :nth-child(1) {
+    margin: 0 0 0 5px;
+    color: #cdc6be;
+    background-color: #1d1d1b;
+}
+
+.mbx :nth-child(3) {
+    margin: 0 0 0 5px;
+    color: #cdc6be;
+    background-color: #1d1d1b;
+}
+
+.mbx :nth-child(5) {
+    margin: 0 0 0 5px;
+    color: #cdc6be;
+    background-color: #1d1d1b;
+}
+
+.mbx :nth-child(7) {
+    margin: 0 0 0 5px;
+    color: #cdc6be;
+    background-color: #1d1d1b;
+}

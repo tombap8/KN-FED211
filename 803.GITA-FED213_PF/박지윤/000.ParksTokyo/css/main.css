@@ -1,0 +1,541 @@
+/* 
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+*/
+
+body * {
+    /* outline: 1px dashed silver; */
+}
+
+
+
+/*************************** 상단영역 ***************************/
+
+#top {
+    position: fixed;
+    z-index: 999;
+    height: 100px;
+    width: 100%;
+    background-color: transparent;
+    font-family: 'PT Serif', serif;
+}
+
+/* 로고 */
+h1.logo {
+    text-align: center;
+    margin-top: 37px;
+    mix-blend-mode: exclusion;
+}
+
+.logo a img {
+    width: 126px;
+    vertical-align: bottom;
+    /* display: block; */
+}
+
+
+
+
+/*************************** 메인영역 ***************************/
+
+/* ////////////////////////////////////////////////////////// */
+/* 컨텐츠1 */
+
+/* 애니메이션 텍스트 PARKS */
+.cont1 {
+    position: relative;
+    /* left: -50%; */
+    /* transform: translateX(50%); */
+    min-height: 100vh;
+    min-width: 100vw;
+
+    transition: left 1s;
+    white-space: nowrap;
+    /* 여기다 줘야 전체글이 줄바꿈 안됨! */
+}
+
+.cont1 h2 {
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    text-align: center;
+    line-height: 1;
+}
+
+.cont1 b {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 30vw;
+    font-weight: 500;
+    /* white-space: nowrap; */
+}
+
+
+/* ////////////////////////////////////////////////////////// */
+/* 컨텐츠2 */
+.cont2 {
+    position: relative;
+}
+
+.cont2>div {
+    display: block;
+    position: absolute;
+}
+
+/* 컨텐츠2의 맨 위 컨텐츠 마진 주기 */
+.cont2:first-of-type {
+    margin: 200px 0;
+}
+
+/* 컨텐츠 2 News 영역 */
+.cont2 h1 {
+    position: sticky;
+    top: 100px;
+    display: block;
+    padding-left: 5%;
+    /* padding-top: 200px; */
+    mix-blend-mode: exclusion;
+}
+
+.cont2 h1 b {
+    color: #dbdbdb;
+    font-family: 'PT Serif', serif;
+    font-size: 92px;
+    font-weight: lighter;
+}
+
+
+/* 이미지 위로 겹치는 텍스트 정렬 */
+.firstAct {
+    margin-top: 15%;
+    margin-left: 53%;
+}
+
+.secAct {
+    margin-top: 50%;
+    margin-left: 53%;
+}
+
+.thirdAct {
+    margin-top: 20%;
+    margin-left: 32%;
+}
+
+.forthAct {
+    margin-top: 10%;
+    margin-left: 67%;
+
+}
+
+.fifAct {
+    margin-top: 40%;
+    margin-left: 32%;
+}
+
+
+/* 컨텐츠2 PARKS 로고이미지 */
+.cont2 h3 a {
+    display: block;
+    margin-left: 60%;
+    margin-bottom: 20%;
+}
+
+.cont2 h3 img {
+    width: 450px;
+}
+
+/* 타이틀,카테고리,날짜 정리 */
+.cont2 h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 62px;
+    font-weight: lighter;
+    display: block;
+    margin-bottom: 5px;
+    white-space: nowrap;
+}
+
+.cont2 .category {
+    font-family: 'Poppins', sans-ser if;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #adadad;
+    display: block;
+    padding-bottom: 30px;
+}
+
+.cont2 .date {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #111;
+}
+
+/* 이미지 지그재그 정렬 */
+.cont2>img {
+    display: block;
+    width: 45%;
+    margin-bottom: 200px;
+}
+
+.newspic-left {
+    margin-left: 5%;
+}
+
+.newspic-right {
+    margin-left: 50%;
+}
+
+
+
+/* PARKS MANAGEMENT 문구 */
+.comp {
+    position: relative;
+    /* left: -50%; */
+    width: 200vw;
+
+    display: block;
+    box-sizing: border-box;
+    /* border-top: 1px solid #111; */
+
+    font-size: 120px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #111;
+    white-space: nowrap;
+}
+
+/* PARKS MANAGEMENT 문구 위아래 가로선 */
+
+.comp:first-child {
+    display: block;
+    box-sizing: border-box;
+    border-top: 1px solid #111;
+}
+
+.comp:last-child {
+    display: block;
+    box-sizing: border-box;
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+}
+
+/* PARKS MANAGEMENT 문구 양쪽으로 이동하기 */
+.comp:nth-child(2) {
+    left: -200%;
+    animation: p1flow 30s linear infinite forwards;
+}
+
+@keyframes p1flow {
+    to {
+        left: 100%;
+    }
+}
+
+.comp:last-child {
+    left: 0;
+    animation: p2flow 15s linear infinite;
+}
+
+@keyframes p2flow {
+    to {
+        left: -100%;
+    }
+}
+
+
+/* ////////////////////////////////////////////////////////// */
+/* 컨텐츠3 */
+/* 아티스트 소개 */
+.cont3 {
+    position: relative;
+    display: block;
+    width: 100%;
+    /* height: 1200px;  */
+    background-color: #111;
+    padding: 10% 0 20% 4%;
+}
+
+.cont3 h2 {
+    font-size: 92px;
+    font-family: 'PT Serif', serif;
+    font-weight: lighter;
+    color: #dbdbdb;
+    margin-bottom: 120px;
+}
+
+/* 아티스트 2명 이름 */
+.cont3 li {
+    position: relative;
+    display: block;
+    margin-bottom: 40px;
+}
+
+.cont3 a {
+    font-size: 62px;
+    font-family: 'PT Serif', serif;
+    font-weight: lighter;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cont3 img {
+    position: absolute;
+    top: -100px;
+    /* left: 10%; */
+
+    display: none;
+    width: 500px;
+
+    opacity: .5;
+    transform: scale(0);
+}
+
+.cont3 li:hover {
+    transform: translateX(50px);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+}
+
+.cont3 li:hover img {
+    display: block;
+    /* transition: ease-out 1s; */
+    transform: scale(1);
+}
+
+
+
+/* ////////////////////////////////////////////////////////// */
+/* 컨텐츠4 */
+.cont4 {
+    position: relative;
+    /* background: linear-gradient(to bottom, #5F6C68); */
+    /* background-color: #5F6C68; */
+    font-weight: lighter;
+    padding: 10% 35%;
+    /* height: 100vh; */
+}
+
+.cont4>div {
+    width: 30vw;
+    height: auto;
+}
+
+/* 이미지 슬라이드 */
+#slide {
+    display: flex;
+    overflow: hidden;
+
+}
+
+#slide img {
+    width: 30vw;
+}
+
+/* #slide img {
+    right: 12.5%;
+    width: 25%;
+    padding-left: 60%;
+} */
+
+/* 자동넘김용 버튼 보이지 않게 */
+.abtn {
+    display: none;
+}
+
+/* svg 시도 실패 */
+.rsvg {
+    width: 100%;
+    height: 100%;
+}
+
+.rsvg rect {
+    fill: none;
+    stroke: black;
+    stroke-width: 10;
+    stroke-linecap: square;
+    stroke-dasharray: 400%;
+    stroke-dashoffset: 400%;
+    transition: all .4s ease-in-out;
+}
+
+.cont4>div:hover rect {
+    stroke-dashoffset: 0;
+}
+
+
+/* 왼쪽 - 타이틀, 이름, 직업 텍스트 */
+.c4-text .title {
+    font-family: 'Noto Sans JP', 'Poppins', sans-serif;
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.c4-text .kayo,
+.gou {
+    font-size: 20px;
+    font-family: 'PT Serif', serif;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.c4-text .stylist,
+.hair {
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+
+    color: #dbdbdb;
+}
+
+.c4-text {
+    display: none;
+}
+
+
+
+/* PARKS TOKYO 이메일 */
+#email {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    white-space: nowrap;
+    /* line-height: 300px; */
+
+    display: block;
+    box-sizing: border-box;
+    height: 300px;
+    padding-top: 70px;
+
+    transition: all 1s ease;
+}
+
+/* 이메일 애니메이션 */
+.email {
+    position: relative;
+    left: 0;
+    width: 200vw;
+    animation: eflow 20s linear infinite;
+}
+
+@keyframes eflow {
+    to {
+        left: -100%;
+    }
+}
+
+#email span {
+    display: block;
+    width: 100%;
+    /* height: auto; */
+    border: 5px solid #111;
+}
+
+#email:hover span {
+    border: none;
+}
+
+#email:hover .email {
+    animation-play-state: paused;
+}
+
+
+
+/*************************** 하단영역 ***************************/
+
+/* 컨택트 정보 */
+.contact {
+    position: relative;
+    background-color: #111;
+    padding: 10% 5%;
+    font-weight: 300;
+}
+
+.contact h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 92px;
+    font-weight: lighter;
+    color: #dbdbdb;
+    margin-bottom: 100px;
+}
+
+/* 회사 소개/정보 영역 등분할하기 */
+.f-info {
+    display: flex;
+    margin-bottom: 150px;
+}
+
+.f-info div {
+    flex: 1;
+}
+
+/* 회사소개글 */
+.contact p {
+    font-family: 'Noto Sans JP', 'Poppins', sans-serif;
+    font-weight: lighter;
+    color: #fff;
+    line-height: 32px;
+}
+
+/* 회사정보영역 */
+.contact ul {
+    display: flex;
+}
+
+.contact ul li {
+    /* flex-wrap: wrap; */
+    padding-right: 150px;
+    margin-bottom: 40px;
+
+}
+
+/* 메일, 전화번호, 주소 */
+.contact h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #adadad;
+    margin-bottom: 10px;
+}
+
+.contact a {
+    white-space: nowrap;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+/* 각 정보 보더라인 */
+.contact a::after {
+    /* position: absolute; */
+    display: block;
+    content: '';
+    box-sizing: border-box;
+
+    width: 100%;
+    /* border-bottom: 2px solid transparent; */
+    transform: translateX(-100%);
+}
+
+.contact a:hover::after {
+    width: 100%;
+    transform: translateX(0);
+    transition: .1s;
+    border-bottom: 2px solid white;
+}
+
+
+/* sns 영역 */
+.sns {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.sns li:first-child {
+    padding-right: 30px;
+}
+
+/* 카피라이트 */
+.contact span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #fff;
+}

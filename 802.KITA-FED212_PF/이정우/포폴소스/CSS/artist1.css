@@ -1,0 +1,125 @@
+@charset "utf-8";
+@import url(./common.css);
+
+
+.wrap {
+  max-width: 1657px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+#side {
+  position: fixed;
+  top: 60px;
+  width: 275px;
+  /* height: 320px; */
+  font-size: 12px;
+  font-weight: bolder;
+  /* background-color: rgb(255, 181, 181); */
+}
+
+
+
+
+
+/* 스크롤바 */
+.scbar::-webkit-scrollbar {
+  /* 전체 스크롤바 크기변경 */
+  width: 5px;
+}
+
+.scbar::-webkit-scrollbar-thumb {
+  /* 스크롤바 */
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.scbar::-webkit-scrollbar-track {
+  /* 스크롤바 트랙 */
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+
+
+
+
+html,body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+#choilee{
+  position: relative;
+  display: flex;
+  max-width: 1300px;
+}
+
+#choilee ul li {
+  text-align: center;
+  font-size: 30px;
+  
+}
+
+.artone {
+  background-color: gray;
+  width: 50%;
+  height: 800px;
+  color:white;
+}
+
+
+.artone2 {
+  background-color: black;
+  width: 50%;
+  height: 800px;
+  color:white;
+}
+
+
+
+
+/* foot */
+ 
+.foot{
+  position: absolute;
+  width: 100%;
+  bottom: 40%;
+  overflow: hidden;
+
+}
+
+.infoot{
+  position: relative;
+  left: 0;
+  width: 200%;
+  display: flex;
+
+  animation: textFlow 5s linear infinite
+}
+
+@keyframes textFlow {
+  to{
+    left: -100%
+  }
+}
+
+.foot ul{
+  display:flex;
+  flex:1;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.foot li{
+  flex: 1;/* 등분할 */
+  text-align: center;
+  font-family: 'Anton', sans-serif;
+  font-size: 4vw;
+  color: #e7e7e7;
+
+  /* outline: 2px dotted gray; */
+}

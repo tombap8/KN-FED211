@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>부산국제영화제</title>
+    <link rel="shortcut icon" href="./img/Biff_logo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/sub.css">
+    <link rel="stylesheet" href="./css/submedia.css">
+    
+    <script src="./JS/main.js"></script>
+    <!-- 부드러운 스크롤 플러그인 : 제이쿼리아님! -->
+    <script src="./JS/jquery-3.6.0.min.js"></script>
+    <script src="./JS/jquery-ui.min.js"></script>
+    <script src="./JS/sub_jquery-autoScroll-1.0.js"></script>
+
+</head>
+
+<body>
+    <!-- ******************************************* 상단 ******************************************* -->
+    <div id="top">
+        <div class="ham">
+            <button class="menu" onclick="sMenu()">≡</button>
+        </div>
+        <nav class="gnb1">
+            <button class="cbtn" onclick="sMenu()">×</button>
+            <ul>
+                <li>
+                    <a href="#">BIFF</a>
+                    <ol class="smenu">
+                        <li>
+                            <a href="#">인사말</a>
+                        </li>
+                        <li>
+                            <a href="#">심사 및 어워드</a>
+                        </li>
+                        <li>
+                            <a href="#">조직구성</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#">영화</a>
+                    <!-- 서브메뉴 -->
+                    <ol class="smenu">
+                        <li>
+                            <a href="#">상영관</a>
+                        </li>
+                        <li>
+                            <a href="#">장소</a>
+                        </li>
+                        <li>
+                            <a href="#">티켓구매</a>
+                        </li>
+                        <li>
+                            <a href="#">이벤트</a>
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    <a href="#">게시판</a>
+                    <ol class="smenu">
+                        <li>
+                            <a href="#">Q&amp;A</a>
+                        </li>
+                        <li>
+                            <a href="#">방명록</a>
+                        </li>
+                    </ol>
+                </li>
+                <li><a href="#"><img src="./img/onair.png" alt="온에어"></a></li>
+            </ul>
+        </nav>
+
+        <header class="top ibx">
+            <div class="logo">
+                <a href="./index.html">
+                    <img class="log" src="./img/logo1.png" alt="BIFF로고">
+                </a>
+            </div>
+
+            <div class="gnb2">
+                <div>
+                    <ul class="lb">
+                        <li class="on"><a href="#pg1">작품소개</a></li>
+                    </ul>
+
+                </div>
+                <div>
+                    <ul class="rb">
+                        <li></li>
+                        <li><a href="#pg2">스케줄</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </header>
+    </div>
+
+    <div id="cont">
+
+        <!-- /******************************************* cont2 *******************************************/ -->
+        <section id="pg2" class="cont2">
+            <!-- partial:index.partial.html -->
+            <div class="play-backdrop"></div>
+            <div class="backmain">
+                <div onclick="location.href ='./index.html'">
+                <a class="back">뒤로가기</a>
+            </div>
+                <ul class="Mtxt">
+                    <li>지옥 Hellbound</li>
+                    <li>Director <br>
+                        YEON Sang-ho 연상호</li>
+                    <li>"몇 날 몇 시에 당신은 죽는다, 지옥에 간다" 그렇게 지옥으로부터의 고지를 받은 자는 어김 없이 예정된 시간에 지옥의 사자들에게 끌려간다.<br>그런 일이 서울 한복판에서 모두가 지켜보는 가운데 일어난다. </li>
+                    <li>*10/7(목) GV는 상영전 무대인사로 진행됩니다.</li>
+                </ul>
+            </div>
+            
+            <div class="play-button">
+                <svg class="play-circles" viewBox="0 0 152 152">
+                    <circle class="play-circle-01" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="343" cx="76" cy="76" r="72.7"/>
+                    <circle class="play-circle-02" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="309" cx="76" cy="76" r="65.5"/>
+                </svg>
+                <div class="play-perspective">
+                    <button class="play-close"></button>
+                    <div class="play-triangle">
+                        <div class="play-video">
+                            <!-- <iframe width="600" height="400" src="https://www.youtube.com/embed/WNTSu7p1S8A"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                            <iframe width="600" height="400" src="https://www.youtube.com/embed/KCFcuUnOhIc"allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- partial -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js'></script><script  src="./JS/submain.js"></script>
+        
+        
+    </section>
+    
+    <!-- /******************************************* cont4 *******************************************/ -->
+    <main class="cont ibx">
+            <section id="pg4" class="cont4">
+
+                <div class="tbl_schedule_wrap">
+                    <div class="pull-left">
+                        <h3 class="tit_schedule">
+                            <span class="en">2022. 상영시간표</span>
+                        </h3>
+                    </div>
+                </div>
+                <div class="tbl_schedule_wrap">
+                    <div class="tbl_schedule tbl_schedule_date">
+                        <div class="sch_li">
+                            <div class="sch_li_tit">영화의전당 야외극장</div>
+                            <div class="sch_it sch_it1 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it2 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it3 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it4">
+                                <span class="code en">001관</span>
+                                <p class="time en">18:00</p>
+                                <div class="film_tit">
+                                    <div id="txt6">
+                                        <span class="film_tit_kor">지옥</span>
+                                        <span class="film_tit_eng en">Hellbound</span>
+                                    </div>
+                                    "(무대인사 중계)"
+                                </div>
+                                <div class="grade">
+                                    <span class="ico_grade ico_15" title="15세 이상 관람가"></span>
+                                    <span class="ico_grade ico_gv" title="GV 게스트와의 만남"></span>
+                                </div>
+                            </div>
+                            <div class="sch_it sch_it5 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it6 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                        </div>
+
+                        <div class="sch_li">
+                            <div class="sch_li_tit">소향씨어터</div>
+                            <div class="sch_it sch_it1 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it2 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it3 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it4">
+                                <span class="code en">605관</span>
+                                <p class="time en">19:20</p>
+                                <div class="film_tit">
+                                    <div id="txt6">
+                                        <span class="film_tit_kor">지옥</span>
+                                        <span class="film_tit_eng en">Hellbound</span>
+                                    </div>
+                                    "(백신패스관)"
+                                </div>
+                                <div class="grade">
+                                    <span class="ico_grade ico_15" title="15세 이상 관람가"></span>
+                                </div>
+                            </div>
+                            <div class="sch_it sch_it5 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                            <div class="sch_it sch_it6 blank_wrap">
+                                <span class="sch_it_blank"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="caution_box mt50">
+                    <div class="row">
+                        <div class="col-md-2 col-xs-12">
+                            <p class="tit tit-sec bold mt10">유의사항</p>
+                        </div>
+                        <div class="col-md-10 col-xs-12">
+                            <ul class="list_secondary mt10">
+                                <li>GV(게스트와의 만남)는 사전 고지없이 변동될 수 있습니다.</li>
+                                <li>5세 미만의 어린이는 입장하실 수 없습니다.</li>
+                                <li>모든 촬영기기는 저작권 보호법에 의해 상영관 내 반입하실 수 없으며, 촬영을 금지합니다. </li>
+                                <li>상영 시작 이후 15분까지는 입장을 허용합니다. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- /******************************************* 하단 *******************************************/ -->
+        <footer id="ft" class="ft">
+            <div class="footer_inner">
+                <div class="container">
+                    <div class="ft_social">
+                        <ul>
+                            <li>
+                                <a href="https://www.facebook.com/busanfilmfest" target="_blank" title="페이스북 이동"
+                                    class="facebook"></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/busanfilmfest" target="_blank" title="트위터 이동"
+                                    class="twiter"></a>
+                            </li>
+                            <li>
+                                <a href="http://instagram.com/busanfilmfest" target="_blank" title="인스타그램 이동"
+                                    class="instargram"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCJB3MxLQsak5tT-Yvod2alA" target="_blank"
+                                    title="유튜브 이동" class="youtube"></a>
+                                    
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fnb">
+                        <ul class="fnb list-inline">
+                            <li><a href="#">개인정보처리방침</a></li>
+                            <li><a href="#">저작권정책</a></li>
+                            <li><a href="#">1:1문의</a></li>
+                            <li><a href="#">역대영화제</a></li>
+                        </ul>
+                    </div>
+                    <div class="row foot_line">
+                        <div class="col" style="text-align: center;">
+                            <address>
+                                <p>
+                                    <strong>부산사무국</strong>
+                                    (48058) 부산광영시 해운대구 수영강변대로 120 영화의전당 비프힐 3층
+                                    <br>
+                                    <strong>서울사무소</strong>
+                                    (03131) 서울특별시 종로구 율곡로 84 가든타워 1601호
+                                </p>
+                                <p>
+                                    <strong>대표전화</strong>
+                                    1688-3010
+                                </p>
+                            </address>
+                        </div>
+                    </div>
+                    <p class="copyright ">ⓒ Busan International Film Festival</p>
+                </div>
+            </div>
+        </footer>
+
+        <nav class="indic">
+            <ul>
+                <li class="on">
+                    <a href="#pg1"><span>1</span></a>
+                </li>
+                <li>
+                    <a href="#pg2"><span>2</span></a>
+                </li>
+                <li>
+                    <a href="#pg3"><span>3</span></a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+
+</body>
+</html>

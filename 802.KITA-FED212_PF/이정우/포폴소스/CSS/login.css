@@ -1,0 +1,182 @@
+@charset "utf-8";
+@import url(./common.css);
+
+.wrap {
+  max-width: 1657px;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+#side {
+  position: fixed;
+  top: 60px;
+  width: 275px;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+#side ul li:first-child {
+  margin-bottom: 35px;
+}
+
+#side ul li:last-child {
+  margin-top: 50px;
+}
+
+#side ul li {
+  padding-bottom: 10px;
+}
+
+#side ul li a {
+  color: black;
+}
+
+#side ul li a:hover {
+  text-decoration: underline;
+}
+
+.ham {
+  display: none;
+}
+
+#cont {
+  max-width: 1300px;
+  padding-left: 275px;
+}
+
+/* .smenu a {
+  text-decoration: none;
+} */
+
+.img {
+  height: 30vh;
+  width: 80vw;
+  margin: 0 auto;
+  outline: 1px solid
+}
+
+.top {
+  padding-bottom: 50px;
+}
+
+.top img {
+  padding-top: 55px;
+  height: 210px;
+}
+
+.scbar::-webkit-scrollbar {
+  /* 전체 스크롤바 크기변경 */
+  width: 5px;
+}
+
+.scbar::-webkit-scrollbar-thumb {
+  /* 스크롤바 */
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.scbar::-webkit-scrollbar-track {
+  /* 스크롤바 트랙 */
+  background-color: #e0e0e0;
+  border-radius: 10px;
+}
+
+
+
+#conttitle {
+  width: 500px;
+}
+
+.scont {
+  height: 417px;
+}
+
+label {
+  padding-bottom: 10px;
+  font-size: 13px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+form {
+  width: 500px;
+}
+
+.minput input {
+  margin-bottom: 40px;
+}
+
+.ltitle h2 {
+  font-size: 22px;
+  padding-bottom: 80px;
+  margin-bottom: -20px;
+  margin-top: 0;
+}
+
+.mtitle h2 {
+  padding-bottom: 50px;
+  font-size: 20px;
+  margin: 0;
+}
+
+.minput input {
+  border-style: none;
+  border-bottom: 1px solid #000;
+  width: 500px;
+  height: 45px;
+  margin-bottom: 0;
+}
+
+.addbx span {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+/* 게스트/로그인버튼 */
+.mbtn {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  margin-top: 80px;
+}
+
+/* 게스트 버튼 */
+.btnbx1 #sbtn {
+  width: 245px;
+  height: 48px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+/* 로그인 버튼 */
+.btnbx2 #sbtn2 {
+  width: 245px;
+  height: 48px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+
+/* 하단 */
+.find {
+  width: 500px;
+  height: 44.5px;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 25px;
+}
+
+.find a {
+  font-size: 13px;
+  color: black;
+}
+
+/* flex-wrap: wrap;
+플렉스 줄바꿈
+ */

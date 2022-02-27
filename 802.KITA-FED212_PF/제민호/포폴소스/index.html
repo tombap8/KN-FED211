@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>기아 - Movement that inspires</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontisto@v3.0.4/css/fontisto/fontisto.min.css">
+    <link rel="stylesheet" href="./css/jquery.bxslider.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media.css">
+
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script src="./js/jquery.bxslider.min.js"></script>
+    <script>
+        $(function () {
+
+            // bxSlider 적용하기
+            $(".bxslider").bxSlider({
+                auto: true, // 자동넘기기설정(true/false)
+                pause: 8000, // 슬라이드 넘기기 사이간격(초)
+                speed: 600, //슬라이드 넘어가는 속도(초)
+                mode: 'horizontal' //넘기기 방식옵션
+                //'horizontal', 'vertical', 'fade'
+            });
+
+        }); //jQb
+    </script>
+
+</head>
+
+<body>
+    <!-- 1.상단영역 -->
+    <div id="top">
+        <header class="top ibx">
+            <h1 class="logo">
+                <a href="./index.html">
+                    <img src="images/logo_w.png" alt="메인로고">
+                </a>
+            </h1>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="./kia.html">브랜드KIA</a></li>
+                    <li>
+                        <a href="">MODELS</a>
+                        <div class="sbx">
+                            <div>
+                                <a href="./sub1.html"><img src="./images/nav/img_ev6.webp" alt="EV6서브이미지"></a>
+                                <span>EV6</span>
+                            </div>
+                            <div>
+                                <a href="./sub2.html"><img src="./images/nav/img_k8.webp" alt="K8서브이미지"></a>
+                                <span>K8</span>
+                            </div>
+                            <div>
+                                <a class="spo" href="./sub3.html"><img src="./images/nav/img_nq_sportage.webp"
+                                        alt="Sportage서브이미지"></a>
+                                <span>Sportage</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="login.html">로그인</a>
+                    </li>
+                    <li><a href="member.html">회원가입</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!-- 2.메인영역 -->
+    <main>
+        <ul class="bxslider">
+            <li><video src="./images/Sportage/web_sportage_kv.webm" autoplay muted loop playsinline></video></li>
+            <li><video src="./images/EV6/sec1_bg.webm" autoplay muted loop playsinline></video></li>
+            <li><video src="./images/K8/section0-bg-1.webm" autoplay muted loop playsinline></video></li>
+        </ul>
+        <h1 id="enter">
+            <a href="./sub3.html">
+                <span>
+                    궁금한 그곳으로, 나를
+                    Discover your world
+                    The all-new Sportage ></span>
+            </a>
+        </h1>
+    </main>
+    <!-- 3.하단영역 -->
+    <div id="info">
+        <footer class="info ibx">
+            <!-- 3-1.회사정보 -->
+            <img src="images/logo_w.png" alt="하단로고">
+            <address>
+                <span>
+                    사업자 기아㈜ 대표 송호성, 최준영 사업자등록번호 119-81-02316 06797 서울특별시 서초구 헌릉로 12 (양재동)
+                </span>
+            </address>
+            <!-- 3-2.sns메뉴 -->
+            <ul class="sns">
+                <li>
+                    <a href="https://www.facebook.com/kia.co.kr?utm_source=kmc_kr&utm_medium=website&utm_campaign=kia_footer_facebook"
+                        target="_blank" class="fi fi-facebook">
+                        <span class="ir">페이스북</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/kia.kor/" target="_blank" class="fi fi-instagram">
+                        <span class="ir">인스타그램</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/c/KiaKorea" target="_blank" class="fi fi-youtube-play">
+                        <span class="ir">유튜브</span>
+                    </a>
+                </li>
+            </ul>
+
+
+            <ul class="blink ibx">
+                <li>
+                    <a href="#">개인정보 처리방침</a>
+                </li>
+                <li>
+                    <a href="#">이용약관</a>
+                </li>
+                <li>
+                    <a href="#">전자공고</a>
+                </li>
+                <li>
+                    <a href="#">사이트맵</a>
+                </li>
+            </ul>
+
+
+        </footer>
+    </div>
+</body>
+
+</html>

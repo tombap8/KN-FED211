@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+@media screen and (min-width: 1921px) {
+
+    .toplogo{
+        left: calc(50% - 900px);
+    }
+
+    .topdown{
+    right: calc(50% - 900px);
+}
+
+
+}/* 1921px끝 ************************/
+
+@media screen and (max-width: 1600px){
+
+.toplogo{
+    left: 3%;
+    width: 150px;
+}
+
+
+}/* 1600 끝 *************************** */
+
+@media screen and (max-width: 1280px){
+    .toplogo{
+        width: 140px;
+    }
+    .gnb{
+        width: 80%;
+    }
+    .gnb>ul>li>a{
+        font-size: 16px;
+    }
+    .smenu ol{
+        font-size: 14px;
+    }
+
+    .ssmenu{
+        width: 13%;
+    }
+    
+}/* 1280끝**************************8 */
+
+@media screen and (max-width: 980px){
+
+    .toplogo{
+    top: 10px;
+    left: 4%;
+    }
+    .top{
+        height: 60px;
+        
+    }
+    .drop{
+        height: 60px;
+        transition: none;
+    }
+    .gnb{
+        display: none;
+    }
+    .topdown{
+        display: none;
+    }
+
+    .mobilebox{
+        display: block;
+    }
+    /* 메인 첫번째 */
+    #excont1{
+        margin-top: 60px;
+        height: 750px;
+    }
+    .rightmain {
+        width: 60%;
+        max-width: 500px;
+        background: url(../naverimages/top_rightimg_bg.png) no-repeat 100% bottom/ contain;
+    }
+    .leftmain{
+        top: 100px;
+        transform: translateY(0);
+        left:10%;
+    }
+    .leftmain>h3{
+        font-size: 40px;
+    }
+    .leftmain_sub1{
+        font-size: 18px;
+    }
+    /* 메인 두번째 */
+    #excont2, #excont3, #excont4{
+        height:600px;
+    }
+    .leftsection{
+        width: 43%;
+        padding-left: 7%;
+    }
+    .sectionp{
+        font-size: 18px;
+    }
+    .sectionh{
+        font-size: 32px;
+    }
+    .sectionlink{
+        font-size: 15px;
+    }
+    .button{
+        font-size: 10px;
+    }
+    .cont5{
+        width: 90%;
+    }
+    .cont5>img{
+        max-width:400px;
+    }
+    .bottomdown{
+        position: relative;
+        margin-top: 20px;
+    }
+}/* 980끝 *********************************/
+
+@media screen and (max-width:770px){
+    .slide{flex-direction: column;}
+    .leftmain>h3{
+        font-size: 6vw;
+    }
+    .leftsection{
+        width: 90%;
+        padding-left: 7%;
+        padding-top: 20px;
+    }
+    .rightsection{
+        width: 80%;
+        padding-right: 0%;
+        padding-left: 10%;
+        padding-top: 20px
+    }
+    .sectionp{
+        font-size: 18px;
+    }
+    .sectionh{
+        padding: 20px 0 40px;
+        font-size: 7vw;
+    }
+    .sectionlink{
+        font-size: 4vw;
+    }
+    #excont1{
+        height: 560px;
+        min-height: 560px;
+    }
+    #excont2, #excont3, #excont4{
+        height:600px;
+    }
+    .cont5>img {
+        max-width: 352px;
+    }
+    .bottonbox{
+        display:none;
+    }
+    .indic{
+        bottom: 5%;
+    }
+}/* 770끝@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */

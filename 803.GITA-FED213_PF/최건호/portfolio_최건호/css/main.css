@@ -1,0 +1,418 @@
+@charset "utf-8";
+/* 제주맥주 메인 CSS - main.css */
+
+/* 외부파일 합치기 */
+@import url(reset.css);
+@import url(core.css);
+
+/* 박스표시 */
+body *{
+    /* outline: 1px dashed gray; */
+}
+
+/* 속박스 class */
+.ibx{
+    /* flex-direction: row; */
+    
+    max-width: 90%;
+    /* 최대 90% 보다 작아지면 auto */
+    margin: 0 auto;
+    /* 박스 중앙정렬 */
+}
+
+.ibx h2{
+    text-align: left;
+    font-size: 35px;
+    color: lightseagreen;
+    outline: none;
+}
+#slideText{
+    margin-top:80px;
+    margin-left: 150px;
+}
+#slideText p{
+    text-align: left;
+    font-size: 16px;
+    color: #000;
+    margin: 20px auto;
+}
+
+
+/* 1. 상단영역 */
+.top{
+    /* display: flex; */
+    /* position: relative; */
+    background-color: #fff;
+    height: 54px;
+}
+
+.gnb img{
+    margin-bottom: -6px;
+    width: 100%;
+    height: 21px;
+}
+
+.gnb{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    /* margin: auto 50px; */
+    /* margin-right: 100px; */
+    /* position: absolute; */
+    line-height: 54px;
+}
+
+.gnb>ul{
+    
+    /* margin-top: 13px; */
+    display: flex;
+    /* justify-content: flex-start; */
+    /* flex-wrap: wrap; */
+}
+.gnb li{
+    padding: 0 20px;
+}
+.gnb li a{
+    font-size: 14px;
+    color: #000;
+}
+
+
+/* 3. 메인영역 */
+.cont1>.slideBox{
+    position: relative;
+    width: 90%;
+    height: 494px;
+    /* float: left; */
+    overflow: hidden;
+    box-sizing: border-box;
+    margin: 0 auto;
+    
+}   
+
+#slide {
+    /*사진을 싸고 있는 슬라이드*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*모든 슬라이드 4장이 옆으로 나열되도록 
+    width 크기를 확보해야한다!!!*/
+    width: 400%;/*4배크기*/
+    height: 100%;
+}
+#slideText{
+    position: absolute;
+    top: 20%;
+    left: 0;
+    
+}
+
+#slideText span{
+    background: #000;
+    color:#fff;
+    padding: 5px;
+}
+
+#slide li {
+    float: left;
+    /*부모가 4배되었으므로 4등분함!*/
+    width: 25%;
+    height: 100%;
+}
+
+#slide li img {
+    /*이미지는 박스에 맞춤!*/
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 이미지 비율유지 채우기 */
+}
+
+
+        /*이동버튼*/
+        .abtn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            /*Y축 중앙이동*/
+        }
+
+        /*왼쪽버튼*/
+        .ab1{
+            /* display: inline-block; */
+            /* z-index: 9999; */
+            left: 50px;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            /* top: 116px; */
+            /* right: -40px; */
+            border-radius: 50%;
+            background-color: #fff;
+            font-size: 50px;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            /* 오버시 손가락모양 */
+        }
+
+        .ab1 i,
+        .ab2 i{
+            color: #ccc;
+            font-size: 20px;
+            vertical-align: super;
+            margin-left: 13px;
+            
+        }
+        
+
+        /*오른쪽버튼*/
+        .ab2 {
+            right: 50px;
+            /* display: inline-block; */
+            /* z-index: 9999; */
+            /* left: 50px; */
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            border-radius: 50%;
+            background-color: #fff;
+            font-size: 50px;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            /* 오버시 손가락모양 */
+            
+        }
+
+        /*블릿버튼*/
+        .indic {
+            display: flex;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            bottom: 50px;
+            margin: 0 auto;
+        }
+        
+        .indic li {
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .indic li img {
+            position: absolute;
+            /*이미지 겹치게*/
+        }
+
+        .indic li img:last-child {
+            /*회색이미지만 투명하게*/
+            opacity: 0;
+        }
+
+        /*회색블릿이미지가 보이게하는 class*/
+        .indic li.on img:last-child {
+            /*회색이미지만 투명하게*/
+            opacity: 1;
+            /*우선적용!*/
+        }
+
+
+
+.iconBox{
+    height: 359px;
+    padding: 24px;
+    padding-top: 24px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 87%;
+}
+
+
+.icon{
+    padding: 110px 35px;
+}
+.icon>img{
+    width: 100px;
+}
+
+.iconBox h3{
+    /* font-size: 16px; */
+    text-align: center;
+}
+.ibx{
+    width: 90%;
+}
+
+
+
+
+.cont3{
+    /* height: 419px; */
+    
+}
+.goodsBox{
+    height: 563px;
+    padding-top: 30px;
+    margin: 0 auto;
+    width: 90%;
+    /* font-size: 14px; */
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.goods{
+    width: 24%;
+    /* margin: 50px; */
+}
+.goods h3{
+    text-align-last: left;
+
+}
+.goods p{
+    margin: 20px auto;
+    font-size: 14px;
+    /* text-align-last: left; */
+}
+.goods span{    
+    font-size: 16px;
+    color: skyblue;
+    font-weight: bold;
+}
+
+
+.goods>img{
+    width: 100%;
+    /* height: 60%; */
+}
+
+
+
+
+.oneriveBox{
+    /* height: 1013px; */
+    background: url(../images/107037-light-blue-abstract.jpg) no-repeat center/cover;
+    height: 500px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+
+}
+
+.oneriveBox h3{
+    margin-left: 150px;
+    padding-top: 150px;
+    font-size: 30px;
+}
+.oneriveBox p{
+    padding: 26px 42px 29px 0px;
+    margin-left: 150px;
+    font-size: 14px;
+}
+.oneriveBox span{
+    margin-left: 150px;
+    font-size: 12px;
+    color: #000;
+    background: #fff;
+    font-weight: bold;
+    padding: 10px 30px;
+
+}
+
+.cont5{
+    height: 429px;
+}
+.businessBox{
+    padding-top: 70px;
+    height: 300px;
+    display: flex;
+    justify-content:space-between;
+    width: 90%;
+    margin: 0 auto;
+}
+.business{
+    height: 200px;
+    width: 24%;
+}
+.business p{
+    margin: 20px auto;
+    font-size: 14px;
+}
+.business span{
+    font-size: 16px;
+    color: skyblue;
+    font-weight: bold;
+}
+.business>img{
+    width: 100%;
+}   
+
+.cont6{
+    height: 80px;
+}
+.sns{
+    width: 90%;
+    margin: 0px auto;
+}
+
+.sns a {
+    width: 35px;
+    height: 24px;
+    font-size: 24px;
+    text-align: center;
+    vertical-align: baseline;
+    line-height: 24px;
+    margin-top: 24px;
+    margin-right: 16px;
+    color: #000;
+}
+   
+/* 2. 하단영역 */
+
+#footer{
+    /* width: 100%; */
+    background: #ccc;
+}
+.info{
+    width: 90%;
+    height: 396px;
+}
+
+.blinkBox{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    
+    padding-top: 30px;
+}
+.blinkBox ul li{
+    margin: 20px;
+}
+.blink{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+/* .blink ul{
+    text-align-last: left;
+} */
+.blink a{
+    font-size: 12px;
+    /* text-align: center; */
+    color: #000;
+}
+
+.addr{
+    margin: 0 auto;
+    width: 90%;
+    margin-top: 120px;
+}
+.addr p{
+    font-size: 14px;
+}

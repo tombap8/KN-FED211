@@ -1,0 +1,44 @@
+@charset "utf-8";
+@import url(./common.css);
+@import url(./nav.css);
+
+/******************************** manu  ******************************* */
+
+#top.on .nav :nth-child(1):hover {
+  text-decoration: line-through tomato;
+  filter: drop-shadow(2px 4px 6px black);
+  transition: text-decoration .5s ease-in;
+}
+
+#top.on .nav :nth-child(2):hover {
+  text-decoration: line-through tomato;
+  filter: drop-shadow(2px 4px 6px black);
+  transition: text-decoration .5s ease-in;
+}
+
+#top.on .nav :nth-child(3) {
+  text-decoration: line-through tomato;
+  filter: brightness(50%);
+}
+
+.wb {
+  margin-top: 101px;
+  height: auto;
+  text-align: center;
+}
+
+div.w {
+  width: 50%;
+   left: 0;
+  color: #1d1d1b;
+  font-family: 'Rock Salt', cursive;
+  background-color: #cdc6be;
+}
+
+div.b {
+  width: 50%;
+  right: 0;
+  color: #cdc6be;
+  font-family: 'Rock Salt', cursive;
+  background-color: #1d1d1b;
+}

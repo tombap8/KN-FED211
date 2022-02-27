@@ -1,0 +1,273 @@
+@charset "utf-8";
+/* 공통 css */
+
+
+/* 박스표시 */
+body * {
+    /* outline: 1px dashed gray; */
+    font-family: 'NanumSquare', sans-serif;
+}
+
+
+#mainbox {
+    max-width: 1920px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+/* 속박스 class */
+.ibx {
+    max-width: calc(100% - 100px);
+    /* 최대 1920px */
+    margin-left: 100px;
+    margin-right: 25px;
+    /* 박스 중앙정렬 */
+}
+
+.ibx2 {
+    max-width: 100%;
+}
+
+.ibx h2,
+.ibx2 h2 {
+    text-align: center;
+    font-size: 35px;
+    color: lightseagreen;
+    outline: none;
+}
+
+/* 1. 상단영역 */
+#top {
+    background-color: #fff;
+    text-align: center;
+    padding-left: 100px;
+}
+
+.top {
+    height: 10%;
+    margin-left: 5%;
+    position: relative;
+}
+
+.top img {
+    margin-top: 2px;
+    width: 250px;
+}
+
+/* 사이드바 */
+
+.sideBar {
+    position: fixed;
+    top: -8px;
+    left: auto;
+    height: 100vh;
+    z-index: 10000002;
+    width: 100px;
+    padding: 50px 0;
+    overflow: hidden;
+    transition: all 0.5s ease;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.514)
+}
+
+.sideBar.on {
+    background-color: #fff;
+    transition: all .5s ease-in-out;
+}
+
+.cart li {
+    margin-top: 7px;
+}
+
+.ham {
+    position: absolute;
+    background-image: url(../images/ham.png);
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    top: 20px;
+    left: 50px;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.slogo {
+    background: url(../images/nav_logo.png) center/cover;
+    height: 30%;
+    width: 70%;
+    margin-left: 15px;
+    margin-top: 50px;
+}
+
+
+/* 햄버거버튼 내부 네비게이션 */
+
+/* 네비게이션 배경 */
+
+.navbg {
+    position: fixed;
+    top: 0px;
+    left: 100px;
+    width: 0;
+    height: 100vh;
+    background-color: #fff;
+    transition: all .5s ease-in-out;
+}
+
+/* ham.on 했을시 바뀌는 요소들 세팅 */
+
+.navbg.on {
+    position: fixed;
+    top: 0px;
+    left: 100px;
+    width: 300px;
+    display: block;
+    background-color: #fff;
+    transition: width .5s ease-in-out;
+}
+
+/* 네비게이션 내부 컨텐츠 줄어듦 방지 */
+.dis {
+    opacity: 0;
+    width: 0;
+    transition: all .5s ease;
+}
+
+.dis ul {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.navbg.on .dis {
+    opacity: 1;
+    width: 100%;
+    transition: all .5s ease;
+}
+
+
+
+/* 사이드바 메인메뉴 */
+
+.nmenu_box {
+    padding: 10px 20px;
+    text-align-last: left;
+}
+
+.nmenu>li a {
+    color: #7c7c7c;
+    font-weight: bold;
+    font-size: min(3vw, 20px);
+    margin: 10px 0;
+}
+
+.nmenu {
+    margin-top: 40px;
+}
+
+.nmenu li {
+    margin: 5px 4px 5px 5px;
+}
+
+.nmenu>li {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+/* 사이드바 서브메뉴 */
+
+.nsub_box a {
+    font-size: min(2vw, 16px);
+    font-weight: bold;
+}
+
+.nsub a {
+    color: #c2c2c2;
+}
+
+.nsub li:hover a {
+    color: #191919;
+}
+
+.sideBar>ul {
+    margin-top: 30px;
+}
+
+/* 로그인-마이페이지 메뉴 */
+
+.lmenu {
+    margin-top: 30px;
+}
+
+.lmenu>li {
+    font-size: min(1.5vw, 16px);
+    text-align: left;
+    margin-left: 20px;
+    padding: 4px;
+}
+
+/* sns */
+.sns {
+    display: flex;
+    margin: 50px 20px;
+}
+
+.sns img {
+    width: 25px;
+    margin-right: 5px;
+}
+
+/* 2. 하단영역 */
+
+.info {
+    width: 100vw;
+    height: 280px;
+    margin-top: 200px;
+    padding: 50px 130px;
+    background-color: #1E306C;
+}
+
+.infotxt {
+    display: flex;
+}
+
+.infotxt li {
+    margin-right: 15px;
+    font-size: min(3vw, 14px);
+    color: #d6d6d6;
+}
+
+.blogo {
+    margin: 30px;
+    margin-top: 50px;
+}
+
+.flag {
+    margin-left: 150px;
+}
+
+.flag img {
+    width: 25px;
+}
+
+.info p {
+    margin-top: 70px;
+    color: #bdbdbd;
+    font-size: 10px;
+    line-height: 16px;
+}
+
+.topbtn {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    right: 1px;
+    bottom: 38vh;
+    opacity: 0;
+}
+
+.topbtn.on {
+    opacity: 0.7;
+    transition: all .7s;
+    z-index: 10000000;
+}

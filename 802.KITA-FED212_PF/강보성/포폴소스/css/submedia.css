@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+/************************* 모바일기준 800px 이하 *************************/
+@media only screen and (max-width: 800px){
+
+    .tbl_schedule .sch_li .sch_it {
+        text-align: center;
+        width: auto;
+        left: 10%;
+    }
+    .tbl_schedule .sch_li .sch_it.blank_wrap, .sch_it_blank {
+        display: none;
+    }
+.tbl_schedule .sch_li .sch_li_tit {
+    padding: 15px 10px;
+}
+    
+}
+
+/************************* 모바일기준 640px 이하 *************************/
+@media only screen and (max-width: 640px){
+    
+    .gnb1 {
+        width: 100%;
+    }
+    
+    .gnb1 ul>li {
+        width: auto;
+    }
+    
+    .gnb1>ul>li a{
+        width: auto;
+    }
+
+    
+}
+/************************* 모바일기준 600px 이하 *************************/
+@media only screen and (max-width: 600px){
+    
+    /* .gnb2 .lb {
+        width: 160px;
+    }
+    
+    .gnb2 .rb {
+        width: 160px;
+    }
+    @keyframes menuAni {
+        to {
+            width: 410px;
+        }
+    } */
+
+    .ham {
+        right: 0;
+}
+.cbtn{
+    right: 0%;
+}
+
+}
+
+/************************* 모바일기준 500px 이하 *************************/
+@media only screen and (max-width: 500px){
+
+    /* .gnb2 li {
+        font-size: 1.3vh;
+    }
+
+    .gnb2 .lb {
+        width: 130px;
+    }
+    
+    .gnb2 .rb {
+        width: 130px;
+    }
+    @keyframes menuAni {
+        to {
+            width: 330px;
+        }
+    } */
+
+    .menu{
+        font-size: 23px;
+    }
+
+.tbl_schedule .sch_li .sch_li_tit {
+    font-size: 15px;
+    border: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+    padding: 8px 6px;
+}
+
+.tbl_schedule .sch_li .sch_it {
+    height: 190px;
+    padding: 30px 8px 10px 8px;
+    margin: 1px;
+    width: 32%;
+}
+.tbl_schedule .sch_li .sch_it .code {
+    font-size: 12px;
+    padding: 3px 6px;
+    line-height: 1.2;
+    right: auto;
+    top: 10px;
+    left: 10px;
+}
+.tbl_schedule .sch_li .sch_it .time {
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+.tbl_schedule .sch_li .sch_it .grade {
+    margin-top: 4px;
+    left: 8px;
+}
+
+
+}
