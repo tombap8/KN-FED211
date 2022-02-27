@@ -805,7 +805,19 @@
                 $("#dpbox").fadeOut(300);
             }); //// click ///////
 
-
+            $("body").append('<button class="back">메인페이지</button>');
+            $(".back").css({
+                position: "fixed",
+                bottom:"5px",
+                left:"50%",
+                transform:"translateX(-50%)",
+                backgroundColor:"cyan",
+                fontSize:"3vh",
+                lineHeight:"5vh",
+                borderRadius:"5px"
+            }).click(function(){
+                location.href = "/index.html";
+            });
 
         }); ///////// jQB /////////////////////
         /////////////////////////////////////
