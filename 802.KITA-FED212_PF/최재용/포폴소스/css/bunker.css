@@ -1,0 +1,104 @@
+@charset "utf-8";
+@import url(../css/common.css);
+
+body {
+  background: url(../img/cornfarm.jpg)no-repeat;
+  background-size: 100% 100%;
+}
+
+#room {
+  width: 100%;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.angle {
+  position: absolute;
+  top: -47%;
+  left: calc(50% - 500px);
+  width: 1000px;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.angle>div {
+  position: absolute;
+}
+
+.angle .lwall {
+  top: 47%;
+  left: -111.3%;
+  width: 100%;
+  height: 100%;
+  background: url(../img/night.png)no-repeat;
+  background-size: 100% 100%;
+  /* outline: 5px solid #000; */
+}
+
+.angle .rwall {
+  top: 47%;
+  right: -111.3%;
+  width: 100%;
+  height: 100%;
+  background: url(../img/night.png)no-repeat;
+  background-size: 100% 100%;
+  /* outline: 5px solid #000; */
+}
+
+.angle .front {
+  width: 100%;
+  height: 100%;
+  background: url(../img/night.png)no-repeat;
+  background-size: 100% 100%;
+}
+
+.angle .left {
+  top: 22%;
+  left: -50%;
+  transform: rotateX(21deg) rotateY(103deg);
+  width: 100%;
+  height: 108%;
+  background: url(../img/night.png);
+  background-size: 100% 100%;
+  z-index: 1;
+  /* outline: 5px solid #000; */
+}
+
+.angle .right {
+  top: 22%;
+  right: -50%;
+  transform: rotateX(21deg) rotateY(-103deg);
+  width: 100%;
+  height: 108%;
+  background: url(../img/night.png);
+  background-size: 100% 100%;
+  z-index: 1;
+  /* outline: 5px solid #000; */
+}
+
+.cont {
+  position: absolute;
+  top: 0%;
+  left: calc(50% - 500px);
+  width: 1000px;
+  height: 60%;
+}
+
+.exit {
+  position: absolute;
+  top: 50%;
+  right: 15%;
+}
+
+.back {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+}
+
+.cont a {
+  color: green;
+  font-size: 50px;
+  line-height: 1.5;
+  cursor: pointer;
+}

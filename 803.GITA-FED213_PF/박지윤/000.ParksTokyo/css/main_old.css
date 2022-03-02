@@ -1,0 +1,427 @@
+/* 
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+*/
+
+body * {
+    /* outline: 1px dashed silver; */
+}
+
+
+
+/*************************** 상단영역 ***************************/
+
+#top {
+    position: fixed;
+    z-index: 999;
+    height: 100px;
+    width: 100%;
+    background-color: transparent;
+    font-family: 'PT Serif', serif;
+}
+
+/* 로고 */
+h1.logo {
+    text-align: center;
+    margin-top: 37px;
+}
+
+.logo a img {
+    width: 126px;
+    vertical-align: bottom;
+    /* display: block; */
+}
+
+/* 햄버거메뉴 */
+.menu h2 a {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    /* display: inline-flex; */
+    /* padding-left: 5%; */
+}
+
+.menu span {
+    display: inline-block;
+    width: 80px;
+    height: 12px;
+    /* background-color: #111; */
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    margin-right: 15px;
+}
+
+.menu a {
+    /* display: inline-block; */
+    font-family: 'PT Serif', serif;
+    font-weight: 200;
+    vertical-align: top;
+}
+
+.menu:hover span {
+    transform: scaleY(50%);
+    transition: .3s;
+}
+
+/* 햄버거 서브 메뉴 가리기 */
+.menu div {
+    display: none;
+}
+
+
+
+/*************************** 메인영역 ***************************/
+
+/* 컨텐츠1 */
+/* 애니메이션 텍스트 PARKS */
+.cont1 b {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 500;
+    font-size: 30vh;
+    white-space: nowrap;
+    /* display: none    ; */
+}
+
+
+
+/* 컨텐츠2 */
+.cont2 {
+    position: relative;
+}
+
+.cont2>div {
+    display: block;
+    position: absolute;
+}
+
+/* 컨텐츠2의 맨 위 컨텐츠 마진 주기 */
+.cont2:first-of-type {
+    margin: 200px 0;
+}
+
+/* 컨텐츠 2 News 영역 */
+.cont2 h1 {
+    position: sticky;
+    top: 100px;
+    display: block;
+
+    color: #dbdbdb;
+    font-family: 'PT Serif', serif;
+    font-size: 92px;
+    font-weight: lighter;
+    /* padding-top: 200px; */
+}
+
+
+/*•••••••••• 등장액션 class ••••••••••*/
+.scAct1 {
+    transform: translateY(100px);
+    /* opacity: 0; */
+    transition: 1s ease-in-out;
+}
+
+/* 원위치 복귀 등장! */
+.scAct1.on {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+/* 이미지 위로 겹치는 텍스트 정렬 */
+.odd {
+    display: block;
+    margin-left: 23%;
+}
+
+.even {
+    display: block;
+    margin-left: 32%;
+}
+
+/* 컨텐츠2 상단에 표시되는 PARKS 로고 */
+.cont2 h3 a {
+    display: block;
+    margin-left: 60%;
+}
+
+.cont2 h3 img {
+    width: 450px;
+}
+
+/* 타이틀,카테고리,날짜 정리 */
+.cont2 h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 62px;
+    font-weight: lighter;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.cont2 .category {
+    font-family: 'Poppins', sans-ser if;
+    font-size: 18px;
+    font-weight: lighter;
+    color: #adadad;
+    display: block;
+    padding-bottom: 30px;
+}
+
+.cont2 .date {
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    font-weight: lighter;
+    color: #111;
+}
+
+/* 이미지 지그재그 정렬 */
+.cont2>img {
+    display: block;
+    width: 45%;
+    margin-bottom: 200px;
+}
+
+.newspic-left {
+    margin-left: 5%;
+}
+
+.newspic-right {
+    margin-left: 50%;
+}
+
+/* PARKS MANAGEMENT 문구 */
+.cont2 h4 {
+    display: block;
+    box-sizing: border-box;
+    border-top: 1px solid #111;
+
+    font-size: 120px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: #111;
+    white-space: nowrap;
+}
+
+.cont2 h4:last-child {
+    display: block;
+    box-sizing: border-box;
+    border-bottom: 1px solid #111;
+}
+
+
+
+/* 컨텐츠3 */
+/* 아티스트 소개 */
+.cont3 {
+    position: relative;
+    display: block;
+    width: 100%;
+    /* height: 1200px;  */
+    background-color: #111;
+    padding: 20% 0 40% 4%;
+}
+
+.cont3 h2 {
+    font-size: 92px;
+    font-family: 'PT Serif', serif;
+    font-weight: lighter;
+    color: #dbdbdb;
+    margin-bottom: 90px;
+}
+
+/* 아티스트 2명 이름 */
+.cont3 h3 {
+    position: relative;
+
+}
+.cont3 h3 span{
+    font-size: 62px;
+    font-family: 'PT Serif', serif;
+    font-weight: lighter;
+    color: #fff;
+    cursor: pointer;
+}
+
+.cont3 h3 img {
+    position: absolute;
+    top: -100px;
+    left: 10%;
+
+    display: none;
+    width: 500px;
+
+    transform: scale(0);
+}
+
+
+.cont3 h3:hover {
+    transform: translateX(50px);
+    transition: .5s ease-in-out;
+}
+
+.cont3 h3:hover img {
+    display: block;
+    transition: ease-out 1s;
+    transform: scale(1);
+}
+
+
+/* 컨텐츠4 */
+.cont4 {
+    position: relative;
+    /* background: linear-gradient(to bottom, #5F6C68); */
+    background-color: #5F6C68;
+    font-weight: lighter;
+    padding: 25% 0;
+}
+
+.cont4 ul {
+    padding-left: 8%;
+}
+
+/* 왼쪽 - 타이틀, 이름, 직업 텍스트 */
+.cont4 .title {
+    font-family: 'Noto Sans JP', 'Poppins', sans-serif;
+    font-size: 32px;
+    color: #fff;
+    margin-bottom: 30px;
+}
+
+.cont4 .kayo,
+.gou {
+    font-size: 20px;
+    font-family: 'PT Serif', serif;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.cont4 .stylist,
+.hair {
+    font-size: 16px;
+    font-family: 'PT Serif', serif;
+
+    color: #dbdbdb;
+}
+
+/* 오른쪽 - 텍스트와 함께오는 이미지 */
+.cont4 .pics img {
+    right: 12.5%;
+    width: 25%;
+    padding-left: 62.5%;
+}
+
+
+
+/* PARKS TOKYO 이메일 */
+#email {
+    font-family: 'Poppins', sans-serif;
+    font-size: 100px;
+    white-space: nowrap;
+    /* line-height: 300px; */
+
+    display: block;
+    box-sizing: border-box;
+    height: 300px;
+    padding-top: 70px;
+
+    transition: all 1s ease;
+}
+
+#email span {
+    display: block;
+    width: 100%;
+    /* height: auto; */
+    border: 5px solid #111;
+}
+
+#email:hover span {
+    border: none;
+}
+
+
+
+
+/*************************** 하단영역 ***************************/
+
+/* 컨택트 정보 */
+.contact {
+    position: relative;
+    background-color: #111;
+    padding: 10% 0 10% 5%;
+    font-weight: 300;
+}
+
+.contact h2 {
+    font-family: 'PT Serif', serif;
+    font-size: 92px;
+    font-weight: lighter;
+    color: #dbdbdb;
+    margin-bottom: 100px;
+}
+
+/* 회사 소개/정보 영역 등분할하기 */
+.f-info {
+    display: flex;
+    margin-bottom: 150px;
+}
+
+.f-info div {
+    flex: 1;
+}
+
+/* 회사소개글 */
+.contact p {
+    font-family: 'Noto Sans JP', 'Poppins', sans-serif;
+    font-weight: lighter;
+    color: #fff;
+    line-height: 32px;
+}
+
+/* 회사정보 영역 */
+.contact ul {
+    display: flex;
+}
+
+.contact ul li {
+    flex-wrap: wrap;
+    padding-right: 150px;
+    margin-bottom: 40px;
+
+}
+
+/* 메일, 전화번호, 주소 */
+.contact h4 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    color: #adadad;
+    margin-bottom: 10px;
+}
+
+.contact a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    color: #fff;
+}
+
+.contact a:hover {
+    border-bottom: 2px solid white;
+}
+
+
+/* sns 영역 */
+.sns {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.sns li:first-child {
+    padding-right: 30px;
+}
+
+/* 카피라이트 */
+.contact span {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    color: #fff;
+}

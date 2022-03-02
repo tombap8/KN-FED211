@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=PT+Serif&family=Poppins:wght@200;300;400&display=swap');
+
+/* 
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+*/
+
+
+.ibx {
+    width: 100%;
+    height: auto;
+}
+
+
+/* mousemove */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+} */
+
+div#mbx {
+    position: absolute;
+    transition: .6s ease-out;
+    top: 45%;
+    left: 48%;
+    width: 60px;
+    height: 60px;
+}
+
+div#view {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+
+    width: 60px;
+    height: 60px;
+
+    font-size: 14px;
+    color: #111;
+    white-space: nowrap;
+    text-align: center;
+    line-height: 60px;
+
+    background-color: #fff;
+    border: 1px solid #111;
+    border-radius: 50%;
+
+    cursor: pointer;
+    z-index: 100;
+
+    mix-blend-mode: exclusion;
+
+}
+
+
+/* 햄버거메뉴 */
+.menu h2 a {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    /* display: inline-flex; */
+    /* padding-left: 5%; */
+}
+
+.menu span {
+    display: inline-block;
+    width: 80px;
+    height: 12px;
+    /* background-color: #111; */
+    border-top: 1px solid #111;
+    border-bottom: 1px solid #111;
+    margin-right: 15px;
+}
+
+.menu a {
+    /* display: inline-block; */
+    font-family: 'PT Serif', serif;
+    font-weight: 200;
+    vertical-align: top;
+}
+
+.menu:hover span {
+    height: 6px;
+    margin-bottom: 3px;
+    transition: .3s;
+}
+
+.menu.on span {
+    height: 0;
+    margin-bottom: 6px;
+    border-bottom: none !important;
+}
+
+/* 햄버거 서브 메뉴 가리기 */
+.menu div {
+    display: none;
+}
+
+
+
+/***************** class on 주기 *****************/
+
+/* 햄버거 메뉴 클릭 시 하위메뉴 펼쳐짐 */
+
+/* 햄버거 메뉴 위치 그대로 */
+.menu.on h2 a {
+    position: absolute;
+    color: white;
+    top: 3.9%;
+    left: 5%;
+}
+
+/* 햄버거 메뉴 클릭 시 배경 채우기 */
+.menu.on {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background-color: #7D8884;
+
+}
+
+.menu.on h2 a span {
+    display: inline-block;
+    width: 80px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-right: 15px;
+}
+
+/* 가렸던 하위메뉴 표시하기 */
+.menu.on>div {
+    display: block;
+    padding: 110px 100px;
+}
+
+/* 하위메뉴 텍스트 디자인 */
+.menu.on ul li a {
+    color: #dbdbdb;
+    font-size: 72px;
+    font-family: 'PT Serif', serif;
+}
+
+.menu.on div ul {
+    margin-bottom: 120px;
+}
+
+
+/* 하위메뉴의 서브메뉴 smenu */
+.menu.on .smenu div {
+    height: 0;
+    display: none;
+    transition: height 1s ease-out;
+}
+
+.menu.on .smenu:hover div {
+    height: auto;
+    display: block;
+    transition: height 1s ease-in-out;
+}
+
+.menu.on .smenu>div>ol>li>a {
+    display: block;
+    padding: 10px 50px;
+    font-size: 52px;
+}
+
+
+
+/* 하위메뉴 sns 영역 */
+.menu.on .sns a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #dbdbdb;
+    letter-spacing: 1px;
+}
+
+/* 하위메뉴 카피라이트 */
+.menu.on h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: lighter;
+    color: #dbdbdb;
+    letter-spacing: 1px;
+}
+
+/* 하위메뉴 마우스오버 */
+.menu.on a:hover {
+    color: white;
+}
+
+
+
+
+/* 등장액션 class */
+.scAct {
+    display: block;
+    transform: translateY(120px);
+    /* 120px 떨어진 곳에서부터 서서히 스크롤 올라옴 */
+    opacity: 0;
+    transition: 1s ease-in-out;
+}
+
+/* 원위치 복귀 등장! */
+.scAct.on {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+
+
+/* 탑버튼 */
+.tbtn {
+    position: fixed;
+    bottom: -5%;
+    /* 처음에 아래에 나가있음! */
+    right: 5%;
+    width: 56px;
+    height: 56px;
+    
+    mix-blend-mode: exclusion;
+    background-color: rgba(255, 255, 255, 0.63);
+    border: 1px solid #111;
+    border-radius: 50%;
+    /* 둥근모서리: 왼위 오른위 오른아래 왼아래 */
+    
+    line-height: 56px;
+    text-align: center;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #111;
+    font-size: 12px;
+
+    z-index: 9999;
+    opacity: 0;
+    /* 투명 */
+    transition: background-color .3s, opacity .3s, bottom .001s .3s;
+}
+
+.tbtn.on {
+    bottom: 5%;
+    right: 5%;
+    opacity: 1;
+    transition: background-color .3s, opacity .3s;
+}
+
+/* 탑버튼 마우스 오버 */
+.tbtn:hover {
+    background-color: #111;
+    color: #fff;
+}

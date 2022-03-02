@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Jua&family=Audiowide&display=swap');
+
+ /* body *{
+  outline: 1px dotted red;
+}  */
+
+html,
+body,
+h1,
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+ul,ol,li,a{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.header{
+  padding-top: 60px;
+  padding-bottom: 50px;
+}
+
+.top img {
+  /* padding-top: 55px; */
+  height: 210px;
+}
+
+.cont2,
+.cont3 {
+  text-align: center;
+  font-size: 11px;
+  font-weight: bolder;
+  width:100%;
+}
+
+/* 
+.log {
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  top: 60px;
+  right: 90px;
+  background: url(../images/login.PNG)no-repeat center/100%;
+  width: 23px;
+  height: 22px;
+} */
+
+/* 공통 쥐에스 25*/

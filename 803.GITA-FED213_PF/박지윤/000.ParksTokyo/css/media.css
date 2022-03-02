@@ -1,0 +1,248 @@
+@charset "utf-8";
+
+/* PARKS TOKYO 미디어쿼리 CSS - media.css */
+
+/* 800px 이하 */
+@media screen and (max-width:800px) {
+
+
+    /* ////////////////////////////////////////////////////////// */
+    /* 컨텐츠1 */
+
+    /* 상단 네비바 높이 조절 */
+    #top {
+        height: 70px;
+    }
+
+    /* 메인 로고 이미지 위치/사이즈 조절 */
+    h1.logo {
+        margin-top: 28px;
+    }
+
+    .logo a img {
+        width: 96px;
+    }
+
+    /* 메뉴버튼 길이 조절 */
+    .menu span {
+        width: 48px;
+    }
+
+
+
+    /* ////////////////////////////////////////////////////////// */
+    /* 컨텐츠2 */
+
+    /* 뉴스 글자크기 조절 */
+    .cont2 h1 b {
+        font-size: 15vw;
+    }
+
+    /* 파크 로고 이미지 위치/사이즈 조절 */
+    .cont2 h3 a {
+        left: 50%;
+        transform: translateX(-80%);
+    }
+
+    .cont2 h3 img {
+        margin-top: 70px;
+        width: 50vw;
+    }
+
+    /* 이미지 타이틀 글자크기 조절 */
+    .cont2 h2 {
+        font-size: 8vw;
+    }
+
+    /* 컨텐츠 2 이미지들 사이즈 조절 */
+    .cont2>img {
+        width: 80%;
+    }
+
+    .newspic-left,
+    .newspic-right {
+        margin-left: 5%;
+    }
+
+    /* 텍스트들 위치값 조절 */
+    .firstAct {
+        padding-top: 40%;
+        margin-left: 10%;
+    }
+
+    .secAct {
+        margin-top: 80%;
+        margin-left: 40%;
+    }
+
+    .thirdAct {
+        margin-top: 30%;
+        margin-left: 32%;
+    }
+
+    .forthAct {
+        margin-top: -20%;
+        margin-left: 10%;
+    }
+
+    .fifAct {
+        margin-top: 115%;
+        margin-left: 10%;
+    }
+
+
+    /* PARKS MANAGEMENT 문구 글자크기 조절*/
+    .parksFlow {
+        padding-top: 100px;
+    }
+
+    .comp {
+        font-size: 12vw;
+    }
+
+
+    /* ////////////////////////////////////////////////////////// */
+    /* 컨텐츠3 */
+
+    .cont3 {
+        padding: 25% 0 50% 5%;
+    }
+
+    .cont3 h2 {
+        font-size: 15vw;
+        margin-bottom: 60px;
+    }
+
+    .cont3 li {
+        margin-bottom: 20px;
+    }
+
+    .cont3 a {
+        font-size: 8vw;
+    }
+
+    /* 아티스트 이름 이미지 안 보이기 */
+    .cont3 li:hover img {
+        display: none;
+    }
+
+
+
+
+    /* ////////////////////////////////////////////////////////// */
+    /* 컨텐츠4 */
+
+    .cont4 {
+        padding: 20% 10%;
+    }
+
+    /* 슬라이드 이미지 사이즈 비율 조절*/
+    .cont4>div {
+        width: 80vw;
+        height: auto;
+    }
+
+    #slide img {
+        width: 80vw;
+    }
+
+    /* 이메일 */
+    #email {
+        height: auto;
+        padding-top: 1%;
+        padding-bottom: 10%;
+        font-size: 15vw;
+    }
+
+    #email span {
+        border: 3px solid #111;
+    }
+
+
+
+    /*************************** 하단영역 ***************************/
+    /* 컨택트 정보 */
+
+    .contact {
+        padding: 20% 5%;
+    }
+
+    .contact h2 {
+        font-size: 15vw;
+    }
+
+    /* 컨택트 영역 등분할 조절 */
+    .f-info {
+        display: inline;
+    }
+
+    .left-p {
+        padding-right: 5%;
+    }
+
+    .right-info {
+        margin-top: 100px;
+    }
+
+    .contact ul {
+        display: block;
+    }
+
+    /* 줄변경 가능하게 */
+    .contact a {
+        white-space: normal;
+    }
+
+    /* 보더 없앰 */
+    .contact a:hover::after {
+        border-bottom: none;
+    }
+
+
+    /* 마우스 무브먼트 제거 - mousemove none */
+    div#mbx {
+        display: none;
+    }
+
+
+
+    /*************************** ON영역 ***************************/
+
+    /* 메뉴버튼 클릭 시 */
+    .menu.on h2 a span {
+        width: 48px;
+    }
+
+    .menu.on ul li a {
+        font-size: 12vw;
+    }
+
+    /* 서브메뉴 위치 조절 */
+    .menu.on div {
+        padding-left: 10%;
+    }
+
+    .menu.on .smenu>div>ol>li>a {
+        display: block;
+        padding: 10px 40px;
+        font-size: 8vw;
+        white-space: nowrap;
+    }
+
+    /* 등장액션 class */
+    .scAct {
+        transform: translateY(100px);
+        /* 100px 떨어진 곳에서부터 서서히 스크롤 올라옴 */
+        opacity: 0;
+        : .7s ease-in-out;
+    }
+
+    /* 원위치 복귀 등장! */
+    .scAct.on {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+/* 800px 이하 */

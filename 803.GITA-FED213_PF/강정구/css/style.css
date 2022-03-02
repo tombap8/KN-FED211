@@ -1,0 +1,600 @@
+@charset "utf-8";
+
+@import url(reset.css);
+@import url(sub-menu.css);
+
+body {
+    width: 100%;
+}
+
+
+/************* 상단 header 박스 *************/
+header {
+    position: relative;
+    top: 0;
+}
+
+.outside_box {
+    max-width: 1200px;
+    height: 135px;
+    box-sizing: border-box;
+    margin: 0 auto;
+    display: flex;
+    padding: 30px 0 30px 0;
+}
+
+/* 메인로고박스 */
+.part1 {
+    width: 400px;
+}
+
+.main-logo_box {
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main-logo_box img {
+    width: 119.73px;
+    vertical-align: bottom;
+    margin: 0;
+}
+
+.right-wrapping_box {
+    text-align: end;
+}
+
+.sub1_box {
+    height: 22.4px;
+    font-size: 12px;
+}
+
+.sub1_box span {
+    vertical-align: middle;
+    margin: 0 10px;
+}
+
+.sub1_box span:last-child {
+    margin: 0 0 0 10px;
+}
+
+.sub1_box span a {
+    color: #888888;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+}
+
+.sub1_box span a:hover {
+    color: rgba(136, 136, 136, 0.5);
+    transition: .3s;
+
+}
+
+.sub2_box {
+    margin-top: 23px;
+    font-size: 14px;
+    height: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.sub2_box .subwb {
+    display: flex;
+    justify-content: flex-end;
+    width: 255px;
+    float: right;
+}
+
+.color_box {
+    background-color: #1ecad3;
+    margin: 0 5px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.color_box:hover {
+    background-color: #10adb5;
+    transition: .3s;
+}
+
+.sub2_box div:last-child {
+    margin-right: 0;
+}
+
+.sub2_box .subwb .color_box a {
+    display: block;
+    padding: 4px 20px;
+    height: 100%;
+}
+
+.sub2_box .subwb .color_box a span {
+    font-family: 'Black Han Sans', sans-serif;
+    display: block;
+    color: #fff;
+    margin-top: 3px;
+    letter-spacing: 0.7px;
+}
+
+/* 네브박스 */
+nav {
+    height: 63px;
+}
+
+.navin {
+    margin: 0 auto;
+    height: 40px;
+    display: flex;
+    width: 927px;
+}
+
+.navin li {
+    font-size: 14.2px;
+    font-weight: bold;
+    letter-spacing: .2px;
+    height: 40px;
+
+}
+
+.navin li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    padding: 0 50px;
+    box-sizing: border-box;
+    color: #55585b;
+}
+
+.navin li a:hover {
+    color: rgba(33, 33, 33, 0.502);
+    transition: .3s;
+}
+
+.navin li a span {
+    padding-left: 2px;
+    display: block;
+    padding-top: 10px;
+}
+
+/* 헤더파트 끝 */
+
+
+/************************** 메인파트 **************************/
+.main {
+    position: relative;
+}
+.maintop {
+    position: relative;
+}
+/* 비디오박스 */
+.vid-dive_box {
+    position: relative;
+}
+
+video {
+    width: 100%;
+}
+
+/* 다이빙파트 */
+.dive_box::before {
+    content: '';
+    display: block;
+    height: 63px;
+    width: 100%;
+}
+
+.dive_box {
+    min-height: 1px;
+    height: 63px;
+    
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.dive_box img {
+    width: 100%;
+}
+
+/* 유튜브&파도배경파트 */
+.wave_box {
+    background-image: url(../imges/dive_back.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    height: 1056px;
+    width: auto;
+    margin-bottom: 0;
+    border: 0px;
+}
+
+.youtube_box::before {
+    content: '';
+    width: 100%;
+    height: 253px;
+    display: block;
+}
+
+.youtube_box {
+    max-width: 1200px;
+    height: 675px;
+    margin: 0 auto;
+}
+
+.youtube_box iframe {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.beer_wrap {
+    position: relative;
+}
+
+.bg {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+
+}
+
+/* 위트에일 파트 */
+.weat_ale {
+    background-image: url(../imges/weat_back.png);
+    overflow: hidden;
+
+}
+
+/* 펠롱에일 파트 */
+.pellong_ale {
+    background-image: url(../imges/pellong_back.png);
+    overflow: hidden;
+}
+
+/* 거멍에일 */
+.geomeong_ale {
+    background-image: url(../imges/geomeong_back.png);
+    left: 0;
+    overflow: hidden;
+}
+
+
+
+.lg {
+    width: 50%;
+    height: 110px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 45px;
+}
+
+.lg img {
+    width: auto;
+    height: 110px;
+}
+
+.infobox {
+    width: 1200px;
+    height: 309px;
+    margin: auto;
+    margin-top: 75px;
+    display: flex;
+    align-items: center;
+}
+
+.imgbox {
+    height: 309px;
+    margin-left: 100px;
+}
+
+.imgbox img {
+    height: 309px;
+}
+
+.binfo {
+    margin-left: 40px;
+    color: #fff;
+    font-size: 20px;
+}
+
+.binfo span {
+    font-size: 24px;
+}
+
+.slide1 {
+    position: relative;
+    width: 1000px;
+    max-width: 1000px;
+    height: 615px;
+    margin: 0 auto;
+    margin-top: 21px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.bigs {
+    margin-top: 21px;
+    margin-bottom: 10px;
+
+}
+
+
+.slide_imgbox1 {
+    position: absolute;
+    box-sizing: border-box;
+
+    top: 0;
+    left: 0;
+
+}
+
+.slide_imgbox1 li {
+    width: 1000px;
+    height: 100%;
+    float: left;
+
+}
+
+.slide_imgbox1 li img {
+    width: 1000px;
+    max-width: 1000px;
+    height: 610px;
+}
+
+
+
+
+.slide1 .ri {
+    display: block;
+    width: 40px;
+    height: 200px;
+    position: absolute;
+    left: 85%;
+    top: 37%;
+    cursor: pointer;
+}
+
+.slide1 .li {
+    display: block;
+    width: 40px;
+    height: 200px;
+    position: absolute;
+    left: 11%;
+    top: 37%;
+    cursor: pointer;
+}
+
+/* 작은슬라이드파트 */
+.smls {
+    height: 220px;
+    margin-bottom: 140px;
+}
+
+.sldbx {
+    position: absolute;
+    width: 900px;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.slide_imgbox2 {
+    position: absolute;
+    display: flex;
+    left: -290px;
+    width: auto;
+}
+
+
+.slide_imgbox2 li {
+    width: 290px;
+    padding-right: 10px;
+    overflow: hidden;
+    float: left;
+
+}
+
+.slide_imgbox2 li img {
+    width: 290px;
+    max-width: 100%;
+    height: 220px;
+    object-fit: center;
+    float: left;
+    cursor: pointer;
+
+}
+
+.sri {
+    display: inline-block;
+    width: 40px;
+    height: 150px;
+    position: relative;
+    left: 90%;
+    top: 15%;
+    cursor: pointer;
+}
+
+.sli {
+    display: inline-block;
+    width: 40px;
+    height: 150px;
+    position: relative;
+    left: 0%;
+    top: 15%;
+    cursor: pointer;
+}
+
+
+/*************** 메인바텀  ***************/
+.mainbottom {
+    outline: 2px solid rgba(10, 10, 100, #000);
+    background: #fff;
+    width: 100%;
+    height: 360px;
+}
+
+.mainbottom h2 {
+    text-align: center;
+    padding-top: 60px;
+    font-size: 20px;
+    color: #1ecad3;
+}
+
+h2 strong {
+    font-size: 23px;
+}
+
+.slide2 {
+    margin-top: 30px;
+    height: 80px;
+    width: 80vw;
+    overflow: hidden;
+    position: absolute;
+    left: 10%;
+    cursor: grab;
+}
+
+.slide2 ul {
+    height: 80px;
+    position: relative;
+    left: 0;
+    width: 220vw;
+    transition: 10s;
+    animation: imgFlow1 60s linear infinite;
+    display: flex;
+}
+
+.slide2 ul li {
+    flex: 1;
+    width: 5vw;
+    margin: 10px;
+    margin: 0 5px;
+    background-position: left;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@keyframes imgFlow1 {
+    to {
+        left: -172%;
+    }
+
+}
+
+footer {
+    width: 100%;
+}
+
+.foot {
+    width: 100%;
+    height: 115px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.about_wrap {
+    width: 50%;
+}
+
+.about1 {
+    height: 55px;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+}
+
+.about1 span {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 14px;
+    margin-right: 25px;
+    color: #999999;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+
+.about2 {
+    padding-top: 10px;
+    padding-left: 8px;
+    height: 40px;
+}
+
+.about2 span {
+    margin-right: 25px;
+    color: #999999;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 600;
+    letter-spacing: .5px;
+}
+.iconbox {
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+}
+
+.iconbox div {
+    height: 40px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.iconbox img {
+    width: 100%;
+    height: 100%;
+}
+
+/************* 하단 address파트 *************/
+address {
+    width: 100%;
+    height: 50%;
+    margin-left: 22px;
+    color: #999999;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    font-style: normal;
+    line-height: 1.5em;
+}
+
+.last {
+    height: 40px;
+    margin-bottom: 50px;
+    font-size: 11px;
+    display: flex;
+    align-items: flex-end;
+}
+
+
+.fixed_icon {
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    bottom: 3%;
+    right: 3%;
+}
+
+.fixed_icon a {
+    width: 60px;
+    margin-bottom: 5px;
+}
+
+.fixed_icon img {
+    width: 100%;
+    height: 100%;
+}

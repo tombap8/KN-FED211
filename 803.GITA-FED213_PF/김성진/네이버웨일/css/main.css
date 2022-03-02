@@ -1,0 +1,567 @@
+@charset "utf-8";
+/* 네이버웨일 메인 CSS - main.css */
+
+/* 외부파일 합치기 */
+@import url(reset.css);
+@import url(core.css);
+
+/* 글시체 */
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&family=Stylish&display=swap');
+
+/* font-family: 'Gowun Batang', serif; */
+
+/* 박스표시 */
+/* body *{
+    outline: 1px dashed gray;
+} */
+/* 겉박스 속성 */
+
+#excont1{
+    width: 100%;
+    margin-top: 90px;
+    background: url(../naverimages/top_bg.jpg) no-repeat top center/cover;
+    height: calc(100vh - 90px);
+    min-height: 700px;
+}
+#excont2{
+    width: 100%;
+    background: url(../naverimages/tasking_bg.jpg) no-repeat top center/cover;
+    height: calc(100vh + 90px);
+}
+#excont3{
+    width: 100%;
+    background: url(../naverimages/security_bg.jpg) no-repeat top center/cover;
+    height: calc(100vh + 90px);
+}
+#excont4{
+    width: 100%;
+    background: url(../naverimages/interface_bg.jpg) no-repeat top center/cover;
+    height: calc(100vh + 90px);
+}
+#excont5{
+    width: 100%;
+    background-color: #fff;
+    padding: 10% 0;
+    text-align: center;
+   
+}
+
+
+
+
+/* 속박스 class */
+.ibx{
+    max-width: 1920px;
+    /* 최대 1280px, 보다 작아지면 auto */
+    margin: 0 auto;
+    /* 박스 중앙정렬 */
+    position: relative;
+}
+.ibx2{
+    max-width: 1600px;
+    /* 최대 1920px, 보다 작아지면 auto */
+    margin: 0 auto;
+    /* 박스 중앙정렬 */
+    position: relative;
+    overflow: hidden;
+}
+.ibx3{
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+
+
+
+/********************* 1. 상단영역 */
+#top{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 5px 10px 2px rgb(0 0 0 / 10%);
+    z-index: 90;
+    font-family: 'Gowun Batang', serif;
+    
+}
+.drop{
+    width: 100%;
+    background-color: #fff;
+    height: 90px;
+    overflow: hidden;
+    transition: height .4s ease-in-out;
+}
+
+.top{
+    height: 90px;
+}
+/* 상단로고 */
+.toplogo{
+    position: absolute;
+    top: 23px;
+    left: 6%;
+    width: 200px;
+    height: 40px;
+}
+
+.top>h1>a{
+
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    text-indent: -9999em;
+    background: url(../naverimages/logo_whale.svg) no-repeat center;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    outline-style: none;
+    box-sizing: border-box;
+    border: 0;
+    
+}
+/* 상단 소메뉴 */
+.gnb{
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.gnb>ul{
+    text-align: center;
+}
+.gnb>ul li{
+    display: inline-block;
+    width: 12%;
+    line-height: 5.6;
+    vertical-align: top;
+}
+
+.gnb>ul>li>a{
+    color: #000;
+    font-size: 18px;
+}
+.ssmenu:hover a{
+    color: #05d7b4;
+}
+.smenu ol {
+    font-size: 16px;
+}
+
+.smenu>ol{
+    margin-top: 20px;
+}
+.ssmenu ol li{
+    display:block;
+    width: 100%;
+    line-height: 2.3;
+}
+/* .smenu>li>ol{
+    margin-top: 20px;
+}
+.smenu>li>ol>li{
+    display: block;
+    width: 100%;
+    line-height: 2.3;
+} */
+
+/* 다운로드 */
+
+.topdown{
+    position: absolute;
+    top: 20px;
+    right: 4%;
+    width: 125px;
+    height: 50px;
+    color: #15c5aa;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    border: 1px solid #15c5aa;
+    border-radius: 5px;
+}
+
+/* 모바일 메뉴 */
+.mobilebox{
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+.mobilebutton{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 0;
+    right: 0;
+    cursor: pointer;
+    z-index: 9999;
+}
+.mobilebutton span{
+    width: 34px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0 auto;
+    transition: .5s ease-in-out;
+}
+.mobilebutton span::after{
+    width: 34px;
+    height: 2px;
+    background-color: #333;
+    top: 13px;
+    position: absolute;
+    content: "";
+    transition: .5s ease-in-out;
+}
+.mobilebutton span::before{
+    width: 34px;
+    height: 2px;
+    background-color: #333;
+    top: -13px;
+    position: absolute;
+    content: "";
+    transition: .5s ease-in-out;
+}
+
+.mobilemenu{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    height: 100vh;
+    background-color: #fff;
+    transition: .4s ease-out;
+
+
+}
+
+.mobilemenu>nav{
+    margin-top: 100px;
+}
+.mobilemenu>nav>li{
+    width: 100%;
+    
+}
+.mobilelist{
+    font-size: 15px;
+    padding-left: 20px;
+    color: #000;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    
+}
+
+.mobiledown{
+    padding: 10px 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.mobiledown>a{
+    display: block;
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #15c5aa;
+    font-size: 14px;
+    font-weight: bold;
+    border: 1px solid #15c5aa;
+}
+/* 버튼 클릭시 메뉴 숨기기 */
+
+.mobilemenu.on{
+    right: 0;
+}
+
+.mobilebutton.on span{
+    background: transparent;
+}
+.mobilebutton.on span::after{
+    transform: rotate(-135deg);
+    top: 0;
+}
+.mobilebutton.on span::before{
+    transform: rotate(135deg);
+    top: 0;
+}
+
+
+/************************* 2. 하단영역 */
+.info{
+    padding: 50px 0;
+    width: 100%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+.ibx3>h2{
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    padding-bottom: 20px;
+}
+.ibx3>h2>a{
+    display: block;
+    color: #000;
+    background: url(../naverimages/logo_whale_gray.svg) no-repeat center;
+    font-size: 25px;
+    text-indent: -9999em;
+    text-align: center;
+
+}
+.ibx3 ul>li{
+    display: inline-block;
+    padding-right: 15px;
+    color: #c0c0c0;
+    font-weight: 300;
+}
+.bottomdown{
+    position: absolute;
+    display: inline-block;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+    right: 0;
+    top: 50%;
+}
+.bottomdown a{
+    position: relative;
+    padding: 0 15px 0 45px;
+    height: 43px;
+    color: #c0c0c0;
+    font-size: 16px;
+    line-height: 43px;
+}
+.bottomdown a::before{
+    content: '';
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url(../naverimages/beta.svg) no-repeat;
+    top: 0%;
+    left: 6%;
+}
+
+/************************ 3. 메인영역 */
+.cont{
+    width: 100%;
+    height: 100%;
+}
+
+.leftmain{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3%;
+    vertical-align: middle;
+    z-index: 10;
+}
+
+.leftmain>h3{
+    font-size: 64px;
+    line-height: 1.2em;
+    font-weight: bold;
+}
+
+.leftmain>h3 span{
+    color: #05d7b4;
+}
+
+.leftmain_sub1{
+    font-size: 32px;
+    padding-top: 20px;
+}
+
+.leftmain_sub1 span{
+    color: #05d7b4;
+}
+.leftmain_sub2{
+    margin-top: 50px
+}
+
+#leftmain_button{
+    display: inline-block;
+    width: 250px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 45px;
+    height: 77px;
+    line-height: 77px;
+    position: relative;
+    background: #05d6b4;
+}
+#leftmain_button::after{
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 77px;
+    background: url(../naverimages/icon_btn_arrow.png) no-repeat 50% 50%;
+    background-size: 100%;
+    margin-left: 18px;
+    vertical-align: top;
+
+}
+
+.rightmain{
+    display: inline-block;
+    width: 100%;
+    max-width: 980px;
+    background: url(../naverimages/top_rightimg_bg.png) no-repeat 75% top/ contain;
+    max-height: 780px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/********************************두번째 메인  *****/
+/* 테스트용 버튼 */
+.bottonbox{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5vh;
+    color: #fff;
+    font-family: 'Gowun Batang', serif;
+}
+.button{
+    position: relative;
+    font-size: 30px;
+}
+ .rb1{
+    padding-left: 15px;
+}
+
+.slidebox{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 500%;
+    top: 0;
+    left: 0%;
+}
+.slidebox2{
+    display: flex;
+    position: absolute;
+    height: 100%;
+    width: 300%;
+    top: 0;
+    left: 0%;
+}
+.slide{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.leftsection{
+    width: 47%;
+    padding-left: 3%;
+    
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.rightsection{
+    width: 47%;
+    padding-right: 3%;
+    vertical-align: middle;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sectionp{
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+    opacity: .7;
+}
+
+.sectionh>b {
+    padding: 0 10px;
+    display: inline-block;
+    background: #fff;
+    color: #00b7bc;
+}
+
+.sectionh{
+    font-size: 55px;
+    color: #fff;
+    padding: 30px 0 60px;
+    font-weight: 600;
+}
+
+.sectionlink a{
+    display: inline-block;
+    font-size: 18px;
+    color: #fff;
+    line-height: 1em;
+    background: url(../naverimages/onarrow.png) no-repeat center right;
+    background-color: transparent;
+    background-size: 16px 16px;
+    padding: 20px 26px 20px 0;
+    font-weight: 600;
+}
+.imgbox img{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 25px;
+}
+
+/*블릿버튼*/
+.indic {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.indic::after{
+    display: block;
+    content: "";
+    clear: both;
+}
+
+.indic li {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    float: left;
+}
+
+.indic li img {
+    position: absolute;
+    /*이미지 겹치게*/
+}
+
+.indic li img:last-child {
+    /*회색이미지만 투명하게*/
+    opacity: 0;
+}
+
+/*회색블릿이미지가 보이게하는 class*/
+.indic li.on img:last-child {
+    /*회색이미지만 투명하게*/
+    opacity: 1;
+    /*우선적용!*/
+}
+
+/*@@@@@@@@@@@@@@@@@@@@@@@@ 5번째 메인 */
+.cont5{
+    max-width: 1280px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.cont5 img{
+    display: inline-block;
+    margin-bottom: 3%;
+    max-width: 560px;
+}

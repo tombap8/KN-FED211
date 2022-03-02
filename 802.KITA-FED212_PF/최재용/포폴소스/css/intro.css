@@ -1,0 +1,135 @@
+@charset "utf-8";
+@import url(../css/common.css);
+
+body {
+  position: relative;
+  background-color: #cdc6be
+}
+
+.bg {
+  padding-top: 35%;
+  background: url(../img/join1.png) center/cover no-repeat;
+  background-color: #cdc6be;
+  z-index: 1;
+}
+
+.bg:hover {
+  background: url(../img/join2.png) center/cover no-repeat;
+}
+
+.effect {
+  position: relative;
+  top: -100px;
+  width: 101%;
+  height: 150px;
+  text-align: center;
+  z-index: 5;
+}
+
+.cbg0,
+.cbg1,
+.cbg2,
+.cbg3,
+.cbg4,
+.cbg5,
+.cbg6,
+.cbg7,
+.cbg8,
+.cbg9,
+.cbg10,
+.cbg11 {
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background: url(../img/effect.png) no-repeat center/100%;
+  z-index: 2;
+}
+
+.cbg0 {
+  top: 5px;
+}
+
+.cbg1 {
+  top: 10px;
+}
+
+.cbg2 {
+  top: 15px;
+}
+
+.cbg3 {
+  top: 20px;
+}
+
+.cbg4 {
+  top: 25px;
+}
+
+.cbg5 {
+  top: 30px;
+}
+
+.cbg6 {
+  top: 35px;
+}
+
+.cbg7 {
+  top: 40px;
+}
+
+.cbg8 {
+  top: 45px;
+}
+
+.cbg9 {
+  top: 50px;
+}
+
+.cbg10 {
+  top: 55px;
+}
+
+.cbg11 {
+  top: 60px;
+}
+
+.cbox {
+  position: absolute;
+  top: 101px;
+  width: 100%;
+  height: 100%;
+  background-color: #cdc6be;
+  clip-path:
+    polygon(0% 100%, 0% 60%, 1% 75%, 2% 78%, 3% 80%, 4% 81%, 5% 81%, 6% 81%, 7% 81%, 8% 81%, 9% 81%, 10% 81%, 11% 81%, 12% 81%, 13% 81%, 14% 80%, 15% 79%, 16% 77%, 17% 75%, 18% 72%, 19% 68%, 20% 64%, 21% 60%, 22% 55%, 23% 50%, 24% 46%, 25% 42%, 26% 40%, 27% 39%, 28% 39%, 29% 39%, 30% 39%, 31% 38%, 32% 36%, 33% 35%, 34% 38%, 35% 35%, 36% 34%, 37% 35%, 38% 33%, 39% 32%, 40% 27%, 41% 24%, 42% 23%, 43% 21%, 44% 16%, 45% 16%, 46% 16%, 47% 11%, 48% 10%, 49% 10%, 50% 0%, 51% 0%, 52% 0%, 53% 0%, 54% 0%, 55% 0%, 57% 0%, 58% 0%, 59% 1%, 60% 2%, 61% 3%, 62% 6%, 63% 9%, 64% 11%, 65% 14%, 66% 18%, 67% 26%, 68% 31%, 69% 33%, 70% 36%, 71% 40%, 72% 44%, 72% 44%, 73% 50%, 74% 48%, 75% 52%, 76% 55%, 77% 57%, 78% 59%, 79% 60%, 80% 62%, 81% 64%, 82% 67%, 83% 70%, 84% 72%, 85% 74%, 86% 76%, 87% 77%, 88% 78%, 89% 78%, 90% 77%, 91% 77%, 92% 79%, 93% 82%, 94% 84%, 95% 86%, 96% 88%, 97% 89%, 99% 91%, 100% 67%, 100% 40%, 100% 100%);
+  z-index: 1;
+}
+
+.tit {
+  position: absolute;
+  top: 105%;
+  left: 25%;
+  font-size: 4vw;
+  text-align: center;
+  color: #1d1d1b;
+  line-height: 1;
+  z-index: 1;
+
+}
+
+.enter {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 30%;
+  height: 65%;
+  /* outline: 3px solid red; */
+}
+
+.enter>h2 {
+  position: absolute;
+  top: 50%;
+  left: 60%;
+  color: #1d1d1b;
+  cursor: pointer;
+  z-index: 10;
+}

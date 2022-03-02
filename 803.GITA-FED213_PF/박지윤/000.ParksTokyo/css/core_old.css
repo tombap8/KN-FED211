@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&family=PT+Serif&family=Poppins:wght@200;300;400&display=swap');
+
+/* 
+font-family: 'Noto Sans JP', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'PT Serif', serif;
+*/
+
+
+.ibx {
+    width: 100%;
+    height: auto;
+}
+
+
+/* 햄버거 메뉴 클릭 시 하위메뉴 펼쳐짐 */
+#top.on {
+    position: relative;
+    z-index: 999;
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    font-family: 'PT Serif', serif;
+}
+
+/* 햄버거 메뉴 위치 그대로 */
+.menu.on h2 a {
+    position: absolute;
+    color: white;
+    top: 4.5%;
+    left: 5%;
+}
+
+/* 햄버거 메뉴 클릭 시 배경 채우기 */
+.menu.on {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    background-color: #7D8884;
+}
+
+.menu.on h2 a span {
+    display: inline-block;
+    width: 80px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    margin-right: 15px;
+}
+
+/* 가렸던 하위메뉴 표시하기 */
+.menu.on div {
+    display: block;
+    padding: 110px 100px;
+}
+
+/* 하위메뉴 텍스트 디자인 */
+.menu.on ul li a {
+    color: #dbdbdb;
+    font-size: 72px;
+    font-family: 'PT Serif', serif;
+}
+
+.menu.on div ul {
+    margin-bottom: 120px;
+}
+
+/* 하위메뉴 sns 영역 */
+.menu.on .sns a {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    color: #dbdbdb;
+    letter-spacing: 1px;
+}
+
+/* 하위메뉴 카피라이트 */
+.menu.on h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: lighter;
+    color: #dbdbdb;
+    letter-spacing: 1px;
+}

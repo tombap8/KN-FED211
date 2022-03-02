@@ -15,23 +15,30 @@
         }
 
         body {
-            background: url(800.FED211_PF/main/images/bg.jpg) no-repeat center/cover;
+            background: url(800.FED211_PF/bg.jpg) no-repeat center/cover;
             overflow: hidden;
         }
 
+        .wrap{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+        }
         .tit {
             margin-top: 5%;
             color: #fff;
-            font-size: 7vw;
-            line-height: 10vw;
+            font-size: max(5vw,30px);
+            line-height: max(7vw,35px);
             text-shadow: 1px 0 #000, -1px 0 #000,
                 0 1px #000, 0 -1px #000;
             text-align: center;
         }
 
         .link {
-            font-size: 5vw;
-            line-height: 10vw;
+            font-size: max(4vw,25px);
+            line-height: max(5vw,30px);
             text-shadow: 1px 0 #000, -1px 0 #000,
                 0 1px #000, 0 -1px #000;
             text-align: center;
@@ -48,10 +55,18 @@
 </head>
 
 <body>
-    <h1 class="tit">최종 포트폴리오</h1>
-    <h2 class="link">
-        <a href="800.FED211_PF/main/index.html">포토폴리오 바로가기!!!</a>
-    </h2>
+    <div class="wrap">
+        <h1 class="tit">최종 포트폴리오</h1>
+        <h2 class="link">
+            <a href="800.FED211_PF/main/index.html">프론트엔드 웹개발 1회차</a>
+        </h2>
+        <h2 class="link">
+            <a href="802.KITA-FED212_PF/main/index.html">프론트엔드 웹개발 2회차</a>
+        </h2>
+        <h2 class="link">
+            <a href="803.GITA-FED213_PF/main/index.html">프론트엔드 웹개발 3회차</a>
+        </h2>
+    </div>
 </body>
 
 </html>

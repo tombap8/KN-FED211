@@ -1,0 +1,131 @@
+@charset "utf-8";
+
+
+/* 모바일 기분 960px 이하 시작 */
+@media only screen and (max-width:450px) {
+  .wrap {
+    max-width: 1300px;
+    padding: 0;
+  }
+
+  .top {
+    height: 140px;
+    text-align: center;
+    padding: 0;
+  }
+
+  .top img {
+    height: 80px;
+    padding: 30px;
+  }
+
+  #cont {
+    padding-left: 0px;
+    width: 100%;
+  }
+
+  #side ul {
+    display: none;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+
+  .ham {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    width: 5px;
+    height: 5px;
+    font-size: 55px;
+    font-weight: lighter;
+
+    /* background: white; */
+
+    cursor: pointer;
+    /* 마우스 오버시 손가락모양 */
+  }
+
+
+  /* 
+.ham>a .ham 클래스 안에 있는 a
+div.ham .ham 클래스가 적용되어있는 div
+
+*/
+  div.ham {
+    display: inline;
+
+  }
+}
+
+.gnb {
+  position: fixed;
+  /* top: -100%; */
+  /* 높이만큼 위로 올라감(숨겨짐) */
+  left: -100%;
+  width: 295px;
+  height: 100%;
+  background-color: white;
+  /* 햄버거 버튼을 덮고 나옴 */
+  z-index: 999;
+
+  /* 트랜지션: 속시이지 */
+  transition: left .6s ease-in-out;
+}
+
+/* GNB메뉴에 클래스 "on"을 주면 내려옴 */
+.gnb.on {
+  left: 0;
+  padding-top: 60px;
+}
+
+.cbtn {
+  right: 10px;
+  /* width:18px;
+  height: 18px; */
+  position: absolute;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+.gnb li a {
+  margin-left: 40px;
+}
+
+
+.gnb ul li:first-child {
+  margin-bottom: 35px;
+}
+
+.gnb ul li:last-child {
+  margin-top: 50px;
+}
+
+.gnb ul li {
+  padding-bottom: 10px;
+}
+
+.gnb ul li a {
+  color: black;
+}
+
+.gnb ul li a:hover {
+  text-decoration: underline;
+}
+
+.gnb {
+  position: fixed;
+  top: 60px;
+  width: 275px;
+  /* height: 320px; */
+  font-size: 12px;
+  font-weight: bolder;
+  /* background-color: rgb(255, 181, 181); */
+}
+
+
+.scont{
+  width:100%
+}
