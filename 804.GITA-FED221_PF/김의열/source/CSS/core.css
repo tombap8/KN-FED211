@@ -1,0 +1,308 @@
+@charset "utf-8";
+/* CGV PJ 공통핵심 CSS - core.css */
+/* 웹폰트, 공용클래스 */
+
+/*********** 1. 웹폰트 : CDN ***********/
+
+
+/************* 2. 공통 class *************/
+html{
+    overflow-x: hidden;
+}
+body.on{
+    height: 100vh;
+    overflow-y: hidden;
+}
+/* 비율유지박스 class */
+.rbx {
+    position: relative;
+    /* 비율유지속박스의 부모자격 */
+}
+
+/* 비율생성 가상요소 */
+.rbx1::before {
+    content: '';
+    display: block;
+    /* 패딩탑값 %로 비율에 맞게 각각셋팅 */
+    padding-top: 6%;
+}
+
+.rbx2::before {
+    content: '';
+    display: block;
+    /* 패딩탑값 %로 비율에 맞게 각각셋팅 */
+    padding-top: 494.94%;
+}
+
+.rbx3::before {
+    content: '';
+    display: block;
+    /* 패딩탑값 %로 비율에 맞게 각각셋팅 */
+    padding-top: 23.58%;
+}
+
+/* 비율유지속박스 */
+.rbxIn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+/* IR(Image Replacement) 클래스 */
+.ir {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+.fwh{
+    fill: white;
+}
+.fl {
+    display: flex;
+  }
+.flsb{
+    justify-content: space-between;
+}  
+.flww{
+    flex-wrap: wrap;
+}
+.flww div{
+    overflow-x: auto;
+}
+.flww>p:nth-child(2){
+    margin-right: 100px;
+}
+  /* 드래그 선택 막기 */
+.disel {
+    /* 선택 안 되게 하기 */
+    user-select: none;
+    /* 드래그 안 되게 하기 */
+    -webkit-user-drag: none;
+}
+/* 상단영역 */
+/* 모바일 전용버튼 */
+.mobtn {
+    /* 공통 */
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    /* 부모는? #top(모바일에서 fixed) */
+    color: black;
+    width: 21px;
+    height: 21px;
+    top: 50%;
+    transform: translateY(-50%);
+    /* 세로중앙이동 */
+    display: none;
+    /* 처음에 안보임 */    
+}
+.mobx{
+    width: 100vw;
+    height: 100vh;
+    position: relative;top: 70px;width: 100vw;
+    height: calc(100vh - 70px);
+    z-index: 1;
+    background-color: white;
+
+    display: none;
+}
+/* sns박스 */
+.mosns{
+    text-align: center;
+}
+.mosns a {
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    margin: 0 2px 10px;
+    font-size: 20px;
+    text-align: center;
+    /* 박스내의 인라인요소 가로중앙정렬 */
+    vertical-align: top;
+    /* 인라인 요소간 세로정렬(top-윗줄맞춤) */
+    line-height: 40px;
+    /* 보더가 2px내부에 포함되어서 2px뺀 높이와 같음! */
+    /* 글자가 박스 세로 중앙에 오도록 설정 */
+
+    /* 원형디자인 */
+    border: 1px solid #d2d2d2;
+    border-radius: 50%;
+    box-sizing: border-box;
+    /* 보더포함 */
+}
+/* 1-1.서브타이틀 */
+.stit{
+    font-family: pist;
+    font-size: 32px;
+    text-align: center;
+    /* padding: 40px 0 20px; */
+    /* text-align: center; */
+    font-weight: normal;
+    max-width: 700px;
+    margin: 0 auto;
+}
+/* 로그인 박스 */
+#login{
+    position: relative;
+    /* 부모자격 */
+    max-width: 700px;
+    min-height: 275px;
+    margin: 0 auto;/* 마영오 */
+    margin-top: 20px;
+    border: 2px solid #737373;
+    border-radius: 10px;
+
+    box-sizing: border-box;/* 크기유지 */
+    padding: 60px 15px;
+    background-color: #fff;
+}
+/* 입력창 라벨 공통 */
+.minput label{
+    display: inline-block;
+    /* 디자인적용과 한줄에 오게함! */
+    width: 20vw;
+    font-size: 20px;
+    font-weight: bold;
+    color: #737373;
+    /* text-align: center; */
+    line-height: 36px;
+    /* outline: 2px solid red; */
+}
+/* 입력양식 공통 */
+.minput input{
+    width: 260px;
+    height: 36px;
+    border: 1px solid #737373;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding-left: 5px;
+    color: #666;
+}
+
+/* 비밀번호박스 */
+.mi2{
+    margin-top: 20px;
+}
+
+/* 크롬브라우저 포커스 아웃라인 제거 */
+input:focus{
+    outline: none;
+}
+
+/* 버튼영역 */
+.btnbx{
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    /* 부모는? .login */
+}
+/* 서브밋 버튼 */
+#sbtn{
+    width: 17vw;
+    height: 100px;
+    border: 1px solid #737373;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #ddd, #555);
+    font-size: 15px;
+    color: #fff;
+    text-shadow: 1px 1px 0 #666;
+}
+
+/* 기타체크링크 박스 */
+.addbx{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 16px;
+}
+/* 체크박스영역 */
+.addbx span{
+    margin: 0 15px;
+    color: #666;
+}
+/* 체크박스 라벨과 세로정렬 */
+.addbx input{
+    vertical-align: -2px;
+}
+/* 기타링크 */
+.addbx a{
+    margin: 0 15px;
+    color: #222;
+    text-decoration: none;
+}
+
+/* 모바일 시 줄바꿈 처리 */
+.addbx i{
+    font-style: normal;
+}
+.brk{
+    display: none;
+}
+/* 하단영역 */
+#info{
+    background-color: #2a2a2a;
+}
+.info{
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 50px 30px 100px 30px
+}
+.info h2 a{
+    color: white;
+    font-size: 20px;
+    font-style: italic;
+    border-bottom: 2px solid #FFC645;
+}
+.info p{
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 20px;
+}
+.info ul li a{
+    color: #999;
+    text-decoration: none;
+    font-size: 11px;
+    padding-right: 10px;
+}
+.info ul{
+    margin-bottom: 20px;
+}
+.info address{
+    color: #999;
+    font-size: 11px;
+    font-style: normal;
+}
+.info span{
+    display: block;
+}
+.info .fl{
+    justify-content:flex-start
+}
+
+@media screen and (max-width: 445px){
+    /* 버튼영역 */
+.btnbx{
+    position: absolute;
+    top: 95px;
+    right: 10px;
+    /* 부모는? .login */
+}
+/* 서브밋 버튼 */
+#sbtn{
+    width: 110px;
+    height: 130px;
+    border: 1px solid #737373;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #ddd, #555);
+    font-size: 15px;
+    color: #fff;
+    text-shadow: 1px 1px 0 #666;
+}
+.minput label{
+    width: 150px;
+}
+}

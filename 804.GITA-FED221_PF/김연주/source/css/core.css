@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/* 외부파일 합치기 - 웹폰트(CDN) */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Myeongjo&family=Noto+Sans+KR&display=swap');
+/* 
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Myeongjo', serif;
+font-family: 'Noto Sans KR', sans-serif;
+*/
+
+body{
+    height: 100%;
+}
+
+/* 감싸는 박스 */
+.big_box {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    /* border-bottom: 1px solid #ccc; */
+}
+.main {
+    height: 100%;
+    background-color: #fff;
+}
+.hid{
+    height: 187px;
+    overflow: hidden;
+}
+.footer {
+    background-color: #fff;
+    border-top: 1px solid #999;
+}
+/* IR(Image Replacement) 클래스 */
+.ir{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}
+
+/* 안쪽 박스 */
+.inbox {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bgi{
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: all .5s ease;
+}
+
+.contIn>h2{
+    font-size: 2.2rem;
+    color: #fff;
+    font-family: 'Nanum Myeongjo', serif;
+    text-align: center;
+    padding: min(15px,3vw);
+}
+
+

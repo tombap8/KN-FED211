@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+
+@import url(./core.css);
+@import url(./reset.css);
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Black+Han+Sans&display=swap');
+
+/* font-family: 'Black Han Sans', sans-serif;
+   font-family: 'IBM Plex Sans KR', sans-serif;
+*/
+
+
+
+
+@media screen and (max-width: 550px) {
+  .sns{
+    display: none;
+  }
+  .mobtn{
+    display: block;
+    font-size: 20px;
+    top: 25px;
+    transform: translateY(0);
+  }
+  .tmenu {
+    justify-content: space-around;
+  }
+
+  .top {
+    height: 70px;
+  }
+
+  /* .logo {
+    width: 50px;
+  } */
+  .daybx {
+    padding: 5px 25px;
+  }
+  .week li {
+    font-size: 12px;
+  }
+  .select{
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+  .match li{
+    margin: 15px 5px;
+  }
+  .sigbtn{
+    width: 50px;
+  }
+}

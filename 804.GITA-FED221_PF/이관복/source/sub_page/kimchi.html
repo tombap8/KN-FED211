@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">    
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>당신의 음식을 응원합니다.</title>
+        <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="../css/sub.css">
+        <link rel="stylesheet" href="../css/media.css">
+        <script src="../js/jquery-3.6.0.min.js"></script>        
+        <script src="../js/core.js"></script>        
+        <script src="../js/sub.js"></script>
+    </head>
+    <script>
+        let scrollSet = 0;
+    </script>
+    <body>        
+        <!-- 버튼형 메뉴-->
+        <div id="top">
+            <header class="top ibx">
+                <div class="topMain">
+                    <div class="logo">
+                        <img src="../images/logo.png" alt="로고">
+                    </div>                  
+                    <nav class="gnb">
+                        <ul class="fll">
+                            <li>
+                                <a href="#">HOME</a>                            
+                            </li>
+                            <li>
+                                <a href="">나혼자</a>
+                                <div class="smenu">
+                                    <ol>
+                                        <li>
+                                            <a href="#">김치찌게</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">도시락</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">비빔밥</a>
+                                        </li>                                    
+                                    </ol>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">둘이서</a>
+                                <div class="smenu">
+                                    <ol>
+                                        <li>
+                                            <a href="#">커리</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">파스타</a>
+                                        </li>                                  
+                                    </ol>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">모두함께</a>
+                                <div class="smenu">
+                                    <ol>
+                                        <li>
+                                            <a href="#">고기고기</a>
+                                        </li>                                  
+                                    </ol>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="">여행여행</a>
+                                <div class="smenu">
+                                    <ol>
+                                        <li>
+                                            <a href="#">춘천닭갈비</a>
+                                        </li>                                  
+                                    </ol>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- 닫기버튼 -->
+                        <div>
+                            <button id="cbtn" class="btns">
+                                <span>×</span>
+                            </button>
+                        </div>
+                    </nav>
+                    <!-- 햄버거 버튼 -->
+                    <div>
+                        <button id="ham" class="btns">
+                            <span>＝</span>
+                        </button>
+                    </div>
+                </div>
+            </header>           
+        </div>
+
+        <!-- 메인 페이지 -->        
+        <main class="main_set">            
+            <div class="">                    
+                <div class="recipe">
+                    <!---설명글1 -->
+                    <div class="bg1">
+                    
+                    </div>
+                    <div>
+                        <p class="textSet">
+                            저녁메뉴추천! 진하고 얼큰한 사골 김치찌개맛있게끓이는법
+                            <br>
+                            [재료]<br>
+                            사골육수, 돼지고기 210g, 신김치 200g, 양파 1/4개, 두부 2/3모,<br>
+                            청양고추 1개, 홍고추 1개, 대파 1/3개, 고춧가루 1작은술, 다진 마늘 1작은술,<br>
+                            김치 국물 2큰술, 오일 1작은술, 물 800ml<br>
+                            돼지고기 밑간 양념 : 고운 고춧가루 1작은술, 참치액 1작은술, 다진 마늘 1작은술, 청주 1작은술, 후추 약간<br>
+                        </p>
+                    </div>
+                    <!---설명글1 -->
+                </div>
+                <div class="recipe loAct">
+                    <!---설명글2 -->
+                    <div>
+                        <p class="textSet">
+                            저녁메뉴추천! 진하고 얼큰한 사골 김치찌개 레시피<br>
+                            1. 물 800ml에 사골육수 2팩을 넣고 섞는다. <br>
+                            2. 돼지고기를 먹기 좋게 자른 후, 재료의 분량대로 밑간한다.<br>
+                        </p>
+                    </div>                    
+                    <div class="bg2">
+                        
+                    </div>
+                    <!---설명글2 -->
+                </div>                   
+
+                <div class="recipe loAct">
+                    <!---설명글3 -->
+                    <div class="bg3">
+                                            
+                    </div>
+
+                    <div>
+                        <p class="textSet">
+                            3. 김치는 속을 털어 기호에 맞게 썬다. <br>
+                            4. 두부와 양파, 대파, 청양고추, 홍고추를 썰어 준비한다.<br>
+                        </p>
+                    </div>
+                    <!---설명글3 -->
+                </div>
+
+                <div class="recipe loAct">
+                    <!---설명글4 -->
+                    <div>
+                        <p class="textSet">
+                            5. 달구어진 팬에 오일을 두르고, 밑간한 돼지고기를 넣고 볶다가 신김치를 넣고 달달 볶는다. <br>
+                            6. 여기에 사골육수와 고춧가루를 넣고 끓이다가 물이 끓으면 불을 낮춰 은근히 끓여준다.<br>
+                        </p>
+                    </div>                    
+                    <div class="bg4">
+                        
+                    </div>
+                    <!---설명글4 -->   
+                </div>
+                
+                <div class="recipe loAct">
+                    <!---설명글5 -->
+                    <div class="bg5">
+                        
+                    </div>
+                    
+                    <div>
+                        <p class="textSet">
+                            7. 고기가 익으면 두부, 양파, 다진 마늘을 넣는다.
+                        </p>
+                    </div>
+                    <!---설명글5 -->
+                </div>
+                
+                <div class="recipe loAct">
+                    <!---설명글6 -->
+                    <div>
+                        <p class="textSet">
+                            8. 마지막으로 대파, 청양고추, 홍고추를 넣고 김치 국물을 이용하여 기호에 맞게 간을 한다.
+                        </p>
+                    </div>                    
+                    <div class="bg6">
+                        
+                    </div>
+                    <!---설명글6 -->
+                </div>
+            </div>
+        </main>
+
+        <!-- 회사 소계 -->
+        <div>
+            <section class="info ibx">
+                <div class="addr_btm">
+                    <div class="addr_img">
+                        <img src="../images/logo.png" alt="하단로그">                    
+                    </div>                
+                    <div style="margin-top: 30px; width:70%">
+                        <div style="margin-top: 0px;">
+                            <address class="addr" >
+                                WWW.FOODSK.COM
+                            </address>
+                        </div>
+                        <div style="margin-top: 0px;">
+                            <ul class="blik">
+                                <li>
+                                    <a href="#">정기구독</a>
+                                </li>
+                                <li>
+                                    <a href="#">회사소개</a>
+                                </li>
+                                <li>
+                                    <a href="#">광고 및 제휴</a>
+                                </li>
+                                <li>
+                                    <a href="#">개인정보 처리방침</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- 3-3 하단링크 -->                
+            </setcion>
+        </div>
+    </body>
+</html>

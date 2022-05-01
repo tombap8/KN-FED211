@@ -1,0 +1,293 @@
+@charset "utf-8";
+/* 미디어 쿼리 */
+
+/******** 1050px 이하 미디어쿼리 ********/
+@media screen and (max-width:1050px) {
+    #top {
+        width: 100vw;
+    }
+
+    .logo {
+        padding-left: 2rem
+    }
+
+    .topMenu>ul>li {
+        padding: 0 2rem 0 2rem;
+    }
+
+    .topMenu>ul>li:last-child {
+        padding: 0 2rem 0 2rem;
+    }
+
+    .btInfo {
+        align-items: flex-start;
+        height: 15rem;
+        flex-direction: column;
+        padding-left: 2rem;
+    }
+
+    .btMenu {
+        padding-left: 2rem;
+    }
+
+    .familyLink {
+        display: inline;
+    }
+
+    .btLink ul {
+        padding: 0 2rem 0 2rem;
+    }
+}
+
+/******** 900px 이하 미디어쿼리 ********/
+@media screen and (max-width:900px) {
+
+    .topMenu,
+    .topMenu>ul>li.sm::after,
+    .fixedBan,
+    .logoSns {
+        display: none;
+    }
+
+    #top {
+        align-items: flex-start;
+    }
+
+    .logo img {
+        padding-top: 2rem;
+    }
+
+    .ham {
+        display: block;
+    }
+
+    /* 상단영역 .topMenu 클래스 on 적용 시 버튼 변경 */
+    .topnavi.on .ham::before {
+        content: '×';
+    }
+
+    #top.close .ham::before {
+        content: '';
+    }
+
+    /* 상단영역 .topMenu 클래스 on 적용 시 버튼 고정 */
+    .topnavi.on .ham {
+        position: fixed;
+        transform: scale(1.5);
+    }
+
+    .topnavi.on {
+        flex-wrap: wrap;
+    }
+
+    .topnavi.on .topMenu {
+        display: flex;
+    }
+
+    .topMenu>ul {
+        display: flex;
+        height: 100vh;
+        background-color: rgb(251, 248, 239);
+    }
+
+    .topMenu>ul>li {
+        padding: 0;
+    }
+
+    .topnavi.on .topMenu>ul {
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    .topnavi.on .topMenu>ul>li {
+        width: 100vw;
+    }
+
+    .topnavi.on .topMenu>ul>li a {
+        font-size: 2.5rem;
+        margin-left: 5vw;
+        /* 트랜지션: 속시이지 */
+        transition: all .4s;
+    }
+
+    .topnavi.on .topMenu>ul>li a::before {
+        content: '☕ ';
+        position: relative;
+        top: -5%;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: var(--font-color-navy);
+    }
+
+    .topMenu>ul>li:hover>a {
+        border-bottom: 2px solid var(--font-color-navy);
+    }
+
+    /* 서브메뉴 */
+    .topnavi.on .topMenu>ul>li:hover .smenu {
+        height: 17vh;
+    }
+
+    
+    /* 서브메뉴 */
+    .smenu {
+        position: static;
+        /* 변경 - static으로 변경하면 자리차지함! */
+        height: 0;
+        width: 100vw;
+        overflow: hidden;
+        /* 트랜지션: 속시이지 */
+        transition: height .4s ease-out;
+    }
+    
+    .topnavi.on .topMenu>ul>li .smenu>ol>li a{
+        font-size: 2rem;
+    }
+    
+    .topnavi.on .topMenu>ul>li .smenu>ol>li a::before {
+        content: '▪ ';
+        position: relative;
+        top: -5%;
+        font-size: 1.3rem;
+        font-weight: bold;
+        color: var(--font-color-navy);
+    }
+    .cont1 {
+        height: 70vh;
+    }
+
+    .cont1 {
+        padding: 2rem;
+    }
+
+    .cont1 h2 {
+        font-size: 4.5rem;
+        line-height: 6.5rem;
+    }
+
+    .bgAni img {
+        width: 99%;
+        vertical-align: bottom;
+    }
+
+    .cont2 aside {
+        height: 100vh;
+    }
+
+    .cont2 h2:nth-child(2),
+    .cont2 h2:nth-child(3) {
+        font-size: 4.5rem;
+    }
+
+    .cont2 h3 {
+        font-size: 2rem;
+    }
+
+    .circleImg1 {
+        right: -65vw;
+    }
+
+    .circleImg2 {
+        top: -100vh;
+        left: -25vw;
+    }
+
+    .circleImg3 {
+        top: -90vh;
+        left: 10vw;
+    }
+
+
+    .circleImg1 img {
+        width: 30rem;
+    }
+
+    .circleImg2 img {
+        width: 20rem;
+    }
+
+
+    .slideBan {
+        display: none;
+    }
+
+
+    .menuBtn li button {
+        width: 8rem;
+    }
+
+
+    .cont3 aside h2 {
+        font-size: 3rem;
+        line-height: 2.9rem;
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+
+    .cont3 h3 {
+        font-size: 1.7rem;
+        padding: 1rem;
+        padding-bottom: 0;
+    }
+
+    .img-moving {
+        margin-top: 5vh;
+    }
+
+    .cont4 aside {
+        height: 80vh;
+    }
+
+    .cont4 div h2 {
+        font-size: 3.5rem;
+        line-height: 3.3rem;
+    }
+    .cont4 div h3 {
+        line-height: 2rem;
+    }
+
+    .btMenu {
+        justify-content: center;
+        padding-left: 0rem;
+    }
+
+    .btInfo {
+        padding-left: 0rem;
+        max-width: 85vw;
+    }
+
+    .btLink {
+        width: 90vw;
+        justify-content: space-between;
+    }
+
+    .btLink ul {
+        padding: 0 .5rem 0 .5rem;
+    }
+
+    .btLink ul>li a {
+        font-size: 1.2rem;
+
+    }
+
+    .btLink ul>li:first-child a {
+        font-size: 1.3rem;
+    }
+
+    .info {
+        width: 80vw;
+        padding-top: 1.5rem;
+    }
+
+
+
+    /* 서브페이지 */
+    .sub_cont {
+        height: 130vh;
+    }
+    .tit {
+        padding-top: 10rem;
+    }
+    
+
+}

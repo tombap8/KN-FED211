@@ -1,0 +1,129 @@
+@charset "utf-8";
+/* food 공통핵심 CSS - core.css */
+
+/******************** 웹 폰트  ********************/
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Pen+Script&display=swap');
+/* 
+font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Nanum Pen Script', cursive;
+*/
+
+
+/************* 2. 공통 class *************/
+html {
+    /* a요소의 #아이디명 또는 #으로 위치이동 부드러운 스크롤 */
+    scroll-behavior: smooth;
+}
+
+/* 속박스 class */
+.ibx{
+    max-width: 1200px;
+    /* 최대 1300px, 보다 작아지면 auto */
+    margin: 0 auto;
+    /* 박스 중앙정렬 */
+}
+
+/* 비율유지박스 class */
+.rbx{
+    position: relative;
+    /* 비율유지속박스의 부모자격 */
+}
+/* 비율생성 가상요소 */
+.rbx::before{
+    content: '';
+    display: block;
+    /* 패딩탑값 %로 비율에 맞게 각각셋팅 */
+    /* padding-top: 50%; */
+}
+
+.main.rbx::before {
+    padding-top: 40%;
+}
+
+/* 비율유지속박스 */
+.rbxIn{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+/* 컨텐츠박스 */
+.cbx{
+    height: 100%;
+    position: relative;
+    /* 부모자격 */
+}
+
+/*파티션 박스의 높이값 100% */
+.main .cbx{
+    width: 100%;
+    height: 100%;
+}
+
+/* 가상요소로 반투명 검정배경 그라데이션 넣기 */
+.cbx::before{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-image: 
+    linear-gradient(to top,rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0));
+}
+
+/* 컨텐츠박스 가상요소로 보더애니 구현 */
+.cbx::after{
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    /* 나의 부모? .cbx */
+    box-sizing: border-box;
+    /* 박스크기 유지(보더포함) */
+    border: 0px solid transparent;
+    /* 처음에 보더가 투명색 두께0 */
+    cursor: pointer;
+    /* 손가락모양 */
+
+    /* 트랜지션: 속시이지 */
+    transition: border .2s ease-in;
+}
+/* .cbx에 마우스 오버시 보더애니 */
+.cbx:hover::after{
+    border: 5px solid lightgreen;
+}
+
+
+ /* 3-2. 회사주소 */
+ .addr {
+    color:#747474;
+    text-align: center;
+    font-size: 11px;
+    /* 이텔릭 해제 */
+    font-style: normal;
+    /* 마진 : 위 양쪽 아래 */
+    margin:20px 0 10px;     
+}
+
+
+ /* 3-2. 하단링크 */
+ .blik {
+    display: flex;
+    justify-content:center;
+    /* 자동줄바꿈 */
+    flex-wrap: wrap;     
+}
+
+.blik a {
+   color: #747474;
+   font-size: 13px;
+   margin: 0 6px;
+}

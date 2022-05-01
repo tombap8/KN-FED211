@@ -1,0 +1,393 @@
+@charset "utf-8";
+
+/* 외부CSS합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+/************************ 메인 영역 *************************/
+
+#main {
+    height: 100%;
+}
+
+#container {
+    padding-top: 12rem;
+}
+
+/*********************** 메인1 영역 ***********************/
+.cont1 {
+    position: relative;
+    z-index: -1;
+    margin: 0 auto;
+    max-width: 144rem;
+    height: 90vh;
+}
+
+.cont1 {
+    height: 85vh;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 5rem;
+    box-sizing: border-box;
+}
+
+/* 메인1 타이포 */
+.cont1 h2 {
+    width: 80rem;
+    font-size: 9.5rem;
+    line-height: 11rem;
+    text-align: right;
+    font-family: var(--font-family-lemon);
+    color: var(--font-color-navy);
+}
+
+.cont1 h2:first-child {
+    color: var(--font-color-yellow);
+}
+
+.cont1 h2:last-child {
+    font-style: italic;
+}
+
+
+/* 메인 1 배경 */
+.bgAni {
+    position: absolute;
+    left: 0;
+    z-index: -2;
+    bottom: 0;
+}
+
+.bgAni img {
+    width: 110%;
+    vertical-align: bottom;
+}
+
+/*********************** 메인1 영역 끝 ***********************/
+
+
+/*********************** 메인2 영역 ***********************/
+.cont2 {
+    width: 100%;
+    height: 90vh;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.cont2 aside {
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    color: var(--font-color-navy);
+}
+
+.cont2 h2 {
+    padding: .5rem;
+    font-size: 4rem;
+    font-family: var(--font-family-notoSan);
+}
+
+.cont2 h2:nth-child(2),
+.cont2 h2:nth-child(3) {
+    font-family: var(--font-family-lemon);
+    font-size: 9rem;
+}
+
+.cont2 h3 {
+    font-family: var(--font-family-notoSan);
+    font-size: 2.5rem;
+}
+
+
+/* 오른쪽 큰 원 */
+.circleImg1 {
+    position: relative;
+    z-index: -1;
+    size: 100px;
+    right: -75vw;
+    top: -100vh;
+    height: size;
+    width: size;
+    transform:
+        translateX(calc(var(--mouse-x) * 0.15px)) translateY(calc(var(--mouse-y) * 0.15px));
+}
+
+.circleImg1 img {
+    vertical-align: bottom;
+    width: 40rem;
+}
+
+
+/* 왼쪽 큰 원 */
+.circleImg2 {
+    position: relative;
+    z-index: -1;
+    left: -17vw;
+    top: -120vh;
+    size: 100px;
+    height: size;
+    width: size;
+    transform:
+        translateX(calc(var(--mouse-x) * 0.23px)) translateY(calc(var(--mouse-y) * 0.23px));
+}
+
+.circleImg2 img {
+    vertical-align: bottom;
+    width: 29rem;
+}
+
+
+/* 왼쪽 작은 원 */
+.circleImg3 {
+    position: relative;
+    z-index: -1;
+    left: 0vw;
+    top: -110vh;
+    size: 100px;
+    height: size;
+    width: size;
+    transform:
+        translateX(calc(var(--mouse-x) * 0.15px)) translateY(calc(var(--mouse-y) * 0.152px));
+}
+
+.circleImg3 img {
+    vertical-align: bottom;
+    width: 15rem;
+    height: 11rem;
+}
+
+/*********************** 메인2 영역 끝 ***********************/
+
+
+/*********************** 메인3 영역 ***********************/
+
+.cont3 {
+    position: relative;
+    width: 100%;
+    height: 85rem;
+    margin: 0 auto;
+}
+
+.cont3::after {
+    content: '';
+    z-index: -5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to bottom, transparent 30%, #fff 50%);
+}
+
+.cont3 aside {
+    display: flex;
+    padding-top: 10rem;
+    font-family: var(--font-family-notoSan);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.cont3 h2 {
+    font-size: 5rem;
+    color: var(--font-color-navy);
+    box-sizing: border-box;
+}
+
+.cont3 h3 {
+    font-size: 2rem;
+    color: var(--font-color-navy);
+    box-sizing: border-box;
+}
+
+
+/* 버튼 ui */
+
+.menuBtn ul {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.menuBtn li button {
+    width: 14rem;
+    height: 100%;
+    text-align: center;
+    line-height: 3.8rem;
+    font-size: 1.5rem;
+    font-family: var(--font-family-notoSan);
+    background: #fff;
+    border: 1px solid #ccc;
+    color: var(--font-color-navy);
+    cursor: pointer;
+}
+
+.menuBtn li:hover button,
+.menuBtn li.on button {
+    background: var(--font-color-yellow);
+}
+
+
+
+.drinkBg {
+    position: relative;
+    z-index: -2;
+    width: 100%;
+    height: 100%;
+    background: url(../img/drinkShadow.png) repeat-x 0 0 /100% 50%;
+    background-position: 0 70%;
+}
+
+.img-moving {
+    position: absolute;
+    z-index: -1;
+    height: 35rem;
+    top: 40rem;
+    left: 0;
+    right: 0;
+    background: url("../img/drink/coffee.png") repeat-x left top;
+    background-size: 199rem auto;
+    animation: movement 15s linear infinite;
+}
+
+@keyframes movement {
+    0% {
+        background-position: 0px 0px;
+    }
+
+    100% {
+        background-position: 2100px 0px;
+    }
+}
+
+
+/*********************** 메인3 영역 끝 ***********************/
+
+
+
+
+/* 메인 슬라이드 */
+.slideBan{
+    position: relative;
+    z-index: 1;
+    height: 60rem;
+    overflow: hidden;
+}
+
+#slide {
+    display: block;
+}
+
+#slide li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* 모든 슬라이드 겹치기 */
+
+    /* 모두 투명하게함! */
+    opacity: 0;
+    /* 트랜지션: 속시이지 */
+    transition: opacity .6s ease-in-out;
+}
+
+#slide li.on{
+    opacity: 1;
+    z-index: 1;
+}
+
+.abtn {
+    position: absolute;
+    z-index: 1;
+    font-size: 20rem;
+    text-decoration: none;
+    color: #fff;
+    top: 25%;
+    transform: scaleX(70%);
+}
+
+.abtn {
+    z-index: 2;
+}
+
+/*왼쪽버튼*/
+.ab1 {
+    left: 0px;
+}
+
+/*오른쪽버튼*/
+.ab2 {
+    right: 0px;
+}
+
+
+/*********************** 메인4 영역 ***********************/
+
+.cont4 {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.cont4 aside {
+    height: 60rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    font-family: var(--font-family-notoSan);
+    margin-bottom: 10rem;
+    background: url(../img/subMenuBg.jpg);
+}
+
+.cont4 div {
+    padding: 2rem;
+    color: var(--font-color-navy);
+}
+
+.cont4 aside h2 {
+    font-size: 5.5rem;
+    color: var(--font-color-navy);
+}
+
+.cont4 aside h3 {
+    font-size: 2rem;
+    color: var(--font-color-navy);
+}
+
+.shopBtn {
+    width: 25rem;
+    height: 7rem;
+    line-height: 6.5rem;
+    background: var(--font-color-navy);
+    border-radius: 1.6rem;
+    border: 2px solid var(--font-color-navy);
+    box-sizing: border-box;
+    transition: .2s linear;
+}
+
+.shopBtn a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 2rem;
+    line-height: 2.1rem;
+}
+
+.shopBtn:hover {
+    background: #fff;
+    border: 2px solid var(--font-color-navy);
+}
+
+.shopBtn:hover a {
+    color: var(--font-color-navy);
+}
+
+/*********************** 메인4 영역 끝 ***********************/

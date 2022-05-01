@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>빽다방</title>
+
+    <!-- 메인CSS -->
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- 미디어쿼리 -->
+    <link rel="stylesheet" href="./css/media.css">
+
+    <!-- Fade 애니메이션 라이브러리 -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- 애니메이션 JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- JQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- 메인 JS -->
+
+    <!-- 기본 JS 상단/하단 AOS 애니메이션 초기화 -->
+    <script src="./js/common.js"></script>
+    <!-- 언어 변경 -->
+    <!-- <script src="./js/gnb_trans.js"></script> -->
+    <script src="./js/main_trans.js"></script>
+    <!-- 메인 이미지 JS -->
+    <script src="./js/main.js"></script>
+    <!-- 메인 슬라이드 JS -->
+    <script src="./js/mainSlide.js"></script>
+    <!-- 링크 제어 -->
+    <script src="./js/linksys.js"></script>
+
+</head>
+
+<body>
+    <!-- 상단 영역 -->
+    <div id="wrap">
+        <header id="top">
+            <div class="topnavi">
+                <!-- 상단 로고 -->
+                <h1 class="logo"><a href="#"><img src="./img/paikLogo.png" alt="빽다방 로고"></a></h1>
+                <!-- 언어 -->
+                <div class="lang">
+                    <ol>
+                        <li>
+                            <button value="ko">🇰🇷</button>
+                        </li>
+                        <li>
+                            <button value="en">🇺🇸</button>
+                        </li>
+                    </ol>
+                </div>
+                <!-- 탑 gnb메뉴 -->
+                <nav class="topMenu">
+                    <ul>
+                        <li class="sm"><a href="#" class="a_ex">빽다방</a>
+                            <!-- 서브메뉴 -->
+                            <div class="smenu">
+                                <ol>
+                                    <li><a href="#">CEO 인사말</a></li>
+                                    <li><a href="#">빽다방 소개</a></li>
+                                    <li><a href="#">커피 이야기</a></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="sm"><a href="#" class="a_ex">메뉴·매장</a>
+                            <!-- 서브메뉴 -->
+                            <div class="smenu">
+                                <ol>
+                                    <li><a href="#">메뉴 보기</a></li>
+                                    <li><a href="#">매장 찾기</a></li>
+                                    <li><a href="#">커피 클래스</a></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="sm"><a href="#" class="a_ex">창업안내</a>
+                            <!-- 서브메뉴 -->
+                            <div class="smenu">
+                                <ol>
+                                    <li><a href="#">가맹 정보</a></li>
+                                    <li><a href="#">창업 상담</a></li>
+                                    <li><a href="#">관련 절차</a></li>
+                                </ol>
+                            </div>
+                        </li>
+                        <li class="sm"><a href="#" class="a_ex">새로운 소식</a>
+                            <!-- 서브메뉴 -->
+                            <div class="smenu">
+                                <ol>
+                                    <li><a href="#">새소식</a></li>
+                                    <li><a href="#">이벤트</a></li>
+                                    <li><a href="#">우수점포</a></li>
+                                </ol>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- 모바일용 햄버거 버튼 -->
+                <button class="ham"></button>
+            </div>
+            <!-- fixed 우측 배너 -->
+            <div class="fixedBan">
+                <span class="ir fixBan">신제품 출시</span>
+                <div class="fixScr fixBan">신제품 출시</div>
+                <div class="topBtn">Top</div>
+            </div>
+        </header>
+    </div>
+    <!-- 메인 영역 -->
+    <div id="container">
+        <main id="main">
+            <!-- 메인 컨테이너 -->
+            <div class="cont">
+                <!-- 메인 컨텐츠 1번 -->
+                <section class="cont1">
+                    <h2 data-aos="fade-up" data-aos-duration="1000">Paik's Coffee</h2>
+                    <h2 data-aos="fade-up" data-aos-duration="1200">Life Happens</h2>
+                    <h2 data-aos="fade-up" data-aos-duration="1400">Coffee helps</h2>
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-offset="0" class="bgAni"><img
+                            src="./img/mainBg1.jpg" alt="1번 메인 배경 이미지"></div>
+                </section>
+            </div>
+            <!-- 메인 컨텐츠 2번 -->
+            <section class="cont2">
+                <aside>
+                    <h2 data-aos="fade-up" data-aos-duration="700" class="main2">친구 같은 브랜드의 진정한
+                        가치</h2>
+                    <h2 data-aos="fade-up" data-aos-duration="800">Paik's Coffee Life begins</h2>
+                    <h2 data-aos="fade-up" data-aos-duration="900">with imagination</h2>
+
+                    <div data-aos="fade-up" data-aos-duration="1000">
+                        <h3 class="main2">합리적인 커피 문화를 만들어 갑니다.</h3>
+                        <h3 class="main2">호기심으로 시작했던 카페 메뉴가 모두에게 사랑 받는 시그니처 메뉴로 성장하게 되었습니다.</h3>
+                    </div>
+                </aside>
+                <div class="circleBg">
+                    <div class="circleImg1"><img src="./img/circleImg.png" alt="2번 메인 배경 이미지1"></div>
+                    <div class="circleImg2"><img src="./img/circleImg2.png" alt="2번 메인 배경 이미지2"></div>
+                    <div class="circleImg3"><img src="./img/circleImg2.png" alt="2번 메인 배경 이미지3"></div>
+                </div>
+            </section>
+            <!-- 메인 슬라이드 배너 -->
+            <section class="slideBan">
+                <!--슬라이드-->
+                <ul id="slide">
+                    <li><img src="img/mainImg1.jpg" alt="slide"></li>
+                    <li><img src="img/mainImg2.jpg" alt="slide"></li>
+                    <li><img src="img/mainImg3.jpg" alt="slide"></li>
+                    <li><img src="img/mainImg4.jpg" alt="slide"></li>
+                </ul>
+                <!--이동버튼-->
+                <a href="#" class="abtn ab1">＜</a>
+                <a href="#" class="abtn ab2">＞</a>
+            </section>
+            <!-- 메인 컨텐츠 3번 -->
+            <section class="cont3">
+                <aside>
+                    <h2 data-aos="fade-in" data-aos-duration="700" class="main3">빽다방이 선사하는 다채로운 맛과
+                        향기</h2>
+                    <div data-aos="fade-in" data-aos-duration="1000">
+                        <h3 class="main3">커피의 본질적인 것을 통한 커피의 전문성을 부각 시키는 컨텐츠와 함께</h3>
+                        <h3 class="main3">비쥬얼, 맛, 건강함, 그리고 마시는 재미까지 함께 선사합니다.</h3>
+                    </div>
+                </aside>
+                <div class="menuBtn">
+                    <ul>
+                        <li class="on"><button type="button" value="커피">커피</button></li>
+                        <li><button type="button" value="음료">음료</button></li>
+                        <li><button type="button" value="디저트">디저트</button>
+                        </li>
+                        <li><button type="button" value="빽스치노">빽스치노</button></li>
+                    </ul>
+                </div>
+                <!-- 음료수 슬라이더 -->
+                <div class="rolling">
+                    <div class="img-moving"></div>
+                </div>
+                <!-- 음료 뒤 회색 배경 -->
+                <div class="drinkBg"></div>
+            </section>
+            <!-- 메인 컨텐츠 4번 -->
+            <section class="cont4">
+                <aside>
+                    <div data-aos="fade-up" data-aos-duration="600" data-aos-offset="0">
+                        <h2 class="main4">언제나 친구처럼 친근한 창업</h2>
+                        <h2 class="main4">점주 만족도 최상인 카페 브랜드 빽다방</h2>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="700" data-aos-offset="0">
+                        <h3 class="main4">빽다방은 파트너 여러분들의 다양한 창업 조건에 맞는 ‘맞춤형 점포 개설’을 통해</h3>
+                        <h3 class="main4">카페 창업의 문턱을 낮추고 진정한 상생의 가치를 구현합니다.</h3>
+                    </div>
+                    <div data-aos="fade-up" data-aos-duration="900" data-aos-offset="0">
+                        <div class="shopBtn"><a href="#" class="a_ex">가맹점 개설 안내</a></div>
+                    </div>
+                </aside>
+            </section>
+        </main>
+    </div>
+    <!-- 하단 영역 -->
+    <div id="bottom">
+        <footer>
+            <div class="btMenu">
+                <div class="logoSns">
+                    <!-- 아래 하단 회사 로고 -->
+                    <div class="btlogo"><img src="./img/paikBtLogo.png" alt="더본코리아 로고"></div>
+                    <!-- sns 아이콘 -->
+                    <div class="snsIcon">
+                        <a href="#" class="a_ex fbIcon">
+                            <span class="ir">빽다방 페이스북 바로가기</span>
+                        </a>
+                        <a href="#" class="a_ex istaIcon">
+                            <span class="ir">빽다방 인스타그램 바로가기</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- 관련 링크 -->
+                <div class="btLink">
+                    <ul>
+                        <li><a href="#">고객센터</a></li>
+                        <li><a href="#">문의하기 (Contack us)</a></li>
+                        <li><a href="#">고객 상담 센터 1234-1234</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">창업 안내</a></li>
+                        <li><a href="#">협력업체 문의</a></li>
+                        <li><a href="#">가맹 문의</a></li>
+                        <li><a href="#">제휴·마케팅 문의</a></li>
+                        <li><a href="#">브랜드 소개서</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="#">개인정보 보호 및 약관</a></li>
+                        <li><a href="#">개인정보 처리방침</a></li>
+                        <li><a href="#">서비스 이용약관</a></li>
+                        <li><a href="#">위치기반서비스 이용약관</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="btInfo">
+                <!-- 관련사 링크 -->
+                <div class="familyLink">
+                    <select title="FAMILY SITE" id="familyLink" onchange="value">
+                        <option value="#">FAMILY SITE</option>
+                    </select>
+                </div>
+                <!-- 회사 정보 -->
+                <address class="info">
+                    (주)더본코리아 사업자등록번호 211-86-00870 대표이사 백종원<br>
+                    주소: 서울시 강남구 봉은사로 1길 39 유성빌딩 5~6층 팩스: 02-511-3864<br>
+                    본사 대표전화: 02-549-3864 가맹상담전화: 02-3447-0410 고객센터: 1544-2360
+                </address>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
