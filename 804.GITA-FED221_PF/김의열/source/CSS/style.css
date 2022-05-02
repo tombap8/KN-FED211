@@ -1,0 +1,586 @@
+@charset "utf-8";
+
+
+@import url(./core.css);
+@import url(./reset.css);
+
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&family=Black+Han+Sans&display=swap');
+
+/* font-family: 'Black Han Sans', sans-serif;
+   font-family: 'IBM Plex Sans KR', sans-serif;
+*/
+
+
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+
+/* 공사중 */
+/* body * {
+  border: 1px dotted #ccc
+} */
+
+
+
+/* 상단 영역 */
+#top{
+  width: 100%;
+  height: 70px;
+    position: absolute;
+    z-index: 1;
+}
+.top{
+  width: 100%;
+    height: 100%;
+}
+.sns a {
+  width: 16px;
+  height: 16px;
+  /* .fi 설정에 inline-block 되어 있음 (크기 적용됨) */
+
+  font-size: 16px;
+  text-align: center;
+  vertical-align: top;
+  line-height: 16px;
+  color: white;
+
+  /* 위치조정 */
+  margin-top: 14px;
+  margin-right: 16px;
+
+  transition: opacity .2s;
+}
+
+/* a요소 오버 시 */
+.sns a:hover {
+  opacity: .8;
+}
+/* .top{
+  height: 80px;
+} */
+/* .fll::after{
+  content: "";
+  display: block;
+  clear: both;
+}
+.fll>li{
+  float: left;
+} */
+.fl {
+  justify-content: space-evenly;
+}
+.tmenu{
+  width: 100%;
+  height: 100%;
+}
+.tmenu>div:nth-child(1){
+  flex-basis: 6%;
+}
+.tmenu>div:nth-child(2){
+  flex-basis: 65%;
+}
+.logo {
+  /* position: absolute;
+  top: 31%;
+  left: 2%; */
+  width: 100%;
+  height: 100%;
+}
+
+.searchbx {
+  color: #3E5463;
+  font-size: 14px;
+  background-color: #ccc;
+  border: none;
+  vertical-align: super;
+  width: 100%;
+  padding: 0px;
+  line-height: 24px;
+}
+
+
+/* 상단 메뉴 마우스 오버 시 */
+.top:hover {
+  background-color: white;
+  transition: background-color 0.3s ease-out;
+}
+.top:hover a{
+  color: black;
+  transition: background-color 0.3s ease-out;
+}
+.top.on {
+  background-color: white;
+  transition: background-color 0.3s ease-out;
+}
+.sns.on a{
+  color: black;
+}
+
+/* .top:hover>.gnb>ul>li>a {
+  color: white;
+  transition: color 0.3s ease-out;
+} */
+
+/* 메인 영역 */
+/* #cont{
+  height: 7000px;
+} */
+#cont{
+  position: relative;
+}
+#bgvideo {
+  position: relative;
+  top: -1.6%;
+  z-index: -1;
+  width: 100%;
+  max-height: 1080px;
+
+  filter: brightness(50%);
+
+  transition: filter .4s ease-out;
+
+}
+
+.Go {
+  position: absolute;
+  top: 4.5%;
+  right: 4%;
+
+  width: 3%;
+  height: 2%;
+
+  animation: play .6s ease-out infinite alternate;
+
+}
+
+@keyframes play {
+  to{
+    right: 5%
+  }
+}
+
+.Go:hover {
+  cursor: pointer;
+}
+.Go svg {
+  fill: white;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.lArrow {
+  position: absolute;
+  width: 4%;
+  top: 1%;
+  left: 102%;
+  cursor: pointer;
+
+  fill: white;
+  /* transition: left .4s ease-out; */
+
+}
+
+.matbx {
+  position: absolute;
+  top: 3%;
+  right: -100%;
+  width: 100%;
+  height: 7%;
+
+  /* transition: none; */
+}
+
+.matbx.on {
+  right: 0;
+
+
+}
+
+.matbx img {
+  -webkit-mask-image: linear-gradient(to top, transparent 0%, black 20%, black 90%, transparent 100%);
+
+}
+
+.mlist {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.mlist li {
+  width: 30%;
+  position: relative;
+}
+
+.mlist h3 {
+  color: white;
+  text-decoration: none;
+  text-shadow: 4px 4px 10px black;
+  font-size: 3vw;
+  text-align: center;
+  position: absolute;
+  z-index: 1;
+  /* bottom: 45%; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mlist img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(.8);
+}
+
+.GoDown {
+  /* width: 371px;
+  margin: 0 auto;
+  margin-top: 628px; */
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.GoDown>ul>li>a {
+  font-size: 1.3vw;
+  text-decoration: none;
+  color: white;
+  padding: 0 2vw;
+  padding-bottom: 7%;
+}
+
+.GoDown>ul>li>a:hover {
+  border-bottom: 4px solid #fff;
+}
+
+#intro {
+  position: relative;
+  width: 100%;
+  /* height: 1600px; */
+  margin-top: 300px;
+}
+
+.inImg {
+  position: relative;
+  width: 100%;
+  height: 36vw;
+  background: url(../imgs/about_hero_wide.png) no-repeat center/cover;
+}
+
+/* 이미지 설명(ir기법으로 숨김) */
+.ir {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.inImg section {
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  padding-top: 7.2%;
+  /* height: 115px; */
+  margin: 0;
+  overflow: hidden;
+  /* border: 2px dashed red; */
+}
+
+#slide {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  height: 100%;
+}
+
+#slide li {
+  /* width: 100%; */
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+#slide img {
+  /* width: 100%; */
+  height: 100%;
+  /* object-fit: cover; */
+}
+
+/* .inImg p{
+  font-size: 5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: white;
+  text-align: center;
+  margin-top: 20%;
+} */
+.par {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* .altImg {
+  position: absolute;
+  width: 52%;
+  top: 19.8%;
+  right: calc(50% - 500px);
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+.inTit {
+  width: 34%;
+  height: 30%;
+  margin: 4% auto 0;
+  background: url(../imgs/about_title.png) no-repeat center/contain;
+}
+
+.arrow {
+  width: 34%;
+  height: 3vw;
+  margin: 8% auto 0;
+  background: url(../imgs/ic_arrow.svg) no-repeat center/contain;
+}
+
+#intro h2 {
+  text-align: center;
+  font-size: 4vw;
+  margin: 5% 0;
+}
+
+.inDes {
+  margin: 5% auto;
+  /* min-width: 1066px; */
+}
+
+.boldDes {
+  /* width: 1066px; */
+  margin: 0 auto;
+}
+
+.lightDes {
+  /* width: 1066px; */
+  margin: 0 auto;
+}
+
+.boldDes>li {
+  font-size: 2vw;
+  padding: 0 4%;
+  line-height: 250%;
+}
+
+.lightDes>li {
+  font-size: 1vw;
+  padding: 1% 6%;
+  color: rgb(88, 88, 88);
+}
+
+.howTo {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#manager {
+  position: relative;
+  margin-top: 300px;
+}
+
+/* 플랩매니저 텍스트 박스 */
+
+.txtbx {
+  padding: 4% 0 10% 5%;
+}
+
+.txtbx h2 {
+  font-size: 3.2vw;
+  font-weight: normal;
+}
+
+.txtbx h2 strong {
+  font-size: 3.6vw;
+}
+
+.bb {
+  border-bottom: 8px solid #FFC645;
+}
+
+.txtbx p {
+  font-size: 1.4vw;
+  /* margin-top: 32px;
+  width: 924px; */
+  font-weight: 200;
+}
+
+/* 지원 박스 */
+.apply {
+  position: sticky;
+  top: calc(100% - 200px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20%;
+  background-color: rgb(29, 63, 134);
+  /* width: 320px; */
+  border-radius: 20px;
+  /* margin: 0 auto 70px; */
+}
+
+.apply p {
+  color: white;
+  text-align: center;
+  font-size: 1.5vw;
+  margin: 0;
+  padding: 14px;
+}
+
+.manImg {
+  width: 100%;
+  margin-top: 10%;
+}
+
+.manDes {
+  margin-bottom: 8%;
+}
+
+.manDes .fl {
+  justify-content: flex-start;
+  margin-left: 3%;
+}
+
+.manDes>ul>li {
+  margin: 0 2%;
+  border-left: 3px solid #FFC645;
+  padding: 0 1%;
+}
+
+.manDes>ul>li>h3 {
+  font-size: 1.5vw;
+}
+
+.manDes>ul>li>span {
+  font-size: 1.1vw;
+}
+
+.manDes p {
+  font-size: .8vw;
+}
+
+.steps {
+  padding: 4%;
+  margin: 8% 0;
+}
+
+.steps div:first-child {
+  width: 100%;
+  padding-bottom: 3%;
+  text-align: center;
+}
+
+.steps h3 {
+  display: inline;
+  font-size: 2.8rem;
+  text-align: center;
+  font-weight: normal;
+  padding: 0;
+  margin: 0;
+}
+
+.steps>ul {
+  width: 100%;
+}
+
+.steps>ul>li {
+  /* position: relative; */
+  width: 8.8%;
+  padding: 0 1%;
+  background-color: #f0f6ff;
+  border: 1px solid #cad7ec;
+  margin: 0 4%;
+  border-radius: 4px;
+  /* margin-bottom: 30px; */
+  /* height: 80px; */
+  text-align: center;
+}
+
+.steps>ul>li>p {
+  font-size: .9vw;
+  line-height: 5vw;
+  margin: 0;
+}
+
+/* .steps>ul>li:nth-child(1)~li::before{
+  content:"";
+  display: block;
+  position: absolute;
+  left: inherit;
+  bottom: 0;
+  right: -30px;
+  top: 0;
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #3534A5;
+  transform: rotate(-270deg);
+} */
+
+.lightbb {
+  border-bottom: 4px solid #FFC645;
+}
+
+.botImg {
+  background: url(../imgs/img_apmanager_1.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 36vw;
+}
+
+.bottxt h2 {
+  font-size: 3.2vw;
+  text-align: center;
+  font-weight: normal;
+  line-height: 4.5vw;
+}
+
+/* .gnb>ul>li.sm>a{
+  pointer-events: none;
+} */
+.gnb>ul>li.sm::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  height: 0;
+  transition: height 0.4s ease-out 0s;
+}
+
+.gnb>ul>li.sm.open::after {
+  height: 345px;
+}
+
+/* .cal{
+  position: absolute;
+  top:85px;
+  left: 435px;
+  z-index: 2;
+  background-color: #fff;
+  width: 570px;
+  height: 0;
+  border-radius: 20px;
+  transition: height 0.4s ease-out 0s;
+}
+.gnb>ul>li.sm.open .cal{
+  height: 300px;
+} */

@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+
+/* 마진 / 패딩 / 폰트 사이즈 리셋 */
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+
+/* 가로스크롤 생김 방지!(특히 모바일) */
+html,body{
+    width: 100%;
+}
+body{
+    background-color: rgb(251, 248, 239);
+    overflow-x: hidden;
+    /* 가로스크롤 없앰은 body만 준다! */
+}
+
+/* 헤딩 태그 글자 크기 초기화 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+}
+
+/* 리스트 스타일 초기화 */
+ul,
+ol {
+    list-style: none;
+}
+
+
+/* 작업 가이드라인 */
+/* body * {
+    outline: 1px dashed green;
+} */
