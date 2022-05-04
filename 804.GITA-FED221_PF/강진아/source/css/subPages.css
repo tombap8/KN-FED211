@@ -1,0 +1,409 @@
+.background,
+.column-line,
+.right-content {
+    position: fixed;
+}
+body {
+    overflow-x: hidden;
+}
+
+/* about 페이지 */
+.textbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+    width: 70%;
+    left: var(--site-header);
+    height: 100vh;
+    color: #fff;
+}
+.text {
+    position: inherit;
+    padding: 70px 80px;
+    font-size: 22px;
+    font-weight: bold;
+}
+.page-content .textbox:first-child {
+    animation: head 2s;
+}
+.textbox .title {
+    margin-bottom: 45px;
+    font-size: 32px;
+    padding: 0 80px;
+    font-weight: 900;
+}
+.textbox .info {
+    display: flex;
+    flex-direction: column;
+    margin: 0 80px;
+}
+.textbox .info .item:first-child {
+    border-top: 2px solid rgba(255,255,255,0.2);
+}
+.textbox .info .item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 25px 10px;
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+.textbox .info .item span {
+    display: inline-block;
+    width: 45%;
+}
+.textbox .bottom {
+    margin: 100px 80px 50px;
+    font-size: 12px;
+}
+.textbox .bottom span {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+/* news 페이지 */
+#news {
+    background: #000;
+}
+.bigTitle {
+    position: relative;
+    width: 70%;
+    padding: 70px 0;
+    color: #fff;
+    font-size: 45px;
+    font-weight: 900;
+}
+#content {
+    position: relative;
+    width: 70%;
+    left: var(--site-header);
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+#content .cardbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#content .card {
+    width: 47%;
+    margin-bottom: 100px;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+    border-radius: 6px;
+}
+#content .card a {
+    color: #fff;
+}
+#content .cardTitle {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+/* 뉴스 본문 */
+#content.articleWrap span {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 45px;
+    color: #fff;
+    font-weight: 900;
+}
+.articleWrap img {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    margin: 100px auto 40px;
+}
+.articleText {
+    display: block;
+    width: 100%;
+    max-width: 750px;
+    margin: 30px auto 60px;
+    color: #fff;
+    line-height: 2;
+}
+
+/* b.e.p. producer */
+#bep {
+    background: #000;
+}
+#bep .background {
+    position: absolute;
+}
+#bep .bg-img {
+    background-image: url("../images/producer-bep-cover.jpg");
+}
+#bep .text span {
+    display: block;
+    font-size: 30px;
+}
+#bep .textbox:nth-child(1) span {
+    font-size: 60px;
+}
+#bep .textbox:nth-child(n+2) {
+    justify-content: flex-start;
+}
+#bep .desc {
+    padding: 0 80px 50px;
+    font-size: 1.1em;
+}
+.profileBox {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px 60px;
+}
+.profileBox .profile {
+    width: 48%;
+    margin-bottom: 65px;
+}
+.profileBox .profile .name {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+#bep .bottom {
+    padding: 0 0 70px;
+}
+
+/* stayc */
+#stayc {
+    background: #000;
+}
+#stayc .bg-img {
+    background-image: url("../images/STAYC_YOUNG-LUV.COM_1800x1200.jpg");
+}
+#stayc .background {
+    position: absolute;
+}
+#stayc .text span {
+    display: block;
+    font-size: 30px;
+}
+#stayc .textbox:nth-child(1) span {
+    font-size: 60px;
+}
+#stayc .textbox:nth-child(n+2) {
+    justify-content: flex-start;
+}
+#stayc .desc {
+    padding: 0 80px 50px;
+    font-size: 1.1em;
+}
+.discography {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 80px;
+}
+.discography .album {
+    width: 48%;
+    margin-bottom: 65px;
+}
+.discography .album .name {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+#stayc .bottom {
+    padding-bottom: 70px;
+}
+
+/* 415 */
+#duo {
+    background: rgba(76,148,186,1);
+}
+#duo .background {
+    position: absolute;
+}
+#duo .bg-img {
+    background-image: url("../images/duo.jpg");
+}
+#duo .text span {
+    display: block;
+    font-size: 30px;
+}
+#duo .textbox:nth-child(1) span {
+    font-size: 60px;
+}
+#duo .textbox:nth-child(n+2) {
+    justify-content: flex-start;
+}
+#duo .desc {
+    padding: 0 80px 50px;
+    font-size: 1.1em;
+}
+#duo .bottom {
+    padding-bottom: 70px;
+}
+
+/* 오디션 */
+#audition {
+    background: #000;
+}
+#audition .bg-img {
+    background-image: url("../images/highup-audition-bg.gif");
+}
+#audition .background {
+    position: absolute;
+}
+#audition .text span {
+    display: block;
+    font-size: 30px;
+}
+#audition .textbox:nth-child(1) span {
+    font-size: 60px;
+}
+#audition .textbox:nth-child(n+2) {
+    justify-content: flex-start;
+}
+.who {
+    padding: 0 80px;
+}
+.who .list {
+    padding: 50px 0;
+    border-top: 2px solid rgba(255,255,255,0.1);
+}
+.who .bold {
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+.who .txt div {
+    margin: 8px 0;
+}
+#audition .bottom {
+    padding-bottom: 70px;
+}
+
+
+@media screen and (min-width: 1100px) {
+    .row-line {display: none}
+}
+/* 모바일 */
+@media screen and (max-width: 1100px) {
+    .textbox {
+        left: 40px;
+        width: 75%;
+    }
+    .textbox .text, .title  {
+        padding: 40px 0 60px 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    #about .textbox {
+        margin-top: -40px;
+    }
+    #about .textbox .text {
+        font-size: 18px !important;
+    }
+    #about .textbox:last-child {
+        margin-top: 60px;
+    }
+    #about .info .item span {
+        font-size: 15px !important;
+    }
+
+    .discography,
+    .profileBox {
+        padding: 0 0 30px 0 !important;
+    }
+    .desc {
+        padding: 20px 0 60px 0 !important;
+    }
+    .bottom {
+        font-size: 10px !important;
+        margin: 100px 0 50px 0 !important;
+    }
+    .bottom span {
+        font-size: 10px !important;
+    }
+    .info {
+        margin: 0 !important;
+    }
+
+    #content {
+        left: 40px;
+        width: 75%;
+        margin-top: 50px;
+        padding: 0;
+    }
+    .right-content {
+        padding-top: 0;
+    }
+    .scroll {
+        position: fixed;
+        margin-top: 0;
+        right: 40px;
+        top: 150px;
+    }
+
+    .textbox:nth-child(1) span {
+        position: relative;
+        font-size: 40px !important;
+        top: -65px;
+    }
+
+    .who {
+        padding: 0;
+    }
+
+    #content.articleWrap span {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .cardTitle {
+        font-size: 20px !important;
+    }    
+}
+@media screen and (max-width: 785px) {
+    #stayc .bg-img {
+        background-image: url("../images/mobile-stayc.jpg");
+    }
+    #duo .bg-img {
+        background-image: url("../images/mobile-duo.jpg");
+    }
+    #bep .bg-img {
+        background-image: url("../images/mobile-bep.jpg");
+    }
+}
+@media screen and (max-width:620px) {
+    .card {
+        width: 100% !important;
+    }
+}
+@media screen and (max-width: 500px) {
+
+    .textbox:nth-child(1) .text span {
+        font-size: 30px !important;
+    }
+    .album {
+        width: 90% !important;
+    }
+    .item {
+        flex-direction: column !important;
+    }   
+    .item > span {
+        width: 100% !important;
+    }
+    .item > span:last-child {
+        margin-top: 15px;
+        text-align: right;
+    } 
+}
+@media screen and (max-width: 390px) {
+    .textbox, #content {
+        width: 65%;
+    }
+    .profile {
+        width: 90% !important;
+    }
+}
