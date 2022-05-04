@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+.loading-logo {
+  width: 414px;
+  height: 120px;
+  position: absolute;
+  top: -90%;
+  left: 40%;
+  opacity: 1;
+  animation: loading-logo-one 3s ease-out 0.2s none;
+}
+
+@keyframes loading-logo-one {
+  0% {
+    background: url(../images/2.png) no-repeat;
+    top: 40%;
+  }
+
+  16% {
+    background: url(../images/6.png) no-repeat;
+    top: 40%;
+  }
+  32% {
+    background: url(../images/7.png) no-repeat;
+    top: 40%;
+  }
+  48% {
+    background: url(../images/logoblack.png) no-repeat;
+    top: 40%;
+  }
+  64% {
+    background: url(../images/logoblack.png) no-repeat;
+    top: 40%;
+  }
+  80% {
+    background: url(../images/logoblack.png) no-repeat;
+    top: 40%;
+  }
+  100% {
+    background: url(../images/logoblack.png) no-repeat;
+    top: 40%;
+  }
+}
