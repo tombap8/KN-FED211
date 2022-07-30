@@ -1,0 +1,255 @@
+@charset "utf-8";
+/* 제주맥주 메인 페이지 미디어쿼리  - media.css */
+
+/********** 991px이하 미디어쿼리 시작 ************/
+@media screen and (max-width: 991px) {
+
+  /* 크기 줘서 버티는 요소 없는데도 가로바 생기는 것 없앰 */
+  html,body {
+    overflow-x: hidden;
+  }
+
+  /* 숨기기: 사이즈줄면 모두 안보이게
+  (로고, GNB메뉴, 탑메뉴, sns) */
+  .logo,
+  .topmn1,
+  .topmn2,
+  .gwrap,
+  .sns {
+    display: none;
+  }
+
+
+  /************* 1. 상단영역 ************/
+  .top {
+    height: 50px;
+    width: 100%;
+    background-color: #fff;
+    position: fixed;
+    z-index: 99;
+  }
+
+  /* 상단영역을 on 했을 때 */
+  .top.on {
+    height: 55px;
+  }
+
+  /* 작은로고1 보이게하기 */
+  .slogo img:first-child {
+    display: inline;
+    width: 95px;
+    margin: 0 10px;
+  }
+
+  .wrap div {
+    padding: 15px 5px;
+  }
+
+  /* 햄버거버튼 보이게함 */
+  .ham {
+    /* 포지션이 앱솔루트이면 기본 block이다! */
+    display: block;
+    z-index: 1;
+    /* 로고보다 위 */
+  }
+
+
+  /************** 2. 메인영역 **************/
+  /* 2-2.라거 배경이미지 1개 */
+  .mainTop>div:nth-child(2) {
+    background-position: left;
+    height: 638px;
+    width: auto;
+  }
+
+  /* 2-2. 위트/펠롱/거멍 배경이미지 3개 */
+  .mainTop>div:nth-child(2)~div {
+    background-position: right;
+    height: 638px;
+    width: auto;
+  }
+
+
+  /* 속박스 */
+  .des {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cat {
+    width: 100%;
+  }
+
+  /* 라거 타이틀이미지 작아짐*/
+  .larger .tit img {
+    width: 130px;
+  }
+
+  /* 위트/펠롱/거멍 타이틀이미지 작아짐 */
+  .tit img {
+    width: 320px;
+  }
+
+  /* 2-4. 아이템이미지 */
+  .des img {
+    width: 180px;
+  }
+
+  /* 2-5. 제품설명 */
+  .des p {
+    width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  /* 제품설명 줄바꿈 제대로 나오게 */
+  .des p .aa {
+    display: inline-block;
+  }
+
+  /* 판매처 슬라이드 박스 */
+  .mainBtm {
+    padding: 30px 0;
+  }
+
+  /* 판매처 슬라이드 설명박스 */
+  .stit {
+    /* 설명싼 박스가로 크기에 따라 움직임 */
+    width: 100vw;
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+  }
+
+  /* 판매처 슬라이드 이미지 */
+  .slist li img {
+    width: 30vw;
+  }
+
+
+  /*********** 3. 하단영역 ***********/
+  /* 이용약관~처리방침 사이간격, 글자크기 */
+  .btn a {
+    margin-right: 10px;
+    font-size: 1.2rem;
+  }
+
+  /* ABOUT US~IR 안보이게
+  : 다른 방법으로 선택하는 방법은??? */
+  .btn a:nth-child(1),
+  .btn a:nth-child(2),
+  .btn a:nth-child(3),
+  .btn a:nth-child(4),
+  .btn a:nth-child(5) {
+    display: none;
+  }
+
+  /* 회사정보 글자크기 작게 */
+  .cpr p:nth-child(1) {
+    font-size: 1.1rem;
+  }
+
+  /* 3-1. 회사정보 띄어쓰기 */
+  .cpr .bb {
+    display: block;
+  }
+
+  /* 3-4. 문의,공유,위로가기 버튼 */
+  .fixed_icon a {
+    width: 45px;
+  }
+}
+
+/********** 991px이하 미디어쿼리 끝 ************/
+
+
+/********** 766px이하 미디어쿼리 시작 ************/
+@media screen and (max-width:766px) {
+
+  /* 2-1. 비율유지 동영상 */
+  .mvid video {
+    height: 85vh;
+  }
+
+  /* 배경이미지 4개 */
+  .mainTop>div:nth-child(1)~div {
+    width: 100%;
+  }
+
+  /* 2-5. 제품설명 */
+  .des p {
+    width: 55vw;
+    margin: 0 auto;
+
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  /* 3. 하단영역 */
+  /* 이용약관~처리방침 글자크기 다시 크게*/
+  .btn a {
+    font-size: 1.3rem;
+  }
+
+  /* 회사정보 글자크기 다시 크게 */
+  .cpr p:nth-child(1) {
+    font-size: 1.3rem;
+  }
+}
+
+/********** 766px이하 미디어쿼리 끝 ************/
+
+/********** 450px이하 미디어쿼리 시작 ************/
+@media screen and (max-width:450px) {
+
+  /* 2-3. 제품 타이틀이미지 */
+  .tit img {
+    width: 240px;
+  }
+
+  /* 2-4. 제품이미지 */
+  .des img {
+    width: 160px;
+  }
+
+  /* 2-5. 제품설명 */
+  .des p {
+    width: 80vw;
+  }
+
+  /* 제품설명 줄바꿈 제대로 나오게 */
+  .des p .bb {
+    display: inline-block;
+  }
+
+  /* 3-4. 문의,공유,위로가기 버튼 */
+  .fixed_icon {
+    right: 5%;
+  }
+
+
+  /* 모바일서브페이지 - 갤럭시폴드용 */
+  /* 2-6,2-7. 탑메뉴1,2 */
+  .sub_header {
+    font-size: 11px;
+  }
+
+  /* 2-8. GNB메뉴 */
+  .sub_big li a,
+  .sub_small li a {
+    font-size: 20px;
+  }
+
+  /* GNB메뉴 내 한달살이,양조장투어 글씨 */
+  .sub_big span {
+    font-size: 12px;
+  }
+
+  /* 3-3. SNS메뉴 크기 작게 */
+  .sub_snsbox a img {
+    height: 25px;
+  }
+}
+
+/********** 450px이하 미디어쿼리 끝 ************/

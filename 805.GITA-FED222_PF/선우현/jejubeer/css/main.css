@@ -1,0 +1,211 @@
+@charset "utf-8";
+/* 제주맥주 메인 페이지 css - main.css */
+
+/* 공통사용 외부 css 파일 합치기 :commom/reset/core.css파일을 불러와서 써야하므로 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+
+
+/* 전체화면 구현중 공사중 외곽선 표시: body밑의 만들어진 모든 것에 적용 */
+/* body * {
+  outline: 1px dashed lime;
+} */
+
+
+
+/******** 2.메인영역 *********/
+/* 2-1.동영상 */
+.mvid video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.mvid::before {
+  content: '';
+  padding-top: 80%;
+}
+
+
+/* 2-2.배너이미지 배경 */
+.bgc {
+  height: 593px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.larger {
+  background-image: url(../images/larger_back.png);
+}
+
+.weat {
+  background-image: url(../images/weat_back.png);
+}
+
+.pellong {
+  background-image: url(../images/pellong_back.png);
+}
+
+.geomeong {
+  background-image: url(../images/geomeong_back.png);
+}
+
+/* 비율유지하는 배경이미지 - 사용안함 */
+/* .rbx::before {
+  content: '';
+  display: block;
+  padding-top: 35%;
+} */
+/* 
+    [ 내가 원하는 비율 계산하기 ]
+    패딩탑 100%가 부모박스 가로크기의 1:1 비율이므로
+    이미지비율을 식으로 쓰면 ...
+    가로 : 세로 = 100% : x
+    1920 : 540 = 100 : x
+    내항의 곱은 외항의 곱과 같다! 비례식!!!
+    540*100 = 1920*x
+    x = 540*100/1920
+      = 2.8125
+    이 x값이 패딩탑 %값이다!!!  
+  */
+
+/* 비율유지하는 속 내용박스 - 사용안함 */
+/* .rbxIn {
+  position: absolute;
+  /* 앱솔루트가 없으면 패딩은 비율에 맞게 밀고 있는데 위의 패딩탑 때문에 내용이 안에 못 들어가고 바깥에서 밀려있음. 들어올 자리를 앱솔루트가 만들어줌(위로 올라가서 .rbx에 부모자격 줘야함)  *
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  /* 부모는 반드시 .rbx여야 함!! *
+
+  display: flex;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+} */
+
+/* 배너이미지 4개 높이 */
+/* .mainTop>div:nth-child(1)~div{
+  height: 593px;
+} */
+
+
+/* 배너이미지 속박스 */
+.cat {
+  width: 800px;
+  margin: 0 auto;
+  text-align: center;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  /* 싸고있는 .bgc에 높이가 593px 있기 때문에 자기크기높이의 50%만큼 밀어서 정가운데 놓을 수 있음?? */
+}
+
+/* 2-3. 타이틀이미지 */
+/* 라거 타이틀이미지 */
+.larger .tit img {
+  width: 200px;
+}
+
+/* 위트/펠롱/거멍 타이틀이미지 */
+.tit img {
+  width: 350px;
+}
+
+
+/* 제품이미지+설명 */
+.des {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* 2-4. 제품이미지 */
+.des img {
+  width: 200px;
+}
+
+/* 2-5. 제품설명 */
+.des p {
+  margin: 0;
+  padding: 50px 0 0 46px;
+  color: #fff;
+  font-size: 1.8rem;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  text-align: left;
+}
+
+/* 제품설명: 모바일에서 줄바꿈되도록 */
+.des p .aa,
+.des p .bb {
+  display: none;
+}
+
+
+/* 내용세팅: 이미지 -> 사용안함 */
+/* .cat div:nth-child(1) img {
+  position: absolute;
+  width: 200px;
+  top: 0;
+}
+.cat div:nth-child(2) img {
+  position: absolute;
+  width: 200px;
+} */
+
+
+
+/* 2-6. 판매처 이미지 슬라이드 */
+.mainBtm {
+  width: 1000px;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* 판매처 설명 */
+.stit {
+  color: #1ecad3;
+  font-size: 2rem;
+  font-family: 'Gowun Dodum', sans-serif;
+  margin-bottom: 30px;
+}
+
+/* 판매처 슬라이드이미지 */
+.slist {
+  position: relative;
+  left: 0;
+  width: 80vw;
+  margin: 0 auto;
+
+  display: flex;
+  /* 애니메이션: 이시이지반방마 */
+  /* 이름 시간60초동안 등속도로 지연시간없고
+  반복영원히 */
+  animation: flowAni 60s linear infinite;
+}
+
+@keyframes flowAni {
+  to{
+    left: -2172px;
+  }
+} /* 키프레임 */
+
+/* 슬라이드이미지에 마우스오버시 */
+.slist:hover{
+  /* 애니메이션 재생상태 멈춤 */
+  animation-play-state: paused;
+}
+
+/* 슬라이드이미지 각각 */
+.slist li img {
+  flex: 1;
+  width: 137px;
+  padding: 15px;
+}

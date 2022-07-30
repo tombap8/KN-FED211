@@ -1,0 +1,554 @@
+@charset "utf-8";
+/* css를 별도 작성하여 외부css로 가져올 때는 여기의 포맷팅을 따로 읽어 html에 적용하므로 캐릭터 셋을 별도로 해주어야 함
+자바스크립트는 html파일 안에 집어넣어 돌아가기 때문에 깨지지 않음 */
+
+/* 제주맥주 공통디자인 css - common.css */
+/* 상단영역, 하단영역 등 공통디자인 */
+
+
+/* 부드러운 스크롤이동-로봇PJ때 함 
+=> JS 부드러운스크롤시 주석처리함(중복사용안됨) */
+/* html {
+    scroll-behavior: smooth;
+} */
+
+
+/* 공통 글씨체,배경색 */
+body {
+  font-family: 'Nanum Gothic', 'Malgun Gothic', 'sans-serif';
+  color: #3d464b;
+  font-size: 14px;
+  line-height: 1.6;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #fff;
+}
+
+img,
+video {
+  vertical-align: bottom;
+}
+
+
+/**************** 1. 상단영역 *****************/
+/* 상단전체영역*/
+.wrap {
+  max-width: 1200px;
+  /* height: 180px; */
+  /* 블록중앙정렬 */
+  margin: 0 auto;
+
+  /* 플렉스박스: 로고, 탑메뉴를 가로로 정렬 */
+  display: flex;
+  /* 수평정렬속성: 아이템 요소 양쪽끝에 붙고 사이간격 일정 */
+  justify-content: space-between;
+  /* background-color: bisque; */
+}
+
+.wrap div {
+  flex: 1;
+  /* wrap의 자식 div들(빈div,로고,탑메뉴)를 등분 */
+  padding: 30px 0;
+}
+
+
+/* 1-1.로고 */
+.logo img {
+  display: block;
+  width: 90px;
+  margin: 0 auto;
+}
+
+/* 브라우저 원래사이즈일때 작은로고들 안보임 */
+.slogo img {
+  display: none;
+}
+
+/* 브라우저 줄었을 때 서브페이지의 이미지없는 작은로고 안보이게함 */
+.slogo img:last-child {
+  display: none;
+}
+
+/* 햄버거버튼 눌러서 서브페이지일때 이미지없는 작은로고 나오게함 */
+.top.on .slogo img:last-of-type {
+  display: inline;
+  width: 80px;
+  margin: 0 15px;
+  vertical-align: text-top;
+}
+
+/* 햄버거버튼 눌러서 서브페이지일때 이미지있는 작은로고 안보이게함 */
+.top.on .slogo img:first-of-type {
+  display: none;
+}
+
+
+/* 1-2.탑메뉴 */
+.topmn1,
+.topmn2 {
+  display: flex;
+  /* topmn의 li를 한줄로 나란히 나오게 */
+  justify-content: flex-end;
+}
+
+/* 1-2.탑메뉴1: LOGIN~RECRUIT */
+.topmn1 {
+  margin-top: 40px;
+}
+
+.topmn1 li {
+  padding: 3px 0;
+  /* LOGIN~RECRUIT 사이사이 간격 띄움 */
+  margin-left: 25px;
+}
+
+/* LOGIN~RECRUIT 글자 */
+.topmn1 li a {
+  color: #888;
+  font-family: 'Nunito', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  /* 트랜지션: 속시이지 */
+  transition: color .5s;
+}
+
+/* LOGIN~RECRUIT 글자 마우스 오버시 색상변경 */
+.topmn1 li a:hover {
+  color: #ccc;
+}
+
+/* 1-2.탑메뉴2: 제주맥주라이프, 양조장예약 */
+.topmn2 {
+  /* 탑메뉴1과 간격 띄움 */
+  margin-top: 20px;
+}
+
+/* 제주맥주라이프,양조장예약 각각 박스 */
+.topmn2 li {
+  padding: 0 18px;
+  margin-left: 10px;
+  border: 1px solid #1ecad3;
+  border-radius: 20px;
+  background-color: #1ecad3;
+  /* 트랜지션: 속시이지 */
+  transition: .3s ease-in-out;
+}
+
+/* 제주맥주라이프, 양조장예약에 각각 마우스오버 시 배경색변경 */
+.topmn2 li:hover {
+  border: 1px solid #10adb5;
+  background-color: #10adb5;
+
+}
+
+/* 제주맥주라이프,양조장예약 글자 */
+.topmn2 li a {
+  color: #fff;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 15px;
+}
+
+/* 1-2. GNB메뉴 */
+.gwrap {
+  max-width: 1200px;
+  height: 60px;
+  margin: 0 auto;
+}
+
+/* JEJUBEERLIFE~BREWERY 전체박스 */
+.gnb {
+  /* 플렉스박스 */
+  display: flex;
+  /* li들을 가로정렬하기 위해 display:flex */
+  justify-content: space-evenly;
+  /* li 사이간격 띄움(수평정렬속성)
+  : 아이템 요소 양쪽과 사이간격 모두일정*/
+  padding-top: 10px;
+}
+
+/* JEJUBEERLIFE~BREWERY 각각 박스 */
+.gnb li {
+  padding: 0 50px;
+}
+
+/* JEJUBEERLIFE~BREWERY 글자 */
+.gnb li a {
+  color: #55585b;
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 16px;
+  font-weight: bold;
+
+  /* 트랜지션: 속시이지 */
+  transition: .2s ease-in-out;
+}
+
+/* JEJUBEERLIFE~BREWERY 글자 및 주변에 마우스오버 시 글자색상변경 */
+.gnb li a:hover {
+  color: #1ecad3;
+}
+
+
+/* 모바일용 햄버거 버튼 */
+.ham {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: #1ecad3;
+  font-size: 30px;
+  /* 트랜스폼을 이용해 버튼 가로로 늘림 */
+  transform: scaleX(1.5);
+
+  /* 버튼 기본디자인없앰: 배경색 투명으로, 보더 없앰 */
+  background-color: transparent;
+  border: none;
+
+  /* 모바일 아닐 때 안보임 */
+  display: none;
+  /* 모바일 일때 보이게 하려면 media.css 파일에서 display:block; */
+
+}
+
+/* 햄버거버튼모양 가상요소로 문자넣기 
+  이유: x버튼으로 변경가능하도록 하려고 
+  html에 넣지 않고 가상요소로 넣음 */
+.ham::before {
+  content: '≡';
+}
+
+/* 햄버거버튼 x버튼으로 문자모양변경 
+  (전체메뉴 보일때만->.top.on일때만) */
+.top.on .ham::before {
+  content: '×';
+}
+
+/* x버튼 크기변경 (.top.on일때 x가 납작해지지않게) */
+.top.on .ham {
+  transform: scale(1.5);
+}
+
+
+
+
+/************* 모바일용 서브페이지 *************/
+/* 서브페이지 로고와 X버튼은 상단에 있음 */
+
+.sub_page {
+  /* 모바일 아닐 때 안보임 */
+  display: none;
+  /* 화면전체에 배경 다 덮이도록 */
+  width: 100%;
+  height: calc(100vh - 50px);
+  position: fixed;
+  top: 50px;
+
+  background-color: #fff;
+  z-index: 9999;
+}
+
+/* 서브페이지 안보이게 */
+.top.on .sub_page {
+  display: block;
+}
+
+/************* 서브페이지 상단영역 *************/
+.sub_top {
+  display: flex;
+  /* 탑메뉴1,2 가로정렬: 양쪽끝에 놓이게 */
+  justify-content: space-between;
+  /* 탑메뉴1,2 세로정렬 */
+  align-items: center;
+  background-color: #1ecad3;
+  height: 40px;
+
+
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* 탑메뉴1: 왼쪽에서 간격띄워 로고와 같은 선에서 시작하게 */
+.sub_top div:nth-child(1) {
+  padding-left: 20px;
+}
+
+/* 탑메뉴1,2 */
+.sub_top a {
+  color: #fff;
+  background-color: #1ecad3;
+}
+
+/* 탑메뉴1 사이사이 간격띄움 */
+.sub_top div:first-child a {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+/* 탑메뉴2 오른쪽에서 간격 띄우고 폰트 */
+.sub_top div:last-child a {
+  margin-right: 20px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+
+/*********** 서브페이지 메인영역 ***********/
+.sub_main {
+  overflow-y: auto;
+  padding: 0;
+  height: calc(100% - 130px);
+}
+
+/* 서브페이지 GNB메뉴 */
+.sub_nav {
+  /* 플렉스박스 */
+  display: flex;
+  /* sub_big과 sub_small 세로로 정렬 */
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+/* GNB메뉴-대메뉴 */
+.sub_big {
+  margin: 12px 0;
+  /* 플렉스박스 */
+  display: flex;
+  /* EVENT~BREWERY 방향 세로정렬 */
+  flex-direction: column;
+}
+
+/* GNB메뉴-소메뉴 EVENT~BREWERY 각각 박스 */
+.sub_big li {
+  flex: 1;
+  margin: 5px 0;
+}
+
+/* GNB메뉴-소메뉴 EVENT~BREWERY 글자 */
+.sub_big li a {
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 25px;
+  font-weight: bold;
+  color: #555;
+}
+
+/* 제주맥주한달살기, 양조장투어 글씨 */
+.sub_big span {
+  font-size: 14px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-weight: normal;
+}
+
+/* GNB메뉴-대메뉴 SHOP 뒤에 가상요소로 카트이미지 넣기 */
+.sub_big>li:nth-child(4)>a::after {
+  /* 반드시 써주기 */
+  content: '';
+  /* SHOP 옆으로 나란히 오게함 */
+  display: inline-block;
+  /* SHOP과 세로정렬 맞춤 */
+  vertical-align: middle;
+  background-image: url(../images/shopping-cart-solid.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 25px;
+  height: 25px;
+  margin-left: 5px;
+  color: #1ecad3;
+  /* 이렇게 색상 안바뀜 filter로 변경*/
+  /* svg 이미지 색상바꾸기 
+  : https://codepen.io/sosuke/pen/Pjoqqp
+  에서 16진법색상코드(HEX코드)넣고 filter 속성 코드로 변환  */
+  filter: invert(74%) sepia(71%) saturate(611%) hue-rotate(138deg) brightness(85%) contrast(94%);
+}
+
+/* GNB메뉴-대메뉴 BREWERY 위아래 선넣기, 패딩 */
+.sub_big li:nth-child(5) {
+  border-top: 2px solid #1ecad3;
+  border-bottom: 2px solid #1ecad3;
+  width: 200px;
+  position: relative;
+  left: -20px;
+  padding: 10px 0 10px 20px;
+}
+
+
+/* GNB메뉴-소메뉴 */
+.sub_small {
+  margin: -10px 0;
+  /* 플렉스박스 */
+  display: flex;
+  /* about us~news 방향 세로정렬 */
+  flex-direction: column;
+}
+
+.sub_small li {
+  flex: 1;
+  margin: 2px 0;
+}
+
+/* GNB메뉴-소메뉴 about us~news 글자 */
+.sub_small li a {
+  font-family: 'Baloo Da 2', cursive;
+  font-size: 22px;
+  font-weight: bold;
+  color: #555;
+}
+
+/************ 서브페이지 하단영역 ************/
+.sub_snsbox {
+  /* 플렉스박스: sns이미지 4개 가로정렬 */
+  display: flex;
+  justify-content: space-between;
+  height: 52px;
+  align-items: center;
+  /* sns이미지 4개 좌우 여백 */
+  padding: 0 20px;
+  /* sns이미지 하단 1줄 선 */
+  border-bottom: 1px solid #1ecad3;
+}
+
+/* 유튜브, sns이미지 */
+.sub_snsbox a img {
+  height: 32px;
+}
+
+.sub_info {
+  /* CONTACT, IR 플렉스박스 */
+  display: flex;
+  /* 양쪽 가로정렬 */
+  justify-content: space-between;
+  padding: 10px 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+/**************** 2. 메인영역 *****************/
+/* .cont {
+  background-color: tomato;
+} */
+
+/**************** 3. 하단영역 *****************/
+/* 인포박스 전체 */
+.info {
+  margin: 50px 20px;
+  color: #999;
+  /* background-color: lightyellow; */
+}
+
+/* 추가정보링크+SNS 영역 */
+.btn_wrap {
+  /* 플렉스박스 */
+  display: flex;
+}
+
+.btn_wrap div {
+  /* 등분할 */
+  flex: 1;
+}
+
+/* 추가정보링크 */
+.btn {
+  display: flex;
+  /* align-items: center; */
+  /* 브라우저 줄었을 때 줄바꿈 */
+  flex-wrap: wrap;
+}
+
+/* 추가정보링크 글자 */
+.btn a {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  color: #999;
+  margin-right: 35px;
+  white-space: nowrap;
+  margin-bottom: 64px;
+
+  /* 트랜지션: 속시이지 */
+  transition: .3s ease-in-out;
+}
+
+/* 추가정보링크 글자 호버시 */
+.btn a:hover {
+  color: #1ecad3;
+}
+
+/* 개인정보처리방침 글자 */
+.btn a:nth-child(7) {
+  color: #000;
+}
+
+/* 3-2. SNS 메뉴  */
+.sns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+/* SNS 이미지 각각 */
+.sns a img {
+  width: 40px;
+  margin-left: 10px;
+  /* vertical-align: middle; */
+}
+
+/* 유튜브 */
+.sns a:nth-child(1) img {
+  width: 190px;
+}
+
+/* 회사정보 */
+.cpr p:nth-child(1) {
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  font-size: 1.3rem;
+}
+
+/* 저작권 */
+.cpr p:nth-child(2) {
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 20px 0 50px 0;
+}
+
+/* 회사정보 띄어쓰기
+: 모바일에서 줄바꿈되게  */
+.cpr .bb {
+  display: none;
+}
+
+/* 3-4. 문의,공유,위로가기 버튼 */
+.fixed_icon {
+  position: fixed;
+  bottom: 2%;
+  right: 3%;
+
+  /* 플렉스박스 */
+  display: flex;
+  /* 플렉스방향: 세로로 */
+  flex-direction: column;
+}
+
+.fixed_icon a {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.fixed_icon img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 위로가기버튼:스크롤값 0일때 안보임 */
+/* 클래스 tbtn 주고 투명하게해서 숨김 */
+.tbtn {
+  display: none;
+
+  /* opacity: 0; */
+  /* 투명 */
+  /* opacity로 하면 위  */
+}
+
+/* 위로가기버튼 클래스on상태: 이때작동함 */
+.tbtn.on {
+  display: block;
+
+  /* opacity: 1; */
+  /* 나타나기 */
+  bottom: 0;
+  /* 올라옴! */
+}

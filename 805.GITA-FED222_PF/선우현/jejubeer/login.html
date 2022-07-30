@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+  
+<head>
+  <meta charset="UTF-8">
+  <!-- 모바일페이지 뷰포트 필수!! -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEJU BEER login</title>
+  <link rel="stylesheet" href="css/login.css">
+  <!-- 외부css 하나만 불러도 main.css에서 import 하고있는 3개의 기본css가 같이 들어옴  -->
+  <link rel="stylesheet" href="css/media.css">
+  <!-- 미디어쿼리 css 외부파일은 반드시 기존 css 파일 아래쪽에 호출해야 덮어쓰여짐 -->
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <!-- 제이쿼리 UI -->
+  <script src="js/jquery-ui.min.js"></script>
+  <!-- 부드러운스크롤JS -->
+  <script src="js/smoothScroll20.js"></script>
+  <!-- 공통외부JS -->
+  <script src="js/common.js"></script>
+  <script src="js/linksys.js"></script>
+</head>
+
+<body class="scbar">
+  <!--------------- 1. 상단영역 ----------------->
+  <div id="top">
+    <header class="inbox top">
+      <section class="wrap">
+        <div class="slogo">
+          <!-- 모바일용 서브페이지의 로고 -->
+          <a href="main.html">
+            <img src="./images/logo_small.png" alt="작은로고1">
+            <img src="./images/logo_sub.png" alt="작은로고2">
+            <span class="ir">로고</span>
+          </a>
+        </div>
+        <!-- 1-1.메인로고 -->
+        <div class="logo">
+          <a href="main.html">
+            <img src="./images/logo.png" alt="제주맥주로고">
+            <span class="ir">로고</span>
+          </a>
+        </div>
+        <!-- 1-2.탑메뉴 -->
+        <div>
+          <ul class="topmn1">
+            <li>
+              <a href="#">LOGIN</a>
+            </li>
+            <li>
+              <a href="#">JOIN</a>
+            </li>
+            <li>
+              <a href="#">CART</a>
+            </li>
+            <li>
+              <a href="#">RECRUIT</a>
+            </li>
+          </ul>
+          <ul class="topmn2">
+            <li>
+              <a href="#">제주맥주 라이프</a>
+            </li>
+            <li>
+              <a href="#">양조장 예약</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 1-3.GNB메뉴 -->
+      <nav class="gwrap">
+        <ul class="gnb">
+          <li>
+            <a href="#">JEJU BEER LIFE</a>
+          </li>
+          <li>
+            <a href="#">EXPERIENCE</a>
+          </li>
+          <li>
+            <a href="#">COLLABORATION</a>
+          </li>
+          <li>
+            <a href="#">SHOP</a>
+          </li>
+          <li>
+            <a href="#">BREWERY</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- 모바일용 햄버거버튼 : 햄버거모양(ㄷ한자키) -->
+      <button class="ham" onclick="showGNB()"></button>
+
+      <!-- 모바일용 서브페이지 -->
+      <div class="sub_page">
+        <div class="sub_header">
+          <div class="sub_top">
+            <div>
+              <a href="#">
+                <span>LOGIN</span>
+              </a>
+              <a href="#">
+                <span>JOIN</span>
+              </a>
+              <a href="#">
+                <span>RECRUIT</span>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <span>| &nbsp;&nbsp; 양조장 예약</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="sub_main">
+          <nav class="sub_nav">
+            <ul class="sub_big">
+              <li>
+                <a href="#">EVENT</a>
+              </li>
+              <li>
+                <a href="#">JEJU BEER LIFE <span>제주맥주 한달살기</span></a>
+              </li>
+              <li>
+                <a href="#">COLLABORATION</a>
+              </li>
+              <li>
+                <a href="#">SHOP</a>
+              </li>
+              <li>
+                <a href="#">BREWERY <span>양조장투어</span></a>
+              </li>
+            </ul>
+            <ul class="sub_small">
+              <li>
+                <a href="#">about us</a>
+              </li>
+              <li>
+                <a href="#">our beers</a>
+              </li>
+              <li>
+                <a href="#">news</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sub_footer">
+          <div class="sub_snsbox">
+            <a href="https://www.youtube.com/channel/UCVHSuXVobLHYTvcvsYjCncw" target="_blank">
+              <img src="./images/youtube.png" alt="유튜브">
+            </a>
+            <div>
+              <a href="https://www.facebook.com/jejubeerofficial" target="_blank">
+                <img src="./images/facebook.png" alt="페이스북">
+              </a>
+              <a href="https://www.instagram.com/jejubeerofficial" target="_blank">
+                <img src="./images/insta.png" alt="인스타">
+              </a>
+              <a href="https://post.naver.com/my.nhn?memberNo=39126203" target="_blank">
+                <img src="./images/blog.png" alt="블로그">
+              </a>
+            </div>
+          </div>
+          <div class="sub_info">
+            <div>CONTACT</div>
+            <div>IR</div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!--------------- 2. 메인영역 ----------------->
+  <div id="cont">
+    <main class="inbox cont">
+      <!-- 1.로그인 타이틀 -->
+      <h2 class="login_stit">LOGIN</h2>
+      <!-- 2.로그인 박스 -->
+      <section class="scont">
+        <form action="process.php" method="post" class="logF">
+          <div class="input_block">
+            <!-- 이메일박스 -->
+            <div class="input_form">
+              <input title="이메일" type="text" id="uid" value placeholder="이메일">
+            </div>
+            <!-- 비밀번호 박스 -->
+            <div class="input_form brt">
+              <input title="비밀번호" type="password" id ="passwd" value placeholder="비밀번호">
+            </div>
+          </div>
+          <div class="loginBox">
+            <span>
+              <input type="checkbox" id="chkbx" name="chkbx">
+              <label for="chkbx">로그인 상태 유지</label>
+            </span>
+            <!-- 로그인 버튼영역 -->
+            <div class="btnbx">
+              <input type="submit" id="sbtn" value="로그인">
+            </div>
+            <!-- 기타링크 -->
+            <div class="addbx">
+              <a href="#">회원가입</a>
+              <a href="#">아이디 · 비밀번호 찾기</a>
+            </div>
+            <div class="my">
+              <span class="cen">or</span>
+            </div>
+            <!-- 카카오 로그인 -->
+            <div class="btnbx lbx">
+              <input type="submit" id="kkobtn" value="카카오로 시작하기">
+            </div>
+            <div class="my">
+              <span class="cen">or</span>
+            </div>
+            <div class="btnbx">
+              <input type="submit" id="nmembtn" value="비회원 주문 조회">
+            </div>
+          </div>
+
+
+
+        </form>
+      </section>
+    </main>
+  </div>
+
+  <!--------------- 3. 하단영역 ---------------->
+  <div id="info">
+    <footer class="inbox info">
+      <section class="btn_wrap">
+        <div class="btn">
+          <a href="#">ABOUT US</a>
+          <a href="#">OUR BEER</a>
+          <a href="#">NEWS</a>
+          <a href="#">CONTACT</a>
+          <a href="#">IR</a>
+          <a href="#">이용약관</a>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">영상정보 처리방침</a>
+        </div>
+        <div class="sns">
+          <a href="https://www.youtube.com/channel/UCVHSuXVobLHYTvcvsYjCncw" target="_blank">
+            <img src="./images/youtube.png" alt="유튜브">
+          </a>
+          <a href="https://www.facebook.com/jejubeerofficial" target="_blank">
+            <img src="./images/facebook.png" alt="페이스북">
+          </a>
+          <a href="https://www.instagram.com/jejubeerofficial/" target="_blank">
+            <img src="./images/insta.png" alt="인스타">
+          </a>
+          <a href="https://post.naver.com/my.nhn?memberNo=39126203" target="_blank">
+            <img src="./images/blog.png" alt="블로그">
+          </a>
+        </div>
+      </section>
+      <div class="cpr">
+        <p>
+          제주맥주 주식회사 대표이사 문혁기 <br>
+          본사) 제주특별자치도 제주시 한림읍 금능농공길 62-11 <br class="bb">
+          서울사무실) 서울특별시 중구 동호로 228 동호 38빌딩 6층 <br>
+          호스팅 제공자 (주)아임웹 <br class="bb">
+          사업자등록번호 616-86-27415 <br class="bb">
+          통신판매업신고번호 제 2020-제주한림-0101 호 <br>
+          고객센터 02-2235-5559, jejubeer@jejubeer.co.kr
+        </p>
+        <p>COPYRIGHT 2021@ JEJU BEER COMPANY</p>
+      </div>
+    </footer>
+    <!-- 3-4. 문의,공유,위로가기 버튼 -->
+    <div class="fixed_icon">
+      <a href="#">
+        <img src="./images/button-talk.png" alt="문의하기">
+      </a>
+      <a href="#">
+        <img src="./images/button-share.png" alt="공유하기">
+      </a>
+      <a href="#">
+        <img src="./images/button-top.png" alt="위로가기">
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

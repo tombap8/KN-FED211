@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friends in Central Perk</title>
+  <!-- 탭메뉴 아이콘(favicon): favorite icon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/favicon-96x96.png" />
+  <!-- 외부css하나만 불러도 main.css에서 import하고있는 3개의 기본css가 같이 들어옴 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/media.css">
+  <!-- 외부JS삽입 -->
+  <script src="js/main.js"></script>
+  <script src="js/smoothScroll20.js"></script>
+  <script src="js/linksys.js"></script>
+</head>
+
+<body class="scbar">
+  <!-- div 밑에 div라고 해도 되지만 내용이 집중되어있는 부분에 시멘틱 태그 header 사용하는 걸 권장하므로 div 밑에 header 사용 
+    => 크롤링(깊이있는 데이터검색)에 기여   -->
+
+  <!-- 1.상단영역 -->
+  <div id="top">
+    <header class="inbox top">
+      <!-- 1-1.메인로고 -->
+      <h1 id="logo">
+        <a href="#">
+          <span class="ir">로고</span>
+          <img src="./images/blogo.png" alt="프렌즈로고">
+        </a>
+      </h1>
+      <!-- 1-2.GNB메뉴 -->
+      <nav class="gnb">
+        <ul>
+          <li>
+            <a href="#">Friends</a>
+          </li>
+          <li class="bgbx m1">
+            <a href="#">About</a>
+            <!-- 서브메뉴 -->
+            <div class="smenu">
+              <ol>
+                <li>
+                  <a href="#">Program</a>
+                </li>
+                <li>
+                  <a href="#">Characters</a>
+                </li>
+                <li>
+                  <a href="#">Casts</a>
+                </li>
+              </ol>
+            </div>
+          </li>
+          <li class="bgbx m2">
+            <a href="#">Episodes</a>
+            <!-- 서브메뉴 -->
+            <div class="smenu">
+              <ol>
+                <li>
+                  <a href="#">Season1</a>
+                </li>
+                <li>
+                  <a href="#">Season2</a>
+                </li>
+                <li>
+                  <a href="#">Season3</a>
+                </li>
+                <li>
+                  <a href="#">Season4</a>
+                </li>
+                <li>
+                  <a href="#">Season5</a>
+                </li>
+                <li>
+                  <a href="#">Season6</a>
+                </li>
+                <li>
+                  <a href="#">Season7</a>
+                </li>
+                <li>
+                  <a href="#">Season8</a>
+                </li>
+                <li>
+                  <a href="#">Season9</a>
+                </li>
+                <li>
+                  <a href="#">Season10</a>
+                </li>
+              </ol>
+            </div>
+          </li>
+          <li>
+            <a href="#">Gallery</a>
+          </li>
+          <li>
+            <a href="#">Central Perk</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- 모바일용 햄버거버튼 : 햄버거모양(ㄷ한자키) -->
+      <button class="ham" onclick="showGNB()"></button>
+    </header>
+  </div>
+
+  <!-- 2-1.컨텐츠영역 -->
+  <div id="cont">
+    <main class="inbox cont">
+      <!-- 캐릭터박스 -->
+      <div id="cbx">
+        <!-- 1.조이 트리비아니  -->
+        <div class="cat">
+          <!-- 캐릭터 이미지박스 -->
+          <div class="ci"></div>
+          <!-- 캐릭터 설명박스 -->
+          <div class="cd scbar">
+            <!-- 캐릭터 타이틀 -->
+            <h3>Joey Tribianni
+              <i class="fa-solid fa-bed"></i>
+            </h3>
+            <!-- 캐릭터 설명 -->
+            <p>Joey is a good-natured but not-so-bright struggling actor. Through out the series he has a variety,
+              including a stint on the soap opera Days of Our Lives. Joey is obsessed with food.</p>
+
+            <p>Joey is a womanizer, with many girlfriends throughout the series, often using his catchphrase pick-up
+              line "How you doin'?".</p>
+          </div>
+        </div>
+        <!-- 2.모니카 갤러 -->
+        <div class="cat">
+          <!-- 캐릭터 이미지박스 -->
+          <div class="ci"></div>
+          <!-- 캐릭터 설명박스 -->
+          <div class="cd scbar">
+            <!-- 캐릭터 타이틀 -->
+            <h3>Monica Geller
+              <i class="fas fa-utensils"></i>
+            </h3>
+            <!-- 캐릭터 설명 -->
+            <p>Monica is known for her obsessive-compulsive and competitive nature. Monica is often jokingly teased by
+              the other for having been overweight as a child. She works as a chef at a variety of resturants throughout
+              the series.</p>
+
+            <p>Monica goes through a series of failed relationships throughout the show, including one with her father's
+              friend. She unexpectedly begins a relationship with Chandler, who she later marries and adopts two
+              children with.</p>
+          </div>
+        </div>
+        <!-- 3.챈들러 빙 -->
+        <div class="cat">
+          <!-- 캐릭터 이미지박스 -->
+          <div class="ci"></div>
+          <!-- 캐릭터 설명박스 -->
+          <div class="cd scbar">
+            <!-- 캐릭터 타이틀 -->
+            <h3>Chandler Bing
+              <i class="fa-solid fa-briefcase"></i>
+            </h3>
+            <!-- 캐릭터 설명 -->
+            <p>Chandler is known for his sarcastic sense of humor and often depicted as being somewat hapless. For most
+              of the series, Chandler works as an executive for a large multi-national corportion which he hates.</p>
+
+            <p>Chandler is best friends with Joey and was roommates with Ross in college. He does not have much luck
+              romantically but later dates and marries Monica.</p>
+          </div>
+        </div>
+        <!-- 4.피비 부페이 -->
+        <div class="cat">
+          <!-- 캐릭터 이미지박스 -->
+          <div class="ci"></div>
+          <!-- 캐릭터 설명박스 -->
+          <div class="cd scbar">
+            <!-- 캐릭터 타이틀 -->
+            <h3>Phoebe Buffay
+              <i class="fa-solid fa-guitar"></i>
+            </h3>
+            <!-- 캐릭터 설명 -->
+            <p>Phoebe is odd, ditzy albeit sweet-natured masseuse who grew up homeless, sometimes telling her friends
+              outlandish tales of life on the street. She is an aspiring musician who plays the guitar and sings songs
+              with somewhat unusual lyrics at the coffee shop.</p>
+
+            <p>Phoebe is Monica's former roommate who moved out because of Monica's annoying behavior. After a series of
+              dates and relationships with a number of men, Phoebe meets Mike Hannigan whom she eventually marries. She
+              also became a surrogate mother for her half-brother, giving birth to his triplets.</p>
+          </div>
+        </div>
+        <!-- 5.레이첼 그린 -->
+        <div class="cat">
+          <!-- 캐릭터 이미지박스 -->
+          <div class="ci"></div>
+          <!-- 캐릭터 설명박스 -->
+          <div class="cd scbar">
+            <!-- 캐릭터 타이틀 -->
+            <h3>Rachel Green
+              <i class="fa-solid fa-bag-shopping"></i>
+            </h3>
+
+            <!-- 캐릭터 설명 -->
+            <p>Rachel is spoiled but warm-hearted and likeable. At the beginning of the series, she leaves her fiance at
+              the alter and attempts to live independently for the first time. Much of the show follows her career
+              growth from waitress to a buyer at Ralph Lauren.</p>
+
+            <p>Rachel and Monica were best friends from high school who reconnect when Rachel moves in with Monica.
+              Throughout the series, she has an on-again off-again relationship with Ross.</p>
+          </div>
+        </div>
+        <!-- 6.로스 겔러 -->
+        <div class="cat">
+          <!-- 캐릭터 이미지박스 -->
+          <div class="ci"></div>
+          <!-- 캐릭터 설명박스 -->
+          <div class="cd scbar">
+            <!-- 캐릭터 타이틀 -->
+            <h3>Ross Geller
+              <i class="fa-solid fa-graduation-cap"></i>
+            </h3>
+            <!-- 캐릭터 설명 -->
+            <p>Ross is the most intelligent of the six main characters who prides himself on his rationality and is
+              known for being a know-it-all. Ross works as a paleontologist at a museum and later as a professor.</p>
+
+            <p>Monica's older brother and Chandler's college roommate, Ross has three failed marriages during the series
+              and is involved in an on-and-off relationship with Rachel.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- 2-2. 슬라이드 배너영역 -->
+    <div id="container">
+      <section>
+        <!-- 슬라이드 -->
+        <ul id="slide">
+          <li><img src="images/slide01.png" alt="slide"></li>
+          <li><img src="images/slide02.png" alt="slide"></li>
+          <li><img src="images/slide03.png" alt="slide"></li>
+          <li><img src="images/slide04.png" alt="slide"></li>
+          <li><img src="images/slide05.png" alt="slide"></li>
+          <li><img src="images/slide06.png" alt="slide"></li>
+          <li><img src="images/slide07.png" alt="slide"></li>
+          <li><img src="images/slide08.png" alt="slide"></li>
+          <li><img src="images/slide09.png" alt="slide"></li>
+          <li><img src="images/slide10.png" alt="slide"></li>
+        </ul>
+        <!--이동버튼-->
+        <a href="#" class="abtn ab1"><img src="images/left_btn.png" alt="왼쪽이동버튼"></a>
+        <a href="#" class="abtn ab2"><img src="images/right_btn.png" alt="오른쪽이동버튼"></a>
+        <!--블릿버튼-->
+        <ol class="indic">
+          <li class="on">
+            <img src="images/dot1.png" alt="흰색">
+            <img src="images/dot2.png" alt="회색">
+          </li>
+          <li>
+            <img src="images/dot1.png" alt="흰색">
+            <img src="images/dot2.png" alt="회색">
+          </li>
+          <li>
+            <img src="images/dot1.png" alt="흰색">
+            <img src="images/dot2.png" alt="회색">
+          </li>
+          <li>
+            <img src="images/dot1.png" alt="흰색">
+            <img src="images/dot2.png" alt="회색">
+          </li>
+          <li>
+            <img src="images/dot1.png" alt="흰색">
+            <img src="images/dot2.png" alt="회색">
+          </li>
+          <li class="on">
+            <img src="images/dot1.png" alt="흰색">
+            <img src="images/dot2.png" alt="회색">
+          </li>
+          <li>
+            <img src="images/dot1.png" alt="흰색">
+            <img src="images/dot2.png" alt="회색">
+          </li>
+          <li>
+            <img src="images/dot1.png" alt="흰색">
+            <img src="images/dot2.png" alt="회색">
+          </li>
+          <li>
+            <img src="images/dot1.png" alt="흰색">
+            <img src="images/dot2.png" alt="회색">
+          </li>
+          <li>
+            <img src="images/dot1.png" alt="흰색">
+            <img src="images/dot2.png" alt="회색">
+          </li>
+</ol>
+          <!-- 동영상 -->
+          <div id="popupMovie"></div>
+
+      </section>
+    </div>
+  </div>
+
+  <!-- 3.하단영역 -->
+  <div id="info">
+    <footer class="inbox info">
+      <!-- 3-1. SNS메뉴 -->
+      <ul class="sns">
+        <li>
+          <span onclick="onClickshowVideo()"><i class="fa-solid fa-clapperboard fa-3x"></i></span>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-instagram-square fa-3x"></i>
+            <span class="ir">인스타</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-twitter-square fa-3x"></i>
+            <span class="ir">트위터</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="fab fa-imdb fa-3x"></i>
+            <span class="ir">imdb</span>
+          </a>
+        </li>
+      </ul>
+      <!-- 3-2. 사이트정보 -->
+      <div class="cpr">
+        <span class="bb">
+          <a href="#"></a>
+          Friends in Central Perk © All Rights Reserved.
+        </span>
+      </div>
+    </footer>
+  </div>
+</body>
+
+</html>

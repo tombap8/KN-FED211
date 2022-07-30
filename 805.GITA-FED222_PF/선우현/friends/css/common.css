@@ -1,0 +1,355 @@
+@charset "utf-8";
+/* FRIENDS 공통디자인 css - main.css */
+/* 상단영역, 하단영역 등 공통디자인 */
+
+
+/* 공통 글씨체 : 나눔고딕 */
+body {
+  font-family: 'Nanum Gothic', sans-serif;
+}
+
+/**************** 1. 상단영역 *****************/
+#top {
+  position: relative;
+  z-index: 9999;
+  /* 포지션이 static이 아니어야 z-index가 적용됨  */
+
+  /* 로고 있는 부분 화면 좌-우 끝까지 흰색 나오도록 겉박스 선택 */
+  background-color: rgba(0, 0, 0, .3);
+
+}
+
+.top {
+  /* 높이값 */
+  height: 100px;
+}
+
+/* 1-1. 메인로고  */
+#logo {
+  position: absolute;
+  margin: 50px 0 0 50px;
+}
+
+/* 로고이미지 */
+#logo img {
+  width: 200px;
+  vertical-align: bottom;
+  /* a요소나 div등으로 이미지를 싸면 하단에 4px공백이 들어감.(인라인요소 세팅때문에 생기는 자연스러운 디폴트 현상)
+  이걸 없애려면 vertical-align값을 설정하면 해결됨 
+  값으로 top/middle/bottom 뭘 써도 됨 */
+}
+
+/* 1-2. GNB메뉴 */
+.gnb {
+  /* 가로크기 */
+  width: 711px;
+  /* position: relative; */
+  /* 부모자격 */
+  float: right;
+  margin-top: 53px;
+  margin-right: 50px;
+}
+
+/* .gnb ul {
+  /* position: absolute;
+  top: -80px;
+  right: 0; */
+/* 부모는? .gnb */
+
+
+/* 마영오- 블록요소 가로중앙정렬
+  margin: 0 auto; */
+
+/* outline: 2px dotted blue;
+} */
+
+/* 가상요소로 clear 설정하기 */
+/* ul에 overflow: hidden 해버리면 서브메뉴가 아래로 보이지 않음, 그래서 가상요소로 float을 끊어줘야함 */
+.gnb ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* li 리스트요소 */
+.gnb li {
+  /* 블록요소 옆으로 흐르게 */
+  float: left;
+  height: 25px;
+  /* 부모박스에 세로값25px를 주면 고정되므로 서브메뉴가 아래로 감 */
+  padding: 0 20px;
+  margin: 0 20px;
+  border: 1px dashed transparent;
+
+
+  /* border: 1px solid transparent;
+  border-radius: 30px; */
+
+  /* outline: 2px dotted aqua; */
+}
+
+.gnb>ul>li:hover {
+  color: #fff;
+  border: 1px dashed #fff;
+  border-radius: 20px;
+}
+
+
+/* li에 가상요소로 서브메뉴 꽉차는 배경 만들기 
+- ::after를 쓰는 이유는 a요소 다음위치 젠틀앱솔루트로 하려고 */
+.gnb>ul>li.bgbx::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  /* 현재 부모는 보이는 화면(중간에 부모자격이 모두 없음). 
+  top:0; 주게되면 화면 최상단부터 다 덮으므로 left만 값 줌
+  top값은 젠틀함  */
+
+  width: 100%;
+  /* 100%는 부모역할을 하는 보이는화면 기준 */
+  height: 0;
+
+  /* top부분 미세위치 조정은 마진탑으로: top값은 젠틀하므로 값을 줘버리면 디자인이 다 망가지므로 줄 수 없음 */
+  margin-top: 20px;
+  /* 트랜지션: 속시이지-속성을 하나하나 다 지정해줄 수 있기 때문에 정확히 콕 집어서 height라고 지정해 높이만 만져줌  
+  안쓰면 전체가 모두 선택됨 
+  => .smenu와 동일 */
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 첫번째 li오버시 가상요소배경(반투명검은색) 보이기  */
+.gnb>ul>li.m1:hover::after {
+  height: 90px;
+  transition: height .4s ease-out;
+}
+
+/* 세번째 li오버시 가상요소배경(반투명검은색) 보이기  */
+.gnb>ul>li.m2:hover::after {
+  height: 280px;
+  transition: height .4s ease-out;
+}
+
+
+/* GNB메뉴 상위 a요소 */
+.gnb>ul>li>a {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  /* 인라인요소a의 위아래 줄간격은 line-height로 설정(세로정렬은 vertical-align) */
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #222;
+}
+
+/* GNB메뉴 호버시 */
+.gnb>ul>li:hover>a {
+  color: #fff;
+  /* border-bottom: 1px dotted #fff; */
+}
+
+
+/* 서브메뉴 */
+.smenu {
+  position: absolute;
+  /* 젠틀앱솔루트!!
+  -> li 박스안에 그대로 있고 위에 있는 형제 a요소도 존중해서 그 아래에 그대로 위치하고 있다 */
+  z-index: 1;
+  /* 배경가상요소보다 바로 위: 프로그램소개 서브메뉴들이 배경가상요소 위로 올라와서 보이도록 함 */
+
+  /* 가로크기설정: 부모박스 크기에 영향이 안가도록, 프로그램소개 서브메뉴에서 크기 찾음 */
+  width: 90px;
+  /* 노랩박스 만들기: 공백속성 싸지마! 박스가 좁아도 박스 안 글자가 밑으로 안 떨어지게(프로그램 소개 서브메뉴가 길어서 밑으로 떨어지니까) */
+  white-space: nowrap;
+  /* 서브메뉴 숨김장치
+    -> 높이값0 + 넘치는 자식요소 숨기기(오버플로우 히든으로)
+      주의) 위아래방향 패딩 없어야 함! */
+  height: 0;
+  overflow: hidden;
+  /* oh */
+  line-height: 35px;
+  /* background-color: rgb(0, 0, 0, .3); */
+  /* 상단마진조정 */
+  padding-top: 20px;
+  /* 트랜지션: 속시이지-속성을 하나하나 다 지정해줄 수 있기 때문에 정확히 콕 집어서 height라고 지정해 높이만 만져줌  
+  안쓰면 전체가 모두 선택됨 */
+  /* outline: 2px dotted red; */
+}
+
+/* 상위메뉴 li에 마우스 오버 시 
+    하위메뉴박스 높이값 복원하기(트랜지션) */
+/* 2번째메뉴(About):3개 - 늘어나는 길이가 다르기 때문에 각각 지정 */
+.gnb>ul>li:nth-child(2):hover .smenu {
+  height: 90px;
+  transition: height .4s ease-out;
+  /* 25*3개 */
+}
+
+/* 3번째메뉴(동영상):10개  */
+.gnb>ul>li:nth-child(3):hover .smenu {
+  height: 280px;
+  transition: height .4s ease-out;
+  /* 25*10개 */
+}
+
+/* 서브메뉴 ol요소  */
+/* .smenu ol {
+  padding-left: 5px;
+} */
+
+/* 서브메뉴를 위 GNB메뉴에 맞춰 왼쪽정렬 */
+.gnb .smenu li {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* 서브메뉴 a요소 */
+.smenu a {
+  color: #333;
+  text-decoration: none;
+  /* 블록으로 변경 */
+  display: block;
+  /* text-align: center; */
+  font-size: 1.4rem;
+  /* 미디어쿼리 적용 시 본래 14px / 10px = 1.4rem */
+  line-height: 25px;
+  /* 미디어쿼리 적용 시 본래 35px / 10px = 3.5rem */
+  /* 인라인요소a의 위아래 줄간격은 line-height로 설정(세로정렬은 vertical-align) */
+  /* 트랜지션: 속시이지 */
+  transition: .4s;
+}
+
+.smenu a:hover {
+  color: #fff;
+  border-bottom: 1px dotted #fff;
+}
+
+/* 햄버거버튼모양 가상요소로 문자넣기 
+  이유: x버튼으로 변경가능하도록 하려고 */
+.ham::before {
+  content: '≡';
+}
+
+/* 모바일용 햄버거 버튼 */
+.ham {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  font-size: 60px;
+  /* 트랜스폼을 이용해 버튼 가로로 늘림 */
+  transform: scaleX(1.2);
+
+  /* 버튼 기본디자인없앰: 배경색 투명으로, 보더 없앰 */
+  background-color: transparent;
+  color: #fff;
+  border: none;
+
+  /* 760px이상일때 안보임 */
+  display: none; /* 모바일 일때 보이게 하려면 media.css 파일에서 display:block; */
+}
+
+
+/**************** 2. 메인영역 *****************/
+.cont {
+  /* 높이값 : 높이값을 안에있는 .cont에 주면 겉에 있는 #cont가 자동으로 밀리므로(height가 auto인 상태) 안에 높이값을 줌
+  겉의 박스에 높이값 주면 안쪽에 100%로 높이값 줘야 하므로 불편 */
+  height: 750px;
+}
+
+/**************** 3. 하단영역 *****************/
+.info {
+  /* 높이값 */
+  height: auto;
+  position: relative;
+  /* 부모자격 */
+}
+
+.info ul {
+  width: 240px;
+  /* 마영오 하려면 가로값 필요함: 블록박스(ul) 중앙정렬은 가로크기가 auto면 안되고 부모보다 작아야 함 (가로값 안 준 경우에는 크기는 auto임) */
+  /* 블록가로중앙 마영오 */
+  margin: 0 auto;
+  /* outline: 1px dotted blue; */
+
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.info li {
+  /* 왼쪽부터 옆으로 흐르게 */
+  float: left;
+  /* SNS메뉴들 사이 간격 띄움 */
+  padding: 0 10px;
+}
+
+.info ul::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* SNS 메뉴 앞 가상요소로 액자이미지 넣기 */
+/* .info::before {
+  content: '';
+  width: 25px;
+  height: 33px;
+  display: inline-block;
+  position: absolute;
+  right: 190px;
+  background: url(../images/door.png) no-repeat;
+  background-size: 100%;
+  background-position: center;
+  cursor: pointer;
+  outline: 1px solid red;
+} */
+
+
+/* SNS 메뉴 */
+.sns .fa-solid,
+.sns .fab {
+  color : #fff;
+}
+
+.sns .fa-solid:hover,
+.sns .fab:hover {
+  color: #333;
+  /* 마우스오버시 색상변경 */
+}
+
+
+.cpr {
+  color: #fff;
+  text-align: center;
+  line-height: 10;
+  padding-top: 50px;
+  font-size: 1vw;
+
+}
+
+/* 사이트정보 앞쪽에 가상요소로 아이콘넣기 */
+.cpr a {
+  display: inline-block;
+
+  width: 10%;
+  padding-top: 10%;
+  vertical-align: middle;
+
+  /* 아이콘이미지 */
+  background: url(../images/ftlogo.png) no-repeat;
+  /* background-position: 53% -45%; */
+  background-size: 100%;
+  background-position: center;
+  /* outline: 1px dashed red; */
+}
+
+/* 저작권글씨 */
+.bb {
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 50px;
+  white-space: nowrap;
+  /* outline: 1px dashed red; */
+}

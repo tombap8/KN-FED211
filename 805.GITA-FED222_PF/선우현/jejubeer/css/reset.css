@@ -1,0 +1,32 @@
+@charset "utf-8";
+/* 제주맥주 초기화 css - reset.css */
+/* 요소의 기본세팅 초기화 */
+
+/* 0. rem단위 계산 편의를 위해 html 10px 세팅  */
+html {
+  font-size: 10px;
+}
+
+/* 1. 기본태그 초기화- 마진,패딩 없애기 */
+html,body,h1,h2,h3,h4,h5,h6,ul,ol,dl,dt,dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. 헤딩태그 글자크기 초기화 */
+h1,h2,h3,h4,h5,h6 {
+  font-size: 100%;
+  /* 글자크기100%는 기본글자크기와 같아지는 세팅
+  기본글자크기는 16px */
+}
+
+/* 3. ul, ol 초기화 */
+ul,ol {
+  list-style: none;
+  /* 불릿, 숫자표시 없앰 */
+}
+
+/* 4. a요소 밑줄 없앰 */
+a {
+  text-decoration: none;
+}

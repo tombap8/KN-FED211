@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JEJU BEER</title>
+  <!-- 탭메뉴 아이콘(favicon): favorite icon -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/intro_logo.jpg" />
+  <!-- 외부css 하나만 불러도 main.css에서 import 하고있는 3개의 기본css가 같이 들어옴  -->
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/media.css">
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="js/jquery-3.6.0.min.js"></script>
+  <!-- 제이쿼리 UI -->
+  <script src="js/jquery-ui.min.js"></script>
+  <!-- 부드러운스크롤JS -->
+  <script src="js/smoothScroll20.js"></script>
+  <!-- 공통외부 JS -->
+  <script src="js/common.js"></script>
+  <script src="js/linksys.js"></script>
+  <!-- <script src="js/linksys.js" defer></script> -->
+  <!-- 외부JS 호출시 defer 속성을 사용하면 html이 모두 로딩된 후 본 파일을 실행함
+  설정시 코드유실 등의 이유로 여기서 세팅하지 않고 JS파일 자체에서 처리하는 경우가 월등히 많다(따라서 실제 프로젝트에서 잘 사용되지 않음) -->
+</head>
+
+<body class="scbar">
+  <!----------- 1.상단영역 ------------>
+  <div id="top">
+    <header class="inbox top">
+      <section class="wrap">
+        <div class="slogo">
+          <!-- 모바일용 서브페이지의 로고 -->
+          <a href="main.html">
+            <img src="./images/logo_small.png" alt="작은로고1">
+
+            <img src="./images/logo_sub.png" alt="작은로고2">
+            <span class="ir">로고</span>
+          </a>
+        </div>
+        <!-- 1-1.메인로고 -->
+        <div class="logo">
+          <a href="main.html">
+            <img src="./images/logo.png" alt="제주맥주로고">
+            <span class="ir">로고</span>
+          </a>
+        </div>
+        <!-- 1-2.탑메뉴 -->
+        <div>
+          <ul class="topmn1">
+            <li>
+              <a href="#">LOGIN</a>
+            </li>
+            <li>
+              <a href="#">JOIN</a>
+            </li>
+            <li>
+              <a href="#">CART</a>
+            </li>
+            <li>
+              <a href="#">RECRUIT</a>
+            </li>
+          </ul>
+          <ul class="topmn2">
+            <li>
+              <a href="#">제주맥주 라이프</a>
+            </li>
+            <li>
+              <a href="#">양조장 예약</a>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <!-- 1-3.GNB메뉴 -->
+      <nav class="gwrap">
+        <ul class="gnb">
+          <li>
+            <a href="#">JEJU BEER LIFE</a>
+          </li>
+          <li>
+            <a href="#">EXPERIENCE</a>
+          </li>
+          <li>
+            <a href="#">COLLABORATION</a>
+          </li>
+          <li>
+            <a href="#">SHOP</a>
+          </li>
+          <li>
+            <a href="#">BREWERY</a>
+          </li>
+        </ul>
+      </nav>
+      <!-- 모바일용 햄버거버튼 : 햄버거모양(ㄷ한자키) -->
+      <button class="ham" onclick="showGNB()"></button>
+
+      <!-- 모바일용 서브페이지 -->
+      <div class="sub_page">
+        <div class="sub_header">
+          <div class="sub_top">
+            <div>
+              <a href="#">
+                <span>LOGIN</span>
+              </a>
+              <a href="#">
+                <span>JOIN</span>
+              </a>
+              <a href="#">
+                <span>RECRUIT</span>
+              </a>
+            </div>
+            <div>
+              <a href="#">
+                <span>| &nbsp;&nbsp; 양조장 예약</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="sub_main">
+          <nav class="sub_nav">
+            <ul class="sub_big">
+              <li>
+                <a href="#">EVENT</a>
+              </li>
+              <li>
+                <a href="#">JEJU BEER LIFE <span>제주맥주 한달살기</span></a>
+              </li>
+              <li>
+                <a href="#">COLLABORATION</a>
+              </li>
+              <li>
+                <a href="#">SHOP</a>
+              </li>
+              <li>
+                <a href="#">BREWERY <span>양조장투어</span></a>
+              </li>
+            </ul>
+            <ul class="sub_small">
+              <li>
+                <a href="#">about us</a>
+              </li>
+              <li>
+                <a href="#">our beers</a>
+              </li>
+              <li>
+                <a href="#">news</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="sub_footer">
+          <div class="sub_snsbox">
+            <a href="#" title="유튜브">
+              <img src="./images/youtube.png" alt="유튜브">
+            </a>
+            <div>
+              <a href="#" title="페이스북">
+                <img src="./images/facebook.png" alt="페이스북">
+              </a>
+              <a href="#" title="인스타">
+                <img src="./images/insta.png" alt="인스타">
+              </a>
+              <a href="#" title="블로그">
+                <img src="./images/blog.png" alt="블로그">
+              </a>
+            </div>
+          </div>
+          <div class="sub_info">
+            <div>CONTACT</div>
+            <div>IR</div>
+          </div>
+        </div>
+      </div>
+    </header>
+  </div>
+  <!-------------- 2. 메인영역 ----------------->
+  <div id="cont">
+    <main class="inbox cont">
+      <section class="mainTop">
+        <div class="mvid">
+          <!-- 2-1. 동영상 -->
+          <video src="./images/jb_jejulager_web_6.mp4" muted playsinline autoplay loop></video>
+        </div>
+        <!-- 2-2. 배너이미지 -->
+        <div class="larger bgc">
+          <div class="cat">
+            <div class="tit scAct">
+              <img src="./images/larger_title.png" alt="제주라거타이틀">
+            </div>
+            <div class="des scAct">
+              <img src="./images/larger_item.png" alt="제주라거">
+              <p>
+                <strong>제주라거</strong>는 <br class="aa"> 맥주의 기본 4대 원료를 사용하는 <br>
+                독일 맥주 순수령 원칙을 지킨 <br>
+                제주 하얀 파도의 시원함과 <br>
+                부드러움을 닮은 올 몰트 라거입니다
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="weat bgc">
+          <div class="cat">
+            <div class="tit scAct">
+              <img src="./images/weat_title.png" alt="위트에일타이틀">
+            </div>
+            <div class="des scAct">
+              <img src="./images/weat__item.png" alt="위트에일">
+              <p>
+                <strong>제주 위트 에일</strong>은 <br class="aa"> 제주 감귤 껍질의 상큼함과 섬세한 꽃 향, <br>
+                입 안 가득 부드럽게 퍼지는 시트러스향이 만나 <br>
+                산뜻한 끝 맛을 선사하는 밀맥주입니다 <br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="pellong bgc">
+          <div class="cat">
+            <div class="tit scAct">
+              <img src="./images/pellong_title.png" alt="펠롱에일타이틀">
+            </div>
+            <div class="des scAct">
+              <img src="./images/pellong__item.png" alt=" 펠롱에일">
+              <p>
+                <strong>제주 펠롱 에일</strong>은 <br class="aa"> 반딧불이 반짝이는 곶자왈에서 <br class="bb"> 영감을 받아 탄생하였습니다. <br>
+                다양하고 개성있는 홉들을 블렌딩하여 <br>
+                시트러스 아로마와 진한 맥아의 맛이 어우러져 <br>
+                풍부한 풍미를 선사하는 페일에일 맥주입니다. <br>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="geomeong bgc">
+          <div class="cat">
+            <div class="tit scAct">
+              <img src="./images/geomeong_title.png" alt="거멍에일타이틀">
+            </div>
+            <div class="des scAct">
+              <img src="./images/geomeong_item.png" alt="거멍에일">
+              <p>
+                <strong>제주 거멍 에일</strong>은 <br class="aa">제주의 여름밤을 떠올리게 하는 <br class="bb"> 짙은 빛깔 속에서, <br>
+                제주 흑보리와 초콜릿 밀로 완성된 <br>
+                은은한 달큰함과 경쾌한 풍미를 자아내는
+                <br class="bb"> 흑맥주입니다. <br>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 판매처 슬라이드 -->
+      <section class="mainBtm">
+        <div class="stit">
+          <p>
+            제주맥주는<br>
+            <strong>전국 편의점 및 대형마트</strong>에서 만나보실 수 있습니다
+          </p>
+        </div>
+        <ul class="slist">
+          <li><img src="images/cu.jpg" alt="cu"></li>
+          <li><img src="images/gs25.jpg" alt="gs25"></li>
+          <li><img src="images/seveneleven.jpg" alt="세븐일레븐"></li>
+          <li><img src="images/emart24.jpg" alt="이마트24"></li>
+          <li><img src="images/emart.jpg" alt="이마트"></li>
+          <li><img src="images/lottermart.jpg" alt="롯데마트"></li>
+          <li><img src="images/homeplus.jpg" alt="홈플러스"></li>
+          <li><img src="images/costco.jpg" alt="코스트코"></li>
+          <li><img src="images/traders.jpg" alt="트레이더스"></li>
+          <li><img src="images/vicmarket.jpg" alt="빅마켓"></li>
+          <li><img src="images/lottedep.jpg" alt="롯데"></li>
+          <li><img src="images/shinsegae.jpg" alt="신세계"></li>
+          <li><img src="images/galleria.jpg" alt="갤러리아"></li>
+          <li><img src="images/cu.jpg" alt="cu"></li>
+          <li><img src="images/gs25.jpg" alt="gs25"></li>
+          <li><img src="images/seveneleven.jpg" alt="세븐일레븐"></li>
+          <li><img src="images/emart24.jpg" alt="이마트24"></li>
+          <li><img src="images/emart.jpg" alt="이마트"></li>
+          <li><img src="images/lottermart.jpg" alt="롯데마트"></li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <!---------------- 3. 하단영역 ---------------->
+  <div id="info">
+    <footer class="inbox info">
+      <section class="btn_wrap">
+        <div class="btn">
+          <a href="#">ABOUT US</a>
+          <a href="#">OUR BEER</a>
+          <a href="#">NEWS</a>
+          <a href="#">CONTACT</a>
+          <a href="#">IR</a>
+          <a href="#">이용약관</a>
+          <a href="#">개인정보처리방침</a>
+          <a href="#">영상정보 처리방침</a>
+        </div>
+        <div class="sns">
+          <a href="#" title="유튜브">
+            <img src="./images/youtube.png" alt="유튜브">
+          </a>
+          <a href="#" title="페이스북">
+            <img src="./images/facebook.png" alt="페이스북">
+          </a>
+          <a href="#" title="인스타">
+            <img src="./images/insta.png" alt="인스타">
+          </a>
+          <a href="#" title="블로그">
+            <img src="./images/blog.png" alt="블로그">
+          </a>
+        </div>
+      </section>
+      <div class="cpr">
+        <p>
+          제주맥주 주식회사 대표이사 문혁기 <br>
+          본사) 제주특별자치도 제주시 한림읍 금능농공길 62-11 <br class="bb">
+          서울사무실) 서울특별시 중구 동호로 228 동호 38빌딩 6층 <br>
+          호스팅 제공자 (주)아임웹 <br class="bb">
+          사업자등록번호 616-86-27415 <br class="bb">
+          통신판매업신고번호 제 2020-제주한림-0101 호 <br>
+          고객센터 02-2235-5559, jejubeer@jejubeer.co.kr
+        </p>
+        <p>COPYRIGHT 2021@ JEJU BEER COMPANY</p>
+      </div>
+    </footer>
+    <!-- 3-4. 문의,공유,위로가기 버튼 -->
+    <div class="fixed_icon">
+      <a href="#">
+        <img src="./images/button-talk.png" alt="문의하기">
+      </a>
+      <a href="#">
+        <img src="./images/button-share.png" alt="공유하기">
+      </a>
+      <a href="#" class="tbtn">
+        <img src="./images/button-top.png" alt="위로가기">
+      </a>
+    </div>
+  </div>
+
+</body>
+
+</html>

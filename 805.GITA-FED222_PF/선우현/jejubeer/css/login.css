@@ -1,0 +1,346 @@
+@charset "utf-8";
+/* 제주맥주 로그인 페이지 css - login.css */
+
+/* 공통사용 외부 css 파일 합치기 :commom/reset/core.css파일을 불러와서 써야하므로 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/* 전체화면 구현중 공사중 외곽선 표시: body밑의 만들어진 모든 것에 적용 */
+/* body * {
+  outline: 1px dashed lime;
+} */
+
+
+/* 컨텐츠영역 겉박스 */
+#cont {
+  background-color: #fff;
+}
+
+/* 컨텐츠영역 최소높이 */
+.cont {
+  /* min-height: 900px; */
+  padding: 40px !important;
+  /* 800px이하 미디어쿼리보다 우선적용위해 
+    !important 사용해서 최우선적용함
+    : 모바일에서 박스와 브라우저 사이 간격 생기게 함 */
+}
+
+/* 1.로그인 타이틀 */
+.login_stit {
+  font-family: 'Nunito', sans-serif;
+  font-size: 4.8rem;
+  padding: 40px 0 48px;
+  text-align: center;
+  font-weight: 900;
+  color: #1ecad3;
+}
+
+/* 로그인 박스 */
+.scont {
+  min-height: 655px;
+}
+
+/* 이메일,비밀번호 인풋박스 전체 
++ 안에 텍스트 입력하는 박스*/
+.input_block .input_form {
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  border-top: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* 비밀번호박스 */
+.input_block .input_form.brt {
+  /* 이메일박스와 비밀번호박스 간격 좁힘 */
+  margin-top: -1px;
+}
+
+/* 이메일박스, 비밀번호박스 각각 */
+.input_block input {
+  border: none;
+  box-shadow: none;
+  padding: 12px 0;
+}
+
+#uid,
+#passwd {
+  width: 100%;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+
+
+
+/* 입력창 공통라벨 */
+.minput label {
+  display: inline-block;
+  /* 가로150 주고 옆에 아무도 못오게 하지만 인라인블록줘서 크기 맞춤 */
+  width: 150px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  text-align: center;
+  line-height: 36px;
+  /* outline: 2px solid red; */
+}
+
+/* 입력양식공통 */
+.minput input {
+  /* input이 인라인블록 요소라서 줄바꿈되고 디자인 먹음 */
+  width: 320px;
+  height: 36px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  font-size: 18px;
+  padding-left: 5px;
+  /* 보더패딩이 포함되게 크기유지 */
+  box-sizing: border-box;
+  color: #666;
+}
+
+/* 로그인 체크박스 */
+.scont div:nth-child(2) {
+  /* 비밀번호박스와 로그인 체크박스 사이 간격 띄움 */
+  margin-top: 20px;
+}
+
+/* 브라우저 포커스 아웃라인 제거(아이디/비밀번호 넣을 때 해당박스 굵게 칠해지는 것)
+:모든 브라우저에 기본 포커스 아웃라인 세팅된 걸 제거 */
+input:focus {
+  outline: none;
+}
+
+
+/* 로그인상태유지, 로그인버튼 박스 */
+.loginBox {
+  width: 400px;
+  margin: 0 auto;
+}
+
+/* 서브밋(로그인) 버튼 */
+#sbtn {
+  width: 400px;
+  height: 45px;
+  border: 1px solid #1ecad3;
+
+  /* 그라데이션 
+    배경이미지에서 세팅
+    linear-gradient(방향, 색1, 색2,...) */
+  background-color: #1ecad3;
+  color: #fff;
+  text-shadow: 1px 1px #555;
+  font-size: 15px;
+  font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+/* 기타체크링크 박스 : 회원가입, 아이디 비밀번호찾기 */
+.addbx {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 체크박스 영역 */
+.addbx span {
+  margin: 0 15px;
+  color: #555;
+}
+
+/* 체크박스 라벨과 세로정렬 */
+.addbx input {
+  vertical-align: -2px;
+}
+
+/* 기타링크: 회원가입, 아이디비밀번호찾기 */
+.scont .addbx a {
+  font-size: 14px;
+  color: #3d464b;
+  text-decoration: none;
+}
+
+/* -or- 박스 */
+.my {
+  position: relative;
+  width: 400px;
+  margin: 0 auto;
+  font-size: 14px;
+  text-align: center;
+  line-height: 60px;
+  /* outline: 2px dashed red; */
+}
+
+/* 가상요소로 or 앞뒤에 한줄 회색선  */
+.my::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #e0e0e0;
+}
+
+/* or 글자 */
+.my .cen {
+  position: relative;
+  top: -2px;
+  padding: 0 30px;
+  color: #3d464b;
+  font-weight: 600;
+  background-color: #fff;
+}
+
+/* 서브밋(카카오 로그인) 버튼 */
+#kkobtn {
+
+  width: 400px;
+  height: 45px;
+  border: 1px solid #ffeb00;
+
+  /* 그라데이션 
+    배경이미지에서 세팅
+    linear-gradient(방향, 색1, 색2,...) */
+  background-color: #ffeb00;
+  color: #fff;
+  text-shadow: 1px 1px #555;
+  font-size: 15px;
+}
+
+/* 가상요소로 카카오 로그인 버튼 앞 말풍선 이미지 */
+.btnbx.lbx::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  margin-top: 13px;
+  margin-left: 10px;
+  /* svg는 코드로 된 벡터 이미지기 때문에 
+  svg파일을 vscode에서 열면 보이는 코드를 
+  복사해 background-image로 넣음 
+  : https://yoksel.github.io/url-encoder/ */
+  
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512' style='fill:%233c1e1e'%3E%3Cpath d='M256 32C114.6 32 0 125.1 0 240c0 49.6 21.4 95 57 130.7C44.5 421.1 2.7 466 2.2 466.5c-2.2 2.3-2.8 5.7-1.5 8.7S4.8 480 8 480c66.3 0 116-31.8 140.6-51.4 32.7 12.3 69 19.4 107.4 19.4 141.4 0 256-93.1 256-208S397.4 32 256 32z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  /* 배경이미지는 그 박스 크기에 다 나오게 100% 100% */
+  background-size: 100% 100%;
+  /* outline: 1px solid red; */
+
+}
+
+/* 서브밋(비회원 주문조회) 버튼 */
+#nmembtn {
+  width: 400px;
+  height: 45px;
+  border: 1px solid #8393a7;
+
+  /* 그라데이션 
+    배경이미지에서 세팅
+    linear-gradient(방향, 색1, 색2,...) */
+  background-color: #8393a7;
+  color: #fff;
+  text-shadow: 1px 1px #555;
+  font-size: 15px;
+}
+
+
+/************ 제주맥주 메인 페이지 미디어쿼리 **************/
+
+/********** 1024px이하 미디어쿼리 시작 ************/
+@media screen and (max-width: 1024px) {
+
+  /* 상단영역 줄어듬 */
+  .top {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  /* GNB메뉴 */
+  .gnb li a {
+    font-size: 1.4rem;
+  }
+
+  /* 1.로그인 타이틀 */
+  .login_stit {
+    font-size: 6rem;
+  }
+
+  /* 입력창 공통라벨 */
+  .minput label {
+    display: block;
+    width: auto;
+  }
+
+  /* 입력양식공통 */
+  .minput input {
+    width: 100%;
+  }
+
+
+}
+
+/********** 1024px이하 미디어쿼리 끝 **********/
+
+/********** 991px이하 미디어쿼리 시작 ************/
+@media screen and (max-width: 991px) {
+  .cont {
+    min-height: 600px;
+  }
+
+  /* 1.로그인 타이틀 */
+  .cont>.login_stit {
+    font-size: 4.8rem;
+  }
+
+  /* 로그인 박스 */
+  .scont {
+    min-height: 520px;
+  }
+
+
+
+}
+
+/********** 991px이하 미디어쿼리 끝 **********/
+
+
+/********** 450px이하 미디어쿼리 시작 ************/
+@media screen and (max-width: 450px) {
+
+  /* 추가 미디어쿼리 */
+  #sbtn,
+  #kkobtn,
+  #nmembtn,
+  .my {
+    width: 100%;
+  }
+
+
+
+  /* 로그인박스: 로그인~비회원주문조회 */
+  .loginBox {
+    min-width: 400px;
+  }
+
+  /* 기타링크: 회원가입, 아이디비밀번호찾기 */
+  .addbx a {
+    font-size: 11px;
+  }
+
+  /* 1.로그인 타이틀 */
+  .login_stit {
+    font-size: 3rem;
+  }
+
+
+  .input_block .input_form {
+    width: 100%;
+  }
+}
+
+/********** 450px이하 미디어쿼리 끝 ************/

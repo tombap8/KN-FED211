@@ -1,0 +1,328 @@
+@charset "utf-8";
+/* FRIENDS 메인 페이지 css - main.css */
+
+/* 공통사용 외부 css 파일 합치기 */
+@import url(reset.css);
+@import url(core.css);
+@import url(common.css);
+
+/* 구현중 공사중 외곽선 표시 */
+/* body * {
+  outline: 1px dashed lime;
+} */
+
+/* 컨텐츠 영역 최상위 부모 */
+body {
+  /* background: 색이반고윙/크; */
+  background: url(../images/bg_main.jpg) no-repeat fixed center/cover;
+}
+
+
+/******** 2. 메인영역 *********/
+/* 컨텐츠 속박스 */
+.cont {
+  /* 상단패딩 설정 */
+  padding-top: 300px;
+  /* 기본height크기가 700px로 설정되어있으므로 그 높이값은 컨텐츠영역의 높이다.
+  따라서 패딩이나 보더는 그 크기에 더해진다.
+  그래서 높이값 크기를 700px로 유지하려면 계산해서 height값을 400px로 변경하거나 
+  box-sizing: border-box; 로 설정하여 보더와 패딩이 지정한 크기 내부에 포함되도록 한다  */
+
+  /* 보더,패딩 포함설정 - 기본값은 content-box */
+  box-sizing: border-box;
+
+  /* .inbox 최대가로크기 해제: 90%를 차지하고 가운데 오는 이미지&설명 들은 박스가 가운데 몰리지 않고 끝까지 가게됨  */
+  max-width: none; 
+  /* mwn */
+  
+}
+
+/* 캐릭터 부모박스 */
+#cbx {
+  /* 부모박스 크기의 90% 가로크기 설정 */
+  max-width: 1400px; 
+  /* 블록요소 가로중앙정렬: 마영오! */
+  margin: 0 auto;
+
+  /* 높이값 - 자식요소 float해줬기 때문에 높이값 안주면 0이 됨 */
+  /* float된 자식의 높이값 인식을 위해 overflow: hidden */
+  /* overflow: hidden; - 여기서는 안씀 
+    -> 가상요소에 clear:both; 사용할것임!  */
+
+  /* outline: 4px dotted yellow; */
+}
+
+
+/* 가상요소로 clear 설정하기 */
+/* ::after로 맨뒤에 가상요소 추가(태그가 없지만 가상으로 요소가 자식으로 생기는데 맨 뒤에 생김) */
+#cbx::after {
+  content: ''; /* 반드시 써야 함 */
+  display: block; 
+  /* div와 비슷해짐 - 안쓰면 span과 비슷해짐 */
+  clear: both;
+  /* 주의: block 요소에만 적용됨! */
+}
+
+
+/* 캐릭터박스 공통 */
+.cat {
+  /* 6등분 가로크기는 몇? 16.66% */
+  width: 14.66%;
+  /* 16.66%- 양쪽마진합(2%) = 14.66% */
+
+  /* 이미지 사이 간격 위해 양쪽마진을 %값으로 세팅 */
+  margin: 1%;
+
+  /* 블록박스 옆으로 흐르게 설정: 이미지들이 옆으로 나란히 오도록함 */
+  float: left; /* fll */
+
+}
+
+/* 캐릭터 이미지박스 */
+.ci {
+  /* outline: 1px dashed red; */
+  margin: 0 auto;
+  width: 100%;
+  /* height: 100%; */
+  margin-bottom: 20px;
+  /* 색이반고윙/크 */
+  background: url(../images/img_box.jpg) no-repeat center/450%;
+  border-radius: 50%;
+  
+
+  /* 트랜지션: 속시이지(마진탑이 .4초동안 끝이서서히느리게 움직임) */
+  transition: margin-top .3s ease-out;
+  /* 아래쪽 캐릭터설명박스의 트랜지션과 같은 값 줌 */
+  
+}
+
+.ci::before{
+  content: '';
+  display: block;
+  padding-top: 100%;
+}
+
+.cat:hover .ci {
+  /* 마진탑값 마이너스이면 위쪽으로 올라감! 
+  - 이미지 비율에 맞게 마진탑도 px 아닌 %로 설정 */
+  margin-top: -110%;
+}
+
+
+/* 이미지박스 이미지: 각 캐릭터 이미지 넣기 */
+/* 조이 */
+#cbx .cat:first-child .ci{
+  background-position: 79% 13%;
+  /* 브라우저에 맞춰 이미지 크기 조절되어야 하므로 px아닌 %사용 */
+}
+
+/* 모니카 */
+#cbx .cat:nth-child(2) .ci {
+  background-position: 35% 0%;
+}
+/* 챈들러 */
+#cbx .cat:nth-child(3) .ci {
+  background-position: 20% 20%;
+}
+/* 피비 */
+#cbx .cat:nth-child(4) .ci {
+  background-position: 7% 59%;
+}
+/* 레이첼 */
+#cbx .cat:nth-child(5) .ci {
+  background-position: 97% 47%;
+}
+/* 로스 */
+#cbx .cat:last-child .ci {
+  background-position: 53% 36%;
+}
+
+
+
+
+
+/* 캐릭터 설명박스 */
+.cd {
+  height: 0;
+  /* 처음에는 안보여야 함. 마우스 오버되어야 보임
+  마우스오버 시 400px로 보여야함 */
+  background: url(../images/eachBg.jpg) no-repeat center/cover;
+  box-shadow: inset 0 0 20px 15px #cecece;
+  /* 박스그림자: (안쪽) x축 y축 블러 스프레드 (색) */
+  border-radius: 20px 5px 5px 20px;
+  
+  /* 요소의 넘치는 콘텐츠 y축을 스크롤 처리: x축 스크롤바 트랙 없는 y축 스크롤 설정 */
+  overflow-y: scroll;
+  /* 상단마진: 캐릭터이미지박스와 설명박스 사이 간격 띄움
+  이미지 비율에 맞게 px 아닌 %로 설정 */
+  margin-top: 10%;
+
+  /* 트랜지션 애니메이션: 속시이지 */
+  transition: height .3s ease-out;
+  /* 세로값만 0.3초움직여 끝날때 천천히 0.2초기다렸다작동해 */
+  /* 여기서 height는 안써도 전체 다 적용되지만, 속성값을 보여주기 위해서 사용 */
+}
+
+/* 캐릭터박스(.cat)에 마우스 오버 시 설명박스(.cd) 보이기  */
+.cat:hover .cd{
+  height: 400px;
+}
+
+/* 캐릭터 설명 타이틀 */
+/* core.css 파일 @import url 아래 써둔 폰트 내용 */
+.cd h3 {
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 24px;
+  /* 패딩: 위 양쪽 아래 */
+  padding: 5px 10px 0;
+  text-align: center;
+  color: #fff;
+}
+
+/* 캐릭터 설명 문단 */
+.cd p {
+  color: #fff;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px; /* 미디어쿼리 적용 시 14px / 10px = 1.4rem */
+  padding: 10px; /* 미디어쿼리 적용 시 10px / 10px = 1rem */
+  line-height: 25px; /* 미디어쿼리 적용 시 25px / 10px = 2.5rem */
+  /* 줄간격 배수단위로 숫자만 쓰면 첫글자가 커서 첫줄만 줄간격이 넓어지므로 특정px로 설정함 */
+  text-align: justify;
+  word-break: break-all;
+  /* 양쪽정렬 후 단어사이 공백 없앰 */
+  text-shadow: 1px 1px 3px #000;
+}
+
+/* 캐릭터 설명 첫번째 p요소의 첫글자 가상요소로 디자인 변경하기 */
+.cd p:first-of-type::first-letter {
+  font-size: 30px;
+  color: mintcream;
+  /* 그림자 4개로 글자 테두리주기 */
+  text-shadow: 
+  1px 0 pink, 
+  -1px 0 pink, 
+  0 1px pink, 
+  0 -1px pink;
+}
+
+/* 캐릭터 설명 문단 선택시 글자색, 배경색변경 */
+.cd p::selection {
+  color: #000;
+  background-color: #ccc;
+}
+
+/* 사용 시 ::selection만 바로쓰면 페이지 전체에 적용되고 앞에 특정요소를 쓰면 특정요소에만 적용됨 */
+
+
+
+/************** 슬라이드 영역 **************/ 
+#container {
+  /*최상위부모*/
+  position: relative;
+  max-width: 1400px;
+  height: 700px;
+  margin: 0px auto;
+}
+
+
+#container>section {
+  /*슬라이드부모*/
+  position: relative;
+  width: 1000px;
+  max-width: 90%;
+  /* height: 564px; */
+  margin: 0 auto;
+  overflow: hidden;
+  /*넘치는 자식요소 숨기기*/
+  /* border: 2px solid red;*/
+  box-sizing: border-box;
+}
+
+#slide {
+  display: flex;
+  /* 플렉스박스!!! */
+
+  /*사진을 싸고 있는 슬라이드*/
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 100%; */
+}
+
+#slide li {
+  flex-shrink: 0;
+  /* 부모박스크기만큼 줄어들지 않음 -> 0 */
+  flex-basis: 100%;
+  /* 가로크기를 부모박스 크기에 맞춤! */
+  /* height 값은 flex박스 자식요소에서
+  등분할시 자동 100%임! */
+}
+
+#slide li img {
+  /*이미지는 박스에 맞춤!*/
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+  /* 이미지 비율유지 채우기! */
+}
+
+/* 이동버튼 박스 */
+.abtn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  /*Y축 중앙이동*/
+}
+
+/* 이동버튼 이미지 */
+.abtn img {
+  width: 20px;
+}
+/*왼쪽버튼*/
+.ab1 {
+  left: 50px;
+}
+
+/*오른쪽버튼*/
+.ab2 {
+  right: 50px;
+}
+
+/*블릿버튼*/
+.indic {
+  display: flex;
+  /* 플렉스박스 */
+  position: absolute;
+  bottom: 30px;
+  left: calc(50% - 150px);
+}
+
+.indic li {
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.indic li img {
+  position: absolute;
+  /*이미지 겹치게*/
+  width: 10px;
+  height: 10px;
+}
+
+.indic li img:last-child {
+  /*회색이미지만 투명하게*/
+  opacity: 0;
+}
+
+/*회색블릿이미지가 보이게하는 class*/
+.indic li.on img:last-child {
+  /*회색이미지만 투명하게*/
+  opacity: 1;
+  /*우선적용!*/
+}
+
+
+/**********************************************/

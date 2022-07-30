@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* 제주맥주 공통클래스 css - core.css */
+/* 공통클래스, 웹폰트 등 공통 모듈 */
+
+
+/* CDN 웹폰트 */
+/* 구글폰트-select 후 import로 가져오기 */
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&family=Do+Hyeon&family=Gowun+Dodum&family=IBM+Plex+Sans+KR&family=Nunito&display=swap');
+/*
+  1. 인트로페이지, GNB메뉴, 하단추가정보, 서브페이지 GNB메뉴
+  font-family: 'Baloo Da 2', cursive;
+  2. 메인배너이미지 내 문구, 하단회사정보, 서브페이지 탑메뉴2
+  font-family: 'IBM Plex Sans KR', sans-serif;
+  3. 탑메뉴1, 하단저작권, 서브페이지 탑메뉴1, 서브페이지 하단정보, 로그인페이지 로그인
+  font-family: 'Nunito', sans-serif;
+  4. 탑메뉴2, 메인슬라이드타이틀
+  font-family: 'Do Hyeon', sans-serif;
+*/
+
+/* 마우스로 긁었을 때 */
+::selection {
+  color: #fff;
+  background: #1ecad3;
+}
+
+/* 스크롤바 디자인 클래스 */
+/* -webkit- 벤더사 명(크롬, 사파리) 접두어 
+  (참고: -ms-(ie), -o-(오페라), -moz-(파이어폭스)) */
+.scbar::-webkit-scrollbar {
+  /* 전체스크롤바 크기 변경 */
+  width: 8px;
+}
+.scbar::-webkit-scrollbar-thumb {
+  /* 스크롤바 */
+  background-color: #10adb5;
+  border-radius: 7px;
+}
+.scbar::-webkit-scrollbar-track {
+  /* 스크롤바 트랙 */
+  background-color: #eee;
+  border-radius: 7px;
+}
+
+/* IR(Imagr Replacement) 배경이미지 설명 숨기기 클래스 */
+.ir {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* IR기법 사용시 주의사항: display:none 사용금지! 왜? 스크린리더기가 못 읽음!  */
+
+
+/* 등장액션 클래스 */
+.scAct {
+  transform: translateY(40%);
+  opacity: 0;
+  transition: 1.2s cubic-bezier(0.56, 0.15, 0, 0.76);
+}
+
+.scAct.on {
+  transform: translateY(0px);
+  opacity: 1;
+}

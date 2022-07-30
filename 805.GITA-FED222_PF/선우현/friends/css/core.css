@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* FRIENDS 공통클래스 css - core.css */
+/* 공통클래스, 웹폰트 등 공통 모듈 */
+
+/* CDN 웹폰트 */
+/* 구글폰트-select 후 import로 가져오기 */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Reenie+Beanie&family=Shadows+Into+Light&display=swap');
+
+
+/*  
+  1. GNB메뉴 글씨체
+  font-family: 'Shadows Into Light', cursive; 
+  2. 캐릭터 설명타이틀
+  font-family: 'Reenie Beanie', cursive;
+  3. 캐릭터 설명내용
+  font-family: 'Open Sans', sans-serif;
+*/
+
+
+/* 스크롤바 디자인 클래스 */
+/* -webkit- 벤더사 명(크롬, 사파리) 접두어 
+  (참고: -ms-(ie), -o-(오페라), -moz-(파이어폭스)) */
+.scbar::-webkit-scrollbar {
+  /* 전체 스크롤바 가로크기 변경 */
+  width: 8px;
+}
+.scbar::-webkit-scrollbar-thumb {
+  /* 스크롤바 */
+  background-color: #777;
+  border-radius: 7px;
+}
+.scbar::-webkit-scrollbar-track {
+  /* 스크롤바 트랙: 스크롤바가 다니는 길 */
+  background-color: #ccc;
+  border-radius: 5px;
+}
+
+
+/* 중앙 속박스 */
+.inbox {
+  /* width: 1400px; */
+  /* 가로크기를 고정하면 작은 화면에선 가로스크롤이 생김. 
+  그래서 가로크기 쓰지 않고 최대가로크기 사용함 */
+  /* 최대가로크기를 사용하여 크기가 작을 때 auto로 전환됨 */
+  max-width: 1400px;
+  /* 1400px 최대크기를 유지하다가 이것보다 작아지면 기본설정인 auto로 화면에 붙어서 크기가 유동적으로 변함  */
+
+  margin: 0 auto;
+  /* 마진에 의한 블록박스 중앙정렬 -> 마영오! */
+}
+
+
+/* IR(Imagr Replacement) 배경이미지 설명 숨기기 클래스 */
+.ir {
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+/* IR기법 사용시 주의사항: display:none 사용금지! 왜? 스크린리더기가 못 읽음!  */
